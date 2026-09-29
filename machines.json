@@ -1,92 +1,92 @@
 [
  {
-  "name": "toi-stockholm",
-  "slice": "0/18",
+  "name": "frere-eun1-0",
+  "slice": "0/54",
   "region": "eu-north-1"
  },
  {
-  "name": "toi-ohio",
-  "slice": "1/18",
+  "name": "pere-eun1-0",
+  "slice": "1/54",
+  "region": "eu-north-1"
+ },
+ {
+  "name": "toi-eun1-0",
+  "slice": "2/54",
+  "region": "eu-north-1"
+ },
+ {
+  "name": "frere-use2-0",
+  "slice": "3/54",
   "region": "us-east-2"
  },
  {
-  "name": "toi-virginie",
-  "slice": "2/18",
+  "name": "pere-use2-0",
+  "slice": "4/54",
+  "region": "us-east-2"
+ },
+ {
+  "name": "toi-use2-0",
+  "slice": "5/54",
+  "region": "us-east-2"
+ },
+ {
+  "name": "frere-use1-0",
+  "slice": "6/54",
   "region": "us-east-1"
  },
  {
-  "name": "toi-oregon",
-  "slice": "3/18",
+  "name": "pere-use1-0",
+  "slice": "7/54",
+  "region": "us-east-1"
+ },
+ {
+  "name": "toi-use1-0",
+  "slice": "8/54",
+  "region": "us-east-1"
+ },
+ {
+  "name": "frere-usw2-0",
+  "slice": "9/54",
   "region": "us-west-2"
  },
  {
-  "name": "toi-londres",
-  "slice": "4/18",
+  "name": "pere-usw2-0",
+  "slice": "10/54",
+  "region": "us-west-2"
+ },
+ {
+  "name": "toi-usw2-0",
+  "slice": "11/54",
+  "region": "us-west-2"
+ },
+ {
+  "name": "frere-euw2-0",
+  "slice": "12/54",
   "region": "eu-west-2"
  },
  {
-  "name": "toi-francfort",
-  "slice": "5/18",
+  "name": "pere-euw2-0",
+  "slice": "13/54",
+  "region": "eu-west-2"
+ },
+ {
+  "name": "toi-euw2-0",
+  "slice": "14/54",
+  "region": "eu-west-2"
+ },
+ {
+  "name": "frere-euc1-0",
+  "slice": "15/54",
   "region": "eu-central-1"
  },
  {
-  "name": "frere-stockholm",
-  "slice": "6/18",
-  "region": "eu-north-1"
- },
- {
-  "name": "frere-ohio",
-  "slice": "7/18",
-  "region": "us-east-2"
- },
- {
-  "name": "frere-virginie",
-  "slice": "8/18",
-  "region": "us-east-1"
- },
- {
-  "name": "frere-oregon",
-  "slice": "9/18",
-  "region": "us-west-2"
- },
- {
-  "name": "frere-londres",
-  "slice": "10/18",
-  "region": "eu-west-2"
- },
- {
-  "name": "frere-francfort",
-  "slice": "11/18",
+  "name": "pere-euc1-0",
+  "slice": "16/54",
   "region": "eu-central-1"
  },
  {
-  "name": "pere-stockholm",
-  "slice": "12/18",
-  "region": "eu-north-1"
- },
- {
-  "name": "pere-ohio",
-  "slice": "13/18",
-  "region": "us-east-2"
- },
- {
-  "name": "pere-virginie",
-  "slice": "14/18",
-  "region": "us-east-1"
- },
- {
-  "name": "pere-oregon",
-  "slice": "15/18",
-  "region": "us-west-2"
- },
- {
-  "name": "pere-londres",
-  "slice": "16/18",
-  "region": "eu-west-2"
- },
- {
-  "name": "pere-francfort",
-  "slice": "17/18",
+  "name": "toi-euc1-0",
+  "slice": "17/54",
   "region": "eu-central-1"
  }
 ]
