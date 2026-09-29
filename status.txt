@@ -1,0 +1,4 @@
+STATE=INSTALLATION
+NAME=frere-usw2-0
+SLICE=9/54
+ERR=paquet pas encore decompresse
