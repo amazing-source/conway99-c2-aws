@@ -1,0 +1,4 @@
+STATE=INSTALLATION
+NAME=toi-euc1-0
+SLICE=17/54
+ERR=paquet pas encore decompresse
