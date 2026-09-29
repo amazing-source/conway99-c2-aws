@@ -1,0 +1,4 @@
+STATE=INSTALLATION
+NAME=toi-euw2-0
+SLICE=14/54
+ERR=paquet pas encore decompresse
