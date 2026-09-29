@@ -9,17 +9,17 @@ To add $HOME/.local/bin to your PATH, either restart your shell or run:
     source $HOME/.local/bin/env.fish (fish)
 Downloading cpython-3.12.10-linux-x86_64-gnu (download) (32.8MiB)
  Downloaded cpython-3.12.10-linux-x86_64-gnu (download)
-Installed Python 3.12.10 in 649ms
+Installed Python 3.12.10 in 574ms
  + cpython-3.12.10-linux-x86_64-gnu (python3.12)
 Using CPython 3.12.10
 Creating virtual environment at: .venv
 Activate with: source .venv/bin/activate
-Resolved 7 packages in 88ms
+Resolved 7 packages in 102ms
 Downloading sympy (6.0MiB)
 Downloading scipy (33.7MiB)
 Downloading numpy (15.9MiB)
-Downloading numba (3.7MiB)
 Downloading llvmlite (57.1MiB)
+Downloading numba (3.7MiB)
 Downloading python-flint (9.7MiB)
  Downloaded numba
  Downloaded sympy
@@ -27,8 +27,8 @@ Downloading python-flint (9.7MiB)
  Downloaded numpy
  Downloaded scipy
  Downloaded llvmlite
-Prepared 7 packages in 466ms
-Installed 7 packages in 24ms
+Prepared 7 packages in 528ms
+Installed 7 packages in 33ms
  + llvmlite==0.49.0
  + mpmath==1.3.0
  + numba==0.67.0
