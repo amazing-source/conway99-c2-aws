@@ -1,0 +1,1 @@
+2026-09-29 22:03:49 start: 64 jobs, 26 workers, engine {'frame_dfs.py': 'b48cf844858477b9', 'hstage_stream.py': 'cfbfd9c0d47f6c93', 'twin_transfer.py': '77a446c7cb8b3922'}, c1 888e731149a9935e189b5af8774d51fc9df91447
