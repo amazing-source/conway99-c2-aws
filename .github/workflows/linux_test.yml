@@ -1,0 +1,21 @@
+name: linux-test
+# Full rehearsal of machine.sh on a fresh Linux machine: install from scratch, calibration, one real job, pushes to run/ci-test.
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  rehearsal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: machine.sh on a fresh Linux (calibration + job 118:2)
+        env:
+          C2_PUSH_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          C2_ONLY: "118:2"
+          C2_EVERY: "30"
+        run: |
+          bash machine.sh 0/1 ci-test --inner
+          cat $HOME/c2_cloud_run/setup.log | tail -5
+          cat $HOME/c2_cloud_run/results/run_jobs.log
+          cd $HOME/c2_cloud_run && .venv/bin/python verify_equivalence.py results/118_2_8.jsonl calib_reference/118_2_8.jsonl

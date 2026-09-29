@@ -1,0 +1,92 @@
+[
+ {
+  "name": "toi-stockholm",
+  "slice": "0/18",
+  "region": "eu-north-1"
+ },
+ {
+  "name": "toi-ohio",
+  "slice": "1/18",
+  "region": "us-east-2"
+ },
+ {
+  "name": "toi-virginie",
+  "slice": "2/18",
+  "region": "us-east-1"
+ },
+ {
+  "name": "toi-oregon",
+  "slice": "3/18",
+  "region": "us-west-2"
+ },
+ {
+  "name": "toi-londres",
+  "slice": "4/18",
+  "region": "eu-west-2"
+ },
+ {
+  "name": "toi-francfort",
+  "slice": "5/18",
+  "region": "eu-central-1"
+ },
+ {
+  "name": "frere-stockholm",
+  "slice": "6/18",
+  "region": "eu-north-1"
+ },
+ {
+  "name": "frere-ohio",
+  "slice": "7/18",
+  "region": "us-east-2"
+ },
+ {
+  "name": "frere-virginie",
+  "slice": "8/18",
+  "region": "us-east-1"
+ },
+ {
+  "name": "frere-oregon",
+  "slice": "9/18",
+  "region": "us-west-2"
+ },
+ {
+  "name": "frere-londres",
+  "slice": "10/18",
+  "region": "eu-west-2"
+ },
+ {
+  "name": "frere-francfort",
+  "slice": "11/18",
+  "region": "eu-central-1"
+ },
+ {
+  "name": "pere-stockholm",
+  "slice": "12/18",
+  "region": "eu-north-1"
+ },
+ {
+  "name": "pere-ohio",
+  "slice": "13/18",
+  "region": "us-east-2"
+ },
+ {
+  "name": "pere-virginie",
+  "slice": "14/18",
+  "region": "us-east-1"
+ },
+ {
+  "name": "pere-oregon",
+  "slice": "15/18",
+  "region": "us-west-2"
+ },
+ {
+  "name": "pere-londres",
+  "slice": "16/18",
+  "region": "eu-west-2"
+ },
+ {
+  "name": "pere-francfort",
+  "slice": "17/18",
+  "region": "eu-central-1"
+ }
+]
