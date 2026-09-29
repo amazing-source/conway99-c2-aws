@@ -1,0 +1,4 @@
+STATE=INSTALLATION
+NAME=slice-43
+SLICE=43/54
+ERR=paquet pas encore decompresse
