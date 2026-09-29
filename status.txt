@@ -1,0 +1,4 @@
+STATE=INSTALLATION
+NAME=toi-use1-0
+SLICE=8/54
+ERR=paquet pas encore decompresse
