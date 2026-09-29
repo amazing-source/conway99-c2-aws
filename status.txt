@@ -1,0 +1,4 @@
+STATE=INSTALLATION
+NAME=pere-use2-0
+SLICE=4/54
+ERR=paquet pas encore decompresse
