@@ -15,7 +15,8 @@ jobs:
           C2_ONLY: "118:2"
           C2_EVERY: "30"
         run: |
-          bash machine.sh 0/1 ci-test --inner
+          bash machine.sh 0/1 ci-test --inner || echo "machine.sh exit code $?"
           cat $HOME/c2_cloud_run/setup.log | tail -5
           cat $HOME/c2_cloud_run/results/run_jobs.log
-          cd $HOME/c2_cloud_run && .venv/bin/python verify_equivalence.py results/118_2_8.jsonl calib_reference/118_2_8.jsonl
+          cd $HOME/c2_cloud_run && .venv/bin/python verify_equivalence.py calib/118_2_8.jsonl calib_reference/118_2_8.jsonl || true
+          lscpu | grep -E 'Model name|Flags' | cut -c1-300

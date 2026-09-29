@@ -29,6 +29,7 @@ push() (                                                  # subshell: never chan
   cd "$PUSH"
   { echo "STATE=$1"; echo "NAME=$NAME"; echo "SLICE=$SLICE"; bash "$REPO/probe.sh" "$PKG"; } > status.txt
   mkdir -p results; cp "$PKG"/results/*.jsonl results/ 2>/dev/null
+  mkdir -p calib; cp "$PKG"/calib/*.jsonl calib/ 2>/dev/null                 # calibration result (diagnostics)
   for f in results/run_jobs.log run.out setup.log; do [ -f "$PKG/$f" ] && tail -40 "$PKG/$f" > "tail_$(basename "$f").txt"; done
   git add -A >/dev/null 2>&1
   git commit -qm "$NAME $1 $(date -u +%FT%TZ)" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" >/dev/null 2>&1
