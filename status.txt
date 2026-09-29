@@ -1,0 +1,4 @@
+STATE=INSTALLATION
+NAME=pere-eun1-0
+SLICE=1/54
+ERR=paquet pas encore decompresse
