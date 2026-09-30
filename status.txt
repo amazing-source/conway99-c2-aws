@@ -1,7 +1,7 @@
 STATE=EN_COURS
 NAME=slice-27
 SLICE=27/54
-LAST=2026-09-30 02:29:02 011_298_646 done in 12300s (producer 0 consumer 0) -- 14/63 jobs of this slice done
+LAST=2026-09-30 03:00:17 018_408_432 done in 17746s (producer 0 consumer 0) -- 15/63 jobs of this slice done
 START=2026-09-29 22:04:31
 STARTJOBS=63
 FIN=0
@@ -13,4 +13,4 @@ NPROC=32
 LOAD=26.00
 MEMFREE=48
 DISK=16G
-NOW=2026-09-30 02:55:45
+NOW=2026-09-30 03:05:46
