@@ -1,7 +1,7 @@
 STATE=EN_COURS
 NAME=pere-euw2-0
 SLICE=13/54
-LAST=2026-09-30 02:01:48 018_16_432 done in 16911s (producer 0 consumer 0) -- 21/64 jobs of this slice done
+LAST=2026-09-30 03:43:23 018_70_432 done in 23006s (producer 0 consumer 0) -- 22/64 jobs of this slice done
 START=2026-09-29 21:19:57
 STARTJOBS=64
 FIN=0
@@ -13,4 +13,4 @@ NPROC=32
 LOAD=26.00
 MEMFREE=49
 DISK=16G
-NOW=2026-09-30 03:41:22
+NOW=2026-09-30 03:51:24
