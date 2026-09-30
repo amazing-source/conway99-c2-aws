@@ -1,7 +1,7 @@
 STATE=EN_COURS
 NAME=frere-eun1-0
 SLICE=0/54
-LAST=2026-09-30 02:17:42 018_327_432 done in 18241s (producer 0 consumer 0) -- 19/64 jobs of this slice done
+LAST=2026-09-30 02:29:22 018_57_432 done in 18941s (producer 0 consumer 0) -- 20/64 jobs of this slice done
 START=2026-09-29 21:13:41
 STARTJOBS=64
 FIN=0
@@ -13,4 +13,4 @@ NPROC=32
 LOAD=26.00
 MEMFREE=48
 DISK=16G
-NOW=2026-09-30 02:24:59
+NOW=2026-09-30 02:35:00
