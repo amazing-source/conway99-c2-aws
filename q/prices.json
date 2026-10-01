@@ -1,0 +1,12 @@
+{
+  "note": "Max Spot price per region ($/h, c7a.8xlarge). Type EXACTLY this number as 'Maximum price' when launching: the spend ledger counts every machine at this price, so the bill can only be lower. Set 2026-10-01 from the 7-day price history (eu-north-1 0.241-0.322, us-east-2 0.355-0.396, us-west-2 0.548-0.641, us-east-1 0.506-0.803).",
+  "instance_types": ["c7a.8xlarge"],
+  "overhead_usd_per_h": 0.01,
+  "region_order": ["eu-north-1", "us-east-2", "us-west-2", "us-east-1"],
+  "max_price_usd_per_h": {
+    "eu-north-1": 0.34,
+    "us-east-2": 0.42,
+    "us-west-2": 0.68,
+    "us-east-1": 0.85
+  }
+}

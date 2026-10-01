@@ -1,0 +1,59 @@
+name: q-rehearsal
+# Free full rehearsal of the adaptive queue on a fresh Linux machine (C2, 2026-10-01). Uses branch queue-ci (prepared beforehand with
+# q/make_queue.py --branch queue-ci) and pushes to run/qci-*. Never touches the real queue or AWS.
+#   S1: install + calibration (must be EQUIVALENT) + two agents in parallel on real jobs: no double claim, every job done once, results stored.
+#   S2: cap reached -> a new agent stops at once and claims nothing.   S3: control mode=stop / mode=drain -> STOP / DRAINED, nothing claimed.
+on:
+  workflow_dispatch:
+    inputs:
+      njobs:
+        description: number of jobs in queue-ci
+        default: "8"
+permissions:
+  contents: write
+jobs:
+  rehearsal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      Q_TEST: "1"
+      Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+      Q_QUEUE: queue-ci
+      Q_RUNPREFIX: run/qci-
+      Q_TEST_PRICE: "0.10"
+      Q_HEARTBEAT: "60"
+      Q_WORKERS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: S1 - two agents on real jobs
+        run: |
+          git config --global user.name amazing-source; git config --global user.email 206353265+amazing-source@users.noreply.github.com
+          Q_TEST_NAME=a bash q/qmachine.sh --inner > $HOME/qmachine_a.log 2>&1 &
+          A=$!
+          for i in $(seq 1 240); do [ -f $HOME/q_calibrated_qci-a ] && break; kill -0 $A 2>/dev/null || break; sleep 10; done
+          echo "--- calibration:"; cat $HOME/c2_cloud_run/calib_check.txt || true
+          [ -f $HOME/q_calibrated_qci-a ] || { echo "no calibration"; tail -30 $HOME/qmachine_a.log; tail -30 $HOME/c2_cloud_run/setup.log; exit 1; }
+          Q_NAME=qci-b Q_REGION=ci Q_AZ=ci Q_ITYPE=ci Q_PRICE=0.10 Q_OVH=0.01 Q_BOOT=$(date +%s) Q_PKG=$HOME/c2_cloud_run \
+            $HOME/c2_cloud_run/.venv/bin/python q/qagent.py run > $HOME/agent_b.out 2>&1 &
+          B=$!
+          wait $A; echo "agent A exit $?"; wait $B; echo "agent B exit $?"
+          echo "--- agent A log"; cat $HOME/q_agent_qci-a.log || true
+          echo "--- agent B log"; cat $HOME/q_agent_qci-b.log || true; cat $HOME/agent_b.out || true
+          python3 q/rehearsal_check.py s1 ${{ github.event.inputs.njobs }}
+      - name: S2 - cap reached
+        run: |
+          python3 q/rehearsal_check.py set cap_usd=0.0001 --order-add 118:2:8
+          Q_NAME=qci-c Q_REGION=ci Q_AZ=ci Q_ITYPE=ci Q_PRICE=0.10 Q_OVH=0.01 Q_BOOT=$(date +%s) Q_PKG=$HOME/c2_cloud_run \
+            timeout 600 $HOME/c2_cloud_run/.venv/bin/python q/qagent.py run; echo "agent C exit $?"
+          cat $HOME/q_agent_qci-c.log || true
+          python3 q/rehearsal_check.py s2 qci-c
+      - name: S3 - control stop and drain
+        run: |
+          python3 q/rehearsal_check.py set cap_usd=1000 mode='"stop"'
+          Q_NAME=qci-d Q_REGION=ci Q_AZ=ci Q_ITYPE=ci Q_PRICE=0.10 Q_OVH=0.01 Q_BOOT=$(date +%s) Q_PKG=$HOME/c2_cloud_run \
+            timeout 600 $HOME/c2_cloud_run/.venv/bin/python q/qagent.py run; echo "agent D exit $?"
+          python3 q/rehearsal_check.py s3 qci-d STOP
+          python3 q/rehearsal_check.py set mode='"drain"'
+          Q_NAME=qci-e Q_REGION=ci Q_AZ=ci Q_ITYPE=ci Q_PRICE=0.10 Q_OVH=0.01 Q_BOOT=$(date +%s) Q_PKG=$HOME/c2_cloud_run \
+            timeout 600 $HOME/c2_cloud_run/.venv/bin/python q/qagent.py run; echo "agent E exit $?"
+          python3 q/rehearsal_check.py s3 qci-e DRAINED
