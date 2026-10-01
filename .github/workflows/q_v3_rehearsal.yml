@@ -1,15 +1,16 @@
 name: q-v3-rehearsal
 # Free rehearsal of package v3 on a fresh Linux machine (C2, 2026-10-02). Run on the branch carrying package v3
-# (gh workflow run q_v3_rehearsal.yml --ref v3). Branch queue-ci must hold two real jobs: 118:2:8 (stream) and 001:5:4000 (golay_pairs).
+# (gh workflow run q_v3_rehearsal.yml --ref v3). Branch queue-ci must hold three real jobs: 001:5:4000 (golay_pairs), 118:2:8 (stream)
+# and 000:31:141 (o24, class 31: EMPTY in the lab on 02/10, its node counts per depth are compared exactly).
 #   V1: q/qmachine.sh --inner (Q_TEST): install, the three calibrations (118:2, v2 stream of 011, calib_v3: golay slice + O24 kernel 3 +
-#       O24 joint planted), the agent runs both jobs, results pushed before their done events, FINI, PKG=v3, engine sha per job kind.
+#       O24 joint planted), the agent runs the three jobs, results pushed before their done events, FINI, PKG=v3, engine sha per job kind.
 on: workflow_dispatch
 permissions:
   contents: write
 jobs:
   v3:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     env:
       Q_TEST: "1"
       Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
@@ -19,9 +20,10 @@ jobs:
       Q_HEARTBEAT: "60"
       Q_WORKERS: "1"
       EXPECT_PKG: "v3"
+      O24_REF: '{"31": [1, 1816, 668436, 39477724, 522688961, 167075341, 3301025, 226415]}'
     steps:
       - uses: actions/checkout@v4
-      - name: V1 - fresh machine, package v3, three calibrations, two real jobs (stream + golay_pairs)
+      - name: V1 - fresh machine, package v3, three calibrations, three real jobs (golay_pairs + stream + o24)
         run: |
           git config --global user.name amazing-source; git config --global user.email 206353265+amazing-source@users.noreply.github.com
           set +e
@@ -30,5 +32,6 @@ jobs:
           echo "--- calibration 118:2"; cat $HOME/c2_cloud_run/calib_check.txt
           echo "--- calibrations v2 + v3"; cat $HOME/c2_cloud_run/calib_extra_check.txt
           echo "--- agent log"; cat $HOME/q_agent_qci-v3a.log
+          echo "--- job outputs"; tail -3 $HOME/c2_cloud_run/results/*_consumer.out
           set -e
           python3 q/tools/v2_check.py s1 qci-v3a
