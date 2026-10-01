@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/runner/c2_cloud_run/scripts/o24_job.py", line 30, in <module>
+    main()
+  File "/home/runner/c2_cloud_run/scripts/o24_job.py", line 17, in main
+    r = R.run(k)
+        ^^^^^^^^
+  File "/home/runner/c2_cloud_run/scripts/o24_run_fast.py", line 60, in run
+    json.dump(res, open(os.path.join(OD.LAB, "data", "finishC", "o24_dfs", "class_%03d.json" % k), "w"))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/c2_cloud_run/data/finishC/o24_dfs/class_031.json'
