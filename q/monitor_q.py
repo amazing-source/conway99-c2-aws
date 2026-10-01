@@ -35,7 +35,7 @@ def state():
     ctl = json.loads(git("show", ref + ":control.json"))
     ev = [json.loads(l) for l in git("show", ref + ":events.jsonl").splitlines() if l.strip()]
     ms = {}
-    for r in git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/" + PREFIX).split():
+    for r in git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/" + PREFIX + "*").split():
         txt = subprocess.run(["git", "show", r + ":status.txt"], cwd=REPO, capture_output=True, text=True).stdout
         st = dict(l.split("=", 1) for l in txt.splitlines() if "=" in l)
         if st.get("CAMPAIGN") == ctl.get("campaign") and st.get("NAME"):
@@ -93,7 +93,7 @@ def set_control(**kv):
 
 def fetch_results():
     fetch(); n = 0
-    for r in git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/" + PREFIX).split():
+    for r in git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/" + PREFIX + "*").split():
         data = subprocess.run(["git", "archive", "--format=zip", r, "results"], cwd=REPO, capture_output=True).stdout
         if data:
             dst = os.path.join(REPO, "resultats_q", r.split("/")[-1]); os.makedirs(dst, exist_ok=True)

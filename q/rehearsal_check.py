@@ -32,7 +32,7 @@ def load():
     order = [l for l in git("show", "origin/%s:order.txt" % QBR).split() if l]
     ev = [json.loads(l) for l in git("show", "origin/%s:events.jsonl" % QBR).splitlines() if l.strip()]
     ms = {}
-    for r in git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/" + PREFIX).split():
+    for r in git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/" + PREFIX + "*").split():
         st = dict(l.split("=", 1) for l in git("show", r + ":status.txt", check=False).splitlines() if "=" in l)
         ms[st.get("NAME", r)] = (r, st)
     return order, ev, ms

@@ -150,7 +150,7 @@ class Agent:
 
     def statuses(self, campaign):
         ms = {}
-        refs = git(self.qd, "for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/" + self.prefix).stdout.split()
+        refs = git(self.qd, "for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/" + self.prefix + "*").stdout.split()
         for ref in refs:
             r = git(self.qd, "show", ref + ":status.txt", check=False)
             if r.returncode:
@@ -328,6 +328,9 @@ class Agent:
         self.fetch(); self.campaign = json.loads(self.show("origin/" + self.qbr, "control.json")).get("campaign", "?")
         if not self.push_status("EN_COURS", "agent started"):                # fresh sign of life BEFORE the first claim
             raise RuntimeError("cannot push the first status")
+        self.fetch()
+        if self.name not in self.statuses(self.campaign):                   # self-check: the fleet listing must see this machine,
+            raise RuntimeError("self-check failed: own status not visible")  # otherwise claims and ledger would be blind
         self.rearm_deadman()
         last_hb = time.time(); last_sync = 0.0
         while True:
