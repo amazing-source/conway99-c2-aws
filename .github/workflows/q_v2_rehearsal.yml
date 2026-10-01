@@ -1,0 +1,38 @@
+name: q-v2-rehearsal
+# Free rehearsal of package v2 on a fresh Linux machine (C2, 2026-10-02). Run it on the branch that carries package v2
+# (gh workflow run q_v2_rehearsal.yml --ref v2). Uses branch queue-ci (prepared with one real job, 118:2:8) and run/qci-*.
+#   V1: q/qmachine.sh --inner in Q_TEST mode: install, BOTH calibrations (118:2 and the v2 stream of 011), agent claims and runs the job,
+#       result pushed before its done event, FINI, PKG=v2, engine sha = package v2.
+#   V2: control mode=run, mode_v2=stop -> a v2 agent must STOP without claiming (mode_v2 overrides mode).
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  v2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      Q_TEST: "1"
+      Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+      Q_QUEUE: queue-ci
+      Q_RUNPREFIX: run/qci-
+      Q_TEST_PRICE: "0.10"
+      Q_HEARTBEAT: "60"
+      Q_WORKERS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - name: V1 - fresh machine, package v2, both calibrations, one real job
+        run: |
+          git config --global user.name amazing-source; git config --global user.email 206353265+amazing-source@users.noreply.github.com
+          Q_TEST_NAME=v2a bash q/qmachine.sh --inner > $HOME/qm.log 2>&1; echo "qmachine exit $?"
+          tail -25 $HOME/qm.log
+          echo "--- calibration 118:2"; cat $HOME/c2_cloud_run/calib_check.txt || true
+          echo "--- calibration v2 (011 stream)"; cat $HOME/c2_cloud_run/calib_extra_check.txt || true
+          echo "--- agent log"; cat $HOME/q_agent_qci-v2a.log || true
+          python3 q/tools/v2_check.py s1 qci-v2a
+      - name: V2 - mode_v2 overrides mode
+        run: |
+          python3 q/rehearsal_check.py set mode='"run"' mode_v2='"stop"'
+          Q_NAME=qci-v2b Q_REGION=ci Q_AZ=ci Q_ITYPE=ci Q_PRICE=0.10 Q_OVH=0.01 Q_BOOT=$(date +%s) Q_PKG=$HOME/c2_cloud_run \
+            timeout 600 $HOME/c2_cloud_run/.venv/bin/python q/qagent.py run; echo "agent b exit $?"
+          python3 q/rehearsal_check.py s3 qci-v2b STOP
