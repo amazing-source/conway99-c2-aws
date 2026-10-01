@@ -2,3 +2,4 @@ resultats/
 resultats_q/
 __pycache__/
 *.pyc
+resultats_ci/
