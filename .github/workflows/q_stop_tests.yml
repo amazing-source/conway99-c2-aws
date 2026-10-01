@@ -1,0 +1,42 @@
+name: q-stop-tests
+# Free, fast checks of the money safeguards of the adaptive queue (no computation): runs the agent from the unpacked package
+# against branch queue-ci. S2: cap reached -> STOP, nothing claimed. S3: control stop -> STOP; control drain -> DRAINED.
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  stop-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      Q_TEST: "1"
+      Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+      Q_QUEUE: queue-ci
+      Q_RUNPREFIX: run/qci-
+      Q_HEARTBEAT: "60"
+      Q_WORKERS: "1"
+      Q_REGION: ci
+      Q_AZ: ci
+      Q_ITYPE: ci
+      Q_PRICE: "0.10"
+      Q_OVH: "0.01"
+    steps:
+      - uses: actions/checkout@v4
+      - name: unpack the package (same files, MANIFEST checked by the agent)
+        run: |
+          git config --global user.name amazing-source; git config --global user.email 206353265+amazing-source@users.noreply.github.com
+          python3 -m zipfile -e c2_cloud_run.zip $HOME/c2_cloud_run
+      - name: S2 - cap reached
+        run: |
+          python3 q/rehearsal_check.py set cap_usd=0.0001 mode='"run"'
+          Q_NAME=qci-c Q_BOOT=$(date +%s) Q_PKG=$HOME/c2_cloud_run timeout 600 python3 q/qagent.py run; echo "agent C exit $?"
+          cat $HOME/q_agent_qci-c.log || true
+          python3 q/rehearsal_check.py s2 qci-c
+      - name: S3 - control stop, then drain
+        run: |
+          python3 q/rehearsal_check.py set cap_usd=1000 mode='"stop"'
+          Q_NAME=qci-d Q_BOOT=$(date +%s) Q_PKG=$HOME/c2_cloud_run timeout 600 python3 q/qagent.py run; echo "agent D exit $?"
+          python3 q/rehearsal_check.py s3 qci-d STOP
+          python3 q/rehearsal_check.py set mode='"drain"'
+          Q_NAME=qci-e Q_BOOT=$(date +%s) Q_PKG=$HOME/c2_cloud_run timeout 600 python3 q/qagent.py run; echo "agent E exit $?"
+          python3 q/rehearsal_check.py s3 qci-e DRAINED
