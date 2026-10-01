@@ -1,6 +1,8 @@
 """Checks of the v2 rehearsal (q_v2_rehearsal.yml) on branch queue-ci / run/qci-* (C2, 2026-10-02).
   python3 q/tools/v2_check.py s1 NAME   the machine NAME (Q_TEST, package v2) installed, passed both calibrations, ran its claimed job(s),
                                         pushed each result (chunk_ok, chunk_done, v2 engine sha) BEFORE its done event, and ended FINI.
+  env EXPECT_PKG (default v2): package version the machine must report; O24_REF='{"31": [nodes per depth]}': each listed O24 class
+  must have been run and must give exactly the lab's node counts (v3 rehearsal).
 Exit 0 = PASS."""
 import os, sys, json, subprocess
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
@@ -31,6 +33,7 @@ def main():
     man = json.load(open(os.path.join(os.path.expanduser("~"), "c2_cloud_run", "MANIFEST.json")))
     eng = man["engine_code_sha"]
     eng_by_kind = {"o24": man.get("engine_code_sha_o24"), "golay_pairs": man.get("engine_code_sha_golay")}
+    o24_ref = json.loads(os.environ.get("O24_REF", "{}"))          # {class: nodes per depth of the lab run}, compared exactly
     done = [j for e in ev if e["m"] == name and e["op"] == "done" for j in e["jobs"]]
     ok(len(done) >= 1, "%s completed %d job(s): %s" % (name, len(done), done))
     for j in done:
@@ -41,6 +44,10 @@ def main():
         ok(bool(r.get("chunk_ok")) and bool(r.get("chunk_done")), "%s: chunk_ok %s chunk_done %s verdicts %s" % (f, r.get("chunk_ok"), r.get("chunk_done"), r.get("verdicts")))
         e = eng_by_kind.get(r.get("kind")) or eng
         ok(r.get("code_sha") == e, "%s: engine %s == package engine %s" % (f, r.get("code_sha"), e))
+        if r.get("kind") == "o24" and str(r.get("class")) in o24_ref:
+            ok(r.get("nodes_per_depth") == o24_ref[str(r["class"])], "%s: O24 nodes per depth %s == lab run %s" % (f, r.get("nodes_per_depth"), o24_ref[str(r["class"])]))
+    for c in o24_ref:
+        ok("000:%s:141" % c in done, "O24 class %s was run (job 000:%s:141 done)" % (c, c))
     print("RESULT:", "PASS" if not FAILS else "FAIL (%d)" % len(FAILS))
     sys.exit(1 if FAILS else 0)
 
