@@ -81,6 +81,14 @@ Dans la console EC2 de la région : **Lancer une instance**, puis exactement :
 
 Si la région refuse (« insufficient capacity » ou quota), passe à la région suivante du tableau, avec **son** prix maximum.
 
+**Pilote d'abord.** Lance **1 seule** machine à Stockholm, puis regarde `python q/monitor_q.py --once` :
+1. Vers 10-15 min, elle doit être en `EN_COURS` avec `run` = 26, c'est-à-dire 26 jobs en cours.
+2. `python q/monitor_q.py --aws` doit afficher `OK` pour elle : Spot, c7a.8xlarge, prix max 0.34.
+
+Ensuite seulement, lance les 3 autres (Nombre d'instances : 3). Le pilote ne coûte rien de plus : il fait du vrai travail.
+Si la machine reste `INSTALLATION` plus de 30 min, ou passe `SILENT`, arrête là et préviens Claude : l'homme mort l'éteint
+de toute façon en 60 min au plus.
+
 ## 3. Suivre depuis le PC
 Dans ce dossier (`Desktop\c2_experimental\aws_repo`) :
 
@@ -140,8 +148,14 @@ L'import peut aussi se faire en cours de route, autant de fois qu'on veut (les d
 - `make_queue.py` : construit la branche `queue` depuis l'état réel du labo (seulement les jobs pas encore faits, le réseau le plus
   riche d'abord, comme `sched.py`).
 - `monitor_q.py` : suivi, pilotage et import.
-- `rehearsal_check.py` et `.github/workflows/q_rehearsal.yml` : répétition générale **gratuite** sur une machine Linux de GitHub,
-  avec trois scénarios :
-  - deux agents sur de vrais jobs : aucune double réservation, chaque job fait une fois, résultats déposés ;
-  - plafond atteint : arrêt sans rien prendre ;
-  - arrêt et vidange à distance.
+- `rehearsal_check.py`, `.github/workflows/q_rehearsal.yml` et `q_stop_tests.yml` : répétitions **gratuites** sur des machines Linux
+  de GitHub. Résultats du 01/10 :
+  - **Installation et calibration EQUIVALENT** sur une machine neuve.
+  - **Deux agents en parallèle** : aucune double réservation.
+  - **Un vrai job** (028:0:8) fait, avec un résultat conforme (même moteur), **déposé avant** son annonce « fait », puis importé au
+    labo.
+  - **Plafond atteint** : arrêt immédiat, rien pris.
+  - **Arrêt et vidange à distance** : STOP et DRAINED, rien pris.
+  - Deux défauts ont été trouvés et corrigés AVANT toute dépense :
+    - une double réservation ;
+    - une liste de flotte vide, qui rendait aussi le compteur de dépense aveugle.
