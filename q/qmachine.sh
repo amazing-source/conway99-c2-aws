@@ -60,6 +60,11 @@ fi
 if ! .venv/bin/python verify_equivalence.py calib/118_2_8.jsonl calib_reference/118_2_8.jsonl > calib_check.txt 2>&1; then
   $A status "STOP CALIB" "$(head -2 calib_check.txt | tr '\n' ' ')"; off 1
 fi
+if [ -f calib_extra.sh ]; then                                                   # package v2: second calibration (deep symmetry + twin rule)
+  if ! bash calib_extra.sh > calib_extra_check.txt 2>&1; then
+    $A status "STOP CALIB" "v2 calibration: $(tail -2 calib_extra_check.txt | tr '\n' ' ')"; off 1
+  fi
+fi
 $A status INSTALLATION "calibration EQUIVALENT, starting the agent"
 touch "$HOME/q_calibrated_$NAME"                                                 # used by the rehearsal only
 .venv/bin/python "$REPO/q/qagent.py" run; RC=$?

@@ -61,7 +61,7 @@ def table():
         note = st.get("REASON", "") or st.get("LAST_ERR", "")
         if st.get("STATE") not in TERMINAL and age > lease / 60:
             note = "SILENT (dead-man switch powers it off) " + note
-        print("%-24s %-14s %-12s %6.2f %7.2f %4s %5s %4s %6.1f %6.1f  %s" % (n[:24], st.get("AZ", "")[:14], st.get("STATE", "")[:12], up, cost,
+        print("%-24s %-14s %-12s %6.2f %7.2f %4s %5s %4s %6.1f %6.1f  %s" % (n[:24], (st.get("AZ", "") + " " + st.get("PKG", "v1"))[:14], st.get("STATE", "")[:12], up, cost,
               st.get("RUNNING", ""), st.get("DONE", ""), st.get("FAILED", ""), age, float(st.get("ETA_S") or 0) / 3600, note[:70]))
     nfree = sum(1 for j in order if j not in done and fails[j] < int(ctl.get("max_fail", 2)) and own.get(j) not in live)
     claimed = sum(1 for j in order if own.get(j) in live and j not in done)
@@ -135,16 +135,18 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     for f in ("once", "aws", "drain", "stop", "run", "fetch"):
         ap.add_argument("--" + f, action="store_true")
+    ap.add_argument("--switch-v2", action="store_true")
     ap.add_argument("--cap", type=float); ap.add_argument("--every", type=float, default=5.0)
     a = ap.parse_args()
-    if a.drain: set_control(mode="drain")
-    if a.stop: set_control(mode="stop")
-    if a.run: set_control(mode="run")
+    if a.drain: set_control(mode="drain", mode_v2="drain")
+    if a.stop: set_control(mode="stop", mode_v2="stop")
+    if a.run: set_control(mode="run", mode_v2="run")
+    if a.switch_v2: set_control(mode="drain", mode_v2="run"); print("switch: old-package machines drain, v2 machines run")
     if a.cap is not None: set_control(cap_usd=a.cap)
     if a.fetch: fetch_results(); sys.exit(0)
     if a.aws: aws_check(); sys.exit(0)
     while True:
         table()
-        if a.once or a.drain or a.stop or a.run or a.cap is not None:
+        if a.once or a.drain or a.stop or a.run or a.switch_v2 or a.cap is not None:
             break
         time.sleep(a.every * 60)

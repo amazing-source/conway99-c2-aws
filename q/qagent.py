@@ -128,6 +128,10 @@ class Agent:
         self.running = {}; self.pending = []; self.done_here = []; self.failed_here = []
         self.unpushed = []          # done/fail events whose result is not yet on GitHub: published only after a successful push
         self.campaign = "?"; self.info = {}; self.last_err = ""
+        try:
+            self.pkgver = (json.load(open(os.path.join(self.pkg, "MANIFEST.json"))).get("version") or "v1")[:2]
+        except Exception:
+            self.pkgver = "?"
 
     def log(self, m):
         with open(self.logf, "a") as f:
@@ -174,13 +178,14 @@ class Agent:
             ratio, cap, maxfail = float(ctl.get("ratio", 1.3)), float(ctl["cap_usd"]), int(ctl.get("max_fail", 2))
             live = live_names(ms, now, int(ctl.get("lease_s", 1800)), le) | {self.name}
             free = [j for j in order if j not in done and fails[j] < maxfail and own.get(j) not in live and j in self.est]
-            if ctl.get("mode") == "stop":
+            mctl = ctl.get("mode_v2") or ctl.get("mode")                     # v2: mode_v2 overrides mode (fleet switch without loss)
+            if mctl == "stop":
                 mode, reason = "stop", "control: stop"
             elif led >= cap:
                 mode, reason = "stop", "cap reached (ledger %.2f >= %.2f)" % (led, cap)
             elif now - self.boot > self.max_up:
                 mode, reason = "drain", "max uptime"
-            elif ctl.get("mode") == "drain":
+            elif mctl == "drain":
                 mode, reason = "drain", "control: drain"
             else:
                 mode, reason = "run", ""
@@ -222,7 +227,7 @@ class Agent:
             if r.returncode == 0:
                 git(self.pd, "reset", "-q", "--hard", "FETCH_HEAD")
         now = time.time(); i = self.info
-        st = [("CAMPAIGN", self.campaign), ("NAME", self.name), ("STATE", state), ("REASON", reason.replace("\n", " ")[:300]),
+        st = [("CAMPAIGN", self.campaign), ("NAME", self.name), ("PKG", self.pkgver), ("STATE", state), ("REASON", reason.replace("\n", " ")[:300]),
               ("REGION", self.region), ("AZ", self.az), ("ITYPE", self.itype), ("PRICE", self.price), ("OVH", self.ovh),
               ("BOOT", "%.0f" % self.boot), ("NOW", "%.0f" % now), ("UPTIME_H", "%.2f" % ((now - self.boot) / 3600.0)),
               ("WORKERS", self.workers), ("RUNNING", len(self.running)), ("RUNNING_JOBS", " ".join(sorted(self.running))),
