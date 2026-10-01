@@ -26,9 +26,11 @@ def main():
     ev = [json.loads(l) for l in git("show", "origin/%s:events.jsonl" % QBR).splitlines() if l.strip()]
     st = dict(l.split("=", 1) for l in git("show", "origin/run/%s:status.txt" % name).splitlines() if "=" in l)
     ok(st.get("STATE") == "FINI", "%s ended FINI (state %s, reason %s)" % (name, st.get("STATE"), st.get("REASON")))
-    ok(st.get("PKG") == "v2", "%s reports package v2 (PKG=%s)" % (name, st.get("PKG")))
+    want = os.environ.get("EXPECT_PKG", "v2")
+    ok(st.get("PKG") == want, "%s reports package %s (PKG=%s)" % (name, want, st.get("PKG")))
     man = json.load(open(os.path.join(os.path.expanduser("~"), "c2_cloud_run", "MANIFEST.json")))
     eng = man["engine_code_sha"]
+    eng_by_kind = {"o24": man.get("engine_code_sha_o24"), "golay_pairs": man.get("engine_code_sha_golay")}
     done = [j for e in ev if e["m"] == name and e["op"] == "done" for j in e["jobs"]]
     ok(len(done) >= 1, "%s completed %d job(s): %s" % (name, len(done), done))
     for j in done:
@@ -37,7 +39,8 @@ def main():
         recs = [json.loads(l) for l in txt.splitlines() if l.strip()]
         r = recs[-1] if recs else {}
         ok(bool(r.get("chunk_ok")) and bool(r.get("chunk_done")), "%s: chunk_ok %s chunk_done %s verdicts %s" % (f, r.get("chunk_ok"), r.get("chunk_done"), r.get("verdicts")))
-        ok(r.get("code_sha") == eng, "%s: engine %s == package v2 engine %s" % (f, r.get("code_sha"), eng))
+        e = eng_by_kind.get(r.get("kind")) or eng
+        ok(r.get("code_sha") == e, "%s: engine %s == package engine %s" % (f, r.get("code_sha"), e))
     print("RESULT:", "PASS" if not FAILS else "FAIL (%d)" % len(FAILS))
     sys.exit(1 if FAILS else 0)
 
