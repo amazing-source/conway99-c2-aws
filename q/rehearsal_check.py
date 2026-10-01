@@ -77,7 +77,7 @@ def s3(name, want):
 
 
 def set_control(args):
-    url = git("remote", "get-url", "origin").strip(); d = tempfile.mkdtemp()
+    url = os.environ.get("Q_URL") or git("remote", "get-url", "origin").strip(); d = tempfile.mkdtemp()   # Q_URL carries the token in CI
     git("init", "-q", cwd=d); git("remote", "add", "origin", url, cwd=d)
     git("fetch", "-q", "origin", QBR, cwd=d); git("checkout", "-q", "-B", QBR, "FETCH_HEAD", cwd=d)
     ctl = json.load(open(os.path.join(d, "control.json")))
