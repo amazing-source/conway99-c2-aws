@@ -12,7 +12,7 @@
 import os, sys, json, time, argparse, subprocess, tempfile, io, zipfile
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-from qagent import owners, ledger, live_names, TERMINAL           # the same formulas as on the machines
+from qagent import owners, ledger, live_names, last_events, last_seen, TERMINAL           # the same formulas as on the machines
 
 PREFIX, QBR, HB, DEADMAN = "run/q-", "queue", 300, 20
 
@@ -45,8 +45,9 @@ def state():
 
 def table():
     fetch(); order, ctl, ev, ms = state(); now = time.time()
-    own, done, fails = owners(ev); lease = int(ctl.get("lease_s", 1800)); live = live_names(ms, now, lease)
-    led, proj = ledger(ms, now, ctl, HB, DEADMAN)
+    own, done, fails = owners(ev); lease = int(ctl.get("lease_s", 1800)); le = last_events(ev)
+    live = live_names(ms, now, lease, le)
+    led, proj = ledger(ms, now, ctl, HB, DEADMAN, last_event=le)
     jobs = {"%s:%d:%d" % (j["lid"], j["k"], j["n"]): j for j in json.load(open(os.path.join(REPO, "..", "c2_cloud_run", "jobs.json")))} \
         if os.path.exists(os.path.join(REPO, "..", "c2_cloud_run", "jobs.json")) else {}
     print("\n=== Route (C) adaptive run, campaign %s, %s ===" % (ctl.get("campaign"), time.strftime("%d/%m %H:%M")))
@@ -54,7 +55,7 @@ def table():
     for n, st in sorted(ms.items(), key=lambda kv: kv[1].get("BOOT", "")):
         try:
             up = (float(st["NOW"]) - float(st["BOOT"])) / 3600; cost = up * (float(st["PRICE"]) + float(st["OVH"]))
-            age = (now - float(st["NOW"])) / 60
+            age = (now - last_seen(st, n, le)) / 60
         except (KeyError, ValueError):
             up = cost = age = float("nan")
         note = st.get("REASON", "") or st.get("LAST_ERR", "")

@@ -50,27 +50,44 @@ def owners(events):
     return own, done, fails
 
 
-def live_names(ms, now, lease):
-    return {n for n, st in ms.items() if st.get("STATE") not in TERMINAL and now - float(st.get("NOW", 0)) <= lease}
+SETUP_DEADMAN_MIN = 60     # dead-man switch armed by qmachine.sh before the agent runs (re-armed to DEADMAN by the agent)
 
 
-def ledger(ms, now, ctl, hb, deadman_min, self_name=None, self_boot=None, self_rate=None):
-    """-> (ledger_usd, projected_usd_for_running_jobs_of_the_other_machines). Upper bound of the bill: max price, silent machines
-    counted until their dead-man switch has fired, terminal machines until 3 min after their last report."""
-    lease = int(ctl.get("lease_s", 1800)); total = proj = 0.0
+def last_seen(st, n, last_event):
+    """latest sign of life of machine n: its last status push or its last event in the queue (a claim proves it is alive)"""
+    return max(float(st.get("NOW", 0) or 0), float(last_event.get(n, 0)))
+
+
+def last_events(events):
+    le = {}
+    for e in events:
+        le[e.get("m")] = max(le.get(e.get("m"), 0), float(e.get("t", 0)))
+    return le
+
+
+def live_names(ms, now, lease, last_event=None):
+    le = last_event or {}
+    return {n for n, st in ms.items() if st.get("STATE") not in TERMINAL and now - last_seen(st, n, le) <= lease}
+
+
+def ledger(ms, now, ctl, hb, deadman_min, self_name=None, self_boot=None, self_rate=None, last_event=None):
+    """-> (ledger_usd, projected_usd_for_running_jobs_of_the_other_machines). Upper bound of the bill: max price; a silent machine is
+    counted until its dead-man switch has surely fired (60 min while installing, DEADMAN after); a terminal one until 3 min after
+    its last report."""
+    lease = int(ctl.get("lease_s", 1800)); total = proj = 0.0; le = last_event or {}
     for n, st in ms.items():
         if n == self_name:
             continue
         try:
-            boot, last = float(st["BOOT"]), float(st["NOW"]); rate = float(st["PRICE"]) + float(st["OVH"])
+            boot = float(st["BOOT"]); last = last_seen(st, n, le); rate = float(st["PRICE"]) + float(st["OVH"])
         except (KeyError, ValueError):
             continue
         if st.get("STATE") in TERMINAL:
             end = last + 180
         elif now - last <= lease:
             end = now; proj += (float(st.get("ETA_S") or 0) + hb) / 3600.0 * rate
-        else:
-            end = last + (deadman_min + 2) * 60                    # silent: its dead-man switch has powered it off by then
+        else:                                                      # silent: its dead-man switch has powered it off by then
+            end = last + ((SETUP_DEADMAN_MIN if st.get("STATE") == "INSTALLATION" else deadman_min) + 2) * 60
         total += max(0.0, end - boot) / 3600.0 * rate
     if self_name is not None:
         total += max(0.0, now - self_boot) / 3600.0 * self_rate
@@ -152,10 +169,10 @@ class Agent:
         for attempt in range(12):
             self.fetch()
             order, ctl, ev = self.read_queue(); self.campaign = ctl.get("campaign", "?")
-            ms = self.statuses(self.campaign); own, done, fails = owners(ev); now = time.time()
-            led, proj_others = ledger(ms, now, ctl, self.hb, self.deadman, self.name, self.boot, self.rate)
+            ms = self.statuses(self.campaign); own, done, fails = owners(ev); now = time.time(); le = last_events(ev)
+            led, proj_others = ledger(ms, now, ctl, self.hb, self.deadman, self.name, self.boot, self.rate, le)
             ratio, cap, maxfail = float(ctl.get("ratio", 1.3)), float(ctl["cap_usd"]), int(ctl.get("max_fail", 2))
-            live = live_names(ms, now, int(ctl.get("lease_s", 1800))) | {self.name}
+            live = live_names(ms, now, int(ctl.get("lease_s", 1800)), le) | {self.name}
             free = [j for j in order if j not in done and fails[j] < maxfail and own.get(j) not in live and j in self.est]
             if ctl.get("mode") == "stop":
                 mode, reason = "stop", "control: stop"
@@ -184,7 +201,7 @@ class Agent:
             evs = list(self.pending) + ([{"t": round(now), "m": self.name, "op": "claim", "jobs": picked}] if picked else [])
             if not evs:
                 return []
-            git(self.qd, "checkout", "-q", "-B", self.qbr, "origin/" + self.qbr)
+            git(self.qd, "checkout", "-q", "-f", "-B", self.qbr, "origin/" + self.qbr)
             with open(os.path.join(self.qd, "events.jsonl"), "a") as f:
                 for e in evs:
                     f.write(json.dumps(e) + "\n")
@@ -308,7 +325,11 @@ class Agent:
         self.est = {k: float(j.get("est_h") or 0) for k, j in self.jobs.items()}
         init_repo(self.qd, self.url)
         self.log("agent start: %d workers, price %.4f + %.4f $/h, region %s" % (self.workers, self.price, self.ovh, self.region))
-        last_hb = last_sync = 0.0
+        self.fetch(); self.campaign = json.loads(self.show("origin/" + self.qbr, "control.json")).get("campaign", "?")
+        if not self.push_status("EN_COURS", "agent started"):                # fresh sign of life BEFORE the first claim
+            raise RuntimeError("cannot push the first status")
+        self.rearm_deadman()
+        last_hb = time.time(); last_sync = 0.0
         while True:
             now = time.time()
             if self.spot_interrupted():
