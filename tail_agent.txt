@@ -35,3 +35,4 @@
 2026-10-01 22:56:44 start 041:10:22 (est 1.94 h)
 2026-10-01 22:59:14 done 046:81:83 in 1995 s
 2026-10-01 22:59:17 start 041:11:22 (est 1.94 h)
+2026-10-01 23:09:51 INTERRUPTED: AWS spot interruption notice
