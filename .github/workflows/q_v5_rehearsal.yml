@@ -1,0 +1,37 @@
+name: q-v5-rehearsal
+# Free rehearsal of package v5 on a fresh Linux machine (C2, 2026-10-02). Run on the branch carrying package v5
+# (gh workflow run q_v5_rehearsal.yml --ref v5). Branch queue-ci must hold three real jobs: 001:5:4000 (golay_pairs, structures' format,
+# v4 job script), 010:1:400 (golay_pairs, compact format; queue-ci holds an earlier FAIL of it, control max_fail=1,
+# max_fail_v5=3: only a v5 agent may retry it) and 118:2:8 (stream). v5 = v4 + the HSfull engine fix.
+#   V1: q/qmachine.sh --inner (Q_TEST): install, the calibrations (118:2, v2 stream of 011, calib_v4: golay 001 slice + O24 kernel 3 +
+#       O24 joint planted + golay 010 compact slice + retry path), the agent runs the three jobs, FINI, PKG=v4, engine sha per job kind.
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  v5:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      Q_TEST: "1"
+      Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+      Q_QUEUE: queue-ci
+      Q_RUNPREFIX: run/qci-
+      Q_TEST_PRICE: "0.10"
+      Q_HEARTBEAT: "60"
+      Q_WORKERS: "1"
+      EXPECT_PKG: "v5"
+    steps:
+      - uses: actions/checkout@v4
+      - name: V1 - fresh machine, package v5, calibrations, three real jobs (golay 001 + golay 010 compact + stream)
+        run: |
+          git config --global user.name amazing-source; git config --global user.email 206353265+amazing-source@users.noreply.github.com
+          set +e
+          Q_TEST_NAME=v5a bash q/qmachine.sh --inner > $HOME/qm.log 2>&1; echo "qmachine exit $?"
+          tail -25 $HOME/qm.log
+          echo "--- calibration 118:2"; cat $HOME/c2_cloud_run/calib_check.txt
+          echo "--- calibrations v2 + v4-checks"; cat $HOME/c2_cloud_run/calib_extra_check.txt
+          echo "--- agent log"; cat $HOME/q_agent_qci-v5a.log
+          echo "--- job outputs"; for f in $HOME/c2_cloud_run/results/*_consumer.out; do echo "$f"; tail -n 3 "$f"; done
+          set -e
+          python3 q/tools/v2_check.py s1 qci-v5a
