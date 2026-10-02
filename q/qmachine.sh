@@ -34,7 +34,7 @@ if [ -n "${Q_TEST:-}" ]; then
 else
   IID=$(imds instance-id); REGION=$(imds placement/region); AZ=$(imds placement/availability-zone)
   ITYPE=$(imds instance-type); LIFE=$(imds instance-life-cycle)
-  PRICE=$(python3 -c "import json,sys; print(json.load(open('$REPO/q/prices.json'))['max_price_usd_per_h'].get('$REGION',''))")
+  PRICE=$(python3 -c "import json; p=json.load(open('$REPO/q/prices.json')); print(p.get('max_price_by_region_type', {}).get('$REGION', {}).get('$ITYPE') or p['max_price_usd_per_h'].get('$REGION', ''))")
   BOOT=$(( $(date +%s) - $(cut -d. -f1 /proc/uptime) ))
   W=$(( $(nproc) * 13 / 16 )); [ "$W" -ge 1 ] || W=1                          # 32 cores -> 26 jobs, exactly as before
   export Q_RUNPREFIX="run/q-" Q_QUEUE="queue"; NAME="q-$IID"

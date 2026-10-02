@@ -1,12 +1,32 @@
 {
   "note": "Max Spot price per region ($/h, c7a.8xlarge). Type EXACTLY this number as 'Maximum price' when launching: the spend ledger counts every machine at this price, so the bill can only be lower. Set 2026-10-01 from the 7-day price history (eu-north-1 0.241-0.322, us-east-2 0.355-0.396, us-west-2 0.548-0.641, us-east-1 0.506-0.803).",
-  "instance_types": ["c7a.8xlarge"],
+  "instance_types": [
+    "c7a.8xlarge",
+    "c8g.8xlarge",
+    "c7i.8xlarge",
+    "c6i.8xlarge"
+  ],
   "overhead_usd_per_h": 0.01,
-  "region_order": ["eu-north-1", "us-east-2", "us-west-2", "us-east-1"],
+  "region_order": [
+    "eu-north-1",
+    "us-east-2",
+    "us-west-2",
+    "us-east-1"
+  ],
   "max_price_usd_per_h": {
     "eu-north-1": 0.34,
     "us-east-2": 0.42,
     "us-west-2": 0.68,
     "us-east-1": 0.85
-  }
+  },
+  "max_price_by_region_type": {
+    "eu-west-2": {
+      "c8g.8xlarge": 0.24,
+      "c7i.8xlarge": 0.34
+    },
+    "us-east-1": {
+      "c6i.8xlarge": 0.36
+    }
+  },
+  "note_types": "2026-10-02: extra capacity without any quota request, in regions whose Spot quota (128 vCPU) was approved but unused. Per-type max price (used by the ledger) takes precedence over the region price. Spot prices seen at 05:50 UTC: eu-west-2d c8g.8xlarge 0.1745, c7i.8xlarge 0.2779; us-east-1f c6i.8xlarge 0.2993. c7i/c6i = 16 cores with SMT."
 }
