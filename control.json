@@ -1,6 +1,6 @@
 {
  "campaign": "c2q-20261001",
- "mode": "drain",
+ "mode": "stop",
  "cap_usd": 115.0,
  "lease_s": 1800,
  "credit_usd": 0,
