@@ -1,0 +1,1 @@
+2026-10-02 00:19:12 agent start: 1 workers, price 0.1000 + 0.0100 $/h, region ci
