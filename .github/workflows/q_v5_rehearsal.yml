@@ -4,7 +4,7 @@ name: q-v5-rehearsal
 # v4 job script), 010:1:400 (golay_pairs, compact format; queue-ci holds an earlier FAIL of it, control max_fail=1,
 # max_fail_v5=3: only a v5 agent may retry it) and 118:2:8 (stream). v5 = v4 + the HSfull engine fix.
 #   V1: q/qmachine.sh --inner (Q_TEST): install, the calibrations (118:2, v2 stream of 011, calib_v4: golay 001 slice + O24 kernel 3 +
-#       O24 joint planted + golay 010 compact slice + retry path), the agent runs the three jobs, FINI, PKG=v4, engine sha per job kind.
+#       O24 joint planted + golay 010 compact slice + retry path), the agent runs the three jobs, FINI, PKG=v5, engine sha per job kind.
 on: workflow_dispatch
 permissions:
   contents: write
