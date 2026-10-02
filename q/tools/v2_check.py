@@ -32,7 +32,7 @@ def main():
     ok(st.get("PKG") == want, "%s reports package %s (PKG=%s)" % (name, want, st.get("PKG")))
     man = json.load(open(os.path.join(os.path.expanduser("~"), "c2_cloud_run", "MANIFEST.json")))
     eng = man["engine_code_sha"]
-    eng_by_kind = {"o24": man.get("engine_code_sha_o24"), "golay_pairs": man.get("engine_code_sha_golay")}
+    eng_by_kind = {"o24": man.get("engine_code_sha_o24"), "golay_pairs": man.get("engine_code_sha_golay"), "resolve": man.get("engine_code_sha_resolve")}
     o24_ref = json.loads(os.environ.get("O24_REF", "{}"))          # {class: nodes per depth of the lab run}, compared exactly
     done = [j for e in ev if e["m"] == name and e["op"] == "done" for j in e["jobs"]]
     ok(len(done) >= 1, "%s completed %d job(s): %s" % (name, len(done), done))
