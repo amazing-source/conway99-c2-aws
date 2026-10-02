@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/c2_cloud_run/scripts/golay_pairs_job.py", line 68, in <module>
+    main()
+  File "/home/ubuntu/c2_cloud_run/scripts/golay_pairs_job.py", line 52, in main
+    r = search(L, y1, y2, node_limit=2 * 10 ** 8)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/c2_cloud_run/scripts/frame_dfs_next.py", line 1629, in search
+    sols = joint(list(Pl), H, W, V, ps, G, F1=F1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/c2_cloud_run/scripts/frame_dfs_next.py", line 1689, in joint
+    go(0)
+  File "/home/ubuntu/c2_cloud_run/scripts/frame_dfs_next.py", line 1686, in go
+    if feas(x) and feas(y) and (rem[x] or np.array_equal(part[x], tgt[x])) and (rem[y] or np.array_equal(part[y], tgt[y])): go(i + 1)
+       ^^^^^^^
+  File "/home/ubuntu/c2_cloud_run/scripts/frame_dfs_next.py", line 1667, in feas
+    dl = tgt_ws[x] - part_ws[x]; r = rem[x]
+         ~~~~~~~~~~^~~~~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (32,) (80,) 
