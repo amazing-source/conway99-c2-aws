@@ -4,7 +4,9 @@
     "c7a.8xlarge",
     "c8g.8xlarge",
     "c7i.8xlarge",
-    "c6i.8xlarge"
+    "c6i.8xlarge",
+    "c7g.8xlarge",
+    "m7g.8xlarge"
   ],
   "overhead_usd_per_h": 0.01,
   "region_order": [
@@ -22,7 +24,9 @@
   "max_price_by_region_type": {
     "eu-west-2": {
       "c8g.8xlarge": 0.24,
-      "c7i.8xlarge": 0.34
+      "c7i.8xlarge": 0.34,
+      "c7g.8xlarge": 0.25,
+      "m7g.8xlarge": 0.36
     },
     "us-east-1": {
       "c6i.8xlarge": 0.36
