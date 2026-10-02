@@ -9,5 +9,6 @@
  "created": "2026-10-01 21:26:09",
  "mode_v2": "run",
  "max_fail_v5": 3,
- "max_fail_v6": 3
+ "max_fail_v6": 3,
+ "max_fail_v7": 3
 }
