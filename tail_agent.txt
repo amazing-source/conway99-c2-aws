@@ -25,3 +25,4 @@
 2026-10-02 19:33:32 start 002:351:360 (est 0.99 h)
 2026-10-02 19:33:32 start 002:352:360 (est 0.99 h)
 2026-10-02 19:33:32 start 002:353:360 (est 0.99 h)
+2026-10-02 20:12:15 INTERRUPTED: AWS spot interruption notice
