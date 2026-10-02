@@ -175,10 +175,11 @@ class Agent:
             order, ctl, ev = self.read_queue(); self.campaign = ctl.get("campaign", "?")
             ms = self.statuses(self.campaign); own, done, fails = owners(ev); now = time.time(); le = last_events(ev)
             led, proj_others = ledger(ms, now, ctl, self.hb, self.deadman, self.name, self.boot, self.rate, le)
-            ratio, cap, maxfail = float(ctl.get("ratio", 1.3)), float(ctl["cap_usd"]), int(ctl.get("max_fail", 2))
+            ratio, cap = float(ctl.get("ratio", 1.3)), float(ctl["cap_usd"])
+            maxfail = int(ctl.get("max_fail_" + self.pkgver, ctl.get("max_fail", 2)))   # v5: per-package override (retry on fixed engines only)
             live = live_names(ms, now, int(ctl.get("lease_s", 1800)), le) | {self.name}
             free = [j for j in order if j not in done and fails[j] < maxfail and own.get(j) not in live and j in self.est]
-            mctl = ctl.get("mode_v2") or ctl.get("mode")                     # v2: mode_v2 overrides mode (fleet switch without loss)
+            mctl = ctl.get("mode_" + self.pkgver) or ctl.get("mode_v2") or ctl.get("mode")   # v5: mode_<pkg>, then mode_v2, then mode
             if mctl == "stop":
                 mode, reason = "stop", "control: stop"
             elif led >= cap:
