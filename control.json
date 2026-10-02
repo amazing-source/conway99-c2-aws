@@ -10,5 +10,6 @@
  "mode_v2": "run",
  "max_fail_v5": 3,
  "max_fail_v6": 3,
- "max_fail_v7": 3
+ "max_fail_v7": 3,
+ "max_fail_v8": 3
 }
