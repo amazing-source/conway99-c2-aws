@@ -36,7 +36,8 @@ else
   ITYPE=$(imds instance-type); LIFE=$(imds instance-life-cycle)
   PRICE=$(python3 -c "import json; p=json.load(open('$REPO/q/prices.json')); print(p.get('max_price_by_region_type', {}).get('$REGION', {}).get('$ITYPE') or p['max_price_usd_per_h'].get('$REGION', ''))")
   BOOT=$(( $(date +%s) - $(cut -d. -f1 /proc/uptime) ))
-  W=$(( $(nproc) * 13 / 16 )); [ "$W" -ge 1 ] || W=1                          # 32 cores -> 26 jobs, exactly as before
+  case "$ITYPE" in c7a.*|c6a.*) W=$(( $(nproc) * 31 / 32 ));; *) W=$(( $(nproc) * 13 / 16 ));; esac   # 03/10: c7a 32 physical cores -> 31 jobs (+19 %; ~0.4 GB/job measured); SMT types keep 26
+  [ "$W" -ge 1 ] || W=1
   export Q_RUNPREFIX="run/q-" Q_QUEUE="queue"; NAME="q-$IID"
 fi
 OVH=$(python3 -c "import json; print(json.load(open('$REPO/q/prices.json'))['overhead_usd_per_h'])")
