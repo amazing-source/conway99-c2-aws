@@ -1,16 +1,16 @@
 CAMPAIGN=c2q-20261001
 NAME=q-i-0e34e16a2ac224f9c
-PKG=?
-STATE=INSTALLATION
-REASON=setup + calibration
+PKG=v8
+STATE=STOP CALIB
+REASON=v2 calibration:     A=[{'y1': ['-1/4', '-1/4', '0', '1/2', '1/4', '5/4', '0', '0', '1/4', '0', '-5/4', '1/2', '-1/2', '1/4', '1/4', '1/4', '0', '1', '1/2', '1/4', '-1/2', '0', '3/4', '3/4'], 'y2': ['1/4', '3/4', '0', '1/2', '-1/4', '-3/4', '-1/2', '-1/2', '1/4', '0', '-3/4', '-1/2', '-1/2', '-1/4', 
 REGION=eu-west-2
 AZ=eu-west-2d
 ITYPE=c8g.8xlarge
 PRICE=0.24
 OVH=0.01
 BOOT=1790997749
-NOW=1790997764
-UPTIME_H=0.00
+NOW=1790997811
+UPTIME_H=0.02
 WORKERS=26
 RUNNING=0
 RUNNING_JOBS=
