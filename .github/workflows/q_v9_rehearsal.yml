@@ -1,0 +1,37 @@
+name: q-v9-rehearsal
+# Free rehearsal of package v9 on a fresh Linux machine (C2, 2026-10-03). Run on the branch carrying package v9
+# (gh workflow run q_v9_rehearsal.yml --ref v9). Branch queue-ci must hold four real jobs: 118:2:8 (stream, calibration lattice),
+# 011:0:2950 and 011:4:2950 (NEW one-y1 stream jobs, key lid:k:R) and 002:9409:23040 (NEW fine Golay block).
+# v9 = v8 + fine jobs (one y1 per stream job, Golay 001 at n=1700 and 002 at n=23040) for every open lattice; no code change.
+#   V1: q/qmachine.sh --inner (Q_TEST): install, the calibrations (118:2, v2 stream of 011, calib_v4: golay 001 slice + O24 kernel 3 +
+#       O24 joint planted + golay 010 compact slice + retry path), the agent runs the jobs, FINI, PKG=v9, engine sha per job kind.
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  v9:
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    env:
+      Q_TEST: "1"
+      Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+      Q_QUEUE: queue-ci
+      Q_RUNPREFIX: run/qci-
+      Q_TEST_PRICE: "0.10"
+      Q_HEARTBEAT: "60"
+      Q_WORKERS: "1"
+      EXPECT_PKG: "v9"
+    steps:
+      - uses: actions/checkout@v4
+      - name: V1 - fresh machine, package v9, calibrations, real jobs (stream 118:2:8, two one-y1 stream jobs, one fine Golay block)
+        run: |
+          git config --global user.name amazing-source; git config --global user.email 206353265+amazing-source@users.noreply.github.com
+          set +e
+          Q_TEST_NAME=v9a bash q/qmachine.sh --inner > $HOME/qm.log 2>&1; echo "qmachine exit $?"
+          tail -25 $HOME/qm.log
+          echo "--- calibration 118:2"; cat $HOME/c2_cloud_run/calib_check.txt
+          echo "--- calibrations v2 + v4-checks"; cat $HOME/c2_cloud_run/calib_extra_check.txt
+          echo "--- agent log"; cat $HOME/q_agent_qci-v9a.log
+          echo "--- job outputs"; for f in $HOME/c2_cloud_run/results/*_consumer.out; do echo "$f"; tail -n 3 "$f"; done
+          set -e
+          python3 q/tools/v2_check.py s1 qci-v9a
