@@ -129,7 +129,8 @@ class Agent:
         self.unpushed = []          # done/fail events whose result is not yet on GitHub: published only after a successful push
         self.campaign = "?"; self.info = {}; self.last_err = ""
         try:
-            self.pkgver = (json.load(open(os.path.join(self.pkg, "MANIFEST.json"))).get("version") or "v1")[:2]
+            ver_ = json.load(open(os.path.join(self.pkg, "MANIFEST.json"))).get("version") or "v1"
+            self.pkgver = ver_.split()[0] if ver_[:1] == "v" and ver_.split()[0][1:].isdigit() else ver_[:2]   # 04/10: "v10 (...)" -> v10, not v1
         except Exception:
             self.pkgver = "?"
 
