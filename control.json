@@ -12,5 +12,7 @@
  "max_fail_v6": 3,
  "max_fail_v7": 3,
  "max_fail_v8": 3,
- "max_fail_v9": 3
+ "max_fail_v9": 3,
+ "mode_v9": "drain",
+ "max_fail_v10": 3
 }
