@@ -13,6 +13,6 @@
  "max_fail_v7": 3,
  "max_fail_v8": 3,
  "max_fail_v9": 3,
- "mode_v9": "run",
+ "mode_v9": "stop",
  "max_fail_v10": 3
 }
