@@ -147,3 +147,9 @@ n_3 = number of outside vertices with d = 3.
   B1 first, together with an independent verifier of the computed steps.
 
 T18 is therefore still NOT proved, and nothing of this may be used as a filter in the engine yet.
+
+## 7. T18: no outside vertex with d = 3 (06/10, 22:50 local) — proved by hand
+
+`lemma/t18/N3_REPORT.md`. An outside vertex z with d = 3 has at least 5 neighbours in X_0, so does its mate, and |X_0| = 9 - n_3 <= 7,
+so z and sigma z would have at least 3 common neighbours. Hence n_3 = 0 for the three graphs, by a five-line argument that uses
+neither B nor any computation. **What is left of T18 is the profile (2,2,1,1,1,1,1) at inf for B0, B1 and B2, and nothing else.**
