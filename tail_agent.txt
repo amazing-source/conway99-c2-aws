@@ -1,1 +1,42 @@
 2026-10-06 22:57:59 agent start: 31 workers, price 0.7500 + 0.0100 $/h, region eu-west-2
+2026-10-06 22:58:35 start 015:6:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:7:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:8:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:11:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:13:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:18:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:19:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:27:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:30:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:48:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:52:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:59:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:75:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:76:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:82:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:83:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:84:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:85:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:89:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:94:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:100:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:101:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:106:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:110:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:121:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:122:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:123:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:124:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:134:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:138:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:58:35 start 015:163:1580 (est 0.21 h) [deferral mode]
+2026-10-06 22:59:05 done 015:6:1580 in 30 s
+2026-10-06 22:59:05 done 015:8:1580 in 30 s
+2026-10-06 22:59:05 done 015:11:1580 in 30 s
+2026-10-06 22:59:05 done 015:13:1580 in 30 s
+2026-10-06 22:59:05 done 015:30:1580 in 30 s
+2026-10-06 22:59:05 done 015:48:1580 in 30 s
+2026-10-06 22:59:05 done 015:52:1580 in 30 s
+2026-10-06 22:59:05 done 015:59:1580 in 30 s
+2026-10-06 22:59:05 done 015:75:1580 in 30 s
+2026-10-06 22:59:05 done 015:76:1580 in 30 s
