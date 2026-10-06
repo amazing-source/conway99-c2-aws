@@ -84,7 +84,14 @@ None of this is a proof of T18. It is the starting point.
 - **Rule R9a** (provable from section 3, item 2): delete the candidate h with |(h, r)| = 2 for a root r with E(r) = 9.
   Measured on 60 searched pairs of 016: 0 candidates removed, same nodes, same time. No candidate h meets such a root at +-2.
 - **Local certificate around r**: the 9 frame vectors meeting r must have pairwise products in {0, +-1} and row sums 7 - N.
-  On 24 searched pairs of 016 only 24 to 48 words meet r, but about 1,200 candidate h do, so pattern (ii) stays wide open, and
-  the nine-word search does not finish within 300,000 nodes on 22 of the 24 pairs. The obstruction is not local to r.
+  Measured on searched pairs of 016:
+  - only 16 to 50 words meet r, but 1,060 to 1,230 of the 5,800 candidate h do, so pattern (ii) stays wide open;
+  - nine-word search (pattern (i)) with the exact row sums and a budget of 3,000,000 nodes, 10 pairs: no configuration in 9 pairs
+    (3 searches complete, 6 stopped by the budget), 24 configurations in the tenth (not complete). About 100 s per pair in Python,
+    against 2 s for the frame search itself.
+  - So pattern (i) is often dead locally, pattern (ii) is not, and the test is slower than what it would replace. The obstruction
+    is not local to r.
+- Enforcing "exactly 0 or 2 of the 7 h meet r" inside the DFS would need a new point type in the numba kernels (coverage in
+  {0, 2}); about 20 % of the candidates meet r, so the expected pruning is modest. Not tried.
 
 So the gain needs T18 and T20 themselves, or the frame search as it is.
