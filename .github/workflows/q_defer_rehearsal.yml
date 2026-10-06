@@ -1,0 +1,35 @@
+name: q-defer-rehearsal
+# Free rehearsal of the deferral mode (Q_DEFER=1; C2, 2026-10-06 night) on a fresh Linux machine, package v10.
+# Branch queue-cid must hold the four jobs of the v10 rehearsal (118:2:8, 011:0:2950, 011:4:2950, 002:9409:23040):
+#   python q/make_queue.py --branch queue-cid --cap 1 --force --jobs 118:2:8,011:0:2950,011:4:2950,002:9409:23040
+# and branch run/qci-v10a must hold their normal-mode records (q_v10_rehearsal.yml). q/tools/defer_check.py compares the two:
+# same pairs, same non-search verdicts, and DEFERRED + searched here = searched in normal mode.
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  defer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 170
+    env:
+      Q_TEST: "1"
+      Q_DEFER: "1"
+      Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+      Q_QUEUE: queue-cid
+      Q_TEST_PRICE: "0.10"
+      Q_HEARTBEAT: "60"
+      Q_WORKERS: "1"
+      EXPECT_PKG: "v10"
+      EXPECT_JOBS: "118:2:8,011:0:2950,011:4:2950,002:9409:23040"
+    steps:
+      - uses: actions/checkout@v4
+      - name: D1 - fresh machine, package v10, calibrations, the four rehearsal jobs in deferral mode
+        run: |
+          git config --global user.name amazing-source; git config --global user.email 206353265+amazing-source@users.noreply.github.com
+          set +e
+          Q_TEST_NAME=v10d bash q/qmachine.sh --inner > $HOME/qm.log 2>&1; echo "qmachine exit $?"
+          tail -25 $HOME/qm.log
+          echo "--- agent log"; cat $HOME/q_agent_qci-v10d.log
+          echo "--- job outputs"; for f in $HOME/c2_cloud_run/results/*_consumer.out; do echo "$f"; tail -n 3 "$f" | cut -c1-600; done
+          set -e
+          python3 q/tools/defer_check.py qci-v10d
