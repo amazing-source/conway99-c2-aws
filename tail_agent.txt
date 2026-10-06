@@ -1,10 +1,1 @@
-2026-10-06 22:03:35 agent start: 1 workers, price 0.1000 + 0.0100 $/h, region ci
-2026-10-06 22:03:38 start 118:2:8 (est 0.00 h) [deferral mode]
-2026-10-06 22:04:08 done 118:2:8 in 30 s
-2026-10-06 22:04:11 start 011:0:2950 (est 0.44 h) [deferral mode]
-2026-10-06 22:04:41 done 011:0:2950 in 30 s
-2026-10-06 22:04:44 start 011:4:2950 (est 0.44 h) [deferral mode]
-2026-10-06 22:05:14 done 011:4:2950 in 30 s
-2026-10-06 22:05:16 start 002:9409:23040 (est 0.02 h) [deferral mode]
-2026-10-06 22:05:46 done 002:9409:23040 in 30 s
-2026-10-06 22:05:49 FINI: no free job left in the queue
+2026-10-06 22:37:18 agent start: 1 workers, price 0.1000 + 0.0100 $/h, region ci
