@@ -15,6 +15,12 @@ trap, twin transfer, twin-canonical) and then calls `search`, which here
      verdict is not an exclusion: the script lists the pair in not_excluded and chunk_done is false;
   3. otherwise (INCOMPLETE and no such root) runs the engine's search again with the node limit the script asked for.
 So a deferral record is the full record with the long searches of the lemma-covered pairs replaced by DEFERRED, and nothing else.
+Quick variant, Q_DEFER_NODES=0 (07/10; measured on the fleet: the set-up of a budget-limited search costs 0.3 s per pair, 70 % of a
+deferral job): a pair that has such a root is first put through the engine's own two immediate tests, char_trap and (when FD_MIN97=1)
+min97_witness, with the engine's own switches. If one of them fires, the engine's search is called and returns its EXCLUDED verdict
+as usual. If none fires the pair is DEFERRED without calling the engine's search at all. Pairs without such a root go to the engine
+unchanged. Compared with the budget variant, the few searches that would end within the budget are deferred too; no verdict
+other than DEFERRED is ever produced by this file.
 A golay_pairs record also gets the field "deferral" (node budget, sha256 of this file); a stream record gets it from par_consumer.
 User's decision of 06/10 evening: set those pairs aside, never count them as excluded on the strength of an unproved lemma."""
 import sys, os, json, hashlib
@@ -32,22 +38,35 @@ DEF20 = "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)"
 _RG = {}
 
 
-def search(L, y1, y2, node_limit=0, cap=2_000_000):
-    r = REAL(L, y1, y2, node_limit=BUDGET, cap=cap)
-    if r.get("verdict") != "INCOMPLETE":
-        return r
+def witness(L, y1, y2):
+    """DEF18 / DEF20 if U has a root r with (r,y1)^2 + (r,y2)^2 = 5 / = 4 (5 first), else None."""
     RG = _RG.get(id(L))
     if RG is None:
         RG = _RG[id(L)] = (L["R"] @ L["G"]).astype(np.int64)             # one row per +- pair of roots
     if len(RG):
         a = RG @ y1; b = RG @ y2; Y = a * a + b * b
-        if (Y == 5).any(): r["verdict"] = DEF18; return r
-        if (Y == 4).any(): r["verdict"] = DEF20; return r
+        if (Y == 5).any(): return DEF18
+        if (Y == 4).any(): return DEF20
+    return None
+
+
+def search(L, y1, y2, node_limit=0, cap=2_000_000):
+    if BUDGET == 0:                                                    # quick variant: no engine search for a lemma-covered pair
+        w = witness(L, y1, y2)
+        if w is not None and not (os.environ.get("FD_CHAR", "1") == "1" and FD.char_trap(L, y1, y2) is not None)                 and not (os.environ.get("FD_MIN97", "0") == "1" and FD.min97_witness(L, y1, y2) is not None):
+            return {"verdict": w}
+        return REAL(L, y1, y2, node_limit=node_limit, cap=cap)
+    r = REAL(L, y1, y2, node_limit=BUDGET, cap=cap)
+    if r.get("verdict") != "INCOMPLETE":
+        return r
+    w = witness(L, y1, y2)
+    if w is not None:
+        r["verdict"] = w; return r
     return REAL(L, y1, y2, node_limit=node_limit, cap=cap)
 
 
 if __name__ == "__main__":
-    assert BUDGET > 0
+    assert BUDGET >= 0
     if GOLAY:
         FD.search = search                                             # golay_pairs_job imports search from the module at each call
         import golay_pairs_job as GJ

@@ -49,7 +49,7 @@ for key in KEYS:
     if os.path.exists(res):
         os.remove(res)
     t = time.time()
-    subprocess.run([sys.executable, os.path.join(REPO, "q", "par_consumer.py"), PKG, lid, stream, res, "4000000000", "1", "1"], env=dict(env, Q_DEFER="1"), cwd=PKG,
+    subprocess.run([sys.executable, os.path.join(REPO, "q", "par_consumer.py"), PKG, lid, stream, res, "4000000000", "1", "1"], env=dict(env, Q_DEFER="1", Q_DEFER_NODES=os.environ.get("Q_DEFER_NODES", "10000")), cwd=PKG,
                    stdout=open(os.path.join(out, tag + "_defer.out"), "w"), stderr=subprocess.STDOUT)
     td = time.time() - t
     if not os.path.exists(res):
@@ -64,7 +64,8 @@ for key in KEYS:
     check(sum(v for k_, v in got["verdicts"].items() if k_.startswith("DEFERRED")) == len(d18) + len(d20), "DEFERRED verdict counts = lengths of the index lists")
     check(all(gv.get(k_, 0) <= a["verdicts"].get(k_, 0) for k_ in gv), "every verdict count <= the AWS count")
     S_ = lambda k_: "stage 1" in k_ or "star" in k_ or "Lemma Z" in k_
-    check(all(gv.get(k_, 0) == c for k_, c in a["verdicts"].items() if not S_(k_)), "every non-search verdict has exactly the AWS count")
+    check(all(gv.get(k_, 0) == c for k_, c in a["verdicts"].items() if not S_(k_) and (os.environ.get("Q_DEFER_NODES") != "0" or "char" in k_ or "dual min" in k_ or not k_.startswith("EXCLUDED") or "twin" in k_)),
+          "every non-search verdict has exactly the AWS count (quick variant: a pair-setup exclusion may be deferred instead)")
     check(got.get("twin_deferred", {}) == a.get("twin_deferred", {}), "twin_deferred identical to the AWS record")
     check(not got["not_excluded"], "not_excluded holds no pair besides the deferred ones (moved to the index lists)")
     lines = [l.rstrip(b"\r\n") for l in open(stream, "rb") if l.strip()]
@@ -90,7 +91,8 @@ for key in KEYS:
     tot = collections.Counter(gv); tot.update(b["verdicts"])
     check(b["chunk_ok"] and b["n_pairs"] == len(sel), "deferred pairs re-run alone: %d pairs, chunk_ok %s, %.0f s" % (b["n_pairs"], b["chunk_ok"], time.time() - t))
     print("        their verdicts: %s" % b["verdicts"])
-    check(all(S_(k_) for k_ in b["verdicts"]), "every deferred pair is decided by a search in the full run")
+    check(all(k_.startswith("EXCLUDED") for k_ in b["verdicts"]) and (os.environ.get("Q_DEFER_NODES") == "0" or all(S_(k_) for k_ in b["verdicts"])),
+          "every deferred pair is excluded in the full run (budget variant: by a search)")
     check(dict(tot) == a["verdicts"], "deferral record + deferred pairs re-run = AWS verdicts exactly")
     td_ = collections.Counter(got.get("twin_deferred", {})); td_.update(b.get("twin_deferred", {}))
     check(dict(td_) == a.get("twin_deferred", {}), "twin_deferred adds up to the AWS record")

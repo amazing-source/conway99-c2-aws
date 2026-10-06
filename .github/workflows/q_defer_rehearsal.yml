@@ -4,7 +4,13 @@ name: q-defer-rehearsal
 #   python q/make_queue.py --branch queue-cid --cap 1 --force --jobs 118:2:8,011:0:2950,011:4:2950,002:9409:23040
 # and branch run/qci-v10a must hold their normal-mode records (q_v10_rehearsal.yml). q/tools/defer_check.py compares the two:
 # same pairs, same non-search verdicts, and DEFERRED + searched here = searched in normal mode.
-on: workflow_dispatch
+# Input defer_nodes: 10000 = budget variant (default), 0 = quick variant (see q/defer_consumer.py).
+on:
+  workflow_dispatch:
+    inputs:
+      defer_nodes:
+        description: "Q_DEFER_NODES (10000 = budget variant, 0 = quick variant)"
+        default: "10000"
 permissions:
   contents: write
 jobs:
@@ -14,6 +20,7 @@ jobs:
     env:
       Q_TEST: "1"
       Q_DEFER: "1"
+      Q_DEFER_NODES: ${{ inputs.defer_nodes }}
       Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
       Q_QUEUE: queue-cid
       Q_TEST_PRICE: "0.10"

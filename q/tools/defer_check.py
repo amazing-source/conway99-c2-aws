@@ -51,7 +51,7 @@ def main():
         ok(r.get("code_sha") == a.get("code_sha"), "%s: same engine sha as the normal record" % j)
         golay = r.get("kind") == "golay_pairs"
         mark = r.get("deferral", {}) if golay else r.get("merged", {})
-        ok(mark.get("defer_nodes") == 10000 and bool(mark.get("defer_consumer_sha256")) and (golay or mark.get("defer") is True), "%s: deferral marker %s" % (j, {x: mark.get(x) for x in ("defer", "defer_nodes", "defer_consumer_sha256")}))
+        ok(mark.get("defer_nodes") == int(os.environ.get("Q_DEFER_NODES", "10000")) and bool(mark.get("defer_consumer_sha256")) and (golay or mark.get("defer") is True), "%s: deferral marker %s" % (j, {x: mark.get(x) for x in ("defer", "defer_nodes", "defer_consumer_sha256")}))
         for fld in ("n_pairs", "pair_files_sha256", "range") if golay else ("n_pairs", "sha256", "orbits", "twin_deferred"):
             ok(r.get(fld) == a.get(fld), "%s: %s identical to the normal record" % (j, fld))
         d = sum(c for x, c in v.items() if x.startswith("DEFERRED")); ndef += d

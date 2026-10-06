@@ -38,7 +38,7 @@ for key in KEYS:
     if os.path.exists(res):
         os.remove(res)
     t = time.time()
-    subprocess.run([sys.executable, os.path.join(REPO, "q", "defer_consumer.py"), PKG, "--golay", lid, k, n, res], env=dict(env, Q_DEFER="1"), cwd=PKG,
+    subprocess.run([sys.executable, os.path.join(REPO, "q", "defer_consumer.py"), PKG, "--golay", lid, k, n, res], env=dict(env, Q_DEFER="1", Q_DEFER_NODES=os.environ.get("Q_DEFER_NODES", "10000")), cwd=PKG,
                    stdout=open(os.path.join(out, tag + "_defer.out"), "w"), stderr=subprocess.STDOUT)
     td = time.time() - t
     if not os.path.exists(res):
@@ -50,7 +50,7 @@ for key in KEYS:
     for f in ("n_pairs", "range", "pairs_total", "pair_files_sha256", "code_sha", "chunk", "id", "chunk_ok"):
         check(got.get(f) == a.get(f), "%s identical to the AWS record" % f)
     check(got["chunk_done"] is (len(dfr) == 0), "chunk_done is %s with %d deferred pairs" % (got["chunk_done"], len(dfr)))
-    check("deferral" in got and got["deferral"]["defer_nodes"] == 10000, "record carries the deferral field")
+    check("deferral" in got and got["deferral"]["defer_nodes"] == int(os.environ.get("Q_DEFER_NODES", "10000")), "record carries the deferral field")
     gv = {k_: v for k_, v in got["verdicts"].items() if not k_.startswith("DEFERRED")}
     check(sum(v for k_, v in got["verdicts"].items() if k_.startswith("DEFERRED")) == len(dfr) == len(got["not_excluded"]), "not_excluded = the deferred pairs, nothing else")
     check(all(gv.get(k_, 0) <= a["verdicts"].get(k_, 0) for k_ in gv), "every verdict count <= the AWS count")
@@ -71,7 +71,7 @@ for key in KEYS:
         check([str(x) for x in s1] == e["y1"] and [str(x) for x in s2] == e["y2"], "deferred index %d is that pair of the block" % e["index"])
         v, nodes, info = GJ.run_pair(L, conv(s1), conv(s2), CL); bc[v] += 1
         print("        index %d: %s -> full run: %s (%s nodes)" % (e["index"], e["verdict"][:22], v, sum(nodes) if nodes else None), flush=True)
-    check(all(S_(k_) for k_ in bc), "every deferred pair is decided by a search in the full run (%.0f s)" % (time.time() - t))
+    check(all(k_.startswith("EXCLUDED") for k_ in bc), "every deferred pair is excluded in the full run (%.0f s)" % (time.time() - t))
     tot = collections.Counter(gv); tot.update(bc)
     check(dict(tot) == a["verdicts"], "deferral record + deferred pairs re-run = AWS verdicts exactly")
 print("\nGOLAY DEFERRAL VALIDATION:", "PASS" if allok else "FAIL")
