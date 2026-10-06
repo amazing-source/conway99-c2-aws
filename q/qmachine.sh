@@ -48,7 +48,8 @@ A="python3 $REPO/q/qagent.py"
 if [ -z "${Q_TEST:-}" ]; then
   ALLOWED=$(python3 -c "import json; print(' '.join(json.load(open('$REPO/q/prices.json'))['instance_types']))")
   case " $ALLOWED " in *" $ITYPE "*) ;; *) $A status REFUS "instance type $ITYPE is not allowed ($ALLOWED)"; off 0;; esac
-  [ "$LIFE" = "spot" ] || { $A status REFUS "not a Spot instance ($LIFE): far too expensive"; off 0; }
+  # 06/10: On-Demand is accepted only when the launcher says so (Q_ALLOW_ONDEMAND=1: second account, paid by its free credits)
+  [ "$LIFE" = "spot" ] || [ "${Q_ALLOW_ONDEMAND:-}" = "1" ] || { $A status REFUS "not a Spot instance ($LIFE): far too expensive"; off 0; }
   [ -n "$PRICE" ] || { $A status REFUS "region $REGION has no max price in q/prices.json"; off 0; }
 fi
 
