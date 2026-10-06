@@ -1,1 +1,12 @@
 2026-10-06 23:52:05 agent start: 7 workers, price 0.1600 + 0.0100 $/h, region eu-north-1
+2026-10-06 23:52:25 start 011:40:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:52:25 start 011:41:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:52:25 start 011:42:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:52:25 start 011:63:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:52:25 start 011:64:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:52:25 start 011:65:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:52:25 start 011:66:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:52:55 done 011:63:2950 in 30 s
+2026-10-06 23:52:55 done 011:64:2950 in 30 s
+2026-10-06 23:52:55 done 011:65:2950 in 30 s
+2026-10-06 23:52:55 done 011:66:2950 in 30 s
