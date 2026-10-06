@@ -2,3 +2,4 @@
 2026-10-06 20:27:20 start 014:1249:1877 on 28 shards, 7 at a time
 2026-10-06 20:27:40 done 014:1249:1877 in 20 s
 2026-10-06 20:27:43 start 014:1867:1877 on 28 shards, 7 at a time
+2026-10-06 21:16:27 INTERRUPTED: AWS spot interruption notice (tail runner)
