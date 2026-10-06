@@ -1,0 +1,2 @@
+(i) e=0 #2 part 0/1: time 2.4s timed_out=False
+  totals: {'tau': 1, 'tau_done': 1, 'F': 1, 'F_ok_Np': 1, 'C': 44, 'H': 19, 'G': 33, 'Y_tables': 0, 'tau_with_table': 0, 'Y_psd_reject': 0, 'Y_tables_psd': 0, 'tau_with_psd_table': 0, 'sets': 3681, 'cands_out': 540, 'cands_in': 32}

@@ -1,0 +1,3 @@
+  [434s] {'tau': 105, 'tau_done': 10, 'F': 10, 'F_ok_Np': 10, 'C': 73127, 'H': 34990, 'G': 37201, 'Y_tables': 11270, 'tau_with_table': 1, 'Y_psd_reject': 11270, 'Y_tables_psd': 0, 'tau_with_psd_table': 0, 'sets': 48981, 'cands_out': 5180, 'cands_in': 152}
+(i) e=0 #1 part 0/12: time 579.5s timed_out=True
+  totals: {'tau': 105, 'tau_done': 14, 'F': 14, 'F_ok_Np': 14, 'C': 73127, 'H': 34990, 'G': 37201, 'Y_tables': 11270, 'tau_with_table': 1, 'Y_psd_reject': 11270, 'Y_tables_psd': 0, 'tau_with_psd_table': 0, 'sets': 70517, 'cands_out': 6852, 'cands_in': 182}

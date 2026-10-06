@@ -1,0 +1,6 @@
+r2_stage2_1_0of3_surv.json : PSD-surviving Y-tables reported 4 , saved 4
+table F=[0, 2, 9]: type solutions 8, alive after adding W: False
+table F=[0, 2, 9]: type solutions 8, alive after adding W: False
+table F=[1, 3, 6]: type solutions 8, alive after adding W: False
+table F=[1, 3, 6]: type solutions 8, alive after adding W: False
+totals: {'tables': 4, 'type_solutions': 32, 'nodes': 2016, 'rej_budget': 1894, 'rej_certificate': 118, 'rej_exact_only': 0, 'survivors': 0}  tables still alive: 0

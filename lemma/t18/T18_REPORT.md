@@ -146,3 +146,183 @@ families are too many (more than 10^4 found per graph in 4 minutes, enumeration 
 
 Caveat on rigour: the rejections by PSD are certified by exact integer vectors; "survives" only means "no certificate found".
 The hand proofs A1-A4 do not depend on any script.
+
+---
+
+# Round 2 (2026-10-06, 20:02 - 21:10): adjacency among the vertices outside S
+
+**Status after round 2: T18 still NOT proved.** New: two of the three profiles of N(inf) are excluded for B0, B1 and B2
+(one by hand, one by exhaustive computation); the remaining profile (2,5,0) is not enumerated. See "Summary of round 2".
+
+Notation of the 04/10 notes: p = inf, P = S+, Q = S-, X_d = vertices outside S with d = d, n_d = |X_d|;
+for a vertex z, a_k(z) = number of neighbours in X_k (a = a_2, b = a_1, c = a_0 when n_3 = 0); t = e(X_2);
+delta_c = d(a_c); h_k = number of the 7 pairs {a_c, b_c} with delta_c = k, so 2 h_2 + h_1 = 9, h_2 + h_1 + h_0 = 7,
+i.e. h_2 = 2 + h_0, h_1 = 5 - 2 h_0. Profile (h_2, h_1, h_0) = (2,5,0), (3,3,1) or (4,1,2).
+
+## R2-0. Checks of what I was given
+- Coordinator items 1, 2, 3, 4, 5: correct (re-derived). Item 2 can be sharpened: t <= 9, not 16 (A8).
+- Cube note sections 2-4, 7 and Wagner note sections 2-4: read and used as a model; their finite enumerations were not re-run.
+
+## A (round 2). Proved
+
+### A8. Counting identities for m = 9 (e = 0, pattern (i))
+For z in X_d:  3 a_3 + 2 a_2 + a_1 = 18 - 5d  and  a_0 = a_2 + 2 a_3 + 3d - 4.
+(Round-1 identity sum_{w ~ z, w outside S} d_w = 18 - 5d, and deg = 14.)
+When n_3 = 0 (always for B1): |X_0| = 9, |X_1| = 54, |X_2| = 18;
+X_0: a >= 4, c = a - 4;  X_1: a >= 1, c = a - 1, b = 13 - 2a;  X_2: a <= 4, c = a + 2, b = 8 - 2a;
+e(X_0) = e(X_2) = t, e(X_0, X_2) = 36 + 2t, sum of a over X_0, X_1, X_2 = 36 + 2t, 144 - 4t, 2t, sum of a^2 = 576 - 2t, hence
+
+> (*)  sum_{X_0} (a-4)^2 + sum_{X_1} (a-2)(a-3) + sum_{X_2} a(a-1) = 36,   and so  h_2 <= t <= 9.
+
+(t <= 9: sum_{X_0}(a-4) = 2t and Cauchy-Schwarz on 9 terms. t >= h_2: the h_2 pairs of N(p) in X_2 are edges of X_2.)
+For every vertex v: sum_{w ~ v} a_2(w) = 12 [v in X_2] + 2 n_2 - a_2(v)   (A^2 = 12I - A + 2J applied to the indicator of X_2).
+
+### A9. h_0 <= 1; more precisely 4 h_0 + n_3 <= 4   (all three graphs)
+Put omega(w) = a_2(w) + 2 a_3(w). At p: sum_{w ~ p} omega(w) = (2 n_2 - a_2(p)) + 2 (2 n_3 - a_3(p)) = 36 - 2 n_3 - 2 h_2
+(n_2 = 18 - 3 n_3, a_2(p) = 2 h_2, a_3(p) = 0 by A6). Lower bounds from a_0 = omega + 3d - 4:
+- a neighbour of p in X_2 is adjacent to its mate, which is in X_2: omega >= 1;
+- a neighbour of p in X_1 has p as X_0-neighbour: a_0 >= 1, omega >= 2;
+- a neighbour of p in X_0 has p and its mate as X_0-neighbours: a_0 >= 2, omega >= 6.
+So 2 h_2 + 4 h_1 + 12 h_0 <= 36 - 2 n_3 - 2 h_2, i.e. 28 + 8 h_0 <= 36 - 2 n_3.  QED.
+
+Consequences:
+- **Profile (4,1,2), i.e. the multiset (2,2,2,2,1,0,0) of the delta_c, is impossible for B0, B1 and B2.**
+- Profile (3,3,1) forces n_3 = 0 and equality everywhere (A10). Profile (2,5,0) forces n_3 <= 4.
+
+### A10. Forced structure of profile (3,3,1) (then n_3 = 0)
+Equality in A9 gives: the 6 vertices of A_p := N(p) n X_2 have a = 1 (no X_2-neighbour except the mate) and c = 3;
+the 6 vertices of N(p) n X_1 have a = 2, c = 1; the pair {z_0, sigma z_0} = N(p) n X_0 has a = 6, c = 2.
+z_0 ~ p and z_0 ~ sigma z_0 give A_{z_0} n A_p = A_{z_0} n A_{sigma z_0} = empty, so
+**X_2 = A_p + A_{z_0} + A_{sigma z_0} (disjoint, 6 + 6 + 6)**: A_{z_0} takes one vertex in each of the 6 orbits of X_2 outside N(p).
+Each of the other 6 vertices of X_0 sees exactly 2 vertices of A_p (12 incidences needed, at most 2 each).
+Hence Y1 = S u {p} u X_2 u {z_0, sigma z_0} (39 vertices) is completely determined by (tau, F, H, A_{z_0}), where tau is the
+matching of the 18 deficient pairs, F the 3 orbits of X_2 in N(p), H = A[X_2].
+
+### A11. B1, exhaustive computations (exact; every PSD rejection is certified by an integer vector)
+B1 has no d = 3 vertex (A6), so n_3 = 0 and A8-A10 apply.
+
+1. `r2_stage1.py 1` (matchings of the deficient pairs, tests (i), (i'), (iii) of the Wagner note plus the single-type PSD test):
+   18 deficient pairs, 99 admissible rectangles {U,V}, **13799 matchings tau, 1259 orbits under Aut(B1)** (Wagner: 31).
+2. Profile (3,3,1), `r2_hfirst.py` on all 1259 representatives (3 parts, 130 s, 130 s, 10 s). Counts, summed:
+
+   | stage | count |
+   |---|---|
+   | (tau, F) passing the N(p) tests (two vertices of A_p share <= 1 support neighbour, every P_i seen <= 2 times, the 3 pairs of N(p) n X_1 exist) | 7224 |
+   | after budgets + PSD on S u {p} u A_p u (one or two more orbits of X_2) | 750 |
+   | complete H | 927 |
+   | (H, A_{z_0}) tested on Y1 (39 vertices) | 4416 |
+   | **survivors (tau, F, H, A_{z_0})** | **481**, in 55 matchings, 76 pairs (tau, F) |
+
+   Rejections: 17226 by common-neighbour budgets, 16750 by PSD with an integer certificate, 0 by exact elimination alone.
+   The violated matrix is 9(3I-A)+J, in its sigma-odd part (`r2_diag.out`).
+3. Extension of the 481 survivors to Y = S u X_0 u X_2 (45 vertices; the 3 remaining orbits of X_0 and G = A[X_0]),
+   `r2_stage2.py` restricted to them (R2_SURV), budgets + exact PSD on Y: see R2-RESULT below.
+4. `r2_ext2.py`: the 6 vertices W = N(p) n X_1 are added to every PSD-surviving Y-table. Y u W (51 vertices) is completely
+   determined by the 3 types (i_c ; j_c) and by the 2 neighbours of each w_c in X_2 (each vertex of X_2 outside A_p is adjacent to
+   exactly one vertex of W: it has 2 common neighbours with p, one is z_0 or sigma z_0, none is in A_p). See R2-RESULT below.
+
+Cross-checks: `r2_check_example.py` (independent rebuild of rejected tables: 0 budget violations, the forced kernel vector
+3*1_S - 1_{X_0} + 1_{X_2} of 9(3I-A)+J is reproduced exactly); `r2_hfirst_check.py` (exact rational elimination agrees with the
+integer certificates on Y1); `r2_hfirst_check2.py` (the Y-tables found by the X_0-first program `r2_stage2.py` restrict to
+configurations that the PSD-free run of the H-first program lists: 3 of 3).
+
+**R2-RESULT for B1 (steps 3 and 4), exhaustive, no time-out:**
+
+| step | count |
+|---|---|
+| matchings / pairs (tau, F) / configurations entering step 3 | 55 / 76 / 481 |
+| completions C (the 3 other orbits of X_0) | 93684 |
+| Y-tables passing the common-neighbour budgets on Y (45 vertices) | 27203 |
+| rejected by PSD on Y (integer certificate) | 27039 |
+| **Y-tables passing budgets and PSD** | **164** (in 9 matchings) |
+| step 4: type solutions for W / nodes | 2060 / 124992 |
+| rejected in step 4 by budgets / by PSD certificate / by exact elimination alone | 119016 / 5918 / 0 |
+| **configurations on Y u W left** | **0** |
+
+> **A11. For B1, profile (3,3,1) is impossible.** With A9: for B1 the multiset of the delta_c is (2,2,1,1,1,1,1), i.e.
+> exactly two of the seven pairs {a_c, b_c} have delta_c = 2, five have delta_c = 1, none has delta_c = 0; a_2(p) = 4, t >= 2.
+
+Status of A11: exhaustive computer enumeration (hand reduction A8-A10 + scripts above). Steps 2, 3, 4 each exist in one
+implementation only, written during this session; the cross-checks listed above are partial. Every rejection is exact
+(budget count or integer vector with negative quadratic form); "passing PSD" is never used as a proof of anything.
+
+### A12. Same pipeline for B2 and B0 (profile (3,3,1) forces n_3 = 0 by A9, so A10 applies verbatim)
+- Stage 1 (case n_3 = 0): B0: 25514 matchings, 425 orbits under Aut (order 72); B2: 9229 matchings, 528 orbits (order 18).
+- **B2**: step 2 (`r2_hfirst.py 2`, all 528): 2406 pairs (tau, F), 114 after the pair tests, 16 complete H, 121 tested on Y1,
+  **7 survivors, in one matching**; step 3 on these: 44 completions C, **0 Y-tables pass the budgets**.
+  > **For B2, profile (3,3,1) is impossible** (same status as A11). B2 keeps only profile (2,5,0), with n_3 in {0, 2, 4}.
+- **B0**: step 2 (`r2_hfirst.py 0`, all 425): 3510 pairs (tau, F), 624 after the pair tests, 1618 complete H, 3810 tested on Y1,
+  383 survivors in 50 matchings. Steps 3-4: see R2-RESULT-B0 at the end of this section.
+
+## B (round 2). Open, precisely
+
+1. **Profile (2,5,0) for all three graphs** (delta = (2,2,1,1,1,1,1)): p has exactly 4 neighbours in X_2 (two adjacent mate pairs),
+   10 in X_1, none in X_0; no vertex of X_0 lies in N(p). Not enumerated. Known restrictions when n_3 = 0: identity (*),
+   2 <= t <= 9, sum over N(p) of a_2 = 32 (so sum_{4 X_2 neighbours}(a-1) + sum_{10 X_1 neighbours}(a-2) = 8).
+   Size of what remains for B1 at the first stages: 1259 matchings up to Aut(B1); in a partial run of `r2_gram.py`
+   (258 of the 1259 matchings, stopped by the time limit) 1262 pairs (tau, F) with |F| = 2 passed the sigma-odd Gram test,
+   in 235 matchings. The H-first stage for this profile (the determined set is S u {p} u X_2, 37 vertices, with H free on all
+   9 orbits and A_p vertices allowed further X_2-neighbours) is not written.
+2. **n_3 > 0** (only B0 and B2, only profile (2,5,0), n_3 = 2 or 4): nothing done beyond A9; the matching description of X_2
+   must then be replaced by 18 - 3 n_3 vertices of X_2 plus n_3 vertices of X_3 (types: B0 6 classes, B2 9 classes, A6).
+3. (closed) B0, profile (3,3,1): excluded, see R2-RESULT-B0.
+
+## C (round 2). Tried, weak or failed
+
+- "Star" test `star.py` (S u {inf} u N(x_I) u N(y_I), 37 determined vertices, budgets + PSD): B1, I = 0: 1905 level-1 stars;
+  8 examined in 97 s, 7 alive (2862 completions pass). Abandoned.
+- X_0-first enumeration of Y-tables (`r2_stage2.py` unrestricted): correct but slow: profile (3,3,1), B1: 14 matchings in 580 s
+  (11270 Y-tables, all rejected by PSD); the first version (all profiles at once) did not finish one trial in 200 s.
+  It is now used only restricted to the survivors of the H-first stage.
+- sigma-odd Gram completion on T u X_2 alone (`r2_gram.py`): keeps most pairs (tau, F) (trial on 13 matchings: 124 pairs
+  alive for h_2 = 2, 38 for h_2 = 3). The full graph tests of `r2_hfirst.py` are much stronger.
+- The cube double count does not transfer: here the pairs of X_2 have a budget of 198 - t common neighbours outside S and the
+  X_0 vertices need only sum C(a,2) >= 54 + 8t of it; with (*) this leaves 2 <= t <= 9.
+
+## D (round 2). Files added (same folder)
+
+`r2_stage1.py` (-> `r2_tau_<s>.json`, `r2_stage1_<s>.out`), `r2_hfirst.py` (-> `r2hf_*.out`, `r2_hfirst_<s>_*.json`),
+`r2_stage2.py` (-> `r2ext*.out`, `r2_stage2_*_surv*.json`), `r2_ext2.py` (-> `r2_ext2_*.out`), `r2_summary.py` (-> `r2_summary_1.out`),
+`r2_gram.py`, `star.py`, checks `r2_check_example.py`, `r2_hfirst_check.py`, `r2_hfirst_check2.py`, `r2_diag.py`,
+`r2_ext2_bruteforce.py`; B0 / B2 outputs: `r2_stage1_0.out`, `r2_stage1_2.out`, `r2hf_0_all.out`, `r2hf_2_all.out`,
+`r2ext_0_g*.out`, `r2ext_2.out`, `r2_ext2_B0.out`, `r2_summary_0.out`
+(the `_patch_*.py` files are the edits applied to `r2_stage2.py` / `r2_hfirst.py` during the session; the final scripts are
+the patched ones). Environment switches: R2_SURV (restrict `r2_stage2.py` to H-first survivors), R2_IDX (explicit matchings),
+R2_CAP (number of survivors saved), R2_NOPSD (cross-check mode).
+
+## R2-RESULT-B0 (steps 3 and 4 for B0, exhaustive, no time-out)
+
+| step | count |
+|---|---|
+| matchings / pairs (tau, F) / configurations entering step 3 | 50 / 95 / 383 |
+| completions C | 23155 |
+| Y-tables passing the budgets on Y | 8639 |
+| rejected by PSD on Y (integer certificate) | 8616 |
+| Y-tables passing budgets and PSD | 23 (in 9 matchings) |
+| step 4: type solutions for W / nodes | 242 / 14520 |
+| rejected in step 4 by budgets / by PSD certificate / by exact elimination alone | 14165 / 355 / 0 |
+| **configurations on Y u W left** | **0** |
+
+> **For B0, profile (3,3,1) is impossible** (same status as A11).
+
+## Summary of round 2
+
+> **A13 (A9 + A11 + A12).** For each of B0, B1, B2 the neighbourhood of inf has profile (2,5,0): exactly two pairs
+> {a_c, b_c} with delta_c = 2, five with delta_c = 1, none with delta_c = 0. Equivalently a_2(inf) = 4, no vertex of X_0 is
+> adjacent to inf, and n_3 = 0 (B1) or n_3 in {0, 2, 4} (B0, B2).
+
+Proof status: (4,1,2) by hand (A9); (3,3,1) by the exhaustive computation above (A10 + scripts), for the three graphs.
+T18 itself stays open: profile (2,5,0) is not enumerated for any of the three graphs (section B, items 1 and 2;
+item 3 is closed by R2-RESULT-B0).
+
+### Additional cross-check of step 4 (`r2_ext2_bruteforce.py` -> `r2_bf_B0.out`, `r2_bf_B1.out`, `r2_bf_B1b.out`)
+Nine PSD-surviving Y-tables (3 of B0, 6 of B1) were re-done without any pruning: 15 type candidates x 5760 complete
+assignments = 86400 graphs on 51 vertices per table, budgets by integer matrix multiplication. Budget-valid graphs:
+12, 12, 2 (B0) and 39, 39, 39, 0, 0, 0 (B1); PSD-valid: 0 in all nine. Same conclusion as `r2_ext2.py`.
+This checks the search code, not the modelling (A10 and the description of W), which rests on the arguments written above.
+
+### What a reviewer should re-check first
+1. A9 (five lines, by hand) and the equality case A10.
+2. That Y1, Y and Y u W are completely determined as claimed (A10, step 4): every "no other neighbour" used there comes
+   from an equality a = 1, a = 2, c = 1, c = 2 or c = 3 forced in A10.
+3. The three scripts `r2_hfirst.py`, `r2_stage2.py` (R2_SURV mode), `r2_ext2.py`: single implementations.

@@ -1,0 +1,36 @@
+r2_stage2_1_0of1_surv_idx2.json : PSD-surviving Y-tables reported 7 , saved 7
+r2_stage2_1_0of1_surv_idx4.json : PSD-surviving Y-tables reported 26 , saved 26
+table F=[1, 3, 6]: type solutions 8, alive after adding W: False
+table F=[1, 3, 6]: type solutions 8, alive after adding W: False
+table F=[1, 4, 14]: type solutions 15, alive after adding W: False
+table F=[1, 4, 14]: type solutions 15, alive after adding W: False
+table F=[1, 4, 14]: type solutions 15, alive after adding W: False
+table F=[1, 4, 14]: type solutions 15, alive after adding W: False
+table F=[1, 4, 14]: type solutions 15, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+table F=[2, 3, 4]: type solutions 12, alive after adding W: False
+totals: {'tables': 33, 'type_solutions': 403, 'nodes': 25188, 'rej_budget': 23302, 'rej_certificate': 1844, 'rej_exact_only': 0, 'survivors': 0}  tables still alive: 0

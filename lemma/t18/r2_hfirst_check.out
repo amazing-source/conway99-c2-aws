@@ -1,0 +1,7 @@
+﻿rejected Y-table, F = [0, 3, 10]  z_0 pair = [1, 2]  Y1 (39 vertices): [('E-4', 'exact NOT PSD', 'certificate', -2.1119), ('E3', 'exact PSD', 'no certificate', 0.0)]
+rejected Y-table, F = [0, 3, 10]  z_0 pair = [1, 2]  Y1 (39 vertices): [('E-4', 'exact NOT PSD', 'certificate', -2.1119), ('E3', 'exact PSD', 'no certificate', 0.0)]
+rejected Y-table, F = [0, 3, 10]  z_0 pair = [1, 2]  Y1 (39 vertices): [('E-4', 'exact NOT PSD', 'certificate', -2.1119), ('E3', 'exact PSD', 'no certificate', 0.0)]
+(1) is run separately:  R2_NOPSD=1 python r2_hfirst.py 1 0 200 120  -> r2_hfirst_1_0of200_nopsd.json
+(i) e=0 #1 part 0/200: time 0.9s timed_out=False
+  totals: {'tau': 7, 'tau_done': 7, 'F': 38, 'F_after_pairs': 38, 'H_nodes': 1697, 'H_complete': 619, 'z0_tested': 2637, 'survivors': 1596, 'tau_with_survivor': 5, 'psd_calls': 0, 'exact_calls': 0}
+nopsd survivors (index of tau among reps, F): [(200, (3, 8, 9))]

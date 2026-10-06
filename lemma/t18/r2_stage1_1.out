@@ -1,0 +1,5 @@
+﻿(i) e=0 #1 deficient pairs: 18 [(0, 1), (0, 2), (0, 3), (0, 4), (1, 3), (1, 6), (1, 8), (2, 4), (2, 7), (2, 8), (3, 5), (3, 7), (4, 5), (4, 6), (5, 6), (5, 7), (6, 8), (7, 8)]
+admissible unordered rectangles {U,V}: 99
+|Aut(B)| = 12
+admissible matchings tau: 13799   (1.0s)
+orbits under Aut(B): 1259

@@ -1,0 +1,5 @@
+﻿r2_stage2_1_0of3_surv.json : matchings 19 done 19 timed_out False  Y-tables 1917  PSD-surviving 4  saved 4
+r2_stage2_1_0of1_surv_idx1.json : matchings 12 done 12 timed_out False  Y-tables 13155  PSD-surviving 127  saved 127
+r2_stage2_1_0of1_surv_idx2.json : matchings 12 done 12 timed_out False  Y-tables 5720  PSD-surviving 7  saved 7
+r2_stage2_1_0of1_surv_idx4.json : matchings 12 done 12 timed_out False  Y-tables 6411  PSD-surviving 26  saved 26
+TOTAL: matchings planned 55 done 55 {'F_ok_Np': 76, 'C': 93684, 'H': 28852, 'G': 34988, 'Y_tables': 27203, 'Y_psd_reject': 27039, 'Y_tables_psd': 164, 'tau_with_psd_table': 9}

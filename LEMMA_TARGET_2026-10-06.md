@@ -127,3 +127,23 @@ Notation of section 3; e = e(S+), k = number of active h = number of neighbours 
   on B0, B1 and B2 (the file `VERIF_CUBE_OBSTRUCTION_2026-10-04.md` is on the lab PC, not in this repo).
 
 T20 has not been attacked. The parity law and the two counting identities apply to it as they stand (m = 10).
+
+## 6. T18, round 2 (06/10, 21:10 local): two of the three profiles at inf are excluded
+
+Details, scripts and outputs: `lemma/t18/T18_REPORT.md`, section "Round 2". Uses the 04/10 method (X_d partition, path counts,
+deficient pairs matched by the sigma-orbits of X_2, determined vertex sets, common-neighbour budgets and exact positive
+semidefiniteness of 9(3I-A)+J), read from the dossier `DOSSIER_WAGNER_2026-10-04` supplied by the user.
+
+Notation: delta_c = d(a_c) = d(b_c) for the 7 pairs of N(inf), sum delta_c = 9, delta_c <= 2; h_k = number of pairs with delta_c = k;
+n_3 = number of outside vertices with d = 3.
+
+- **Proved by hand (re-read in the main session): 4 h_0 + n_3 <= 4.** Sum a_2 + 2 a_3 over N(inf) (A^2 = 12I - A + 2J on the indicators
+  of X_2 and X_3) and bound it below neighbour by neighbour. So the multiset (2,2,2,2,1,0,0) is impossible for B0, B1 and B2, and
+  (2,2,2,1,1,1,0) forces n_3 = 0 with equality everywhere.
+- **Computed, one implementation, exact certificates, not yet independently re-run:** the multiset (2,2,2,1,1,1,0) is impossible
+  for B0, B1 and B2. Chain: matchings of the 18 deficient pairs (B1: 1,259 orbits, B0: 425, B2: 528) -> a determined set of 39
+  vertices (survivors B1: 481, B0: 383, B2: 7) -> 45 vertices (B1: 164, B0: 23, B2: 0) -> 51 vertices (0 everywhere).
+- **Open:** the multiset (2,2,1,1,1,1,1) for the three graphs (n_3 = 0 for B1; n_3 in {0, 2, 4} for B0 and B2). Round 3 is on it,
+  B1 first, together with an independent verifier of the computed steps.
+
+T18 is therefore still NOT proved, and nothing of this may be used as a filter in the engine yet.

@@ -1,0 +1,2 @@
+﻿(i) e=0 #1 part 0/1: tau 1259, done 258, timed_out=True, time 669.7s
+   surviving (tau, F) per case h_2: {2: 1262, 3: 265};  tau with at least one surviving F: {2: 235, 3: 125};  {'psd_calls': 1287807, 'exact_calls': 1714}

@@ -1,0 +1,1 @@
+  [301s] {'tau': 18, 'tau_done': 10, 'F': 14, 'F_ok_Np': 14, 'C': 28537, 'H': 9795, 'G': 11770, 'Y_tables': 9572, 'tau_with_table': 5, 'Y_psd_reject': 9562, 'Y_tables_psd': 10, 'tau_with_psd_table': 2, 'sets': 39687, 'cands_out': 8568, 'cands_in': 184}

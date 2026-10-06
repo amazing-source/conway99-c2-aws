@@ -1,0 +1,24 @@
+﻿example: F = [0, 3, 10]  sizes a_z = [6, 6, 6, 5, 5, 4, 4, 5, 5]  e(H) = 5  e(G) = 5
+   budget violations: 0   M1 u == 0: True
+   9(3I-A)+J: min eigenvalue (float) -2.5785; exact certificate value v^T M v = -176
+   11(4I+A)-2J: min eigenvalue (float) -0.0000; exact certificate value v^T M v = None
+   block S u X_2: min eigenvalues [-1.5645, 0.0]
+   block S u X_0: min eigenvalues [1.472, 0.0]
+   block X_0 u X_2: min eigenvalues [2.6049, 7.1803]
+   block S u X_2 u {p}: min eigenvalues [-1.5645, 0.0]
+example: F = [0, 3, 10]  sizes a_z = [6, 6, 6, 5, 5, 4, 4, 5, 5]  e(H) = 5  e(G) = 5
+   budget violations: 0   M1 u == 0: True
+   9(3I-A)+J: min eigenvalue (float) -3.1572; exact certificate value v^T M v = -252
+   11(4I+A)-2J: min eigenvalue (float) 0.0000; exact certificate value v^T M v = None
+   block S u X_2: min eigenvalues [-1.5645, 0.0]
+   block S u X_0: min eigenvalues [1.472, 0.0]
+   block X_0 u X_2: min eigenvalues [2.6049, 7.1803]
+   block S u X_2 u {p}: min eigenvalues [-1.5645, 0.0]
+example: F = [0, 3, 10]  sizes a_z = [6, 6, 6, 5, 5, 5, 5, 4, 4]  e(H) = 5  e(G) = 5
+   budget violations: 0   M1 u == 0: True
+   9(3I-A)+J: min eigenvalue (float) -4.3935; exact certificate value v^T M v = -324
+   11(4I+A)-2J: min eigenvalue (float) 0.0000; exact certificate value v^T M v = None
+   block S u X_2: min eigenvalues [-1.5645, 0.0]
+   block S u X_0: min eigenvalues [1.472, -0.0]
+   block X_0 u X_2: min eigenvalues [1.5867, 7.1202]
+   block S u X_2 u {p}: min eigenvalues [-1.5645, 0.0]
