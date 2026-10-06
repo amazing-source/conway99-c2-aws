@@ -1,0 +1,32 @@
+﻿======================================================================
+(i) e=0  h orbits: []
+--- structure #0: minus edges (i~j iff x_i ~ sigma x_j): [(0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (1, 7), (1, 8), (2, 3), (2, 6), (2, 8), (3, 5), (3, 7), (4, 5), (4, 6), (5, 6), (5, 7), (6, 8), (7, 8)]
+    degrees [4, 4, 4, 4, 4, 4, 4, 4, 4], |Aut| = 72, triangles of B = 6
+    charpoly(B) = (t - 4)*(t - 1)**4*(t + 2)**4
+    codegree distribution (adjacency, codeg): count = [(('adj', 1), 18), (('non', 2), 18)]
+--- structure #1: minus edges (i~j iff x_i ~ sigma x_j): [(0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (1, 7), (1, 8), (2, 3), (2, 6), (2, 8), (3, 5), (3, 6), (4, 5), (4, 7), (5, 6), (5, 7), (6, 8), (7, 8)]
+    degrees [4, 4, 4, 4, 4, 4, 4, 4, 4], |Aut| = 12, triangles of B = 8
+    charpoly(B) = (t - 4)*(t - 2)*(t - 1)**2*(t + 1)**2*(t + 2)**3
+    codegree distribution (adjacency, codeg): count = [(('adj', 1), 12), (('adj', 2), 6), (('non', 1), 6), (('non', 2), 12)]
+--- structure #2: minus edges (i~j iff x_i ~ sigma x_j): [(0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (1, 7), (1, 8), (2, 3), (2, 5), (2, 6), (3, 4), (3, 6), (4, 8), (5, 6), (5, 7), (5, 8), (6, 7), (7, 8)]
+    degrees [4, 4, 4, 4, 4, 4, 4, 4, 4], |Aut| = 18, triangles of B = 9
+    charpoly(B) = (t - 4)*(t + 2)**2*(t**3 - 3*t - 1)**2
+    codegree distribution (adjacency, codeg): count = [(('adj', 1), 9), (('adj', 2), 9), (('non', 1), 9), (('non', 2), 9)]
+======================================================================
+(ii) e=0  h orbits: [7, 8]
+--- structure #0: minus edges (i~j iff x_i ~ sigma x_j): [(0, 4), (0, 5), (0, 6), (0, 7), (1, 2), (1, 3), (1, 6), (1, 7), (2, 3), (2, 5), (2, 7), (3, 6), (3, 8), (4, 5), (4, 6), (4, 8), (5, 8)]
+    degrees [4, 4, 4, 4, 4, 4, 4, 3, 3], |Aut| = 2, triangles of B = 6
+    charpoly(B) = (t - 1)*(t + 1)*(t**3 + 2*t**2 - 4*t - 7)*(t**4 - 2*t**3 - 8*t**2 + 3*t + 4)
+    codegree distribution (adjacency, codeg): count = [(('adj', 0), 3), (('adj', 1), 10), (('adj', 2), 4), (('non', 0), 1), (('non', 1), 6), (('non', 2), 12)]
+--- structure #1: minus edges (i~j iff x_i ~ sigma x_j): [(0, 5), (0, 6), (0, 7), (0, 8), (1, 2), (1, 4), (1, 6), (1, 7), (2, 3), (2, 5), (2, 7), (3, 4), (3, 5), (3, 8), (4, 6), (4, 8), (5, 6)]
+    degrees [4, 4, 4, 4, 4, 4, 4, 3, 3], |Aut| = 4, triangles of B = 5
+    charpoly(B) = (t - 1)**2*(t + 2)**2*(t**2 - 2)*(t**3 - 2*t**2 - 8*t + 4)
+    codegree distribution (adjacency, codeg): count = [(('adj', 0), 2), (('adj', 1), 15), (('non', 1), 5), (('non', 2), 14)]
+--- structure #2: minus edges (i~j iff x_i ~ sigma x_j): [(0, 2), (0, 4), (0, 7), (0, 8), (1, 4), (1, 5), (1, 6), (1, 7), (2, 3), (2, 6), (2, 7), (3, 5), (3, 6), (3, 8), (4, 5), (4, 8), (5, 6)]
+    degrees [4, 4, 4, 4, 4, 4, 4, 3, 3], |Aut| = 2, triangles of B = 6
+    charpoly(B) = (t - 1)*(t + 1)*(t**2 + t - 3)*(t**5 - t**4 - 12*t**3 - 3*t**2 + 25*t + 16)
+    codegree distribution (adjacency, codeg): count = [(('adj', 0), 2), (('adj', 1), 12), (('adj', 2), 3), (('non', 1), 8), (('non', 2), 11)]
+--- structure #3: minus edges (i~j iff x_i ~ sigma x_j): [(0, 2), (0, 4), (0, 7), (0, 8), (1, 3), (1, 5), (1, 6), (1, 7), (2, 4), (2, 6), (2, 7), (3, 5), (3, 6), (3, 8), (4, 5), (4, 8), (5, 6)]
+    degrees [4, 4, 4, 4, 4, 4, 4, 3, 3], |Aut| = 2, triangles of B = 7
+    charpoly(B) = (t**4 + 3*t**3 - 4*t - 1)*(t**5 - 3*t**4 - 8*t**3 + 14*t**2 + 19*t - 6)
+    codegree distribution (adjacency, codeg): count = [(('adj', 0), 4), (('adj', 1), 5), (('adj', 2), 8), (('non', 1), 11), (('non', 2), 8)]

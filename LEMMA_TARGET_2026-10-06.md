@@ -95,3 +95,35 @@ None of this is a proof of T18. It is the starting point.
   {0, 2}); about 20 % of the candidates meet r, so the expected pruning is modest. Not tried.
 
 So the gain needs T18 and T20 themselves, or the frame search as it is.
+
+## 5. T18 reduced to three explicit graphs (06/10, evening)
+
+Full report, scripts and outputs: `lemma/t18/` (start with `T18_REPORT.md`). The hand proofs below were re-read line by line in the
+main session; the enumerations were run by two independent programs (`enum_S.py`, `verify_S.py`).
+
+Notation of section 3; e = e(S+), k = number of active h = number of neighbours of inf in S+, Q = sum_{x in S+} d+(x)^2.
+
+- **Counting identity (general form, |S+| = m):** sum over z outside S of C(d(z),2) = m^2 - 7m - 7e - Q, and
+  sum over z outside S of d(z) = 10m - 4e.
+- **Parity law (any m): e = C(k,2) mod 2.** sigma pairs the outside vertices other than inf and d(sigma z) = d(z), so the sum of
+  C(d(z),2) over them is even; d(inf) = k; m^2 - 7m is even and Q = 2e = 0 mod 2.
+- **e = 2 is impossible:** it forces Q = 4 and sum C(d,2) = 0, so d(z) <= 1 outside S, but sum d(z) = 82 over 81 vertices.
+- **e = 1 is impossible** (word-word edge and word-h edge, both by lambda = 1 / mu = 2 counting on the sets
+  M_j = {i != j : x_j ~ sigma x_i}; see A3 of the report).
+- **Pattern (ii) is impossible:** k = 2 forces e odd, hence e = 1.
+- **What is left:** S+ independent, no active h, and x_i ~ sigma x_j iff i ~ j in a 4-regular graph B on 9 vertices whose pairs
+  of vertices have at most 2 common neighbours. There are exactly three such graphs:
+
+  | | Edges of B | Automorphisms | Spectrum |
+  |---|---|---|---|
+  | B0 = K3 x K3 (Paley 9) | 01 02 03 04 14 17 18 23 26 28 35 37 45 46 56 57 68 78 | 72 | 4, 1^4, (-2)^4 |
+  | B1 | 01 02 03 04 14 17 18 23 26 28 35 36 45 47 56 57 68 78 | 12 | 4, 2, 1^2, (-1)^2, (-2)^3 |
+  | B2 = C9(1,2) | 01 02 03 04 14 17 18 23 25 26 34 36 48 56 57 58 67 78 | 18 | 4, (-2)^2, roots of t^3 - 3t - 1 twice |
+
+- Proved about the three survivors: every outside vertex has d <= 3; d(a_c) <= 2; B1 admits no outside vertex with d = 3.
+- **Not proved:** that the three graphs are impossible. For each of them a consistent assignment of neighbourhoods in S to all the
+  other vertices exists, so the obstruction, if there is one, lies in the adjacency among the vertices outside S. This is the same
+  point the 04/10 proof reached with the cube and Wagner complements; the argument that closed those two is the first thing to try
+  on B0, B1 and B2 (the file `VERIF_CUBE_OBSTRUCTION_2026-10-04.md` is on the lab PC, not in this repo).
+
+T20 has not been attacked. The parity law and the two counting identities apply to it as they stand (m = 10).

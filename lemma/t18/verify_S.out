@@ -1,0 +1,12 @@
+﻿2026-10-06 19:14:41.659729
+(i) e=1  plus edge (0,1): labelled 0, iso classes 0
+(ii) e=1 plus edge word-word (0,1), h={7,8}: labelled 0, iso classes 0
+(ii) e=1 plus edge word-h (0,7), h={7,8}: labelled 0, iso classes 0
+(i) e=2 disjoint plus edges: labelled 0, iso classes 0
+(i) e=2 path of plus edges: labelled 0, iso classes 0
+(ii) e=2 ww,ww disjoint: labelled 0, iso classes 0
+(ii) e=2 ww + wh disjoint: labelled 0, iso classes 0
+(ii) e=2 wh + wh disjoint: labelled 0, iso classes 0
+(ii) e=0 h={7,8}: labelled 17640, iso classes 4
+(i) e=0: labelled 55440, iso classes 3
+2026-10-06 19:18:50.751169
