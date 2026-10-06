@@ -1,0 +1,36 @@
+﻿====================================================================================================
+r3v_B250_1_0of3.json
+   s: 1
+   part: 0
+   nparts: 3
+   stats: dict[6] {"tau": 420, "F_tested": 5466, "F_base_ok": 3870, "F_types_ok": 3870, "nodes": 60838, "H": 1836}
+   timed_out: false
+   H: list[1836], first item type dict
+   -> field c_mine.py reads: H
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 1836, distinct triples 1836, distinct (tau,F) 312, distinct matchings 89, tau range 99..1245
+   -> survivors field: absent
+====================================================================================================
+r3v_B250_1_1of3.json
+   s: 1
+   part: 1
+   nparts: 3
+   stats: dict[6] {"tau": 420, "F_tested": 5385, "F_base_ok": 3806, "F_types_ok": 3806, "nodes": 56395, "H": 1375}
+   timed_out: false
+   H: list[1375], first item type dict
+   -> field c_mine.py reads: H
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 1375, distinct triples 1375, distinct (tau,F) 350, distinct matchings 94, tau range 157..1258
+   -> survivors field: absent
+====================================================================================================
+r3v_B250_1_2of3.json
+   s: 1
+   part: 2
+   nparts: 3
+   stats: dict[6] {"tau": 419, "F_tested": 5455, "F_base_ok": 3833, "F_types_ok": 3833, "nodes": 59005, "H": 1766}
+   timed_out: false
+   H: list[1766], first item type dict
+   -> field c_mine.py reads: H
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 1766, distinct triples 1766, distinct (tau,F) 353, distinct matchings 92, tau range 188..1256
+   -> survivors field: absent

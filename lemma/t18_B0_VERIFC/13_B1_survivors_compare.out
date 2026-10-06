@@ -1,0 +1,7 @@
+﻿full B1 run of c_mine.py: 4 distinct survivors; enumerator r3_p250.py (15 BC files read): 4 distinct survivors; control run: 4
+identical 47-vertex graphs, full run vs enumerator: True; only c_mine 0, only enumerator 0
+identical 47-vertex graphs, full run vs control run: True
+   matching #813, F = [2, 9]: found in c_mine_1_4of24.json; enumerator file: r3_p250_1_0of3_idx752_BC.json
+   matching #813, F = [3, 6]: found in c_mine_1_3of24.json; enumerator file: r3_p250_1_0of3_idx752_BC.json
+   matching #975, F = [1, 2]: found in c_mine_1_5of24.json; enumerator file: r3_p250_1_2of3_idx758_BC.json
+   matching #975, F = [3, 6]: found in c_mine_1_4of24.json; enumerator file: r3_p250_1_2of3_idx758_BC.json

@@ -1,0 +1,35 @@
+﻿input r3_p250_0_0of1_B.json: timed_out False, field H_stageB, 5595 entries
+triples read 5595, distinct 5595, in 133 matchings, 901 pairs (tau, F)
+part files found: 24; counted: 24; not counted: 0
+counted parts (part/nparts: triples processed, seconds reported by c_mine.py, survivors):
+   0/24: 234 triples, 401s, 0 survivors
+   1/24: 234 triples, 408s, 0 survivors
+   2/24: 234 triples, 401s, 0 survivors
+   3/24: 233 triples, 420s, 0 survivors
+   4/24: 233 triples, 417s, 0 survivors
+   5/24: 233 triples, 418s, 0 survivors
+   6/24: 233 triples, 327s, 0 survivors
+   7/24: 233 triples, 334s, 0 survivors
+   8/24: 233 triples, 340s, 0 survivors
+   9/24: 233 triples, 323s, 0 survivors
+   10/24: 233 triples, 318s, 0 survivors
+   11/24: 233 triples, 328s, 0 survivors
+   12/24: 233 triples, 380s, 0 survivors
+   13/24: 233 triples, 363s, 0 survivors
+   14/24: 233 triples, 378s, 0 survivors
+   15/24: 233 triples, 385s, 0 survivors
+   16/24: 233 triples, 377s, 0 survivors
+   17/24: 233 triples, 389s, 0 survivors
+   18/24: 233 triples, 320s, 0 survivors
+   19/24: 233 triples, 309s, 0 survivors
+   20/24: 233 triples, 303s, 0 survivors
+   21/24: 233 triples, 297s, 0 survivors
+   22/24: 233 triples, 294s, 0 survivors
+   23/24: 233 triples, 291s, 0 survivors
+sum of processed triples over the counted parts: 5595; list length 5595; triples in no counted part: 0; triples in more than one counted part: 0
+sum of the reported seconds over the counted parts: 8521
+counters summed over the counted parts (the 'first time per (tau,F) in a process' counters type_solutions, type_solutions_ok33, tauF_with_triples and the constant 'triples' are left out, they are not additive over parts):
+    {'triples_done': 5595, 'pair_types_tested': 132132, 'K_budget_ok': 603053, 'K_psd_ok': 52580, 'ts_with_all_pairs_alive': 1122, 'cover_nodes': 3165, 'pair41_tests': 5116, 'pair41_ok': 900, 'full47_tests': 0, 'survivors': 0, 'psd_cert': 611642, 'psd_exact_fallback': 0, 'rej_budget_np': 314318, 'K_incremental_budget_missed': 0, 'budget_valid_47': 0, 'dead_by_rank_bound': 0, 'dead_by_odd_rank': 0, 'dead_by_even_rank': 0, 'dead_by_psd': 0, 'dead_by_psd_only': 0, 'dead_by_rank_only': 0, 'pair_types_dead_before_K': 58425}
+SURVIVORS on 47 vertices, counted parts: 0
+   distinct 47-vertex graphs among them: 0; matchings: []
+COMPLETE: True  (expected 5595 triples in 133 matchings; processed 5595, each exactly once: True)

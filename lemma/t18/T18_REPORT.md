@@ -3,7 +3,8 @@
 **Status: T18 is NOT proved.** It is reduced, with complete proofs, to three explicit configurations
 (S+ independent, no active h, orbit graph B one of three 4-regular graphs on 9 vertices). Everything else is excluded.
 
-(Later rounds are appended below: "Round 2" and "Round 3". Current state: table "Where T18 stands after round 3".)
+(Later rounds are appended below: "Round 2", "Round 3", "Round 4". Current state of B1: "Status table for B1 (end of round 4)" at the end;
+B0 and B2 are handled by other agents since round 4.)
 
 No solver was used: hand arguments, exhaustive backtracking, exact integer / rational arithmetic only.
 
@@ -504,9 +505,9 @@ table "Where T18 stands", the B1 / (2,5,0) cell should read "open: exactly 4 sur
 
 Scope (coordinator, 22:31): B1 only; B2, B0, n_3 > 0 and profile (3,3,1) are handled by other agents; at most 2 processes.
 
-**Status after round 4.** For B1 the last open profile (2,5,0) is now excluded: the X_0 stage kills each of the 4 survivors,
-with two independent programs agreeing (A19). What is NOT double-checked for B1 is listed in the final table: stage C of
-profile (2,5,0) (second implementation only partial, A20) and the whole of profile (3,3,1) (one implementation, round 2).
+**Status after round 4.** For B1 the last open profile (2,5,0) is now excluded: the 4 survivors die by the X_0 stage (A19,
+two programs) and by the rank test (A19b, two computations). What is NOT double-checked for B1 is in the final table:
+stage C of profile (2,5,0) on 2891 of its 4977 triples (A20, Final lines) and steps 2-3 of profile (3,3,1) (round 2).
 So "B1 is excluded" holds at the level "computed", not "proved"; T18 itself also needs B0 and B2 (other agents).
 
 ## R4-0. Checks of what I was given, and housekeeping
@@ -618,3 +619,62 @@ So the rank test alone kills every one of the 164 tables as soon as one pair of 
 and PSD for 2 of them): for B1, step 4 of A11 ("Y u W: 0 left") is confirmed by a different test in different code.
 It would also have made the PSD test on Y unnecessary on the 15 rejected samples; the 27203 - 164 - 15 other budget-valid
 Y-tables were not saved, so this is not a re-proof of profile (3,3,1), only of its last step.
+
+## B (round 4). What is not closed or not double-checked for B1
+
+1. Stage C of profile (2,5,0) on the 4807 triples outside matchings #813 and #975: one complete implementation
+   (`r3_p250.py`: no survivor there); second implementation only on the part stated in "Final lines (round 4)".
+   To finish: `R4V_FULL=1 python r4_verifyC2.py 1 <part> 2 470` with `R4V_SKIP=<number already completed in that part>`,
+   then `python r4_compareC_final.py`. It needs about 1.2 s per triple on the loaded machine.
+2. Profile (3,3,1): steps 2 and 3 of A11 (the 481 configurations on 39 vertices, the 164 Y-tables) have one implementation;
+   step 4 now has two (PSD, and the rank test of A21). Another agent is re-implementing this profile.
+3. Nothing in this round concerns B0 or B2.
+
+## C (round 4). Tried, weak or failed
+
+- The kernel condition of A18 as an independent proof of the X_0 stage: the only kernel vector of 9(3I-A)+J on the
+  47 vertices is the universal one 4 e_p + 1_{N(p)}; the condition is vacuous.
+- Dual-order second implementations of stage C (v0, v1): correct on what they finished, but 20 to 50 s per triple.
+- v2 with sigma-odd tests only in the cover stage: one run stayed more than 9 minutes inside a single triple
+  (matching #975, F = [3,6]); I stopped it. With full tests the same 16 triples take 11 s.
+- Two runs exceeded the 10-minute limit by 1 to 2 minutes before I stopped them (the time check is between triples),
+  and for a few seconds at 23:38 three of my processes were alive instead of two (a wait loop expired too early).
+- The B2 run started before the scope change was stopped (see R4-0).
+
+## D (round 4). Files added (same folder; nothing renamed)
+
+`r4_stageD.py` (-> `r4_stageD_B1.out`, `r4_stageD_B1.json`, `r4cert_stageD_B1.jsonl`), `r4_verifyD.py` (-> `r4_verifyD.out`),
+`r4_rank.py` (-> `r4_rank.out`), `r4_rank331.py` (-> `r4_rank331.out`, `r4_rank331_first60.out`),
+`r4_verifyC.py` (v1), `r4_verifyC2.py` (v2; switches R4V_TAUS, R4V_IDX, R4V_SKIP, R4V_FULL; saves after every triple),
+`r4_compareC_final.py` (-> `r4_compareC_final.out`; supersedes `r4_compareC.py`), `r4_left_lists.py`,
+outputs `r3v_C250_1_0of1_t813*.json` (v0), `r4v_C_1_0of1_t813.json` (v1), `r4v_C2_1_*.json` (v2), logs `r4v_*.out`,
+`_patch_r4*.py` (edits applied during the session; the scripts in place are the patched ones),
+B2 leftovers from before the scope change: `r4v_B250_2.out`, `r3v_B250_2_0of1.json`, `r4_B2_BC.out` (partial log).
+
+## Final lines (round 4, 23:51)
+
+Second implementation of stage C (v2 with full tests, two parts, each run once and resumed once; `r4_compareC_final.out`):
+
+| B1, profile (2,5,0), stage C | |
+|---|---|
+| stage-B triples | 4977 |
+| completed by at least one second implementation | **2086** (all 170 of #813 / #975, and 1916 of the 4807 others: the first 1063 and 931 triples of the two halves of the sorted list) |
+| survivors found by the second implementations | the same 4 as the enumerator; none extra; none missed on a completed triple |
+| NOT yet double-checked | 2891 triples (the enumerator found no survivor on them) |
+
+Stage-D certificates re-checked once more at the end: 3048 checked, 0 invalid.
+
+## Status table for B1 (end of round 4)
+
+| profile at p | status | what it rests on |
+|---|---|---|
+| n_3 > 0 | **proved by hand** | Theorem N3 (`N3_REPORT.md`), re-read by the coordinator and by me |
+| (4,1,2) | **proved by hand** | A9, re-derived by the coordinator |
+| (3,3,1) | **computed once** | A10 by hand; stage 1 computed twice; steps 2-3 of A11 (481 configurations on 39 vertices, 164 Y-tables) one implementation; step 4 computed twice (PSD in round 2, rank test A21) |
+| (2,5,0) | **computed once at stage C, twice everywhere else** | A14 by hand; stage 1 twice (13799 matchings, 1259 orbits); stage B twice (4977 triples, identical sets); stage C: one complete implementation (4 survivors), second implementation on 2086 of 4977 triples including every triple of the two matchings with survivors (same 4, nothing else); the 4 survivors: excluded twice by the X_0 stage (A19) and twice by the rank test (A19b: my computation and the structural agent's) |
+
+**B1 as a whole: computed, not proved.** Every case of B1 is excluded by at least one complete exact computation;
+the two links with a single complete implementation are stage C of profile (2,5,0) on 2891 triples and steps 2-3 of
+profile (3,3,1). Saved certificates: 50000 (stages B and C, a capped sample of about 1.6 million PSD rejections) and
+3048 (stage D, complete), all re-checked by `r3_verify.py certs`.
+T18 itself additionally needs B0 and B2 (other agents).

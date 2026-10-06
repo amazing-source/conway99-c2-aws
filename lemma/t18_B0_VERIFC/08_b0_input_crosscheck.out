@@ -1,0 +1,8 @@
+﻿enumerator: timed_out False, matchings 425, done 425, entries 5595, distinct 5595, matchings with triples 133, tau_alive 133
+verifier file 1: keys ['H', 'nparts', 'part', 's', 'stats', 'timed_out'], timed_out True, stats {'tau': 418, 'F_tested': 7543, 'F_base_ok': 4750, 'F_types_ok': 4750, 'nodes': 74115, 'H': 3533}, entries 3533, tau range 72..417
+verifier file 2: keys ['H', 'nparts', 'part', 's', 'stats', 'taus_started', 'timed_out'], timed_out False, stats {'tau': 7, 'F_tested': 252, 'F_base_ok': 154, 'F_types_ok': 154, 'nodes': 12734, 'H': 2062}, entries 2062, tau range 418..424, taus_started [418, 419, 420, 421, 422, 423, 424]
+verifier file 1 holds only matchings < 418: True; file 2 only matchings >= 418: True
+verifier union: 3533 + 2062 = 5595 entries, distinct 5595
+identical sets (enumerator == verifier): True; only enumerator 0, only verifier 0
+r2_tau_0.json: 425 matching representatives, 18 deficient pairs
+triples by t = e(X_2): {2: 459, 4: 2584, 6: 2552}; triples with slack < 0: 0; with slack >= 0 and max f > 2: 0

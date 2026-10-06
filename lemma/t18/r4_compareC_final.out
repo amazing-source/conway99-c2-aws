@@ -7,14 +7,18 @@
    v2  r4v_C2_1_0of1_t813_idx137.json: 12 triples completed, 0 survivors reported
    v2  r4v_C2_1_0of1_t813_idx149_full.json: 16 triples completed, 1 survivors reported
    v2  r4v_C2_1_0of1_t813_idx163_full.json: 4 triples completed, 0 survivors reported
+   v2  r4v_C2_1_0of2_full.json: 589 triples completed, 0 survivors reported
+   v2  r4v_C2_1_0of2_skip589_full.json: 474 triples completed, 1 survivors reported
    v2  r4v_C2_1_0of2_t813_skip17.json: 23 triples completed, 1 survivors reported
+   v2  r4v_C2_1_1of2_full.json: 513 triples completed, 0 survivors reported
+   v2  r4v_C2_1_1of2_skip513_full.json: 418 triples completed, 1 survivors reported
    v1  r4v_C_1_0of1_t813.json: 29 triples completed, 1 survivors reported
 triples of B1 (stage B): 4977;  of matchings #813 and #975: 170
-triples completed by at least one second implementation: 170; of #813 / #975: 170 of 170; elsewhere: 0
-   by v0: 117, by v1: 29, by v2: 110
+triples completed by at least one second implementation: 2086; of #813 / #975: 170 of 170; elsewhere: 1916
+   by v0: 117, by v1: 29, by v2: 2048
 enumerator survivors (complete list):
     matching 813, F [2, 9]: triple completed by ['v0', 'v1', 'v2']; found as survivor by ['v0', 'v1', 'v2']
-    matching 813, F [3, 6]: triple completed by ['v0']; found as survivor by ['v0']
+    matching 813, F [3, 6]: triple completed by ['v0', 'v2']; found as survivor by ['v0', 'v2']
     matching 975, F [1, 2]: triple completed by ['v0', 'v2']; found as survivor by ['v0', 'v2']
     matching 975, F [3, 6]: triple completed by ['v2']; found as survivor by ['v2']
 survivors reported by a second implementation that the enumerator does not have: 0

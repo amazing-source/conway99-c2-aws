@@ -1,0 +1,41 @@
+﻿input r3v_B250_1_0of3.json: timed_out False, field H, 1836 entries
+input r3v_B250_1_1of3.json: timed_out False, field H, 1375 entries
+input r3v_B250_1_2of3.json: timed_out False, field H, 1766 entries
+triples read 4977, distinct 4977, in 275 matchings, 1015 pairs (tau, F)
+part files found: 24; counted: 24; not counted: 0
+counted parts (part/nparts: triples processed, seconds reported by c_mine.py, survivors):
+   0/24: 208 triples, 162s, 0 survivors
+   1/24: 208 triples, 158s, 0 survivors
+   2/24: 208 triples, 172s, 0 survivors
+   3/24: 208 triples, 167s, 1 survivors
+   4/24: 208 triples, 179s, 2 survivors
+   5/24: 208 triples, 174s, 1 survivors
+   6/24: 208 triples, 187s, 0 survivors
+   7/24: 208 triples, 186s, 0 survivors
+   8/24: 208 triples, 189s, 0 survivors
+   9/24: 207 triples, 183s, 0 survivors
+   10/24: 207 triples, 189s, 0 survivors
+   11/24: 207 triples, 187s, 0 survivors
+   12/24: 207 triples, 202s, 0 survivors
+   13/24: 207 triples, 209s, 0 survivors
+   14/24: 207 triples, 206s, 0 survivors
+   15/24: 207 triples, 198s, 0 survivors
+   16/24: 207 triples, 199s, 0 survivors
+   17/24: 207 triples, 198s, 0 survivors
+   18/24: 207 triples, 247s, 0 survivors
+   19/24: 207 triples, 240s, 0 survivors
+   20/24: 207 triples, 232s, 0 survivors
+   21/24: 207 triples, 239s, 0 survivors
+   22/24: 207 triples, 240s, 0 survivors
+   23/24: 207 triples, 237s, 0 survivors
+sum of processed triples over the counted parts: 4977; list length 4977; triples in no counted part: 0; triples in more than one counted part: 0
+sum of the reported seconds over the counted parts: 4780
+counters summed over the counted parts (the 'first time per (tau,F) in a process' counters type_solutions, type_solutions_ok33, tauF_with_triples and the constant 'triples' are left out, they are not additive over parts):
+    {'triples_done': 4977, 'pair_types_tested': 115473, 'K_budget_ok': 905578, 'K_psd_ok': 75295, 'ts_with_all_pairs_alive': 2329, 'cover_nodes': 9248, 'pair41_tests': 23535, 'pair41_ok': 6314, 'full47_tests': 43, 'survivors': 4, 'psd_cert': 959041, 'psd_exact_fallback': 0, 'rej_budget_np': 338736, 'K_incremental_budget_missed': 0, 'budget_valid_47': 0, 'dead_by_rank_bound': 0, 'dead_by_odd_rank': 0, 'dead_by_even_rank': 0, 'dead_by_psd': 0, 'dead_by_psd_only': 0, 'dead_by_rank_only': 0, 'pair_types_dead_before_K': 46188}
+SURVIVORS on 47 vertices, counted parts: 4
+   distinct 47-vertex graphs among them: 4; matchings: [813, 975]
+   matching #813, F = [2, 9], types [[0, 4], [1, 3], [1, 6], [2, 8], [6, 7]]
+   matching #813, F = [3, 6], types [[0, 3], [1, 8], [2, 4], [2, 7], [6, 7]]
+   matching #975, F = [1, 2], types [[1, 2], [1, 8], [3, 4], [5, 6], [6, 7]]
+   matching #975, F = [3, 6], types [[0, 2], [1, 2], [3, 4], [6, 7], [7, 8]]
+COMPLETE: True  (expected 4977 triples in 275 matchings; processed 4977, each exactly once: True)

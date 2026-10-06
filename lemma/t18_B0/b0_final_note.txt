@@ -1,0 +1,40 @@
+**Stage C is COMPLETE for B0 (23:40): all 2667 orbit representatives (= 5595 stage-B triples) are done and NONE has a
+completion on the 47 vertices S u {p} u X_2 u W.** No process of mine is still running.
+
+> **Computed (not "proved"): for B0 = K3 x K3 the profile (2,5,0) is impossible.** With L0 (profiles (4,1,2) and (3,3,1)
+> excluded, n_3 = 0) this excludes B0 altogether, under the statuses listed below.
+
+| stage (B0, profile (2,5,0)) | count | implementations |
+|---|---|---|
+| matchings tau of the 18 deficient pairs / orbits under Aut(B0) | 25514 / 425 | 2 (given) |
+| pairs (tau, F) passing the N(p) pair tests / budgets + PSD on S u {p} u A_p | 5545 / 4904 | enumerator figures |
+| stage B: triples (tau, F, H) on 37 vertices | 5595, in 133 matchings | 2, identical sets |
+| representatives modulo the stabilisers of the matchings | 2667 | 1 (closure asserted) |
+| stage C: W type solutions examined / dead by the counting and forced-orbit tests | 262850 / 170382 | 1 |
+| stage C: search nodes; rejections by budgets / by integer PSD certificate | 701270; 340605 / 704789 | 1 |
+| **stage C survivors on 47 vertices** | **0** | 1 |
+| killed by the rank bound | 0 (never needed) | - |
+
+(The stage-C counters are sums over the representatives; part of the local tests were answered by the memo: 619965 hits.
+"Float-negative without integer certificate": 0 in every run. All .err files are empty.)
+
+Steps that exist in ONE implementation only:
+1. stage C (the round-3 enumerator code, run through `b0_stageC.py` / `b0_stageC2.py`);
+2. the reduction to 2667 representatives (`b0_orbitsB.py`);
+3. upstream, not mine: profile (3,3,1) for B0 (round 2).
+
+Partial independent evidence for stage C (none of it is a second complete implementation):
+- dual-order verifier `b0_verify.py C250 0 0 150 270` (independent program, X_2 orbit by X_2 orbit) on a sample: the triples
+  number 0, 150, 300, ... of the sorted list of 5595; 29 of them were processed before the time limit (385685 nodes, 383 s):
+  **0 survivors** (`b0_verC_sample.out`, `r3v_C250_0_0of150.json`);
+- X_0-first route (section 5): 77 of 81 representatives are also excluded without W;
+- the memo of `b0_stageC2.py` was validated on 32 representatives (identical counters).
+
+What a reviewer should re-do first: an independent stage C on all 2667 representatives (or all 5595 triples).
+`b0_verify.py C250` does it but is slow (29 triples in 383 s on the loaded laptop: several hours in total).
+Cheaper partial alternative: finish the X_0-first route (`bash b0_loopX0.sh 0` and `bash b0_loopX0.sh 1`, resumable,
+roughly 1.5 s per representative): it excludes about 95 % of the representatives without W (77 of 81 so far), leaving
+stage C as the only argument for the rest.
+
+Open for B0: nothing in profile (2,5,0), subject to the statuses above. Not done: stage D on B0 (not needed);
+`b0_stageD_v.py` was never executed.

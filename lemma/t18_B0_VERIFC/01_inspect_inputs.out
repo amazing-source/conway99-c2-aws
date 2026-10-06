@@ -1,0 +1,332 @@
+﻿====================================================================================================
+r3_p250_0_0of1_B.json
+   name: "(i) e=0 #0"
+   profile: "250"
+   stages: "B"
+   part: 0
+   nparts: 1
+   totals: dict[23] {"tau": 425, "tau_done": 425, "F": 5545, "F_types_ok": 5545, "F_base_ok": 4904, "B_nodes": 72987, "H_complete": 5595, "H_after_counts": 5595, "type_sols": 0, "type_sols_ok33": 0, "F_W_ok": 0, "C_nb1_tests": 0, "C_nb2_tests": 0, "C_type_solutions": 0, "C_ts_dead_by_counts": 0, "C_forced_tests": 0, "C_nodes": 0, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 22402, "rej_psd": 38315, "psd_tests": 108038, "psd_float_neg_no_cert": 0}
+   timed_out: false
+   tau_alive: list[133] of int, min 72, max 424, first [72, 89, 92, 96, 97, 104, 105, 107]
+   survivors: list[5595], first item type dict
+   n_cert: 15000
+   H_stageB: list[5595], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 5595, distinct triples 5595, distinct (tau,F) 901, distinct matchings 133, tau range 72..424
+   -> survivors field: 5595
+====================================================================================================
+r3_p250_1_0of2_idx952_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 0
+   nparts: 2
+   totals: dict[23] {"tau": 146, "tau_done": 53, "F": 707, "F_types_ok": 707, "F_base_ok": 642, "B_nodes": 17389, "H_complete": 525, "H_after_counts": 525, "type_sols": 14970, "type_sols_ok33": 6544, "F_W_ok": 87, "C_nb1_tests": 169260, "C_nb2_tests": 36412, "C_type_solutions": 44778, "C_ts_dead_by_counts": 29956, "C_forced_tests": 84399, "C_nodes": 196953, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 109200, "rej_psd": 202913, "psd_tests": 414866, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 1000
+   H_stageB: list[525], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 525, distinct triples 525, distinct (tau,F) 87, distinct matchings 21, tau range 952..1074
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_0of3_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 0
+   nparts: 3
+   totals: dict[23] {"tau": 420, "tau_done": 262, "F": 2002, "F_types_ok": 2002, "F_base_ok": 1874, "B_nodes": 22752, "H_complete": 403, "H_after_counts": 403, "type_sols": 18390, "type_sols_ok33": 8467, "F_W_ok": 104, "C_nb1_tests": 132930, "C_nb2_tests": 32930, "C_type_solutions": 37428, "C_ts_dead_by_counts": 26092, "C_forced_tests": 66304, "C_nodes": 213369, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 94090, "rej_psd": 225228, "psd_tests": 413804, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 12000
+   H_stageB: list[403], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 403, distinct triples 403, distinct (tau,F) 104, distinct matchings 40, tau range 99..786
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_0of3_BC_round1.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 0
+   nparts: 3
+   totals: dict[23] {"tau": 420, "tau_done": 262, "F": 2002, "F_types_ok": 2002, "F_base_ok": 1874, "B_nodes": 22752, "H_complete": 403, "H_after_counts": 403, "type_sols": 18390, "type_sols_ok33": 8467, "F_W_ok": 104, "C_nb1_tests": 132930, "C_nb2_tests": 32930, "C_type_solutions": 37428, "C_ts_dead_by_counts": 26092, "C_forced_tests": 66304, "C_nodes": 213369, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 94090, "rej_psd": 225228, "psd_tests": 413804, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 12000
+   H_stageB: list[403], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 403, distinct triples 403, distinct (tau,F) 104, distinct matchings 40, tau range 99..786
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_0of3_idx1111_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 0
+   nparts: 3
+   totals: dict[23] {"tau": 13, "tau_done": 12, "F": 138, "F_types_ok": 138, "F_base_ok": 130, "B_nodes": 6546, "H_complete": 424, "H_after_counts": 424, "type_sols": 9870, "type_sols_ok33": 4910, "F_W_ok": 60, "C_nb1_tests": 138040, "C_nb2_tests": 30627, "C_type_solutions": 37929, "C_ts_dead_by_counts": 24116, "C_forced_tests": 68810, "C_nodes": 113616, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 89107, "rej_psd": 116221, "psd_tests": 278587, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 500
+   H_stageB: list[424], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 424, distinct triples 424, distinct (tau,F) 60, distinct matchings 13, tau range 1086..1256
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_0of3_idx752_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 0
+   nparts: 3
+   totals: dict[23] {"tau": 145, "tau_done": 42, "F": 421, "F_types_ok": 421, "F_base_ok": 385, "B_nodes": 9690, "H_complete": 440, "H_after_counts": 440, "type_sols": 13425, "type_sols_ok33": 6495, "F_W_ok": 79, "C_nb1_tests": 143500, "C_nb2_tests": 28595, "C_type_solutions": 39736, "C_ts_dead_by_counts": 27292, "C_forced_tests": 71379, "C_nodes": 166930, "C_survivors": 2, "H_with_C_survivor": 2, "rej_budget": 91751, "rej_psd": 171462, "psd_tests": 344826, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[1] of int, min 813, max 813, first [813]
+   survivors: list[2], first item type dict
+   n_cert: 3000
+   H_stageB: list[440], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 440, distinct triples 440, distinct (tau,F) 79, distinct matchings 17, tau range 752..952
+   -> survivors field: 2
+====================================================================================================
+r3_p250_1_0of40_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 0
+   nparts: 40
+   totals: dict[21] {"tau": 32, "tau_done": 32, "F": 306, "F_types_ok": 306, "F_base_ok": 284, "B_nodes": 3744, "H_complete": 19, "H_after_counts": 19, "type_sols": 42915, "type_sols_ok33": 17994, "F_W_ok": 284, "C_nb1_tests": 6272, "C_nb2_tests": 990, "C_type_solutions": 1579, "C_nodes": 12550, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 5870, "rej_psd": 21606, "psd_tests": 53894, "psd_float_neg_no_cert": 0}
+   timed_out: false
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 15000
+   -> field c_mine.py reads: None
+====================================================================================================
+r3_p250_1_0of400_B.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "B"
+   part: 0
+   nparts: 400
+   totals: dict[16] {"tau": 4, "tau_done": 4, "F": 27, "F_types_ok": 27, "F_base_ok": 26, "B_nodes": 182, "H_complete": 0, "H_after_counts": 0, "C_type_solutions": 0, "C_nodes": 0, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 109, "rej_psd": 78, "psd_tests": 369, "psd_float_neg_no_cert": 0}
+   timed_out: false
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 78
+   -> field c_mine.py reads: None
+====================================================================================================
+r3_p250_1_0of5_idx1080_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 0
+   nparts: 5
+   totals: dict[23] {"tau": 47, "tau_done": 47, "F": 845, "F_types_ok": 845, "F_base_ok": 785, "B_nodes": 11535, "H_complete": 172, "H_after_counts": 172, "type_sols": 2400, "type_sols_ok33": 1267, "F_W_ok": 13, "C_nb1_tests": 57008, "C_nb2_tests": 14644, "C_type_solutions": 17618, "C_ts_dead_by_counts": 10996, "C_forced_tests": 28504, "C_nodes": 66098, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 39441, "rej_psd": 69922, "psd_tests": 147209, "psd_float_neg_no_cert": 0}
+   timed_out: false
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 500
+   H_stageB: list[172], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 172, distinct triples 172, distinct (tau,F) 13, distinct matchings 1, tau range 1089..1089
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_1of2_idx955_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 1
+   nparts: 2
+   totals: dict[23] {"tau": 145, "tau_done": 59, "F": 802, "F_types_ok": 802, "F_base_ok": 746, "B_nodes": 18605, "H_complete": 625, "H_after_counts": 625, "type_sols": 22275, "type_sols_ok33": 9927, "F_W_ok": 134, "C_nb1_tests": 197526, "C_nb2_tests": 40434, "C_type_solutions": 49679, "C_ts_dead_by_counts": 34116, "C_forced_tests": 98322, "C_nodes": 167675, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 129207, "rej_psd": 178818, "psd_tests": 419787, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 1000
+   H_stageB: list[625], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 625, distinct triples 625, distinct (tau,F) 134, distinct matchings 30, tau range 967..1087
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_1of3_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 1
+   nparts: 3
+   totals: dict[23] {"tau": 420, "tau_done": 314, "F": 2525, "F_types_ok": 2525, "F_base_ok": 2366, "B_nodes": 31725, "H_complete": 521, "H_after_counts": 521, "type_sols": 27630, "type_sols_ok33": 13479, "F_W_ok": 163, "C_nb1_tests": 169540, "C_nb2_tests": 35983, "C_type_solutions": 46267, "C_ts_dead_by_counts": 35116, "C_forced_tests": 84406, "C_nodes": 164313, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 119795, "rej_psd": 187434, "psd_tests": 419630, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 12000
+   H_stageB: list[521], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 521, distinct triples 521, distinct (tau,F) 163, distinct matchings 57, tau range 157..943
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_1of3_BC_round1.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 1
+   nparts: 3
+   totals: dict[23] {"tau": 420, "tau_done": 314, "F": 2525, "F_types_ok": 2525, "F_base_ok": 2366, "B_nodes": 31725, "H_complete": 521, "H_after_counts": 521, "type_sols": 27630, "type_sols_ok33": 13479, "F_W_ok": 163, "C_nb1_tests": 169540, "C_nb2_tests": 35983, "C_type_solutions": 46267, "C_ts_dead_by_counts": 35116, "C_forced_tests": 84406, "C_nodes": 164313, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 119795, "rej_psd": 187434, "psd_tests": 419630, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 12000
+   H_stageB: list[521], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 521, distinct triples 521, distinct (tau,F) 163, distinct matchings 57, tau range 157..943
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_1of3_idx1122_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 1
+   nparts: 3
+   totals: dict[23] {"tau": 14, "tau_done": 13, "F": 194, "F_types_ok": 194, "F_base_ok": 181, "B_nodes": 7682, "H_complete": 493, "H_after_counts": 493, "type_sols": 16035, "type_sols_ok33": 7817, "F_W_ok": 96, "C_nb1_tests": 164164, "C_nb2_tests": 31357, "C_type_solutions": 47028, "C_ts_dead_by_counts": 29708, "C_forced_tests": 82047, "C_nodes": 88460, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 104740, "rej_psd": 93963, "psd_tests": 284322, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 500
+   H_stageB: list[493], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 493, distinct triples 493, distinct (tau,F) 96, distinct matchings 14, tau range 1074..1258
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_1of3_idx755_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 1
+   nparts: 3
+   totals: dict[23] {"tau": 144, "tau_done": 50, "F": 538, "F_types_ok": 538, "F_base_ok": 497, "B_nodes": 11113, "H_complete": 491, "H_after_counts": 491, "type_sols": 15225, "type_sols_ok33": 7184, "F_W_ok": 89, "C_nb1_tests": 158690, "C_nb2_tests": 30741, "C_type_solutions": 42018, "C_ts_dead_by_counts": 29926, "C_forced_tests": 79198, "C_nodes": 149004, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 102743, "rej_psd": 153653, "psd_tests": 344989, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 3000
+   H_stageB: list[491], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 491, distinct triples 491, distinct (tau,F) 89, distinct matchings 21, tau range 782..977
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_1of5_idx1082_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 1
+   nparts: 5
+   totals: dict[23] {"tau": 47, "tau_done": 47, "F": 823, "F_types_ok": 823, "F_base_ok": 767, "B_nodes": 12255, "H_complete": 152, "H_after_counts": 152, "type_sols": 795, "type_sols_ok33": 433, "F_W_ok": 5, "C_nb1_tests": 50736, "C_nb2_tests": 15695, "C_type_solutions": 14183, "C_ts_dead_by_counts": 7099, "C_forced_tests": 25368, "C_nodes": 109844, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 35468, "rej_psd": 111602, "psd_tests": 186378, "psd_float_neg_no_cert": 0}
+   timed_out: false
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 500
+   H_stageB: list[152], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 152, distinct triples 152, distinct (tau,F) 5, distinct matchings 1, tau range 1091..1091
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_2of3_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 2
+   nparts: 3
+   totals: dict[23] {"tau": 419, "tau_done": 250, "F": 1886, "F_types_ok": 1886, "F_base_ok": 1745, "B_nodes": 19964, "H_complete": 358, "H_after_counts": 358, "type_sols": 14895, "type_sols_ok33": 7162, "F_W_ok": 87, "C_nb1_tests": 114660, "C_nb2_tests": 29004, "C_type_solutions": 31693, "C_ts_dead_by_counts": 23007, "C_forced_tests": 57085, "C_nodes": 232309, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 81666, "rej_psd": 240002, "psd_tests": 406151, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 12000
+   H_stageB: list[358], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 358, distinct triples 358, distinct (tau,F) 87, distinct matchings 35, tau range 188..752
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_2of3_BC_round1.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 2
+   nparts: 3
+   totals: dict[23] {"tau": 419, "tau_done": 250, "F": 1886, "F_types_ok": 1886, "F_base_ok": 1745, "B_nodes": 19964, "H_complete": 358, "H_after_counts": 358, "type_sols": 14895, "type_sols_ok33": 7162, "F_W_ok": 87, "C_nb1_tests": 114660, "C_nb2_tests": 29004, "C_type_solutions": 31693, "C_ts_dead_by_counts": 23007, "C_forced_tests": 57085, "C_nodes": 232309, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 81666, "rej_psd": 240002, "psd_tests": 406151, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 12000
+   H_stageB: list[358], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 358, distinct triples 358, distinct (tau,F) 87, distinct matchings 35, tau range 188..752
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_2of3_idx1125_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 2
+   nparts: 3
+   totals: dict[23] {"tau": 14, "tau_done": 13, "F": 176, "F_types_ok": 176, "F_base_ok": 173, "B_nodes": 5726, "H_complete": 415, "H_after_counts": 415, "type_sols": 10500, "type_sols_ok33": 4881, "F_W_ok": 60, "C_nb1_tests": 137102, "C_nb2_tests": 29454, "C_type_solutions": 36803, "C_ts_dead_by_counts": 22694, "C_forced_tests": 68320, "C_nodes": 110989, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 87464, "rej_psd": 113026, "psd_tests": 274707, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 500
+   H_stageB: list[415], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 415, distinct triples 415, distinct (tau,F) 60, distinct matchings 14, tau range 1078..1249
+   -> survivors field: 0
+====================================================================================================
+r3_p250_1_2of3_idx758_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 2
+   nparts: 3
+   totals: dict[23] {"tau": 144, "tau_done": 50, "F": 567, "F_types_ok": 567, "F_base_ok": 513, "B_nodes": 11487, "H_complete": 379, "H_after_counts": 379, "type_sols": 13515, "type_sols_ok33": 6258, "F_W_ok": 76, "C_nb1_tests": 124362, "C_nb2_tests": 28560, "C_type_solutions": 32919, "C_ts_dead_by_counts": 21815, "C_forced_tests": 62062, "C_nodes": 179918, "C_survivors": 2, "H_with_C_survivor": 2, "rej_budget": 80799, "rej_psd": 184506, "psd_tests": 342849, "psd_float_neg_no_cert": 0}
+   timed_out: true
+   tau_alive: list[1] of int, min 975, max 975, first [975]
+   survivors: list[2], first item type dict
+   n_cert: 3000
+   H_stageB: list[379], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 379, distinct triples 379, distinct (tau,F) 76, distinct matchings 21, tau range 785..978
+   -> survivors field: 2
+====================================================================================================
+r3_p250_1_2of5_idx1095_BC.json
+   name: "(i) e=0 #1"
+   profile: "250"
+   stages: "BC"
+   part: 2
+   nparts: 5
+   totals: dict[23] {"tau": 47, "tau_done": 47, "F": 796, "F_types_ok": 796, "F_base_ok": 758, "B_nodes": 11034, "H_complete": 158, "H_after_counts": 158, "type_sols": 1650, "type_sols_ok33": 860, "F_W_ok": 9, "C_nb1_tests": 53984, "C_nb2_tests": 10551, "C_type_solutions": 17609, "C_ts_dead_by_counts": 10998, "C_forced_tests": 26992, "C_nodes": 41118, "C_survivors": 0, "H_with_C_survivor": 0, "rej_budget": 36122, "rej_psd": 45422, "psd_tests": 115698, "psd_float_neg_no_cert": 0}
+   timed_out: false
+   tau_alive: list[0]
+   survivors: list[0]
+   n_cert: 500
+   H_stageB: list[158], first item type dict
+   -> field c_mine.py reads: H_stageB
+   -> keys of one entry: ['F', 'H', 'tau']; len(H) of first entry: 18
+   -> entries 158, distinct triples 158, distinct (tau,F) 9, distinct matchings 1, tau range 1092..1092
+   -> survivors field: 0
