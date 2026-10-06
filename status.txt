@@ -2,27 +2,23 @@ CAMPAIGN=c2q-20261001
 NAME=q-i-008a374f92faec021
 PKG=v10
 STATE=ERREUR AGENT
-REASON=and the repository exists.
+REASON=agent exit code 2 (see tail_agent.txt)
 REGION=eu-north-1
 AZ=eu-north-1c
 ITYPE=c7a.8xlarge
 PRICE=0.45
 OVH=0.01
 BOOT=1791289306
-NOW=1791291615
+NOW=1791291623
 UPTIME_H=0.64
 WORKERS=31
 RUNNING=0
 RUNNING_JOBS=
 ETA_S=0
-DONE=5
+DONE=0
 FAILED=0
-MODE=run
-LEDGER_USD=154.89
-CAP_USD=175.0
-FREE_JOBS=13979
-LAST_ERR=git fetch -q --prune failed: git@github.com: Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists
+MODE=
+LEDGER_USD=
+CAP_USD=
+FREE_JOBS=
+LAST_ERR=
