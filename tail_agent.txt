@@ -1,0 +1,1 @@
+2026-10-06 23:52:05 agent start: 7 workers, price 0.1800 + 0.0100 $/h, region us-east-2
