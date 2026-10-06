@@ -24,6 +24,8 @@ import os, sys, json, time, random, shutil, subprocess, collections, traceback, 
 TERMINAL = {"FINI", "DRAINED", "STOP", "INTERRUPTED", "STOP CALIB", "ERREUR INSTALLATION", "REFUS", "ERREUR AGENT"}
 CYCLE = 30          # seconds between two cycles
 SYNC_EVERY = 60     # seconds between two queue syncs while there are free slots
+FETCH_TRIES = 6     # attempts of one queue fetch before giving up (06/10)
+FETCH_WAIT = 18     # seconds; wait k * FETCH_WAIT after the k-th failed attempt (18 + 36 + ... + 90 = 4.5 min in all)
 
 
 def env(k, d=None):
@@ -140,8 +142,23 @@ class Agent:
 
     # -- queue
     def fetch(self):
-        git(self.qd, "fetch", "-q", "--prune", "origin", "+refs/heads/%s:refs/remotes/origin/%s" % (self.qbr, self.qbr),
-            "+refs/heads/%s*:refs/remotes/origin/%s*" % (self.prefix, self.prefix))
+        """06/10: retried. One refused fetch (GitHub answered "Permission denied (publickey)" once to a valid deploy key) used to
+        raise, i.e. ERREUR AGENT: every running job released and the machine powered off. The waits add up to 4.5 min, under the
+        dead-man switch and the lease."""
+        err = ""
+        for attempt in range(FETCH_TRIES):
+            try:
+                r = git(self.qd, "fetch", "-q", "--prune", "origin", "+refs/heads/%s:refs/remotes/origin/%s" % (self.qbr, self.qbr),
+                        "+refs/heads/%s*:refs/remotes/origin/%s*" % (self.prefix, self.prefix), check=False)
+                if r.returncode == 0:
+                    return
+                err = (r.stderr or r.stdout).strip()[-400:]
+            except subprocess.TimeoutExpired:
+                err = "timeout"
+            self.log("fetch failed (%d/%d): %s" % (attempt + 1, FETCH_TRIES, err.replace("\n", " ")))
+            if attempt + 1 < FETCH_TRIES:
+                time.sleep(FETCH_WAIT * (attempt + 1))
+        raise RuntimeError("git fetch failed %d times in a row: %s" % (FETCH_TRIES, err))
 
     def show(self, ref, path):
         return git(self.qd, "show", "%s:%s" % (ref, path)).stdout
