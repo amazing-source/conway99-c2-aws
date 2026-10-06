@@ -13,9 +13,60 @@ wrapper
      waiting for the shard that drew the heaviest pairs;
   4. adds the P records up into one record of the same format: verdict counts, twin_deferred, telemetry and not_excluded are summed
      or concatenated; n_pairs, sha256, producer and the chunk_ok / chunk_done formulas are those of the FULL stream.
+Deferral mode (Q_DEFER=1, user's decision of 06/10 evening): the pairs that have a root r of U with (r,y1)^2 + (r,y2)^2 = 5 or 4 are
+NOT sent to the consumer. They are exactly the pairs the open lemmas T18 (dual minimum >= 10/7) and T20 (>= 11/7) would exclude
+(LEMMA_TARGET_2026-10-06.md), and they hold 99 % of the search time. They are counted under two "DEFERRED (pending ...)" verdicts
+and listed by their position in the stream (field "deferred"); chunk_done is then false, so nothing is ever counted as excluded
+on the strength of an unproved lemma. Every other pair goes through the unchanged consumer as usual.
 The merged record carries "merged": {shards, mode, par_consumer_sha256}. A shard that fails, or whose record does not match the
 pairs and sha256 it was given, makes chunk_ok false: nothing is ever counted as excluded on a partial run."""
 import sys, os, json, time, hashlib, subprocess, collections, tempfile, shutil
+
+
+DEF18 = "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)"
+DEF20 = "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)"
+
+
+def classify(pkg, lid, pairs, deferred):
+    """Fill deferred["T18"], deferred["T20"] with the stream positions of the pairs that have a witness root, and return the positions
+    of the others. The y are converted to lattice coordinates exactly as scripts/hstage_stream_next.py does; a pair whose
+    conversion fails is NOT deferred (the consumer will report it INVALID)."""
+    import math
+    sys.path.insert(0, os.path.join(pkg, "scripts"))
+    import numpy as np
+    from fractions import Fraction as F
+    from frame_dfs_next import lattice_data
+    gens = json.load(open(os.path.join(pkg, "external_runs", "structures_3eceb4d", "U", "%03d.json" % int(lid))))["gens"]
+    L = lattice_data(gens, F(1)); Bq = [[F(x) for x in row] for row in L["B"]]
+    Binv = np.linalg.inv(np.array([[float(x) for x in row] for row in L["B"]]))
+    DEN = 1
+    for row in Bq:
+        for x in row: DEN = DEN * x.denominator // math.gcd(DEN, x.denominator)
+    BD = np.array([[int(x * DEN) for x in row] for row in Bq], dtype=np.int64)
+    RG = (L["R"] @ L["G"]).astype(np.int64)                             # one row per +- pair of roots
+    keep = []
+    if len(RG) == 0:
+        return list(range(len(pairs)))
+    for idx, line in enumerate(pairs):
+        rec = json.loads(line); yy = []
+        for key in ("y1", "y2"):
+            num = []; ok_ = True
+            for x in rec[key]:
+                q = F(x)
+                if DEN % q.denominator: ok_ = False; break
+                num.append(q.numerator * (DEN // q.denominator))
+            if not ok_: yy = None; break
+            exD = np.array(num, dtype=object)
+            cf = np.rint(np.array([float(v) for v in exD]) / DEN @ Binv).astype(np.int64)
+            if not (np.abs(cf).max() < 2 ** 20 and np.array_equal(cf @ BD, exD.astype(np.int64))): yy = None; break
+            yy.append(cf)
+        if yy is None:
+            keep.append(idx); continue
+        a = RG @ yy[0]; b = RG @ yy[1]; Y = a * a + b * b
+        if (Y == 5).any(): deferred["T18"].append(idx)
+        elif (Y == 4).any(): deferred["T20"].append(idx)
+        else: keep.append(idx)
+    return keep
 
 
 def main():
@@ -32,7 +83,12 @@ def main():
             info_raw.append(line); info.append(rec); continue
         sh.update(line + b"\n"); n += 1; orbits.add(rec["o"]); pairs.append(line)
     full_sha = sh.hexdigest()
-    P = max(1, min(P, n))
+    deferred = {"T18": [], "T20": []}
+    if os.environ.get("Q_DEFER", "") == "1" and n:
+        keep_idx = classify(pkg, lid, pairs, deferred)
+        pairs = [pairs[i] for i in keep_idx]
+    ndef = len(deferred["T18"]) + len(deferred["T20"])
+    P = max(1, min(P, max(1, len(pairs))))
     W = max(1, int(sys.argv[7])) if len(sys.argv) > 7 else P
     tmp = tempfile.mkdtemp(prefix="par_%s_" % os.path.basename(outp).replace(".jsonl", ""), dir=os.path.dirname(os.path.abspath(outp)))
     shards = []
@@ -83,10 +139,17 @@ def main():
            "wall_secs": round(time.time() - t0, 1), "machine": "labpc", "frame_dfs": recs[0].get("frame_dfs") if recs else None,
            "code_sha": recs[0].get("code_sha") if recs else None, "node_limit": int(lim),
            "conway99_c1_commit": recs[0].get("conway99_c1_commit") if recs else None, "t": time.strftime("%Y-%m-%d %H:%M:%S"),
-           "merged": {"shards": P, "workers": W, "mode": "round-robin", "bad": bad,
+           "merged": {"shards": P, "workers": W, "mode": "round-robin", "defer": os.environ.get("Q_DEFER", "") == "1", "bad": bad,
                       "par_consumer_sha256": hashlib.sha256(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:16]}}
     ok = bool(end) and end.get("complete") is True and end.get("pairs") == n and end.get("sha256") == full_sha
-    ok = ok and not bad and len(recs) == P and sum(r["n_pairs"] for r in recs) == n
+    ok = ok and not bad and len(recs) == P
+    ok = ok and sum(r["n_pairs"] for r in recs) + ndef == n
+    if ndef:
+        cnt[DEF18] += len(deferred["T18"]); cnt[DEF20] += len(deferred["T20"])
+        out["verdicts"] = {k: v for k, v in cnt.items() if v}
+        out["deferred"] = {"rule": "root r of U (one per +- pair) with (r,y1)^2 + (r,y2)^2 = 5 (T18) or, failing that, = 4 (T20); "
+                                   "indices are 0-based positions among the pair lines of the producer stream",
+                           "T18": deferred["T18"], "T20": deferred["T20"]}
     out["chunk_ok"] = ok
     out["chunk_done"] = ok and n == sum(c for v, c in cnt.items() if v.startswith("EXCLUDED") or v.startswith("SWAP-COVERED") or v == "TWIN-DEFERRED"
                                         or v.startswith("TWIN-CANON"))
