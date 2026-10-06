@@ -4,6 +4,8 @@ Started by q/qmachine.sh instead of the queue agent when Q_TAIL_KEYS is set (sam
   Q_TAIL_KEYS="016:414:479 016:431:479 ..."   the jobs, in the order given
   Q_PAR_WORKERS=31                             consumers running at the same time (default: cores - 1)
   Q_PAR=124                                    shards per job (default: 4 x workers)
+  Q_TAIL_SKIP_OWNED=1                          skip a key that another machine has claimed (use it when the list is work done in
+                                               advance; leave it unset to finish jobs their owners have been on for hours)
 For each key, one at a time: the package's own producer command (the one of run_jobs.start), piped into q/par_consumer.py, which
 runs the unchanged package consumer on P shards and adds the records up. A job counts only if run_jobs.done_already accepts its
 record; its result is pushed to run/<NAME> BEFORE its done event is published, as the agent does.
@@ -30,10 +32,13 @@ def main():
     if not a.push_status("EN_COURS", "tail runner: %d jobs, %d shards each, %d at a time" % (len(keys), P, W)):
         raise RuntimeError("cannot push the first status")
     a.rearm_deadman(); nfail = 0
+    skip_owned = Q.env("Q_TAIL_SKIP_OWNED") == "1"
     for key in keys:
-        a.fetch(); _, _, ev = a.read_queue(); _, done, _ = Q.owners(ev)
+        a.fetch(); _, _, ev = a.read_queue(); own, done, _ = Q.owners(ev)
         if key in done or key not in jobs or jobs[key].get("kind"):
             a.log("skip %s (%s)" % (key, "already done" if key in done else "not a stream job of this package")); continue
+        if skip_owned and own.get(key) not in (None, a.name):            # another machine is on it: do not pay twice
+            a.log("skip %s (claimed by %s)" % (key, own[key])); continue
         job = jobs[key]; lid, k, n = job["lid"], job["k"], job["n"]; tag = "%s_%d_%d" % (lid, k, n)
         res = os.path.join(out, tag + ".jsonl"); stats = os.path.join(out, tag + "_producer_stats.json")
         U = os.path.join(a.pkg, "external_runs", "structures_3eceb4d", "U", "%s.json" % lid)
