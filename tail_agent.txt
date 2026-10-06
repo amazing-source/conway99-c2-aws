@@ -1,11 +1,3 @@
-2026-10-06 23:30:24 start 011:886:2950 (est 0.44 h) [deferral mode]
-2026-10-06 23:30:24 start 011:914:2950 (est 0.44 h) [deferral mode]
-2026-10-06 23:30:24 start 011:930:2950 (est 0.44 h) [deferral mode]
-2026-10-06 23:30:24 start 011:939:2950 (est 0.44 h) [deferral mode]
-2026-10-06 23:30:24 start 011:942:2950 (est 0.44 h) [deferral mode]
-2026-10-06 23:30:24 start 011:989:2950 (est 0.44 h) [deferral mode]
-2026-10-06 23:30:24 start 011:1012:2950 (est 0.44 h) [deferral mode]
-2026-10-06 23:30:24 start 011:1017:2950 (est 0.44 h) [deferral mode]
 2026-10-06 23:30:24 start 011:1029:2950 (est 0.44 h) [deferral mode]
 2026-10-06 23:30:24 start 011:1031:2950 (est 0.44 h) [deferral mode]
 2026-10-06 23:30:24 start 011:1032:2950 (est 0.44 h) [deferral mode]
@@ -58,3 +50,11 @@
 2026-10-06 23:33:15 done 011:823:2950 in 171 s
 2026-10-06 23:33:15 done 011:885:2950 in 65 s
 2026-10-06 23:33:15 done 011:913:2950 in 65 s
+2026-10-06 23:33:21 start 011:1593:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:33:21 start 011:1594:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:33:21 start 011:1595:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:33:21 start 011:1596:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:33:21 start 011:1597:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:33:21 start 011:1599:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:33:51 done 011:1017:2950 in 207 s
+2026-10-06 23:33:51 done 011:1029:2950 in 207 s
