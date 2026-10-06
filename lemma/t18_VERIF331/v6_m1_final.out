@@ -1,0 +1,33 @@
+graph B1: 10 configurations on 51 vertices pass budgets + exact PSD of M1 alone
+ #0 matching 1256 F=[0, 2, 8] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': False, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -88 on the 51 vertices: [6, 1, 2, 3, 1, -3, -4, -2, -3, -6, -1, -2, -3, -1, 3, 4, 2, 3, 0, 0, 0, -5, 5, -5, 5, 0, 0, -4, 4, -4, 4, -3, 3, 0, 0, -2, 2, 1, -1, 1, -1, 0, 0, 1, -1, 1, -1, -2, 2, 3, -3]
+    degrees inside the 51 vertices: min 4 max 14
+ #1 matching 1256 F=[0, 2, 8] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': False, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -594 on the 51 vertices: [0, -3, 3, 3, -3, 0, 3, -3, 0, 0, 3, -3, -3, 3, 0, -3, 3, 0, 0, 2, -2, 2, -2, -2, 2, -2, 2, -2, 2, 2, -2, 0, 0, 2, -2, 0, 0, 0, 0, -1, 1, -1, 1, 1, -1, 3, -3, -3, 3, -3, 3]
+    degrees inside the 51 vertices: min 4 max 14
+ #2 matching 1256 F=[0, 2, 8] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': False, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -726 on the 51 vertices: [0, 6, -6, -6, 6, 0, -6, 6, 0, 0, -6, 6, 6, -6, 0, 6, -6, 0, 0, -5, 5, -6, 6, 6, -6, 6, -6, 3, -3, -3, 3, -3, 3, -3, 3, 3, -3, -3, 3, 3, -3, 3, -3, -3, 3, -4, 4, 4, -4, 4, -4]
+    degrees inside the 51 vertices: min 4 max 14
+ #3 matching 1256 F=[0, 2, 8] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': True, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -726 on the 51 vertices: [0, -6, 6, 6, -6, 0, 6, -6, 0, 0, 6, -6, -6, 6, 0, -6, 6, 0, 0, 5, -5, 6, -6, -6, 6, -6, 6, -3, 3, 3, -3, 3, -3, 3, -3, -3, 3, 3, -3, -3, 3, -3, 3, 3, -3, 4, -4, -4, 4, -4, 4]
+    degrees inside the 51 vertices: min 4 max 14
+ #4 matching 1256 F=[0, 2, 8] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': False, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -594 on the 51 vertices: [0, -3, 3, 3, -3, 0, 3, -3, 0, 0, 3, -3, -3, 3, 0, -3, 3, 0, 0, 2, -2, 2, -2, -2, 2, -2, 2, -2, 2, 2, -2, 0, 0, 2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, -3, -3, 3, -3, 3]
+    degrees inside the 51 vertices: min 4 max 14
+ #5 matching 1256 F=[1, 3, 5] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': False, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -594 on the 51 vertices: [0, 3, -3, -3, 3, 0, -3, 3, 0, 0, -3, 3, 3, -3, 0, 3, -3, 0, 0, 2, -2, 2, -2, -2, 2, -2, 2, -2, 2, 2, -2, 0, 0, 0, 0, 0, 0, 2, -2, 0, 0, 0, 0, 0, 0, -3, 3, 3, -3, 3, -3]
+    degrees inside the 51 vertices: min 4 max 14
+ #6 matching 1256 F=[1, 3, 5] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': True, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -726 on the 51 vertices: [0, 6, -6, -6, 6, 0, -6, 6, 0, 0, -6, 6, 6, -6, 0, 6, -6, 0, 0, 5, -5, 6, -6, -6, 6, -6, 6, -3, 3, 3, -3, 3, -3, -3, 3, 3, -3, 3, -3, -3, 3, -3, 3, 3, -3, -4, 4, 4, -4, 4, -4]
+    degrees inside the 51 vertices: min 4 max 14
+ #7 matching 1256 F=[1, 3, 5] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': False, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -726 on the 51 vertices: [0, 6, -6, -6, 6, 0, -6, 6, 0, 0, -6, 6, 6, -6, 0, 6, -6, 0, 0, 5, -5, 6, -6, -6, 6, -6, 6, -3, 3, 3, -3, 3, -3, -3, 3, 3, -3, 3, -3, -3, 3, -3, 3, 3, -3, -4, 4, 4, -4, 4, -4]
+    degrees inside the 51 vertices: min 4 max 14
+ #8 matching 1256 F=[1, 3, 5] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': False, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -594 on the 51 vertices: [0, 3, -3, -3, 3, 0, -3, 3, 0, 0, -3, 3, 3, -3, 0, 3, -3, 0, 0, 2, -2, 2, -2, -2, 2, -2, 2, -2, 2, 2, -2, 0, 0, 0, 0, 0, 0, 2, -2, -1, 1, -1, 1, 1, -1, -3, 3, 3, -3, 3, -3]
+    degrees inside the 51 vertices: min 4 max 14
+ #9 matching 1256 F=[1, 3, 5] t=3: budgets ok, sigma-invariant, M1 exactly PSD: True (rank deficiency allowed); M2 exactly PSD on {'Y1 (39)': True, 'Y (45)': True, 'Y1 u W (45)': False, 'Y u W (51)': False}
+    integer vector with x^T M2 x = -88 on the 51 vertices: [-6, -1, -3, -2, -1, 3, 4, 2, 3, 6, 1, 3, 2, 1, -3, -4, -2, -3, 0, 0, 0, 5, -5, 5, -5, 0, 0, 4, -4, 4, -4, 2, -2, 3, -3, 1, -1, 0, 0, 1, -1, -1, 1, 0, 0, -2, 2, 1, -1, -3, 3]
+    degrees inside the 51 vertices: min 4 max 14
+graph B0: 0 configurations on 51 vertices pass budgets + exact PSD of M1 alone
+graph B2: 0 configurations on 51 vertices pass budgets + exact PSD of M1 alone

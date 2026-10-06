@@ -1,0 +1,4 @@
+tau #813 F=[2, 9]: det(odd Gram 23x23) = 47684 ; smallest / largest eigenvalue (float) 0.0109 / 7.0000 ; rank mod 1000003: 23, mod 998244353: 23
+tau #813 F=[3, 6]: det(odd Gram 23x23) = 47684 ; smallest / largest eigenvalue (float) 0.0109 / 7.0000 ; rank mod 1000003: 23, mod 998244353: 23
+tau #975 F=[1, 2]: det(odd Gram 23x23) = 874944 ; smallest / largest eigenvalue (float) 0.0122 / 7.0000 ; rank mod 1000003: 23, mod 998244353: 23
+tau #975 F=[3, 6]: det(odd Gram 23x23) = 874944 ; smallest / largest eigenvalue (float) 0.0122 / 7.0000 ; rank mod 1000003: 23, mod 998244353: 23

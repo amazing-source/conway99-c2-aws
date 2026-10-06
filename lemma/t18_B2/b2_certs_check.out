@@ -1,0 +1,4 @@
+   r3cert_2_0of2_0.jsonl: 6000 certificates
+   r3cert_2_1of2_0.jsonl: 6000 certificates
+   d_stage_cert_B1check.jsonl: 3048 certificates
+certs: 15048 certificates checked, 0 invalid; number by size of vertex set: [(22, 81), (23, 156), (25, 525), (27, 938), (29, 833), (31, 1599), (33, 2407), (35, 1145), (37, 498), (39, 943), (41, 2161), (43, 675), (45, 39), (49, 3048)]

@@ -1,0 +1,27 @@
+I.0: total deficiency 30; pairs with deficiency 1: 03 04 17 19 25 29 34 36 38 59 68 79
+      pairs with deficiency 2: 01 02 18 26 39 45 47 58 67
+      deficiency per vertex x_0..x_9: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+I.1: total deficiency 30; pairs with deficiency 1: 03 04 17 18 25 26 27 28 34 35 36 38 39 45 46 47 49 57 58 59 67 68 69 78
+      pairs with deficiency 2: 01 02 19
+      deficiency per vertex x_0..x_9: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+I.2: total deficiency 30; pairs with deficiency 1: 03 04 18 19 25 29 34 35 36 38 39 45 47 48 49 57 58 59 68 89
+      pairs with deficiency 2: 01 02 17 26 67
+      deficiency per vertex x_0..x_9: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+I.3: total deficiency 30; pairs with deficiency 1: 03 04 15 16 18 19 26 27 28 29 34 36 38 56 58 59 67 68 78 79
+      pairs with deficiency 2: 01 02 39 45 47
+      deficiency per vertex x_0..x_9: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+I.4: total deficiency 30; pairs with deficiency 1: 02 03 05 07 14 16 18 19 25 27 29 34 35 38 46 48 57 68 69 79
+      pairs with deficiency 2: 01 28 39 47 56
+      deficiency per vertex x_0..x_9: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+I.5: total deficiency 30; pairs with deficiency 1: 01 02 06 08 12 16 18 26 28 34 35 37 39 45 47 49 57 59 68 79
+      pairs with deficiency 2: 05 17 29 38 46
+      deficiency per vertex x_0..x_9: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+IIa.0: total deficiency 20; pairs with deficiency 1: 01 04 05 06 08 16 18 19 29 38 47 49 57 58 69 78
+      pairs with deficiency 2: 45 67
+      deficiency per vertex x_0..x_9: [5, 4, 1, 1, 5, 5, 5, 5, 5, 4]
+III.0: total deficiency 24; pairs with deficiency 1: 07 08 09 14 15 18 25 26 27 34 36 39 47 48 57 59 68 69
+      pairs with deficiency 2: 49 58 67
+      deficiency per vertex x_0..x_9: [3, 3, 3, 3, 6, 6, 6, 6, 6, 6]
+III.1: total deficiency 24; pairs with deficiency 1: 05 06 07 14 18 19 25 26 27 34 38 39 45 46 47 49 59 67 68 69 78 79
+      pairs with deficiency 2: 58
+      deficiency per vertex x_0..x_9: [3, 3, 3, 3, 6, 6, 6, 6, 6, 6]

@@ -1,0 +1,5 @@
+case IIa2: labelled structures 2880, distinct invariants 1, nodes 3208774, 138.6 s
+   enumerator-1 classes: 1, distinct invariants among them: 1
+   invariant tr(W^2..5)=(72, 92, 1480, 3652) : verifier 2880, predicted from enumerator 1 2880  OK
+   AGREEMENT: True
+exit 0

@@ -1,0 +1,12 @@
+graph B2: mine 7 configurations (7 canonical forms), first implementation 7 (7 canonical forms), files ['r2_hfirst_2_0of1.json']
+  multisets identical: True
+graph B1: mine 481 configurations (383 canonical forms), first implementation 481 (383 canonical forms), files ['r2_hfirst_1_0of3.json', 'r2_hfirst_1_1of3.json', 'r2_hfirst_1_2of3.json']
+  multisets identical: True
+graph B0: mine 383 configurations (232 canonical forms), first implementation 383 (232 canonical forms), files ['r2_hfirst_0_0of1.json']
+  multisets identical: True
+graph B1: mine 164 Y-tables (116 canonical forms); first implementation: 164 stored, 164 declared, files ['r2_stage2_1_0of1_surv_idx1.json', 'r2_stage2_1_0of1_surv_idx2.json', 'r2_stage2_1_0of1_surv_idx4.json', 'r2_stage2_1_0of3_surv.json']
+  multisets identical: True
+graph B0: mine 23 Y-tables (15 canonical forms); first implementation: 23 stored, 23 declared, files ['r2_stage2_0_0of1_surv_idx0.json', 'r2_stage2_0_0of1_surv_idx1.json', 'r2_stage2_0_0of1_surv_idx2.json']
+  multisets identical: True
+graph B2: mine 0 Y-tables (0 canonical forms); first implementation: 0 stored, 0 declared, files ['r2_stage2_2_0of1_surv.json']
+  multisets identical: True

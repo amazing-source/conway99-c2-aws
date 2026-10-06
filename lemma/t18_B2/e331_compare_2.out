@@ -1,0 +1,4 @@
+B2, profile (3,3,1), 39-vertex configurations: e331.py 7 (7 distinct up to z0 <-> sigma z0), r2_hfirst.py 7 (7 distinct); identical sets: True; only e331 0, only r2_hfirst 0
+   matchings: e331 [385]  r2_hfirst [385]
+   e331 totals: {'tau': 528, 'tau_done': 528, 'F': 6961, 'F_base_ok': 749, 'F_W_ok': 435, 'H_nodes': 4514, 'Y1_survivors': 7, 'tau_with_Y1': 1, 'orbits_generated': 1022, 'orbits_count_ok': 951, 'orbits_budget_ok': 726, 'orbits_psd_ok': 16, 'covers': 0, 'G': 0, 'Y_budget_ok': 0, 'Y_kept': 0, 'psd_cert': 7826, 'psd_exact_fallback': 0, 'rej_budget_np': 5839}
+   r2_hfirst totals: {'tau': 528, 'tau_done': 528, 'F': 2406, 'F_after_pairs': 114, 'H_nodes': 1347, 'H_complete': 16, 'z0_tested': 121, 'survivors': 7, 'tau_with_survivor': 1, 'psd_calls': 10112, 'exact_calls': 0, 'rej_budget': 2827, 'rej_certificate': 3315, 'rej_exact_elimination_only': 0}

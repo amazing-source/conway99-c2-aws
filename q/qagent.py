@@ -287,10 +287,35 @@ class Agent:
             return False                                           # 404 (normal) or metadata unreachable
 
     # -- jobs
+    def start_defer(self, job):
+        """06/10, Q_DEFER=1: a stream job started with the package's own producer command (the one of run_jobs.start) piped into
+        q/par_consumer.py (1 shard, 1 worker), which runs the package consumer through q/defer_consumer.py: the long searches of
+        the pairs the open lemmas T18 / T20 would exclude are set aside (verdict DEFERRED, never an exclusion), everything else
+        is the unchanged consumer. A golay_pairs job is the package's own script run through q/defer_consumer.py --golay.
+        Same result file name and same dict as run_jobs.start."""
+        lid, k, n = job["lid"], job["k"], job["n"]; tag = "%s_%d_%d" % (lid, k, n); root = self.pkg
+        res = os.path.join(self.out, tag + ".jsonl"); stats = os.path.join(self.out, tag + "_producer_stats.json")
+        here = os.path.dirname(os.path.abspath(__file__))
+        if job.get("kind") == "golay_pairs":                         # single process, like run_jobs.start
+            p = subprocess.Popen([sys.executable, os.path.join(here, "defer_consumer.py"), root, "--golay", lid, str(k), str(n), res], env=self.envx,
+                                 cwd=root, stdout=open(os.path.join(self.out, tag + "_consumer.out"), "w"), stderr=subprocess.STDOUT)
+            return {"job": job, "tag": tag, "prod": p, "cons": p, "res": res, "t0": time.time(), "defer": True}
+        U = os.path.join(root, "external_runs", "structures_3eceb4d", "U", "%s.json" % lid)
+        prod = subprocess.Popen([sys.executable, os.path.join(root, "c1", "code", "y_pairs_gamma.py"), U, os.path.join(root, job["gamma"]), stats,
+                                 "--from-plan", os.path.join(root, job["plan"]), "--chunk", "%d/%d" % (k, n), "--stream", "-", "--max-seconds", "86400"],
+                                env=self.envx, cwd=os.path.join(root, "c1", "code"), stdout=subprocess.PIPE,
+                                stderr=open(os.path.join(self.out, tag + "_producer.err"), "w"))
+        cons = subprocess.Popen([sys.executable, os.path.join(here, "par_consumer.py"), root, lid, "-", res,
+                                 "4000000000", "1", "1"], env=self.envx, cwd=root, stdin=prod.stdout,
+                                stdout=open(os.path.join(self.out, tag + "_consumer.out"), "w"), stderr=subprocess.STDOUT)
+        prod.stdout.close()
+        return {"job": job, "tag": tag, "prod": prod, "cons": cons, "res": res, "t0": time.time(), "defer": True}
+
     def start_jobs(self, keys):
         for k in keys:
-            self.running[k] = self.RJ.start(self.jobs[k], self.out, self.envx)
-            self.log("start %s (est %.2f h)" % (k, self.est[k]))
+            job = self.jobs[k]; defer = env("Q_DEFER") == "1" and job.get("kind") in (None, "golay_pairs")
+            self.running[k] = self.start_defer(job) if defer else self.RJ.start(job, self.out, self.envx)
+            self.log("start %s (est %.2f h)%s" % (k, self.est[k], " [deferral mode]" if defer else ""))
 
     def poll_jobs(self):
         for k, r in list(self.running.items()):
@@ -300,7 +325,9 @@ class Agent:
             if self.RJ.done_already(self.out, self.jobs[k]):
                 os.makedirs(os.path.join(self.pd, "results"), exist_ok=True)
                 shutil.copy(r["res"], os.path.join(self.pd, "results", os.path.basename(r["res"])))
-                self.done_here.append(k); self.unpushed.append({"t": round(time.time()), "m": self.name, "op": "done", "jobs": [k]})
+                ev = {"t": round(time.time()), "m": self.name, "op": "done", "jobs": [k]}
+                if r.get("defer"): ev["defer"] = 1                   # deferral record: chunk_ok, but pairs may be set aside
+                self.done_here.append(k); self.unpushed.append(ev)
                 self.log("done %s in %.0f s" % (k, time.time() - r["t0"]))
             else:
                 self.failed_here.append(k); self.unpushed.append({"t": round(time.time()), "m": self.name, "op": "fail", "jobs": [k]})

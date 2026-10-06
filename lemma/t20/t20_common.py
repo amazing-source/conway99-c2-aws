@@ -190,11 +190,13 @@ def psd_report(adj, verts):
 # ---------- isomorphism of S-structures (permutations of the 10 orbits preserving H and all states) ----------
 
 def profile(m, H):
+    """vertex invariants (3 rounds of refinement), compressed to ints with hash() of int tuples.
+    Only used to speed up the search: equal structures have equal profiles, the isomorphism test itself is exact."""
     hs = set(H)
-    p1 = [(i in hs, tuple(sorted(m[i]))) for i in range(N)]
-    p2 = [(p1[i], tuple(sorted((m[i][j], p1[j]) for j in range(N) if j != i))) for i in range(N)]
-    p3 = [(p2[i], tuple(sorted((m[i][j], p2[j]) for j in range(N) if j != i))) for i in range(N)]
-    return p3
+    p = [hash((i in hs, tuple(sorted(m[i])))) for i in range(N)]
+    for _ in range(2):
+        p = [hash((p[i], tuple(sorted((m[i][j], p[j]) for j in range(N) if j != i)))) for i in range(N)]
+    return p
 
 
 def invariant(m, H):

@@ -1,0 +1,182 @@
+# T18, graph B0 = K3 x K3 (Paley 9), profile (2,5,0) -- report of the B0 agent (2026-10-06, 22:27 to 23:52)
+
+Read the section "FINAL STATE" at the end first: it is generated from the logs by `b0_make_report.py` and gives the exact
+coverage reached. Everything is exact (integer matrix products, integer certificates x with x^T M x < 0, rational or
+fraction-free elimination). No SAT / CP / ILP / LP solver.
+
+Notation and hand facts: `..\t18\T18_REPORT.md` (A8, A14) and `conway99-c2-aws\lemma\t18\N3_REPORT.md`.
+Numbering in all files: x_i = i, y_i = 9+i (i = 0..8), p = 18, X_2 = 19..36 (vertex 19+k sees the pair DEF[k] in S+ and
+DEF[tau k] in S-; its mate is 19+tau k), W = 37..46 (mates 37+2c, 38+2c), X_0 minus p = 47..54 in stage D.
+B0 edges: 01 02 03 04 14 17 18 23 26 28 35 37 45 46 56 57 68 78. Its 18 deficient pairs are exactly these 18 edges
+(`r2_tau_0.json`; asserted again in `b0_x0_check.py`).
+
+## 0. Checks of what I was given
+
+- A14 (forced structure of profile (2,5,0)), items a to g: re-derived, correct.
+- Coordinator message 1 (N3_REPORT): Theorem N3 (X_3 empty) and the by-product (a_0 <= 5 outside S; a_0 <= 4 on X_0 minus N[p];
+  for s in X_2 outside N(p), N(s) n X_0 contains at most one full sigma-orbit, exactly one if a_2(s) = 3; for s in A_p none):
+  re-derived line by line, correct. Effect here: "a_2 <= 3 on X_2" removes nothing (all 5595 stage-B triples have a_2 <= 2 on
+  X_2); a_2 <= 8 on X_0 minus p and the "one full orbit" rule are used only in `b0_x0.py`.
+- Coordinator message 2 (rank bound): re-derived. 27I - 9A + J = 63 E_{-4} (0 on the eigenvalues 14 and 3, 63 on -4), rank 44;
+  trace(sigma E_{-4}) = (27 x 1 - 9 x 14 + 99) / 63 = 0, so the sigma-odd and sigma-even parts have rank 22 each;
+  44I + 11A - 2J = 77 E_3, trace(sigma E_3) = (44 + 154 - 198) / 77 = 0, so 27 + 27. Correct.
+  Where it applies in my chain: stage C leaves (23 orbits + p) and the tables on S u X_0 u X_2 (22 orbits + p: the even part of
+  63 E_{-4} is 23 x 23 and must be singular). See section 5.
+- Remark on the task statement: for B0 the stage after C turned out not to be needed (stage C leaves no configuration on
+  47 vertices), so stage D was only prepared (section 6).
+
+## 1. Chain of reductions used (status of each link)
+
+| link | content | status |
+|---|---|---|
+| L0 | T18 reduced to B0, B1, B2; profiles (4,1,2), (3,3,1) excluded; n_3 = 0 | given (T18_REPORT, N3_REPORT); not re-done here |
+| L1 | stage 1: 25514 matchings tau of the 18 deficient pairs, 425 orbits under Aut(B0) (order 72) | given; two agreeing programs (round 3) |
+| L2 | stage B: all (tau, F, H) on the 37 vertices S u {p} u X_2 | computed TWICE here, identical sets (section 2) |
+| L3 | reduction of the stage-B triples modulo the stabiliser of tau in Aut(B0) | computed once, with a closure assertion (section 3) |
+| L4 | stage C: W added (47 vertices), on one representative per orbit | computed once, complete (section 4, FINAL STATE) |
+| L5 | stage D (X_0 minus p) | not needed (stage C leaves nothing); tools ready, not run on B0 (section 6) |
+
+## 2. Stage B for B0 (S u {p} u X_2, 37 vertices): two independent programs
+
+- Enumerator `r3_p250.py 0 0 1 540 B` (copy of the round-3 script, unchanged): all 425 matchings, 347 s, no time-out.
+  5545 pairs (tau, F) pass the N(p) pair tests, 4904 pass budgets + PSD on S u {p} u A_p, 72987 search nodes,
+  **5595 triples (tau, F, H)**, all of them satisfy the counting conditions A14 g; they lie in 133 matchings.
+  Rejections: 22402 by budgets, 38315 by an integer PSD certificate, 0 "float-negative without certificate".
+  Output `b0_enumB.out`, `r3_p250_0_0of1_B.json`; 15000 certificates saved in `r3cert_0_0of1_0.jsonl`.
+- Verifier `r3_verify.py B250 0 0 1 540` (no shared code): stopped by its time limit after matchings 0..417 (3533 triples,
+  `b0_verB.out`); the remaining matchings 418..424 were run with `b0_verify.py` (= `r3_verify.py` plus an explicit list of
+  matchings, R3V_TAUS): 2062 triples in 128 s (`b0_verB_t418.out`).
+- `b0_compareB.py` -> `b0_compareB.out`: verifier 5595, enumerator 5595, **identical sets**.
+- All triples have t = e(X_2) in {2, 4, 6} and a_2 <= 2 on X_2.
+
+## 3. Use of the symmetry group
+
+`b0_orbitsB.py` -> `b0_orbitsB.out`, `b0_stageB_reps.json`. An automorphism g of B0 that fixes the matching tau maps the
+configuration (tau, F, H) to (tau, gF, gH) (it permutes the x_i, the y_i and the X_2 vertices). The script asserts that the
+stage-B set is closed under these stabilisers and keeps one triple per orbit: **2667 representatives for 5595 triples**.
+Stabiliser orders of the 133 matchings carrying triples: 1 (85 matchings, 1304 triples), 2 (36 matchings, 1633 triples, 841
+representatives), 4 (9; 1860; 481), 6 (1; 126; 23), 8 (1; 24; 6), 72 (1 matching, #424; 648 triples; 12 representatives).
+Representatives by t: 276 (t = 2), 1371 (t = 4), 1020 (t = 6).
+A stage-C (or later) completion of a triple is mapped by g to a completion of its image, so it is enough to treat the
+representatives.
+
+## 4. Stage C for B0 (W = N(p) n X_1 added, 47 vertices)
+
+Program: `b0_stageC.py`, generated from `r3_p250.py` by `_make_stageC.py` (textual edits only: the triples are read from
+`b0_stageB_reps.json` instead of being searched; one log line per completed representative; a representative cut by the time
+limit is not logged and is redone). From 23:18 on: `b0_stageC2.py` (`_make_stageC2.py`): same tests plus a memo of the three
+local tests (nb1, forced, nb2) shared by the H of one pair (tau, F); the memo key contains every adjacency the tested graph
+depends on. Validation of the memo: 32 representatives already completed without it were recomputed with it: identical
+counters (search nodes, type solutions, local test queries, survivors) on 32 of 32 (`b0_stageC2_val.out`).
+Runs: 2 processes, slices of at most 560 s (`b0_loopC.sh`, logs `b0_stageC_done_*.jsonl`, outputs `b0_stageC_r*_*.out`).
+Tests: as in round 3 (budgets and integer PSD certificates on every completely determined set met).
+Result: see FINAL STATE.
+
+## 5. Second route, W-free ("X_0-first"): partial; and the rank bound
+
+`b0_x0.py` (own code, nothing shared with the round-3/4 scripts): for a triple (tau, F, H) it lists every possible
+neighbourhood Z = N(z) n X_2 of a vertex z of X_0 minus p (budgets on 38 vertices), every pair {Z, sigma Z} passing budgets +
+PSD on 39 vertices, every exact cover of the forced degrees need(s) = a_2(s) + 2 - [s in A_p] by 4 pairs, every
+G = A[X_0 minus p] with degrees a_2(z) - 4, and tests the 45 vertices S u X_0 u X_2.
+- A first version had a bug (wrong diagonal entries in the fast certificate search: 27 and 44 instead of 28 and 42); found by
+  re-reading, fixed, all its outputs discarded (folder `_discarded`). In the fixed version the matrix of the exact check is built
+  from the full adjacency matrix exactly as in the slow path; on 4 triples the fast and slow paths give the same counts.
+- It was run on 81 representatives only (it is not faster than stage C): **77 have no table on 45 vertices** (so they are
+  excluded twice, without W and with W); **4 keep 8 tables in total** (idx 6, 36, 63, 67; matchings #92, #248, #274, #277).
+- `b0_rank.py` -> `b0_rank.out`: the 8 tables satisfy every budget, both matrices are EXACTLY positive semidefinite, and they
+  satisfy the rank bound (63 E_{-4}: odd rank 22 of 22, even rank 22 or 21 of 23; 77 E_3: 21 and 22). So
+  **S u X_0 u X_2 alone does not exclude B0, and the rank bound does not kill these tables either**; stage C (W) does: the 4
+  triples have no stage-C survivor.
+- `b0_x0_check.py s1 67 36 6 63 0` -> `b0_x0_check_s1.out`: independent brute-force re-computation of this route (all 2^18
+  subsets, exact PSD decisions, exact covers without the two shortcuts) on the 4 triples with tables and on one triple
+  without: same numbers as `b0_x0.py` on 5 of 5 (candidates, pairs passing budgets, pairs exactly PSD, tables passing the
+  budgets, tables exactly PSD = 1, 2, 1, 4, 0). The other 76 triples of this route were not re-computed.
+
+## 6. Stage D (X_0 minus p on top of a stage-C survivor)
+
+Not needed: stage C leaves nothing. Ready, NOT run on B0 data: `r4_stageD.py` (copy of the script of the B1 agent) and my
+independent first step `b0_stageD_v.py` (brute force over 91 pairs of N(p) x 2^14 subsets of X_2 minus A_p, exact PSD decision).
+`b0_stageD_v.py` was never executed, not even on the four B1 survivors: untested code.
+
+## 7. What dies by what (as far as computed)
+
+- Budgets + semidefiniteness: every rejection of stages B and C, and of the X_0-first route.
+- Rank bound: nothing was killed by it in B0. It was applied to the 8 tables of section 5 (they pass). No stage-C leaf survived
+  the PSD tests, so there was no 23-orbit configuration of B0 to apply it to.
+- Control of my rank code on B1 (not my piece): `b0_rank47.py 1 ..\t18\r3_p250_1_*_BC.json` -> `b0_rank47_B1control.out`:
+  the four B1 survivors on 47 vertices have odd rank 23 of 23 and even rank 23 of 24 for 63 E_{-4} (exact rational ranks), so
+  all four violate the rank bound. This confirms the statement of the coordinator with independent code.
+
+## 8. Files (all in this folder)
+
+Scripts: `r3_p250.py`, `r3_verify.py` (copies, unchanged), `b0_verify.py`, `b0_compareB.py`, `b0_orbitsB.py`,
+`_make_stageC.py` -> `b0_stageC.py`, `_make_stageC2.py` -> `b0_stageC2.py`, `b0_loopC.sh`, `b0_summaryC.py`,
+`b0_x0.py`, `b0_loopX0.sh`, `b0_summaryX0.py`, `b0_x0_check.py`, `b0_rank.py`, `b0_stageD_v.py` (not run),
+`r4_stageD.py` (copy, not run), `b0_rank47.py`, `b0_make_report.py` (REPORT.md = `b0_body_src.txt` + `b0_final_note.txt` + log summaries).
+Outputs: `b0_enumB.out`, `b0_verB.out`, `b0_verB_t418.out`, `b0_compareB.out`, `b0_orbitsB.out`, `b0_stageB_reps.json`,
+`b0_stageC_done_*.jsonl`, `b0_stageC_r*_*.out`, `b0_stageC2_val.out`, `b0_stageCval_val_0of1.jsonl`, `b0_x0_done_x1_*.jsonl`,
+`b0_rank.out`, `b0_x0_check_s1.out`, `b0_verC_sample.out`, `r3v_C250_0_0of150.json`, `b0_rank47_B1control.out`,
+`r3cert_0_*.jsonl` (PSD certificates; they were not re-checked by the verifier in this session), `b0_stageC_survivors.json` (written by `b0_summaryC.py`).
+
+## FINAL STATE (generated 2026-10-06 23:46)
+
+**Stage C is COMPLETE for B0 (23:40): all 2667 orbit representatives (= 5595 stage-B triples) are done and NONE has a
+completion on the 47 vertices S u {p} u X_2 u W.** No process of mine is still running.
+
+> **Computed (not "proved"): for B0 = K3 x K3 the profile (2,5,0) is impossible.** With L0 (profiles (4,1,2) and (3,3,1)
+> excluded, n_3 = 0) this excludes B0 altogether, under the statuses listed below.
+
+| stage (B0, profile (2,5,0)) | count | implementations |
+|---|---|---|
+| matchings tau of the 18 deficient pairs / orbits under Aut(B0) | 25514 / 425 | 2 (given) |
+| pairs (tau, F) passing the N(p) pair tests / budgets + PSD on S u {p} u A_p | 5545 / 4904 | enumerator figures |
+| stage B: triples (tau, F, H) on 37 vertices | 5595, in 133 matchings | 2, identical sets |
+| representatives modulo the stabilisers of the matchings | 2667 | 1 (closure asserted) |
+| stage C: W type solutions examined / dead by the counting and forced-orbit tests | 262850 / 170382 | 1 |
+| stage C: search nodes; rejections by budgets / by integer PSD certificate | 701270; 340605 / 704789 | 1 |
+| **stage C survivors on 47 vertices** | **0** | 1 |
+| killed by the rank bound | 0 (never needed) | - |
+
+(The stage-C counters are sums over the representatives; part of the local tests were answered by the memo: 619965 hits.
+"Float-negative without integer certificate": 0 in every run. All .err files are empty.)
+
+Steps that exist in ONE implementation only:
+1. stage C (the round-3 enumerator code, run through `b0_stageC.py` / `b0_stageC2.py`);
+2. the reduction to 2667 representatives (`b0_orbitsB.py`);
+3. upstream, not mine: profile (3,3,1) for B0 (round 2).
+
+Partial independent evidence for stage C (none of it is a second complete implementation):
+- dual-order verifier `b0_verify.py C250 0 0 150 270` (independent program, X_2 orbit by X_2 orbit) on a sample: the triples
+  number 0, 150, 300, ... of the sorted list of 5595; 29 of them were processed before the time limit (385685 nodes, 383 s):
+  **0 survivors** (`b0_verC_sample.out`, `r3v_C250_0_0of150.json`);
+- X_0-first route (section 5): 77 of 81 representatives are also excluded without W;
+- the memo of `b0_stageC2.py` was validated on 32 representatives (identical counters).
+
+What a reviewer should re-do first: an independent stage C on all 2667 representatives (or all 5595 triples).
+`b0_verify.py C250` does it but is slow (29 triples in 383 s on the loaded laptop: several hours in total).
+Cheaper partial alternative: finish the X_0-first route (`bash b0_loopX0.sh 0` and `bash b0_loopX0.sh 1`, resumable,
+roughly 1.5 s per representative): it excludes about 95 % of the representatives without W (77 of 81 so far), leaving
+stage C as the only argument for the rest.
+
+Open for B0: nothing in profile (2,5,0), subject to the statuses above. Not done: stage D on B0 (not needed);
+`b0_stageD_v.py` was never executed.
+
+Output of b0_summaryC.py:
+
+```
+stage-B orbit representatives: 2667 (covering 5595 triples); completed at stage C: 2667; not completed: 0; logged twice: 0
+counters summed over the completed representatives: {'C_forced_tests': 437843, 'C_memo_hits': 619965, 'C_nb1_tests': 878934, 'C_nb2_tests': 184081, 'C_nodes': 701270, 'C_ts_dead_by_counts': 170382, 'C_type_solutions': 262850, 'F_W_ok': 1044, 'H_after_counts': 2667, 'psd_tests': 1386149, 'rej_budget': 340605, 'rej_psd': 704789, 'type_sols': 178845, 'type_sols_ok33': 99995}
+stage-C survivors (47 vertices): 0 in 0 pairs (tau, F), matchings []
+```
+
+Output of b0_summaryX0.py:
+
+```
+X_0-first route: 81 of 2667 orbit representatives processed; killed without W (no table on 45 vertices): 77; with at least one table left: 4
+   counters: {'x1_Z': 242948, 'x1_nodes': 296339, 'x2_fast_cert': 112042, 'x2_pairs_budget': 114906, 'x2_pairs_psd': 2864, 'x3_covers': 7556, 'x4_G': 39211, 'x5_budget': 3202, 'x5_psd': 8}
+   alive idx 6: matching #92, F = [4, 9], t = 4, tables left 1; stage C on this triple: completed, 0 survivors
+   alive idx 36: matching #248, F = [4, 7], t = 2, tables left 2; stage C on this triple: completed, 0 survivors
+   alive idx 63: matching #274, F = [4, 9], t = 4, tables left 4; stage C on this triple: completed, 0 survivors
+   alive idx 67: matching #277, F = [2, 14], t = 4, tables left 1; stage C on this triple: completed, 0 survivors
+   representatives processed by both routes: 81; killed by both: 77; killed by stage C only: 4; killed by X_0-first only: 0; by neither: 0
+```

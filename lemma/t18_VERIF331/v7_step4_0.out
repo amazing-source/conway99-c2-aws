@@ -1,0 +1,4 @@
+graph B0: Y-tables 23; W-orbit candidates 10920, passing budgets on 47 vertices 412; triples 52; graphs on 51 vertices passing all budgets 52; of them exactly PSD (M1 and M2) 0
+  distribution of the number of budget-valid 51-vertex graphs per Y-table: [(0, 12), (2, 5), (4, 2), (5, 2), (12, 2)]
+  type solutions carrying at least one budget-valid graph, summed over tables: 15
+  PSD decisions: {'float_rej_cert': 52, 'charpoly_calls': 0, 'float_acc': 0, 'charpoly_rej': 0, 'rej_by_M1': 52, 'rej_by_M2': 0}  seconds 0.7

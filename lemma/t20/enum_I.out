@@ -1,0 +1,28 @@
+case I: k=0, e=0; row 0 of B fixed to {1,2,3,4} (labelled count must be sum 10!/(126 |Aut|))
+  labelled structures found: 27720   (search nodes 1841249, complete True, 0.7 s)
+  isomorphism classes: 6   (354.3 s)
+  class 0: labelled 1800, |Aut| 16, expected labelled 1800, PSD-ok
+     minus edges: 01 02 03 04 17 18 19 25 26 29 34 36 38 45 47 58 59 67 68 79
+     M1: PSD exactly, rank 21 of 21
+     M2: PSD exactly, rank 20 of 21
+  class 1: labelled 7200, |Aut| 4, expected labelled 7200, PSD-ok
+     minus edges: 01 02 03 04 17 18 19 25 26 29 34 36 38 45 47 57 59 68 69 78
+     M1: PSD exactly, rank 21 of 21
+     M2: PSD exactly, rank 20 of 21
+  class 2: labelled 2880, |Aut| 10, expected labelled 2880, PSD-ok
+     minus edges: 01 02 03 04 17 18 19 25 26 29 34 36 38 45 47 57 59 67 68 89
+     M1: PSD exactly, rank 21 of 21
+     M2: PSD exactly, rank 20 of 21
+  class 3: labelled 7200, |Aut| 4, expected labelled 7200, PSD-ok
+     minus edges: 01 02 03 04 17 18 19 25 26 29 34 36 38 45 47 56 59 68 78 79
+     M1: PSD exactly, rank 21 of 21
+     M2: PSD exactly, rank 20 of 21
+  class 4: labelled 7200, |Aut| 4, expected labelled 7200, PSD-ok
+     minus edges: 01 02 03 04 17 18 19 24 26 29 34 35 38 46 56 57 58 69 78 79
+     M1: PSD exactly, rank 21 of 21
+     M2: PSD exactly, rank 20 of 21
+  class 5: labelled 1440, |Aut| 20, expected labelled 1440, PSD-ok
+     minus edges: 01 02 03 04 14 18 19 23 26 27 34 37 49 56 57 58 59 67 68 89
+     M1: PSD exactly, rank 21 of 21
+     M2: PSD exactly, rank 20 of 21
+written structures_I.json

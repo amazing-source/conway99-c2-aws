@@ -30,6 +30,13 @@ EDGES = {0: "01 02 03 04 14 17 18 23 26 28 35 37 45 46 56 57 68 78",
          2: "01 02 03 04 14 17 18 23 25 26 34 36 48 56 57 58 67 78"}
 s = int(sys.argv[1]); part = int(sys.argv[2]); nparts = int(sys.argv[3]); TL = float(sys.argv[4])
 T0 = time.time()
+# C_NOPSD=1 : budgets only at every level (does not terminate in practice: first triple > 200 s);
+# C_NOPSD=41: PSD kept on 33 and 39 vertices, budgets only on 41 and 47 vertices.
+# In both modes every budget-valid 47-vertex graph is classified: rank bound (rankbound.py) and PSD, separately.
+NOPSD = os.environ.get("C_NOPSD") in ("1", "41")
+PSD_LOW = os.environ.get("C_NOPSD") == "41"
+if NOPSD:
+    from rankbound import bareiss_det, rank_exact, odd_gram, even_part
 pc = int.bit_count
 Bm = [[0] * 9 for _ in range(9)]
 for e in EDGES[s].split():
@@ -42,7 +49,8 @@ assert [tuple(d) for d in td["DEF"]] == DEF and len(DEF) == 18
 REPS = td["reps"]
 ST = {"triples": 0, "triples_done": 0, "type_solutions": 0, "type_solutions_ok33": 0, "pair_types_tested": 0,
       "K_budget_ok": 0, "K_psd_ok": 0, "ts_with_all_pairs_alive": 0, "cover_nodes": 0, "pair41_tests": 0,
-      "pair41_ok": 0, "full47_tests": 0, "survivors": 0, "psd_cert": 0, "psd_exact_fallback": 0, "rej_budget_np": 0, "K_incremental_budget_missed": 0, "pair_types_dead_before_K": 0, "tauF_with_triples": 0}
+      "pair41_ok": 0, "full47_tests": 0, "survivors": 0, "psd_cert": 0, "psd_exact_fallback": 0, "rej_budget_np": 0, "K_incremental_budget_missed": 0, "budget_valid_47": 0, "dead_by_rank_bound": 0, "dead_by_odd_rank": 0,
+      "dead_by_even_rank": 0, "dead_by_psd": 0, "dead_by_psd_only": 0, "dead_by_rank_only": 0, "pair_types_dead_before_K": 0, "tauF_with_triples": 0}
 
 
 def psd_exact(M):
@@ -76,7 +84,7 @@ def to_np(rows, L):
     return np.array([[(rows[u] >> v) & 1 for v in L] for u in L], dtype=np.int64)
 
 
-def good(rows, L):
+def good(rows, L, force_psd=False):
     """budgets (integer matrix product) and PSD on the vertex list L; False only with an exact reason"""
     A = to_np(rows, L)
     n = len(L)
@@ -87,6 +95,8 @@ def good(rows, L):
         LAST[0] = 1
         return False
     LAST[0] = 2
+    if NOPSD and not force_psd:
+        return True
     I = np.eye(n, dtype=np.int64)
     for M in (27 * I - 9 * A + 1, 44 * I + 11 * A - 2):
         w, V = np.linalg.eigh(M.astype(np.float64))
@@ -203,7 +213,7 @@ def do_triple(ti, F, H):
             r = rows[:]
             for c, (i, j) in enumerate(ts):
                 put_pair(r, c, i, j)
-            if good(r, L19p + list(range(37, 47))):
+            if good(r, L19p + list(range(37, 47)), force_psd=PSD_LOW):
                 ok33.append(ts)
         ST["type_solutions_ok33"] += len(ok33)
         TS_CACHE[(ti, tuple(F))] = ok33
@@ -227,7 +237,7 @@ def do_triple(ti, F, H):
             if a == len(orbs):
                 if 2 <= len(K) <= 2 + slack:
                     ST["K_budget_ok"] += 1
-                    if good(r, L37 + [37, 38]):
+                    if good(r, L37 + [37, 38], force_psd=PSD_LOW):
                         ST["K_psd_ok"] += 1
                         res.append(frozenset(K))
                     elif LAST[0] == 1:
@@ -278,6 +288,24 @@ def do_triple(ti, F, H):
                     for k in chosen[c]:
                         link(r, 37 + 2 * c, 19 + k); link(r, 38 + 2 * c, 19 + tau[k])
                 if good(r, list(range(47))):
+                    if NOPSD:                                        # budget-valid on 47 vertices: classify
+                        ST["budget_valid_47"] += 1
+                        sig = [9 + i for i in range(9)] + list(range(9)) + [18] + [19 + tau[k] for k in range(18)]                               + [37 + (c ^ 1) for c in range(10)]
+                        orb = list(range(9)) + [19 + k for k in range(18) if k < tau[k]] + [37 + 2 * c for c in range(5)]
+                        det = bareiss_det(odd_gram(r, orb, sig))
+                        erank = rank_exact(even_part(r, orb, sig, fixed=18))
+                        psd_ok = good(r, list(range(47)), force_psd=True)
+                        dead_rank = (det != 0) or (erank > 22)
+                        ST["dead_by_odd_rank"] += det != 0
+                        ST["dead_by_even_rank"] += erank > 22
+                        ST["dead_by_rank_bound"] += dead_rank
+                        ST["dead_by_psd"] += not psd_ok
+                        ST["dead_by_psd_only"] += (not psd_ok) and not dead_rank
+                        ST["dead_by_rank_only"] += dead_rank and psd_ok
+                        if psd_ok and not dead_rank:
+                            ST["survivors"] += 1
+                            surv.append({"tau": ti, "F": list(F), "H": list(H), "types": [list(t) for t in ts], "rows": r})
+                        return
                     ST["survivors"] += 1
                     surv.append({"tau": ti, "F": list(F), "H": list(H), "types": [list(t) for t in ts], "rows": r})
                 return
@@ -329,4 +357,4 @@ print(f"c_mine B{s} part {part}/{nparts}: {len(mine)} triples in this part, done
 print("  totals:", ST)
 print("  survivors on 47 vertices:", len(survivors))
 json.dump({"s": s, "part": part, "nparts": nparts, "totals": ST, "timed_out": timed_out, "done": done,
-           "survivors": survivors}, open(os.path.join(HERE, f"c_mine_{s}_{part}of{nparts}{TAGX}.json"), "w"))
+           "survivors": survivors}, open(os.path.join(HERE, f"c_mine_{s}_{part}of{nparts}{TAGX}{('_nopsd' + os.environ['C_NOPSD']) if NOPSD else ''}.json"), "w"))

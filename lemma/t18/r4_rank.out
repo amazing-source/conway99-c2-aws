@@ -1,0 +1,13 @@
+﻿survivor matching #813, F = [2, 9]: 47 vertices, 23 non-fixed orbits
+   odd part : 23 x 23, exact rank 23 (bound 22), determinant 47684  ->  VIOLATION (rank > 22)
+   even part: 24 x 24, exact rank 23 (bound 22)  ->  VIOLATION (rank > 22)
+survivor matching #813, F = [3, 6]: 47 vertices, 23 non-fixed orbits
+   odd part : 23 x 23, exact rank 23 (bound 22), determinant 47684  ->  VIOLATION (rank > 22)
+   even part: 24 x 24, exact rank 23 (bound 22)  ->  VIOLATION (rank > 22)
+survivor matching #975, F = [1, 2]: 47 vertices, 23 non-fixed orbits
+   odd part : 23 x 23, exact rank 23 (bound 22), determinant 874944  ->  VIOLATION (rank > 22)
+   even part: 24 x 24, exact rank 23 (bound 22)  ->  VIOLATION (rank > 22)
+survivor matching #975, F = [3, 6]: 47 vertices, 23 non-fixed orbits
+   odd part : 23 x 23, exact rank 23 (bound 22), determinant 874944  ->  VIOLATION (rank > 22)
+   even part: 24 x 24, exact rank 23 (bound 22)  ->  VIOLATION (rank > 22)
+survivors examined: 4

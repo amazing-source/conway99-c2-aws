@@ -111,13 +111,20 @@ def x0_part(A39):
     X2 = list(range(21, 39))
     rows = set()
 
-    def ok(R):
+    # Search for the rows.  Pruning uses two NECESSARY conditions that are monotone in R (so they may be applied to
+    # partial rows): (1) q and u have at most 2 - [u ~ q] common neighbours inside R, for every u of Y1;
+    # (2) two vertices of R are both adjacent to q, so they must have room for one more common neighbour.
+    # A complete row is accepted only by the full budget test on Y1 u {q, sigma q} (41 vertices).
+    C39 = A39 @ A39
+    slack = 2 - A39 - C39
+    AX = [A39[:, v].copy() for v in range(39)]
+
+    def ok_full(R):
         return budgets_ok(extend(A39, [list(R), [sig(v) for v in R]]))
 
-    def rec(pos, R):
-        # R is budget-feasible as a partial row
+    def rec(pos, R, cnt):
         nap = sum(1 for v in R if v < 27)
-        if nap == 2 and len(R) >= 4:
+        if nap == 2 and len(R) >= 4 and ok_full(R):
             m1 = tuple(sorted(R)); m2 = tuple(sorted(sig(v) for v in R))
             rows.add(min(m1, m2))
         for t in range(pos, 18):
@@ -126,10 +133,13 @@ def x0_part(A39):
                 continue
             if sig(v) in R and dem[v] < 2:
                 continue
-            R2 = R + [v]
-            if ok(R2):
-                rec(t + 1, R2)
-    rec(0, [])
+            if any(slack[u, v] < 1 for u in R):
+                continue
+            c2 = cnt + AX[v]
+            if c2.max() > 2 or c2[v] > 1 or any(c2[u] > 1 for u in R):
+                continue
+            rec(t + 1, R + [v], c2)
+    rec(0, [], np.zeros(39, dtype=np.int64))
     rows = sorted(rows)
     CNT['rows'] += len(rows)
     good = []
@@ -138,28 +148,34 @@ def x0_part(A39):
             good.append(R)
     CNT['rows_psd'] += len(good)
 
-    def contrib(R):
-        c = [0] * 18
+    # Column sums.  A row meets A_p in two vertices of two different mate pairs (budget), and the orbit {q, sigma q}
+    # then covers these two mate pairs once each; every vertex of A_p needs 2, so the three orbits of X_0' use the
+    # three pairs of mate pairs {0,1}, {0,2}, {1,2}, one each.  The columns of X_2 \ A_p are coded in base 8
+    # (entries <= 2 per orbit, demands <= 5, no carry), so equality of codes is equality of column sums.
+    def klass(R):
+        return tuple(sorted({(v - 21) // 2 for v in R if v < 27}))
+
+    def code(R):
+        c = 0
         for v in R:
-            c[v - 21] += 1; c[sig(v) - 21] += 1
-        return tuple(c)
-    con = [contrib(R) for R in good]
-    demv = tuple(dem[v] for v in X2)
-    byc = {}
-    for k, c in enumerate(con):
-        byc.setdefault(c, []).append(k)
+            if v >= 27:
+                c += 8 ** (v - 27) + 8 ** (sig(v) - 27)
+        return c
+    demc = sum(dem[v] * 8 ** (v - 27) for v in range(27, 39))
+    cls = {(0, 1): [], (0, 2): [], (1, 2): []}
+    for R in good:
+        k = klass(R)
+        assert len(k) == 2
+        cls[k].append((code(R), R))
+    by12 = {}
+    for c12, R in cls[(1, 2)]:
+        by12.setdefault(c12, []).append(R)
     res = []
-    n = len(good)
-    for a in range(n):
-        for b in range(a + 1, n):
-            need = tuple(demv[t] - con[a][t] - con[b][t] for t in range(18))
-            if min(need) < 0:
-                continue
-            for c in byc.get(need, ()):
-                if c <= b:
-                    continue
+    for ca, Ra in cls[(0, 1)]:
+        for cb, Rb in cls[(0, 2)]:
+            for Rc in by12.get(demc - ca - cb, ()):
                 CNT['C_colsum'] += 1
-                tri = (good[a], good[b], good[c])
+                tri = (Ra, Rb, Rc)
                 deg = [len(R) - 4 for R in tri]
                 # counting identity (*) of A8 with p, z0, sigma z0 contributing 12:
                 #   sum_{X_2} a(a-1) + sum_{X_0'} (a-4)^2 <= 24   (recorded, not used to prune)
