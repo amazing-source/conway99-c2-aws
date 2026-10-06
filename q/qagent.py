@@ -287,10 +287,28 @@ class Agent:
             return False                                           # 404 (normal) or metadata unreachable
 
     # -- jobs
+    def start_defer(self, job):
+        """06/10, Q_DEFER=1: a stream job started with the package's own producer command (the one of run_jobs.start) piped into
+        q/par_consumer.py (1 shard, 1 worker), which sets aside the pairs the open lemmas T18 / T20 would exclude and sends every
+        other pair to the unchanged package consumer. Same result file name and same dict as run_jobs.start."""
+        lid, k, n = job["lid"], job["k"], job["n"]; tag = "%s_%d_%d" % (lid, k, n); root = self.pkg
+        res = os.path.join(self.out, tag + ".jsonl"); stats = os.path.join(self.out, tag + "_producer_stats.json")
+        U = os.path.join(root, "external_runs", "structures_3eceb4d", "U", "%s.json" % lid)
+        prod = subprocess.Popen([sys.executable, os.path.join(root, "c1", "code", "y_pairs_gamma.py"), U, os.path.join(root, job["gamma"]), stats,
+                                 "--from-plan", os.path.join(root, job["plan"]), "--chunk", "%d/%d" % (k, n), "--stream", "-", "--max-seconds", "86400"],
+                                env=self.envx, cwd=os.path.join(root, "c1", "code"), stdout=subprocess.PIPE,
+                                stderr=open(os.path.join(self.out, tag + "_producer.err"), "w"))
+        cons = subprocess.Popen([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "par_consumer.py"), root, lid, "-", res,
+                                 "4000000000", "1", "1"], env=self.envx, cwd=root, stdin=prod.stdout,
+                                stdout=open(os.path.join(self.out, tag + "_consumer.out"), "w"), stderr=subprocess.STDOUT)
+        prod.stdout.close()
+        return {"job": job, "tag": tag, "prod": prod, "cons": cons, "res": res, "t0": time.time()}
+
     def start_jobs(self, keys):
         for k in keys:
-            self.running[k] = self.RJ.start(self.jobs[k], self.out, self.envx)
-            self.log("start %s (est %.2f h)" % (k, self.est[k]))
+            job = self.jobs[k]; defer = env("Q_DEFER") == "1" and not job.get("kind")
+            self.running[k] = self.start_defer(job) if defer else self.RJ.start(job, self.out, self.envx)
+            self.log("start %s (est %.2f h)%s" % (k, self.est[k], " [deferral mode]" if defer else ""))
 
     def poll_jobs(self):
         for k, r in list(self.running.items()):
