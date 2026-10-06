@@ -1,0 +1,8 @@
+TIME LIMIT after survivor index 245
+PSD matrices used: 2 ; PSD on single rows of C: 0
+graph B0 part 0/1: survivors input 383, processed 246
+{'configs': 246, 'deg_gt4': 0, 'rows': 18723, 'rows_psd': 18723, 'C_colsum': 9318, 'CG': 12885, 'CG_budget': 6436, 'CG_psd': 10, 'wcand': 127020, 'wcand_ok': 598, 'wtriples': 24, 'w_budget': 24, 'w_psd': 0, 'final_pairs': 0, 'final_budget': 0, 'final_psd': 0}
+Y-tables (45 vertices, X_0 added) passing budgets + exact PSD: 10, in 8 configurations, 4 matchings
+dual order: Y1 u W (45 vertices) passing budgets + exact PSD: 0, in 0 configurations
+FINAL on 51 vertices: 0
+{'float_rej_cert': 9688, 'charpoly_calls': 1075, 'float_acc': 531, 'charpoly_rej': 0, 'rej_by_M1': 9298, 'rej_by_M2': 390} seconds 533.2

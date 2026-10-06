@@ -153,3 +153,44 @@ T18 is therefore still NOT proved, and nothing of this may be used as a filter i
 `lemma/t18/N3_REPORT.md`. An outside vertex z with d = 3 has at least 5 neighbours in X_0, so does its mate, and |X_0| = 9 - n_3 <= 7,
 so z and sigma z would have at least 3 common neighbours. Hence n_3 = 0 for the three graphs, by a five-line argument that uses
 neither B nor any computation. **What is left of T18 is the profile (2,2,1,1,1,1,1) at inf for B0, B1 and B2, and nothing else.**
+
+## 8. T18 at 23:45 local on 06/10: B2 closed, profile (3,3,1) re-verified, B1 down to a double-check, B0 open
+
+Profiles at p are written (h_2, h_1, h_0): (4,1,2) = (2,2,2,2,1,0,0), (3,3,1) = (2,2,2,1,1,1,0), (2,5,0) = (2,2,1,1,1,1,1).
+
+| Piece | Status | Where |
+|---|---|---|
+| n_3 = 0 | proved by hand | `lemma/t18/N3_REPORT.md` |
+| profile (4,1,2), all three graphs | proved by hand | section 6; `lemma/t18_VERIF331/REPORT.md` (A9 without the computed fact A6) |
+| profile (3,3,1), all three graphs | computed, **two independent implementations**, identical intermediate sets, 0 at 51 vertices | `lemma/t18_VERIF331/REPORT.md` |
+| profile (2,5,0), B2 | computed, stage 1 and B by two programs, stage C by three, 0 survivors | `lemma/t18_B2/REPORT.md` |
+| profile (2,5,0), B1 | 4 configurations on 47 vertices survive stage C; all 4 die by the rank bound and, separately, at stage D (two implementations). The stage-C list itself is being re-run by a second program | `lemma/t18/T18_REPORT.md` round 3-4, `lemma/t18_STRUCT/REPORT.md` |
+| profile (2,5,0), B0 | **open**, enumeration running | `lemma/t18_B0/` |
+
+- **Rank bound (proved, `lemma/t18_STRUCT/REPORT.md` P2).** 27I - 9A + J = 63 E_{-4} has rank 44, and sigma splits V_{-4} as
+  22 + 22 (trace(sigma) = 1 and trace(sigma A) = 14 give trace(sigma | V_{-4}) = 0). So the sigma-odd Gram 3I - A^ of any 23 orbits
+  is singular. This is an exact test on every determined set of 23 orbits or more; positive semidefiniteness does not see it
+  (smallest eigenvalue about 0.011 on the B1 survivors, determinants 47684 and 874944).
+- **Two matrices are needed in the text of the proof.** The counts of profile (3,3,1) are reproduced only when 11(4I + A) - 2J
+  (= 77 E_3) is tested next to 9(3I - A) + J; with the first matrix alone B1 keeps 10 configurations on 51 vertices.
+- The reduction of round 1 to the three graphs B0, B1, B2 (A0-A5) has been re-read in the main session but not re-derived by a
+  second agent.
+
+**T18 is not proved**: B0 is open, and the B1 stage-C list has one implementation so far. Nothing of it is in the engine.
+
+## 9. T20, round 1 (06/10, 23:35 local): reduced to nine configurations
+
+`lemma/t20/T20_REPORT.md`. Statement treated: no integer sigma-odd (-4)-eigenfunction of squared norm 20 (10 per side).
+- By hand: no value +-3 and no +-2 on an outer orbit, so the general case reduces to the root patterns; the pattern "one inner
+  orbit at +-2 and six outer" is impossible; k = d(p) in {0, 2, 4} with e(S+) <= 1 and (k, e) in {(0,0), (2,1), (4,0)}; for k = 4
+  the six words are the edges of K4 on the four inner orbits and all outside counts are forced.
+- Computed (two enumerators in agreement): k = 0 leaves six 4-regular graphs on 10 orbits, k = 2 one structure, k = 4 two.
+- **Open: these nine configurations.** All pass the exact semidefiniteness tests on S u {p}. T20 is not proved.
+
+## 10. Consequence for the run: deferral mode (user's decision, 06/10 evening)
+
+Until T18 and T20 are proved, the fleet can set aside the pairs they would exclude instead of searching them: `q/defer_consumer.py`
+(see its header). A pair is set aside only if the engine does not decide it within 10000 nodes AND U has a root r with
+(r,y1)^2 + (r,y2)^2 = 5 (T18) or 4 (T20). It is recorded as "DEFERRED (pending T18 / T20)", never as excluded; the record lists
+the positions of these pairs in the producer stream and has chunk_done false. If a lemma is not proved, exactly these pairs are
+re-run with the plain consumer (`q/tools/laptop_2026-10-06/defer_test.py` does this for validation).

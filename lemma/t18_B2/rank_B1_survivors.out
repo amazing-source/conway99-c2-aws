@@ -1,0 +1,4 @@
+B1 matching #813, F = [2, 9]: odd Gram 23 x 23: det = 47684, rank 23 (bound 22); even part 24 x 24: rank 23 (bound 22)
+B1 matching #813, F = [3, 6]: odd Gram 23 x 23: det = 47684, rank 23 (bound 22); even part 24 x 24: rank 23 (bound 22)
+B1 matching #975, F = [1, 2]: odd Gram 23 x 23: det = 874944, rank 23 (bound 22); even part 24 x 24: rank 23 (bound 22)
+B1 matching #975, F = [3, 6]: odd Gram 23 x 23: det = 874944, rank 23 (bound 22); even part 24 x 24: rank 23 (bound 22)

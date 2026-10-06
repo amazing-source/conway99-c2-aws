@@ -71,17 +71,18 @@ class Border:
             pos = w > 1e-6
             self.P.append((V[:, pos] / w[pos]) @ V[:, pos].T)
             self.K.append(V[:, ~pos])
-        self.coef = [(-9, 1, 27), (11, -2, 44)]          # off-diagonal = alpha * A + beta, diagonal = gamma
 
-    def certificate(self, a1, a2):
-        """a1, a2 = 0/1 adjacency vectors of z, sigma z on Y (z not adjacent to sigma z).  True iff an exact certificate is found."""
+    def certificate(self, A2):
+        """A2 = adjacency matrix (integers) of Y u {z, sigma z}, the two new vertices last.
+        True iff an integer x with x^T M x < 0 is found, M = 9(3I-A2)+J or 11(4I+A2)-2J built from A2 itself."""
         if not self.usable:
             return False
         n = self.n
-        for m in (0, 1):
-            al, be, ga = self.coef[m]
-            C = np.empty((n, 2)); C[:, 0] = al * a1 + be; C[:, 1] = al * a2 + be
-            D = np.array([[ga, be], [be, ga]], dtype=np.float64)
+        I2 = np.eye(n + 2, dtype=np.int64)
+        for m, Mi in enumerate((27 * I2 - 9 * A2 + 1, 44 * I2 + 11 * A2 - 2)):
+            assert (Mi[:n, :n] == self.M[m]).all()
+            C = Mi[:n, n:].astype(np.float64)
+            D = Mi[n:, n:].astype(np.float64)
             PC = self.P[m] @ C
             S = D - C.T @ PC
             Kc = self.K[m].T @ C                            # kernel components of the two columns
@@ -95,19 +96,11 @@ class Border:
                 gk = Kc @ y
                 g2 = float(gk @ gk)
                 if g2 > 1e-8:
-                    sgn = (float(y @ S @ y) if float(y @ S @ y) > 0 else 0.0) + 5.0
-                    trials.append(np.concatenate((-PC @ y - (sgn / g2) * (self.K[m] @ gk), y)))
-            if not trials:
-                continue
-            Mi = np.zeros((n + 2, n + 2), dtype=np.int64)
-            Mi[:n, :n] = self.M[m]
-            Mi[:n, n] = Mi[n, :n] = al * a1 + be
-            Mi[:n, n + 1] = Mi[n + 1, :n] = al * a2 + be
-            Mi[n, n] = Mi[n + 1, n + 1] = ga
-            Mi[n, n + 1] = Mi[n + 1, n] = be
+                    q0 = float(y @ S @ y)
+                    trials.append(np.concatenate((-PC @ y - ((max(q0, 0.0) + 5.0) / g2) * (self.K[m] @ gk), y)))
             for x in trials:
                 x = x / np.abs(x).max()
-                for sc in (30, 1000, 10 ** 5):               # |x_i| <= 10^5, |M_ij| <= 44, n <= 39: exact in int64
+                for sc in (30, 1000, 10 ** 5):               # |x_i| <= 10^5, |M_ij| <= 44, n + 2 <= 39: exact in int64
                     xi = np.rint(sc * x).astype(np.int64)
                     if int(xi @ (Mi @ xi)) < 0:
                         return True
@@ -196,7 +189,7 @@ def do_triple(e):
         if not budgets_ok(A2):
             continue
         st["x2_pairs_budget"] += 1
-        if FAST and border.certificate(A2[:37, 37], A2[:37, 38]):
+        if FAST and border.certificate(A2):
             st["x2_fast_cert"] += 1
             continue
         if psd_violated(A2):

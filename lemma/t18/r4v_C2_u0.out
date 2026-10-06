@@ -1,0 +1,2 @@
+verifier stage C (v2), B1 part 0/1: triples in this part 27, skipped 0, completed now 10, timed_out True, 470s
+    {'triples': 10, 'type_solutions': 180, 'type_solutions_ok33': 94, 'option_tests': 4830, 'FS_candidates': 1718, 'FS_partial_budget_cut': 3177, 'FS_kept': 1314, 'ts_dead_empty_FS': 827, 'nodes': 259252, 'rej_budget': 53423, 'rej_odd_psd': 75234, 'complete': 2, 'complete_rej_full': 2, 'survivors': 0, 'ambiguous': 0}

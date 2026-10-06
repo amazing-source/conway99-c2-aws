@@ -1,0 +1,30 @@
+stage C on orbit representatives: 2667 in file, 1056 already done, 830 for this process
+  [2s] tau #367 done; C_survivors so far 0; C_nodes 1430
+  [36s] tau #368 done; C_survivors so far 0; C_nodes 10290
+  [93s] tau #369 done; C_survivors so far 0; C_nodes 20191
+  [134s] tau #370 done; C_survivors so far 0; C_nodes 26578
+  [140s] tau #372 done; C_survivors so far 0; C_nodes 26971
+  [162s] tau #378 done; C_survivors so far 0; C_nodes 30107
+  [163s] tau #383 done; C_survivors so far 0; C_nodes 30144
+  [263s] tau #384 done; C_survivors so far 0; C_nodes 33854
+  [266s] tau #386 done; C_survivors so far 0; C_nodes 33972
+  [268s] tau #388 done; C_survivors so far 0; C_nodes 34181
+  [275s] tau #390 done; C_survivors so far 0; C_nodes 34274
+  [283s] tau #391 done; C_survivors so far 0; C_nodes 34473
+  [314s] tau #392 done; C_survivors so far 0; C_nodes 37563
+  [318s] tau #394 done; C_survivors so far 0; C_nodes 37728
+  [322s] tau #395 done; C_survivors so far 0; C_nodes 37811
+  [323s] tau #396 done; C_survivors so far 0; C_nodes 37876
+  [338s] tau #397 done; C_survivors so far 0; C_nodes 38536
+  [344s] tau #398 done; C_survivors so far 0; C_nodes 38665
+  [361s] tau #399 done; C_survivors so far 0; C_nodes 39747
+  [364s] tau #402 done; C_survivors so far 0; C_nodes 39801
+  [365s] tau #403 done; C_survivors so far 0; C_nodes 39818
+  [400s] tau #404 done; C_survivors so far 0; C_nodes 41745
+  [409s] tau #405 done; C_survivors so far 0; C_nodes 42445
+  [445s] tau #406 done; C_survivors so far 0; C_nodes 46323
+  [462s] tau #407 done; C_survivors so far 0; C_nodes 47514
+  [491s] tau #408 done; C_survivors so far 0; C_nodes 52938
+(i) e=0 #0 profile (2,5,0) stage C on representatives, part 1/2, tag r8: time 560.7s timed_out=True
+  totals (include the work on a triple cut by the time limit): {'tau': 41, 'tau_done': 26, 'F': 126, 'F_types_ok': 126, 'F_base_ok': 126, 'B_nodes': 0, 'H_complete': 233, 'H_after_counts': 233, 'type_sols': 22290, 'type_sols_ok33': 11947, 'F_W_ok': 126, 'C_nb1_tests': 76846, 'C_nb2_tests': 16256, 'C_type_solutions': 22392, 'C_ts_dead_by_counts': 16397, 'C_forced_tests': 38108, 'C_nodes': 60373, 'C_survivors': 0, 'H_with_C_survivor': 0, 'rej_budget': 28312, 'rej_psd': 61784, 'psd_tests': 122387, 'psd_float_neg_no_cert': 0, 'C_memo_hits': 59071}
+  PSD certificates written: 1000  survivors: 0

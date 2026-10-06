@@ -1,9 +1,10 @@
-"""Validation of the deferral mode of q/par_consumer.py (Q_DEFER=1) on real jobs, against the record the same job produced on AWS
-with the unsplit v10 consumer:
-  (a) n_pairs, sha256, producer, chunk_ok identical; chunk_done false as soon as a pair is deferred;
-  (b) every verdict count of the deferral record <= the AWS count;
-  (c) the deferred lines, fed alone to the plain package consumer with the production limit, give a record whose verdict counts,
-      added to the deferral record's (DEFERRED verdicts removed), are exactly the AWS verdict counts; same for twin_deferred.
+"""Validation of the deferral mode (Q_DEFER=1: q/par_consumer.py -> q/defer_consumer.py) on real jobs, against the record the
+same job produced on AWS with the unsplit v10 consumer:
+  (a) n_pairs, sha256, producer, chunk_ok, code_sha identical; chunk_done false as soon as a pair is deferred;
+  (b) every verdict that is not a search verdict (swap, twin, char-vector trap, dual minimum 9/7, ...) has exactly the AWS count,
+      twin_deferred is identical, and every search verdict count is <= the AWS count;
+  (c) the deferred lines, fed alone to the plain package consumer with the production limit, are all decided by a search, and
+      their verdict counts added to the deferral record's (DEFERRED verdicts removed) are exactly the AWS verdict counts.
   <venv python> defer_test.py <repo> <pkg> <key> [<key> ...]"""
 import sys, os, json, subprocess, io, zipfile, time, collections, hashlib
 REPO, PKG, KEYS = os.path.abspath(sys.argv[1]), os.path.abspath(sys.argv[2]), sys.argv[3:]
@@ -62,6 +63,10 @@ for key in KEYS:
     gv = {k_: v for k_, v in got["verdicts"].items() if not k_.startswith("DEFERRED")}
     check(sum(v for k_, v in got["verdicts"].items() if k_.startswith("DEFERRED")) == len(d18) + len(d20), "DEFERRED verdict counts = lengths of the index lists")
     check(all(gv.get(k_, 0) <= a["verdicts"].get(k_, 0) for k_ in gv), "every verdict count <= the AWS count")
+    S_ = lambda k_: "stage 1" in k_ or "star" in k_ or "Lemma Z" in k_
+    check(all(gv.get(k_, 0) == c for k_, c in a["verdicts"].items() if not S_(k_)), "every non-search verdict has exactly the AWS count")
+    check(got.get("twin_deferred", {}) == a.get("twin_deferred", {}), "twin_deferred identical to the AWS record")
+    check(not got["not_excluded"], "not_excluded holds no pair besides the deferred ones (moved to the index lists)")
     lines = [l.rstrip(b"\r\n") for l in open(stream, "rb") if l.strip()]
     recs = [json.loads(l) for l in lines]
     info = [l for l, r_ in zip(lines, recs) if not r_.get("end") and ("o" not in r_ or "y1" not in r_)]
@@ -85,6 +90,7 @@ for key in KEYS:
     tot = collections.Counter(gv); tot.update(b["verdicts"])
     check(b["chunk_ok"] and b["n_pairs"] == len(sel), "deferred pairs re-run alone: %d pairs, chunk_ok %s, %.0f s" % (b["n_pairs"], b["chunk_ok"], time.time() - t))
     print("        their verdicts: %s" % b["verdicts"])
+    check(all(S_(k_) for k_ in b["verdicts"]), "every deferred pair is decided by a search in the full run")
     check(dict(tot) == a["verdicts"], "deferral record + deferred pairs re-run = AWS verdicts exactly")
     td_ = collections.Counter(got.get("twin_deferred", {})); td_.update(b.get("twin_deferred", {}))
     check(dict(td_) == a.get("twin_deferred", {}), "twin_deferred adds up to the AWS record")

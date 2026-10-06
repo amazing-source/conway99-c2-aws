@@ -1,0 +1,5 @@
+matching #813, F = [2, 9]: {'E-4': {'odd_dim': 23, 'odd_rank': 23, 'even_dim': 24, 'even_rank': 23}, 'E3': {'odd_dim': 23, 'odd_rank': 22, 'even_dim': 24, 'even_rank': 23}}; violates the rank bound: True
+matching #813, F = [3, 6]: {'E-4': {'odd_dim': 23, 'odd_rank': 23, 'even_dim': 24, 'even_rank': 23}, 'E3': {'odd_dim': 23, 'odd_rank': 22, 'even_dim': 24, 'even_rank': 23}}; violates the rank bound: True
+matching #975, F = [1, 2]: {'E-4': {'odd_dim': 23, 'odd_rank': 23, 'even_dim': 24, 'even_rank': 23}, 'E3': {'odd_dim': 23, 'odd_rank': 22, 'even_dim': 24, 'even_rank': 23}}; violates the rank bound: True
+matching #975, F = [3, 6]: {'E-4': {'odd_dim': 23, 'odd_rank': 23, 'even_dim': 24, 'even_rank': 23}, 'E3': {'odd_dim': 23, 'odd_rank': 22, 'even_dim': 24, 'even_rank': 23}}; violates the rank bound: True
+stage-C survivors examined: 4; killed by the rank bound: 4

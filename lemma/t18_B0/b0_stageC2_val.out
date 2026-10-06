@@ -1,0 +1,5 @@
+stage C on orbit representatives: 2667 in file, 1056 already done, 32 for this process
+  [159s] tau #360 done; C_survivors so far 0; C_nodes 18019
+(i) e=0 #0 profile (2,5,0) stage C on representatives, part 0/1, tag val: time 158.8s timed_out=False
+  totals (include the work on a triple cut by the time limit): {'tau': 1, 'tau_done': 1, 'F': 2, 'F_types_ok': 2, 'F_base_ok': 2, 'B_nodes': 0, 'H_complete': 32, 'H_after_counts': 32, 'type_sols': 255, 'type_sols_ok33': 177, 'F_W_ok': 2, 'C_nb1_tests': 10472, 'C_nb2_tests': 2659, 'C_type_solutions': 3283, 'C_ts_dead_by_counts': 1847, 'C_forced_tests': 5236, 'C_nodes': 18019, 'C_survivors': 0, 'H_with_C_survivor': 0, 'rej_budget': 448, 'rej_psd': 17049, 'psd_tests': 19024, 'psd_float_neg_no_cert': 0, 'C_memo_hits': 17181}
+  PSD certificates written: 0  survivors: 0

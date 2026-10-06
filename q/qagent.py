@@ -289,8 +289,9 @@ class Agent:
     # -- jobs
     def start_defer(self, job):
         """06/10, Q_DEFER=1: a stream job started with the package's own producer command (the one of run_jobs.start) piped into
-        q/par_consumer.py (1 shard, 1 worker), which sets aside the pairs the open lemmas T18 / T20 would exclude and sends every
-        other pair to the unchanged package consumer. Same result file name and same dict as run_jobs.start."""
+        q/par_consumer.py (1 shard, 1 worker), which runs the package consumer through q/defer_consumer.py: the long searches of
+        the pairs the open lemmas T18 / T20 would exclude are set aside (verdict DEFERRED, never an exclusion), everything else
+        is the unchanged consumer. Same result file name and same dict as run_jobs.start."""
         lid, k, n = job["lid"], job["k"], job["n"]; tag = "%s_%d_%d" % (lid, k, n); root = self.pkg
         res = os.path.join(self.out, tag + ".jsonl"); stats = os.path.join(self.out, tag + "_producer_stats.json")
         U = os.path.join(root, "external_runs", "structures_3eceb4d", "U", "%s.json" % lid)
@@ -302,7 +303,7 @@ class Agent:
                                  "4000000000", "1", "1"], env=self.envx, cwd=root, stdin=prod.stdout,
                                 stdout=open(os.path.join(self.out, tag + "_consumer.out"), "w"), stderr=subprocess.STDOUT)
         prod.stdout.close()
-        return {"job": job, "tag": tag, "prod": prod, "cons": cons, "res": res, "t0": time.time()}
+        return {"job": job, "tag": tag, "prod": prod, "cons": cons, "res": res, "t0": time.time(), "defer": True}
 
     def start_jobs(self, keys):
         for k in keys:
@@ -318,7 +319,9 @@ class Agent:
             if self.RJ.done_already(self.out, self.jobs[k]):
                 os.makedirs(os.path.join(self.pd, "results"), exist_ok=True)
                 shutil.copy(r["res"], os.path.join(self.pd, "results", os.path.basename(r["res"])))
-                self.done_here.append(k); self.unpushed.append({"t": round(time.time()), "m": self.name, "op": "done", "jobs": [k]})
+                ev = {"t": round(time.time()), "m": self.name, "op": "done", "jobs": [k]}
+                if r.get("defer"): ev["defer"] = 1                   # deferral record: chunk_ok, but pairs may be set aside
+                self.done_here.append(k); self.unpushed.append(ev)
                 self.log("done %s in %.0f s" % (k, time.time() - r["t0"]))
             else:
                 self.failed_here.append(k); self.unpushed.append({"t": round(time.time()), "m": self.name, "op": "fail", "jobs": [k]})

@@ -1,0 +1,7 @@
+PSD matrices used: 2 ; PSD on single rows of C: 0
+graph B0 part 0/2: survivors input 383, processed 192
+{'configs': 192, 'deg_gt4': 0, 'rows': 12776, 'rows_psd': 12776, 'C_colsum': 6473, 'C_colsum_star': 6473, 'CG': 8410, 'CG_star': 8410, 'CG_budget': 4809, 'CG_budget_star': 4809, 'CG_psd': 13, 'CG_psd_star': 13, 'wcand': 94860, 'wcand_ok': 326, 'wtriples': 0, 'w_budget': 0, 'w_psd': 0, 'final_pairs': 0, 'final_budget': 0, 'final_psd': 0}
+Y-tables (45 vertices, X_0 added) passing budgets + exact PSD: 13, in 12 configurations, 6 matchings
+dual order: Y1 u W (45 vertices) passing budgets + exact PSD: 0, in 0 configurations
+FINAL on 51 vertices: 0
+{'float_rej_cert': 7410, 'charpoly_calls': 597, 'float_acc': 482, 'charpoly_rej': 0, 'rej_by_M1': 7009, 'rej_by_M2': 401} seconds 65.7

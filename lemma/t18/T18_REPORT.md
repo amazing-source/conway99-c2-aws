@@ -497,3 +497,124 @@ completed by the enumerator at stages B and C, and no further survivor appeared.
 Corrections to the text above, which was written while the runs were in progress: in A15 and in "End of round 3" the
 coverage figures (968, then 1080 of 1259) are intermediate; item B.1.b (matchings not enumerated) is closed; in the
 table "Where T18 stands", the B1 / (2,5,0) cell should read "open: exactly 4 survivors on 47 vertices".
+
+---
+
+# Round 4 (2026-10-06, 22:27 - 23:55): B1 only
+
+Scope (coordinator, 22:31): B1 only; B2, B0, n_3 > 0 and profile (3,3,1) are handled by other agents; at most 2 processes.
+
+**Status after round 4.** For B1 the last open profile (2,5,0) is now excluded: the X_0 stage kills each of the 4 survivors,
+with two independent programs agreeing (A19). What is NOT double-checked for B1 is listed in the final table: stage C of
+profile (2,5,0) (second implementation only partial, A20) and the whole of profile (3,3,1) (one implementation, round 2).
+So "B1 is excluded" holds at the level "computed", not "proved"; T18 itself also needs B0 and B2 (other agents).
+
+## R4-0. Checks of what I was given, and housekeeping
+- `N3_REPORT.md` (n_3 = 0 by hand; a_0 <= 5; a_2 <= 3 on X_2, <= 6 on X_1, <= 8 on X_0 \ p): I read Lemma 1, Lemma 2, Theorem N3
+  and the by-product; they agree with A8 and I found no error. Consequences for my text: A6 "d(a_c) <= 2" and "B1 has no
+  d = 3 vertex" no longer depend on `rows.py`. My stage B used the weaker cap a_2 <= 4 on X_2 (a superset; harmless). The
+  X_0 stage below did not need the new bounds: every candidate vertex of X_0 already fails.
+- Before the scope change I had started B2: the verifier's stage B for B2 is complete (`r4v_B250_2.out`,
+  `r3v_B250_2_0of1.json`: 196 triples (tau, F, H) for the 528 matchings, one implementation); the enumerator run on B2
+  was stopped by me after 160 of 528 matchings and left no result file (`r4_B2_BC.out` is a partial log). Not my case any more.
+- Other agents now run scripts with the same names on this machine. From 22:34 on I only wait for / stop processes by
+  their PID. Files in this folder not listed in my "Files" sections are not mine.
+
+## A (round 4)
+
+### A18 (by hand). Forced numbers of the X_0 stage (profile (2,5,0), n_3 = 0)
+Let Y47 = S u {p} u X_2 u W be a stage-C survivor and z in X_0 \ {p}. From A8 and A14:
+z has no neighbour in S u {p} and is not adjacent to its mate; a_2(z) >= 4; |N(z) n A_p| + |N(z) n W| = 2;
+every s in X_2 has a_0(s) = a_2(s) + 2 neighbours in X_0 (p is one of them iff s in A_p); every w in W has
+a_0(w) = a_2(w) - 1 neighbours in X_0, p included; so a vertex of W with a_2 = 2 has no neighbour in X_0 \ {p}.
+Hence Y47 u {z} (48 vertices) and Y47 u {z, sigma z} (49 vertices) are completely determined by Z = N(z) n (X_2 u W)
+(sigma z sees the image of Z), and |X_0| = 9 requires 8 such vertices.
+
+A general remark used below. If a completely determined set Y carries M = 9(3I-A)+J with M u = 0, then for every
+vertex z outside Y:  9 * sum_{v ~ z, v in Y} u_v = sum_{v in Y} u_v   (a PSD matrix kills the vectors on which its
+quadratic form vanishes). For Y containing N[p] the vector u = 4 e_p + 1_{N(p)} is always in the kernel
+((3I - A + J/9) u = 0 in the whole graph), and the condition is just "z has 2 neighbours in N(p)".
+
+### A19 (computed, TWO independent programs). The 4 survivors of B1 are impossible
+For each of the 4 stage-C survivors, NO vertex of X_0 \ {p} can be added:
+
+| survivor | t | candidate mate pairs {z, sigma z} passing the forced numbers and the budgets on 49 vertices | with no PSD violation |
+|---|---|---|---|
+| #813, F = [2,9] | 4 | 678 | **0** |
+| #813, F = [3,6] | 4 | 678 | **0** |
+| #975, F = [1,2] | 2 | 846 | **0** |
+| #975, F = [3,6] | 2 | 846 | **0** |
+
+- Program 1, `r4_stageD.py` (`r4_stageD_B1.out`): 6756 / 7868 generator nodes, 1712 / 2176 raw sets, 678 / 846 pass the budgets,
+  every one is rejected by an integer vector x with x^T M x < 0; the 3048 certificates (one per candidate) are saved in
+  `r4cert_stageD_B1.jsonl` and were re-checked by `r3_verify.py certs`: 3048 checked, 0 invalid, all on 49 vertices.
+  (The later steps of the script - exact cover by 4 pairs, G = A[X_0], the 55-vertex test - were never reached.)
+- Program 2, `r4_verifyD.py` (`r4_verifyD.out`; no shared code, own generator in decreasing order with the budgets
+  recounted on 48 vertices after each addition): 1356 / 1356 / 1692 / 1692 oriented sets Z with an admissible mate
+  (= 2 x 678, 2 x 846: the two generators agree); the budgets hold on all the 49-vertex graphs; an exact PSD violation
+  is found for every one of them, **already on the 48 vertices Y47 u {z}**; 0 ambiguous floating-point cases.
+  It also recomputes exactly (rational elimination) that M = 9(3I-A)+J on Y47 is PSD of rank 46 with kernel spanned by
+  4 e_p + 1_{N(p)}: the kernel condition of A18 is therefore vacuous here, and the rejections are genuine eigenvalue
+  violations, each with its certificate.
+
+> So for B1 with profile (2,5,0), no configuration survives: stage 1 (2 implementations) -> 4977 triples at stage B
+> (2 implementations, identical sets) -> 4 configurations at stage C (1 complete implementation; second one partial,
+> A20) -> 0 at the X_0 stage (2 implementations).
+
+### A19b (rank test; coordinator's argument, checked by my own exact computation). A second, simpler death of the 4 survivors
+Argument (structural agent, `lemma\t18_STRUCT\REPORT.md` section 2; I re-derived the two facts it needs): 27I - 9A + J =
+63 E_{-4} has rank 44; trace(sigma) = 1 and trace(sigma A) = 14 give trace 0 of sigma on V_3 and on V_{-4}, so sigma
+splits V_{-4} as 22 + 22. Hence, for a sigma-invariant completely determined vertex set:
+- the odd orbit matrix G_odd = 3I - A[R,R] + A[R, sigma R] (R = one vertex per non-fixed orbit) has rank <= 22;
+- the even matrix (e_p and the e_v + e_{sigma v}) has rank <= 22.
+A stage-C survivor has 47 vertices = p + 23 orbits. My script `r4_rank.py` (exact: rational elimination for the ranks,
+fraction-free Bareiss for the determinant; no shared code; `r4_rank.out`) gives for the four survivors:
+
+| survivor | odd part 23 x 23: rank, determinant | even part 24 x 24: rank |
+|---|---|---|
+| #813, F = [2,9] and F = [3,6] | 23, det = 47684 | 23 |
+| #975, F = [1,2] and F = [3,6] | 23, det = 874944 | 23 |
+
+Both exceed the bound 22: the four configurations are impossible. Same values as the structural agent's.
+So the 4 survivors now die three ways: X_0 stage (A19, two programs), odd rank, even rank.
+
+### A20 (computed). Stage C of profile (2,5,0), B1: second implementations
+Three independent programs were used besides the enumerator `r3_p250.py` (none shares code with it; all start from the
+verifier's own stage-B triples):
+- v0 = `r3_verify.py C250` (dual order: X_2 orbit by X_2 orbit, full tests): correct but far too slow
+  (about 10^6 nodes per 10 minutes; 117 triples of #813 / #975 in four runs);
+- v1 = `r4_verifyC.py` (dual order, sigma-odd tests): too slow as well (29 triples in 620 s);
+- v2 = `r4_verifyC2.py` (per W vertex: option table on 27 vertices, list FS of admissible N(w) n X_2 on 39 vertices; then
+  exact cover of the requirements pair by pair; complete configurations get the full test). With sigma-odd tests in the
+  cover stage it explodes on some triples (hundreds of complete configurations rejected only at the end); with the full
+  test at every cover node (R4V_FULL=1) it is fast: 16 triples of #975 in 11 s.
+
+Result on the two matchings that carry the survivors (`r4_compareC_final.out`):
+
+| | |
+|---|---|
+| triples (tau, F, H) of #813 and #975 | 170 |
+| completed by at least one second implementation | **170** (v0: 117, v1: 29, v2: 110) |
+| enumerator survivors found again | 4 of 4: (813,[2,9]) by v0, v1, v2; (813,[3,6]) by v0; (975,[1,2]) by v0, v2; (975,[3,6]) by v2 |
+| survivors of a second implementation unknown to the enumerator | 0 |
+| enumerator survivors missed by an implementation that completed their triple | 0 |
+
+So on #813 and #975 "exactly these 4 configurations survive stage C" is a two-implementation fact.
+On the other 1257 matchings (4807 triples) the enumerator found no survivor; the second implementation v2 was started on
+all 4977 triples at 23:35 and its coverage at the end of the session is given in "Final lines (round 4)".
+
+### A21 (computed). The rank test on profile (3,3,1), B1 (coordinator's point 3)
+In profile (3,3,1), Y = S u X_0 u X_2 has 22 non-fixed orbits, so the rank bound says nothing on Y; Y plus ONE mate pair
+{w, sigma w} of W has 23 orbits and is completely determined (A10), so its odd matrix must be singular and its even matrix
+(24 generators) must have rank <= 22. `r4_rank331.py` (`r4_rank331.out`; exact Bareiss determinant, exact ranks) on all the
+Y-tables saved in round 2, with every type and every pair of X_2-neighbours allowed by the budgets on the 47 vertices:
+
+| tables | number | candidates (type, neighbours) | pass budgets | odd matrix singular | both rank conditions | tables dead at the first pair: by rank / by PSD |
+|---|---|---|---|---|---|---|
+| passing PSD on Y (the complete list for B1, A11) | 164 | 295200 | 16334 | 2 | **0** | **164** / 162 |
+| rejected by PSD on Y (saved samples only) | 15 | 27000 | 583 | 0 | **0** | **15** / 15 |
+
+So the rank test alone kills every one of the 164 tables as soon as one pair of W is added (round 2 needed all three pairs
+and PSD for 2 of them): for B1, step 4 of A11 ("Y u W: 0 left") is confirmed by a different test in different code.
+It would also have made the PSD test on Y unnecessary on the 15 rejected samples; the 27203 - 164 - 15 other budget-valid
+Y-tables were not saved, so this is not a re-proof of profile (3,3,1), only of its last step.

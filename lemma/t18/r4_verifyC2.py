@@ -26,7 +26,8 @@ EDGES = {0: "01 02 03 04 14 17 18 23 26 28 35 37 45 46 56 57 68 78",
          1: "01 02 03 04 14 17 18 23 26 28 35 36 45 47 56 57 68 78",
          2: "01 02 03 04 14 17 18 23 25 26 34 36 48 56 57 58 67 78"}
 T0 = time.time()
-ST = {"triples": 0, "type_solutions": 0, "type_solutions_ok33": 0, "option_tests": 0, "FS_candidates": 0, "FS_kept": 0,
+FULL = os.environ.get("R4V_FULL") == "1"
+ST = {"triples": 0, "type_solutions": 0, "type_solutions_ok33": 0, "option_tests": 0, "FS_candidates": 0, "FS_partial_budget_cut": 0, "FS_kept": 0,
       "ts_dead_empty_FS": 0, "nodes": 0, "rej_budget": 0, "rej_odd_psd": 0, "complete": 0, "complete_rej_full": 0,
       "survivors": 0, "ambiguous": 0}
 
@@ -80,14 +81,26 @@ def main():
         items = [e for e in items if e["tau"] in keep]
         tag += "_t" + os.environ["R4V_TAUS"].split(",")[0]
     mine = [e for n_item, e in enumerate(items) if n_item % nparts == part]
+    idx_list = None
+    if os.environ.get("R4V_IDX"):
+        idx_list = [int(x) for x in os.environ["R4V_IDX"].split(",")]
+        mine = [items[q] for q in idx_list]
+        tag += f"_idx{idx_list[0]}"
     skip = int(os.environ.get("R4V_SKIP", "0"))
     if skip:
         tag += f"_skip{skip}"
+    if FULL:
+        tag += "_full"
     single_cache = {}
     ts_cache = {}
     survivors = []
     done = 0
     timed_out = False
+    outname = None
+    def dump():
+        json.dump({"s": s, "part": part, "nparts": nparts, "n_items": len(items), "in_part": len(mine), "skip": skip,
+                   "idx_list": idx_list, "completed": done, "timed_out": timed_out, "stats": ST, "survivors": survivors},
+                  open(os.path.join(HERE, outname), "w"))
 
     def single_ok(i, j):
         if (i, j) not in single_cache:
@@ -98,7 +111,10 @@ def main():
             single_cache[(i, j)] = full_ok(A, list(range(21)))
         return single_cache[(i, j)]
 
+    outname = f"r4v_C2_{s}_{part}of{nparts}{tag}.json"
     for e in mine[skip:]:
+        if done:
+            dump()
         if time.time() - T0 > tl:
             timed_out = True
             break
@@ -228,17 +244,33 @@ def main():
                             if len(N) + remaining >= 2:
                                 rec_n(a + 1, N)
                         elif len(N) < 2 + slack:
-                            rec_n(a + 1, N + [k if name == "+" else tk])
+                            N2 = N + [k if name == "+" else tk]
+                            A2 = A.copy()
+                            put_W(A2, 0, i, j)
+                            for q in N2:
+                                A2[37, 19 + q] = A2[19 + q, 37] = 1
+                                A2[38, 19 + tau[q]] = A2[19 + tau[q], 38] = 1
+                            sub = A2[:39, :39]
+                            Cn = sub @ sub
+                            np.fill_diagonal(Cn, 0)
+                            if (Cn > 2 - sub).any():
+                                ST["FS_partial_budget_cut"] += 1
+                                continue
+                            rec_n(a + 1, N2)
                 rec_n(0, [])
             ST["FS_kept"] += len(out)
             fs_cache[(i, j)] = out
             return out
 
         for ts in ts_cache[key]:
-            lists = [FS(i, j) for (i, j) in ts]
-            if any(not L for L in lists):
+            dead = False
+            for c in sorted(range(5), key=lambda c: ts[c] not in fs_cache):
+                if not FS(*ts[c]):
+                    dead = True; break
+            if dead:
                 ST["ts_dead_empty_FS"] += 1
                 continue
+            lists = [FS(i, j) for (i, j) in ts]
             A1 = A.copy()
             for c, (i, j) in enumerate(ts):
                 put_W(A1, c, i, j)
@@ -270,7 +302,7 @@ def main():
                         A3[w, 19 + k] = A3[19 + k, w] = 1
                         A3[sw, 19 + tau[k]] = A3[19 + tau[k], sw] = 1
                     ST["nodes"] += 1
-                    if fast_ok(A3, idx37 + list(range(37, 39 + 2 * c))):
+                    if (full_ok(A3, idx37 + list(range(37, 39 + 2 * c))) if FULL else fast_ok(A3, idx37 + list(range(37, 39 + 2 * c)))):
                         rec(c + 1, A3, rem2)
             rec(0, A1, dict(req))
         done += 1
@@ -279,9 +311,7 @@ def main():
     print(f"verifier stage C (v2), B{s} part {part}/{nparts}: triples in this part {len(mine)}, skipped {skip}, "
           f"completed now {done}, timed_out {timed_out}, {time.time() - T0:.0f}s")
     print("   ", ST)
-    json.dump({"s": s, "part": part, "nparts": nparts, "n_items": len(items), "in_part": len(mine), "skip": skip,
-               "completed": done, "timed_out": timed_out, "stats": ST, "survivors": survivors},
-              open(os.path.join(HERE, f"r4v_C2_{s}_{part}of{nparts}{tag}.json"), "w"))
+    dump()
 
 
 if __name__ == "__main__":

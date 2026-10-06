@@ -1,0 +1,43 @@
+=== B2: admissible rectangles 99 (inside N(p): 63); matchings 9229; orbits under Aut(B) 528
+  mode 2 (PSD matrices: M1 and M2)
+    stage 2: (tau,F) passing budgets on S u {p} u A_p: 2406 ; survivors on 39 vertices: 7, in 1 matchings, 1 pairs (tau,F) ; budget rejections 7837, PSD rejections 3746
+    stages 3-4 (raw: no PSD on single rows of C): configurations processed 7 of 7
+      rows 726 (after row PSD 726); C with the right column sums 88; (C,G) 328; passing budgets on Y 0; passing budgets + exact PSD on Y 0, in 0 configurations, 0 matchings
+      dual order: W-orbit candidates 4620 (ok 7); W triples 0; passing budgets on Y1 u W 0; passing budgets + exact PSD 0, in 0 configurations
+      51 vertices: pairs (Y-table, W-table) 0; passing budgets 0; passing budgets + exact PSD 0
+    stages 3-4 (PSD also on single rows of C): configurations processed 7 of 7
+      rows 726 (after row PSD 16); C with the right column sums 0; (C,G) 0; passing budgets on Y 0; passing budgets + exact PSD on Y 0, in 0 configurations, 0 matchings
+      dual order: W-orbit candidates 4620 (ok 7); W triples 0; passing budgets on Y1 u W 0; passing budgets + exact PSD 0, in 0 configurations
+      51 vertices: pairs (Y-table, W-table) 0; passing budgets 0; passing budgets + exact PSD 0
+  mode 1 (PSD matrices: M1 only)
+    stage 2: (tau,F) passing budgets on S u {p} u A_p: 2406 ; survivors on 39 vertices: 7, in 1 matchings, 1 pairs (tau,F) ; budget rejections 7837, PSD rejections 3746
+    stages 3-4 (PSD also on single rows of C): configurations processed 7 of 7
+      rows 726 (after row PSD 16); C with the right column sums 0; (C,G) 0; passing budgets on Y 0; passing budgets + exact PSD on Y 0, in 0 configurations, 0 matchings
+      dual order: W-orbit candidates 4620 (ok 7); W triples 0; passing budgets on Y1 u W 0; passing budgets + exact PSD 0, in 0 configurations
+      51 vertices: pairs (Y-table, W-table) 0; passing budgets 0; passing budgets + exact PSD 0
+=== B1: admissible rectangles 99 (inside N(p): 63); matchings 13799; orbits under Aut(B) 1259
+  mode 2 (PSD matrices: M1 and M2)
+    stage 2: (tau,F) passing budgets on S u {p} u A_p: 7224 ; survivors on 39 vertices: 481, in 55 matchings, 76 pairs (tau,F) ; budget rejections 44210, PSD rejections 15042
+    stages 3-4 (raw: no PSD on single rows of C): configurations processed 481 of 481
+      rows 48558 (after row PSD 48558); C with the right column sums 45362; (C,G) 67049; passing budgets on Y 27203; passing budgets + exact PSD on Y 164, in 28 configurations, 9 matchings
+      dual order: W-orbit candidates 264240 (ok 996); W triples 23; passing budgets on Y1 u W 23; passing budgets + exact PSD 2, in 2 configurations
+      51 vertices: pairs (Y-table, W-table) 4; passing budgets 4; passing budgets + exact PSD 0
+  mode 1 (PSD matrices: M1 only)
+    stage 2: (tau,F) passing budgets on S u {p} u A_p: 7224 ; survivors on 39 vertices: 672, in 55 matchings, 76 pairs (tau,F) ; budget rejections 44989, PSD rejections 15221
+    stages 3-4 (PSD also on single rows of C): configurations processed 672 of 672
+      rows 59763 (after row PSD 4809); C with the right column sums 590; (C,G) 806; passing budgets on Y 513; passing budgets + exact PSD on Y 190, in 28 configurations, 9 matchings
+      dual order: W-orbit candidates 352560 (ok 1907); W triples 92; passing budgets on Y1 u W 92; passing budgets + exact PSD 24, in 17 configurations
+      51 vertices: pairs (Y-table, W-table) 19; passing budgets 19; passing budgets + exact PSD 10
+=== B0: admissible rectangles 99 (inside N(p): 63); matchings 25514; orbits under Aut(B) 425
+  mode 2 (PSD matrices: M1 and M2)
+    stage 2: (tau,F) passing budgets on S u {p} u A_p: 3510 ; survivors on 39 vertices: 383, in 50 matchings, 95 pairs (tau,F) ; budget rejections 32502, PSD rejections 7627
+    stages 3-4 (raw: no PSD on single rows of C): configurations processed 383 of 383
+      rows 25490 (after row PSD 25490); C with the right column sums 11797; (C,G) 16149; passing budgets on Y 8639; passing budgets + exact PSD on Y 23, in 20 configurations, 9 matchings
+      dual order: W-orbit candidates 189780 (ok 724); W triples 24; passing budgets on Y1 u W 24; passing budgets + exact PSD 0, in 0 configurations
+      51 vertices: pairs (Y-table, W-table) 0; passing budgets 0; passing budgets + exact PSD 0
+  mode 1 (PSD matrices: M1 only)
+    stage 2: (tau,F) passing budgets on S u {p} u A_p: 3510 ; survivors on 39 vertices: 887, in 55 matchings, 122 pairs (tau,F) ; budget rejections 33290, PSD rejections 7697
+    stages 3-4 (PSD also on single rows of C): configurations processed 887 of 887
+      rows 46072 (after row PSD 5848); C with the right column sums 311; (C,G) 392; passing budgets on Y 260; passing budgets + exact PSD on Y 102, in 49 configurations, 13 matchings
+      dual order: W-orbit candidates 422400 (ok 4046); W triples 158; passing budgets on Y1 u W 158; passing budgets + exact PSD 128, in 40 configurations
+      51 vertices: pairs (Y-table, W-table) 0; passing budgets 0; passing budgets + exact PSD 0

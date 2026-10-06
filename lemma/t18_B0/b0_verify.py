@@ -333,7 +333,8 @@ def C250(s, part, nparts, tl, files):
     items = []
     for fn in files:
         d = json.load(open(os.path.join(HERE, fn)))
-        assert not d["timed_out"]
+        # B0: the first file stopped after matchings 0..417, the second covers 418..424 (b0_compareB.py checks the union)
+        assert (not d["timed_out"]) or os.environ.get("B0_ALLOW_PARTIAL")
         items += d["H"]
     items.sort(key=lambda e: (e["tau"], e["F"], e["H"]))
     tagx = ""

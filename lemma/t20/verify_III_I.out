@@ -1,0 +1,15 @@
+case III: labelled structures 10080, distinct invariants 2, nodes 239918, 2.0 s
+   enumerator-1 classes: 2, distinct invariants among them: 2
+   invariant tr(W^2..5)=(40, 58, 352, 964) : verifier 5760, predicted from enumerator 1 5760  OK
+   invariant tr(W^2..5)=(40, 76, 344, 1124) : verifier 4320, predicted from enumerator 1 4320  OK
+   AGREEMENT: True
+case I: labelled structures 27720, distinct invariants 6, nodes 934485, 80.0 s
+   enumerator-1 classes: 6, distinct invariants among them: 6
+   invariant tr(W^2..5)=(40, 24, 376, 760) : verifier 1800, predicted from enumerator 1 1800  OK
+   invariant tr(W^2..5)=(40, 30, 360, 820) : verifier 2880, predicted from enumerator 1 2880  OK
+   invariant tr(W^2..5)=(40, 36, 352, 860) : verifier 7200, predicted from enumerator 1 7200  OK
+   invariant tr(W^2..5)=(40, 36, 360, 840) : verifier 7200, predicted from enumerator 1 7200  OK
+   invariant tr(W^2..5)=(40, 48, 360, 920) : verifier 7200, predicted from enumerator 1 7200  OK
+   invariant tr(W^2..5)=(40, 60, 360, 1020) : verifier 1440, predicted from enumerator 1 1440  OK
+   AGREEMENT: True
+exit 0
