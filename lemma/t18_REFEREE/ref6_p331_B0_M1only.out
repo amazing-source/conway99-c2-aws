@@ -1,0 +1,3 @@
+B0: matchings 25514, orbits 425
+B0 part 0/1: {'tauF_budget': 3510, 'tauF_psd': 1845, 'nodes': 9913, 'complete_H': 2076, 'tested39': 4081, 'surv39': 887, 'surv39_M1only': 887, 'C_completions': 0, 'tables45_budget': 0, 'tables45_psd': 0}  time 152s timed_out=False
+   39-vertex survivors lie in 55 matchings and 122 pairs (tau,F)

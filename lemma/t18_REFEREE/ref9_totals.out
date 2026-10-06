@@ -1,0 +1,12 @@
+profile (2,5,0), stage C on ALL stage-B triples (my model, my code; PSD rejections in floating point):
+  B0: parts 3, any time-out False: triples 5595, pairs (tau,F) 901, survivors on 47 vertices 0   [repo: 5595 triples, 901 pairs, 0 survivors]
+  B1: parts 3, any time-out False: triples 4977, pairs (tau,F) 1015, survivors on 47 vertices 4   [repo: 4977 triples, 1015 pairs, 4 survivors (#813 [2,9],[3,6]; #975 [1,2],[3,6])]
+       survivor: matching 813, F = [3, 6]
+       survivor: matching 813, F = [2, 9]
+       survivor: matching 975, F = [1, 2]
+       survivor: matching 975, F = [3, 6]
+  B2: triples 196, pairs 74, survivors 0   [repo: 196, 74, 0]
+profile (3,3,1), from my 39-vertex survivors:
+  B0: configs on 39: 383; covers 11797; tables passing budgets on 45: 8639; budgets+PSD on 45: 23; budget-valid graphs on 51: 52; PSD on 51: 0; PSD of 9(3I-A)+J alone on 51: 0   [repo: 383 / 8639 / 23 / 52 budget-valid on 51 / 0]
+  B1: configs on 39: 481; covers 45362; tables passing budgets on 45: 27203; budgets+PSD on 45: 164; budget-valid graphs on 51: 1839; PSD on 51: 0; PSD of 9(3I-A)+J alone on 51: 10   [repo: 481 / 27203 / 164 / 1839 budget-valid on 51 / 0; 10 pass the first matrix alone]
+  B2: configs on 39: 7; covers 88; tables passing budgets on 45: 0   [repo: 7 / 88 or 44 / 0]

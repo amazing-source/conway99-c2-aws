@@ -194,3 +194,25 @@ Until T18 and T20 are proved, the fleet can set aside the pairs they would exclu
 (r,y1)^2 + (r,y2)^2 = 5 (T18) or 4 (T20). It is recorded as "DEFERRED (pending T18 / T20)", never as excluded; the record lists
 the positions of these pairs in the producer stream and has chunk_done false. If a lemma is not proved, exactly these pairs are
 re-run with the plain consumer (`q/tools/laptop_2026-10-06/defer_test.py` does this for validation).
+
+## 11. T18 after the referee audit (07/10, about 01:45 local): no open case, no error found; a clean proof text is being written
+
+Supersedes the status table of section 8.
+- **Stage C of profile (2,5,0) re-run by the third implementation** (`lemma/t18_B2/c_mine.py`, outputs in `lemma/t18_B0_VERIFC/`):
+  B0, all 5595 stage-B triples without the symmetry reduction: 0 configurations on 47 vertices. B1, all 4977 triples: exactly the
+  4 known survivors (#813 F = [2,9], [3,6]; #975 F = [1,2], [3,6]), which die by the rank bound and, separately, at stage D (two
+  implementations). So every computed step of T18 has at least two independent implementations in agreement.
+- **Referee audit of the hand part** (`lemma/t18_REFEREE/REPORT.md`): every load-bearing hand statement re-derived from the
+  definitions and found correct; no error that invalidates the proof. The referee also re-ran the whole chain with its own model
+  (float PSD, so a count check, not a further exact proof) and reproduced every count of both profiles for the three graphs.
+- **What the referee asks of the written text** (none changes a result): (1) the reduction "integer phi => 0/+-1 with nine +1" is
+  not written for norm 18 (four lines; given in the report); (2) A9 must not cite the computed A6: put N3 first; (3) the sentence of
+  A11 "the violated matrix is 9(3I - A) + J" is wrong, both matrices 63 E_{-4} and 77 E_3 are needed; (4) A3 omits the plus edge
+  between the two active inner vertices and two one-line justifications; (5) the stage-1 tests are defined only in a script header;
+  (6) three counters do not count what the text says; (7) A10 must state that the six other X_0 vertices have no neighbour in
+  W u {z_0, sigma z_0}; (8) stale "open case" wordings; (9) A7, P6-P8 are unverified and unused.
+- **Status.** T18 = hand reductions (re-derived by a second party) + finite exact computations (each by >= 2 independent programs).
+  It is still NOT in the engine: the rule is "proved and independently checked", and the consolidated proof text
+  (`lemma/T18_PROOF.md`, being written from the reports with the nine fixes) has to exist and be read first. The dictionary of
+  section 2 (dual lattice vector <=> eigenfunction) is outside the graph lemma and must be part of that reading.
+- **T20**: round 2 running (`t20_R2`), nine configurations open.

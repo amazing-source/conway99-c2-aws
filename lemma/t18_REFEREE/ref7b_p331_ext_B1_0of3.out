@@ -1,0 +1,9 @@
+   progress: 20 configs, cand orbits 2307, covers 1781, tables45_budget 912, 41s
+   progress: 40 configs, cand orbits 4437, covers 4148, tables45_budget 2775, 90s
+   progress: 60 configs, cand orbits 6741, covers 8154, tables45_budget 5068, 147s
+   progress: 80 configs, cand orbits 8970, covers 10337, tables45_budget 5905, 200s
+   progress: 100 configs, cand orbits 10815, covers 11456, tables45_budget 6771, 261s
+   progress: 120 configs, cand orbits 12915, covers 14144, tables45_budget 7996, 354s
+   progress: 140 configs, cand orbits 14813, covers 15241, tables45_budget 8651, 462s
+   progress: 160 configs, cand orbits 16151, covers 16424, tables45_budget 9748, 572s
+B1 part 0/3 from ref6_p331_B1_0of1.json: {'configs39': 161, 'cand_Z': 1137465, 'cand_orbits': 16175, 'covers': 16424, 'tables45_budget': 9748, 'tables45_psd': 28, 'tables45_psd_M1only': 34, 'type_solutions': 146, 'graphs51_budget': 259, 'graphs51_psd': 0, 'graphs51_psd_M1only': 5, 'nodes51': 5761}  time 577s

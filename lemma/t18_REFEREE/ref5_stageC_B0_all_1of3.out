@@ -1,0 +1,15 @@
+   progress: 20 pairs, 34 triples, survivors 0, 1s
+   progress: 40 pairs, 89 triples, survivors 0, 11s
+   progress: 60 pairs, 143 triples, survivors 0, 41s
+   progress: 80 pairs, 212 triples, survivors 0, 57s
+   progress: 100 pairs, 269 triples, survivors 0, 69s
+   progress: 120 pairs, 379 triples, survivors 0, 102s
+   progress: 140 pairs, 487 triples, survivors 0, 169s
+   progress: 160 pairs, 540 triples, survivors 0, 183s
+   progress: 180 pairs, 604 triples, survivors 0, 185s
+   progress: 200 pairs, 693 triples, survivors 0, 192s
+   progress: 220 pairs, 827 triples, survivors 0, 213s
+   progress: 240 pairs, 1052 triples, survivors 0, 235s
+   progress: 260 pairs, 1249 triples, survivors 0, 254s
+   progress: 280 pairs, 1520 triples, survivors 0, 285s
+B0 [full] from ref4_stageB_B0_0of1.json: {'triples': 1902, 'pairs_tauF': 300, 'type_solutions': 1503, 'type_ok33': 1110, 'triple_type': 7300, 'nodes': 785199, 'rej_budget': 794446, 'rej_psd': 140460, 'survivors': 0}  time 308s timed_out=False

@@ -1,0 +1,12 @@
+survivor matching 813 F=(2, 9): t=4; a_2 on W = [3, 3, 3, 3, 2, 2, 3, 3, 2, 2]; M1 exactly PSD: True; M2 exactly PSD: True; rank M1 = 46 of 47, odd part rank 23 of 23 (det of odd orbit Gram = 47684), even part rank 23 of 24;  rank M2 = 45, odd 22, even 23
+   distribution of a_2(z) = |Z n X_2| over the unordered pairs: {4: 437, 5: 201, 6: 38, 7: 2};  t = 4, so sum over the 4 orbits of (a_2(z) - 4) = t forces a_2(z) <= 8: pairs with a_2(z) <= 4 + t: 678
+   stage D: oriented sets Z passing capacities + budgets on 49: 1356; unordered mate pairs {Z, sigma Z}: 678; of which PSD on 49: 0; PSD already on the 48 vertices Y47 u {z}: 0
+survivor matching 813 F=(3, 6): t=4; a_2 on W = [3, 3, 3, 3, 3, 3, 2, 2, 2, 2]; M1 exactly PSD: True; M2 exactly PSD: True; rank M1 = 46 of 47, odd part rank 23 of 23 (det of odd orbit Gram = 47684), even part rank 23 of 24;  rank M2 = 45, odd 22, even 23
+   distribution of a_2(z) = |Z n X_2| over the unordered pairs: {4: 437, 5: 201, 6: 38, 7: 2};  t = 4, so sum over the 4 orbits of (a_2(z) - 4) = t forces a_2(z) <= 8: pairs with a_2(z) <= 4 + t: 678
+   stage D: oriented sets Z passing capacities + budgets on 49: 1356; unordered mate pairs {Z, sigma Z}: 678; of which PSD on 49: 0; PSD already on the 48 vertices Y47 u {z}: 0
+survivor matching 975 F=(1, 2): t=2; a_2 on W = [3, 3, 3, 3, 3, 3, 3, 3, 2, 2]; M1 exactly PSD: True; M2 exactly PSD: True; rank M1 = 46 of 47, odd part rank 23 of 23 (det of odd orbit Gram = 874944), even part rank 23 of 24;  rank M2 = 45, odd 22, even 23
+   distribution of a_2(z) = |Z n X_2| over the unordered pairs: {4: 564, 5: 240, 6: 42, 7: 3};  t = 2, so sum over the 4 orbits of (a_2(z) - 4) = t forces a_2(z) <= 6: pairs with a_2(z) <= 4 + t: 846
+   stage D: oriented sets Z passing capacities + budgets on 49: 1698; unordered mate pairs {Z, sigma Z}: 849; of which PSD on 49: 0; PSD already on the 48 vertices Y47 u {z}: 0
+survivor matching 975 F=(3, 6): t=2; a_2 on W = [3, 3, 2, 2, 3, 3, 3, 3, 3, 3]; M1 exactly PSD: True; M2 exactly PSD: True; rank M1 = 46 of 47, odd part rank 23 of 23 (det of odd orbit Gram = 874944), even part rank 23 of 24;  rank M2 = 45, odd 22, even 23
+   distribution of a_2(z) = |Z n X_2| over the unordered pairs: {4: 564, 5: 240, 6: 42, 7: 3};  t = 2, so sum over the 4 orbits of (a_2(z) - 4) = t forces a_2(z) <= 6: pairs with a_2(z) <= 4 + t: 846
+   stage D: oriented sets Z passing capacities + budgets on 49: 1698; unordered mate pairs {Z, sigma Z}: 849; of which PSD on 49: 0; PSD already on the 48 vertices Y47 u {z}: 0

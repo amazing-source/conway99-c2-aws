@@ -1,0 +1,5 @@
+B1 [full] from ref5c_control_B1_triples.json: {'triples': 170, 'pairs_tauF': 12, 'type_solutions': 122, 'type_ok33': 98, 'triple_type': 1770, 'nodes': 326767, 'rej_budget': 321552, 'rej_psd': 64890, 'survivors': 4}  time 45s timed_out=False
+   SURVIVOR on 47 vertices: matching index 813 F = (2, 9)
+   SURVIVOR on 47 vertices: matching index 813 F = (3, 6)
+   SURVIVOR on 47 vertices: matching index 975 F = (1, 2)
+   SURVIVOR on 47 vertices: matching index 975 F = (3, 6)

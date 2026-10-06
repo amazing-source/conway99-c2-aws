@@ -1,0 +1,1 @@
+{"stats": {"triples": 1806, "pairs_tauF": 300, "type_solutions": 1416, "type_ok33": 1053, "triple_type": 6719, "nodes": 794221, "rej_budget": 789517, "rej_psd": 148761, "survivors": 0}, "survivors": [], "timed_out": false, "part": [2, 3], "n_pairs_total": 901}

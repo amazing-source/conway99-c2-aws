@@ -1,0 +1,4 @@
+B2: cell room=True, repeated types allowed=False: type solutions 770; pass budgets on 33: 653; pass budgets+PSD on 33: 514
+B2: cell room=True, repeated types allowed=True: type solutions 909; pass budgets on 33: 653; pass budgets+PSD on 33: 514
+B2: cell room=False, repeated types allowed=False: type solutions 11235; pass budgets on 33: 7384; pass budgets+PSD on 33: 4227
+B2: cell room=False, repeated types allowed=True: type solutions 12372; pass budgets on 33: 7384; pass budgets+PSD on 33: 4227

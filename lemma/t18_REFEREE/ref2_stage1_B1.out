@@ -1,0 +1,5 @@
+B1: deficient pairs 18; rectangles passing (R1): 99; of which U n V empty (usable in N(p)): 63
+   matchings tau passing (R1)+(R2): 13799  (0.9s)
+   |Aut(B)| = 12; orbits of matchings: 1259
+   |F| = 3: pairs (tau rep, F) passing all budgets on S u p u A_p: 7224 (in 1016 matchings); and admitting a type solution for W: 4096; budgets + PSD(M1): 3562; budgets + PSD(M1,M2): 3562; budgets + PSD(M1,M2) + W types: 2606
+   |F| = 2: pairs (tau rep, F) passing all budgets on S u p u A_p: 12366 (in 1227 matchings); and admitting a type solution for W: 10293; budgets + PSD(M1): 11509; budgets + PSD(M1,M2): 11509; budgets + PSD(M1,M2) + W types: 9779

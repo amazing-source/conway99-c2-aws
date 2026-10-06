@@ -1,0 +1,4 @@
+B1: matchings 13799, orbits 1259
+B1 part 0/1: {'tauF_budget': 12366, 'tauF_psd': 11509, 'nodes': 101149, 'leaves': 4977, 'leaves_A14g': 4977}  time 439s  timed_out=False
+   leaves by t: {4: 2351, 6: 2240, 2: 386}  max a_2 on X_2: {1: 3791, 2: 1186}  A14g true/false: {True: 4977}
+   matchings carrying triples: 275  pairs (tau,F): 1015

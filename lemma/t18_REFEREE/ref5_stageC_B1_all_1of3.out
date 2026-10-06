@@ -1,0 +1,18 @@
+   progress: 20 pairs, 49 triples, survivors 0, 17s
+   progress: 40 pairs, 140 triples, survivors 0, 76s
+   progress: 60 pairs, 228 triples, survivors 0, 145s
+   progress: 80 pairs, 283 triples, survivors 0, 157s
+   progress: 100 pairs, 363 triples, survivors 0, 201s
+   progress: 120 pairs, 472 triples, survivors 1, 227s
+   progress: 140 pairs, 565 triples, survivors 1, 263s
+   progress: 160 pairs, 621 triples, survivors 1, 271s
+   progress: 180 pairs, 686 triples, survivors 1, 283s
+   progress: 200 pairs, 858 triples, survivors 1, 386s
+   progress: 220 pairs, 997 triples, survivors 1, 398s
+   progress: 240 pairs, 1111 triples, survivors 1, 418s
+   progress: 260 pairs, 1196 triples, survivors 1, 431s
+   progress: 280 pairs, 1300 triples, survivors 1, 449s
+   progress: 300 pairs, 1452 triples, survivors 1, 574s
+   progress: 320 pairs, 1525 triples, survivors 1, 650s
+B1 [full] from ref4_stageB_B1_0of1.json: {'triples': 1641, 'pairs_tauF': 338, 'type_solutions': 2912, 'type_ok33': 2001, 'triple_type': 11451, 'nodes': 1640653, 'rej_budget': 1605241, 'rej_psd': 324251, 'survivors': 1}  time 725s timed_out=False
+   SURVIVOR on 47 vertices: matching index 813 F = (2, 9)

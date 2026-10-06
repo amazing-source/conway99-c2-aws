@@ -1,0 +1,9 @@
+Paley(9): srg(9,4,1,2) OK; sigma automorphism with one fixed point; A0 (a), (b) hold; iota is a fixed-point-free involution on 2 outer orbits; N(p) = 2 mate edges
+   trace(sigma) = 1, trace(sigma A) = 4 (= k), trace(sigma J) = 9; mult(s=-2) = 4, mult(r=1) = 4; trace(sigma|V_s) = 0, trace(sigma|V_r) = 0
+   rank E_s odd / even: 2 / 2;  rank E_r odd / even: 2 / 2
+   odd orbit Gram rI - A[R,R] + A[R,sigma R] = (r-s)/2 * Gram of E_s(e_x - e_sigma x): OK, rank 2 of 4
+BvLS: srg(243,22,1,2) OK; sigma automorphism with one fixed point; A0 (a), (b) hold; iota is a fixed-point-free involution on 110 outer orbits; N(p) = 11 mate edges
+   trace(sigma) = 1, trace(sigma A) = 22 (= k), trace(sigma J) = 243; mult(s=-5) = 110, mult(r=4) = 132; trace(sigma|V_s) = 0, trace(sigma|V_r) = 0
+   rank E_s odd / even: 55 / 55;  rank E_r odd / even: 66 / 66
+   odd orbit Gram rI - A[R,R] + A[R,sigma R] = (r-s)/2 * Gram of E_s(e_x - e_sigma x): OK, rank 55 of 121
+BvLS: 110 sigma-odd {0,+-1} (-5)-eigenfunctions from characters: general counting identity, edge count, parity of the outside sum and the path-count identity all hold

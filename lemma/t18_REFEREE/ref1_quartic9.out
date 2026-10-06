@@ -1,0 +1,33 @@
+labelled 4-regular graphs on 9 vertices: 1024380 (10.5s)
+isomorphism classes: 16
+  class |orbit|= 22680 |Aut|=  16 connected=True triangles= 2 max codeg=4 min codeg=0 
+  class |orbit|= 45360 |Aut|=   8 connected=True triangles= 4 max codeg=3 min codeg=0 
+  class |orbit|= 11340 |Aut|=  32 connected=True triangles= 6 max codeg=4 min codeg=0 
+  class |orbit|= 90720 |Aut|=   4 connected=True triangles= 5 max codeg=4 min codeg=0 
+  class |orbit|= 30240 |Aut|=  12 connected=True triangles= 4 max codeg=3 min codeg=0 
+  class |orbit|= 20160 |Aut|=  18 connected=True triangles= 3 max codeg=3 min codeg=0 
+  class |orbit|=181440 |Aut|=   2 connected=True triangles= 5 max codeg=3 min codeg=0 
+  class |orbit|=181440 |Aut|=   2 connected=True triangles= 6 max codeg=3 min codeg=0 
+  class |orbit|= 90720 |Aut|=   4 connected=True triangles= 7 max codeg=3 min codeg=0 
+  class |orbit|=181440 |Aut|=   2 connected=True triangles= 7 max codeg=3 min codeg=0 
+  class |orbit|= 45360 |Aut|=   8 connected=True triangles= 6 max codeg=3 min codeg=0 
+  class |orbit|= 45360 |Aut|=   8 connected=True triangles= 8 max codeg=3 min codeg=0 
+  class |orbit|= 22680 |Aut|=  16 connected=True triangles=10 max codeg=3 min codeg=0 
+  class |orbit|=  5040 |Aut|=  72 connected=True triangles= 6 max codeg=2 min codeg=1   <-- codeg<=2
+  class |orbit|= 30240 |Aut|=  12 connected=True triangles= 8 max codeg=2 min codeg=1   <-- codeg<=2
+  class |orbit|= 20160 |Aut|=  18 connected=True triangles= 9 max codeg=2 min codeg=1   <-- codeg<=2
+sum of orbit sizes: 1024380
+
+classes with all codegrees <= 2: 3  labelled: 55440
+B0: |Aut|=72 triangles=6 codeg(adjacent)={1: 18} codeg(non-adjacent)={2: 18}
+     spectrum [np.float64(-2.0), np.float64(-2.0), np.float64(-2.0), np.float64(-2.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(4.0)]
+     deficient pairs (codeg 1): 18, pairs of codeg 0: 0
+B1: |Aut|=12 triangles=8 codeg(adjacent)={1: 12, 2: 6} codeg(non-adjacent)={1: 6, 2: 12}
+     spectrum [np.float64(-2.0), np.float64(-2.0), np.float64(-2.0), np.float64(-1.0), np.float64(-1.0), np.float64(1.0), np.float64(1.0), np.float64(2.0), np.float64(4.0)]
+     deficient pairs (codeg 1): 18, pairs of codeg 0: 0
+B2: |Aut|=18 triangles=9 codeg(adjacent)={1: 9, 2: 9} codeg(non-adjacent)={1: 9, 2: 9}
+     spectrum [np.float64(-2.0), np.float64(-2.0), np.float64(-1.5321), np.float64(-1.5321), np.float64(-0.3473), np.float64(-0.3473), np.float64(1.8794), np.float64(1.8794), np.float64(4.0)]
+     deficient pairs (codeg 1): 18, pairs of codeg 0: 0
+the three report graphs are pairwise non-isomorphic and exhaust the list: True
+C9(1,2) is isomorphic to B2
+K3xK3 is isomorphic to B0
