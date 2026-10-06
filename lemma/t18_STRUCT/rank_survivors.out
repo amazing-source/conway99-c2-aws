@@ -1,0 +1,13 @@
+survivor tau #813 F=[2, 9]
+   E-4  total rank 46 of 47 | odd rank 23 of 23 (must be <= 22) | even rank 23 of 24 (must be <= 22)  -> RANK VIOLATION
+   E3   total rank 45 of 47 | odd rank 22 of 23 (must be <= 27) | even rank 23 of 24 (must be <= 27)  -> ok
+survivor tau #813 F=[3, 6]
+   E-4  total rank 46 of 47 | odd rank 23 of 23 (must be <= 22) | even rank 23 of 24 (must be <= 22)  -> RANK VIOLATION
+   E3   total rank 45 of 47 | odd rank 22 of 23 (must be <= 27) | even rank 23 of 24 (must be <= 27)  -> ok
+survivor tau #975 F=[1, 2]
+   E-4  total rank 46 of 47 | odd rank 23 of 23 (must be <= 22) | even rank 23 of 24 (must be <= 22)  -> RANK VIOLATION
+   E3   total rank 45 of 47 | odd rank 22 of 23 (must be <= 27) | even rank 23 of 24 (must be <= 27)  -> ok
+survivor tau #975 F=[3, 6]
+   E-4  total rank 46 of 47 | odd rank 23 of 23 (must be <= 22) | even rank 23 of 24 (must be <= 22)  -> RANK VIOLATION
+   E3   total rank 45 of 47 | odd rank 22 of 23 (must be <= 27) | even rank 23 of 24 (must be <= 27)  -> ok
+distinct survivors: 4

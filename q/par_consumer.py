@@ -83,11 +83,11 @@ def main():
             info_raw.append(line); info.append(rec); continue
         sh.update(line + b"\n"); n += 1; orbits.add(rec["o"]); pairs.append(line)
     full_sha = sh.hexdigest()
-    deferred = {"T18": [], "T20": []}
+    aside = {"T18": [], "T20": []}                                     # stream positions of the pairs set aside (deferral mode)
     if os.environ.get("Q_DEFER", "") == "1" and n:
-        keep_idx = classify(pkg, lid, pairs, deferred)
+        keep_idx = classify(pkg, lid, pairs, aside)
         pairs = [pairs[i] for i in keep_idx]
-    ndef = len(deferred["T18"]) + len(deferred["T20"])
+    ndef = len(aside["T18"]) + len(aside["T20"])
     P = max(1, min(P, max(1, len(pairs))))
     W = max(1, int(sys.argv[7])) if len(sys.argv) > 7 else P
     tmp = tempfile.mkdtemp(prefix="par_%s_" % os.path.basename(outp).replace(".jsonl", ""), dir=os.path.dirname(os.path.abspath(outp)))
@@ -145,11 +145,11 @@ def main():
     ok = ok and not bad and len(recs) == P
     ok = ok and sum(r["n_pairs"] for r in recs) + ndef == n
     if ndef:
-        cnt[DEF18] += len(deferred["T18"]); cnt[DEF20] += len(deferred["T20"])
+        cnt[DEF18] += len(aside["T18"]); cnt[DEF20] += len(aside["T20"])
         out["verdicts"] = {k: v for k, v in cnt.items() if v}
         out["deferred"] = {"rule": "root r of U (one per +- pair) with (r,y1)^2 + (r,y2)^2 = 5 (T18) or, failing that, = 4 (T20); "
                                    "indices are 0-based positions among the pair lines of the producer stream",
-                           "T18": deferred["T18"], "T20": deferred["T20"]}
+                           "T18": aside["T18"], "T20": aside["T20"]}
     out["chunk_ok"] = ok
     out["chunk_done"] = ok and n == sum(c for v, c in cnt.items() if v.startswith("EXCLUDED") or v.startswith("SWAP-COVERED") or v == "TWIN-DEFERRED"
                                         or v.startswith("TWIN-CANON"))
