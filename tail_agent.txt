@@ -1,1 +1,37 @@
 2026-10-06 23:51:13 agent start: 31 workers, price 0.4500 + 0.0100 $/h, region eu-north-1
+2026-10-06 23:51:22 start 011:107:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:116:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:120:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:121:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:123:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:127:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:139:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:150:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:151:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:164:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:167:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:168:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:169:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:172:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:173:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:188:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:192:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:193:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:194:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:196:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:197:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:208:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:219:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:220:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:239:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:240:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:245:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:263:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:264:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:265:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:51:22 start 011:304:2950 (est 0.44 h) [deferral mode]
+2026-10-06 23:52:22 done 011:107:2950 in 60 s
+2026-10-06 23:52:22 done 011:120:2950 in 60 s
+2026-10-06 23:52:22 done 011:121:2950 in 60 s
+2026-10-06 23:52:22 done 011:123:2950 in 60 s
+2026-10-06 23:52:22 done 011:127:2950 in 60 s
