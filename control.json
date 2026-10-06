@@ -3,7 +3,7 @@
  "mode": "stop",
  "cap_usd": 205.0,
  "lease_s": 1800,
- "credit_usd": 2.04,
+ "credit_usd": 2.8,
  "max_fail": 1,
  "ratio": 2.0,
  "created": "2026-10-01 21:26:09",
