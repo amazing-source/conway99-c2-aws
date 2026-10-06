@@ -2,7 +2,8 @@
 
 Started by q/qmachine.sh instead of the queue agent when Q_TAIL_KEYS is set (same install, same calibrations):
   Q_TAIL_KEYS="016:414:479 016:431:479 ..."   the jobs, in the order given
-  Q_PAR=31                                     shards per job (default: cores - 1)
+  Q_PAR_WORKERS=31                             consumers running at the same time (default: cores - 1)
+  Q_PAR=124                                    shards per job (default: 4 x workers)
 For each key, one at a time: the package's own producer command (the one of run_jobs.start), piped into q/par_consumer.py, which
 runs the unchanged package consumer on P shards and adds the records up. A job counts only if run_jobs.done_already accepts its
 record; its result is pushed to run/<NAME> BEFORE its done event is published, as the agent does.
@@ -16,7 +17,8 @@ import qagent as Q
 
 def main():
     a = Q.Agent(); keys = (Q.env("Q_TAIL_KEYS", "") or "").split()
-    P = int(Q.env("Q_PAR", str(max(1, (os.cpu_count() or 2) - 1))))
+    W = int(Q.env("Q_PAR_WORKERS", str(max(1, (os.cpu_count() or 2) - 1))))   # consumers running at the same time
+    P = int(Q.env("Q_PAR", str(4 * W)))                                          # shards per job (small shards keep the cores busy)
     sys.path.insert(0, a.pkg)
     import run_jobs as RJ                                           # the package's own runner (hashed in MANIFEST.json)
     RJ.check_manifest(); envx = RJ.env_exact(); out = os.path.join(a.pkg, "results"); os.makedirs(out, exist_ok=True)
@@ -24,8 +26,8 @@ def main():
     a.est = {}                                                       # this machine claims nothing
     Q.init_repo(a.qd, a.url); a.fetch()
     a.campaign = json.loads(a.show("origin/" + a.qbr, "control.json")).get("campaign", "?")
-    a.log("tail runner start: %d keys, %d shards per job" % (len(keys), P))
-    if not a.push_status("EN_COURS", "tail runner: %d jobs, %d shards each" % (len(keys), P)):
+    a.log("tail runner start: %d keys, %d shards per job, %d at a time" % (len(keys), P, W))
+    if not a.push_status("EN_COURS", "tail runner: %d jobs, %d shards each, %d at a time" % (len(keys), P, W)):
         raise RuntimeError("cannot push the first status")
     a.rearm_deadman(); nfail = 0
     for key in keys:
@@ -39,9 +41,9 @@ def main():
                                  "--from-plan", os.path.join(a.pkg, job["plan"]), "--chunk", "%d/%d" % (k, n), "--stream", "-", "--max-seconds", "86400"],
                                 env=envx, cwd=os.path.join(a.pkg, "c1", "code"), stdout=subprocess.PIPE,
                                 stderr=open(os.path.join(out, tag + "_producer.err"), "w"))      # = run_jobs.start, producer side
-        cons = subprocess.Popen([sys.executable, os.path.join(HERE, "par_consumer.py"), a.pkg, lid, "-", res, "4000000000", str(P)], env=envx, cwd=a.pkg,
+        cons = subprocess.Popen([sys.executable, os.path.join(HERE, "par_consumer.py"), a.pkg, lid, "-", res, "4000000000", str(P), str(W)], env=envx, cwd=a.pkg,
                                 stdin=prod.stdout, stdout=open(os.path.join(out, tag + "_consumer.out"), "w"), stderr=subprocess.STDOUT)
-        prod.stdout.close(); t0 = time.time(); last = t0; a.log("start %s on %d shards" % (key, P))
+        prod.stdout.close(); t0 = time.time(); last = t0; a.log("start %s on %d shards, %d at a time" % (key, P, W))
         while cons.poll() is None:
             if a.spot_interrupted():
                 for p in (cons, prod):
