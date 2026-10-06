@@ -1,16 +1,3 @@
-2026-10-06 23:02:54 done 015:390:1580 in 232 s
-2026-10-06 23:03:18 start 014:1809:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1813:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1814:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1815:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1818:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1819:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1840:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1842:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1843:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1844:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1845:1877 (est 0.24 h) [deferral mode]
-2026-10-06 23:03:18 start 014:1847:1877 (est 0.24 h) [deferral mode]
 2026-10-06 23:03:18 start 014:1850:1877 (est 0.24 h) [deferral mode]
 2026-10-06 23:03:18 start 014:1851:1877 (est 0.24 h) [deferral mode]
 2026-10-06 23:03:18 start 014:1852:1877 (est 0.24 h) [deferral mode]
@@ -58,3 +45,16 @@
 2026-10-06 23:05:29 done 014:94:1877 in 132 s
 2026-10-06 23:05:29 done 014:109:1877 in 132 s
 2026-10-06 23:05:29 done 014:510:1877 in 95 s
+2026-10-06 23:05:46 start 014:1727:1877 (est 0.24 h) [deferral mode]
+2026-10-06 23:05:46 start 014:1731:1877 (est 0.24 h) [deferral mode]
+2026-10-06 23:05:46 start 014:1734:1877 (est 0.24 h) [deferral mode]
+2026-10-06 23:05:46 start 014:1749:1877 (est 0.24 h) [deferral mode]
+2026-10-06 23:05:46 start 014:1751:1877 (est 0.24 h) [deferral mode]
+2026-10-06 23:05:46 start 014:1767:1877 (est 0.24 h) [deferral mode]
+2026-10-06 23:05:46 start 014:1775:1877 (est 0.24 h) [deferral mode]
+2026-10-06 23:05:46 start 014:1778:1877 (est 0.24 h) [deferral mode]
+2026-10-06 23:06:16 done 014:1813:1877 in 178 s
+2026-10-06 23:06:16 done 014:1850:1877 in 178 s
+2026-10-06 23:06:16 done 014:1854:1877 in 178 s
+2026-10-06 23:06:16 done 014:508:1877 in 142 s
+2026-10-06 23:06:16 done 014:1206:1877 in 77 s
