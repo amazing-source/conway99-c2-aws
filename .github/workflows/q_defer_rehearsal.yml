@@ -11,6 +11,12 @@ on:
       defer_nodes:
         description: "Q_DEFER_NODES (10000 = budget variant, 0 = quick variant)"
         default: "10000"
+      lookahead:
+        description: "Q_LOOKAHEAD (jobs claimed ahead; 0 = none)"
+        default: "0"
+      sync_min:
+        description: "Q_SYNC_MIN (minimum seconds between two queue transactions)"
+        default: "0"
 permissions:
   contents: write
 jobs:
@@ -21,6 +27,8 @@ jobs:
       Q_TEST: "1"
       Q_DEFER: "1"
       Q_DEFER_NODES: ${{ inputs.defer_nodes }}
+      Q_LOOKAHEAD: ${{ inputs.lookahead }}
+      Q_SYNC_MIN: ${{ inputs.sync_min }}
       Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
       Q_QUEUE: queue-cid
       Q_TEST_PRICE: "0.10"

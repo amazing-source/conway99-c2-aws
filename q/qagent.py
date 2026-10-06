@@ -124,6 +124,10 @@ class Agent:
         self.price, self.ovh, self.boot = float(env("Q_PRICE")), float(env("Q_OVH", "0.01")), float(env("Q_BOOT"))
         self.rate = self.price + self.ovh
         self.workers = int(env("Q_WORKERS", "1"))
+        # 07/10 (short deferral jobs: 15 machines publishing every 30 s overloaded the queue branch; two agents died on "queue push
+        # refused 12 times"): Q_LOOKAHEAD = jobs claimed ahead and kept in a local backlog, started as workers free up;
+        # Q_SYNC_MIN = minimum seconds between two queue transactions. Both 0 by default (behaviour unchanged).
+        self.lookahead = int(env("Q_LOOKAHEAD", "0")); self.sync_min = int(env("Q_SYNC_MIN", "0")); self.backlog = []; self.refused = 0
         home = os.path.expanduser("~")
         self.qd = os.path.join(home, "q_queue_" + self.name); self.pd = os.path.join(home, "q_push_" + self.name)
         self.logf = os.path.join(home, "q_agent_%s.log" % self.name)
@@ -141,15 +145,17 @@ class Agent:
             f.write("%s %s\n" % (time.strftime("%Y-%m-%d %H:%M:%S"), m))
 
     # -- queue
-    def fetch(self):
+    def fetch(self, queue_only=False):
         """06/10: retried. One refused fetch (GitHub answered "Permission denied (publickey)" once to a valid deploy key) used to
         raise, i.e. ERREUR AGENT: every running job released and the machine powered off. The waits add up to 4.5 min, under the
         dead-man switch and the lease."""
         err = ""
         for attempt in range(FETCH_TRIES):
             try:
-                r = git(self.qd, "fetch", "-q", "--prune", "origin", "+refs/heads/%s:refs/remotes/origin/%s" % (self.qbr, self.qbr),
-                        "+refs/heads/%s*:refs/remotes/origin/%s*" % (self.prefix, self.prefix), check=False)
+                refs = ["+refs/heads/%s:refs/remotes/origin/%s" % (self.qbr, self.qbr)]
+                if not queue_only:                                 # the machine branches (statuses, ledger) are not re-read on a retry
+                    refs.append("+refs/heads/%s*:refs/remotes/origin/%s*" % (self.prefix, self.prefix))
+                r = git(self.qd, "fetch", "-q", "--prune", "origin", *refs, check=False)
                 if r.returncode == 0:
                     return
                 err = (r.stderr or r.stdout).strip()[-400:]
@@ -189,7 +195,7 @@ class Agent:
         """One atomic queue transaction: publish pending events + (if claim) claim new jobs, the choice being redone on the fresh
         state whenever the push is refused. Returns the jobs claimed; fills self.info (mode, reason, ledger, projection, free)."""
         for attempt in range(12):
-            self.fetch()
+            self.fetch(queue_only=attempt > 0)
             order, ctl, ev = self.read_queue(); self.campaign = ctl.get("campaign", "?")
             ms = self.statuses(self.campaign); own, done, fails = owners(ev); now = time.time(); le = last_events(ev)
             led, proj_others = ledger(ms, now, ctl, self.hb, self.deadman, self.name, self.boot, self.rate, le)
@@ -210,7 +216,7 @@ class Agent:
                 mode, reason = "run", ""
             picked = []
             if mode == "run" and claim:
-                eta = self.eta_s(now, ratio); nfree = self.workers - len(self.running)
+                eta = self.eta_s(now, ratio); nfree = self.workers + self.lookahead - len(self.running) - len(self.backlog)
                 for j in free:
                     if len(picked) >= nfree:
                         break
@@ -233,10 +239,14 @@ class Agent:
             git(self.qd, "commit", "-qm", "%s %s" % (self.name, " ".join("%s:%d" % (e["op"], len(e["jobs"])) for e in evs)))
             r = git(self.qd, "push", "-q", "origin", "HEAD:refs/heads/" + self.qbr, check=False)
             if r.returncode == 0:
-                self.pending = []
+                self.pending = []; self.refused = 0
                 return picked
             time.sleep(random.uniform(2, 8) * (1 + attempt / 3.0))
-        raise RuntimeError("queue push refused 12 times in a row")
+        self.refused += 1                                           # 07/10: not fatal any more; the events stay pending for the next cycle
+        self.log("queue push refused 12 times in a row (%d such transactions in a row); events kept" % self.refused)
+        if self.refused >= 8:
+            raise RuntimeError("queue push refused in 8 transactions in a row")
+        return None
 
     # -- own branch
     def push_status(self, state, reason=""):
@@ -348,6 +358,12 @@ class Agent:
                     pass
             self.pending.append({"t": round(time.time()), "m": self.name, "op": "release", "jobs": [k]})
             del self.running[k]
+        self.drop_backlog()
+
+    def drop_backlog(self):
+        if self.backlog:                                            # claimed, never started: free at once for the other machines
+            self.pending.append({"t": round(time.time()), "m": self.name, "op": "release", "jobs": list(self.backlog)})
+            self.log("backlog released: %d jobs" % len(self.backlog)); self.backlog = []
 
     def flush_results(self, state, reason=""):
         """push results first; only then may their done/fail events be published (a done job always has its result on GitHub)"""
@@ -362,9 +378,10 @@ class Agent:
             self.flush_results("FINISHING", reason)
         for _ in range(3):
             try:
-                self.sync(claim=False); break
+                if self.sync(claim=False) is not None: break            # None: refused 12 times, try again
             except Exception as e:
-                self.last_err = str(e); time.sleep(20)
+                self.last_err = str(e)
+            time.sleep(20)
         self.push_status(state, reason)
 
     def run(self):
@@ -393,16 +410,23 @@ class Agent:
                 state = "EN_COURS" if self.info.get("mode", "run") == "run" else "DRAINING"
                 if self.flush_results(state, self.info.get("reason", "")):
                     self.rearm_deadman(); last_hb = now
-            if self.pending or (len(self.running) < self.workers and now - last_sync >= SYNC_EVERY) or now - last_sync >= self.hb:
-                picked = self.sync(); last_sync = now
-                if self.info["mode"] == "stop":
-                    self.kill_all(); self.finish("STOP", self.info["reason"]); return 0
-                if picked:
-                    self.start_jobs(picked)
-                if not self.running and not picked:
-                    if self.info["mode"] == "run" and self.info["free"] == 0:
-                        self.finish("FINI", "no free job left in the queue"); return 0
-                    self.finish("DRAINED", self.info["reason"] or self.info["mode"]); return 0
+            while self.backlog and len(self.running) < self.workers:
+                self.start_jobs([self.backlog.pop(0)])
+            room = len(self.running) + len(self.backlog) < self.workers + self.lookahead
+            if (now - last_sync >= self.sync_min and (self.pending or (room and now - last_sync >= SYNC_EVERY))) or now - last_sync >= self.hb:
+                picked = self.sync(); last_sync = time.time()
+                if picked is not None:                                  # None: refused 12 times, nothing published or claimed; next cycle
+                    if self.info["mode"] == "stop":
+                        self.kill_all(); self.finish("STOP", self.info["reason"]); return 0
+                    if self.info["mode"] != "run":
+                        self.drop_backlog()
+                    self.backlog += picked
+                    while self.backlog and len(self.running) < self.workers:
+                        self.start_jobs([self.backlog.pop(0)])
+                    if not self.running and not picked and not self.backlog:
+                        if self.info["mode"] == "run" and self.info["free"] == 0:
+                            self.finish("FINI", "no free job left in the queue"); return 0
+                        self.finish("DRAINED", self.info["reason"] or self.info["mode"]); return 0
             if now - last_hb >= self.hb:
                 state = "EN_COURS" if self.info.get("mode", "run") == "run" else "DRAINING"
                 if self.push_status(state, self.info.get("reason", "")):
