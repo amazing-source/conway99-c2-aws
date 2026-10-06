@@ -68,6 +68,10 @@ if [ -f calib_extra.sh ]; then                                                  
 fi
 $A status INSTALLATION "calibration EQUIVALENT, starting the agent"
 touch "$HOME/q_calibrated_$NAME"                                                 # used by the rehearsal only
-.venv/bin/python "$REPO/q/qagent.py" run; RC=$?
+if [ -n "${Q_TAIL_KEYS:-}" ]; then                                            # 06/10: tail runner (heavy jobs cut over all the cores, q/qtail.py)
+  .venv/bin/python "$REPO/q/qtail.py" > "$HOME/qtail.out" 2>&1; RC=$?
+else
+  .venv/bin/python "$REPO/q/qagent.py" run; RC=$?
+fi
 [ "$RC" -eq 0 ] || $A status "ERREUR AGENT" "agent exit code $RC (see tail_agent.txt)"
 off "$RC"
