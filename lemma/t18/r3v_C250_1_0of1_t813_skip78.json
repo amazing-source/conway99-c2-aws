@@ -1,0 +1,1 @@
+{"s": 1, "part": 0, "nparts": 1, "stats": {"H_in": 46, "H_mine": 27, "H_after_counts": 27, "type_solutions": 360, "type_solutions_ok33": 186, "allow_tests": 6922, "nodes": 823709, "survivors": 1}, "timed_out": true, "survivors": [{"tau": 975, "F": [1, 2], "H": [0, 4096, 131072, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 4], "types": [[1, 2], [1, 8], [3, 4], [5, 6], [6, 7]]}]}

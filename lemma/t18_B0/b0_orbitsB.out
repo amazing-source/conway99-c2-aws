@@ -1,0 +1,4 @@
+stage-B triples: 5595 in 133 matchings; orbits under the stabilisers: 2667; sum of orbit sizes 5595
+stabiliser orders of the matchings carrying triples: [(1, 85), (2, 36), (4, 9), (6, 1), (8, 1), (72, 1)]
+t = e(X_2) of the orbit representatives: [(2, 276), (4, 1371), (6, 1020)]
+triples per matching (top 10): [(648, 424), (616, 420), (416, 417), (400, 423), (302, 412), (251, 413), (226, 421), (202, 414), (170, 409), (153, 360)]

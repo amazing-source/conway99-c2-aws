@@ -1,0 +1,2 @@
+verifier stage C, B1 part 0/1: triples in this part 170, completed 29, timed_out True, 620s
+    {'triples': 29, 'type_solutions': 615, 'type_solutions_ok33': 345, 'option_tests': 14532, 'ts_dead_by_options': 1814, 'nodes': 917552, 'rej_budget': 699546, 'rej_odd_psd': 107970, 'complete': 12, 'complete_rej_full': 11, 'survivors': 1, 'ambiguous': 0}

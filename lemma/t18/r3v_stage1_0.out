@@ -1,0 +1,2 @@
+stage1 B0: deficient pairs 18, admissible rectangles 99, matchings 25514, |Aut| 72, orbits 425, ambiguous PSD 0
+   enumerator file r2_tau_0.json: same list of deficient pairs: True; n_tau 25514 (equal: True); 425 representatives, all are matchings of the verifier: True; pairwise inequivalent and covering all orbits: True

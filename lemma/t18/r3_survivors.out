@@ -1,0 +1,49 @@
+survivor: matching #813, F = [2, 9] (A_p = X_2 vertices [2, 9, 12, 15]), W types [[0, 4], [1, 3], [1, 6], [2, 8], [6, 7]]
+   t = e(X_2) = 4; a_2 on A_p: [1, 2, 2, 1]; a_2 on W: [3, 3, 3, 3, 2, 2, 3, 3, 2, 2]; a_2 on X_2: [1, 0, 1, 0, 0, 1, 0, 0, 0, 2, 0, 0, 2, 0, 0, 1, 0, 0]
+   symmetric, zero diagonal: True
+   support graph: True
+   X_2 types = matching: True
+   N(p) = A_p u W: True
+   W types and mate edges: True
+   sigma-invariant: True
+   budgets: True
+   9(3I-A)+J exactly PSD (rank): (True, 46)
+   11(4I+A)-2J exactly PSD (rank): (True, 45)
+   every s outside A_p has 2 neighbours in N(p): True
+survivor: matching #813, F = [3, 6] (A_p = X_2 vertices [3, 6, 10, 14]), W types [[0, 3], [1, 8], [2, 4], [2, 7], [6, 7]]
+   t = e(X_2) = 4; a_2 on A_p: [1, 2, 2, 1]; a_2 on W: [3, 3, 3, 3, 3, 3, 2, 2, 2, 2]; a_2 on X_2: [0, 1, 0, 1, 0, 0, 2, 0, 1, 0, 2, 0, 0, 0, 1, 0, 0, 0]
+   symmetric, zero diagonal: True
+   support graph: True
+   X_2 types = matching: True
+   N(p) = A_p u W: True
+   W types and mate edges: True
+   sigma-invariant: True
+   budgets: True
+   9(3I-A)+J exactly PSD (rank): (True, 46)
+   11(4I+A)-2J exactly PSD (rank): (True, 45)
+   every s outside A_p has 2 neighbours in N(p): True
+survivor: matching #975, F = [1, 2] (A_p = X_2 vertices [1, 2, 12, 17]), W types [[1, 2], [1, 8], [3, 4], [5, 6], [6, 7]]
+   t = e(X_2) = 2; a_2 on A_p: [1, 1, 1, 1]; a_2 on W: [3, 3, 3, 3, 3, 3, 3, 3, 2, 2]; a_2 on X_2: [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+   symmetric, zero diagonal: True
+   support graph: True
+   X_2 types = matching: True
+   N(p) = A_p u W: True
+   W types and mate edges: True
+   sigma-invariant: True
+   budgets: True
+   9(3I-A)+J exactly PSD (rank): (True, 46)
+   11(4I+A)-2J exactly PSD (rank): (True, 45)
+   every s outside A_p has 2 neighbours in N(p): True
+survivor: matching #975, F = [3, 6] (A_p = X_2 vertices [3, 6, 10, 14]), W types [[0, 2], [1, 2], [3, 4], [6, 7], [7, 8]]
+   t = e(X_2) = 2; a_2 on A_p: [1, 1, 1, 1]; a_2 on W: [3, 3, 2, 2, 3, 3, 3, 3, 3, 3]; a_2 on X_2: [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+   symmetric, zero diagonal: True
+   support graph: True
+   X_2 types = matching: True
+   N(p) = A_p u W: True
+   W types and mate edges: True
+   sigma-invariant: True
+   budgets: True
+   9(3I-A)+J exactly PSD (rank): (True, 46)
+   11(4I+A)-2J exactly PSD (rank): (True, 45)
+   every s outside A_p has 2 neighbours in N(p): True
+distinct survivors examined: 4

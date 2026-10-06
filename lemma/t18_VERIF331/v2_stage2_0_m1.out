@@ -1,0 +1,6 @@
+PSD matrices used: 1
+graph B0 part 0/1: matchings done 425 (of 425 in this part)
+{'tauF_budget25': 3510, 'tauF_psd25': 1177, 'tauF_W': 1834, 'tauF_single': 537, 'tauF_pair': 310, 'nodes': 5504, 'bud_rej': 33290, 'psd_rej': 7697, 'leaves': 887, 'surv': 887, 'wsol_total': 2750}
+survivors on 39 vertices: 887, in 55 matchings, 122 pairs (tau,F)
+  of which with at least one W-type solution: 806, in 51 matchings, 113 pairs (tau,F)
+{'float_rej_cert': 7697, 'charpoly_calls': 2408, 'float_acc': 19682, 'charpoly_rej': 0, 'rej_by_M1': 7697, 'rej_by_M2': 0} seconds 137.2

@@ -1,0 +1,17 @@
+survivor matching #813, F = [2, 9]: M = 9(3I-A)+J on 47 vertices exactly PSD: True, rank 46, kernel dimension 1
+   kernel vector (integers): on S+ [0, 0, 0, 0, 0, 0, 0, 0, 0], on S- [0, 0, 0, 0, 0, 0, 0, 0, 0], at p 4, on X_2 [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0], on W [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; sum = 18
+   admissible neighbour sets Z of a vertex of X_0 \ {p} (budgets on 48 vertices): 1360; with an admissible mate: 1356; satisfying the kernel condition (K): 1356
+   of these 1356: no PSD violation found on Y47 u {z} (48 vertices): 0; budgets hold on Y47 u {z, sigma z}: 1356; no PSD violation on these 49 vertices: 0
+survivor matching #813, F = [3, 6]: M = 9(3I-A)+J on 47 vertices exactly PSD: True, rank 46, kernel dimension 1
+   kernel vector (integers): on S+ [0, 0, 0, 0, 0, 0, 0, 0, 0], on S- [0, 0, 0, 0, 0, 0, 0, 0, 0], at p 4, on X_2 [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0], on W [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; sum = 18
+   admissible neighbour sets Z of a vertex of X_0 \ {p} (budgets on 48 vertices): 1360; with an admissible mate: 1356; satisfying the kernel condition (K): 1356
+   of these 1356: no PSD violation found on Y47 u {z} (48 vertices): 0; budgets hold on Y47 u {z, sigma z}: 1356; no PSD violation on these 49 vertices: 0
+survivor matching #975, F = [1, 2]: M = 9(3I-A)+J on 47 vertices exactly PSD: True, rank 46, kernel dimension 1
+   kernel vector (integers): on S+ [0, 0, 0, 0, 0, 0, 0, 0, 0], on S- [0, 0, 0, 0, 0, 0, 0, 0, 0], at p 4, on X_2 [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1], on W [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; sum = 18
+   admissible neighbour sets Z of a vertex of X_0 \ {p} (budgets on 48 vertices): 1694; with an admissible mate: 1692; satisfying the kernel condition (K): 1692
+   of these 1692: no PSD violation found on Y47 u {z} (48 vertices): 0; budgets hold on Y47 u {z, sigma z}: 1692; no PSD violation on these 49 vertices: 0
+survivor matching #975, F = [3, 6]: M = 9(3I-A)+J on 47 vertices exactly PSD: True, rank 46, kernel dimension 1
+   kernel vector (integers): on S+ [0, 0, 0, 0, 0, 0, 0, 0, 0], on S- [0, 0, 0, 0, 0, 0, 0, 0, 0], at p 4, on X_2 [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0], on W [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; sum = 18
+   admissible neighbour sets Z of a vertex of X_0 \ {p} (budgets on 48 vertices): 1694; with an admissible mate: 1692; satisfying the kernel condition (K): 1692
+   of these 1692: no PSD violation found on Y47 u {z} (48 vertices): 0; budgets hold on Y47 u {z, sigma z}: 1692; no PSD violation on these 49 vertices: 0
+survivors examined: 4; sets Z satisfying (K) in total: 6096; candidates (z, sigma z) with no violation on 49 vertices: 0; ambiguous float cases: 0

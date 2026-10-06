@@ -1,0 +1,4 @@
+enumerator coverage: round 1 completed 826 matchings, round 2 completed 142, total 968 of 1259; not done: 291
+verifier stage B (all 1259 matchings): 4977 triples (tau, F, H)
+on the 968 matchings completed by the enumerator: verifier 2366 triples, 2366 after the counting conditions of A14 g; enumerator 2366; identical sets: True; only verifier 0; only enumerator 0
+stage-B triples of the verifier on the 291 matchings NOT done by the enumerator: 2611, in 90 matchings

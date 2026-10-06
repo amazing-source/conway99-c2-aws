@@ -1,0 +1,15 @@
+case III: k=4 (inner orbits 0..3), e=0
+  labelled structures found: 10080   (search nodes 469755, complete True, 4.1 s)
+  isomorphism classes: 2   (251.3 s)
+  class 0: labelled 5760, |Aut| 3, expected labelled 5760, PSD-ok
+     minus edges: 07 08 09 15 16 19 24 26 28 34 35 37 48 49 57 58 67 69
+     M1: PSD exactly, rank 21 of 21
+     M2: PSD exactly, rank 20 of 21
+  class 1: labelled 4320, |Aut| 4, expected labelled 4320, PSD-ok
+     minus edges: 07 08 09 15 16 19 24 26 28 34 35 37 48 49 56 57 67 89
+     M1: PSD exactly, rank 21 of 21
+     M2: PSD exactly, rank 20 of 21
+case IIb: k=2 (inner orbits 0,1), e=1, plus edge between inner orbit 0 and word orbit 2
+  labelled structures found: 0   (search nodes 1463867, complete True, 0.8 s)
+  isomorphism classes: 0   (0.9 s)
+written structures_III_IIb.json

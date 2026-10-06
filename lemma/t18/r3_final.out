@@ -1,0 +1,10 @@
+﻿r3_p250_1_0of2_idx952_BC.json: matchings 146, completed 53, timed_out True, H 525, C_nodes 196953, survivors 0
+r3_p250_1_1of2_idx955_BC.json: matchings 145, completed 59, timed_out True, H 625, C_nodes 167675, survivors 0
+coverage: 968 + 112 = 1080 of 1259 matchings completed; not done: 179
+stage B on the completed matchings: verifier 3498 triples, enumerator 3498, identical sets: True
+stage-C survivors (distinct 47-vertex configurations) on the completed matchings: 4
+   matching #813, F = [2, 9], W types [[0, 4], [1, 3], [1, 6], [2, 8], [6, 7]]   [r3_p250_1_0of3_idx752_BC.json]
+   matching #813, F = [3, 6], W types [[0, 3], [1, 8], [2, 4], [2, 7], [6, 7]]   [r3_p250_1_0of3_idx752_BC.json]
+   matching #975, F = [1, 2], W types [[1, 2], [1, 8], [3, 4], [5, 6], [6, 7]]   [r3_p250_1_2of3_idx758_BC.json]
+   matching #975, F = [3, 6], W types [[0, 2], [1, 2], [3, 4], [6, 7], [7, 8]]   [r3_p250_1_2of3_idx758_BC.json]
+NOT enumerated at stage C: 179 matchings, carrying 1479 stage-B triples (verifier) in 41 matchings

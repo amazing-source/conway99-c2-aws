@@ -1,0 +1,5 @@
+﻿r3_p250_1_0of3_idx1111_BC.json: matchings 13, completed 12, timed_out True, H 424, stage-C survivors 0
+r3_p250_1_1of3_idx1122_BC.json: matchings 14, completed 13, timed_out True, H 493, stage-C survivors 0
+r3_p250_1_2of3_idx1125_BC.json: matchings 14, completed 13, timed_out True, H 415, stage-C survivors 0
+last round: 38 more matchings completed (997 stage-B triples), survivors found in this round: 0
+STILL NOT DONE at stage C: 3 matchings carrying 482 stage-B triples: [1089, 1091, 1092]

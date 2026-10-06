@@ -1,0 +1,29 @@
+enumerator r3_p250.py, B2, both parts, summed totals:
+   tau: 528
+   tau_done: 528
+   F: 4347
+   F_types_ok: 4347
+   F_base_ok: 3863
+   B_nodes: 50204
+   H_complete: 196
+   H_after_counts: 196
+   type_sols: 11235
+   type_sols_ok33: 4227
+   F_W_ok: 74
+   C_nb1_tests: 59108
+   C_nb2_tests: 11986
+   C_type_solutions: 11752
+   C_ts_dead_by_counts: 9071
+   C_forced_tests: 29330
+   C_nodes: 22602
+   C_survivors: 0
+   H_with_C_survivor: 0
+   rej_budget: 54354
+   rej_psd: 56237
+   psd_tests: 180244
+   psd_float_neg_no_cert: 0
+stage-B triples: 196  distinct (tau,F): 74  distinct tau: 53
+t = e(X_2): [(2, 6), (4, 80), (6, 110)]
+max a_2 on X_2: [(1, 141), (2, 55)]  triples with a_2 <= 3 on X_2 (bound of N3_REPORT.md): 196
+sum over A_p of (a_2 - 1): [(0, 141), (2, 55)]
+matchings carrying triples: [(75, 1), (87, 3), (95, 2), (139, 5), (145, 2), (149, 1), (162, 2), (163, 12), (170, 3), (174, 3), (176, 1), (178, 1), (184, 2), (186, 1), (190, 1), (247, 5), (248, 1), (249, 2), (254, 1), (261, 8), (270, 3), (273, 2), (275, 1), (290, 10), (291, 8), (292, 4), (296, 4), (297, 2), (300, 1), (301, 2), (302, 1), (305, 1), (310, 6), (323, 1), (333, 3), (335, 1), (337, 7), (340, 1), (356, 10), (421, 1), (429, 1), (439, 2), (441, 2), (448, 1), (462, 1), (467, 1), (479, 23), (491, 22), (492, 4), (493, 1), (498, 7), (503, 4), (505, 1)]

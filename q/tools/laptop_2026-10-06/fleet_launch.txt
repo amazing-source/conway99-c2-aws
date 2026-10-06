@@ -1,0 +1,58 @@
+launch at 2026-10-06 13:31:16 UTC
+i-03fc279ba375a421c	c7a.8xlarge	pending	spot	eu-north-1c	sir-ej47pb8j
+i-01597373ced95afb1	c7a.8xlarge	pending	spot	eu-north-1c	sir-5g8znvtg
+i-02f5e47e7fe6aba80	c7a.8xlarge	pending	spot	eu-north-1b	sir-cmz7p97j
+i-054379e6cd4f03332	c7a.8xlarge	pending	spot	eu-north-1b	sir-vedzphhj
+i-04eeecb80a5c72755	c7a.8xlarge	pending	spot	us-east-2a	sir-2n4zmq5h
+i-0f9b88829406a7ab3	c7a.8xlarge	pending	spot	us-east-2a	sir-f1n7nt8k
+i-025ec33081e30e55a	c7a.8xlarge	pending	spot	us-east-2b	sir-cbcfppek
+i-0149028a4e29f2bfe	c7a.8xlarge	pending	spot	us-east-2c	sir-nhkzqqaj
+launch 2 at 2026-10-06 14:08:58 UTC
+i-09c31398edb79ef34	c7a.8xlarge	pending	spot	us-east-1c	sir-n3k7n9wh
+i-09c13ec16873de889	c7a.8xlarge	pending	spot	us-east-1c	sir-56s7q9dg
+
+aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 2): We currently do not have sufficient c7a.8xlarge capacity in the Availability Zone you requested (us-east-1b). Our system will be working on provisioning additional capacity. You can currently get c7a.8xlarge capacity by not specifying an Availability Zone in your request or choosing us-east-1a, us-east-1c, us-east-1d, us-east-1f.
+
+aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 2): We currently do not have sufficient c7a.8xlarge capacity in the Availability Zone you requested (us-east-1a). Our system will be working on provisioning additional capacity. You can currently get c7a.8xlarge capacity by not specifying an Availability Zone in your request or choosing us-east-1b, us-east-1c, us-east-1d, us-east-1f.
+i-009b8ce54f3a78709	c7a.8xlarge	pending	spot	us-west-2d	sir-x3xqmzvg
+i-02c22281be51a85b0	c7a.8xlarge	pending	spot	us-west-2d	sir-4drqq55h
+i-03216e01aa27ec88d	c7a.8xlarge	pending	spot	us-west-2a	sir-hyr7mcak
+i-0c211c967b25c5abf	c7a.8xlarge	pending	spot	us-west-2a	sir-42kfqngg
+i-0f2b25fab00022eeb	c7a.8xlarge	pending	spot	us-east-1d	sir-zweznsgh
+aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 2): We currently do not have sufficient c7a.8xlarge capacity in the Availability Zone you requested (us-east-1c). Our system will be wo
+i-08e6786e978c36698	c7a.8xlarge	pending	spot	us-east-1d	sir-cczfp2gj
+relaunch at 14:24:33 UTC
+i-0163b9385e47e4dfd	c7a.8xlarge	pending	spot	us-east-2c	sir-jinqnkzg
+aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 2): We currently do not have sufficient c7a.8xlarge capacity in the Availability Zone you requested (us-e
+i-0775d0ef0fc2b023a	c7a.8xlarge	pending	spot	us-east-2c	sir-8k1zn6xh
+London launch at 14:33:32 UTC
+i-0a2f259889b0c0e5a	c7a.8xlarge	pending	spot	eu-west-2b	sir-fwy7qxnh
+i-0738a86689ab8fb74	c7a.8xlarge	pending	spot	eu-west-2c	sir-75gfndih
+second account launch at 14:57:45 UTC
+i-084bd5ac37cffb8f8	c7a.2xlarge	pending	spot	eu-north-1c	sir-qmv7q7rh
+aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 2): We currently do not have sufficient c7a.2xlarge capacity in the Availability Zone you requested (us-east-2b). Our system 
+i-064db7733386366ef	c7a.2xlarge	pending	spot	eu-west-2c	sir-vf3zqg6j
+i-080e1d0be9807b4a2	c7a.2xlarge	pending	spot	us-east-2c	sir-x9xzmikg
+relaunch at 15:58:19 UTC
+== use2a_x1: aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 2): We currentl
+== use2b: aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 2): We currentl
+== use2c: aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 2): There is no
+== use2c: aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reached max retries: 2): There is no
+== use2a_x1: aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reache
+== use2b: aws: [ERROR]: An error occurred (InsufficientInstanceCapacity) when calling the RunInstances operation (reache
+== use2c: i-09726ab19a395f27e	c7a.8xlarge	pending	us-east-2c
+second account relaunch at 16:38:37 UTC
+== frere_euw2b: i-0742677fb55fcd71a	c7a.2xlarge	pending	eu-west-2b
+tail launch at 17:13:07 UTC
+== tail t1: i-0242e76bf23d90e2f	c7a.8xlarge	pending	eu-west-2c
+== tail t2: i-02cb727a152a622e4	c7a.8xlarge	pending	eu-west-2c
+== tail t3: i-0bbc42c024eec5d23	c7a.8xlarge	pending	eu-west-2c
+tail t3 relaunch at 17:21:27 UTC
+== tail t3: i-0e3aa8e044356d325	c7a.8xlarge	pending	eu-west-2b
+Ohio retry at 18:03:47 UTC
+second account tail launch at 20:25:09 UTC
+== od_eun1: i-06f59d4983625a388	c7a.2xlarge	pending	None	eu-north-1c
+== od_use2: i-028bed5a8e755ec78	c7a.2xlarge	pending	None	us-east-2b
+== od_euw2: i-0a4ce7e951acd259e	c7a.2xlarge	pending	None	eu-west-2c
+== sp_euw2: i-0a772da7196ebb00a	c7a.2xlarge	pending	spot	eu-west-2b
+== sp_use2: i-077b44162d0b9c0b4	c7a.2xlarge	pending	spot	us-east-2c

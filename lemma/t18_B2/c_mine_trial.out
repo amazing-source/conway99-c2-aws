@@ -1,0 +1,4 @@
+  [2s] {'triples': 196, 'triples_done': 10, 'type_solutions': 1725, 'type_solutions_ok33': 604, 'pair_types_tested': 215, 'K_budget_ok': 3008, 'K_psd_ok': 122, 'ts_with_all_pairs_alive': 9, 'cover_nodes': 29, 'pair41_tests': 50, 'pair41_ok': 17, 'full47_tests': 0, 'survivors': 0, 'psd_cert': 2592, 'psd_exact_fallback': 0, 'rej_budget_np': 1448}
+c_mine B2 part 0/20: 10 triples in this part, done 10, timed_out False, 2s
+  totals: {'triples': 196, 'triples_done': 10, 'type_solutions': 1725, 'type_solutions_ok33': 604, 'pair_types_tested': 215, 'K_budget_ok': 3008, 'K_psd_ok': 122, 'ts_with_all_pairs_alive': 9, 'cover_nodes': 29, 'pair41_tests': 50, 'pair41_ok': 17, 'full47_tests': 0, 'survivors': 0, 'psd_cert': 2592, 'psd_exact_fallback': 0, 'rej_budget_np': 1448}
+  survivors on 47 vertices: 0

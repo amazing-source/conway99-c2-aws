@@ -1,0 +1,9 @@
+﻿   r3cert_1_0of2_idx952_0.jsonl: 1000 certificates
+   r3cert_1_1of2_idx955_0.jsonl: 1000 certificates
+   r3cert_1_0of5_idx1080_0.jsonl: 500 certificates
+   r3cert_1_1of5_idx1082_0.jsonl: 500 certificates
+   r3cert_1_2of5_idx1095_0.jsonl: 500 certificates
+   r3cert_1_0of3_idx1111_0.jsonl: 500 certificates
+   r3cert_1_1of3_idx1122_0.jsonl: 500 certificates
+   r3cert_1_2of3_idx1125_0.jsonl: 500 certificates
+certs: 5000 certificates checked, 0 invalid; number by size of vertex set: [(22, 12), (23, 34), (25, 33), (27, 251), (29, 137), (31, 349), (33, 1005), (35, 1175), (37, 476), (39, 289), (41, 844), (43, 383), (45, 12)]

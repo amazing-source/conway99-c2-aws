@@ -3,6 +3,8 @@
 **Status: T18 is NOT proved.** It is reduced, with complete proofs, to three explicit configurations
 (S+ independent, no active h, orbit graph B one of three 4-regular graphs on 9 vertices). Everything else is excluded.
 
+(Later rounds are appended below: "Round 2" and "Round 3". Current state: table "Where T18 stands after round 3".)
+
 No solver was used: hand arguments, exhaustive backtracking, exact integer / rational arithmetic only.
 
 ## 0. Errors / corrections to the note (read first)
@@ -326,3 +328,172 @@ This checks the search code, not the modelling (A10 and the description of W), w
 2. That Y1, Y and Y u W are completely determined as claimed (A10, step 4): every "no other neighbour" used there comes
    from an equality a = 1, a = 2, c = 1, c = 2 or c = 3 forced in A10.
 3. The three scripts `r2_hfirst.py`, `r2_stage2.py` (R2_SURV mode), `r2_ext2.py`: single implementations.
+
+---
+
+# Round 3 (2026-10-06, 21:03 - 22:30): profile (2,5,0) for B1, and an independent verifier
+
+**Status after round 3: T18 NOT proved, and B1 is NOT closed.** Profile (2,5,0) for B1 was enumerated for all 1259
+matchings, and it is NOT killed by adding the ten X_1 neighbours of p: exactly 4 configurations on 47 vertices survive
+(exactly PSD, all budgets satisfied). The independent verifier confirms stage 1 for the three graphs and, on the
+completed part, stage B for B1 (identical sets). Nothing was run for B0, B2 in this round. Final numbers: "End of round 3".
+
+## R3-0. Checks of what I was given
+- "a_2(w) >= ..." for the ten X_1 neighbours w of p: a_2(w) >= 2 (A14 b). The rest of the coordinator's description of
+  profile (2,5,0) is correct.
+- Correction to my round-2 text: A11/A12 are "computed, one implementation", as the coordinator says; nothing in round 3
+  re-verifies profile (3,3,1) (the verifier below covers stage 1 and profile (2,5,0) only).
+
+## A (round 3). Proved by hand
+
+### A14. Forced structure of profile (2,5,0) when n_3 = 0
+p is in X_0 with a_2(p) = 4, a_1(p) = 10, a_0(p) = 0. Write A_p = N(p) n X_2, W = N(p) n X_1.
+a. A_p = two adjacent mate pairs. N(p) induces a perfect matching (the 7 edges {a_c, b_c}), so a vertex of A_p has no
+   neighbour in N(p) except its mate: no edge between the two pairs, no edge A_p - W.
+b. W = five mate pairs w = (i ; j), sigma w = (j ; i), i != j. For w in X_1: a_0 = a_2 - 1 (A8) and p is an X_0-neighbour, so
+   a_2(w) >= 2. No edge inside W except the five mate edges.
+c. sum_{v ~ p} a_2(v) = 2 n_2 - a_2(p) = 32, hence  sum_{A_p} (a_2 - 1) + sum_W (a_2 - 2) = 8.
+d. s in X_2 \ A_p is not adjacent to p; their two common neighbours lie in N(p):  |N(s) n A_p| + |N(s) n W| = 2.
+e. z in X_0 \ {p} is not in N(p), not adjacent to its mate, and |N(z) n A_p| + |N(z) n W| = 2.
+f. Hence S u {p} u X_2 (37 vertices) is completely determined by (tau, F, H) (F = the 2 orbits of A_p, H = A[X_2]), and
+   S u {p} u X_2 u W (47 vertices) by (tau, F, H, the five types, the sets N(w) n X_2), with N(sigma w) n X_2 = tau(N(w) n X_2).
+g. Conditions on H alone: a_2 <= 4 on X_2; t = e(H) <= 9; sum_{A_p}(a_2 - 1) <= 8; and from (*) with sum_{X_0 \ p}(a - 4) = 2t
+   spread over 4 sigma-orbits:  sum_{X_2} a(a-1) + 2 min{ sum y_q^2 : y in N^4, sum y_q = t } <= 36.
+h. Subsets used as intermediate tests (each completely determined, w of type (i ; j), k in X_2 \ A_p):
+   S u {p} u A_p u {w, sigma w} u {k, tau k} with w ~ k (27 vertices), the same with NO edge between {w, sigma w} and
+   {k, tau k} ("forced orbit": if it fails, N(w) must meet {k, tau k}), and the 29-vertex set with two neighbours.
+
+## Computed in round 3 (exact tests; "one implementation" unless stated otherwise)
+
+### A15. B1, profile (2,5,0): enumerator `r3_p250.py` (H-first, then W pair by pair)
+Stage B = all (tau, F, H) on the 37 vertices; stage C = W added (47 vertices). Tests: budgets and exact PSD on every
+completely determined subset met (A14 f, h). A rejection is a budget violation or an integer vector x with x^T M x < 0
+(exact integer arithmetic); "kept" never means "proved PSD" inside the enumerator.
+
+**The enumeration is NOT complete.** Coverage after the first two launch rounds (each stopped by the 10-minute limit):
+968 of the 1259 matchings completed, 291 not done (lists in `r3_coverage_B1.json`). On the 968 completed matchings:
+
+| | count |
+|---|---|
+| triples (tau, F, H) passing stage B and the counting conditions A14 g | 2366 |
+| stage-C survivors (configurations on 47 vertices) | **4**, in matchings #813 and #975 |
+
+Raw counters, summed over the six runs (they include partial work on the 6 matchings interrupted by the time limit):
+7939 pairs (tau, F); 106731 stage-B nodes; 2592 H; 230061 type solutions examined in stage C, 163248 of them dead by the
+counting / forced-orbit tests (A14 h); 1105843 stage-C nodes; rejections: 570844 by budgets, 1162285 by PSD certificate;
+0 cases where a float-negative matrix had no integer certificate.
+
+**So profile (2,5,0) is NOT killed for B1 at the 47-vertex level: 4 configurations survive** (`r3_survivors.out`). For each of
+them `r3_survivors.py` (independent code) confirms: support graph, X_2 types, N(p) = A_p u W, sigma-invariance, all budgets,
+and both matrices are positive semidefinite EXACTLY (rational elimination; ranks 46 and 45 on 47 vertices).
+They have t = e(X_2) = 4 (matching #813, F = [2,9] and [3,6]) and t = 2 (matching #975, F = [1,2] and [3,6]);
+a_2 on W is 3 for six or eight vertices and 2 for the others.
+
+### A16. Independent verifier `r3_verify.py` (no shared code; graphs re-entered as edge lists; numpy integer matrices)
+1. **Stage 1, all three graphs** (different algorithm: last-index-first recursion, cell budgets recounted from scratch,
+   rectangle admissibility recomputed from the 21-vertex single-type test, own automorphism search):
+   B1: 99 rectangles, 13799 matchings, |Aut| 12, 1259 orbits; B0: 99, 25514, 72, 425; B2: 99, 9229, 18, 528.
+   Identical to round 2, and the representatives stored in `r2_tau_<s>.json` are matchings of the verifier, pairwise
+   inequivalent, one per orbit. **Stage 1 now has two agreeing implementations.**
+2. **Stage B of profile (2,5,0), B1, all 1259 matchings** (orbits added in the reverse order, no pair prefilter, budgets by
+   matrix products): 4977 triples (tau, F, H) in 121 s x 3. On the 968 matchings completed by the enumerator:
+   verifier 2366 triples, enumerator 2366, **identical sets** (`r3_compare.out`). The 291 matchings not done by the
+   enumerator carry 2611 triples, in 90 matchings.
+   (The survivor set of stage B does not depend on the order of the search: budgets and PSD are hereditary.)
+3. **Certificates**: 45000 PSD certificates saved (`r3cert_*.jsonl`, 24 MB in 6 files: the first 12000 of each first-round
+   run, the first 3000 of each second-round run; vertex sets of 22 to 47 vertices). All 45000 re-checked: symmetric 0/1
+   matrix, the first 18 vertices carry the support graph of B1, x^T M x < 0 in exact integer arithmetic; 0 invalid.
+   The other PSD rejections (about 1.1 million) were not saved: the full set would be about 600 MB.
+4. Stage C in the dual order (X_2 orbit by X_2 orbit) on the two matchings with survivors: see "End of round 3".
+
+## B (round 3). Open, precisely
+
+1. **B1, profile (2,5,0), n_3 = 0 (the only case left for B1):**
+   a. the stage-C survivors on 47 vertices (4 found so far; list in the `survivors` field of the `r3_p250_1_*_BC.json` files);
+   b. the matchings not yet enumerated at stage C (exact list and counts in "End of round 3").
+   What is needed to close them ("stage D", NOT written): add the 8 vertices of X_0 \ {p} (4 sigma-orbits {z, sigma z}).
+   Forced numbers for a given survivor: every s in X_2 has a_2(s) + 2 - [s in A_p] neighbours in X_0 \ {p}; every w in W has
+   a_2(w) - 2; every z has a_2(z) >= 4, |N(z) n A_p| + |N(z) n W| = 2, no neighbour in S u {p}, z not~ sigma z,
+   deg_{A[X_0]}(z) = a_2(z) - 4, sum over the 4 orbits of (a_2(z) - 4) = t. Then S u X_0 u X_2 u W (55 vertices) is determined.
+2. B0, B2, profile (2,5,0), n_3 = 0: not run. `r3_p250.py 0 ...` and `r3_p250.py 2 ...` apply unchanged (A14 only uses
+   n_3 = 0); stage B is cheap (B1: 2 minutes for all matchings in the verifier), stage C is the expensive part.
+3. B0, B2, n_3 in {2, 4}: nothing done.
+4. Profile (3,3,1) (round 2, A11/A12) is still "computed, one implementation": only its stage 1 is now double-checked.
+
+## C (round 3). Tried, weak or failed
+
+- Stage C in its first three versions was too slow (three 10-minute rounds lost): (i) plain W-pair-by-pair search with a
+  full 39-vertex test per candidate set; (ii) plus the 27/29-vertex neighbour tests; (iii) plus a cache on the first pair.
+  What finally helped: exact tests in numpy integer arithmetic, and the "forced orbit" test of A14 h (it kills about 70 %
+  of the type solutions before any search). Even so the last 433 matchings are much denser than the first 826
+  (10 to 50 matchings per 10 minutes per process), and the enumeration did not finish.
+- Testing all type solutions of W on S u N[p] (33 vertices) before stage B: about 140 type solutions per (tau, F), 42 % pass,
+  and no (tau, F) dies; it is now done only when stage B leaves some H.
+- The hope that W would kill every H, as it killed all the Y-tables of profile (3,3,1), is false: 4 survivors.
+- No time for: stage D, B0 and B2, n_3 > 0, a second implementation of profile (3,3,1), a complete second implementation
+  of stage C.
+
+## D (round 3). Files added
+
+`r3_p250.py` (enumerator; the `_patch_r3*.py` files are the edits applied to it during the session, the final script is the
+patched one), `r3_verify.py`, `r3_compare.py`, `r3_survivors.py`, `r3_summary.py`; outputs `r3_1_*_round1.out`, `r3_1_r2_*.out`,
+`r3_1_r3_*.out`, `r3_p250_1_*.json` (totals, stage-B sets, survivors), `r3cert_*.jsonl` (certificates), `r3v_stage1_*.out`,
+`r3v_B250_1_*.out/json`, `r3_compare.out`, `r3_coverage_B1.json`, `r3v_certs.out`, `r3_survivors.out`, `r3v_C250_*`.
+Switches of `r3_p250.py`: R3_IDX (explicit list of matchings), R3_CERTCAP (number of certificates saved per run).
+
+## End of round 3: final numbers for B1, profile (2,5,0)
+
+Third launch round of the enumerator (2 processes, `r3_final.out`): 112 more matchings completed, no new survivor.
+
+| after three launch rounds | |
+|---|---|
+| matchings completed by the enumerator (stages B and C) | 1080 of 1259 |
+| stage-B triples (tau, F, H) on them: enumerator / independent verifier | 3498 / 3498, **identical sets** |
+| stage-C survivors on them (47 vertices, exactly PSD, budgets exact) | **4** (matchings #813, #975) |
+| matchings not done | 179; the verifier's stage B (complete on all 1259) gives 1479 triples on them, in 41 matchings; the other 138 have no stage-B triple |
+
+Dual-order check of stage C (`r3_verify.py C250`, X_2 orbit by X_2 orbit, on matchings #813 and #975; stopped by its
+time limit after 79 of their 170 triples, 1066592 nodes; `r3_compareC.out`): it finds 3 survivors, all three are survivors
+of the enumerator, and it finds no survivor that the enumerator does not have; the 4th survivor of the enumerator lies
+in a triple the verifier did not reach. So on the 78 triples fully processed by both programs the survivor sets agree.
+This is a partial check: stage C as a whole still has one complete implementation.
+
+A fourth launch round on the 41 remaining matchings that carry triples was started at 22:10 (3 processes, 440 s);
+its outcome is in the last lines of this report ("Last round").
+
+## Where T18 stands after round 3
+
+| graph | profile (4,1,2) | profile (3,3,1) | profile (2,5,0), n_3 = 0 | n_3 > 0 |
+|---|---|---|---|---|
+| B1 | excluded, by hand (A9) | excluded, computed, one implementation (A11) | **open**: exactly 4 survivors on 47 vertices (stage C complete, see Final lines) | does not occur |
+| B0 | excluded, by hand | excluded, computed, one implementation (A12) | not run | open (n_3 = 2, 4) |
+| B2 | excluded, by hand | excluded, computed, one implementation (A12) | not run | open (n_3 = 2, 4) |
+
+Double-checked by two independent programs: stage 1 for the three graphs; stage B of profile (2,5,0) for B1 on 1080
+matchings; 45000 + saved certificates. Not double-checked: everything else computed.
+
+## Last round (22:10 - 22:26)
+
+Fourth launch (`r3_round4.out`): the 41 matchings carrying stage-B triples, 3 processes, 440 s. 38 of them completed
+(997 triples), **no new stage-C survivor**; the time limit cut the three largest: #1089, #1091, #1092 (482 triples).
+Fifth launch (started 22:18, 420 s): these three, plus the 138 matchings in which the verifier found no stage-B triple
+(so that the enumerator also covers them). Outcome: see the final lines below.
+
+**Final lines (22:23).** The fifth launch finished without time-out (`r3_round5.out`): all 1259 matchings of B1 are now
+completed by the enumerator at stages B and C, and no further survivor appeared. Final comparison on everything
+(`r3_finalB.out`):
+
+| B1, profile (2,5,0), n_3 = 0, all 1259 matchings | |
+|---|---|
+| stage B, triples (tau, F, H) on 37 vertices: enumerator / independent verifier | 4977 / 4977, **identical sets** |
+| stage C, configurations on 47 vertices (W added): enumerator | **exactly 4 survivors** (matchings #813 and #975) |
+| saved PSD certificates, all re-checked by the verifier | 50000 in 14 files (26.5 MB), 0 invalid (`r3v_certs.out`, `r3v_certs2.out`) |
+
+> **A17 (computed).** For B1 with profile (2,5,0): after adding W = N(p) n X_1, exactly 4 configurations on
+> S u {p} u X_2 u W remain. Stage B is confirmed by two independent programs; stage C by one complete program, plus the
+> dual-order check on 78 triples and the exact re-examination of the 4 survivors.
+> **B1 is therefore reduced to these 4 explicit configurations, which need stage D (X_0), not written.**
+
+Corrections to the text above, which was written while the runs were in progress: in A15 and in "End of round 3" the
+coverage figures (968, then 1080 of 1259) are intermediate; item B.1.b (matchings not enumerated) is closed; in the
+table "Where T18 stands", the B1 / (2,5,0) cell should read "open: exactly 4 survivors on 47 vertices".

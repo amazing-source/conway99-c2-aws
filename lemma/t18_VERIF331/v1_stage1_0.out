@@ -1,0 +1,9 @@
+graph B0: deficient pairs [(0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (1, 7), (1, 8), (2, 3), (2, 6), (2, 8), (3, 5), (3, 7), (4, 5), (4, 6), (5, 6), (5, 7), (6, 8), (7, 8)]
+rectangles passing (i): 99 ; of them budget-failing on 21 vertices (out): 0
+admissible rectangles, z not adjacent to p (budgets + exact PSD on 21 vertices): 99
+admissible rectangles, z adjacent to p: 63
+in-admissible but not out-admissible: []
+|Aut(B)| = 72
+(i)+(iii) only: 25514 matchings, 425 orbits under Aut
+(i)+(iii)+single-type PSD(out): 25514 matchings, 425 orbits under Aut
+seconds 238.1 {'float_rej_cert': 0, 'charpoly_calls': 162, 'float_acc': 0, 'charpoly_rej': 0}
