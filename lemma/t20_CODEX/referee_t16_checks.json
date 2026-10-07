@@ -1,0 +1,56 @@
+{
+  "source_commit": "9ad23660d9e7d6a3f525f26b094f900ed59ff698",
+  "profile_A_obstructions_verified": 240,
+  "profile_A_candidate_orbits_recomputed": 6544,
+  "profile_B_obstructions_verified": 32,
+  "profile_B_all_witnesses_three_demand_vertices_two_partners": true,
+  "negative_control": {
+    "zero_demand_position": 0,
+    "received_verifier_accepts_non_demand_singleton": true,
+    "supplemental_membership_check_rejects": true
+  },
+  "coverage_enumerators_rerun": false,
+  "seconds": 5.390999999988708,
+  "sources": {
+    "lemma/T16_PROOF.md": {
+      "sha256_bytes": "e01337f075c6577b67f1f6bee6dae474cb9ee1dbba64a7f04fbb1d6604df6c8a",
+      "sha256_lf": "e01337f075c6577b67f1f6bee6dae474cb9ee1dbba64a7f04fbb1d6604df6c8a"
+    },
+    "lemma/t16/dossier_2026-10-04/C2_PROLONGEMENT_SUPPORT16_PREUVE_CUBE.txt": {
+      "sha256_bytes": "c83b0abbd7228766bb8ca5f7dec6874fd1641fd858f5209832562e0a535d7faf",
+      "sha256_lf": "c83b0abbd7228766bb8ca5f7dec6874fd1641fd858f5209832562e0a535d7faf"
+    },
+    "lemma/t16/dossier_2026-10-04/C2_WAGNER_BORNE_9_SUR_7.txt": {
+      "sha256_bytes": "27e16d4f78161b95806e355b36cd1e91ded6fff9154db5853f8ec9b2ab3dcc9c",
+      "sha256_lf": "27e16d4f78161b95806e355b36cd1e91ded6fff9154db5853f8ec9b2ab3dcc9c"
+    },
+    "lemma/t16/dossier_2026-10-04/LEMME_EGALITE_8_SUR_7_C2.txt": {
+      "sha256_bytes": "ab37fce1dc9ed5b30d85306fad9f79d22cba4cbec7e48e1acb5a7d4684bb9a33",
+      "sha256_lf": "ab37fce1dc9ed5b30d85306fad9f79d22cba4cbec7e48e1acb5a7d4684bb9a33"
+    },
+    "lemma/t16/dossier_2026-10-04/LIRE_DOSSIER_WAGNER.txt": {
+      "sha256_bytes": "afb58c5fb0d1f0b7f6830a86563e696ecba29258857c92d34d704bdfdeeec036",
+      "sha256_lf": "afb58c5fb0d1f0b7f6830a86563e696ecba29258857c92d34d704bdfdeeec036"
+    },
+    "lemma/t16/dossier_2026-10-04/ENUMERER_WAGNER_PROFIL_A.py": {
+      "sha256_bytes": "ba95dca37f22e97ba3878f5dcef3de5dee51e578075c1c7ce76e4c6a295d5294",
+      "sha256_lf": "ba95dca37f22e97ba3878f5dcef3de5dee51e578075c1c7ce76e4c6a295d5294"
+    },
+    "lemma/t16/dossier_2026-10-04/ENUMERER_WAGNER_PROFIL_B.py": {
+      "sha256_bytes": "310661529e189d6e8cb3c10aa1d78c92782b1ea5bb20a6ed0b4e5c01df4cc471",
+      "sha256_lf": "310661529e189d6e8cb3c10aa1d78c92782b1ea5bb20a6ed0b4e5c01df4cc471"
+    },
+    "lemma/t16/dossier_2026-10-04/VERIFIER_WAGNER_CERTIFICATS.py": {
+      "sha256_bytes": "afb3a06980835977794607fba166a0366d94600c6b23286cdab9d06a3cd9e2dd",
+      "sha256_lf": "afb3a06980835977794607fba166a0366d94600c6b23286cdab9d06a3cd9e2dd"
+    },
+    "lemma/t16/dossier_2026-10-04/WAGNER_PROFIL_A_CERTIFICATS.json": {
+      "sha256_bytes": "6a688eda8549475f467a84aa09ea0712be1c9ee60fdae3e4bc963eaf353ba6b3",
+      "sha256_lf": "6a688eda8549475f467a84aa09ea0712be1c9ee60fdae3e4bc963eaf353ba6b3"
+    },
+    "lemma/t16/dossier_2026-10-04/WAGNER_PROFIL_B_CERTIFICATS.json": {
+      "sha256_bytes": "c64ea5a164779c571b8e2841e74adb7c3b05ae9318df020423c9f74b7308fc3d",
+      "sha256_lf": "c64ea5a164779c571b8e2841e74adb7c3b05ae9318df020423c9f74b7308fc3d"
+    }
+  }
+}

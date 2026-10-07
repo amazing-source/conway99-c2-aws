@@ -2,8 +2,9 @@
 
 Reviewer: CDX, 2026-10-07. This is the section-B deliverable requested with
 `AUDIT_REDUCTION.md`, following the single section-A pass in
-`../t20_CODEX/REFEREE_REDUCTION.md`. No search or solver was run, and no
-producer, engine, queue or historical result was modified.
+`../t20_CODEX/REFEREE_REDUCTION.md`. No frame search or solver was run, and
+no producer, engine, queue or historical result was modified. The later
+T16 certificate verification is recorded separately below.
 
 **The mathematical rules below do not use g or the index [Nmax:N].** The
 replacement of `g in {18,20}` by A.4 does not invalidate them. This is
@@ -52,7 +53,7 @@ an uninspected original C1 note was reread.
 | Weyl dominance / diagram subgroup reduction | Reflections in norm-two roots preserve integral U; a chamber representative and the stabilizer chamber lose no orbit. Only checked lattice automorphisms may be used for further quotienting. | R is isometry invariant; `AUDIT_REDUCTION.md` C, YP/Y2 headers; CDX, OK principle, enumeration coverage belongs to C. |
 | Swap; HS:44-48,86-89 | R is symmetric in the two normals. Root energy and the sorted two shadow-coset hit counts are isometry/sign invariants. Retain I(y1)<=I(y2), with the opposite order covered by the complete producer. | `AUDIT_REDUCTION.md` C(3); CDX, OK conditional on C's coverage. |
 | Characteristic trap; FD:1415-1428 | For characteristic z of norm 16, 42 odd word squares and the parity of the h contribution give E(z)>=46, hence Y<=66. | R-v; R A.8:149-150; CDX, OK. |
-| Optional MIN97 / Y=13; FD:1431-1453 | A norm-three witness with Y=13 has E=8 and gives an odd integer eigenfunction of norm 16. **R-vi allows E=8**; excluding it additionally requires the support-16 theorem. | R-vii plus the cube/Wagner proof cited by `../BRIDGE.md` and FD; CDX, **HOLE relative to R alone**, see H5. |
+| Optional MIN97 / Y=13; FD:1431-1453 | A norm-three witness with Y=13 has E=8 and gives an odd integer eigenfunction of norm 16. **R-vi allows E=8**; excluding it additionally requires T16. | R-vii plus the separately reviewed cube/Wagner proof; CDX, OK with T16, see H5 and `../t20_CODEX/REFEREE_T16_PROOF.md`. |
 | Candidate h/u norms and perpendicularity; FD:191-194 | The chosen h must be among norm-four vectors perpendicular to y; the u among norm-three vectors perpendicular to y. | R-i, R-ii; CDX, OK; shell completeness H3. |
 | h-admissibility at shadow roots; FD:192-193 | The remaining energy 3 at beta allows only integer h heights 0,+/-1. | R-v, A.8; CDX, OK. |
 | Candidate sign representatives; FD:134-140 | Changing the sign of a word is a choice of orbit representative; changing an h sign interchanges Same/Opp labels. Each D7 pair still has one line of each kind. | R-ii..iv up to these gauge choices; CDX, OK. |
@@ -174,12 +175,23 @@ recomputed the table or the Niemeier input data.
 LAB's stated potentially affected list has 27 IDs:
 `001,003,006,007,014,022,023,024,026,027,028,037,049,050,052,053,077,079,080,101,103,104,105,117,137,138,152`.
 Removing the two said to be excluded without the engine, 117 and 152,
-leaves **25**, not the 24 stated in that message. The exact audit manifest
-must reconcile the additional omission before the scope is called complete.
+leaves **25**, not the 24 stated in that message. Message 56 corrects this:
+001 (Golay) was omitted from that count and is audited separately.
 The reported zero exposed pairs among 63,825 sampled searched pairs is
 sampling, not a proof. LAB proposes complete pair-stream exposure checks
 and general-kernel searches for the exposed cases; no such run was performed
 or authorized by CDX through this report.
+
+**Follow-up, message 56:** `measures/AUDIT_RIGID_MANIFEST_2026-10-07.json`
+now records the non-Golay jobs, and `q/audit_rigid.py` provides the exposure
+check and general-kernel re-search. CDX read that consumer but did not run it.
+The archived `measures/AUDIT_RIGID_golay_001.json` reports a complete stream
+of 117,068 pairs: 117,050 general, 18 rigid and exposed. All 18 recorded
+rechecks exit at the characteristic-vector trap before the kernel. CDX
+checked these counts and verdicts in the JSON; the recorded engine hash
+prefix matches the inspected engine. This is evidence for 001, not an
+independent replay or a completion of the remaining 24 lattice audits.
+H2 remains open globally.
 
 ### H3. Exhaustive numerical catalogues are not certified by exact acceptance
 
@@ -203,6 +215,20 @@ for complete shell-count certification. SHELL section 1.1 gives the claimed
 count `49128-12r` for norm-four lines; its theta derivation was outside this
 audit, and agreement with that count has not been checked here for every
 used lattice.
+
+**Follow-up, message 56:** LAB archived
+`measures/SHELL_COUNTS_2026-10-07.json` and reports exact norm checks on the
+engine's returned norm-four vectors. CDX read all 156 entries (000-155)
+and checked that each has `N3=4096`, `ok=true`, and
+`N4=expected_N4=98256-24*N2`, the signed version of the cited line count.
+Thus the recorded counts agree for all 156, rather than just the earlier
+078 example. This resolves the missing norm-four count comparison **at the
+level of the archived result**, subject to the theta count, distinctness of
+the enumerated vectors and provenance tying the measured input/source to
+the covering runs. CDX did not re-enumerate these shells or audit the theta
+derivation; the measurement script was not found in the inspected q/measures
+sources. This evidence does not by itself certify every floating dot product
+or numerical rank/root-type decision mentioned above.
 
 ### H4. Budget model versus negative solver verdict
 
@@ -230,6 +256,15 @@ proof. Record it as a separate reviewed dependency before counting any
 `FD_MIN97=1` or corresponding quick-deferral exclusion. This is not a
 new objection to the already stated bridge dependency, nor evidence of an
 incorrect cube/Wagner theorem.
+
+**Follow-up, message 56: separate T16 referee pass completed.** See
+`../t20_CODEX/REFEREE_T16_PROOF.md`. No blocking mathematical error was found
+in the hand proof or coverage sources. A fresh exact check validated all
+240 A and 32 B certificate obstructions, including a necessary Hall-witness
+membership check omitted by the received verifier. All shipped witnesses
+satisfy that check; the verifier repair and an index wording correction are
+recorded in the report. H5's separate-dependency requirement is discharged
+by T16 plus this review; the rule still does not follow from R alone.
 
 ## Answer to the index question
 
