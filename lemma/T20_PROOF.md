@@ -1,23 +1,25 @@
 # T20: no sigma-odd integer (-4)-eigenfunction of squared norm 20 on a srg(99,14,1,2)
 
 > **State of this text (main session, 07/10, 14:10 UTC).**
-> 1. Every case of the proof is now closed: the last one, case I with n_3 = 2, is section 9.B.6 (Computation 9.29, two
->    programs, written on 07/10 at 14:00 UTC). **Section 9.B.6 has not yet had its referee pass**; until it has, read
->    Theorem 10.2 as "proved, last section awaiting review".
+> 1. Every case of the proof is closed: the last one, case I with n_3 = 2, is section 9.B.6 (Computation 9.29, two
+>    programs, written on 07/10 at 14:00 UTC). Section 9.B.6 and `SPEC_ROUTE_B_N3.txt` had their referee pass on 07/10
+>    (addendum to `lemma/t20_CODEX/REFEREE_T20_PROOF.md`): no blocking error; its two presentation points are merged.
+>    The referee did not audit the search code; its reserves G1 (provenance table) and G2 (verifier contract) stand.
 > 2. III.1 has a second verification: a verifier re-traversed the whole tree (1,628,864 nodes, same counts per level, same
 >    kept count at every node, 0 complete), and the single node the first program rejected by the rank bound is also dead
 >    without it (`lemma/t20_III1/VERIF.md`). Scope of its independence, as that report says: its budget test, its PSD test and
 >    its bookkeeping are its own; it shares the model file `cases.py` and parts of the enumeration skeleton and of the
 >    candidate-generation loops with the first program. Sections 0.2, 7.3, 7.4, 10.2 and 10.3 still say "one program".
-> 3. Case I, n_3 = 0: the second program (`in_verify.py`, no code shared with the first) is complete on eleven of the twelve
->    cases: stage 1 identical, stage 2 agreeing at every node, 0 complete configurations; where the first program used the
->    rank bound, the second closes the node by its own search. I.1 (3,4,0): 7,279,961 nodes, branch
->    `lemma-run/t20_I1_340-i-019e86d399c17954f`; the ten others on the branches `lemma-run/t20_Iv_{B,C,D,E,H,I,J}-*`. The last
->    case, I.1 (4,2,1), is running (`lemma/T20_BOARD.md`, line C2). Sections 0.2, 9.A and 10.2 still give the earlier counts.
+> 3. Case I, n_3 = 0: the second program (`in_verify.py`, no code shared with the first) is complete on all twelve cases
+>    (07/10, 14:33 UTC): stage 1 identical, stage 2 agreeing at every node, 0 complete configurations; where the first
+>    program used the rank bound, the second closes the node by its own search. I.1 (3,4,0): 7,279,961 nodes, branch
+>    `lemma-run/t20_I1_340-i-019e86d399c17954f`; I.1 (4,2,1): 1,406,917 nodes, branch
+>    `lemma-run/t20_Iv_G-i-05703a74fbb027423`; the ten others on the branches `lemma-run/t20_Iv_{B,C,D,E,H,I,J}-*`.
+>    Sections 0.2, 9.A and 10.2 still give the earlier counts (two of twelve).
 > 4. Corrections of the referee report `lemma/t20_CODEX/REFEREE_T20_PROOF.md` merged on 07/10: E1 (sign in the proof of
 >    Corollary 5.2), E2 (split parameter 3 means tasks of level 4), C2 (paths), G3 (item 2 above). Still to merge: G1, G2, C3.
 
-## Proof text, state of 2026-10-07. Every case is closed; the last section (9.B.6) awaits its referee pass.
+## Proof text, state of 2026-10-07. Every case is closed and refereed; every computed step has a second program.
 
 Self-contained proof text, written on 2026-10-07 from the working reports of the repository `conway99-c2-aws`
 (`lemma/T20_WORK.md`, `lemma/T20_BOARD.md`, `lemma/t20/T20_REPORT.md`, `lemma/t20_R2/REPORT.md`, `lemma/t20_III1/`,
@@ -2514,10 +2516,9 @@ A phi = -4 phi and sum phi(x)^2 = 20.
 *Proof.* By Theorem 10.1 such a function would give a configuration in case I with n_3 = 2, and there is none by
 Proposition 9.30. QED
 
-State of the verification on 07/10, 14:10 UTC: Computation 9.29 has two programs sharing the model and no code;
-section 9.B.6 has not been refereed yet; Computation 7.5 (III.1) has a second verification with shared components;
-Computations 9.19 / 9.20 have a second program on eleven of the twelve cases, the twelfth running (see the note at
-the top of this text).
+State of the verification on 07/10, 14:40 UTC: Computation 9.29 has two programs sharing the model and no code,
+and section 9.B.6 is refereed; Computation 7.5 (III.1) has a second verification with shared components;
+Computations 9.19 / 9.20 have a second program on the twelve cases (see the note at the top of this text).
 
 ### 10.2 What is proved by hand, what is computed, what is open
 
