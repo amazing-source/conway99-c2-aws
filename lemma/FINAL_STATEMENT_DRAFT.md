@@ -1,9 +1,9 @@
-# Route (C): the final statement and what it rests on — DRAFT 6 of 2026-10-07, state at 15:47 UTC (clock of the lab PC)
+# Route (C): the final statement and what it rests on — DRAFT 7 of 2026-10-07, state at 17:50 UTC (clock of the lab PC)
 
 Lab session (Claude). Board line D5 of `lemma/T20_BOARD.md` (compute repo). This is a recheck by AI sessions, not a human referee
 and not a formal proof.
 
-> **Not yet true on the day of writing.** Section 5 lists what is still missing; nothing below may be quoted as a result before.
+> **State on 07/10, 17:50 UTC: the 156 lattices are all excluded in the lab tracker** (conversion run at 17:47, after the user accepted T18 and T20; record `data/finishC/lemmas_accepted.json`). The statement below holds under the conditions of section 6, which are part of it. It is the work of AI sessions: no human has read the proofs, nothing is formalised. Still to do before it is presented as a finished proof: section 5.
 
 ## 1. Statement
 
@@ -22,7 +22,7 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 | R0 | An automorphism of order 2 has exactly one fixed vertex | `upstream/AUDIT_REDUCTION.md` A.0 | hand proof (laptop session); refereed by Codex: no error |
 | R1 | Theorem R: frame (7 h of norm 4, 42 u of norm 3, y_1, y_2 of norm 7) in an odd unimodular lattice U of rank 24 without vector of norm 1; properties (R-i)..(R-vii), among them E(v) = 7 (v,v) - (v,y_1)^2 - (v,y_2)^2 >= 8 and the dictionary "v in U -> sigma-odd integer eigenfunction of squared norm 2 E(v)" | same, A.1-A.8; U indecomposable: A.9 | hand proof; refereed by Codex: no error. Cited theorems: the oddity formula; classification of forms over F_7. **The input "g in {18, 20}" of the older notes is no longer used** (A.4), and no rule of the engine or of the producer uses g (checked by me and by Codex) |
 | R2 | U is one of 156 lattices | Borcherds' classification (cited) | the 156 data lattices: OK-RECOMPUTED 04/10 (determinant 1, odd, no norm 1, root systems; the seven pairs with equal root systems separated by their even neighbours). Mass check: not done, not needed |
-| R3 | For each lattice, the pairs (y_1, y_2) up to Aut(U) x signs; swap and twin rules | C1 producers; `AUDIT_REDUCTION.md` section C | the producer's filters follow from Theorem R (reread). Completeness of the enumeration (board F4): the lab's independent enumerator `q/ypairs_c2.py` (all vectors of norm 7 by Fincke-Pohst, own simple roots) against the producer, both brought to one canonical form: **140, 135 and 141: the two pair sets are EQUAL** (288, 464 and 331 pairs; nothing only on one side; 22,892,544 lines of norm 7 = the theta-series value 11178 * 4096 / 2; files `f4/<lid>_compare.json` of run/q-i-02aa613ee361fbc10, read by me). With an identity-only symmetry file the producer lists most pairs twice (both signs of y_2): harmless duplicates. 064 (a_5^4, roots of rank 20, the non-spanning case) is running. Golay family: two implementations agree on 001 |
+| R3 | For each lattice, the pairs (y_1, y_2) up to Aut(U) x signs; swap and twin rules | C1 producers; `AUDIT_REDUCTION.md` section C | the producer's filters follow from Theorem R (reread). Completeness of the enumeration (board F4): the lab's independent enumerator `q/ypairs_c2.py` (all vectors of norm 7 by Fincke-Pohst, own simple roots) against the producer, both brought to one canonical form: **140, 135 and 141: the two pair sets are EQUAL** (288, 464 and 331 pairs; nothing only on one side; 22,892,544 lines of norm 7 = the theta-series value 11178 * 4096 / 2; files `f4/<lid>_compare.json` of run/q-i-02aa613ee361fbc10, read by me). With an identity-only symmetry file the producer lists most pairs twice (both signs of y_2): harmless duplicates. **064 (a_5^4, roots of rank 20, the non-spanning case): EQUAL as well** (17:43; 1,050,528 pairs on both sides, 1,856 y_1 orbits on both sides, 2,100,288 stream lines, nothing only on one side, 22,892,544 lines of norm 7; `f4/064_compare.json` of run/q-i-011dce74cd612fc52, read by me). For 064 both programs were run in parallel (producer in 28 chunks by its own option and merged with a completeness check; enumerator with its loop over y_1 dealt to 28 processes): both changes read by me before the run, and the same machine first reproduced the sequential result of 140 on every field. So the enumeration was compared on four lattices of 156; for the others it rests on the producer's code | Golay family: two implementations agree on 001 |
 | R4 | Each pair is excluded by a rule of the engine | `upstream/AUDIT_ENGINE_RULES.md` (Codex: one line per rule, against Theorem R) | no rule uses g. Five qualifications H1-H5, section 3bis |
 | R5 | T16: no eigenfunction of squared norm 16 (rule "norm-3 x with Y = 13") | `lemma/T16_PROOF.md` + dossier of 04/10 | refereed by Codex on 07/10: no blocking error (one defect in the dossier's verifier, covered by a stronger recheck) |
 | R6 | T18: squared norm 18 | `lemma/T18_PROOF.md` | proved and refereed twice per the laptop session; not reread by me |
@@ -53,9 +53,9 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 
 ## 4. Coverage of the 156 lattices (lab tracker, 07/10)
 
-Excluded in the tracker: 143. Open: 13.
+Excluded in the tracker: **156. Open: 0** (since 17:47 UTC on 07/10; backup of the tracker at 143 in `logs/`).
 
-**Read "excluded" with these reservations until the items of section 5 are done:**
+**Reservations that were attached to "excluded" during the day, and how each ended:**
 - 20 lattices were excluded subject to the rigid-kernel audit H2: the audit is now complete and clean for all 20 (15:22); this
   reservation is lifted for them;
 - 105: its 6,310 "pair budget" pairs are now excluded without a solver (H4 closed, 14:45);
@@ -82,11 +82,10 @@ Excluded in the tracker: 143. Open: 13.
 
 Twin deferrals: 1,622 dependencies between the 104 stream lattices, no cycle (OK-RECOMPUTED).
 
-The 13 open lattices: all swept. 5,190,752 pairs pending T18 and 2,508,295 pending T20; no INCOMPLETE pair; one y_1
-representative, 003:181, carries no pair record and is covered by the fixed-y1 certificate (pending T18 and T20, like every deferred
-pair). Dry run of the conversion at 15:47 with all the real certificates: **156 of 156 if T18 and T20 are accepted**; without
-that assumption every one of the 13 is blocked by "T18 / T20 not accepted" and by nothing else. Nothing is written in the tracker:
-`lemmas_accepted.json` does not exist yet.
+The 13 lattices that were open (001, 002, 003, 005-009, 011-015): all swept; 5,190,752 pairs rested on T18 and 2,508,295 on T20, each
+with an exact certificate (R8); no INCOMPLETE pair; one y_1 representative, 003:181, carries no pair record and is covered by the
+fixed-y1 certificate (R8'). Converted at 17:47 by `scripts/cloud/convert_deferred.py --write` with the real lemma file and the real
+certificates: 13 lattices marked excluded, exactly these 13 tracker entries changed.
 
 Provenance of the records of the 143 excluded lattices (recensement of 07/10, `measures/RECONCILE_RECORDS_2026-10-07.json`, script
 `q/tools/lab_2026-10-07/reconcile_records.py`; it locates records, it re-derives nothing):
@@ -100,17 +99,19 @@ Provenance of the records of the 143 excluded lattices (recensement of 07/10, `m
 Since 07/10 a copy of the lab PC's folder `data/finishC` is on the branch `lab-records-2026-10-07` of the compute repository (as it
 is; not a certified archive). The user decided on 07/10 not to re-run the lab-local lattices now.
 
-## 5. What must still happen before the statement may be claimed
+## 5. What is done, and what is still to do
 
-1. ~~T20: archival G1~~ done at 15:26 per the laptop session (`lemma/ARTIFACTS_T18_T20.md`: one line per computation of T16 / T18 / T20, program versions, run branches; raw outputs of n_3 = 2 on the branch `lemma-archive/t20_n3_routeB`). Not reviewed by me or by Codex; the page says itself that the machines did not record the commit they cloned (versions inferred from launch times). Left in the text of T20: G2 (wording of the verifier contract).
-2. ~~Rigid-kernel audit H2~~ done: 25 of 25 lattices (15:36).
-3. ~~143~~ done: hand proof refereed by Codex (accepted).
-4. ~~Stream certificates~~ done: 7,762 of 7,762 (15:46).
-5. ~~003:181:182~~ done at 15:00 without computation (Corollary Y1 and its certificates).
-6. Pair enumeration (R3): 140, 135 and 141 equal; 064, the one whose roots do not span (a_5^4, rank 20), is running.
-7. Then: `data/finishC/lemmas_accepted.json` written with the references of T18 and T20 (T16 is already a rule of the engine),
-   and `convert_deferred.py --write`.
-8. Decision of the user on the 84 lab-local lattices (reconciliation with the stored records, or re-run).
+Done on 07/10: T20 text and referee passes; archival G1 (per the laptop session, `lemma/ARTIFACTS_T18_T20.md`; not reviewed; program
+versions inferred from launch times); rigid-kernel audit H2 on 25 of 25 lattices; hand proof of 143, refereed; stream certificates
+7,762 of 7,762; 003:181 by Corollary Y1; pair enumeration compared on 140, 135, 141, 064; acceptance of T18 and T20 by the user
+(`lemmas_accepted.json`: references, git blob ids of the two texts, scope "AI sessions only, no human reader, not formalised", G2
+open); conversion: tracker at 156.
+
+Still to do:
+1. G2: the wording of the verifier contract in `T20_PROOF.md` (presentation; laptop session).
+2. One merged proof document, frozen with a manifest, and one referee pass by Codex on it.
+3. The lab-local lattices (section 4, provenance): the user decided on 07/10 not to re-run them; that decision can be revisited.
+4. A formalisation: scope to be agreed with the user (`lemma/t20_CODEX/LEAN_FEASIBILITY.md`); nothing exists yet.
 
 ## 6. What the statement would still rest on without independent recheck
 
