@@ -1,0 +1,1 @@
+2026-10-07 18:34:20 rigid-kernel audit start: 224 jobs of 224 (part 0/1, batch all), 120 at a time
