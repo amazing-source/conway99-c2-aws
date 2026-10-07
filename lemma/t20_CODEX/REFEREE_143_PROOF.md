@@ -36,6 +36,21 @@ restriction scalar, and its trace is `2*72=144=18*8`. The supplementary
 checker also verifies the corresponding projector identity by exact
 matrix arithmetic; the same check gives the factor 32 for A15.
 
+### Equivalent certificate using a single linear inequality
+
+For every norm-three vector, let a and b be its squared projections onto W
+and l. The three types give `4a+16b` equal to 9, 67/3 and 9, respectively,
+so always `4a+16b >= 9`. Summing over 42 vectors and using both budgets:
+
+    378 = 42*9 <= 4 sum_u a(u) + 16 sum_u b(u)
+        <= 4*56 + 16*7 = 336,
+
+a contradiction. This equivalent rational certificate avoids counting
+the number of vectors of a particular type, and is a useful small target
+for a future formal proof. The exact checker now also verifies its three
+pointwise values and its aggregate constants. This is a mathematical and
+Python-checked certificate; no Lean proof is claimed here.
+
 ## Fresh computational checks
 
 Commands, run with the lab's Python environment containing NumPy, Numba and

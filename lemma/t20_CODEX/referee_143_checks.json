@@ -98,6 +98,19 @@
     "20": 8
   },
   "second_moment_projector_identities_verified": true,
+  "linear_budget_certificate": {
+    "weights_W_and_line": [
+      4,
+      16
+    ],
+    "values_on_norm3_types": {
+      "0,9/16": "9",
+      "2,1/16": "9",
+      "8/9,169/144": "67/3"
+    },
+    "lower_bound_for_42_vectors": 378,
+    "upper_bound_from_Rv": 336
+  },
   "norm3_enumeration_or_theta_count_used": false,
   "dependencies": [
     "R-ii (42 norm-three vectors)",

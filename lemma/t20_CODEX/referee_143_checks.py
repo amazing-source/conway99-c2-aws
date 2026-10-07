@@ -128,6 +128,9 @@ def main():
     assert table == {("2", "1/16"): 2688, ("0", "9/16"): 1120, ("8/9", "169/144"): 288}
     assert sum(table.values()) == 4096
     assert S.Rational(14 * 9, 16) == S.Rational(63, 8) > 7
+    linear_values = {",".join(k): 4*S.Rational(k[0]) + 16*S.Rational(k[1]) for k in table}
+    assert all(value >= 9 for value in linear_values.values())
+    assert 42 * 9 == 378 > 336 == 4 * 56 + 16 * 7
     result = {
         "id": 143, "verified": True,
         "source_canonical_sha256": hashlib.sha256(json.dumps(rec, sort_keys=True, separators=(",", ":")).encode()).hexdigest(),
@@ -139,6 +142,12 @@ def main():
         "norm3_types_and_signed_counts": {",".join(k): v for k, v in sorted(table.items())},
         "class_minima_for_abs_height_at_most_20": minima,
         "second_moment_projector_identities_verified": True,
+        "linear_budget_certificate": {
+            "weights_W_and_line": [4, 16],
+            "values_on_norm3_types": {key: str(value) for key, value in sorted(linear_values.items())},
+            "lower_bound_for_42_vectors": 378,
+            "upper_bound_from_Rv": 336,
+        },
         "norm3_enumeration_or_theta_count_used": False,
         "dependencies": ["R-ii (42 norm-three vectors)", "R-v", "A_n discriminant classes and their minimal weights"],
     }
