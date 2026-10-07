@@ -479,8 +479,9 @@ program in exact arithmetic: the determinant is $1$, the lattice is odd, it has 
 is the one of the classification. The root system separates all but seven pairs of lattices, and those are separated by
 their two even neighbours (also recomputed exactly). So the data are $156$ pairwise non-isometric lattices of the list,
 hence all of them by \cite{Bor}.
-% Exact recomputation: Codex, 07/10, q/codex_exact_lattice_identity.py, measures/codex_exact_lattice_identity.json
-% (announced through the lab bridge; check that the two files are on master before circulation).
+% Exact recomputation: Codex, 07/10, q/codex_exact_lattice_identity.py, measures/codex_exact_lattice_identity.json,
+% lemma/t20_CODEX/EXACT_LATTICE_IDENTITY.md (on master since bd4e1f021; summary read: all_156_exact_input_checks_passed
+% true, pairwise_nonisometric true, 7 pairs with equal root types, 156 records).
 
 \subsection{Twenty lattices excluded without enumeration}
 
@@ -706,9 +707,13 @@ one of the nine configurations the second program shares the description of the 
 with the first, and in the large searches the second program traverses the tree of the first again, with the same choice of
 the object to branch on and its own tests. Each of the three texts was refereed by a session that had not written it.
 
-\subsection*{The lists of short vectors} For all $156$ lattices the lists of vectors of norm $2$, $3$, $4$ used by the
-programs were verified in exact arithmetic: every vector has its norm, the vectors are distinct, and the counts satisfy the
-identity $N_4=196560-24N_2-24N_3$. Since a list can only be too short, the three lists are complete.
+\subsection*{The lists of short vectors} For all $156$ lattices the lists of vectors of norm $2$, $3$, $4$ built by the
+final version of the program were verified in exact arithmetic, on one machine: every vector has its norm, the vectors are
+distinct, and the counts satisfy the identity $N_4=196560-24N_2-24N_3$. Since a list can only be too short, these three
+lists are complete. The numbers of vectors of norm $4$ and of new roots recorded by the machines of 7 October agree with
+them on the $22$ lattices where they were compared. The lists built by the earlier versions of the program, and the
+numerical decisions of the transfer rule (the root system and the rank of the twin lattice, computed in floating point),
+were not re-examined.
 
 \subsection*{The enumeration of the pairs} One program, compared with an independent enumerator on four lattices
 (Section~\ref{ssec:enum}); for the others it rests on the program that produces the pairs, and the reduction by diagram
@@ -730,8 +735,9 @@ written the program.
 discharged: one by a census of all records (the condition never occurred); one by an exact re-examination of
 $147{,}475{,}940$ pairs of the $25$ lattices concerned (the $8{,}432$ pairs exposed to it were all excluded again by the
 complete version of the search; for three representatives $y_1$ of lattice $003$ this re-examination is replaced by
-Corollary~\ref{cor:Y1}); one by the verification of the lists of short vectors; one by running a lattice again
-without the test concerned; and one by Theorem~\ref{thm:T} for the squared norm $16$.
+Corollary~\ref{cor:Y1}); one, the completeness of the lists of short vectors, by the verification described above, within
+the limits stated there; one by running a lattice again without the test concerned; and one by Theorem~\ref{thm:T} for the
+squared norm $16$.
 \item Records of September whose program version had not been archived or recorded concerned $10{,}802$ representatives
 $y_1$ in $55$ lattices of the stream sweep. Of these, $9{,}143$ are excluded independently by Corollary~\ref{cor:Y1}, with
 certificates; the program used for $6{,}282$ of them was recovered and archived; and the $713$ representatives that had
