@@ -640,11 +640,22 @@ state.
 
 \smallskip\noindent\emph{(iv) By transfer to a twin.} Let $U'$ be the unimodular lattice of Lemma~\ref{lem:twin} obtained by
 composing the gluing map of $U$ with the isometry $\left(\begin{smallmatrix}2&2\\-2&2\end{smallmatrix}\right)$ of the
-discriminant form of $\Z y_1+\Z y_2$. If $U'$ has more roots than $U$, and every lattice of the list with the root system of
-$U'$ has been shown to contain no frame, then $(y_1,y_2)$ is the pair of normals of no frame of $U$. There are $1{,}622$ such
-dependencies between lattices; as the number of roots increases strictly along them, they contain no cycle. (A variant of
-the rule, for a twin with the root system of $U$ itself when that root system occurs once in the list, replaces the pair by
-its image when an invariant key decreases strictly.)
+discriminant form of $\Z y_1+\Z y_2$; its roots are obtained from the vectors of norm $2$, $3$, $4$ of $U$. The pair
+$(y_1,y_2)$ hosts a frame in $U$ if and only if it does in $U'$, and $U'$ is a lattice of the list. The program uses this in
+three forms, tried in this order.
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2.4em]
+\item \emph{Status.} If all the lattices of the list with the root system of $U'$ were already recorded as containing no
+frame when the pair was treated, the pair is excluded.
+\item \emph{More roots.} Otherwise, if $U'$ has strictly more roots than $U$, the pair is set aside, and it is excluded when
+all the lattices with more roots than $U$ are. This is a descending induction on the number of roots; it does not require
+$U'$ to be identified, and the comparison of the numbers of roots uses integer tests only. The dependencies it creates
+between lattices ($1{,}622$ of them) contain no cycle.
+\item \emph{Same lattice.} Otherwise, if $U'$ has the root system of $U$ and this root system occurs once in the list, then
+$U'\cong U$, and the pair is replaced by its image in $U$ when an invariant key of the pair decreases strictly.
+\end{enumerate}
+Forms (a) and (c) need the root system of $U'$; the program reads it from the numbers of roots of the components and from
+their ranks, computed in floating point. Form (a) moreover depends on the order in which the lattices were treated. What
+this implies for the proof is discussed in Section~\ref{sec:verif}.
 
 \medskip
 The correspondence between these rules and the program, rule by rule, with the derivation of each rule from the properties
@@ -682,8 +693,11 @@ $115$, $116$, $119$, $121$, $122$, $125$, $127$, $132$, $135$, $137$--$141$ are 
 Theorem~\ref{thm:T} and explicit witnesses, without any search.
 
 \emph{By the search.} The $28$ lattices were run again in full with the final version of the program, each job on two
-machines. For $27$ of them all pairs ($1{,}168{,}349$) are excluded, with identical records on the two machines; in
-particular the $732$ pairs without witness of the ten lattices other than $044$ are excluded by search.
+machines. For $27$ of them all pairs ($1{,}168{,}349$) are excluded, with identical records on the two machines;
+$85{,}080$ of these pairs are closed by the transfer rule. The $732$ pairs without a witness of energy at most $10$ of the
+ten lattices other than $044$ are excluded without that rule: $586$ by Lemma~\ref{lem:char}, $108$ by search, and $38$, which
+the run had closed by transfer, by a separate run with the transfer rule switched off. So for these $27$ lattices the
+transfer rule is not needed.
 % TODO 2: update when the records of 044 are accepted.
 For lattice $044$ $(a_3^8)$, which has $1{,}920$ pairs without witness, this second run was not finished at the time of
 writing; its exclusion rests for the moment on the run of September ($14{,}496$ pairs up to diagram automorphisms, all
@@ -711,10 +725,17 @@ final version of the program were verified in exact arithmetic, on one machine: 
 distinct, and the counts satisfy the identity $N_4=196560-24N_2-24N_3$. Since a list can only be too short, these three
 lists are complete. The numbers of vectors of norm $4$ and of new roots recorded by the machines of 7 October agree with
 them on the $22$ lattices where they were compared. The lists built by the earlier versions of the program were not
-re-examined. In the transfer rule, the roots of the twin lattice and the comparison of the numbers of roots, on which the
-absence of cycles rests, are obtained by integer tests; but the root system by which the twin is recognised in the list is
-read from the number of roots of each component and from its rank, and that rank is computed in floating point. This
-identification was not re-examined: a wrong one could attribute a transferred pair to the wrong lattice of the list.
+re-examined.
+
+\subsection*{The transfer rule} Over the $102$ lattices of the main enumeration ($592{,}864{,}217$ pairs) the three forms
+of Section~\ref{ssec:excl}(iv) close $1{,}300{,}094$ pairs (status), $32{,}265{,}417$ pairs (more roots) and $2{,}863{,}005$
+pairs (same lattice). The second form is justified by induction on the number of roots and needs nothing else. The two
+others, $4{,}163{,}099$ pairs in all, rest on the recognition of the root system of the twin lattice through ranks computed
+in floating point, and the first of them on the order in which the lattices were treated during the campaign, as recorded
+at the time. On the two lattices where it was compared with an integer computation ($112$ and $114$; $40{,}652$ pairs) the
+recognition is the same for every pair. A recertification of these $4{,}163{,}099$ pairs that uses neither a recorded status
+nor floating-point arithmetic (exact roots of the twin; then more roots, or strict descent in the same lattice, or a search
+without the transfer rule) has not been carried out. % TODO: this is the open computational item of the paper (07/10).
 
 \subsection*{The enumeration of the pairs} One program, compared with an independent enumerator on four lattices
 (Section~\ref{ssec:enum}); for the others it rests on the program that produces the pairs, and the reduction by diagram
@@ -743,8 +764,9 @@ squared norm $16$.
 $y_1$ in $55$ lattices of the stream sweep. Of these, $9{,}143$ are excluded independently by Corollary~\ref{cor:Y1}, with
 certificates; the program used for $6{,}282$ of them was recovered and archived; and the $713$ representatives that had
 neither were run again with the final version (for sixteen lattices the whole lattice was run again): $2{,}419{,}830$ pairs,
-each job on two machines, identical records. The $28$ lattices of the last paragraph of Section~\ref{ssec:results} were run
-again in the same conditions.
+each job on two machines, identical records; $60{,}308$ of these pairs are closed by the transfer rule, so that for them
+the new record still points to other lattices. The $28$ lattices of the last paragraph of Section~\ref{ssec:results} were
+run again in the same conditions.
 \item The records of the lattices $000$, $004$ and $010$ (27 September to 2 October 2026; those of $004$, $010$ and of $47$
 classes of $000$ with archived versions of the program) were not produced again; those of $004$ and $010$ were recounted.
 \end{enumerate}
