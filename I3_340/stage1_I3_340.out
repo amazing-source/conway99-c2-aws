@@ -1,0 +1,2 @@
+I.3 profile (3, 4, 0): |G| = 4; rectangles 146; N-configurations 2663180, orbits under G 666032   [merged from 8 parts]
+   bases tested 666032: rejected by budgets 0, by PSD (exact) 553664, kept 112368   stats {'psd_reject_M1': 553664}

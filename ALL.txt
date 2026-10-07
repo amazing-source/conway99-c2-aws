@@ -1,0 +1,50 @@
+=== I.3 (3,4,0) start 11:01:04
+I.3 profile (3, 4, 0): |G| = 4; rectangles 146; N-configurations 2663180, orbits under G 666032   [merged from 8 parts]
+   bases tested 666032: rejected by budgets 0, by PSD (exact) 553664, kept 112368   stats {'psd_reject_M1': 553664}
+I.3 profile (3, 4, 0): stage-1 file /home/ubuntu/lemma_out/I3_340/s1_I3_340.json, 112368 bases, sha1 4d191a727459a83750229f67620a37b25bd0db56
+   parts 8; sha1 recorded by the parts: ['4d191a727459a83750229f67620a37b25bd0db56']; bases finished 112368; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [112368, 507111, 894928, 484271, 56282, 988]  total 2055948
+   candidates (chosen unit)  : [507111, 4139599, 8547848, 4826172, 546953, 9069]  total 18576752
+     rejected by budgets     : [0, 0, 152207, 205857, 40416, 1014]
+     rejected by PSD (exact) : [0, 3244671, 7911370, 4564033, 505549, 8055]
+     kept                    : [507111, 894928, 484271, 56282, 988]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=24855880, pair_budget=166471991, psd_reject_M1even=7305912, psd_reject_M1odd=26674265, psd_reject_M2even=24666, psd_reject_M2odd=1339946, single_psd=19111111
+   cpu seconds: 9584 (mean 0.085 per base, max 3.4)
+I.3 profile (3,4,0), second program, stage 1 (8 parts): |Aut(B)| = 4 (first program: 4); rectangle sets tested 252154; configurations with the right coverage 3886834
+   passing the budget count on 35 vertices: 2663180 (first program: 2663180); sum of the orbit sizes of the representatives: 2663180 (must be equal)
+   orbits under Aut(B): 666032 (first program: 666032); rejected by PSD (exact) 553664; kept 112368 (first program: 112368)
+   in the first list only: 0; in this list only: 0
+   STAGE 1 AGREES: True
+   stage 2 re-traversed: bases 112368 of 112368 (stage-1 list: 112368); parts not finished: none
+   totals: {'nodes': 2055948, 'cands': 67563159, 'budget': 2786025351, 'psd': 64678074, 'kept': 1943580, 'complete': 0, 'impossible': 0, 'recount_checks': 7008878}; certificates: integer vector 64678074, exact elimination 0
+   STAGE 2 AGREES AT EVERY NODE, 0 complete, all bases: True
+=== I.3 (3,4,0) end 13:04:30
+=== I.0 (3,4,0) start 13:04:30
+I.0 profile (3, 4, 0): |G| = 16; rectangles 114; N-configurations 1229304, orbits under G 77391   [merged from 8 parts]
+   bases tested 77391: rejected by budgets 0, by PSD (exact) 66241, kept 11150   stats {'psd_reject_M1': 66241}
+I.0 profile (3, 4, 0): stage-1 file /home/ubuntu/lemma_out/I0_340/s1_I0_340.json, 11150 bases, sha1 9838fec877ca44b0f975a63c17a8397f0b1102e7
+   parts 8; sha1 recorded by the parts: ['9838fec877ca44b0f975a63c17a8397f0b1102e7']; bases finished 11150; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [11150, 59758, 118717, 56938, 3904, 37]  total 250504
+   candidates (chosen unit)  : [59758, 512455, 1151316, 570081, 37696, 262]  total 2331568
+     rejected by budgets     : [0, 0, 25827, 32465, 3808, 66]
+     rejected by PSD (exact) : [0, 393738, 1068551, 533712, 33851, 196]
+     kept                    : [59758, 118717, 56938, 3904, 37]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=3232109, pair_budget=20974768, psd_reject_M1even=759533, psd_reject_M1odd=2992359, psd_reject_M2even=623, psd_reject_M2odd=258344, single_psd=1980811
+   cpu seconds: 931 (mean 0.084 per base, max 1.6)
+I.0 profile (3,4,0), second program, stage 1 (8 parts): |Aut(B)| = 16 (first program: 16); rectangle sets tested 110405; configurations with the right coverage 1796264
+   passing the budget count on 35 vertices: 1229304 (first program: 1229304); sum of the orbit sizes of the representatives: 1229304 (must be equal)
+   orbits under Aut(B): 77391 (first program: 77391); rejected by PSD (exact) 66241; kept 11150 (first program: 11150)
+   in the first list only: 0; in this list only: 0
+   STAGE 1 AGREES: True
+   stage 2 re-traversed: bases 11150 of 11150 (stage-1 list: 11150); parts not finished: none
+   totals: {'nodes': 250504, 'cands': 8084421, 'budget': 295599733, 'psd': 7698262, 'kept': 239354, 'complete': 0, 'impossible': 0, 'recount_checks': 743850}; certificates: integer vector 7698262, exact elimination 0
+   STAGE 2 AGREES AT EVERY NODE, 0 complete, all bases: True
+=== I.0 (3,4,0) end 13:19:43
