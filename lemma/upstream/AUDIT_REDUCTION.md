@@ -26,6 +26,15 @@ implication has a hole. Until today its four steps were "source only, not reread
 6. **Open after the first pass** (sections C and E, written by the lab): (i) the producer of the pair streams has never been
    compared with an independent enumeration (only the Golay family has two implementations); (ii) lattice 143 rests on one
    argument nobody reread. Lattice 153 was in the same situation; it now has a second, hand proof (A.9: U is indecomposable).
+7. **Section B (Codex, `AUDIT_ENGINE_RULES.md`): the rules are consequences of Theorem R, but the executable has five conditions
+   to discharge** before its verdicts count as proofs. H1: a silent cap of 1000 on joint solutions (census by the lab: the verdict
+   that would be affected occurs in no stored record). **H2: the rigid kernel never builds a frame containing an h that touches
+   no new root; exposure limited to pairs without flex point of 24 lattices; to be closed by an exact audit run on the regenerated
+   streams.** H3: the vector catalogues are enumerated with floating-point pruning; the norm-4 shell X4 has no count check; exact
+   check now available: N4 = 196560 - 24 N2 - 24 N3 (`theta_odd24.py`, two controls). H4: verdicts "pair budget" rest on an LP
+   solver status, not allowed as proof: the pairs concerned are to be listed and re-run. H5: the 9/7 rule (E = 8) rests on a
+   separate theorem T16, whose text must be in the repo and refereed once.
+   **Until H2, H4 and H5 are discharged, the count of excluded lattices is conditional on them.**
 
 ## A. The reduction theorem, with its proof
 
