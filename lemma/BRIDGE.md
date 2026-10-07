@@ -208,6 +208,19 @@ roots with Y = 5 detect every vector with E = 9. (Uses T18.)
 (r,y1)^2 + (r,y2)^2 = 4 and no vector of norm 4 with |(v,y1)| = |(v,y2)| = 3; and every v with E(v) = 10 is one of these two
 kinds up to Z y1 + Z y2.
 
+**Corollary Y1 (fixed normal; Codex, 07/10; conditional on T18 and T20; text and first certificate: `lemma/t20_CODEX/FIXED_Y1_003.md`).**
+Under (G), (U), (F), every root r of U has |(r,y1)| <= 1 and |(r,y2)| <= 1.
+*Proof.* a = (r,y1) and b = (r,y2) are integers and E(r) = 14 - a^2 - b^2. A root is not in Z y1 + Z y2 (minimum 7), so
+E(r) >= 8 ((R-vi) of `upstream/AUDIT_REDUCTION.md`): a^2 + b^2 <= 6. If |a| = 2 then b^2 <= 2 and E(r) = 10 - b^2 is 9 (b = +-1)
+or 10 (b = 0): excluded by Corollary T18, resp. Corollary T20. The same with a and b exchanged. QED
+This is the root-witness rule read at the level of ONE normal: if U has a root r with (r,y1) = +-2, then no frame of U has this
+y1, **whatever y2**. The statement is invariant under Aut(U) and under the sign of y1. So a chunk of the sweep that consists of
+the pairs of one y1 representative with such a root is covered without producing its y2: neither the completeness of the y2
+enumeration, nor the swap rule, nor any search is used for it. Certificate per representative: `q/cert_y1.py` (y1 of the plan in
+ambient coordinates, in U, of norm 7; r in U of norm 2; (r,y1) = +-2; hashes of the plan and of its basis), checked by the
+standalone `q/check_cert_y1.py`. Used for 003:181:182, the only y1 representative of the campaign without a record (96 of the
+182 representatives of 003 have such a root; the 95 others are covered by their own records and do not use it).
+
 **Corollary H16 (the 04/10 filter).** Same with E(v) = 8: no vector of norm 3 with Y = 13; every v with E(v) = 8 is of this kind
 up to Z y1 + Z y2.
 
