@@ -1,3 +1,6 @@
 2026-10-07 15:22:31 rigid-kernel audit start: 7 jobs of 7 (part 0/1, batch all), 7 at a time
 2026-10-07 15:23:07 audited 003_2_182 in 34 s: pairs 10977, counts {'setup_impossible': 0, 'general': 10975, 'rigid': 2, 'with_zero_candidate': 9997, 'exposed': 0}
 2026-10-07 15:23:09 audited 003_3_182 in 36 s: pairs 12394, counts {'setup_impossible': 0, 'general': 12393, 'rigid': 1, 'with_zero_candidate': 11322, 'exposed': 1}
+2026-10-07 15:26:57 audited 003_157_182 in 264 s: pairs 215592, counts {'setup_impossible': 0, 'general': 215590, 'rigid': 2, 'with_zero_candidate': 142065, 'exposed': 0}
+2026-10-07 15:29:03 audited 003_180_182 in 390 s: pairs 105737, counts {'setup_impossible': 0, 'general': 105736, 'rigid': 1, 'with_zero_candidate': 84819, 'exposed': 1}
+2026-10-07 15:29:49 audited 003_174_182 in 436 s: pairs 74494, counts {'setup_impossible': 0, 'general': 74493, 'rigid': 1, 'with_zero_candidate': 60765, 'exposed': 1}
