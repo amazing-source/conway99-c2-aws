@@ -1,0 +1,88 @@
+{
+    "reviewer":  "CDX",
+    "date":  "2026-10-07",
+    "base":  "C:/home/researcher/Desktop/c2_experimental",
+    "scope":  "Rule audit; no exhaustive executable or historical record certification",
+    "files":  [
+                  {
+                      "path":  "c2_cloud_run_v10/scripts/frame_dfs_next.py",
+                      "sha256":  "1591aeeac9c0be5c529a2ff492e66d390138cd221cba2ab67aac81748de9b759",
+                      "bytes":  98005
+                  },
+                  {
+                      "path":  "c2_cloud_run_v10/scripts/hstage_stream_next.py",
+                      "sha256":  "f48520f7ebac4bf83bf4f79f43db0d126176435b5539aa009aaa181582160ad1",
+                      "bytes":  10590
+                  },
+                  {
+                      "path":  "c2_cloud_run_v10/scripts/twin_transfer.py",
+                      "sha256":  "77a446c7cb8b3922fe2005953952a96119c2ea80d999ac238bb96ed63ad6de20",
+                      "bytes":  2611
+                  },
+                  {
+                      "path":  "c2_cloud_run_v10/scripts/golay_pairs_job.py",
+                      "sha256":  "41f4df562ba579581bee0a75856ff67cd7819a518c51582c369b7a763272582d",
+                      "bytes":  6756
+                  },
+                  {
+                      "path":  "c2_cloud_run_v10/scripts/pair_budget.py",
+                      "sha256":  "cd0179ebc6e358b48ee6a250375c3495eda40774b74751e0fbfdbfec8e920d3d",
+                      "bytes":  5482
+                  },
+                  {
+                      "path":  "c2_cloud_run_v10/c1/code/y_pairs.py",
+                      "sha256":  "412354fde766c0c391d2debfc5766fc2803373fd5e2904e3f7120c61d5abb963",
+                      "bytes":  13583
+                  },
+                  {
+                      "path":  "c2_cloud_run_v10/c1/code/y_pairs_gamma.py",
+                      "sha256":  "894ddd27e1899e7eec9a973f2a0911617819616163287a8e06142fb04267a325",
+                      "bytes":  10035
+                  },
+                  {
+                      "path":  "c2_cloud_run_v10/c1/code/y2_engine.py",
+                      "sha256":  "11c929e30935caa9519c66391a566d203e00ffe3b750a6435cff84578d37ef21",
+                      "bytes":  17800
+                  },
+                  {
+                      "path":  "c2_cloud_run_v10/c1/code/envelope_pack.py",
+                      "sha256":  "b5317c3d04b5fec36b5747345a5c6a99cbca31d7d0e13f08347fbda92ba3e9d1",
+                      "bytes":  9546
+                  },
+                  {
+                      "path":  "c2_cloud_run_v10/c1/code/envelope_trap.py",
+                      "sha256":  "f3905e38feb18234636650a300d7bc3af51f23a6598c80ddcb67ce2725763987",
+                      "bytes":  8766
+                  },
+                  {
+                      "path":  "scripts/component_budget.py",
+                      "sha256":  "e9c67a43d94c3fb12940461e0cc103e4b3c4d138a7339160d3b8a3bc6880378b",
+                      "bytes":  5705
+                  },
+                  {
+                      "path":  "scripts/exact_budget.py",
+                      "sha256":  "de2395ade9a485696a71f2911f0937f799f33d0acaafc8f40c627775872d3a72",
+                      "bytes":  2477
+                  },
+                  {
+                      "path":  "scripts/make_frame_dfs_next.py",
+                      "sha256":  "24e3f202732c0bb0410c5f549a9870f04ae0b191a4a6864825d0bcf1fa13a021",
+                      "bytes":  9552
+                  },
+                  {
+                      "path":  "scripts/sym3_patch.py",
+                      "sha256":  "a42a65c32692d1e49f2f858cd2b99e3bfcc37d4a2e3832c42b41d135b97fd235",
+                      "bytes":  9857
+                  },
+                  {
+                      "path":  "external_runs/shell_theorems/conway99_shell_theorems/PROOFS.md",
+                      "sha256":  "5df32ae777095996805b35abec758f8e345bcd73306fecee3f06907c63ad8e99",
+                      "bytes":  24160
+                  },
+                  {
+                      "path":  "external_runs/flex_boundary/conway99_flex_boundary/README.md",
+                      "sha256":  "a2af3532c963501485ca57eb4ef0149abf6ae0049e6308309791a8d86f339e5c",
+                      "bytes":  16900
+                  }
+              ]
+}

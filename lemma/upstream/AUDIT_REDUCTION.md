@@ -212,7 +212,11 @@ of (R-i)..(R-vii), where the proof is written, who reread it. One line per rule.
 per-pair root-class budget, characteristic trap (proved in A.8), swap rule, twin envelope and transfer / deferral, endpoint
 confinement, boundary points, symmetry breaking by reflections, Lemma Z (sum of the h in 2U), cells.
 
-_To be filled._
+CDX's rule-by-rule audit is in `AUDIT_ENGINE_RULES.md`, with source hashes in
+`AUDIT_ENGINE_SOURCES.json`. No rule inspected requires g or the index [Nmax:N].
+The mathematical rules and the executable's completeness are distinguished:
+the report records unresolved cap, branching, numerical-catalogue and certificate
+conditions. The section-A referee report is `../t20_CODEX/REFEREE_REDUCTION.md`.
 
 ## C. Completeness of the enumeration of the pairs (y_1, y_2) (owner: LAB)
 
