@@ -151,3 +151,51 @@ Pinned input SHA256:
 - asymmetric.tex: `e8ecd10c9e2200eca7c5d472b5213deff467d41704084fdc58f039ae19daf8be`
 - main.pdf: `0814486cc8e5255b7b872cf7cc0dc127599d684cf42046cda953d50206bd4248`
 - asymmetric.pdf: `e2db7fd700c5accc7e679362851549de84577978f611b604800b045e194fa515`
+
+## Addendum (g)--(h): wording and attribution at 599670f41
+
+Response to message 113, with priority over further polishing. The updated
+main source was obtained from the repository and compared to the reviewed
+version; asymmetric.tex is byte-identical. The requested passages were read
+against the primary sources below. The original Russian MM argument and
+Borcherds's complete three-page author copy were reopened for this pass.
+
+**Finding:** no remaining passage in these targeted comparisons was found
+to reproduce distinctive source prose or a proof paragraph by paragraph.
+That is a bounded editorial finding, not a guarantee about all literature.
+There **are known results and a known proof device that need more local
+credit**, as detailed below. A citation does not make copied wording one's
+own; conversely the same theorem, formula or conventional symbol is not
+evidence that the prose was copied.
+
+| Passage at 599670f41 | Primary comparison and finding | Action |
+|---|---|---|
+| Main 82--102, history and literature | CW pp. 379--380; MM p. 95; CM Section 7. The factual sequence overlaps because it recounts the same earlier results. The revised prize/history sentence points explicitly to CW and does not follow its Biggs/Guy sentences. No further distinctive copied wording was found here. | Keep the source attribution. At 90--91, **still remove** “made the first study”: replace with “gave an early structural study”. This is an unsupported priority claim, not a wording-overlap finding. |
+| Main 188--237, Proposition 3.1 and its proof | [MM, Theorem 1, p. 96; Proposition 2 and its lemmas, pp. 98--99; character argument, pp. 100--101](https://www.mathnet.ru/php/getFT.phtml?jrnid=dm&option_lang=eng&paperid=144&what=fullt). MM first classifies fixed subgraphs, then excludes cases using an integral eigenspace character. Our proof counts block types using s_p,r_p,t_p and filters numerical possibilities. It is not a paragraph-wise translation, but neither the fixed-point result nor the character-integrality idea is new. | Put “The fixed-point assertion is [MM, Theorem 1]; the following direct argument uses the same character-integrality obstruction” immediately before the proposition (2 lines). Existing credit in the outline, 122--124, is correct but too remote. |
+| Main 219--223, trace congruence | MM p. 100 has the 54-dimensional character (4f+a1-18)/7. Our 44-dimensional trace (3f-a1+11)/7 is the complementary eigenspace expression: the two sum to f-1. | Add “[MM, p. 100]” at the character-integrality step (one citation). Do not claim this device as a new argument. This is attribution of a method, not a demand to change a necessary formula. |
+| Main 239--249 and Figure 2, blocks/outer vertices | CW Section 2, pp. 380--381, labels the 14 neighbours and the 84 second neighbours using their unique inner pair. Our involution-specific two-block figure and signed columns organise that standard description for a different purpose. No distinctive copied prose/figure arrangement was found. The new local credit already identifies the shared construction. | Keep CW Section 2 attribution. Wilbrink's full text was not opened in this pass: do not imply it was newly checked here. No extra synonym rewrite needed. |
+| Main 457--462, Definition 6.5 | CS90 Section 2, p. 386, introduces the index-two even sublattice and four cosets of its dual. Our quotient notation, characteristic-vector description and norm-two application are conventional mathematical formulations, not a close rendering of that paragraph. The citation is already present. | Sharpen it to “[CS90, Section 2, p. 386]”; add the rank-24 even-neighbour explanation/reference suggested above. No copied-sentence rewrite found necessary. |
+| Main 571--595, packing proposition | Compared to CS90's theta/shadow argument and [Borcherds, Chapter 17, author copy pp. 1--3](https://math.berkeley.edu/~reb/papers/splag/splag.pdf). Neither contains this 42-word disjoint-hit criterion or the frame-specific 8/7 dual-span obstruction in the passages read. No matching proof wording or uncited version of this proposition found in these sources. | Keep the direct derivation from the frame lemmas. This observation is not a literature-wide novelty claim. |
+| Main 417--418, 558--564, classification/identification; Appendix A | Borcherds's chapter, p. 2, supplies the 156-class list and its even-neighbour description. The manuscript attributes classification to Borcherds and distinguishes the exact check of its own input data. | Make the appendix caption explicitly say that root-system data/classification are from Borcherds, while IDs 000--155 are the project's numbering. This is especially useful if a reader encounters the table without Section 8.1 (1--2 lines). |
+| Asymmetric, 34--130 | The note's prime-by-prime assembly and status table do not reproduce the compared sources' presentation. Its historical ingredients are individually attributed. | Keep the conditional statement; retain the caveats from the first part of this review. No additional text-copying concern found in the compared passages. |
+
+**Correction to one earlier presentation suggestion:** Borcherds explains
+on p. 2 that repeated/grouped components can encode automorphism orbits.
+Thus do not blindly normalise the appendix's repeated root factors. If its
+column denotes only the abstract ADE root type, simplify and say that orbit
+grouping is suppressed; if the grouping is retained, explain its source and
+meaning. This distinction also explains how two equal root systems can
+appear with different typographical grouping.
+
+The two concrete credit additions are the local MM theorem/method citation
+and the explicit attribution in the appendix caption. The classical block
+description and shadow definition already have citations in this version.
+No other uncredited result matching the selected source passages was found.
+I have not verified priority of the packing proposition across all prior
+literature, or compared the unavailable full Behbahani/BL texts. The earlier
+claim that the original MM text was not reread applies only to the first
+(a)--(f) pass; its relevant pp. 95--101 were inspected for this addendum.
+
+Main source SHA256 at 599670f41:
+`d38bbd27550a0ef8d527616d380edf882d5f3a4b897f1490156d63481e830254`.
+Asymmetric source retains the SHA256 stated above.
