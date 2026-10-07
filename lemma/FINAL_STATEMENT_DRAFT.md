@@ -1,4 +1,4 @@
-# Route (C): the final statement and what it rests on — DRAFT 2 of 2026-10-07, state at about 14:20 UTC
+# Route (C): the final statement and what it rests on — DRAFT 2 of 2026-10-07, state at about 15:00 UTC
 
 Lab session (Claude). Board line D5 of `lemma/T20_BOARD.md` (compute repo). This is a recheck by AI sessions, not a human referee
 and not a formal proof.
@@ -35,7 +35,7 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 | Part | Status | Programs |
 |---|---|---|
 | Reduction to nine support configurations; k = 4 (III.0, III.1); k = 2 (IIa.0) | excluded, hand + computed | two each; for III.1 the second verification shares the model file and part of the enumeration skeleton |
-| k = 0, n_3 = 0: six graphs x two profiles | excluded: 615,405 bases, 0 complete | second program agreeing on 11 of 12 cases; I.1 (4,2,1) running |
+| k = 0, n_3 = 0: six graphs x two profiles | excluded: 615,405 bases, 0 complete | second program agreeing on all 12 cases (the last one, I.1 (4,2,1), at 14:33) |
 | k = 0, n_3 = 2 (route B: N(p) and the X_3 orbit in the base) | excluded: 64,528 bases, 86,968 nodes, 0 complete, rank bound never used | second program: 50 of 50 cases agree |
 | Text | `T20_PROOF.md` complete (Theorem 10.2) | - |
 | Referee (Codex) | two passes, no blocking error; its corrections are applied in the text per the laptop session (14:17). Standing qualifications: G1 (archive outputs, source revisions, commands), G2 (state the verifier contract; equal counts are a cross-check), G3 (III.1) | - |
@@ -45,9 +45,9 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 | | Finding | Status |
 |---|---|---|
 | H1 | `joint` keeps at most 1000 joint star sums per leaf, without a flag | real in the code, never exercised: the verdict it could falsify occurs in no stored record (17,676 + 356 + 57 files); the lab importer refuses it |
-| H2 | The rigid kernel (pairs without flex point) never builds a frame with an h of zero footprint | **real, and exercised** (16 pairs of lattice 080 were decided by it). Hand lemma (lab): impossible unless the two even neighbours have the same Coxeter number H and U has a root component of Coxeter number H: 27 lattices, 25 of them treated by the engine. Exact audit of their streams (`q/audit_rigid.py`): every exposed pair is searched again with the general kernel. Done: 001, 101, 103, 104, 105, 137, 138 (all exposed pairs excluded again); running on a free machine: the 13 others counted as excluded; then 003, 006, 007, 014 |
+| H2 | The rigid kernel (pairs without flex point) never builds a frame with an h of zero footprint | **real, and exercised** (16 pairs of lattice 080 were decided by it). Hand lemma (lab): impossible unless the two even neighbours have the same Coxeter number H and U has a root component of Coxeter number H: 27 lattices, 25 of them treated by the engine. Exact audit of their streams (`q/audit_rigid.py`): every exposed pair is searched again with the general kernel. Done: 001, 080, 101, 103, 104, 105, 137, 138 (all exposed pairs excluded again; in 080, 16 exposed pairs had reached the search: stage 1 is empty with the general kernel too); running on machines: the 12 others counted as excluded, and 003, 006, 007, 014 |
 | H3 | The list of norm-4 vectors is produced by a floating-point enumeration | closed: N3 = 4096 and N4 = 196560 - 24 (N2 + N3) for all 156 lattices (theta series), every vector rechecked |
-| H4 | The per-pair budget test accepts an LP solver status | concerns one lattice, 105 (6,310 pairs, lab run of 29/09): passing again through the v10 engine without solver (launched 14:17) |
+| H4 | The per-pair budget test accepts an LP solver status | concerned one lattice, 105 (6,310 pairs, lab run of 29/09). **Closed 14:45**: its 56,544 pairs (enumeration up to W(R)) passed again through the v10 producer and consumer without the budget test: all excluded, swap-covered or twin-transferred; stream sha256 identical on AWS and on the lab PC |
 | H5 | The 9/7 rule needs T16, which Theorem R does not give | T16 refereed (R5) |
 
 ## 4. Coverage of the 156 lattices (lab tracker, 07/10)
@@ -56,8 +56,8 @@ Excluded in the tracker: 143. Open: 13.
 
 **Read "excluded" with these reservations until the items of section 5 are done:**
 - 20 lattices are excluded subject to the rigid-kernel audit H2: 022, 023, 024, 026, 027, 028, 037, 049, 050, 052, 053, 077, 079,
-  080, 101, 103, 104, 105, 137, 138 (audit done for 101, 103, 104, 105, 137, 138);
-- 105 also needs its 6,310 "pair budget" pairs excluded without a solver (H4);
+  080, 101, 103, 104, 105, 137, 138 (audit done for 080, 101, 103, 104, 105, 137, 138);
+- 105: its 6,310 "pair budget" pairs are now excluded without a solver (H4 closed, 14:45);
 - 143 rests on one lattice-level test that nobody reviewed: passing through the v10 engine (launched 14:17);
 - 153 had one argument reviewed by its author's side only; it now has a second proof (A.9: U is indecomposable), refereed.
 
@@ -87,9 +87,9 @@ repository yet) and partly in the compute repository.
 
 ## 5. What must still happen before the statement may be claimed
 
-1. T20: second program on I.1 (4,2,1), n_3 = 0; archival G1.
+1. T20: archival G1 (outputs, source revisions, commands of every computation cited).
 2. Rigid-kernel audit H2 complete on the 25 lattices, with every exposed pair excluded again.
-3. 105 and 143 through the v10 engine (no solver); their records imported.
+3. 143 through the v10 engine; its records imported (105: done).
 4. Certificate run complete: every stream record certified.
 5. 003:181:182 finished, imported and certified.
 6. Pair enumeration (R3): an independent enumeration on a few lattices, one of them with non-spanning roots (board F4).
