@@ -78,8 +78,10 @@ Norm 3 with |t| <= 20 then has exactly the solutions
 - t = +-9: classes +-3 and 0, 39/16 + 0 + 9/16: 2 * 560 = 1120 vectors;
 - t = +-13: classes +-1 and +-1, 15/16 + 8/9 + 169/144: 2 * 16 * 9 = 288 vectors;
 
-(every other t gives a minimum above 3, or a norm of the wrong parity: t = 10 and t = 16 give norm 4, t = 19 norm 5), in all
-4096. This reproduces the table, counts included.
+in all 4096 vectors. (t = (x,z) is an integer with t^2/144 <= 3, so |t| <= 20; within the class of t the norms are the minimum
+plus an even integer; the minimum is 0 for t = 0, 3 for t = +-3, +-9, +-13, 4 for t = +-4, +-6, +-10, +-16, 5 for
+t = +-1, +-5, +-7, +-19 and at least 6 for the other t: norm 3 occurs only where the minimum is 3.) This reproduces the table,
+counts included; the classes with minimum 4 are the kinds of norm-4 vectors found by the programs as well.
 
 ## Why the packing criterion does not settle 143
 
