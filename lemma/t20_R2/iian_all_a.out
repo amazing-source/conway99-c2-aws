@@ -1,0 +1,528 @@
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 5), (6, 7), (8, 9)] iian/all_w0 part 0 of 1 split depth 99 timeout False seconds 0.8
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 6, 25, 50, 11, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [6, 63, 214, 445, 155, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 19, 42, 23, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 38, 145, 392, 132, 0, 0, 0, 0, 0, 0]
+  kept                    : [6, 25, 50, 11, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 13980
+stats: no_pattern=1062, pair_budget=32740, psd_reject_M1even=488, psd_reject_M1odd=522, psd_reject_M2odd=3, single_budget=4212, single_psd=306
+complete configurations: 0
+WSET 0: timeout False cpu 0.7 s visited [1, 6, 25, 50, 11, 0, 0, 0, 0, 0, 0] kept [6, 25, 50, 11, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 5), (6, 9), (7, 8)] iian/all_w1 part 0 of 1 split depth 99 timeout False seconds 1.0
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 6, 31, 56, 37, 2, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [6, 58, 255, 650, 427, 71, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 22, 101, 142, 28, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 27, 177, 512, 283, 43, 0, 0, 0, 0, 0]
+  kept                    : [6, 31, 56, 37, 2, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 17048
+stats: no_pattern=1293, pair_budget=40798, psd_reject_M1even=595, psd_reject_M1odd=741, single_budget=4220, single_psd=294
+complete configurations: 0
+WSET 1: timeout False cpu 1.0 s visited [1, 6, 31, 56, 37, 2, 0, 0, 0, 0, 0] kept [6, 31, 56, 37, 2, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 6), (5, 7), (8, 9)] iian/all_w2 part 0 of 1 split depth 99 timeout False seconds 0.0
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 0
+stats: psd_reject_M1even=9, single_budget=1, single_psd=9
+complete configurations: 0
+WSET 2: timeout False cpu 0.0 s visited [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kept [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 6), (5, 9), (7, 8)] iian/all_w3 part 0 of 1 split depth 99 timeout False seconds 0.2
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 4, 4, 2, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [4, 26, 26, 8, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 22, 22, 6, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [4, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 1113
+stats: no_pattern=47, pair_budget=2677, psd_reject_M1even=414, psd_reject_M1odd=76, single_budget=4388, single_psd=440
+complete configurations: 0
+WSET 3: timeout False cpu 0.1 s visited [1, 4, 4, 2, 0, 0, 0, 0, 0, 0, 0] kept [4, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 7), (5, 6), (8, 9)] iian/all_w4 part 0 of 1 split depth 99 timeout False seconds 15.7
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 8, 60, 164, 136, 18, 1, 0, 0, 0, 0]
+candidates (chosen unit)  : [8, 119, 780, 2266, 2152, 295, 34, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 62, 434, 740, 98, 8, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 59, 554, 1696, 1394, 196, 26, 0, 0, 0, 0]
+  kept                    : [8, 60, 164, 136, 18, 1, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 52352
+stats: no_pattern=4956, pair_budget=96771, psd_reject_M1even=1706, psd_reject_M1odd=2507, psd_reject_M2odd=10, single_budget=4146, single_psd=298
+complete configurations: 0
+WSET 4: timeout False cpu 3.3 s visited [1, 8, 60, 164, 136, 18, 1, 0, 0, 0, 0] kept [8, 60, 164, 136, 18, 1, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 7), (5, 8), (6, 9)] iian/all_w5 part 0 of 1 split depth 99 timeout False seconds 26.0
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 8, 69, 202, 143, 28, 3, 0, 0, 0, 0]
+candidates (chosen unit)  : [8, 118, 924, 2864, 2470, 602, 177, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 46, 469, 542, 212, 101, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 49, 676, 2252, 1900, 387, 76, 0, 0, 0, 0]
+  kept                    : [8, 69, 202, 143, 28, 3, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 60817
+stats: no_pattern=5169, pair_budget=127774, psd_reject_M1even=1948, psd_reject_M1odd=3650, psd_reject_M2even=5, psd_reject_M2odd=5, single_budget=4148, single_psd=268
+complete configurations: 0
+WSET 5: timeout False cpu 4.7 s visited [1, 8, 69, 202, 143, 28, 3, 0, 0, 0, 0] kept [8, 69, 202, 143, 28, 3, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 7), (5, 9), (6, 8)] iian/all_w6 part 0 of 1 split depth 99 timeout False seconds 4.4
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 7, 29, 36, 8, 1, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [7, 67, 219, 240, 100, 68, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 14, 33, 20, 21, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 38, 169, 199, 79, 47, 0, 0, 0, 0, 0]
+  kept                    : [7, 29, 36, 8, 1, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 7907
+stats: no_pattern=581, pair_budget=19782, psd_reject_M1even=533, psd_reject_M1odd=405, single_budget=4342, single_psd=406
+complete configurations: 0
+WSET 6: timeout False cpu 1.0 s visited [1, 7, 29, 36, 8, 1, 0, 0, 0, 0, 0] kept [7, 29, 36, 8, 1, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 8), (5, 7), (6, 9)] iian/all_w7 part 0 of 1 split depth 99 timeout False seconds 0.7
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 192
+stats: no_pattern=4, pair_budget=120, psd_reject_M1even=404, psd_reject_M1odd=72, single_budget=4444, single_psd=474
+complete configurations: 0
+WSET 7: timeout False cpu 0.2 s visited [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0] kept [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 8), (5, 9), (6, 7)] iian/all_w8 part 0 of 1 split depth 99 timeout False seconds 2.1
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 6, 15, 7, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [6, 49, 183, 64, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 9, 14, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 34, 167, 50, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [6, 15, 7, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 3179
+stats: no_pattern=153, pair_budget=8486, psd_reject_M1even=442, psd_reject_M1odd=209, single_budget=4348, single_psd=400
+complete configurations: 0
+WSET 8: timeout False cpu 0.5 s visited [1, 6, 15, 7, 0, 0, 0, 0, 0, 0, 0] kept [6, 15, 7, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 9), (5, 6), (7, 8)] iian/all_w9 part 0 of 1 split depth 99 timeout False seconds 18.5
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 7, 56, 166, 88, 6, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [7, 115, 895, 2491, 1337, 57, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 47, 393, 287, 13, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 59, 682, 2010, 1044, 44, 0, 0, 0, 0, 0]
+  kept                    : [7, 56, 166, 88, 6, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 39100
+stats: no_pattern=3856, pair_budget=100200, psd_reject_M1even=1670, psd_reject_M1odd=2392, psd_reject_M2even=9, psd_reject_M2odd=12, single_budget=4216, single_psd=244
+complete configurations: 0
+WSET 9: timeout False cpu 3.0 s visited [1, 7, 56, 166, 88, 6, 0, 0, 0, 0, 0] kept [7, 56, 166, 88, 6, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 9), (5, 7), (6, 8)] iian/all_w10 part 0 of 1 split depth 99 timeout False seconds 1.2
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 4, 7, 2, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [4, 19, 50, 7, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 12, 42, 7, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [4, 7, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 1286
+stats: no_pattern=34, pair_budget=2869, psd_reject_M1even=367, psd_reject_M1odd=98, single_budget=4466, single_psd=404
+complete configurations: 0
+WSET 10: timeout False cpu 0.2 s visited [1, 4, 7, 2, 0, 0, 0, 0, 0, 0, 0] kept [4, 7, 2, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 4), (4, 9), (5, 8), (6, 7)] iian/all_w11 part 0 of 1 split depth 99 timeout False seconds 16.9
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 7, 50, 138, 74, 14, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [7, 106, 743, 2233, 1491, 267, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 67, 375, 302, 103, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 56, 538, 1784, 1175, 164, 0, 0, 0, 0, 0]
+  kept                    : [7, 50, 138, 74, 14, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 37193
+stats: no_pattern=3285, pair_budget=85070, psd_reject_M1even=1337, psd_reject_M1odd=2617, psd_reject_M2odd=3, single_budget=4214, single_psd=240
+complete configurations: 0
+WSET 11: timeout False cpu 3.3 s visited [1, 7, 50, 138, 74, 14, 0, 0, 0, 0, 0] kept [7, 50, 138, 74, 14, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 5), (4, 6), (4, 7), (8, 9)] iian/all_w12 part 0 of 1 split depth 99 timeout False seconds 3.3
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 5, 17, 19, 12, 3, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [5, 31, 106, 213, 87, 20, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 2, 52, 14, 7, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 14, 85, 149, 70, 13, 0, 0, 0, 0, 0]
+  kept                    : [5, 17, 19, 12, 3, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 7281
+stats: no_pattern=451, pair_budget=16668, psd_reject_M1even=478, psd_reject_M1odd=220, psd_reject_M2odd=1, single_budget=4310, single_psd=368
+complete configurations: 0
+WSET 12: timeout False cpu 0.5 s visited [1, 5, 17, 19, 12, 3, 0, 0, 0, 0, 0] kept [5, 17, 19, 12, 3, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 5), (4, 6), (4, 9), (7, 8)] iian/all_w13 part 0 of 1 split depth 99 timeout False seconds 3.2
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 4, 20, 23, 5, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [4, 24, 177, 194, 18, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 13, 27, 5, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 4, 141, 162, 13, 0, 0, 0, 0, 0, 0]
+  kept                    : [4, 20, 23, 5, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 6130
+stats: no_pattern=318, pair_budget=14193, psd_reject_M1even=427, psd_reject_M1odd=208, psd_reject_M2odd=1, single_budget=4386, single_psd=316
+complete configurations: 0
+WSET 13: timeout False cpu 0.4 s visited [1, 4, 20, 23, 5, 0, 0, 0, 0, 0, 0] kept [4, 20, 23, 5, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 5), (4, 7), (4, 8), (6, 9)] iian/all_w14 part 0 of 1 split depth 99 timeout False seconds 4.1
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 5, 22, 39, 4, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [5, 34, 139, 196, 33, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 4, 13, 9, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 12, 96, 179, 24, 0, 0, 0, 0, 0, 0]
+  kept                    : [5, 22, 39, 4, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 7060
+stats: no_pattern=487, pair_budget=19493, psd_reject_M1even=518, psd_reject_M1odd=259, single_budget=4260, single_psd=466
+complete configurations: 0
+WSET 14: timeout False cpu 0.8 s visited [1, 5, 22, 39, 4, 0, 0, 0, 0, 0, 0] kept [5, 22, 39, 4, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 5), (4, 7), (4, 9), (6, 8)] iian/all_w15 part 0 of 1 split depth 99 timeout False seconds 4.6
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 4, 28, 45, 11, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [4, 33, 218, 341, 116, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 19, 46, 30, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 5, 154, 284, 86, 0, 0, 0, 0, 0, 0]
+  kept                    : [4, 28, 45, 11, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 8894
+stats: no_pattern=790, pair_budget=25092, psd_reject_M1even=547, psd_reject_M1odd=342, single_budget=4346, single_psd=360
+complete configurations: 0
+WSET 15: timeout False cpu 0.8 s visited [1, 4, 28, 45, 11, 0, 0, 0, 0, 0, 0] kept [4, 28, 45, 11, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 5), (4, 8), (4, 9), (6, 7)] iian/all_w16 part 0 of 1 split depth 99 timeout False seconds 3.8
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 4, 18, 26, 8, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [4, 25, 145, 206, 91, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 4, 23, 20, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 7, 115, 175, 71, 0, 0, 0, 0, 0, 0]
+  kept                    : [4, 18, 26, 8, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 6342
+stats: no_pattern=379, pair_budget=16769, psd_reject_M1even=494, psd_reject_M1odd=263, psd_reject_M2odd=1, single_budget=4328, single_psd=390
+complete configurations: 0
+WSET 16: timeout False cpu 0.5 s visited [1, 4, 18, 26, 8, 0, 0, 0, 0, 0, 0] kept [4, 18, 26, 8, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 6), (4, 5), (4, 7), (8, 9)] iian/all_w17 part 0 of 1 split depth 99 timeout False seconds 6.3
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 5, 26, 39, 18, 2, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [5, 41, 225, 442, 253, 65, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 24, 86, 96, 25, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 15, 162, 338, 155, 40, 0, 0, 0, 0, 0]
+  kept                    : [5, 26, 39, 18, 2, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 13900
+stats: no_pattern=835, pair_budget=31662, psd_reject_M1even=537, psd_reject_M1odd=506, psd_reject_M2odd=5, single_budget=4188, single_psd=338
+complete configurations: 0
+WSET 17: timeout False cpu 1.0 s visited [1, 5, 26, 39, 18, 2, 0, 0, 0, 0, 0] kept [5, 26, 39, 18, 2, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 6), (4, 5), (4, 9), (7, 8)] iian/all_w18 part 0 of 1 split depth 99 timeout False seconds 5.1
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 5, 22, 32, 14, 3, 1, 0, 0, 0, 0]
+candidates (chosen unit)  : [5, 34, 173, 283, 183, 96, 4, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 12, 39, 47, 18, 4, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 12, 129, 230, 133, 77, 0, 0, 0, 0, 0]
+  kept                    : [5, 22, 32, 14, 3, 1, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 11756
+stats: no_pattern=577, pair_budget=25284, psd_reject_M1even=389, psd_reject_M1odd=516, psd_reject_M2even=1, psd_reject_M2odd=5, single_budget=4258, single_psd=330
+complete configurations: 0
+WSET 18: timeout False cpu 0.7 s visited [1, 5, 22, 32, 14, 3, 1, 0, 0, 0, 0] kept [5, 22, 32, 14, 3, 1, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 6), (4, 7), (4, 8), (5, 9)] iian/all_w19 part 0 of 1 split depth 99 timeout False seconds 2.2
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 5, 12, 10, 1, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [5, 31, 54, 46, 4, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 19, 44, 44, 3, 0, 0, 0, 0, 0, 0]
+  kept                    : [5, 12, 10, 1, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 3024
+stats: no_pattern=196, pair_budget=7174, psd_reject_M1even=442, psd_reject_M1odd=98, single_budget=4304, single_psd=430
+complete configurations: 0
+WSET 19: timeout False cpu 0.2 s visited [1, 5, 12, 10, 1, 0, 0, 0, 0, 0, 0] kept [5, 12, 10, 1, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 6), (4, 7), (4, 9), (5, 8)] iian/all_w20 part 0 of 1 split depth 99 timeout False seconds 18.4
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 6, 44, 113, 84, 17, 1, 0, 0, 0, 0]
+candidates (chosen unit)  : [6, 79, 511, 1331, 1576, 305, 29, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 14, 170, 478, 75, 15, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 35, 384, 1077, 1081, 229, 14, 0, 0, 0, 0]
+  kept                    : [6, 44, 113, 84, 17, 1, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 31883
+stats: no_pattern=2711, pair_budget=68685, psd_reject_M1even=1364, psd_reject_M1odd=1704, psd_reject_M2even=4, psd_reject_M2odd=54, single_budget=4186, single_psd=306
+complete configurations: 0
+WSET 20: timeout False cpu 2.6 s visited [1, 6, 44, 113, 84, 17, 1, 0, 0, 0, 0] kept [6, 44, 113, 84, 17, 1, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 6), (4, 8), (4, 9), (5, 7)] iian/all_w21 part 0 of 1 split depth 99 timeout False seconds 1.1
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 3, 7, 3, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [3, 10, 44, 17, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 3, 35, 17, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [3, 7, 3, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 1220
+stats: no_pattern=42, pair_budget=2646, psd_reject_M1even=363, psd_reject_M1odd=110, single_budget=4442, single_psd=418
+complete configurations: 0
+WSET 21: timeout False cpu 0.1 s visited [1, 3, 7, 3, 0, 0, 0, 0, 0, 0, 0] kept [3, 7, 3, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 7), (4, 5), (4, 9), (6, 8)] iian/all_w22 part 0 of 1 split depth 99 timeout False seconds 1.0
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [2, 8, 16, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 6, 16, 0, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 489
+stats: no_pattern=7, pair_budget=1190, psd_reject_M1even=426, psd_reject_M1odd=82, single_budget=4392, single_psd=486
+complete configurations: 0
+WSET 22: timeout False cpu 0.2 s visited [1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0] kept [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 7), (4, 6), (4, 9), (5, 8)] iian/all_w23 part 0 of 1 split depth 99 timeout False seconds 1.2
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [4, 14, 10, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 11, 8, 0, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 830
+stats: no_pattern=24, pair_budget=1789, psd_reject_M1even=495, psd_reject_M1odd=50, single_budget=4344, single_psd=526
+complete configurations: 0
+WSET 23: timeout False cpu 0.2 s visited [1, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0] kept [4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 7), (4, 8), (4, 9), (5, 6)] iian/all_w24 part 0 of 1 split depth 99 timeout False seconds 1.1
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 4, 7, 1, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [4, 17, 30, 2, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 10, 29, 2, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [4, 7, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 693
+stats: no_pattern=30, pair_budget=1646, psd_reject_M1even=564, psd_reject_M1odd=75, single_budget=4284, single_psd=598
+complete configurations: 0
+WSET 24: timeout False cpu 0.2 s visited [1, 4, 7, 1, 0, 0, 0, 0, 0, 0, 0] kept [4, 7, 1, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 8), (4, 5), (4, 7), (6, 9)] iian/all_w25 part 0 of 1 split depth 99 timeout False seconds 7.1
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 6, 32, 48, 22, 1, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [6, 53, 259, 640, 340, 12, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 16, 93, 105, 6, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 21, 195, 525, 234, 6, 0, 0, 0, 0, 0]
+  kept                    : [6, 32, 48, 22, 1, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 15577
+stats: no_pattern=994, pair_budget=37303, psd_reject_M1even=589, psd_reject_M1odd=671, psd_reject_M2odd=3, single_budget=4238, single_psd=282
+complete configurations: 0
+WSET 25: timeout False cpu 1.1 s visited [1, 6, 32, 48, 22, 1, 0, 0, 0, 0, 0] kept [6, 32, 48, 22, 1, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 8), (4, 5), (4, 9), (6, 7)] iian/all_w26 part 0 of 1 split depth 99 timeout False seconds 3.5
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 6, 20, 16, 5, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [6, 46, 187, 111, 21, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 6, 15, 5, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 26, 165, 91, 16, 0, 0, 0, 0, 0, 0]
+  kept                    : [6, 20, 16, 5, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 7843
+stats: no_pattern=464, pair_budget=20893, psd_reject_M1even=266, psd_reject_M1odd=286, single_budget=4298, single_psd=254
+complete configurations: 0
+WSET 26: timeout False cpu 0.6 s visited [1, 6, 20, 16, 5, 0, 0, 0, 0, 0, 0] kept [6, 20, 16, 5, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 8), (4, 6), (4, 7), (5, 9)] iian/all_w27 part 0 of 1 split depth 99 timeout False seconds 1.8
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 6, 8, 4, 1, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [6, 40, 58, 38, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 3, 1, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 32, 51, 36, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [6, 8, 4, 1, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 2393
+stats: no_pattern=111, pair_budget=7341, psd_reject_M1even=364, psd_reject_M1odd=108, psd_reject_M2odd=1, single_budget=4380, single_psd=354
+complete configurations: 0
+WSET 27: timeout False cpu 0.3 s visited [1, 6, 8, 4, 1, 0, 0, 0, 0, 0, 0] kept [6, 8, 4, 1, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 8), (4, 6), (4, 9), (5, 7)] iian/all_w28 part 0 of 1 split depth 99 timeout False seconds 1.3
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 3, 7, 4, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [3, 17, 39, 12, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 7, 4, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 10, 28, 8, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [3, 7, 4, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 1350
+stats: no_pattern=42, pair_budget=3050, psd_reject_M1even=320, psd_reject_M1odd=74, single_budget=4520, single_psd=348
+complete configurations: 0
+WSET 28: timeout False cpu 0.2 s visited [1, 3, 7, 4, 0, 0, 0, 0, 0, 0, 0] kept [3, 7, 4, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 3), (2, 8), (4, 7), (4, 9), (5, 6)] iian/all_w29 part 0 of 1 split depth 99 timeout False seconds 18.7
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 7, 45, 132, 104, 18, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [7, 90, 670, 1907, 1249, 392, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 35, 338, 306, 121, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 45, 503, 1465, 925, 271, 0, 0, 0, 0, 0]
+  kept                    : [7, 45, 132, 104, 18, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 37030
+stats: no_pattern=3950, pair_budget=70937, psd_reject_M1even=1515, psd_reject_M1odd=1891, psd_reject_M2odd=39, single_budget=4228, single_psd=236
+complete configurations: 0
+WSET 29: timeout False cpu 2.6 s visited [1, 7, 45, 132, 104, 18, 0, 0, 0, 0, 0] kept [7, 45, 132, 104, 18, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 5), (3, 4), (6, 7), (8, 9)] iian/all_w30 part 0 of 1 split depth 99 timeout False seconds 99.2
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 9, 67, 290, 640, 456, 95, 3, 0, 0, 0]
+candidates (chosen unit)  : [9, 126, 957, 5378, 12519, 11115, 2556, 138, 0, 0, 0]
+  rejected by budgets     : [0, 0, 75, 678, 2336, 3608, 1034, 44, 0, 0, 0]
+  rejected by PSD (exact) : [0, 59, 592, 4060, 9727, 7412, 1519, 94, 0, 0, 0]
+  kept                    : [9, 67, 290, 640, 456, 95, 3, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 164325
+stats: no_pattern=22347, pair_budget=222886, psd_reject_M1even=7394, psd_reject_M1odd=16044, psd_reject_M2even=93, psd_reject_M2odd=120, single_budget=4188, single_psd=188
+complete configurations: 0
+WSET 30: timeout False cpu 14.4 s visited [1, 9, 67, 290, 640, 456, 95, 3, 0, 0, 0] kept [9, 67, 290, 640, 456, 95, 3, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 5), (3, 4), (6, 9), (7, 8)] iian/all_w31 part 0 of 1 split depth 99 timeout False seconds 106.0
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 8, 76, 374, 929, 614, 97, 4, 0, 0, 0]
+candidates (chosen unit)  : [8, 98, 1148, 7583, 16792, 11411, 2336, 47, 0, 0, 0]
+  rejected by budgets     : [0, 0, 75, 855, 3683, 3953, 1026, 19, 0, 0, 0]
+  rejected by PSD (exact) : [0, 22, 699, 5799, 12495, 7361, 1306, 28, 0, 0, 0]
+  kept                    : [8, 76, 374, 929, 614, 97, 4, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 215198
+stats: no_pattern=30029, pair_budget=244470, psd_reject_M1even=8112, psd_reject_M1odd=19526, psd_reject_M2even=91, psd_reject_M2odd=159, single_budget=4198, single_psd=178
+complete configurations: 0
+WSET 31: timeout False cpu 16.5 s visited [1, 8, 76, 374, 929, 614, 97, 4, 0, 0, 0] kept [8, 76, 374, 929, 614, 97, 4, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 5), (3, 6), (4, 7), (8, 9)] iian/all_w32 part 0 of 1 split depth 99 timeout False seconds 130.6
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 9, 89, 419, 888, 756, 160, 14, 0, 0, 0]
+candidates (chosen unit)  : [9, 170, 1163, 6515, 19489, 17760, 5401, 842, 0, 0, 0]
+  rejected by budgets     : [0, 0, 80, 977, 4655, 5424, 2257, 347, 0, 0, 0]
+  rejected by PSD (exact) : [0, 81, 664, 4650, 14078, 12176, 3130, 495, 0, 0, 0]
+  kept                    : [9, 89, 419, 888, 756, 160, 14, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 270718
+stats: no_pattern=39026, pair_budget=318658, psd_reject_M1even=11008, psd_reject_M1odd=24080, psd_reject_M2even=129, psd_reject_M2odd=233, single_budget=4124, single_psd=176
+complete configurations: 0
+WSET 32: timeout False cpu 20.5 s visited [1, 9, 89, 419, 888, 756, 160, 14, 0, 0, 0] kept [9, 89, 419, 888, 756, 160, 14, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 5), (3, 6), (4, 9), (7, 8)] iian/all_w33 part 0 of 1 split depth 99 timeout False seconds 84.6
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 7, 78, 458, 915, 632, 55, 1, 0, 0, 0]
+candidates (chosen unit)  : [7, 97, 1285, 8361, 18362, 15343, 1344, 12, 0, 0, 0]
+  rejected by budgets     : [0, 0, 85, 985, 3705, 4837, 545, 2, 0, 0, 0]
+  rejected by PSD (exact) : [0, 19, 742, 6461, 14025, 10451, 798, 10, 0, 0, 0]
+  kept                    : [7, 78, 458, 915, 632, 55, 1, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 239211
+stats: no_pattern=32575, pair_budget=307054, psd_reject_M1even=8921, psd_reject_M1odd=23327, psd_reject_M2even=133, psd_reject_M2odd=273, single_budget=4196, single_psd=148
+complete configurations: 0
+WSET 33: timeout False cpu 18.2 s visited [1, 7, 78, 458, 915, 632, 55, 1, 0, 0, 0] kept [7, 78, 458, 915, 632, 55, 1, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 5), (3, 8), (4, 7), (6, 9)] iian/all_w34 part 0 of 1 split depth 99 timeout False seconds 51.2
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 9, 76, 416, 1026, 769, 166, 10, 0, 0, 0]
+candidates (chosen unit)  : [9, 125, 1145, 7919, 18860, 21347, 4643, 432, 0, 0, 0]
+  rejected by budgets     : [0, 0, 59, 998, 4408, 6864, 1819, 223, 0, 0, 0]
+  rejected by PSD (exact) : [0, 49, 670, 5895, 13683, 14317, 2814, 209, 0, 0, 0]
+  kept                    : [9, 76, 416, 1026, 769, 166, 10, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 269778
+stats: no_pattern=42416, pair_budget=284151, psd_reject_M1even=9058, psd_reject_M1odd=28372, psd_reject_M2even=125, psd_reject_M2odd=202, single_budget=4168, single_psd=120
+complete configurations: 0
+WSET 34: timeout False cpu 20.4 s visited [1, 9, 76, 416, 1026, 769, 166, 10, 0, 0, 0] kept [9, 76, 416, 1026, 769, 166, 10, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 5), (3, 8), (4, 9), (6, 7)] iian/all_w35 part 0 of 1 split depth 99 timeout False seconds 30.8
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 7, 54, 306, 615, 305, 53, 3, 0, 0, 0]
+candidates (chosen unit)  : [7, 72, 1017, 6516, 13071, 9407, 2397, 16, 0, 0, 0]
+  rejected by budgets     : [0, 0, 31, 605, 2500, 2588, 859, 7, 0, 0, 0]
+  rejected by PSD (exact) : [0, 18, 680, 5296, 10266, 6766, 1535, 9, 0, 0, 0]
+  kept                    : [7, 54, 306, 615, 305, 53, 3, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 149175
+stats: no_pattern=20301, pair_budget=231546, psd_reject_M1even=6171, psd_reject_M1odd=18269, psd_reject_M2even=39, psd_reject_M2odd=189, single_budget=4232, single_psd=98
+complete configurations: 0
+WSET 35: timeout False cpu 13.2 s visited [1, 7, 54, 306, 615, 305, 53, 3, 0, 0, 0] kept [7, 54, 306, 615, 305, 53, 3, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 6), (3, 4), (5, 9), (7, 8)] iian/all_w36 part 0 of 1 split depth 99 timeout False seconds 1.0
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 5, 20, 17, 6, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [5, 40, 112, 204, 68, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 10, 29, 27, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 20, 85, 169, 41, 0, 0, 0, 0, 0, 0]
+  kept                    : [5, 20, 17, 6, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 4946
+stats: no_pattern=259, pair_budget=11079, psd_reject_M1even=569, psd_reject_M1odd=246, single_budget=4244, single_psd=500
+complete configurations: 0
+WSET 36: timeout False cpu 0.5 s visited [1, 5, 20, 17, 6, 0, 0, 0, 0, 0, 0] kept [5, 20, 17, 6, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 6), (3, 5), (4, 7), (8, 9)] iian/all_w37 part 0 of 1 split depth 99 timeout False seconds 5.5
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 7, 34, 109, 96, 15, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [7, 64, 370, 1318, 1713, 257, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 13, 162, 380, 98, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 30, 248, 1060, 1318, 159, 0, 0, 0, 0, 0]
+  kept                    : [7, 34, 109, 96, 15, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 32306
+stats: no_pattern=2728, pair_budget=58136, psd_reject_M1even=1356, psd_reject_M1odd=1782, psd_reject_M2even=2, psd_reject_M2odd=17, single_budget=4166, single_psd=342
+complete configurations: 0
+WSET 37: timeout False cpu 2.2 s visited [1, 7, 34, 109, 96, 15, 0, 0, 0, 0, 0] kept [7, 34, 109, 96, 15, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 6), (3, 5), (4, 9), (7, 8)] iian/all_w38 part 0 of 1 split depth 99 timeout False seconds 5.5
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 6, 39, 97, 51, 8, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [6, 48, 457, 1240, 955, 299, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 12, 104, 243, 115, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 9, 348, 1085, 704, 184, 0, 0, 0, 0, 0]
+  kept                    : [6, 39, 97, 51, 8, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 24907
+stats: no_pattern=1982, pair_budget=57131, psd_reject_M1even=1194, psd_reject_M1odd=1431, psd_reject_M2odd=7, single_budget=4238, single_psd=302
+complete configurations: 0
+WSET 38: timeout False cpu 1.9 s visited [1, 6, 39, 97, 51, 8, 0, 0, 0, 0, 0] kept [6, 39, 97, 51, 8, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 6), (3, 7), (4, 5), (8, 9)] iian/all_w39 part 0 of 1 split depth 99 timeout False seconds 0.4
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 2, 3, 1, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [2, 6, 10, 9, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 3, 9, 9, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [2, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 1007
+stats: no_pattern=26, pair_budget=2215, psd_reject_M1even=403, psd_reject_M1odd=96, single_budget=4266, single_psd=478
+complete configurations: 0
+WSET 39: timeout False cpu 0.2 s visited [1, 2, 3, 1, 0, 0, 0, 0, 0, 0, 0] kept [2, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 6), (3, 7), (4, 9), (5, 8)] iian/all_w40 part 0 of 1 split depth 99 timeout False seconds 1.1
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 5, 18, 16, 3, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [5, 43, 185, 48, 6, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 12, 1, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 25, 157, 44, 6, 0, 0, 0, 0, 0, 0]
+  kept                    : [5, 18, 16, 3, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 4812
+stats: no_pattern=275, pair_budget=12758, psd_reject_M1even=528, psd_reject_M1odd=128, single_budget=4250, single_psd=424
+complete configurations: 0
+WSET 40: timeout False cpu 0.4 s visited [1, 5, 18, 16, 3, 0, 0, 0, 0, 0, 0] kept [5, 18, 16, 3, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 6), (3, 8), (4, 7), (5, 9)] iian/all_w41 part 0 of 1 split depth 99 timeout False seconds 4.8
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 7, 30, 87, 68, 9, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [7, 62, 482, 1314, 1118, 236, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 7, 155, 240, 107, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 32, 388, 1091, 869, 129, 0, 0, 0, 0, 0]
+  kept                    : [7, 30, 87, 68, 9, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 21702
+stats: no_pattern=1740, pair_budget=45830, psd_reject_M1even=1295, psd_reject_M1odd=1595, psd_reject_M2odd=5, single_budget=4210, single_psd=386
+complete configurations: 0
+WSET 41: timeout False cpu 2.0 s visited [1, 7, 30, 87, 68, 9, 0, 0, 0, 0, 0] kept [7, 30, 87, 68, 9, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 6), (3, 8), (4, 9), (5, 7)] iian/all_w42 part 0 of 1 split depth 99 timeout False seconds 0.0
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 8
+stats: psd_reject_M1even=66, psd_reject_M1odd=17, single_budget=237, single_psd=83
+complete configurations: 0
+WSET 42: timeout False cpu 0.0 s visited [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] kept [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] complete 0
+IIa.0/N(p)=[(2, 4), (2, 7), (3, 4), (5, 6), (8, 9)] iian/all_w43 part 0 of 1 split depth 99 timeout False seconds 29.5
+tasks at split depth: total 0, mine 0, done 0
+nodes visited per level   : [1, 9, 83, 356, 564, 229, 32, 0, 0, 0, 0]
+candidates (chosen unit)  : [9, 113, 1513, 6246, 8668, 5782, 1588, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 126, 941, 1793, 1617, 721, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 30, 1031, 4741, 6646, 4133, 867, 0, 0, 0, 0]
+  kept                    : [9, 83, 356, 564, 229, 32, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 146831
+stats: no_pattern=19683, pair_budget=223073, psd_reject_M1even=5646, psd_reject_M1odd=11861, psd_reject_M2even=28, psd_reject_M2odd=103, single_budget=4160, single_psd=190
+complete configurations: 0
+WSET 43: timeout False cpu 10.6 s visited [1, 9, 83, 356, 564, 229, 32, 0, 0, 0, 0] kept [9, 83, 356, 564, 229, 32, 0, 0, 0, 0, 0] complete 0

@@ -1,0 +1,11 @@
+IIa.0/X0-1 dry4_IIa1 part -1 of 100000000 split depth 2 timeout False seconds 33.5
+tasks at split depth: total 6180, mine 0, done 0
+nodes visited per level   : [1, 30, 636, 0, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [30, 636, 10302, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 1358, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 0, 2764, 0, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [30, 636, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 405358
+stats: no_pattern=63825, pair_budget=811765, pair_psd=82356, psd_reject_M1even=44572, psd_reject_M1odd=41414, psd_reject_M2even=6, psd_reject_M2odd=2, single_budget=1880, single_psd=874
+complete configurations: 0

@@ -1,0 +1,351 @@
+def exact_rank(M):
+    import flint
+    return flint.fmpz_mat([[int(x) for x in row] for row in M.tolist()]).rank()
+
+
+def rank_violation(node):
+    """exact: odd Gram of rank > 22 or even part of M1 of rank > 22 (rank bound); None if no violation"""
+    node.prepare()
+    k = len(node.reps)
+    if k + len(node.fixed) < 23:
+        return None
+    if k >= 23:
+        ro = exact_rank(node.blocks[0].B)
+        if ro > 22:
+            return ("odd", ro)
+    re_ = exact_rank(node.blocks[2].B)
+    if re_ > 22:
+        return ("even", re_)
+    return None
+
+
+def run(prob, part, nparts, tlim, split_depth, tag, progress_every=50, setwise=False, save_certs=0,
+        use_rank=True, width=0):
+    # width = 0: every uncovered unit is examined at every node.  width = w > 0: only the w units that had the
+    # fewest float survivors at the nearest ancestor where they were examined (all units at the root).  The
+    # choice of the unit is a heuristic; the exhaustiveness argument does not depend on it.
+    t0 = time.time()
+    stats = Counter()
+    AB = prob.AB
+    nb = AB.shape[0]
+    sigb = list(prob.sig)
+    assert not full_budget_fail(AB)
+    root = Node(AB.copy(), sigb)
+    root.prepare()
+    for blk in root.blocks:
+        w = np.linalg.eigvalsh(blk.B.astype(np.float64))
+        assert w[0] > -1e-7, "base graph not PSD (float)"
+    units = dict(prob.units)
+    norb = sum(units.values()) // 2
+    x0 = list(prob.x0)
+    x0t = dict(prob.x0_target)
+    certf = open("%s_certs_%dof%d.jsonl" % (tag, part, nparts), "w") if save_certs else None
+    ncert = [0]
+
+    def base_row(U, V, N0, n):
+        row = np.zeros(n, dtype=np.int64)
+        for i in U:
+            row[i] = 1
+        for i in V:
+            row[10 + i] = 1
+        for u in N0:
+            row[u] = 1
+        return row
+
+    single = {}
+
+    def single_ok(U, V, N0):
+        key = (U, V, N0)
+        r = single.get(key)
+        if r is None:
+            row = base_row(U, V, N0, nb)
+            if root.budget_fail(row, 0):
+                stats.add("single_budget"); r = False
+            elif root.psd_fail(row, 0, stats) is not None:
+                stats.add("single_psd"); r = False
+            else:
+                r = True
+            single[key] = r
+        return r
+
+    singlenode = {}
+
+    def single_node(o):
+        nd = singlenode.get(o)
+        if nd is None:
+            nd = root.child(base_row(o[0], o[1], o[2], nb), 0)
+            nd.prepare()
+            singlenode[o] = nd
+        return nd
+
+    pairc = {}
+
+    def pair_ok(o1, o2, pat):
+        key = (o1, o2, pat)
+        r = pairc.get(key)
+        if r is None:
+            nd = single_node(o1)
+            row = base_row(o2[0], o2[1], o2[2], nb + 2)
+            if pat & 1:
+                row[nb] = 1
+            if pat & 2:
+                row[nb + 1] = 1
+            if nd.budget_fail(row, 0):
+                stats.add("pair_budget"); r = False
+            elif nd.psd_fail(row, 0, stats) is not None:
+                stats.add("pair_psd"); r = False
+            else:
+                r = True
+            pairc[key] = r
+        return r
+
+    def pair_batch(o1, items):
+        """fills the pair cache for (o1, o2, pat), (o2, pat) in items: exact budgets (vectorised integer counts),
+        float selection for PSD, every PSD rejection confirmed exactly by psd_fail"""
+        nd = single_node(o1)
+        R = np.zeros((len(items), nb + 2), dtype=np.int64)
+        for a, (o2, pat) in enumerate(items):
+            for i in o2[0]:
+                R[a, i] = 1
+            for i in o2[1]:
+                R[a, 10 + i] = 1
+            for u in o2[2]:
+                R[a, u] = 1
+            if pat & 1:
+                R[a, nb] = 1
+            if pat & 2:
+                R[a, nb + 1] = 1
+        bb, pb = nd.evaluate(R)
+        for a, (o2, pat) in enumerate(items):
+            if bb[a]:
+                stats.add("pair_budget"); r = False
+            elif pb[a] and nd.psd_fail(R[a], 0, stats) is not None:
+                stats.add("pair_psd"); r = False
+            else:
+                r = True
+            pairc[(o1, o2, pat)] = r
+
+    L = norb + 1
+    visited = [0] * L          # nodes at which a unit is chosen
+    ncand = [0] * L            # candidates of the chosen unit (after the cached single / pair tests)
+    kept = [0] * L
+    rej_b = [0] * L
+    rej_p = [0] * L
+    rej_rank = [0] * L
+    looked = [0]
+    survivors = []
+    state = {"timeout": False, "tasks": 0, "mine": 0, "done": 0}
+    logf = open("%s_%dof%d.log" % (tag, part, nparts), "w")
+
+    def gen(U0, orbs, tg, degs, cnt, K, remaining):
+        """all candidates (V, N0, tgt, choice, used) for the unit U0 that pass the caps, the symmetry rule and the
+        cached exact single / pair tests"""
+        t = len(orbs)
+        rem2 = dict(remaining)
+        rem2[U0] -= 1
+        if rem2[U0] == 0:
+            del rem2[U0]
+        out = []
+        onews = []
+        for V in sorted(rem2):
+            if V == U0:
+                continue
+            for N0, tgt in prob.options(U0, V):
+                if any(cnt[u] >= x0t[u] for u in N0) or any(cnt[sigb[u]] >= x0t[sigb[u]] for u in N0):
+                    continue
+                if K:
+                    smallest = True
+                    for g in K:
+                        if tuple(sorted(g[u] for u in N0)) < N0:
+                            smallest = False
+                            break
+                    if not smallest:
+                        continue
+                if not single_ok(U0, V, N0):
+                    continue
+                onews.append((V, N0, tgt))
+        # fill the pair cache in batches
+        for i in range(t):
+            room = tg[i] - degs[i]
+            oi = orbs[i]
+            miss = []
+            for V, N0, tgt in onews:
+                onew = (U0, V, N0)
+                for pat in (0, 1, 2, 3):
+                    need = (pat & 1) + (pat >> 1)
+                    if need > room or need > tgt:
+                        continue
+                    if (oi, onew, pat) not in pairc:
+                        miss.append((onew, pat))
+            if miss:
+                pair_batch(oi, miss)
+        for V, N0, tgt in onews:
+            if True:
+                onew = (U0, V, N0)
+                allowed = []
+                ok = True
+                for i in range(t):
+                    room = tg[i] - degs[i]
+                    pats = []
+                    for pat in (0, 1, 2, 3):
+                        need = (pat & 1) + (pat >> 1)
+                        if need > room or need > tgt:
+                            continue
+                        if pair_ok(orbs[i], onew, pat):
+                            pats.append(pat)
+                    if not pats:
+                        ok = False
+                        break
+                    allowed.append(pats)
+                if not ok:
+                    stats.add("no_pattern")
+                    continue
+                for choice in itertools.product(*allowed):
+                    used = sum((pat & 1) + (pat >> 1) for pat in choice)
+                    if used > tgt:
+                        continue
+                    out.append((V, N0, tgt, choice, used))
+        return out
+
+    def rows_of(n, U0, cands):
+        R = np.zeros((len(cands), n), dtype=np.int64)
+        for a, (V, N0, tgt, choice, used) in enumerate(cands):
+            for i in U0:
+                R[a, i] = 1
+            for i in V:
+                R[a, 10 + i] = 1
+            for u in N0:
+                R[a, u] = 1
+            for q, pat in enumerate(choice):
+                if pat & 1:
+                    R[a, nb + 2 * q] = 1
+                if pat & 2:
+                    R[a, nb + 2 * q + 1] = 1
+        return R
+
+    def dfs(node, orbs, tg, degs, cnt, K, remaining, prio):
+        t = len(orbs)
+        if state["timeout"]:
+            return
+        if time.time() - t0 > tlim:
+            state["timeout"] = True
+            return
+        if t == norb:
+            if any(degs[i] != tg[i] for i in range(norb)):
+                stats.add("final_degH"); return
+            if any(cnt[u] != x0t[u] for u in x0):
+                stats.add("final_x0deg"); return
+            stats.add("complete")
+            survivors.append({"orbs": [[list(o[0]), list(o[1]), list(o[2])] for o in orbs],
+                              "A": ["".join(map(str, r)) for r in node.A.tolist()]})
+            return
+        node.prepare()
+        visited[t] += 1
+        best = None
+        order = sorted(remaining, key=lambda U: (prio.get(U, -1), U))
+        prio2 = {U: prio[U] for U in remaining if U in prio}
+        for idx, U0 in enumerate(order):
+            if width and prio and idx >= width:
+                break
+            cands = gen(U0, orbs, tg, degs, cnt, K, remaining)
+            if not cands:
+                best = (U0, cands, None, [], [], 0)
+                prio2[U0] = 0
+                break
+            R = rows_of(node.n, U0, cands)
+            bb, pb = node.evaluate(R)
+            looked[0] += len(cands)
+            nk = int((~bb & ~pb).sum())
+            prio2[U0] = nk
+            if best is None or nk < best[5]:
+                best = (U0, cands, R, bb, pb, nk)
+            if nk == 0:
+                break
+        U0, cands, R, bb, pb = best[:5]
+        ncand[t] += len(cands)
+        todo = []
+        for a, cd in enumerate(cands):
+            if bb[a]:
+                rej_b[t] += 1
+                continue
+            if pb[a]:
+                r = node.psd_fail(R[a], 0, stats)
+                if r is not None:
+                    rej_p[t] += 1
+                    if certf is not None and ncert[0] < save_certs and r[1] is not None:
+                        ncert[0] += 1
+                        ch = node.child(R[a], 0)
+                        certf.write(json.dumps({"block": r[0], "c": r[1], "q": r[2], "sig": ch.sig,
+                                                "A": ["".join(map(str, rr)) for rr in ch.A.tolist()]}) + "\n")
+                    continue
+                stats.add("float_selected_but_not_rejected")
+            todo.append(a)
+        for a in todo:
+            V, N0, tgt, choice, used = cands[a]
+            if t == split_depth:
+                state["tasks"] += 1
+                if (state["tasks"] - 1) % nparts != part:
+                    continue
+                state["mine"] += 1
+            kept[t] += 1
+            ch = node.child(R[a], 0)
+            dead = False
+            if use_rank:
+                rv = rank_violation(ch)
+                if rv is not None:
+                    rej_rank[t] += 1
+                    stats.add("rank_%s_%d" % rv)
+                    dead = True
+            if not dead:
+                rem3 = dict(remaining)
+                for W in (U0, V):
+                    rem3[W] -= 1
+                    if rem3[W] == 0:
+                        del rem3[W]
+                cnt2 = dict(cnt)
+                for u in N0:
+                    cnt2[u] += 1
+                    cnt2[sigb[u]] += 1
+                if setwise:
+                    K2 = [g for g in K if tuple(sorted(g[u] for u in N0)) == N0]
+                else:
+                    K2 = [g for g in K if all(g[u] == u for u in N0)]
+                d2 = list(degs)
+                for q, pat in enumerate(choice):
+                    d2[q] += (pat & 1) + (pat >> 1)
+                dfs(ch, orbs + [(U0, V, N0)], tg + [tgt], d2 + [used], cnt2, K2, rem3, prio2)
+            if t == split_depth and not state["timeout"]:
+                state["done"] += 1
+                if state["done"] % progress_every == 0:
+                    logf.write("%.0f s: %d own tasks done; visited %s kept %s complete %d\n" % (
+                        time.time() - t0, state["done"], visited, kept, len(survivors)))
+                    logf.flush()
+            if state["timeout"]:
+                return
+
+    cnt0 = {u: 0 for u in x0}
+    dfs(root, [], [], [], cnt0, list(prob.group), units, {})
+    out = {"name": prob.name, "tag": tag, "part": part, "nparts": nparts, "split_depth": split_depth,
+           "timeout": state["timeout"], "tasks_total": state["tasks"], "tasks_mine": state["mine"],
+           "tasks_done": state["done"], "visited": visited, "candidates": ncand, "kept": kept,
+           "rejected_budget": rej_b, "rejected_psd": rej_p, "rejected_rank": rej_rank,
+           "lookahead_candidates": looked[0], "stats": stats.c,
+           "survivors": survivors, "seconds": time.time() - t0, "group_order": len(prob.group),
+           "setwise": setwise, "engine": "eng3", "use_rank": use_rank, "width": width}
+    json.dump(out, open("%s_%dof%d.json" % (tag, part, nparts), "w"))
+    print(prob.name, tag, "part", part, "of", nparts, "split depth", split_depth, "timeout", state["timeout"],
+          "seconds %.1f" % (time.time() - t0))
+    print("tasks at split depth: total %d, mine %d, done %d" % (state["tasks"], state["mine"], state["done"]))
+    print("nodes visited per level   :", visited)
+    print("candidates (chosen unit)  :", ncand)
+    print("  rejected by budgets     :", rej_b)
+    print("  rejected by PSD (exact) :", rej_p)
+    print("  kept                    :", kept)
+    print("  of which dead by rank   :", rej_rank)
+    print("lookahead candidates evaluated (float, all units):", looked[0])
+    print("stats:", ", ".join("%s=%d" % (k, stats.c[k]) for k in sorted(stats.c)))
+    print("complete configurations:", len(survivors))
+    logf.close()
+    if certf:
+        certf.close()
+    return out

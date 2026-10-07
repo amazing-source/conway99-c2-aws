@@ -1,0 +1,24 @@
+WSET 44: nodes 2691 candidates 66981 rejected budgets 16271 PSD 48020 kept 2690 complete 0 | plan lines left 0, candidate-count mismatches 1416 | cpu 28.2 s
+WSET 45: nodes 122 candidates 3320 rejected budgets 507 PSD 2692 kept 121 complete 0 | plan lines left 0, candidate-count mismatches 119 | cpu 3.0 s
+WSET 46: nodes 36 candidates 426 rejected budgets 61 PSD 330 kept 35 complete 0 | plan lines left 0, candidate-count mismatches 29 | cpu 0.8 s
+WSET 47: nodes 14 candidates 743 rejected budgets 427 PSD 303 kept 13 complete 0 | plan lines left 0, candidate-count mismatches 14 | cpu 0.6 s
+WSET 48: nodes 31 candidates 881 rejected budgets 460 PSD 391 kept 30 complete 0 | plan lines left 0, candidate-count mismatches 30 | cpu 0.8 s
+WSET 49: nodes 407 candidates 8094 rejected budgets 1859 PSD 5829 kept 406 complete 0 | plan lines left 0, candidate-count mismatches 223 | cpu 6.1 s
+WSET 50: nodes 28 candidates 870 rejected budgets 438 PSD 405 kept 27 complete 0 | plan lines left 0, candidate-count mismatches 26 | cpu 0.6 s
+WSET 51: nodes 2184 candidates 55576 rejected budgets 13411 PSD 39982 kept 2183 complete 0 | plan lines left 0, candidate-count mismatches 1136 | cpu 27.3 s
+WSET 52: nodes 503 candidates 12446 rejected budgets 2655 PSD 9289 kept 502 complete 0 | plan lines left 0, candidate-count mismatches 249 | cpu 7.7 s
+WSET 53: nodes 24 candidates 568 rejected budgets 45 PSD 500 kept 23 complete 0 | plan lines left 0, candidate-count mismatches 23 | cpu 0.7 s
+WSET 54: nodes 1459 candidates 33176 rejected budgets 6090 PSD 25628 kept 1458 complete 0 | plan lines left 0, candidate-count mismatches 718 | cpu 19.3 s
+WSET 55: nodes 12 candidates 288 rejected budgets 13 PSD 264 kept 11 complete 0 | plan lines left 0, candidate-count mismatches 12 | cpu 0.3 s
+WSET 56: nodes 379 candidates 9370 rejected budgets 1338 PSD 7654 kept 378 complete 0 | plan lines left 0, candidate-count mismatches 326 | cpu 6.9 s
+WSET 57: nodes 382 candidates 6420 rejected budgets 1177 PSD 4862 kept 381 complete 0 | plan lines left 0, candidate-count mismatches 274 | cpu 5.5 s
+WSET 58: nodes 297 candidates 5948 rejected budgets 1072 PSD 4580 kept 296 complete 0 | plan lines left 0, candidate-count mismatches 217 | cpu 4.6 s
+WSET 59: nodes 408 candidates 10368 rejected budgets 2050 PSD 7911 kept 407 complete 0 | plan lines left 0, candidate-count mismatches 352 | cpu 8.0 s
+WSET 60: nodes 11 candidates 194 rejected budgets 5 PSD 179 kept 10 complete 0 | plan lines left 0, candidate-count mismatches 11 | cpu 0.4 s
+WSET 61: nodes 20 candidates 279 rejected budgets 4 PSD 256 kept 19 complete 0 | plan lines left 0, candidate-count mismatches 14 | cpu 0.7 s
+WSET 62: nodes 88 candidates 1797 rejected budgets 165 PSD 1545 kept 87 complete 0 | plan lines left 0, candidate-count mismatches 80 | cpu 2.2 s
+WSET 63: nodes 1896 candidates 46985 rejected budgets 10154 PSD 34936 kept 1895 complete 0 | plan lines left 0, candidate-count mismatches 1005 | cpu 23.6 s
+WSET 64: nodes 1377 candidates 32523 rejected budgets 5828 PSD 25319 kept 1376 complete 0 | plan lines left 0, candidate-count mismatches 900 | cpu 18.9 s
+WSET 65: nodes 704 candidates 19250 rejected budgets 3337 PSD 15210 kept 703 complete 0 | plan lines left 0, candidate-count mismatches 442 | cpu 13.8 s
+TOTAL over the type sets 44..65: nodes 13073, candidates 316503, budget 67367, PSD 236085, kept 13051, complete 0
+certificates: integer vector 236085, exact elimination 0

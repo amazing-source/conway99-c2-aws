@@ -1,0 +1,11 @@
+III.1 samples/s4_III1 part 133 of 400 split depth 3 timeout False seconds 362.3
+tasks at split depth: total 21165, mine 53, done 53
+nodes visited per level   : [1, 13, 208, 2156, 53, 334, 1085, 1571, 336, 0, 0, 0, 0]
+candidates (chosen unit)  : [13, 208, 2759, 38021, 1181, 8781, 36174, 46441, 10280, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 417, 5302, 194, 1613, 5841, 8139, 1506, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 0, 186, 11554, 653, 6083, 28762, 37966, 8774, 0, 0, 0, 0]
+  kept                    : [13, 208, 2156, 53, 334, 1085, 1571, 336, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 2301081
+stats: no_pattern=1283341, pair_budget=1123028, pair_psd=146986, psd_reject_M1even=36887, psd_reject_M1odd=201053, psd_reject_M2even=2832, psd_reject_M2odd=268, single_budget=554, single_psd=76
+complete configurations: 0

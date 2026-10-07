@@ -1,0 +1,11 @@
+III.0 e3_III0 part 2 of 3 split depth 3 timeout False seconds 2280.1
+tasks at split depth: total 7109, mine 2369, done 2369
+nodes visited per level   : [1, 13, 116, 881, 2369, 10082, 18065, 10711, 2467, 116, 0, 0, 0]
+candidates (chosen unit)  : [13, 116, 1177, 18126, 60080, 300622, 604126, 349595, 68414, 2425, 0, 0, 0]
+  rejected by budgets     : [0, 0, 73, 550, 5679, 47536, 103453, 61955, 11512, 488, 0, 0, 0]
+  rejected by PSD (exact) : [0, 0, 223, 10467, 44319, 235021, 489962, 285173, 56786, 1937, 0, 0, 0]
+  kept                    : [13, 116, 881, 2369, 10082, 18065, 10711, 2467, 116, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 15005228
+stats: no_pattern=7115642, pair_budget=1897127, pair_psd=186362, psd_reject_M1even=407392, psd_reject_M1odd=893704, psd_reject_M2even=4015, psd_reject_M2odd=5211, single_budget=330, single_psd=72
+complete configurations: 0

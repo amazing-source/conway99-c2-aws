@@ -1,0 +1,7 @@
+structure IIa.0: 6358 certificates checked, 0 invalid
+  by number of vertices: {35: 129, 37: 914, 39: 2667, 41: 1952, 43: 559, 45: 137}
+  by block: {'M1even': 2067, 'M1odd': 4277, 'M2even': 6, 'M2odd': 8}
+
+real	0m5.185s
+user	0m0.000s
+sys	0m0.015s

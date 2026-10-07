@@ -1,0 +1,14 @@
+killed static-order III runs at Wed Oct  7 01:03:46     2026
+launched eng3 III.0/III.1 x3 at Wed Oct  7 01:18:07     2026
+killed eng3 III.1 x3 at Wed Oct  7 01:36:58     2026 (too slow, partial, not used)
+III.0 eng3 x3 finished 02:03: 7109 tasks, 0 complete, no timeout
+launched eng4 III.0 x3 with plan at Wed Oct  7 02:05:45     2026
+eng4 III.0 x3 finished (identical counts to eng3); launched engv plan-follower III.0 x3 at Wed Oct  7 02:28:46     2026
+IIa: first single-process run stopped at 33/87 (all 0), restarted in two halves with plan output at Wed Oct  7 03:26:17     2026
+III.0 engv plan-follower finished on all 3 parts (03:45), identical counts; IIa eng5 all 87 type sets done
+launched eng5 III.1 parts 0-3 of 6 (setwise, plan, certs) at Wed Oct  7 03:50:19     2026
+launched eng5 III.1 parts 4-5 of 6 at Wed Oct  7 03:54:43     2026
+IIa: kept the certificate files of 5 type sets (iian_certs_sample, 6358 certificates, re-checked: check_certs_IIa.out); the other 82 certificate files (about 1.6 GB) were deleted to save disk
+III.1 eng5 x6 first launch (03:50) stopped at 04:02: multi-threaded BLAS oversubscription (17% CPU per process); relaunched with OPENBLAS_NUM_THREADS=1 at Wed Oct  7 04:02:09     2026
+III.1 eng5 x6 second launch (04:02) stopped at 04:25: whole machine throttled (each process about 7 percent of a core); about 150 tasks of 3527 per part done, no survivor; NOT a result
+case I exploration (I.0): N(p) configurations counted (labelled, float PSD): (4,2,1): 48587 kept of 1784786; (3,4,0): incomplete at 240 s (88174 kept so far); 41 + 40 sampled bases all dead in 0.3-2.1 CPU-s each (in_test_421.out, in_test_340.out). Exploration only.

@@ -1,0 +1,11 @@
+plan followed: lines left unread 0, nodes with a different candidate count 0
+III.0 v_III0 part 1 of 3 split depth 3 order mincand timeout False seconds 4417.4
+tasks at split depth: total 7109, mine 2370, done 2370
+nodes visited per level   : [1, 13, 116, 881, 2370, 9932, 18349, 9962, 1696, 42, 0, 0, 0]
+candidates tested         : [13, 116, 1177, 18126, 59778, 296059, 600970, 322884, 45213, 884, 0, 0, 0]
+  rejected by budgets     : [0, 0, 73, 550, 5663, 44994, 103841, 55367, 8029, 116, 0, 0, 0]
+  rejected by PSD (exact) : [0, 0, 223, 10467, 44183, 232716, 487167, 265821, 37142, 768, 0, 0, 0]
+  passed                  : [13, 116, 881, 2370, 9932, 18349, 9962, 1696, 42, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+stats: no_pattern=1031650, pair_budget=609971, pair_psd=46051, psd_reject_M1=1116077, psd_reject_M2=8533, single_budget=322, single_psd=72
+complete configurations: 0

@@ -1,0 +1,11 @@
+IIa.0, base S u N[p]: 87 type sets of N(p), no time-out, complete configurations: 0
+   visited          [87, 520, 3148, 11451, 18324, 10279, 1640, 48, 0, 0, 0]   total 45497
+   candidates       [520, 5465, 43054, 192982, 355878, 252044, 47053, 1949, 0, 0, 0]   total 898945
+   rejected_budget  [0, 0, 2707, 25057, 77062, 77045, 19168, 879, 0, 0, 0]   total 201918
+   rejected_psd     [0, 2317, 28896, 149601, 268537, 173359, 27837, 1070, 0, 0, 0]   total 651617
+   kept             [520, 3148, 11451, 18324, 10279, 1640, 48, 0, 0, 0, 0]   total 45410
+   rejected_rank    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]   total 0
+   stats: {'psd_reject_M1even': 212311, 'single_psd': 25752, 'psd_reject_M1odd': 458880, 'single_budget': 363386, 'pair_budget': 7593974, 'no_pattern': 655621, 'psd_reject_M2odd': 4100, 'psd_reject_M2even': 2078}
+   deepest level with a visited node: 7
+   nodes per type set: min 1, max 3054;  cpu seconds total 407
+   type sets dead at the root (no candidate kept for the first unit): 2

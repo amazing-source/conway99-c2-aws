@@ -1,0 +1,11 @@
+III.1 dry3s_III1 part -1 of 100000000 split depth 3 timeout False seconds 140.0
+tasks at split depth: total 21145, mine 0, done 0
+nodes visited per level   : [1, 13, 208, 2154, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+candidates (chosen unit)  : [13, 208, 2748, 37474, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by budgets     : [0, 0, 426, 5367, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  rejected by PSD (exact) : [0, 0, 168, 10962, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  kept                    : [13, 208, 2154, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  of which dead by rank   : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+lookahead candidates evaluated (float, all units): 1755710
+stats: no_pattern=1038109, pair_budget=841727, pair_psd=114099, psd_reject_M1even=14007, psd_reject_M1odd=111296, psd_reject_M2odd=2, single_budget=554, single_psd=76
+complete configurations: 0

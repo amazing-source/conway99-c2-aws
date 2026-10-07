@@ -1,0 +1,10 @@
+WSET 30: nodes 1561 candidates 39700 rejected budgets 8947 PSD 29193 kept 1560 complete 0 | plan lines left 0, candidate-count mismatches 924 | cpu 19.9 s
+WSET 31: nodes 2103 candidates 47652 rejected budgets 10768 PSD 34782 kept 2102 complete 0 | plan lines left 0, candidate-count mismatches 1141 | cpu 23.4 s
+WSET 32: nodes 2336 candidates 58607 rejected budgets 15176 PSD 41096 kept 2335 complete 0 | plan lines left 0, candidate-count mismatches 1249 | cpu 28.8 s
+WSET 33: nodes 2147 candidates 52023 rejected budgets 11362 PSD 38515 kept 2146 complete 0 | plan lines left 0, candidate-count mismatches 1288 | cpu 26.9 s
+WSET 34: nodes 2473 candidates 60588 rejected budgets 15680 PSD 42436 kept 2472 complete 0 | plan lines left 0, candidate-count mismatches 1095 | cpu 28.8 s
+WSET 35: nodes 1344 candidates 35958 rejected budgets 7118 PSD 27497 kept 1343 complete 0 | plan lines left 0, candidate-count mismatches 780 | cpu 19.5 s
+WSET 36: nodes 49 candidates 1190 rejected budgets 152 PSD 990 kept 48 complete 0 | plan lines left 0, candidate-count mismatches 46 | cpu 1.4 s
+WSET 37: nodes 262 candidates 5266 rejected budgets 877 PSD 4128 kept 261 complete 0 | plan lines left 0, candidate-count mismatches 211 | cpu 4.2 s
+TOTAL over the type sets 30..37: nodes 12275, candidates 300984, budget 70080, PSD 218637, kept 12267, complete 0
+certificates: integer vector 218637, exact elimination 0

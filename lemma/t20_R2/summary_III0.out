@@ -1,0 +1,20 @@
+e3_III0 (engine eng3): tasks at depth 3: 7109, all done, no time-out; complete configurations: 0
+   visited          [1, 13, 116, 881, 7109, 30102, 54327, 31126, 6086, 243, 0, 0, 0]   total 130004
+   candidates       [13, 116, 1177, 18126, 179141, 895581, 1818042, 1012786, 164977, 4750, 0, 0, 0]   total 4094709
+   rejected_budget  [0, 0, 73, 550, 16913, 140679, 309834, 174993, 27466, 807, 0, 0, 0]   total 671315
+   rejected_psd     [0, 0, 223, 10467, 132126, 700575, 1477082, 831707, 137268, 3943, 0, 0, 0]   total 3293391
+   kept             [13, 116, 881, 7109, 30102, 54327, 31126, 6086, 243, 0, 0, 0, 0]   total 130003
+   rejected_rank    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]   total 0
+   look-ahead candidates (float selection only): 43855362
+   stats summed over the three parts (the cached single / pair tests are repeated in each part): {'single_budget': 990, 'psd_reject_M1even': 1217017, 'single_psd': 216, 'pair_budget': 5675956, 'no_pattern': 21017842, 'psd_reject_M1odd': 2622431, 'pair_psd': 551201, 'psd_reject_M2odd': 14185, 'psd_reject_M2even': 12555}
+   seconds per part: [2269, 2261, 2280]
+e4_III0 (engine eng4): tasks at depth 3: 7109, all done, no time-out; complete configurations: 0
+   visited          [1, 13, 116, 881, 7109, 30102, 54327, 31126, 6086, 243, 0, 0, 0]   total 130004
+   candidates       [13, 116, 1177, 18126, 179141, 895581, 1818042, 1012786, 164977, 4750, 0, 0, 0]   total 4094709
+   rejected_budget  [0, 0, 73, 550, 16913, 140679, 309834, 174993, 27466, 807, 0, 0, 0]   total 671315
+   rejected_psd     [0, 0, 223, 10467, 132126, 700575, 1477082, 831707, 137268, 3943, 0, 0, 0]   total 3293391
+   kept             [13, 116, 881, 7109, 30102, 54327, 31126, 6086, 243, 0, 0, 0, 0]   total 130003
+   rejected_rank    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]   total 0
+   look-ahead candidates (float selection only): 28318858
+   stats summed over the three parts (the cached single / pair tests are repeated in each part): {'single_budget': 990, 'psd_reject_M1even': 1176159, 'single_psd': 216, 'pair_budget': 5329591, 'no_pattern': 10871348, 'psd_reject_M1odd': 2580014, 'pair_psd': 467926, 'psd_reject_M2odd': 14185, 'psd_reject_M2even': 12555}
+   seconds per part: [853, 848, 866]

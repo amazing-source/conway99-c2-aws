@@ -1,0 +1,7 @@
+structure III.0: 15000 certificates checked, 0 invalid
+  by number of vertices: {33: 6, 35: 319, 37: 568, 39: 1978, 41: 5147, 43: 6209, 45: 773}
+  by block: {'M1even': 3812, 'M1odd': 11136, 'M2even': 3, 'M2odd': 49}
+
+real	0m18.058s
+user	0m0.015s
+sys	0m0.000s

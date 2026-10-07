@@ -1,0 +1,8 @@
+W type sets 87; admissible single X_0 orbits (classes under sigma), total over the W-sets: 1002
+bases S u N[p] u X_0 passing budgets and PSD on 35 vertices: 5464  (no edge in X_0: 3890, one edge orbit: 1574)
+W-sets with at least one base: 83  max bases for one W-set: 153
+exact PSD rejections: {'psd_reject_M1even': 14921}
+
+real	0m2.472s
+user	0m0.000s
+sys	0m0.015s

@@ -1,0 +1,7 @@
+type sets with the right degrees: 180; rejected by budgets 63, by PSD (exact) 30, kept 87
+identical to the list of the first program (iia_w.json, 87 sets): True
+certificates: integer vector 30, exact elimination 0
+
+real	0m0.361s
+user	0m0.015s
+sys	0m0.000s

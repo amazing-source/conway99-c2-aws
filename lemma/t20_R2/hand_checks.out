@@ -1,0 +1,20 @@
+1. Identity (#) and the forced counts
+   I.0: k = 0, e = 0, Q = 0: sum C(d,2) = 30, sum d = 100, n_0 + n_3 + 3 n_4 = 9
+   I.1: k = 0, e = 0, Q = 0: sum C(d,2) = 30, sum d = 100, n_0 + n_3 + 3 n_4 = 9
+   I.2: k = 0, e = 0, Q = 0: sum C(d,2) = 30, sum d = 100, n_0 + n_3 + 3 n_4 = 9
+   I.3: k = 0, e = 0, Q = 0: sum C(d,2) = 30, sum d = 100, n_0 + n_3 + 3 n_4 = 9
+   I.4: k = 0, e = 0, Q = 0: sum C(d,2) = 30, sum d = 100, n_0 + n_3 + 3 n_4 = 9
+   I.5: k = 0, e = 0, Q = 0: sum C(d,2) = 30, sum d = 100, n_0 + n_3 + 3 n_4 = 9
+   IIa.0: k = 2, e = 1, Q = 2: sum C(d,2) = 21, sum d = 96, n_0 + n_3 + 3 n_4 = 4
+   III.0: k = 4, e = 0, Q = 0: sum C(d,2) = 30, sum d = 100, n_0 + n_3 + 3 n_4 = 9
+   III.1: k = 4, e = 0, Q = 0: sum C(d,2) = 30, sum d = 100, n_0 + n_3 + 3 n_4 = 9
+2. Case II: X_0 cannot contain a 4-cycle.  x = -(1 on S u {p}) - (1 more on x2,x3,y2,y3) + 2 on the 4-cycle
+   |x|^2 = 49, x^T A x = 184, sum x = -17, x^T (9(3I-A)+J) x = -44
+   used: e(S) = 44, deg_S of x2,x3,y2,y3 = [6, 6, 6, 6], p has 4 neighbours in S, none among x2,x3,y2,y3
+3. Case II: number of X_2 neighbours (other than p) of the active inner vertices, from the path count
+   x_0: 9 neighbours outside S u {p}, sum of d = 14, so 5 of them in X_2
+   x_1: 9 neighbours outside S u {p}, sum of d = 13, so 4 of them in X_2
+4. Case I: profiles.  (h2,h1,h0) with h2 + h1 + h0 = 7, 2 h2 + h1 = 10 (h3 = 0): [(3, 4, 0), (4, 2, 1), (5, 0, 2)]
+   profile (5,0,2): four X_0 vertices in N(p) with >= 8 - 2 a_3 neighbours in X_2 minus A_p;
+      n_3 = 0: union >= 4*8 - 4 = 28 > 30 - 10 = 20;   n_3 = 2: union >= 32 - 8 - 4 = 20 > 24 - 10 = 14
+ALL CHECKS PASSED
