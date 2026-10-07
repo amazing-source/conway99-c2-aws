@@ -1,4 +1,4 @@
-# Route (C): the final statement and what it rests on — DRAFT 3 of 2026-10-07, state at 15:10 UTC
+# Route (C): the final statement and what it rests on — DRAFT 4 of 2026-10-07, state at 15:35 UTC
 
 Lab session (Claude). Board line D5 of `lemma/T20_BOARD.md` (compute repo). This is a recheck by AI sessions, not a human referee
 and not a formal proof.
@@ -46,7 +46,7 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 | | Finding | Status |
 |---|---|---|
 | H1 | `joint` keeps at most 1000 joint star sums per leaf, without a flag | real in the code, never exercised: the verdict it could falsify occurs in no stored record (17,676 + 356 + 57 files); the lab importer refuses it |
-| H2 | The rigid kernel (pairs without flex point) never builds a frame with an h of zero footprint | **real, and exercised** (24 pairs of lattice 080 were decided by it). Hand lemma (lab): impossible unless the two even neighbours have the same Coxeter number H and U has a root component of Coxeter number H: 27 lattices, 25 of them treated by the engine. Exact audit of their streams (`q/audit_rigid.py`): every pair without flex point that has a zero-footprint candidate is searched again with the general kernel. Coverage checked lattice by lattice (`scripts/cloud/audit_coverage.py`, 15:10): **22 of 25 covered, every exposed pair excluded again** (001, 006, 007, 014, 023, 024, 027, 028, 037, 049, 050, 052, 053, 077, 079, 080, 101, 103, 104, 105, 137, 138; for the plan lattices the audited pairs add up exactly to the sweep's pair counts). Not yet: 022 and 026 (one machine still running; 0 pair not excluded again so far), 003 (representatives 2, 3, 180 running; 157, 162, 174, 176 running too and in any case covered by Corollary Y1; 181 has no record: nothing to audit) |
+| H2 | The rigid kernel (pairs without flex point) never builds a frame with an h of zero footprint | **real, and exercised** (24 pairs of lattice 080 were decided by it). Hand lemma (lab): impossible unless the two even neighbours have the same Coxeter number H and U has a root component of Coxeter number H: 27 lattices, 25 of them treated by the engine. Exact audit of their streams (`q/audit_rigid.py`): every pair without flex point that has a zero-footprint candidate is searched again with the general kernel. Coverage checked lattice by lattice (`scripts/cloud/audit_coverage.py`, 15:10): **24 of 25 covered, every exposed pair excluded again** (15:30; 001, 006, 007, 014, 022, 023, 024, 026, 027, 028, 037, 049, 050, 052, 053, 077, 079, 080, 101, 103, 104, 105, 137, 138; for the plan lattices the audited pairs add up exactly to the sweep's pair counts). The collector and its report were reviewed by Codex (`AUDIT_ENGINE_RULES.md`). Not yet: 003 (representatives 2, 3, 180 running; 157, 162, 174, 176 running too and in any case covered by Corollary Y1; 181 has no record: nothing to audit) |
 | H3 | The list of norm-4 vectors is produced by a floating-point enumeration | closed: N3 = 4096 and N4 = 196560 - 24 (N2 + N3) for all 156 lattices (theta series), every vector rechecked |
 | H4 | The per-pair budget test accepts an LP solver status | concerned one lattice, 105 (6,310 pairs, lab run of 29/09). **Closed 14:45**: its 56,544 pairs (enumeration up to W(R)) passed again through the v10 producer and consumer without the budget test: all excluded, swap-covered or twin-transferred; stream sha256 identical on AWS and on the lab PC |
 | H5 | The 9/7 rule needs T16, which Theorem R does not give | T16 refereed (R5) |
@@ -56,10 +56,13 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 Excluded in the tracker: 143. Open: 13.
 
 **Read "excluded" with these reservations until the items of section 5 are done:**
-- 20 lattices were excluded subject to the rigid-kernel audit H2. Audit complete and clean for 18 of them (023, 024, 027, 028,
-  037, 049, 050, 052, 053, 077, 079, 080, 101, 103, 104, 105, 137, 138); **still subject to it: 022 and 026** (running);
+- 20 lattices were excluded subject to the rigid-kernel audit H2: the audit is now complete and clean for all 20 (15:30); this
+  reservation is lifted for them (the audit of the open lattice 003 is not finished: section 5);
 - 105: its 6,310 "pair budget" pairs are now excluded without a solver (H4 closed, 14:45);
-- 143 rests on one lattice-level test that nobody reviewed: passing through the v10 engine (relaunched 14:51, running);
+- 143 rested on one lattice-level test that nobody had reviewed. It now has a two-line hand proof
+  (`lemma/upstream/LATTICE_143.md`: (R-ii), (R-v) and the table of its 4096 vectors of norm 3; at most 28 of the 42 u fit in the
+  a_8 budget, the 14 others exceed the budget of the line orthogonal to the roots, 63/8 > 7), re-run by the laptop session;
+  referee pass asked of Codex. The v10 run of 143 was stopped (15:18), nothing of it is imported;
 - 153 had one argument reviewed by its author's side only; it now has a second proof (A.9: U is indecomposable), refereed.
 
 | Method recorded in the tracker | Lattices | Recount on 07/10 |
@@ -74,7 +77,7 @@ Excluded in the tracker: 143. Open: 13.
 | Criterion (E) AND packing (117, 134, 142) | 3 | two methods each |
 | "Sol 0836" AND packing (145, 146, 151, 152, 155) | 5 | two methods each; 152 also by A.9 |
 | "Sol 0836" only (153) | 1 | second proof by A.9 |
-| Component-budget test only (143) | 1 | single unreviewed method: being re-run |
+| Component budget (143) | 1 | new hand proof of 07/10 (`LATTICE_143.md`), table by two programs and a hand cross-check; Codex's referee pass pending |
 
 Twin deferrals: 1,622 dependencies between the 104 stream lattices, no cycle (OK-RECOMPUTED).
 
@@ -91,12 +94,12 @@ repository yet) and partly in the compute repository.
 ## 5. What must still happen before the statement may be claimed
 
 1. T20: archival G1 (outputs, source revisions, commands of every computation cited).
-2. Rigid-kernel audit H2: the three lattices left (022, 026; 003: representatives 2, 3, 180), with every exposed pair excluded again.
-3. 143 through the v10 engine; its records imported (105: done).
+2. Rigid-kernel audit H2: 003, representatives 2, 3, 180 (running), with every exposed pair excluded again.
+3. 143: Codex's referee pass on `LATTICE_143.md`.
 4. The two last stream certificates (003:162:182, 006:224:228). Done: 7,760 of 7,762.
 5. ~~003:181:182~~ done at 15:00 without computation (Corollary Y1 and its certificates).
-6. Pair enumeration (R3): 140 and 135 equal; 141 and 064 to come (one of the four should have non-spanning roots: to be said
-   explicitly when they are in).
+6. Pair enumeration (R3): 140, 135 and 141 equal (per the laptop session); 064, the one whose roots do not span (a_5^4,
+   rank 20), is running.
 7. Then: `data/finishC/lemmas_accepted.json` written with the references of T18 and T20 (T16 is already a rule of the engine),
    and `convert_deferred.py --write`.
 8. Decision of the user on the 84 lab-local lattices (reconciliation with the stored records, or re-run).
