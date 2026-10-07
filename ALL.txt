@@ -1,0 +1,25 @@
+=== I.0 (4,2,1) start 13:19:39
+I.0 profile (4, 2, 1): |G| = 16; rectangles 114; N-configurations 178768, orbits under G 11322   [merged from 8 parts]
+   bases tested 11322: rejected by budgets 0, by PSD (exact) 8300, kept 3022   stats {'psd_reject_M1': 8300}
+I.0 profile (4, 2, 1): stage-1 file /home/ubuntu/lemma_out/I0_421/s1_I0_421.json, 3022 bases, sha1 0ca457e10c1eb3cffbc6112f1641c399720b4ae8
+   parts 8; sha1 recorded by the parts: ['0ca457e10c1eb3cffbc6112f1641c399720b4ae8']; bases finished 3022; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [3022, 13440, 23693, 10406, 678, 2]  total 51241
+   candidates (chosen unit)  : [13440, 111524, 246405, 125499, 7860, 24]  total 504752
+     rejected by budgets     : [0, 0, 13194, 17736, 1884, 8]
+     rejected by PSD (exact) : [0, 87831, 222805, 107085, 5974, 16]
+     kept                    : [13440, 23693, 10406, 678, 2]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=556171, pair_budget=3537731, psd_reject_M1even=192818, psd_reject_M1odd=543676, psd_reject_M2even=42, psd_reject_M2odd=48038, single_psd=360863
+   cpu seconds: 182 (mean 0.060 per base, max 1.2)
+I.0 profile (4,2,1), second program, stage 1 (8 parts): |Aut(B)| = 16 (first program: 16); rectangle sets tested 328697; configurations with the right coverage 213416
+   passing the budget count on 35 vertices: 178768 (first program: 178768); sum of the orbit sizes of the representatives: 178768 (must be equal)
+   orbits under Aut(B): 11322 (first program: 11322); rejected by PSD (exact) 8300; kept 3022 (first program: 3022)
+   in the first list only: 0; in this list only: 0
+   STAGE 1 AGREES: True
+   stage 2 re-traversed: bases 3022 of 3022 (stage-1 list: 3022); parts not finished: none
+   totals: {'nodes': 51241, 'cands': 1717312, 'budget': 56203648, 'psd': 1591189, 'kept': 48219, 'complete': 0, 'impossible': 0, 'rank_nodes': 0, 'rank_nodes_closed_by_own_search': 0, 'rank_nodes_closed_by_rank_bound': 0, 'holes_located_by_own_rank': 0, 'free_nodes': 0, 'free_cands': 0, 'free_budget': 0, 'free_psd': 0, 'free_deepest': 0, 'free_complete': 0, 'free_capped': 0, 'recount_checks': 158886}; certificates: integer vector 1591189, exact elimination 0
+   STAGE 2 AGREES AT EVERY NODE, 0 complete, all bases: True
+=== I.0 (4,2,1) end 13:22:33
