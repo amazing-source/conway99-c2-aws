@@ -14,7 +14,7 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | A2 | Route B: N(p) and the X_3 orbit in the base (the decomposition that closed n_3 = 0 at 0.3 s per base) | LAP (agent) | started 11:50 | number of bases after stage 1 for the 6 graphs x 2 profiles; measured stage-2 sample; estimated core-hours | 12:45 |
 | A3 | **Decision**: one route, with a measured cost, proposed to the user; the other route stops | LAP | pending A1, A2 | time and price | 12:45 |
 | A4 | Run of the chosen route (first program) | LAP launches | - | 0 complete configurations or the list of survivors | after A3 |
-| A5 | Second program for n_3 = 2, from `t20_HAND/SPEC_N3.md`, no shared code | CDX | writing | measure on 5 bases, then job script | 14:00 |
+| A5 | Second program for n_3 = 2, from `t20_HAND/SPEC_N3.md`, no shared code | CDX | implemented and locally checked 11:55; all 24 base counts match, 700 classes / 533 after hand lemmas; five 60 s timeouts and one 300 s timeout recorded in `t20_CODEX/n3_second/MEASUREMENTS.md`; route-A performance work on hold, no exclusion claimed | adapt the exact checker and runner to the chosen route after the 12:45 decision; route-B specification needed if B is chosen; job wrapper already written | 14:00 |
 
 ## B. Already closed (do not redo)
 
@@ -42,7 +42,7 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 |---|---|---|---|---|
 | D1 | `lemma/T20_PROOF.md`: self-contained text, same form as `T18_PROOF.md`, for everything in B; the n_3 = 2 section left as a marked placeholder | LAP (agent) | starting 11:55 | 17:00 |
 | D2 | n_3 = 2 section of the text, once A4 is done | owner of the chosen route | - | after A4 |
-| D3 | One referee pass on `T20_PROOF.md` (a reader who has seen none of the code) | CDX | after D1, D2 | - |
+| D3 | One mathematical referee pass on `T20_PROOF.md`, independent of the first search implementation | CDX | queued after D1, D2; first-engine code has not been read, but CDX authors the second checker and therefore is not a code-blind referee | - |
 | D4 | Importer on the lab PC: `merged` records, DEFERRED verdicts and index lists, `producer_max_out` (accepted, condition producer.complete), fine blocks of 001; per-pair certificate (norms 7, orthogonality, root, Y = 5 or 4). The pairs stay DEFERRED in the lab tracker until T20 is closed | LAB | starts 12:00, in parallel with A (does not wait for T20) | importer run on two swept lattices (013, 016) with counts equal to `sweep_report.py` | 17:00 |
 | D5 | Final statement: T18 + T20 + bridge + sweep records => the 156 envelopes are excluded, with the list of what it rests on (upstream reduction: "source only, not re-read") | LAB | after D1-D4 | - |
 
