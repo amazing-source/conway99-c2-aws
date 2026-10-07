@@ -1,0 +1,643 @@
+# T20 round 3, case I (k = 0): INDEPENDENT verifier.  Imports nothing from eng* / cases* / r3lib / stage1c:
+# own model, own enumeration of the configurations of N(p), own budget counts, own PSD test.
+#
+# Hand part used (report): S+ and S- independent, S disjoint from N[p], x_i ~ y_j iff i ~_B j;  N(p) = seven mate
+# pairs, with h2 pairs in X_2 of type {U, V} (U, V disjoint deficient pairs), h1 pairs in X_1 of type {i, k},
+# i != k, h0 pairs in X_0; every x_i has exactly two neighbours in N(p); the vertices of X_2 outside N(p) are
+# words s with N(s) n S+ = x_U, N(s) n S- = y_V, exactly two neighbours in N(p) (different pairs); every deficient
+# unit not used by N(p) [nor by X_3] is N(s) n S+ for exactly one such s.  Caps (upper bounds only):
+#   n_3 = 0: a_2(s) <= 5;  a vertex of N(p): at most 4 - h0 (X_2), 8 - h0 (X_1), min(10, 12 - h0) (X_0)
+#            neighbours among the words of X_2.
+#   n_3 = 2: X_3 = {z, sigma z}, z a word with exactly two neighbours in N(p), a_2(z) <= 1;
+#            a_2(s) + 2 a_3(s) <= 4;  a vertex w of N(p) with a3 = a_3(w): at most 3 - h0 - 2 a3 (X_2),
+#            7 - h0 - 2 a3 (X_1), min(11 - h0 - 2 a3, (20 - 3 a3) // 2) (X_0) neighbours among the words of X_2.
+#
+# step 1:  python in_verify.py bases <graph> <h2> <h1> <h0> <out prefix>_<i>of<n>.json part=i/n      (i = 0..n-1)
+#          python in_verify.py merge <stage1.json> <out prefix> <n> [<follow prefix>]
+#          re-enumerates the configurations of N(p) (n_3 = 0) by another method (rectangles first, tested by a
+#          count on the graph S u {p} u pairs; then the X_1 types as a graph with prescribed degrees; full count on
+#          35 vertices), reduces them under Aut(B) (own computation); "merge" compares with the stage-1 file.
+# step 2:  python in_verify.py follow <stage1.json> <stage2 prefix> <part> <nparts> <out prefix>_<part>of<nparts>.json [first=K] [every=E] [sub=j/m]
+#          for the bases of that part: re-traverses the search tree of eng6.  The unit treated at each node is read
+#          from the plan stored in the jsonl file (the choice of the unit is not part of the proof); ALL candidates
+#          of that unit are regenerated and tested here; the number kept must equal the plan's.
+# Exact rejections: a common-neighbour count (int64), or an integer vector x with x^T M x < 0 in Python integers
+# (on a sigma-block), or exact rational elimination.  "Kept" is a floating-point decision.
+import sys, json, os, itertools, time
+from fractions import Fraction
+import numpy as np
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+P = 20
+TOL = 1e-7
+
+
+def load_B(name):
+    case, idx = name.split(".")
+    rec = json.load(open(os.path.join(HERE, "structures_I.json")))[case][int(idx)]
+    assert not rec["H"]
+    B = [[1 if (v & 1) else 0 for v in row] for row in rec["m"]]
+    for i in range(10):
+        assert B[i][i] == 0 and sum(B[i]) == 4 and all(B[i][j] == B[j][i] for j in range(10))
+    return B
+
+
+def support21(B):
+    A = np.zeros((21, 21), dtype=np.int64)
+    for i in range(10):
+        for j in range(10):
+            if B[i][j]:
+                A[i, 10 + j] = A[10 + j, i] = 1
+    phi = np.array([1] * 10 + [-1] * 10 + [0])
+    assert (A @ phi == -4 * phi).all()
+    return A
+
+
+def deficient(B):
+    u = {}
+    for i in range(10):
+        for j in range(i + 1, 10):
+            c = sum(1 for l in range(10) if B[i][l] and B[j][l])
+            if c < 2:
+                u[(i, j)] = 2 - c
+    assert sum(u.values()) == 30
+    return u
+
+
+def budget_violation(A):
+    """exact recount: some pair u != v with more than 2 - A[u,v] common neighbours"""
+    X = A @ A + A
+    np.fill_diagonal(X, 0)
+    return bool((X > 2).any())
+
+
+def qform(M, x):
+    return sum(x[a] * sum(M[a][b] * x[b] for b in range(len(x)) if x[b]) for a in range(len(x)) if x[a])
+
+
+def exact_psd(Q):
+    n = len(Q)
+    Bm = [[Fraction(int(t)) for t in row] for row in Q]
+    idx = list(range(n))
+    while idx:
+        if any(Bm[i][i] < 0 for i in idx):
+            return False
+        piv = next((i for i in idx if Bm[i][i] > 0), None)
+        if piv is None:
+            return all(Bm[i][j] == 0 for i in idx for j in idx)
+        idx.remove(piv)
+        for i in idx:
+            f = Bm[i][piv] / Bm[piv][piv]
+            if f:
+                for j in idx:
+                    Bm[i][j] -= f * Bm[piv][j]
+    return True
+
+
+NCERT = [0, 0]
+
+
+def psd_rejected(A, sig):
+    """True if M1 = 9(3I-A)+J or M2 = 11(4I+A)-2J is exactly NOT positive semidefinite on this vertex set
+    (integer vector on a sigma-block, form evaluated with Python integers; or exact elimination).
+    False = kept (floating-point decision)."""
+    n = A.shape[0]
+    reps = [v for v in range(n) if sig[v] > v]
+    fixed = [v for v in range(n) if sig[v] == v]
+    D = np.zeros((n, len(reps)), dtype=np.int64)
+    E = np.zeros((n, len(fixed) + len(reps)), dtype=np.int64)
+    for j, v in enumerate(fixed):
+        E[v, j] = 1
+    for j, v in enumerate(reps):
+        D[v, j] = 1; D[sig[v], j] = -1
+        E[v, len(fixed) + j] = 1; E[sig[v], len(fixed) + j] = 1
+    I = np.eye(n, dtype=np.int64)
+    M1 = 9 * (3 * I - A) + 1
+    M2 = 11 * (4 * I + A) - 2
+    for M, Bs in ((M1, D), (M2, D), (M1, E), (M2, E)):
+        Q = Bs.T @ M @ Bs
+        w, V = np.linalg.eigh(Q.astype(np.float64))
+        if w[0] < -TOL:
+            Ql = Q.tolist()
+            v = V[:, 0]
+            mx = float(np.abs(v).max())
+            for sc in (2, 3, 6, 12, 30, 100, 300, 1000, 10 ** 4, 10 ** 5, 10 ** 6, 10 ** 8, 10 ** 10):
+                x = [int(round(float(t) * sc / mx)) for t in v]
+                if any(x) and qform(Ql, x) < 0:
+                    NCERT[0] += 1
+                    return True
+            if not exact_psd(Ql):
+                NCERT[1] += 1
+                return True
+    return False
+
+
+def add_pair(A, t, tp):
+    """pair t of N(p) on the vertices 21 + 2t, 22 + 2t"""
+    w, sw = 21 + 2 * t, 22 + 2 * t
+    for (u, v) in ((w, sw), (w, P), (sw, P)):
+        A[u, v] = A[v, u] = 1
+    if tp[0] == "A":
+        for i in tp[1]:
+            A[w, i] = A[i, w] = 1; A[sw, 10 + i] = A[10 + i, sw] = 1
+        for i in tp[2]:
+            A[w, 10 + i] = A[10 + i, w] = 1; A[sw, i] = A[i, sw] = 1
+    elif tp[0] == "W":
+        i, k = tp[1], tp[2]
+        A[w, i] = A[i, w] = 1; A[w, 10 + k] = A[10 + k, w] = 1
+        A[sw, k] = A[k, sw] = 1; A[sw, 10 + i] = A[10 + i, sw] = 1
+
+
+def sigma(n):
+    s = list(range(10, 20)) + list(range(10)) + [20]
+    for v in range(21, n, 2):
+        s += [v + 1, v]
+    return s
+
+
+# ------------------------------------------------------------------ step 1
+
+def automorphisms(B):
+    """own computation: images of 0 and of its neighbours first, then propagation by brute force"""
+    out = []
+    order = [0]
+    while len(order) < 10:
+        nxt = max((i for i in range(10) if i not in order), key=lambda i: sum(B[i][j] for j in order))
+        order.append(nxt)
+
+    def rec(k, img):
+        if k == 10:
+            out.append(tuple(img[i] for i in range(10)))
+            return
+        v = order[k]
+        for t in range(10):
+            if t in img.values():
+                continue
+            if all(B[v][u] == B[t][img[u]] for u in order[:k]):
+                img[v] = t
+                rec(k + 1, img)
+                del img[v]
+    rec(0, {})
+    return out
+
+
+def cfg_image(cfg, g):
+    out = []
+    for tp in cfg:
+        if tp[0] == "A":
+            U = tuple(sorted(g[i] for i in tp[1])); V = tuple(sorted(g[i] for i in tp[2]))
+            out.append(("A",) + ((U, V) if U < V else (V, U)))
+        else:
+            i, k = g[tp[1]], g[tp[2]]
+            out.append(("W", min(i, k), max(i, k)))
+    return tuple(sorted(out))
+
+
+def step_bases(name, h2, h1, h0, outfile, part, nparts):
+    """All configurations of N(p) whose first rectangle (in the fixed order of the rectangles) has rank = part
+    mod nparts.  A configuration passing the budget count on 35 vertices is counted; if it is the smallest image of
+    itself under Aut(B) it is a representative: the size of its orbit is added to `osum` and it is tested (PSD)."""
+    t0 = time.time()
+    B = load_B(name)
+    A21 = support21(B)
+    defi = deficient(B)
+    G = automorphisms(B)
+    dl = sorted(defi)
+    rects = [(U, V) for U in dl for V in dl if U < V and not set(U) & set(V)]
+    sig35 = sigma(35)
+    raw = [0, 0, 0]
+    res = {"osum": 0, "norb": 0, "npsd": 0}
+    kept = []
+
+    def finish(rs, cov):
+        need = [2 - c for c in cov]
+        if sum(need) != 2 * h1:
+            return
+        # all simple graphs with degrees `need` on the indices and h1 edges, each once (the edges at the smallest
+        # index that still needs one are added in increasing order)
+        def wrec(es, nd, li, lk):
+            if len(es) == h1:
+                if not any(nd):
+                    raw[1] += 1
+                    A = np.zeros((35, 35), dtype=np.int64)
+                    A[:21, :21] = A21
+                    cfg = [("A", U, V) for (U, V) in rs] + [("W", i, k) for (i, k) in es]
+                    for t, tp in enumerate(cfg):
+                        add_pair(A, t, tp)
+                    for t in range(len(cfg), 7):
+                        add_pair(A, t, ("Z",))
+                    if not budget_violation(A):
+                        raw[2] += 1
+                        c = tuple(sorted(cfg))
+                        imgs = set(cfg_image(cfg, g) for g in G)
+                        if c == min(imgs):
+                            res["norb"] += 1
+                            res["osum"] += len(imgs)
+                            if psd_rejected(A, sig35):
+                                res["npsd"] += 1
+                            else:
+                                kept.append(c)
+                return
+            i = next((j for j in range(10) if nd[j]), None)
+            if i is None:
+                return
+            for k in range(i + 1, 10):
+                if i == li and k <= lk:
+                    continue
+                if nd[k]:
+                    nd[i] -= 1; nd[k] -= 1
+                    wrec(es + [(i, k)], nd, i, k)
+                    nd[i] += 1; nd[k] += 1
+        wrec([], need, -1, -1)
+
+    def rrec(start, rs, cov):
+        if len(rs) == h2:
+            finish(rs, cov)
+            return
+        for a in range(start, len(rects)):
+            if not rs and a % nparts != part:
+                continue
+            U, V = rects[a]
+            if any(cov[i] >= 2 for i in U + V):
+                continue
+            rs2 = rs + [(U, V)]
+            raw[0] += 1
+            A = np.zeros((21 + 2 * len(rs2), 21 + 2 * len(rs2)), dtype=np.int64)
+            A[:21, :21] = A21
+            for t, (U_, V_) in enumerate(rs2):
+                add_pair(A, t, ("A", U_, V_))
+            if budget_violation(A):
+                continue
+            for i in U + V:
+                cov[i] += 1
+            rrec(a + 1, rs2, cov)
+            for i in U + V:
+                cov[i] -= 1
+    rrec(0, [], [0] * 10)
+    out = {"graph": name, "profile": [h2, h1, h0], "part": part, "nparts": nparts, "aut": len(G), "rects": len(rects),
+           "rectangle_sets_tested": raw[0], "right_coverage": raw[1], "passing_budget": raw[2],
+           "orbits": res["norb"], "orbit_sizes_sum": res["osum"], "rejected_psd": res["npsd"],
+           "kept": [[list(tp) for tp in c] for c in kept],
+           "certificates": {"integer_vector": NCERT[0], "exact_elimination": NCERT[1]},
+           "seconds": round(time.time() - t0, 1)}
+    json.dump(out, open(outfile, "w"))
+    print("part %d of %d: rectangle sets tested %d, right coverage %d, passing the budget count %d, representatives "
+          "%d (orbit sizes %d), rejected by PSD %d, kept %d   [%.0f s]" % (
+              part, nparts, raw[0], raw[1], raw[2], res["norb"], res["osum"], res["npsd"], len(kept), time.time() - t0))
+
+
+def step_merge(s1file, prefix, nparts, follow_prefix):
+    s1 = json.load(open(s1file))
+    name = s1["graph"]
+    h2, h1, h0 = s1["profile"]
+    assert not s1.get("ztype")
+    B = load_B(name)
+    G = automorphisms(B)
+    parts = [json.load(open("%s_%dof%d.json" % (prefix, i, nparts))) for i in range(nparts)]
+    for i, p in enumerate(parts):
+        assert p["part"] == i and p["nparts"] == nparts and p["graph"] == name and p["profile"] == [h2, h1, h0]
+    npass = sum(p["passing_budget"] for p in parts)
+    osum = sum(p["orbit_sizes_sum"] for p in parts)
+    norb = sum(p["orbits"] for p in parts)
+    kept = set()
+    for p in parts:
+        for c in p["kept"]:
+            kept.add(tuple(tuple(tuple(x) if isinstance(x, list) else x for x in tp) for tp in c))
+    ref = set()
+    for b in s1["bases"]:
+        cfg = []
+        for tp in b["pairs"]:
+            if tp[0] == "A":
+                cfg.append(("A", tuple(tp[1]), tuple(tp[2])))
+            elif tp[0] == "W":
+                cfg.append(("W", tp[1], tp[2]))
+        ref.add(min(cfg_image(cfg, g) for g in G))
+    print("%s profile (%d,%d,%d), second program, stage 1 (%d parts): |Aut(B)| = %d (first program: %d); rectangle "
+          "sets tested %d; configurations with the right coverage %d" % (
+              name, h2, h1, h0, nparts, len(G), s1["group_order"], sum(p["rectangle_sets_tested"] for p in parts),
+              sum(p["right_coverage"] for p in parts)))
+    print("   passing the budget count on 35 vertices: %d (first program: %d); sum of the orbit sizes of the "
+          "representatives: %d (must be equal)" % (npass, s1["nconfigs_labelled"], osum))
+    print("   orbits under Aut(B): %d (first program: %d); rejected by PSD (exact) %d; kept %d (first program: %d)" % (
+        norb, s1["nconfig_orbits"], sum(p["rejected_psd"] for p in parts), len(kept), len(s1["bases"])))
+    print("   in the first list only: %d; in this list only: %d" % (len(ref - kept), len(kept - ref)))
+    ok1 = (npass == s1["nconfigs_labelled"] == osum and norb == s1["nconfig_orbits"] and kept == ref)
+    print("   STAGE 1 AGREES: %s" % ok1)
+    if follow_prefix:
+        tot = {}
+        nb = 0
+        inpart = 0
+        cert = [0, 0]
+        missing = []
+        for i in range(nparts):
+            fn = "%s_%dof%d.json" % (follow_prefix, i, nparts)
+            if not os.path.exists(fn):
+                missing.append(i)
+                continue
+            f = json.load(open(fn))
+            if f.get("partial"):
+                missing.append(i)
+                continue
+            nb += f["bases_followed"]
+            inpart += f["bases_in_part"]
+            cert[0] += f["certificates"]["integer_vector"]; cert[1] += f["certificates"]["exact_elimination"]
+            for k, v in f["totals"].items():
+                tot[k] = tot.get(k, 0) + v
+        print("   stage 2 re-traversed: bases %d of %d (stage-1 list: %d); parts not finished: %s" % (
+            nb, inpart, len(s1["bases"]), missing if missing else "none"))
+        print("   totals: %s; certificates: integer vector %d, exact elimination %d" % (tot, cert[0], cert[1]))
+        print("   STAGE 2 AGREES AT EVERY NODE, 0 complete, all bases: %s" % (
+            not missing and nb == len(s1["bases"]) and tot.get("complete", 1) == 0))
+
+
+# ------------------------------------------------------------------ step 2
+
+def follow(B, A21, defi, rec, plan, ztype):
+    pairs = rec["pairs"]
+    h0 = sum(1 for tp in pairs if tp[0] == "Z")
+    nb = 37 if ztype else 35
+    A0 = np.zeros((nb, nb), dtype=np.int64)
+    A0[:21, :21] = A21
+    units = dict(defi)
+
+    def use(X):
+        units[X] -= 1
+        assert units[X] >= 0
+        if units[X] == 0:
+            del units[X]
+    Ap = set()
+    kind = {}
+    for t, tp in enumerate(pairs):
+        add_pair(A0, t, tp)
+        kind[21 + 2 * t] = kind[22 + 2 * t] = tp[0]
+        if tp[0] == "A":
+            use(tuple(tp[1])); use(tuple(tp[2]))
+            Ap |= {21 + 2 * t, 22 + 2 * t}
+    SIG = sigma(nb)
+    Z = ()
+    if ztype:
+        # own layout: z = 35, sigma z = 36 (the first program puts them at 21, 22)
+        U3, V3 = ztype
+        for i in U3:
+            A0[35, i] = A0[i, 35] = 1; A0[36, 10 + i] = A0[10 + i, 36] = 1
+        for i in V3:
+            A0[35, 10 + i] = A0[10 + i, 35] = 1; A0[36, i] = A0[i, 36] = 1
+        for T3 in (U3, V3):
+            for pr in itertools.combinations(T3, 2):
+                use(pr)
+        for a in rec["zn"]:
+            w = 21 + a
+            A0[35, w] = A0[w, 35] = 1
+            A0[36, SIG[w]] = A0[SIG[w], 36] = 1
+        Z = (35, 36)
+    assert not budget_violation(A0)
+    NPV = list(range(21, 35))
+    cap = {}
+    for w in NPV:
+        a3 = int(A0[w, 35] + A0[w, 36]) if ztype else 0
+        if not ztype:
+            cap[w] = {"A": 4 - h0, "W": 8 - h0, "Z": min(10, 12 - h0)}[kind[w]]
+        else:
+            cap[w] = {"A": 3 - h0 - 2 * a3, "W": 7 - h0 - 2 * a3, "Z": min(11 - h0 - 2 * a3, (20 - 3 * a3) // 2)}[kind[w]]
+    for v in Z:
+        cap[v] = 1 - sum(int(A0[v, w]) for w in Ap)
+    stat = {"nodes": 0, "cands": 0, "budget": 0, "psd": 0, "kept": 0, "complete": 0, "impossible": 0}
+    if any(c < 0 for c in cap.values()):
+        stat["impossible"] = 1
+        assert rec.get("impossible"), "the first program did not flag this base as impossible"
+        return stat, 0
+    smax = 4 if ztype else 5
+    # all N0 in the order of the first program: (w1, w2) increasing, then no z / z / sigma z
+    n0all = []
+    for a in range(14):
+        for b in range(a + 1, 14):
+            if a // 2 == b // 2:
+                continue
+            for zc in ((),) + tuple((v,) for v in Z):
+                n0all.append((21 + a, 21 + b) + zc)
+    norb = sum(units.values()) // 2
+    plan = iter(plan)
+    paircache = {}
+    singlecache = {}
+
+    def row0(o):
+        U, V, N0 = o
+        r = np.zeros(nb, dtype=np.int64)
+        for i in U:
+            r[i] = 1
+        for i in V:
+            r[10 + i] = 1
+        for w in N0:
+            r[w] = 1
+        return r
+
+    def extend(A, sig, row):
+        n = A.shape[0]
+        Bm = np.zeros((n + 2, n + 2), dtype=np.int64)
+        Bm[:n, :n] = A
+        rs = row[np.array(sig)]
+        Bm[n, :n] = row; Bm[:n, n] = row
+        Bm[n + 1, :n] = rs; Bm[:n, n + 1] = rs
+        return Bm, sig + [n + 1, n]
+
+    # single orbits on the base: exact common-neighbour counts (int64), for all (V, N0) of a unit at once.
+    # For a new word s with neighbourhood row r (and sigma s with row r o sigma), a pair with too many common
+    # neighbours in base + {s, sigma s} is one of: (s, old v): (r A0)_v + r_v > 2;  (s, sigma s): r . (r o sigma) > 2;
+    # (old u, old v) both in N(s): C0_uv + A0_uv + 1 + [both in N(sigma s)] > 2  (C0 = A0^2); the pairs containing
+    # sigma s are the images of these.  Each batch is compared with the explicit recount on a sample of its rows.
+    C0A = A0 @ A0 + A0
+    Q1 = (C0A >= 2).astype(np.int64); np.fill_diagonal(Q1, 0)
+    Q2 = (C0A >= 1).astype(np.int64); np.fill_diagonal(Q2, 0)
+    SIGA = np.array(SIG)
+    batched = set()
+    allunits = sorted(units)
+
+    def batch_singles(U0):
+        keys = [(U0, V, N0) for V in allunits if V != U0 for N0 in n0all]
+        R = np.array([row0(o) for o in keys], dtype=np.int64)
+        RS = R[:, SIGA]
+        bad = ((R @ A0 + R) > 2).any(1)
+        bad |= (R * RS).sum(1) > 2
+        bad |= ((R @ Q1) * R).sum(1) > 0
+        T = R * RS
+        bad |= ((T @ Q2) * T).sum(1) > 0
+        for o, b in zip(keys, bad.tolist()):
+            singlecache[o] = not b
+        step = max(1, len(keys) // 12)
+        for a in list(range(0, len(keys), step)) + np.flatnonzero(~bad)[:6].tolist():
+            Bm, _ = extend(A0, SIG, R[a])
+            assert budget_violation(Bm) == bool(bad[a]), "batch count differs from the explicit recount"
+            stat["recount_checks"] = stat.get("recount_checks", 0) + 1
+        batched.add(U0)
+
+    def single_budget_ok(o):
+        if o[0] not in batched:
+            batch_singles(o[0])
+        return singlecache[o]
+
+    def pair_budget_ok(o1, o2, pat):
+        key = (o1, o2, pat)
+        r = paircache.get(key)
+        if r is None:
+            Bm, sg = extend(A0, SIG, row0(o1))
+            row = np.zeros(nb + 2, dtype=np.int64)
+            row[:nb] = row0(o2)
+            if pat & 1:
+                row[nb] = 1
+            if pat & 2:
+                row[nb + 1] = 1
+            B2, _ = extend(Bm, sg, row)
+            r = not budget_violation(B2)
+            paircache[key] = r
+        return r
+
+    def dfs(A, sig, orbs, caps, degs, cnt, remaining):
+        t = len(orbs)
+        if t == norb:
+            stat["complete"] += 1
+            return
+        pl = next(plan)
+        assert pl[0] == t, "plan out of step"
+        U0 = (pl[1], pl[2])
+        assert U0 in remaining
+        stat["nodes"] += 1
+        rem2 = dict(remaining)
+        rem2[U0] -= 1
+        if rem2[U0] == 0:
+            del rem2[U0]
+        cands = []
+        for V in sorted(rem2):
+            if V == U0:
+                continue
+            for N0 in n0all:
+                zc = N0[2:]
+                tg = smax - 2 * len(zc) - sum(1 for w in N0[:2] if w in Ap)
+                if tg < 0:
+                    continue
+                if any(cnt[w] >= cap[w] for w in N0) or any(cnt[SIG[w]] >= cap[SIG[w]] for w in N0):
+                    continue
+                onew = (U0, V, N0)
+                if not single_budget_ok(onew):
+                    stat["budget"] += 1          # exact: a count on the base plus this orbit
+                    continue
+                allowed = []
+                ok = True
+                for i in range(t):
+                    room = caps[i] - degs[i]
+                    pats = [pat for pat in (0, 1, 2, 3)
+                            if (pat & 1) + (pat >> 1) <= min(room, tg) and pair_budget_ok(orbs[i], onew, pat)]
+                    if not pats:
+                        ok = False
+                        break
+                    allowed.append(pats)
+                if not ok:
+                    stat["budget"] += 1          # exact: counts on the base plus two orbits, or the caps
+                    continue
+                for choice in itertools.product(*allowed):
+                    used = sum((pat & 1) + (pat >> 1) for pat in choice)
+                    if used <= tg:
+                        cands.append((V, N0, tg, choice, used))
+        stat["cands"] += len(cands)
+        good = []
+        n = A.shape[0]
+        for (V, N0, tg, choice, used) in cands:
+            row = np.zeros(n, dtype=np.int64)
+            row[:nb] = row0((U0, V, N0))
+            for i, pat in enumerate(choice):
+                if pat & 1:
+                    row[nb + 2 * i] = 1
+                if pat & 2:
+                    row[nb + 2 * i + 1] = 1
+            Bm, sg = extend(A, sig, row)
+            if budget_violation(Bm):
+                stat["budget"] += 1
+            elif psd_rejected(Bm, sg):
+                stat["psd"] += 1
+            else:
+                good.append((V, N0, tg, choice, used, Bm, sg))
+        assert len(good) == pl[4], "DISAGREEMENT with the plan at depth %d: kept %d, plan %d" % (t, len(good), pl[4])
+        stat["kept"] += len(good)
+        for (V, N0, tg, choice, used, Bm, sg) in good:
+            rem3 = dict(remaining)
+            for X in (U0, V):
+                rem3[X] -= 1
+                if rem3[X] == 0:
+                    del rem3[X]
+            c2 = dict(cnt)
+            for w in N0:
+                c2[w] += 1; c2[SIG[w]] += 1
+            d2 = [degs[i] + (pat & 1) + (pat >> 1) for i, pat in enumerate(choice)]
+            dfs(Bm, sg, orbs + [(U0, V, N0)], caps + [tg], d2 + [used], c2, rem3)
+
+    dfs(A0, list(SIG), [], [], [], {w: 0 for w in NPV + list(Z)}, units)
+    left = sum(1 for _ in plan)
+    return stat, left
+
+
+def step_follow(s1file, prefix, part, nparts, outfile, first, every, sub=(0, 1)):
+    s1 = json.load(open(s1file))
+    name = s1["graph"]
+    ztype = tuple(tuple(t) for t in s1["ztype"]) if s1.get("ztype") else None
+    B = load_B(name)
+    A21 = support21(B)
+    defi = deficient(B)
+    recs = {}
+    for line in open("%s_%dof%d.jsonl" % (prefix, part, nparts)):
+        r = json.loads(line)
+        if not r.get("timeout") and not r.get("error"):
+            recs[r["i"]] = r
+    todo = sorted(recs)
+    if every > 1:
+        todo = [i for i in todo if (i // nparts) % every == 0]
+    todo = todo[sub[0]::sub[1]]          # sub=j/m: the bases of rank j mod m of this part (to share a part)
+    if first:
+        todo = todo[:first]
+    tot = {}
+    nb = 0
+    t0 = time.process_time()
+    for i in todo:
+        r = recs[i]
+        base = dict(s1["bases"][i])
+        if r.get("impossible"):
+            base["impossible"] = True
+        st, left = follow(B, A21, defi, base, r.get("plan", []), ztype)
+        assert left == 0, "plan lines left"
+        assert st["complete"] == r["complete"]
+        if not r.get("impossible"):
+            assert st["nodes"] == sum(r["visited"]) and st["kept"] == sum(r["kept"]), (i, st, r["visited"], r["kept"])
+        for k, v in st.items():
+            tot[k] = tot.get(k, 0) + v
+        nb += 1
+        if nb % 50 == 0:
+            json.dump({"partial": True, "bases": nb, "totals": tot}, open(outfile, "w"))
+    out = {"stage1": s1file, "prefix": prefix, "part": part, "nparts": nparts, "first": first, "every": every,
+           "sub": list(sub), "indices_sha1": __import__("hashlib").sha1(repr(todo).encode()).hexdigest(),
+           "bases_followed": nb, "bases_in_part": len(recs), "totals": tot,
+           "certificates": {"integer_vector": NCERT[0], "exact_elimination": NCERT[1]},
+           "cpu": round(time.process_time() - t0, 1)}
+    json.dump(out, open(outfile, "w"))
+    print(json.dumps(out))
+
+
+if sys.argv[1] == "bases":
+    # python in_verify.py bases <graph> <h2> <h1> <h0> <out.json> [part=i/n]
+    part, nparts = 0, 1
+    for a in sys.argv[7:]:
+        if a.startswith("part="):
+            part, nparts = (int(t) for t in a[5:].split("/"))
+    step_bases(sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), sys.argv[6], part, nparts)
+elif sys.argv[1] == "merge":
+    # python in_verify.py merge <stage1.json> <bases prefix> <nparts> [<follow prefix>]
+    step_merge(sys.argv[2], sys.argv[3], int(sys.argv[4]), sys.argv[5] if len(sys.argv) > 5 else None)
+else:
+    first = 0
+    every = 1
+    sub = (0, 1)
+    for a in sys.argv[7:]:
+        if a.startswith("first="):
+            first = int(a[6:])
+        if a.startswith("every="):
+            every = int(a[6:])
+        if a.startswith("sub="):
+            sub = tuple(int(t) for t in a[4:].split("/"))
+    step_follow(sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5]), sys.argv[6], first, every, sub)
