@@ -1,79 +1,114 @@
 {
- "080": {
-  "jobs": 3,
-  "pairs": 132068,
+ "077": {
+  "jobs": 4,
+  "pairs": 239723,
   "not_excluded_again": 0,
-  "ok": 3,
   "setup_impossible": 0,
-  "general": 131900,
-  "rigid": 168,
-  "with_zero_candidate": 132068,
-  "exposed": 168
+  "general": 239338,
+  "rigid": 385,
+  "with_zero_candidate": 239723,
+  "exposed": 385,
+  "complete": false,
+  "verdicts_of_exposed": {
+   "EXCLUDED (char-vector trap)": 360,
+   "EXCLUDED (stage 1 empty: no 7 h)": 25
+  }
+ },
+ "080": {
+  "jobs": 8,
+  "pairs": 344248,
+  "not_excluded_again": 0,
+  "setup_impossible": 0,
+  "general": 343792,
+  "rigid": 456,
+  "with_zero_candidate": 344248,
+  "exposed": 456,
+  "complete": true,
+  "verdicts_of_exposed": {
+   "EXCLUDED (char-vector trap)": 432,
+   "EXCLUDED (stage 1 empty: no 7 h)": 24
+  }
  },
  "101": {
   "jobs": 8,
   "pairs": 62300,
   "not_excluded_again": 0,
-  "ok": 8,
   "setup_impossible": 0,
   "general": 62116,
   "rigid": 184,
   "with_zero_candidate": 62300,
-  "exposed": 184
+  "exposed": 184,
+  "complete": true,
+  "verdicts_of_exposed": {
+   "EXCLUDED (char-vector trap)": 184
+  }
  },
  "103": {
   "jobs": 8,
   "pairs": 64596,
   "not_excluded_again": 0,
-  "ok": 8,
   "setup_impossible": 0,
   "general": 64432,
   "rigid": 164,
   "with_zero_candidate": 64596,
-  "exposed": 164
+  "exposed": 164,
+  "complete": true,
+  "verdicts_of_exposed": {
+   "EXCLUDED (char-vector trap)": 164
+  }
  },
  "104": {
   "jobs": 8,
   "pairs": 70108,
   "not_excluded_again": 0,
-  "ok": 8,
   "setup_impossible": 0,
   "general": 70066,
   "rigid": 42,
   "with_zero_candidate": 70108,
-  "exposed": 42
+  "exposed": 42,
+  "complete": true,
+  "verdicts_of_exposed": {
+   "EXCLUDED (char-vector trap)": 42
+  }
  },
  "105": {
   "jobs": 8,
   "pairs": 56544,
   "not_excluded_again": 0,
-  "ok": 8,
   "setup_impossible": 0,
   "general": 56480,
   "rigid": 64,
   "with_zero_candidate": 56544,
-  "exposed": 64
+  "exposed": 64,
+  "complete": true,
+  "verdicts_of_exposed": {
+   "EXCLUDED (char-vector trap)": 64
+  }
  },
  "137": {
   "jobs": 1,
   "pairs": 1208,
   "not_excluded_again": 0,
-  "ok": 1,
   "setup_impossible": 0,
   "general": 1208,
   "rigid": 0,
   "with_zero_candidate": 1208,
-  "exposed": 0
+  "exposed": 0,
+  "complete": true,
+  "verdicts_of_exposed": {}
  },
  "138": {
   "jobs": 1,
   "pairs": 1026,
   "not_excluded_again": 0,
-  "ok": 1,
   "setup_impossible": 0,
   "general": 1018,
   "rigid": 8,
   "with_zero_candidate": 1026,
-  "exposed": 8
+  "exposed": 8,
+  "complete": true,
+  "verdicts_of_exposed": {
+   "EXCLUDED (char-vector trap)": 8
+  }
  }
 }
