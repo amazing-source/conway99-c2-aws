@@ -81,16 +81,8 @@ File: `lemma/upstream/AUDIT_REDUCTION.md`. No sub-agents for this (weekly limit)
 | F9 | H4: pairs excluded by an LP status ("pair budget", FD_PREBUDGET=1) in lab-local files | LAB | **found 14:10: they all belong to ONE lattice, 105** (6,310 of its 14,169 Gamma-reduced pairs, lab run of 29/09; my first count 12,620 read the files twice). No cloud record carries this verdict. Repair: 105 goes again through the v10 producer and consumer, without solver: `measures/SWEEP_EXTRA_MANIFEST_2026-10-07.json` (16 jobs with 143; runner `q/qaudit.py`, consumer = sweep) | records of 105 imported, all pairs excluded without LP | when LAP has a slot |
 | F10 | H5: the 9/7 rule rests on T16 (no eigenfunction of squared norm 16): text pushed by the lab (9ad23660d); one referee pass | LAB (text), CDX (referee, after A5) | - | - |
 
-## Machines running (LAP keeps this current; 14:30 UTC). User's go at 14:25: big machines on his account to finish fast.
+## Machines running: NONE (07/10, 17:45 UTC)
 
-| Account | Machine | Job | Since |
-|---|---|---|---|
-| user | i-0fd53514a6dcce992, 128 vCPU, eu-north-1 | 003:181:182, quick deferral with norm-4 witnesses, no node limit to speak of (1e9) | 12:50 |
-| user | i-0677b8b475388ce7e, 32 vCPU, us-east-1 | DIAGNOSTIC of 003:181:182: same job with Q_NODE_LIMIT=5000000 and Q_TAIL_NOEVENT=1 (record under diag/, no queue event): lists the pairs that are not finished | 14:29 |
-| user | i-0eed576952c30b1f5, 128 vCPU, eu-west-2 | F7: rigid-kernel audit, batch 2 (003, 006, 007, 014) | 14:26 |
-| user | i-01342f629eff35dc3 (128 vCPU, eu-west-2); i-08471079f0542dd91, i-0b0c025dfd6c29b6f, i-0a7dc0e6bb61be3cd, i-0007aedf88590282f (32 vCPU each, us-east-2) | certificates: everything left (5,918 records), parts 0/2 and 1/8, 3/8, 5/8, 7/8 with Q_CERT_DONE=q/cert_done.txt | 14:26 |
-| free | i-05703a74fbb027423, 8 vCPU, us-east-2 (on demand) | C2: I.1 (4,2,1), `t20_Iv_G` | 13:18 |
-| free | i-0ffabb9fb91879e62 and i-00a7b5e21909a98d1, 8 vCPU, eu-north-1 | F7: rigid-kernel audit, batch 1, parts 0/2 and 1/2 | 13:50, 14:26 |
-| free | i-0dd6dbc530afb831d, 8 vCPU, us-east-2 (Spot) | F5 + F9: 143 and 105 through the producer and the engine v10 (`measures/SWEEP_EXTRA_MANIFEST_2026-10-07.json`) | 14:17 |
-
-Certificate branches so far (the full set = these + the five machines above): run/q-i-0fa91a45f074cf15e, run/q-i-026e2eda9e2b5dfdb, run/q-i-01cba7ba0fb3204e4, run/q-i-026b674ec4b914602, run/q-i-0842035457bba071a (stopped at 14:15-14:24; 1,844 records in all).
+No instance, volume or Spot request on either account, checked region by region. Deploy keys 165097369 and 165551629 revoked at
+about 18:05 UTC; a new run needs a new key. Lab tracker: 156 excluded of 156 since 17:47 UTC (`measures/finishC_tracker_2026-10-07_156.json`).
+Next work: the single proof document, `lemma/PROOF_C2/README.md`. State of everything: `HANDOFF_2026-10-01.md` section 19.
