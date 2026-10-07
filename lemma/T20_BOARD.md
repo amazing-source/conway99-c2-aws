@@ -32,9 +32,9 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | # | Item | Owner | Status | Due |
 |---|---|---|---|---|
 | C1 | III.1: independent verifier over the whole tree, plus the one node rejected by rank | LAP (agent) | **closed 11:47**: agrees at every node, 0 complete (`t20_III1/VERIF.md`) | done |
-| C2 | n_3 = 0, eleven cases: jobs `t20_Iv_B..F` on the free account | LAP | running since 11:10 | 15:30 |
+| C2 | n_3 = 0, eleven cases on the free account | LAP | **7 of 11 closed 13:11** (second program agrees at every node, 0 complete): I.3, I.4, I.2, I.5 (3,4,0) and I.3, I.4 (4,2,1) on branches `lemma-run/t20_Iv_B..E`. I.0 (3,4,0) running on B since 13:04. Two Spot machines were reclaimed (E at 12:22, F about 11:15): I.1, I.2, I.0, I.5 (4,2,1) relaunched 13:18 as jobs `t20_Iv_G..J`, one case per machine (G on demand) | 15:30 |
 | C3 | n_3 = 0, I.1 (3,4,0): job `t20_I1_340`, 128 cores | LAP | **closed 11:52**: stage 1 agrees (3,508,550 / 878,137 / 219,589), stage 2 agrees at every node (7,279,961 nodes), 0 complete; the 13 rank nodes closed by the second program's own search, no rank bound. Branch `lemma-run/t20_I1_340-i-019e86d399c17954f` | done |
-| C4 | n_3 = 0, I.1 (4,2,1): one part of C2 stops at base 12632 (old verifier); re-run that part with the fixed verifier | LAP | to do when C2 is back | 16:00 |
+| C4 | n_3 = 0, I.1 (4,2,1) with the fixed verifier | LAP | folded into C2: job `t20_Iv_G` runs the whole case from master (fixed `in_verify.py`) | 15:30 |
 
 ## D. Writing and conversion (start now, in parallel with A)
 
@@ -63,6 +63,18 @@ Left by LAB at 12:30 (its message): certificate runner pushed and tested (`q/qce
 without the producer (`measures/cert_golay_001.json`, `cert_golay_002.json`: 4,545 + 3,169 and 6,675 + 3,594 pairs, 0 invalid).
 Not done by LAB: the conversion step DEFERRED -> excluded (dry run), the review of CDX's second program, passing the route-B
 specification to CDX.
+
+## F. Upstream reduction audit (user's request of 07/10: no hole between the graph and the 156 lattices)
+
+File: `lemma/upstream/AUDIT_REDUCTION.md`. No sub-agents for this (weekly limit).
+
+| # | Task | Owner | State | Due |
+|---|---|---|---|---|
+| F1 | Theorem R (involution with one fixed vertex => frame in one of the 156), every step by hand; g in {18,20} removed from the chain; U indecomposable (A.9) | LAP | **done 13:40** (sections A, F) | done |
+| F2 | Referee of section A once (statement R, A.4, A.6, A.9), then section B: every pruning rule of the engine against (R-i)..(R-vii) | CDX | sent 13:25 (bridge message 49) | - |
+| F3 | Sections C, D, E | LAB | **filled 13:35**; two weak points named: F4, F5 | done |
+| F4 | Independent enumeration of the pairs: `ypairs_c2.py` to the end on 140, 141, 135 and one lattice whose roots do not span; compare with the producer | LAB (free machine from LAP if needed) | 140 started on the lab PC | - |
+| F5 | 143 (one unreviewed argument): producer + engine v10. 153: second proof by A.9, to be checked in F2 | LAB / CDX | - | - |
 
 ## Machines running (LAP keeps this current)
 
