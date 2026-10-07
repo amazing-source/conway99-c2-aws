@@ -1,0 +1,474 @@
+{
+ "what": "third computation of packing test (1), lab, other code path; see scripts/cloud/packing_test1_third.py",
+ "all_equal_to_codex": true,
+ "lattices": {
+  "094": {
+   "roots": "d_5^4",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     80,
+     84
+    ],
+    [
+     128,
+     84
+    ]
+   ],
+   "codex": [
+    [
+     80,
+     84
+    ],
+    [
+     128,
+     84
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "117": {
+   "roots": "d_8d_4^4",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     128,
+     0
+    ],
+    [
+     128,
+     0
+    ]
+   ],
+   "codex": [
+    [
+     128,
+     0
+    ],
+    [
+     128,
+     0
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": false,
+   "codex_test_1_excludes": false
+  },
+  "128": {
+   "roots": "a_9e_6d_6a_1",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     64,
+     84
+    ],
+    [
+     208,
+     84
+    ]
+   ],
+   "codex": [
+    [
+     64,
+     84
+    ],
+    [
+     208,
+     84
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "129": {
+   "roots": "e_6^2d_5^2",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     64,
+     84
+    ],
+    [
+     208,
+     84
+    ]
+   ],
+   "codex": [
+    [
+     64,
+     84
+    ],
+    [
+     208,
+     84
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "133": {
+   "roots": "a_{13}d_6a_3a_1",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     128,
+     168
+    ],
+    [
+     176,
+     168
+    ]
+   ],
+   "codex": [
+    [
+     128,
+     168
+    ],
+    [
+     176,
+     168
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "134": {
+   "roots": "d_9a_7^2",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     128,
+     84
+    ],
+    [
+     176,
+     84
+    ]
+   ],
+   "codex": [
+    [
+     128,
+     84
+    ],
+    [
+     176,
+     84
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": false,
+   "codex_test_1_excludes": false
+  },
+  "136": {
+   "roots": "a_{11}^2",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     48,
+     84
+    ],
+    [
+     264,
+     84
+    ]
+   ],
+   "codex": [
+    [
+     48,
+     84
+    ],
+    [
+     264,
+     84
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "142": {
+   "roots": "d_{10}d_6^2a_1^2",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     128,
+     168
+    ],
+    [
+     224,
+     168
+    ]
+   ],
+   "codex": [
+    [
+     128,
+     168
+    ],
+    [
+     224,
+     168
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "144": {
+   "roots": "a_{16}a_7",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     104,
+     168
+    ],
+    [
+     272,
+     168
+    ]
+   ],
+   "codex": [
+    [
+     104,
+     168
+    ],
+    [
+     272,
+     168
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "145": {
+   "roots": "d_8^2d_8",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     0,
+     0
+    ],
+    [
+     384,
+     0
+    ]
+   ],
+   "codex": [
+    [
+     0,
+     0
+    ],
+    [
+     384,
+     0
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": false,
+   "codex_test_1_excludes": false
+  },
+  "146": {
+   "roots": "d_8^3",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     0,
+     0
+    ],
+    [
+     384,
+     0
+    ]
+   ],
+   "codex": [
+    [
+     0,
+     0
+    ],
+    [
+     384,
+     0
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": false,
+   "codex_test_1_excludes": false
+  },
+  "147": {
+   "roots": "a_{15}d_8",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     32,
+     84
+    ],
+    [
+     368,
+     84
+    ]
+   ],
+   "codex": [
+    [
+     32,
+     84
+    ],
+    [
+     368,
+     84
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "148": {
+   "roots": "a_{15}e_7a_1",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     64,
+     168
+    ],
+    [
+     352,
+     168
+    ]
+   ],
+   "codex": [
+    [
+     64,
+     168
+    ],
+    [
+     352,
+     168
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "150": {
+   "roots": "d_8e_7^2a_1^2",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     64,
+     168
+    ],
+    [
+     352,
+     168
+    ]
+   ],
+   "codex": [
+    [
+     64,
+     168
+    ],
+    [
+     352,
+     168
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "151": {
+   "roots": "d_{12}d_8d_4",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     128,
+     336
+    ],
+    [
+     320,
+     336
+    ]
+   ],
+   "codex": [
+    [
+     128,
+     336
+    ],
+    [
+     320,
+     336
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "152": {
+   "roots": "e_8d_8^2",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     256,
+     672
+    ],
+    [
+     256,
+     672
+    ]
+   ],
+   "codex": [
+    [
+     256,
+     672
+    ],
+    [
+     256,
+     672
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "154": {
+   "roots": "a_{23}",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     48,
+     252
+    ],
+    [
+     552,
+     252
+    ]
+   ],
+   "codex": [
+    [
+     48,
+     252
+    ],
+    [
+     552,
+     252
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  },
+  "155": {
+   "roots": "d_{16}d_8",
+   "new_roots_and_sum_of_42_smallest_per_class": [
+    [
+     128,
+     672
+    ],
+    [
+     512,
+     672
+    ]
+   ],
+   "codex": [
+    [
+     128,
+     672
+    ],
+    [
+     512,
+     672
+    ]
+   ],
+   "equal": true,
+   "test_1_excludes": true,
+   "codex_test_1_excludes": true
+  }
+ }
+}
