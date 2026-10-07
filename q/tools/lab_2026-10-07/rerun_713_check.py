@@ -7,7 +7,8 @@ Records: results/<lid>_<k>_<n>.jsonl of the given branches origin/<branch> of th
 consumer "sweep"). For every job of the manifest:
   (a) a record exists; it passes every check of import_sweep.check (id and chunk = the job's, chunk_ok, engine = an engine of a lab
       package, verdict counts adding up to n_pairs, producer end line complete with the same sha256 and pair count, no unknown
-      verdict) and it is DONE: chunk_done, no INCOMPLETE, no DEFERRED pair. A job found on two branches must give the same sha256.
+      verdict) and it is DONE: chunk_done, no INCOMPLETE, no DEFERRED pair; its engine is exactly package v10's. A job found on
+      several branches: every copy is checked, and they must give the same sha256 and the same counts.
 Coverage, per lattice, from the accepted records only:
   (b) job with a plan and n = number of representatives of the plan: it covers the representative k;
   (c) job with a plan, the field "lll" and another n: it covers the representatives k, k+n, ... of that plan (the producer asserts
@@ -45,16 +46,23 @@ def main():
                     try: rec = json.loads(l)
                     except ValueError: pass
             if rec is not None: have[key][b] = rec
-    R = json.load(open(os.path.join(SW, "STREAM_RECOUNT_2026-10-07.json")))
+    R = json.load(open(os.path.join(SW, "STREAM_RECOUNT_2026-10-07.json"))); copies = collections.Counter()
+    V10 = json.dumps(json.load(open(os.path.join(LAB, "c2_cloud_run_v10", "MANIFEST.json")))["engine_code_sha"], sort_keys=True)
     per = collections.defaultdict(lambda: {"jobs": 0, "accepted": 0, "problems": [], "reps": set(), "pairs": 0, "noplan": collections.defaultdict(set), "n_noplan": None,
                                             "twins": collections.Counter(), "verdicts": collections.Counter()})
     for m in man:
         l = m["lid"]; key = (l, m["k"], m["n"]); o = per[l]; o["jobs"] += 1; got = have.get(key, {})
         if not got: o["problems"].append("%s %d/%d: no record" % key); continue
         if len({d.get("sha256") for d in got.values()}) > 1: o["problems"].append("%s %d/%d: two branches, different streams" % key); continue
-        b, d = sorted(got.items())[0]; bad = IS.check(d, l, m["k"], m["n"], ST, GO, PAR, DEF)
+        # 07/10, after Codex's review: EVERY copy of the record is checked (not only the first), and the engine must be package v10's
+        bad = []
+        for b2, d2 in sorted(got.items()):
+            bad += IS.check(d2, l, m["k"], m["n"], ST, GO, PAR, DEF)
+            if json.dumps(d2.get("code_sha") or {}, sort_keys=True) != V10: bad.append("engine is not package v10's")
+            if IS.open_state(d2) != "done": bad.append("not done (%s)" % ({IS.cls(v): c for v, c in d2["verdicts"].items()},))
+            if (d2.get("n_pairs"), json.dumps(d2["verdicts"], sort_keys=True)) != (list(got.values())[0].get("n_pairs"), json.dumps(list(got.values())[0]["verdicts"], sort_keys=True)): bad.append("copies differ in counts")
+        b, d = sorted(got.items())[0]; copies[len(got)] += 1
         if bad: o["problems"].append("%s %d/%d: %s" % (key + ("; ".join(bad)[:150],))); continue
-        if IS.open_state(d) != "done": o["problems"].append("%s %d/%d: not done (%s)" % (key + ({IS.cls(v): c for v, c in d["verdicts"].items()},))); continue
         o["accepted"] += 1; o["pairs"] += d["n_pairs"]; o["twins"].update(d.get("twin_deferred") or {})
         for v, c in d["verdicts"].items(): o["verdicts"][IS.cls(v)] += c
         if m.get("plan"):
@@ -87,6 +95,9 @@ def main():
         out[l] = {"ok": bool(ok), "jobs": o["jobs"], "accepted": o["accepted"], "pairs": o["pairs"], "result": res, "problems": o["problems"], "to_rerun": need,
                   "reps_covered": sorted(o["reps"]), "verdict_classes": dict(o["verdicts"]), "twin_classes": sorted(o["twins"])}
         print("%-4s %5d %8d %10d | %s%s" % (l, o["jobs"], o["accepted"], o["pairs"], "OK: " if ok else "", res))
+    if "--need" in sys.argv:                                              # the lattices that MUST be in the manifest, e.g. --need 043,049,...
+        need_l = set(sys.argv[sys.argv.index("--need") + 1].split(",")); print("lattices of the manifest = the lattices needed: %s" % (set(per) == need_l))
+    print("copies per job (number of branches holding it -> jobs): %s" % dict(sorted(copies.items())))
     print("lattices accepted: %d of %d; jobs %d, records accepted %d; pairs of the accepted records %d" % (
         nok, len(per), sum(o["jobs"] for o in per.values()), sum(o["accepted"] for o in per.values()), sum(o["pairs"] for o in per.values())))
     if "--json" in sys.argv: json.dump(out, open(sys.argv[sys.argv.index("--json") + 1], "w"), indent=1)

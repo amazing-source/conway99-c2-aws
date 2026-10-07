@@ -1,0 +1,1 @@
+lattice 072: y1 8, pairs 11968, with a valid witness 11728, survivors 240, invalid 0: ok

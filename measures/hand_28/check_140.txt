@@ -1,0 +1,1 @@
+lattice 140: y1 4, pairs 32, with a valid witness 32, survivors 0, invalid 0: ok

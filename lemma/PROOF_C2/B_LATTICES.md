@@ -101,7 +101,10 @@ lab's reduced basis given to the producer (`q/producer_lll.py`), 16 chunks of th
 (`rerun_713_check.py`): **25 of 25 lattices accepted; 386 of 386 records; 2,419,830 pairs, every one excluded; no failure.** Every
 job was run on two machines (different sizes and regions) and the two records carry the same stream sha256. For 101 and 104 the
 pair totals (62,300 and 70,108) equal those of the lab's own identity runs of the rigid-kernel audit. For the sixteen lattices
-the new records supersede all the earlier ones.
+the new records supersede all the earlier ones. Reviewed by Codex (`lemma/t20_CODEX/REFEREE_RERUN_713.md`: both records of each of
+the 386 jobs, engine files, plans and bases). A nuance it asks to keep: for the sixteen lattices the y_1 of the new plans are those
+of the OLD plans (the lab's Gamma-orbit representatives) with the symmetry set to the identity; the y_2 stage is wider, but the
+list of y_1 is not a new enumeration: its completeness is that of the old plan.
 
 So for the group S nothing is left on records without an identified program: every y_1 representative is covered by a record with
 a package engine, by the recovered lab version, by the v10 re-run, or by a checked fixed-y1 certificate. The 28 lattices of the old
@@ -128,7 +131,11 @@ gives every admissible y_1 up to the Weyl group (`measures/rerun_28/plan_<lid>.j
 `measures/hand_28/`):
 1. Corollary Y1: a y_1 with a root r, (r,y_1) = +-2, hosts no frame (certificates `measures/hand_28/cert_y1/`);
 2. for the y_1 left, every pair (y_1, y_2) of the producer, and the minimum of E(v) over the vectors v of norm 2, 3, 4: a v with
-   E(v) < 8 contradicts (R-vi), E = 8, 9, 10 contradict T16, T18, T20 (one witness per pair).
+   E(v) < 8 contradicts (R-vi), E = 8, 9, 10 contradict T16, T18, T20. Every pair is stored with its witness
+   (`measures/hand_28/<lid>_pairs.npz`: y_1, y_2 and the witness in integer coordinates of a basis written in `<lid>.json`), and
+   an exact standalone checker (`check_hand_witness.py`: basis of U, norms 7, orthogonality, norm of the witness, value of E)
+   passes on all 22 files: 171,056 pairs with a valid witness, 0 invalid. (First version, corrected after Codex's remark: only
+   50 witnesses per lattice were kept.) A valid witness excludes its pair whatever the completeness of any list.
 
 | id | roots | y_1 (up to the Weyl group) | with a root of product 2 | y_1 left | pairs of the y_1 left | E <= 7 or 8 | E = 9 | E = 10 | no witness (min E >= 11) |
 |---|---|---|---|---|---|---|---|---|---|
@@ -169,9 +176,16 @@ What this rests on, besides the three lemmas: the completeness of the producer's
 (compared with the independent enumerator on 135, 140, 141: same numbers of orbits), and the completeness of the lists of norm 2,
 3, 4 (shell check).
 
-**By the engine (machines, in progress on 07/10 at 18:40 UTC).** The 28 whole lattices through package v10 with the same plans
-(`measures/RERUN_28_MANIFEST_2026-10-07.json`, 224 jobs, lab basis given to the producer, identity symmetry), on two sets of
-machines; acceptance by `rerun_713_check.py` as for B.3. Result to be written here when the records are in.
+**By the engine (machines, 07/10, 18:24 to 18:49 UTC).** The 28 whole lattices through package v10 with the same plans
+(`measures/RERUN_28_MANIFEST_2026-10-07.json`, 224 jobs: 8 chunks of the plan per lattice, lab basis given to the producer,
+identity symmetry). Acceptance (`rerun_713_check.py`, strengthened after Codex's review: every copy of a record checked, engine
+exactly v10's): **27 of 28 lattices accepted, every representative of each plan covered; 216 records, each on two machines with
+identical streams; 1,168,349 pairs, all excluded.** In particular the 732 pairs without witness of the ten lattices other than
+044 are excluded by the v10 search. The pair totals of 135, 140, 141 (928, 576, 637) are those of the producer streams of the F4
+comparison, and those of 137, 138 (1,208, 1,026) those of the lab's identity runs of the rigid-kernel audit.
+**044 (a_3^8): its 8 chunks were still running at 19:00 UTC** (1,168 y_1 in the plan; 1,920 of its pairs have no witness). Its
+line is to be completed when its records are accepted; until then 044 rests on its record of 29/09 (14,496 pairs of C1's list, all
+excluded, lab PC, without code version).
 
 ## B.5 What Part B does not establish
 

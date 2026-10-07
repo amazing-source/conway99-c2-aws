@@ -1,0 +1,1 @@
+lattice 119: y1 10, pairs 390, with a valid witness 390, survivors 0, invalid 0: ok

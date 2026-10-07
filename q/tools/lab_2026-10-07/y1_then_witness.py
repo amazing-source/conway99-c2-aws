@@ -10,8 +10,9 @@ Per lattice:
   3. for each pair, in exact integers: (y1,y1) = (y2,y2) = 7, (y1,y2) = 0, and the minimum of E(v) = 7 (v,v) - (v,y1)^2 - (v,y2)^2
      over the vectors v of norm 2 and 3 of the lattice, and of norm 4 when those give no witness (so the recorded minimum is the
      true minimum over norms 2, 3, 4 only when it is >= 11 or comes from norm 4; a pair is a survivor only if ALL three lists give >= 11) (lists of frame_dfs_next.lattice_data, complete: shell check of 07/10).
-     E(v) < 8 contradicts (R-vi); E = 8, 9, 10 contradict T16, T18, T20. A pair with such a v is excluded by that witness (stored: one
-     witness per pair). A pair whose minimum is >= 11 has NO such witness: it is listed in <out dir>/<lid>_survivors.json and
+     E(v) < 8 contradicts (R-vi); E = 8, 9, 10 contradict T16, T18, T20. A pair with such a v is excluded by that witness. EVERY pair
+     is stored with its witness in <out dir>/<lid>_pairs.npz (y1 index, y2 and witness in integer coordinates of the basis written in
+     <lid>.json; remark of Codex, 07/10: the first version kept only 50 witnesses per lattice); checker: check_hand_witness.py. A pair whose minimum is >= 11 has NO such witness: it is listed in <out dir>/<lid>_survivors.json and
      needs a frame search.
 Output <out dir>/<lid>.json: counts by value of the minimum, sha256 of the stream, the survivors' number. It pronounces no exclusion
 by itself; it says how much of a lattice falls to the lemmas alone."""
@@ -51,6 +52,7 @@ def main():
         BD = np.array([[int(x * DEN) for x in row] for row in Bq], dtype=np.int64); Binv = np.linalg.inv(BD.astype(np.float64))
         shells = [(7 * nrm, np.asarray(L[k], dtype=np.int64).reshape(-1, 24) @ G, np.asarray(L[k], dtype=np.int64).reshape(-1, 24), nrm) for k, nrm in (("R", 2), ("X3", 3), ("X4", 4))]
         sh = hashlib.sha256(); n = 0; end = None; by = collections.Counter(); surv = []; wit = []; buf = []
+        A_o = []; A_y2 = []; A_w = []; A_wn = []; A_e = []; y1c = {}                 # EVERY pair: y1 index, y2, witness (coordinates in the basis L["B"])
 
         def flush():
             if not buf: return
@@ -72,6 +74,9 @@ def main():
                 for t in np.flatnonzero(m < best[sel]): q = sel[t]; best[q] = m[t]; arg[q] = (nrm, [int(x) for x in X[j[t]]])
             for q, b in enumerate(buf):
                 e = int(best[q]); by[str(e) if e <= 10 else ">=11"] += 1
+                y1c.setdefault(int(b["o"]), [int(x) for x in C1[q]]); assert y1c[int(b["o"])] == [int(x) for x in C1[q]]
+                A_o.append(int(b["o"])); A_y2.append([int(x) for x in C2[q]]); A_e.append(e)
+                A_w.append(arg[q][1] if e <= 10 else [0] * 24); A_wn.append(arg[q][0] if e <= 10 else 0)
                 if e <= 10:
                     if len(wit) < 50: wit.append({"o": b["o"], "min_E": e, "witness_norm": arg[q][0], "witness_coordinates": arg[q][1]})
                 else: surv.append({"o": b["o"], "y1": b["y1"], "y2": b["y2"], "min_E": e})
@@ -87,6 +92,12 @@ def main():
             if len(buf) >= 150: flush()
         flush()
         ok = bool(end) and end.get("complete") is True and end.get("pairs") == n
+        arr = {"o": np.array(A_o, dtype=np.int32), "y2": np.array(A_y2, dtype=np.int64).reshape(-1, 24), "w": np.array(A_w, dtype=np.int64).reshape(-1, 24),
+               "wn": np.array(A_wn, dtype=np.int8), "e": np.array(A_e, dtype=np.int32), "y1": np.array([y1c[i] for i in sorted(y1c)], dtype=np.int64).reshape(-1, 24),
+               "y1_o": np.array(sorted(y1c), dtype=np.int32), "left": np.array(left, dtype=np.int32)}
+        for k_ in ("y2", "w", "y1"): assert np.abs(arr[k_]).max(initial=0) < 30000; arr[k_] = arr[k_].astype(np.int16)
+        npz = os.path.join(od, lid + "_pairs.npz"); np.savez_compressed(npz, **arr)
+        res["basis"] = [[str(x) for x in row] for row in Bq]; res["pairs_file"] = os.path.basename(npz); res["pairs_file_sha256"] = hashlib.sha256(open(npz, "rb").read()).hexdigest()
         res.update(pairs=n, stream_complete=ok, stream_sha256=sh.hexdigest(), by_min_E=dict(by), survivors=len(surv), first_witnesses=wit, y1_left_indices=left,
                    engine_sha256=hashlib.sha256(open(os.path.join(PKG, "scripts", "frame_dfs_next.py"), "rb").read()).hexdigest()[:16], seconds=round(time.time() - t0, 1))
         json.dump(surv, open(os.path.join(od, lid + "_survivors.json"), "w")); json.dump(res, open(outf, "w"), indent=1)

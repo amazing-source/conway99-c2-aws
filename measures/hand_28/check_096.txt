@@ -1,0 +1,1 @@
+lattice 096: y1 16, pairs 3228, with a valid witness 3228, survivors 0, invalid 0: ok

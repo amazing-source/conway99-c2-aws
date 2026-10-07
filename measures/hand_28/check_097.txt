@@ -1,0 +1,1 @@
+lattice 097: y1 32, pairs 4584, with a valid witness 4552, survivors 32, invalid 0: ok

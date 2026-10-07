@@ -1,0 +1,1 @@
+lattice 111: y1 52, pairs 3024, with a valid witness 2704, survivors 320, invalid 0: ok

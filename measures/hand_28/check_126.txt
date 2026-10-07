@@ -1,0 +1,1 @@
+lattice 126: y1 12, pairs 244, with a valid witness 236, survivors 8, invalid 0: ok
