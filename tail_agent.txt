@@ -1,1 +1,3 @@
 2026-10-07 14:31:32 tail runner start: 1 keys, 124 shards per job, 31 at a time
+2026-10-07 14:31:34 start 003:181:182 on 124 shards, 31 at a time
+2026-10-07 14:33:34 INTERRUPTED: AWS spot interruption notice (tail runner)
