@@ -24,9 +24,11 @@
    "nroots": 16,
    "nb1": "A_1^{24}",
    "nb2": "A_1^{24}",
-   "status": "open",
-   "by": "27/09 ~21:20 structures (Golay pipeline a9bb407/3e9690b): y1 classes c00 (819 pair classes) and c01 (1957) enumerated; whole-pair frame LP (routeC_lp/frame_lp.py) on c00: 179/819 done, 137 EXCLUDED with exact integer certificates, 42 LP FEASIBLE (7, 8, 11, 16, 20, 21, 27, 29, 36, 43, 56, 72, 76, 79, 82, 91, 94, 96, 105, 107, 109, 110, 111, 115, 118, 124, 127, 130, 131, 137, 139, 147, 150, 152, 153, 157, 160, 164, 168, 173, 175, 177); job stopped by the laptop low-memory guard. h-stage: late deaths (id-1 pair 0: 5944 admissible h, 896 leaves pass w + Lemma Z, all die at cover + L7).",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "27/09 ~21:20 structures (Golay pipeline a9bb407/3e9690b): y1 classes c00 (819 pair classes) and c01 (1957) enumerated; whole-pair frame LP (routeC_lp/frame_lp.py) on c00: 179/819 done, 137 EXCLUDED with exact integer certificates, 42 LP FEASIBLE (7, 8, 11, 16, 20, 21, 27, 29, 36, 43, 56, 72, 76, 79, 82, 91, 94, 96, 105, 107, 109, 110, 111, 115, 118, 124, 127, 130, 131, 137, 139, 147, 150, 152, 153, 157, 160, 164, 168, 173, 175, 177); job stopped by the laptop low-memory guard. h-stage: late deaths (id-1 pair 0: 5944 admissible h, 896 leaves pass w + Lemma Z, all die at cover + L7). | 10/2026 C2 deferral sweep (engine v10): 117068 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (4545 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 3169 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -36,9 +38,11 @@
    "nroots": 24,
    "nb1": "A_1^{24}",
    "nb2": "A_2^{12}",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 718422 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (6675 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 3594 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -48,9 +52,11 @@
    "nroots": 32,
    "nb1": "A_2^{12}",
    "nb2": "A_2^{12}",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 17757312 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (39642 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 43210 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root). 1 y1 representatives ([181]) carry no pair record: U has a root r with (r,y1) = +-2, so E(r) = 10 - (r,y2)^2 for every y2 and T18 or T20 applies (fixed-y1 lemma; certificate cert_y1_003.json, sha256 bb32f307103f55e5, checked by q/check_cert_y1.py).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -72,9 +78,11 @@
    "nroots": 40,
    "nb1": "A_2^{12}",
    "nb2": "A_3^8",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 54636369 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (297680 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 253904 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -84,9 +92,11 @@
    "nroots": 48,
    "nb1": "A_3^8",
    "nb2": "A_3^8",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 7051414 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (72717 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 30385 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -96,9 +106,11 @@
    "nroots": 48,
    "nb1": "A_3^8",
    "nb2": "A_3^8",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 62629395 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (817065 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 482534 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -108,9 +120,11 @@
    "nroots": 48,
    "nb1": "A_3^8",
    "nb2": "A_3^8",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 10026322 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (152429 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 93865 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -120,9 +134,11 @@
    "nroots": 48,
    "nb1": "A_2^{12}",
    "nb2": "A_4^6",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 18780847 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (101399 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 53011 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -144,9 +160,11 @@
    "nroots": 56,
    "nb1": "A_3^8",
    "nb2": "A_4^6",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 108539672 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (1971590 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 909188 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -156,12 +174,13 @@
    "nroots": 56,
    "nb1": "A_2^{12}",
    "nb2": "A_5^4D_4",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 2624309 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (0 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 0 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
-   "packing": "survives",
-   "status_note": "swept; pending twin classes ((('A', 1), 2), (('A', 2), 4), (('A', 3), 3)); ((('A', 1), 4), (('A', 2), 4), (('A', 3), 1), (('A', 4), 1)); ((('A', 1), 2), (('A', 2), 2), (('A', 3), 4))"
+   "packing": "survives"
   },
   {
    "id": 13,
@@ -169,9 +188,11 @@
    "nroots": 64,
    "nb1": "A_4^6",
    "nb2": "A_4^6",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 21063451 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (64761 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 9952 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -181,9 +202,11 @@
    "nroots": 64,
    "nb1": "A_4^6",
    "nb2": "A_4^6",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 37020901 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (984326 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 334300 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -193,9 +216,11 @@
    "nroots": 64,
    "nb1": "A_3^8",
    "nb2": "A_5^4D_4",
-   "status": "open",
-   "by": "open",
-   "reviewed_by": [],
+   "status": "excluded",
+   "by": "open | 10/2026 C2 deferral sweep (engine v10): 32473649 pairs; every pair EXCLUDED at once or by search, swap-covered, twin-deferred to envelopes excluded since, or DEFERRED and then excluded by the lemmas ['T18', 'T20'] (677923 pairs pending T18: compute repository conway99-c2-aws, lemma/T18_PROOF.md (no sigma-odd integer (-4)-eigenfunction of squared norm 18); 291183 pending T20: compute repository conway99-c2-aws, lemma/T20_PROOF.md, Theorem 10.2 (no such eigenfunction of squared norm 20)) through the bridge, each with an exact certificate (norms 7, orthogonality, witness root).",
+   "reviewed_by": [
+    "C2"
+   ],
    "certificate": null,
    "packing": "survives"
   },
@@ -1989,8 +2014,10 @@
    "nb1": "A_{15}D_9",
    "nb2": "A_{24}",
    "status": "excluded",
-   "by": "open | 28/09 evening C2: component-budget test (lattice level, no pairs; MILP + exact integer enumeration agree; scripts/component_budget.py, exact_budget.py)",
-   "reviewed_by": [],
+   "by": "open | 28/09 evening C2: component-budget test (lattice level, no pairs; MILP + exact integer enumeration agree; scripts/component_budget.py, exact_budget.py) | 07/10 C2: hand proof replacing the solver record (compute repo lemma/upstream/LATTICE_143.md): from (R-ii) and (R-v), sum_f |P_V f|^2 = 7 dim V; the 4096 vectors of norm 3 are of three kinds (|P_W|^2, |P_l|^2) = (0, 9/16), (8/9, 169/144), (2, 1/16) (W = span of a_8, l = line orthogonal to the roots); at most 28 of the 42 u are of the third kind (budget 56 on W), the 14 others give 63/8 > 7 on l. Script budget_143.py re-run by the laptop session; refereed by Codex, accepted (lemma/t20_CODEX/REFEREE_143_PROOF.md, exact glue check).",
+   "reviewed_by": [
+    "Codex (07/10, hand proof)"
+   ],
    "certificate": null,
    "packing": "survives",
    "reading": "a-only (sweep rule)"

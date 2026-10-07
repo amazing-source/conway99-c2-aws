@@ -13,41 +13,35 @@
   "exposed_not_excluded_again": 0
  },
  "003": {
-  "files_accepted": 172,
+  "files_accepted": 177,
   "files_not_ok": [],
   "same_job_different_stream": [],
   "kind": "plan",
   "y1_reps": 182,
   "by_certificate": [
-   157,
    162,
-   174,
    176,
    181
   ],
   "certificate_sha256": "bb32f307103f55e5b4e45c3e70757cc120ea2f78407cf584f9a54a67e7d7c9d0",
-  "missing": [
-   2,
-   3,
-   180
-  ],
+  "missing": [],
   "covered_twice": 0,
   "pairs_expected": 17757312,
-  "covered": false,
-  "source": "plan, 1 source(s)",
-  "files_selected": 172,
-  "pairs": 17279427,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 177,
+  "pairs": 17698621,
   "counts": {
    "setup_impossible": 0,
-   "general": 17278986,
-   "rigid": 441,
-   "with_zero_candidate": 12062878,
-   "exposed": 313
+   "general": 17698173,
+   "rigid": 448,
+   "with_zero_candidate": 12371846,
+   "exposed": 316
   },
   "exposed_not_excluded_again": 0,
-  "exposed_listed": 313,
+  "exposed_listed": 316,
   "exposed_with_search_nodes": 2,
-  "coverage": "NOT COVERED: 174 of 182 y1 representatives by audit files; 5 by the fixed-y1 certificate, PENDING T18 and T20: [157, 162, 174, 176, 181]; MISSING [2, 3, 180]",
+  "coverage": "COVERED: 179 of 182 y1 representatives by audit files; 3 by the fixed-y1 certificate, PENDING T18 and T20: [162, 176, 181]",
   "audit_rigid_sha256": [
    "a555ddb3aa62b9c1"
   ],
