@@ -11,3 +11,5 @@
 2026-10-07 14:26:53 audited 105_4_8 in 124 s: pairs 7574, counts {'EXCLUDED (char-vector trap)': 2661, 'EXCLUDED (stage 1 empty: no 7 h)': 621, 'EXCLUDED (dual min 9/7: norm-3 x with Y=13)': 350, 'EXCLUDED (twin transfer)': 354, 'SWAP-COVERED (I(y1)>I(y2))': 3588}
 2026-10-07 14:27:03 audited 105_5_8 in 118 s: pairs 7233, counts {'EXCLUDED (char-vector trap)': 2660, 'EXCLUDED (stage 1 empty: no 7 h)': 608, 'EXCLUDED (twin transfer)': 399, 'SWAP-COVERED (I(y1)>I(y2))': 3192, 'EXCLUDED (dual min 9/7: norm-3 x with Y=13)': 374}
 2026-10-07 14:27:07 audited 105_6_8 in 112 s: pairs 7316, counts {'EXCLUDED (char-vector trap)': 2553, 'EXCLUDED (stage 1 empty: no 7 h)': 546, 'EXCLUDED (twin transfer)': 371, 'EXCLUDED (dual min 9/7: norm-3 x with Y=13)': 326, 'SWAP-COVERED (I(y1)>I(y2))': 3520}
+2026-10-07 14:28:20 audited 105_7_8 in 96 s: pairs 6603, counts {'EXCLUDED (char-vector trap)': 2496, 'EXCLUDED (stage 1 empty: no 7 h)': 539, 'SWAP-COVERED (I(y1)>I(y2))': 2772, 'EXCLUDED (dual min 9/7: norm-3 x with Y=13)': 464, 'EXCLUDED (twin transfer)': 332}
+2026-10-07 14:30:17 FAIL 143_6_8 (producer -9 audit 0)
