@@ -1,0 +1,513 @@
+{
+ "003": {
+  "transfer to a lattice already excluded": 3596,
+  "all pairs": 17757312,
+  "deferred to a twin with more roots": 2419746,
+  "canonical rule (twin of the same type)": 96119
+ },
+ "005": {
+  "transfer to a lattice already excluded": 22558,
+  "all pairs": 54636369,
+  "deferred to a twin with more roots": 5985841,
+  "canonical rule (twin of the same type)": 451164
+ },
+ "006": {
+  "all pairs": 7051414,
+  "deferred to a twin with more roots": 623975,
+  "transfer to a lattice already excluded": 6179,
+  "canonical rule (twin of the same type)": 12325
+ },
+ "007": {
+  "all pairs": 62629395,
+  "transfer to a lattice already excluded": 45582,
+  "deferred to a twin with more roots": 5166062,
+  "canonical rule (twin of the same type)": 463074
+ },
+ "008": {
+  "all pairs": 10026322,
+  "transfer to a lattice already excluded": 7077,
+  "deferred to a twin with more roots": 784990,
+  "canonical rule (twin of the same type)": 14556
+ },
+ "009": {
+  "all pairs": 18780847,
+  "transfer to a lattice already excluded": 15108,
+  "deferred to a twin with more roots": 1666560,
+  "canonical rule (twin of the same type)": 43192
+ },
+ "011": {
+  "all pairs": 108539672,
+  "transfer to a lattice already excluded": 121922,
+  "deferred to a twin with more roots": 6603599,
+  "canonical rule (twin of the same type)": 1028486
+ },
+ "012": {
+  "deferred to a twin with more roots": 196911,
+  "all pairs": 2624309,
+  "transfer to a lattice already excluded": 4030,
+  "canonical rule (twin of the same type)": 1498
+ },
+ "013": {
+  "all pairs": 21063451,
+  "transfer to a lattice already excluded": 35171,
+  "deferred to a twin with more roots": 865153,
+  "canonical rule (twin of the same type)": 46072
+ },
+ "014": {
+  "all pairs": 37020901,
+  "transfer to a lattice already excluded": 70461,
+  "deferred to a twin with more roots": 1697699,
+  "canonical rule (twin of the same type)": 152148
+ },
+ "015": {
+  "all pairs": 32473649,
+  "transfer to a lattice already excluded": 62400,
+  "deferred to a twin with more roots": 1498909,
+  "canonical rule (twin of the same type)": 109023
+ },
+ "016": {
+  "all pairs": 9661027,
+  "transfer to a lattice already excluded": 22401,
+  "deferred to a twin with more roots": 478105
+ },
+ "017": {
+  "all pairs": 1193626,
+  "deferred to a twin with more roots": 57365,
+  "transfer to a lattice already excluded": 2465
+ },
+ "018": {
+  "all pairs": 57409330,
+  "transfer to a lattice already excluded": 129160,
+  "deferred to a twin with more roots": 1704336,
+  "canonical rule (twin of the same type)": 256279
+ },
+ "019": {
+  "all pairs": 12492920,
+  "transfer to a lattice already excluded": 28573,
+  "deferred to a twin with more roots": 411172,
+  "canonical rule (twin of the same type)": 13320
+ },
+ "020": {
+  "all pairs": 1080309,
+  "transfer to a lattice already excluded": 2337,
+  "deferred to a twin with more roots": 27564,
+  "canonical rule (twin of the same type)": 312
+ },
+ "021": {
+  "all pairs": 6720913,
+  "transfer to a lattice already excluded": 23874,
+  "deferred to a twin with more roots": 245281,
+  "canonical rule (twin of the same type)": 8544
+ },
+ "022": {
+  "all pairs": 3719056,
+  "transfer to a lattice already excluded": 15171,
+  "deferred to a twin with more roots": 83726,
+  "canonical rule (twin of the same type)": 3772
+ },
+ "023": {
+  "transfer to a lattice already excluded": 13887,
+  "all pairs": 2902784,
+  "deferred to a twin with more roots": 64105
+ },
+ "024": {
+  "all pairs": 3331604,
+  "deferred to a twin with more roots": 80734,
+  "transfer to a lattice already excluded": 17605,
+  "canonical rule (twin of the same type)": 4242
+ },
+ "025": {
+  "all pairs": 12685851,
+  "transfer to a lattice already excluded": 39754,
+  "deferred to a twin with more roots": 234159,
+  "canonical rule (twin of the same type)": 19935
+ },
+ "026": {
+  "all pairs": 5525802,
+  "transfer to a lattice already excluded": 24029,
+  "deferred to a twin with more roots": 127746,
+  "canonical rule (twin of the same type)": 7002
+ },
+ "027": {
+  "all pairs": 1858950,
+  "transfer to a lattice already excluded": 7077,
+  "deferred to a twin with more roots": 40009
+ },
+ "028": {
+  "all pairs": 50646,
+  "deferred to a twin with more roots": 1574,
+  "transfer to a lattice already excluded": 397,
+  "canonical rule (twin of the same type)": 18
+ },
+ "029": {
+  "all pairs": 20342381,
+  "deferred to a twin with more roots": 453546,
+  "transfer to a lattice already excluded": 86626,
+  "canonical rule (twin of the same type)": 60131
+ },
+ "030": {
+  "all pairs": 1460380,
+  "transfer to a lattice already excluded": 10497,
+  "deferred to a twin with more roots": 47463,
+  "canonical rule (twin of the same type)": 1340
+ },
+ "031": {
+  "all pairs": 2051633,
+  "deferred to a twin with more roots": 27814,
+  "transfer to a lattice already excluded": 9423,
+  "canonical rule (twin of the same type)": 696
+ },
+ "032": {
+  "all pairs": 19608530,
+  "transfer to a lattice already excluded": 81777,
+  "deferred to a twin with more roots": 278240,
+  "canonical rule (twin of the same type)": 37675
+ },
+ "033": {
+  "all pairs": 2049478,
+  "deferred to a twin with more roots": 28826,
+  "transfer to a lattice already excluded": 11987,
+  "canonical rule (twin of the same type)": 1404
+ },
+ "034": {
+  "all pairs": 7280902,
+  "transfer to a lattice already excluded": 41561,
+  "canonical rule (twin of the same type)": 9774,
+  "deferred to a twin with more roots": 126438
+ },
+ "035": {
+  "all pairs": 1658601,
+  "transfer to a lattice already excluded": 7457,
+  "deferred to a twin with more roots": 14017,
+  "canonical rule (twin of the same type)": 443
+ },
+ "036": {
+  "all pairs": 2379274,
+  "transfer to a lattice already excluded": 12814,
+  "deferred to a twin with more roots": 17999,
+  "canonical rule (twin of the same type)": 812
+ },
+ "037": {
+  "transfer to a lattice already excluded": 11483,
+  "all pairs": 1438751,
+  "canonical rule (twin of the same type)": 885,
+  "deferred to a twin with more roots": 16893
+ },
+ "038": {
+  "all pairs": 4421657,
+  "transfer to a lattice already excluded": 25684,
+  "canonical rule (twin of the same type)": 4496,
+  "deferred to a twin with more roots": 29079
+ },
+ "039": {
+  "all pairs": 3948897,
+  "transfer to a lattice already excluded": 31581,
+  "deferred to a twin with more roots": 29080,
+  "canonical rule (twin of the same type)": 5402
+ },
+ "040": {
+  "all pairs": 1720526,
+  "transfer to a lattice already excluded": 15397,
+  "canonical rule (twin of the same type)": 1454,
+  "deferred to a twin with more roots": 15585
+ },
+ "041": {
+  "all pairs": 4400394,
+  "canonical rule (twin of the same type)": 4901,
+  "transfer to a lattice already excluded": 29048,
+  "deferred to a twin with more roots": 28082
+ },
+ "042": {
+  "all pairs": 546423,
+  "transfer to a lattice already excluded": 3131,
+  "deferred to a twin with more roots": 2729,
+  "canonical rule (twin of the same type)": 128
+ },
+ "043": {
+  "all pairs": 1051604,
+  "deferred to a twin with more roots": 9120,
+  "transfer to a lattice already excluded": 6523,
+  "canonical rule (twin of the same type)": 324
+ },
+ "045": {
+  "all pairs": 2340518,
+  "transfer to a lattice already excluded": 8901,
+  "deferred to a twin with more roots": 13011,
+  "canonical rule (twin of the same type)": 44
+ },
+ "046": {
+  "all pairs": 4087798,
+  "transfer to a lattice already excluded": 21919,
+  "deferred to a twin with more roots": 26177,
+  "canonical rule (twin of the same type)": 302
+ },
+ "047": {
+  "all pairs": 1834000,
+  "transfer to a lattice already excluded": 17228,
+  "deferred to a twin with more roots": 9879,
+  "canonical rule (twin of the same type)": 1227
+ },
+ "048": {
+  "transfer to a lattice already excluded": 2551,
+  "all pairs": 301557,
+  "deferred to a twin with more roots": 3704
+ },
+ "049": {
+  "all pairs": 296093,
+  "transfer to a lattice already excluded": 2561,
+  "deferred to a twin with more roots": 809
+ },
+ "050": {
+  "transfer to a lattice already excluded": 8210,
+  "all pairs": 1011185,
+  "deferred to a twin with more roots": 3005
+ },
+ "051": {
+  "all pairs": 318627,
+  "transfer to a lattice already excluded": 491,
+  "deferred to a twin with more roots": 998
+ },
+ "052": {
+  "all pairs": 210503,
+  "deferred to a twin with more roots": 726,
+  "transfer to a lattice already excluded": 1496,
+  "canonical rule (twin of the same type)": 10
+ },
+ "053": {
+  "all pairs": 1141132,
+  "transfer to a lattice already excluded": 7000,
+  "deferred to a twin with more roots": 3086
+ },
+ "054": {
+  "all pairs": 1186218,
+  "transfer to a lattice already excluded": 4454,
+  "deferred to a twin with more roots": 2215
+ },
+ "055": {
+  "all pairs": 2118801,
+  "transfer to a lattice already excluded": 13612,
+  "deferred to a twin with more roots": 2988
+ },
+ "056": {
+  "all pairs": 802087,
+  "deferred to a twin with more roots": 1840,
+  "transfer to a lattice already excluded": 5738
+ },
+ "057": {
+  "all pairs": 854034,
+  "transfer to a lattice already excluded": 4018,
+  "deferred to a twin with more roots": 2518
+ },
+ "058": {
+  "all pairs": 368757,
+  "deferred to a twin with more roots": 1407,
+  "transfer to a lattice already excluded": 284
+ },
+ "059": {
+  "all pairs": 2562400,
+  "transfer to a lattice already excluded": 49207,
+  "deferred to a twin with more roots": 380,
+  "canonical rule (twin of the same type)": 476
+ },
+ "060": {
+  "all pairs": 568181,
+  "transfer to a lattice already excluded": 3082,
+  "deferred to a twin with more roots": 544
+ },
+ "061": {
+  "all pairs": 560384,
+  "transfer to a lattice already excluded": 3255,
+  "deferred to a twin with more roots": 254
+ },
+ "062": {
+  "all pairs": 1043635,
+  "transfer to a lattice already excluded": 9632
+ },
+ "063": {
+  "all pairs": 462316,
+  "transfer to a lattice already excluded": 5012
+ },
+ "064": {
+  "all pairs": 87520,
+  "transfer to a lattice already excluded": 433
+ },
+ "065": {
+  "all pairs": 170548,
+  "transfer to a lattice already excluded": 809,
+  "deferred to a twin with more roots": 288
+ },
+ "066": {
+  "all pairs": 304034,
+  "deferred to a twin with more roots": 94,
+  "transfer to a lattice already excluded": 1250
+ },
+ "067": {
+  "all pairs": 559433,
+  "transfer to a lattice already excluded": 3912,
+  "deferred to a twin with more roots": 92
+ },
+ "068": {
+  "transfer to a lattice already excluded": 2898,
+  "all pairs": 620319,
+  "deferred to a twin with more roots": 4
+ },
+ "069": {
+  "all pairs": 64133,
+  "transfer to a lattice already excluded": 428
+ },
+ "070": {
+  "all pairs": 295716,
+  "deferred to a twin with more roots": 198,
+  "transfer to a lattice already excluded": 749
+ },
+ "071": {
+  "transfer to a lattice already excluded": 3467,
+  "all pairs": 171216
+ },
+ "073": {
+  "all pairs": 161453
+ },
+ "074": {
+  "all pairs": 367327,
+  "deferred to a twin with more roots": 450,
+  "transfer to a lattice already excluded": 214
+ },
+ "075": {
+  "all pairs": 248990
+ },
+ "076": {
+  "all pairs": 52015,
+  "transfer to a lattice already excluded": 288,
+  "deferred to a twin with more roots": 14
+ },
+ "077": {
+  "all pairs": 62031,
+  "transfer to a lattice already excluded": 499,
+  "deferred to a twin with more roots": 2
+ },
+ "078": {
+  "all pairs": 103280
+ },
+ "079": {
+  "transfer to a lattice already excluded": 628,
+  "all pairs": 100895
+ },
+ "080": {
+  "all pairs": 31122,
+  "transfer to a lattice already excluded": 284
+ },
+ "081": {
+  "all pairs": 154990,
+  "transfer to a lattice already excluded": 1391
+ },
+ "082": {
+  "all pairs": 90976,
+  "transfer to a lattice already excluded": 541
+ },
+ "083": {
+  "all pairs": 166234,
+  "transfer to a lattice already excluded": 1363
+ },
+ "084": {
+  "all pairs": 169401,
+  "transfer to a lattice already excluded": 650
+ },
+ "085": {
+  "all pairs": 38140,
+  "transfer to a lattice already excluded": 239
+ },
+ "086": {
+  "all pairs": 74583,
+  "transfer to a lattice already excluded": 1151
+ },
+ "088": {
+  "all pairs": 107203,
+  "transfer to a lattice already excluded": 584,
+  "deferred to a twin with more roots": 72
+ },
+ "089": {
+  "transfer to a lattice already excluded": 472,
+  "all pairs": 49570,
+  "deferred to a twin with more roots": 12
+ },
+ "090": {
+  "all pairs": 60345,
+  "transfer to a lattice already excluded": 443,
+  "deferred to a twin with more roots": 2
+ },
+ "091": {
+  "all pairs": 71608,
+  "transfer to a lattice already excluded": 327
+ },
+ "092": {
+  "all pairs": 67915,
+  "transfer to a lattice already excluded": 248,
+  "deferred to a twin with more roots": 16
+ },
+ "093": {
+  "all pairs": 32952,
+  "transfer to a lattice already excluded": 46,
+  "deferred to a twin with more roots": 12
+ },
+ "095": {
+  "all pairs": 144220,
+  "transfer to a lattice already excluded": 1038,
+  "deferred to a twin with more roots": 232
+ },
+ "098": {
+  "transfer to a lattice already excluded": 528,
+  "all pairs": 82476,
+  "deferred to a twin with more roots": 96
+ },
+ "099": {
+  "all pairs": 93802,
+  "transfer to a lattice already excluded": 76,
+  "deferred to a twin with more roots": 10
+ },
+ "100": {
+  "all pairs": 58356,
+  "deferred to a twin with more roots": 36,
+  "transfer to a lattice already excluded": 126
+ },
+ "101": {
+  "all pairs": 62300
+ },
+ "102": {
+  "all pairs": 49692
+ },
+ "103": {
+  "all pairs": 17228,
+  "transfer to a lattice already excluded": 205,
+  "deferred to a twin with more roots": 14
+ },
+ "104": {
+  "all pairs": 70108
+ },
+ "107": {
+  "all pairs": 49804
+ },
+ "109": {
+  "all pairs": 16386,
+  "transfer to a lattice already excluded": 80
+ },
+ "110": {
+  "all pairs": 6920,
+  "transfer to a lattice already excluded": 78
+ },
+ "112": {
+  "all pairs": 20846
+ },
+ "113": {
+  "transfer to a lattice already excluded": 195,
+  "all pairs": 12184
+ },
+ "114": {
+  "all pairs": 19806
+ },
+ "118": {
+  "all pairs": 11980
+ },
+ "149": {
+  "all pairs": 44
+ }
+}
