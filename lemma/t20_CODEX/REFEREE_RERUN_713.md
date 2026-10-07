@@ -5,6 +5,11 @@ This is a bounded artifact/code review, not the whole referee pass on the
 unfrozen combined proof. No enumeration, frame search or cloud run was
 launched for this review.
 
+Follow-up to message 90: the missing pair-witness archive described below
+has since been supplied and verified after an integrality fix to its
+checker. See `REFEREE_HAND_WITNESSES.md`; the account below preserves the
+state at message 87.
+
 ## The particular 713 rerun: coverage and records checked
 
 **The historical 713-representative provenance gap is covered by the new

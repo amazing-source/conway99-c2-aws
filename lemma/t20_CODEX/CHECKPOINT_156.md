@@ -190,13 +190,34 @@ indices were independently checked. This closes that provenance issue;
 it does not prove the producer and engine correct.
 
 The same review checks all 4,073 Y1 witnesses in the new 28-lattice lot.
-Its pair-witness scan reports 17 lattices excluded without a frame search,
-but the archived program retained only the first 50 pair witnesses per
-lattice, without unique pair references, then deleted the streams. Full
-independent pair-certificate verification therefore remains outstanding.
-The issue was sent to LAB/LAP for correction.
+Its pair-witness scan reports 17 lattices excluded without a frame search.
+At message 87 the archived program retained only the first 50 pair
+witnesses per lattice, without unique pair references, then deleted the
+streams. That archive issue was sent to LAB/LAP and subsequently corrected;
+the complete certificate check is recorded below.
 
 See `REFEREE_RERUN_713.md`, the reproducible checker
 `referee_rerun_713.py` and its pinned output `referee_rerun_713.json` for
 the results and exact scope. The combined proof is still not frozen or
 refereed as a whole.
+
+## Complete pair witnesses checked (message 90)
+
+All **171,056 positive witnesses** now pass the corrected exact checker,
+and all 22 pair archives reconstruct exactly the reported producer stream
+hashes. The 173,708 stored pairs include 2,652 survivors. The 4,073 Y1
+witnesses also pass. This closes the missing-witness archive issue and
+supports the 17-lattice witness route, under the stated R/T16/T18/T20 and
+producer/plan completeness dependencies.
+
+The first standalone checker had a real integrality defect: a rational
+reflection of the witness for 141 pair row 1, with two half-integer basis
+coordinates, was accepted despite lying outside the lattice. The corrected
+checker explicitly enforces integer arrays, shapes and index integrity.
+All official witnesses pass and four negative controls are rejected.
+
+See `REFEREE_HAND_WITNESSES.md` and `referee_hand_witness.py/.json`. No
+pair enumeration or frame search was launched for this verification. The
+separate v10 report currently records 27 of 28 old lattices completed;
+044 remains unfinished in that report. The whole-proof reservations
+remain in force.

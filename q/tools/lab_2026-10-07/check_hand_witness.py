@@ -37,12 +37,27 @@ def main():
     ok = rec["id"] == plan["id"] == cy["id"] == res["id"]
     ok &= hashlib.sha256(open(npz, "rb").read()).hexdigest() == res["pairs_file_sha256"]
     gens = [[F(str(x)) for x in g] for g in rec["gens"]]; B = [[F(s) for s in row] for row in res["basis"]]
+    assert len(gens) == len(B) == 24 and all(len(r) == 24 for M in (gens, B) for r in M), "bases must be 24 by 24"
     ginv, _ = inv_det(gens); T = [[sum(row[k] * ginv[k][j] for k in range(24)) for j in range(24)] for row in B]; _, td = inv_det(T)
     ok &= all(x.denominator == 1 for r in T for x in r) and abs(td) == 1
     G = [[sum(a * b for a, b in zip(u, v)) for v in B] for u in B]; ok &= all(x.denominator == 1 for r in G for x in r); G = [[int(x) for x in r] for r in G]
-    Z = np.load(npz); left = [int(x) for x in Z["left"]]; y1o = [int(x) for x in Z["y1_o"]]; Y1 = [[int(x) for x in r] for r in Z["y1"]]
+    Z = np.load(npz, allow_pickle=False)
+    # Coordinate integrality is essential: rational reflections preserve norms
+    # and E but need not preserve U. Do not silently truncate arrays with int().
+    assert set(Z.files) == {"left", "y1_o", "y1", "o", "y2", "w", "wn", "e"}, "unexpected certificate arrays"
+    assert all(Z[k].dtype.kind in "iu" for k in Z.files), "all certificate arrays must have integer dtype"
+    assert all(Z[k].ndim == 1 for k in ("left", "y1_o", "o", "wn", "e")), "index/value arrays must be one-dimensional"
+    assert Z["y1"].shape == (len(Z["y1_o"]), 24), "bad y1 array shape"
+    assert Z["y2"].shape == Z["w"].shape == (len(Z["o"]), 24), "bad pair/witness array shape"
+    assert len(Z["wn"]) == len(Z["e"]) == len(Z["o"]), "pair array lengths differ"
+    left = [int(x) for x in Z["left"]]; y1o = [int(x) for x in Z["y1_o"]]; Y1 = [[int(x) for x in r] for r in Z["y1"]]
+    assert len(set(left)) == len(left) and all(0 <= i < len(plan["y1_reps"]) for i in left), "bad plan indices"
+    assert len(set(y1o)) == len(y1o) and set(Z["o"].tolist()) <= set(y1o), "bad y1 references"
     ok &= left == [int(i) for i in cy["not_covered"]] == res["y1_left_indices"] and hashlib.sha256(json.dumps(cy["basis"]).encode()).hexdigest()[:16] == plan["basis_sha"]
-    PB = [[F(s) for s in row] for row in cy["basis"]]; amb = lambda c, M: [sum(int(c[i]) * M[i][j] for i in range(24)) for j in range(24)]
+    PB = [[F(s) for s in row] for row in cy["basis"]]
+    assert len(PB) == 24 and all(len(r) == 24 for r in PB), "bad plan basis shape"
+    assert all(len(r) == 24 and all(type(x) is int for x in r) for r in plan["y1_reps"]), "plan coordinates must be integers"
+    amb = lambda c, M: [sum(int(c[i]) * M[i][j] for i in range(24)) for j in range(24)]
     for o, c in zip(y1o, Y1): ok &= 0 <= o < len(left) and amb(c, B) == amb(plan["y1_reps"][left[o]], PB)
     y1 = dict(zip(y1o, Y1)); Gy1 = {o: [sum(G[i][j] * c[j] for j in range(24)) for i in range(24)] for o, c in y1.items()}
     ok &= all(sum(a * b for a, b in zip(y1[o], Gy1[o])) == 7 for o in y1)
