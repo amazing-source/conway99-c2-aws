@@ -92,11 +92,20 @@ T20) no frame has such a y_1, whatever y_2 and whatever the old record says. The
 the certificates listing every representative with such a root, not only the 9,143). For these representatives the exclusion no
 longer rests on the lab-PC records, but it now rests on T18 and T20, like the 13 last lattices.
 
-Left without an identified program and without a Y1 certificate: **713 y_1 representatives, in 25 lattices** (043, 049-052,
-055-058, 070, 073-075, 078, 095, 098-102, 104, 107, 112, 114, 118), covered only by records without code version (runs of
-29/09, 00:00 to 13:00). For them the version can only be inferred by dating the record against the backups kept on the lab PC
-(`engine_history/README.md`); that is an inference, not a record. And the 32 lattices not recounted. A re-run of these 713
-representatives with the archived v10 engine would close the point for the group S; its cost has not been measured.
+**The 713 y_1 representatives left were re-run on 07/10 (18:17 to 18:34 UTC) with the archived v10 engine, and more.** They were
+the representatives covered only by records without code version and without a Y1 certificate, in 25 lattices. Manifest
+`measures/RERUN_713_MANIFEST_LAB_2026-10-07.json` (386 jobs): for the nine lattices of the package's basis cache (043, 049-052,
+055-057, 118), one job per representative with the package plan and symmetry file (130 representatives); for the sixteen others
+(058, 070, 073-075, 078, 095, 098-102, 104, 107, 112, 114), the WHOLE lattice again: lab plan, identity-only symmetry file, the
+lab's reduced basis given to the producer (`q/producer_lll.py`), 16 chunks of the plan. Acceptance rule written before the run
+(`rerun_713_check.py`): **25 of 25 lattices accepted; 386 of 386 records; 2,419,830 pairs, every one excluded; no failure.** Every
+job was run on two machines (different sizes and regions) and the two records carry the same stream sha256. For 101 and 104 the
+pair totals (62,300 and 70,108) equal those of the lab's own identity runs of the rigid-kernel audit. For the sixteen lattices
+the new records supersede all the earlier ones.
+
+So for the group S nothing is left on records without an identified program: every y_1 representative is covered by a record with
+a package engine, by the recovered lab version, by the v10 re-run, or by a checked fixed-y1 certificate. The 28 lattices of the old
+pair-list methods are treated in B.6.
 
 Where the records are: 33 lattices S entirely on machine branches `run/*` of the compute repository; the others on the lab PC,
 copied as they are to the branch `lab-records-2026-10-07`.
