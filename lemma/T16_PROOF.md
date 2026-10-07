@@ -8,8 +8,10 @@ checked what.
 ## Statement
 
 Gamma = srg(99,14,1,2), sigma an automorphism of order 2 with exactly one fixed vertex p. There is no sigma-odd integer function
-phi on the vertices with A phi = -4 phi and sum phi^2 = 16. Equivalently, with Theorem R of `lemma/upstream/AUDIT_REDUCTION.md`:
-E(v) = 7 (v,v) - (v,y_1)^2 - (v,y_2)^2 is never 8, so E(v) >= 9 for v outside Z y_1 + Z y_2 (dual minimum of the frame lattice >= 9/7).
+phi on the vertices with A phi = -4 phi and sum phi^2 = 16 (i.e. the dual of the frame lattice N has minimum >= 9/7). Consequently, with
+Theorem R of `lemma/upstream/AUDIT_REDUCTION.md`: in the chosen envelope U, E(v) = 7 (v,v) - (v,y_1)^2 - (v,y_2)^2 is never 8, so
+E(v) >= 9 for v outside Z y_1 + Z y_2. (Only this direction is used: the projection of U may be a proper sublattice of N^*; referee's
+remark, `lemma/t20_CODEX/REFEREE_T16_PROOF.md`.)
 
 ## What rests on it
 
@@ -41,6 +43,12 @@ E(v) = 7 (v,v) - (v,y_1)^2 - (v,y_2)^2 is never 8, so E(v) >= 9 for v outside Z 
   program (`crosscheck_stage2.py`, outputs `out_A.txt`, `out_B.txt`, `crosscheck_A.txt`, `crosscheck_B.txt`).
 - The laptop session, 07/10: steps 0-2 redone by hand as far as "e = 0, P independent, every vertex of P has 4 neighbours in Q, the
   outside vertices contribute exactly 8 common-neighbour pairs".
+
+## Referee pass (Codex, 07/10)
+
+Done: `lemma/t20_CODEX/REFEREE_T16_PROOF.md`. No blocking mathematical error. One defect in the dossier's verifier
+(`VERIFIER_WAGNER_CERTIFICATS.py`, check_B does not test W <= set(V)); with the missing test added all 32 shipped profile-B
+witnesses and all 240 profile-A obstructions pass again (`referee_t16_checks.py`). The dossier is left as received.
 
 ## For the referee
 
