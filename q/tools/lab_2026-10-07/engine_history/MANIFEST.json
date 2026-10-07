@@ -1,0 +1,157 @@
+{
+ "what": "backups of the engine files kept on the lab PC (scripts/*_v_pre_*.py, *_before_*.py), copied byte for byte; the record hashes of the campaign are sha256 of the file as on the lab disk (CRLF)",
+ "files": [
+  {
+   "file": "frame_dfs_before_jointfix.py",
+   "bytes": 51305,
+   "mtime_local": "2026-09-27 18:31",
+   "sha256_as_on_lab_disk": "e912a41ce84638f4",
+   "sha256_LF": "c4cbb1a25cf1763f",
+   "sha256_CRLF": "e912a41ce84638f4"
+  },
+  {
+   "file": "frame_dfs_before_lemmaU.py",
+   "bytes": 40552,
+   "mtime_local": "2026-09-27 18:02",
+   "sha256_as_on_lab_disk": "c59d44c34803cd4d",
+   "sha256_LF": "c59d44c34803cd4d",
+   "sha256_CRLF": "d4523af54e2a1c6f"
+  },
+  {
+   "file": "frame_dfs_v_pre_budget.py",
+   "bytes": 52393,
+   "mtime_local": "2026-09-28 19:08",
+   "sha256_as_on_lab_disk": "7084d83a4201d149",
+   "sha256_LF": "7d014ac28ed6792e",
+   "sha256_CRLF": "7084d83a4201d149"
+  },
+  {
+   "file": "frame_dfs_v_pre_char.py",
+   "bytes": 55950,
+   "mtime_local": "2026-09-28 23:41",
+   "sha256_as_on_lab_disk": "ee34584d89d4e140",
+   "sha256_LF": "d9ecb2d7aea9e80f",
+   "sha256_CRLF": "ee34584d89d4e140"
+  },
+  {
+   "file": "frame_dfs_v_pre_ec.py",
+   "bytes": 57091,
+   "mtime_local": "2026-09-29 04:22",
+   "sha256_as_on_lab_disk": "734a9fb49ccbadd2",
+   "sha256_LF": "842138ffff12ff9d",
+   "sha256_CRLF": "734a9fb49ccbadd2"
+  },
+  {
+   "file": "frame_dfs_v_pre_fastcompat.py",
+   "bytes": 61911,
+   "mtime_local": "2026-09-29 11:01",
+   "sha256_as_on_lab_disk": "862ca1d850c31bcf",
+   "sha256_LF": "862ca1d850c31bcf",
+   "sha256_CRLF": "cbdde6f6ebba6015"
+  },
+  {
+   "file": "frame_dfs_v_pre_fastpre.py",
+   "bytes": 70337,
+   "mtime_local": "2026-09-29 11:08",
+   "sha256_as_on_lab_disk": "6a6c929183b0f04e",
+   "sha256_LF": "d6bca8af56b681e3",
+   "sha256_CRLF": "6a6c929183b0f04e"
+  },
+  {
+   "file": "frame_dfs_v_pre_fastsetup.py",
+   "bytes": 64170,
+   "mtime_local": "2026-09-29 11:03",
+   "sha256_as_on_lab_disk": "1099692fe4a62f85",
+   "sha256_LF": "1099692fe4a62f85",
+   "sha256_CRLF": "704f778bfc588109"
+  },
+  {
+   "file": "frame_dfs_v_pre_n24.py",
+   "bytes": 70829,
+   "mtime_local": "2026-09-29 20:13",
+   "sha256_as_on_lab_disk": "b48cf844858477b9",
+   "sha256_LF": "8ff3d565c20e3fdb",
+   "sha256_CRLF": "b48cf844858477b9"
+  },
+  {
+   "file": "frame_dfs_v_pre_packsym.py",
+   "bytes": 67387,
+   "mtime_local": "2026-09-29 11:06",
+   "sha256_as_on_lab_disk": "319d794c25cc6e95",
+   "sha256_LF": "4c89b4b1ceae620d",
+   "sha256_CRLF": "319d794c25cc6e95"
+  },
+  {
+   "file": "frame_dfs_v_pre_shared.py",
+   "bytes": 57521,
+   "mtime_local": "2026-09-29 08:56",
+   "sha256_as_on_lab_disk": "1a1584c6411bd402",
+   "sha256_LF": "1a1584c6411bd402",
+   "sha256_CRLF": "c45fe1dca9a8911f"
+  },
+  {
+   "file": "frame_dfs_v_pre_sym.py",
+   "bytes": 52850,
+   "mtime_local": "2026-09-28 20:19",
+   "sha256_as_on_lab_disk": "e13bb9b40179832b",
+   "sha256_LF": "6e0a09204681760f",
+   "sha256_CRLF": "e13bb9b40179832b"
+  },
+  {
+   "file": "frame_dfs_v_pre_wprune.py",
+   "bytes": 60129,
+   "mtime_local": "2026-09-29 10:54",
+   "sha256_as_on_lab_disk": "7f9d7f5de1f5d958",
+   "sha256_LF": "7f9d7f5de1f5d958",
+   "sha256_CRLF": "860642bfebbaeb30"
+  },
+  {
+   "file": "hstage_stream_v_pre_fastconv.py",
+   "bytes": 6672,
+   "mtime_local": "2026-09-29 11:10",
+   "sha256_as_on_lab_disk": "8f1cc72ef0fd1bbf",
+   "sha256_LF": "2d2584e21eeae681",
+   "sha256_CRLF": "8f1cc72ef0fd1bbf"
+  },
+  {
+   "file": "hstage_stream_v_pre_swap.py",
+   "bytes": 4844,
+   "mtime_local": "2026-09-28 22:57",
+   "sha256_as_on_lab_disk": "c995bf1dc47d3fdb",
+   "sha256_LF": "c995bf1dc47d3fdb",
+   "sha256_CRLF": "2a7a6e1c2f49184b"
+  },
+  {
+   "file": "hstage_stream_v_pre_telemetry.py",
+   "bytes": 7645,
+   "mtime_local": "2026-09-29 17:50",
+   "sha256_as_on_lab_disk": "4e310e729b7df3d0",
+   "sha256_LF": "acebc2f5cde01716",
+   "sha256_CRLF": "4e310e729b7df3d0"
+  },
+  {
+   "file": "hstage_stream_v_pre_twin.py",
+   "bytes": 5723,
+   "mtime_local": "2026-09-29 10:01",
+   "sha256_as_on_lab_disk": "5bb0fd11146a9b13",
+   "sha256_LF": "5bb0fd11146a9b13",
+   "sha256_CRLF": "16a43c513b4ff9fa"
+  },
+  {
+   "file": "stream_lattice_v_pre_planmatch.py",
+   "bytes": 6178,
+   "mtime_local": "2026-09-29 11:19",
+   "sha256_as_on_lab_disk": "141616f008fde57b",
+   "sha256_LF": "67cce6922c6d6c7d",
+   "sha256_CRLF": "141616f008fde57b"
+  },
+  {
+   "file": "twin_transfer_v_pre_fast.py",
+   "bytes": 2113,
+   "mtime_local": "2026-09-29 11:10",
+   "sha256_as_on_lab_disk": "247ddfafe43c97c0",
+   "sha256_LF": "247ddfafe43c97c0",
+   "sha256_CRLF": "1772e601d54fbf8b"
+  }
+ ]
+}

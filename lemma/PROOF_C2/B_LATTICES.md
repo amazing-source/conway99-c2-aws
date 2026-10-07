@@ -55,7 +55,7 @@ enumerated up to Aut(U) and signs, and each pair is excluded.
 
 | Check | Scope | Result | Files |
 |---|---|---|---|
-| Recount of the stream records | 91 lattices S | coverage of every y_1 representative complete, no fault, no y_1 covered twice: 220,260,576 pairs (97,628,147 at once; 22,702,398 by search; 93,822,540 swap-covered; 6,107,330 twin) | `stream_recount.py`, `measures/STREAM_RECOUNT_2026-10-07.json` |
+| Recount of the stream records | 91 lattices S | coverage of every y_1 representative complete, no fault, no y_1 covered twice: 220,260,576 pairs (97,628,147 at once; 22,702,398 by search; 93,822,540 swap-covered; 6,107,330 twin; + 161 first INCOMPLETE and excluded by a second search, sets checked pair by pair by Codex) | `stream_recount.py`, `measures/STREAM_RECOUNT_2026-10-07.json` |
 | Import of the deferral sweep | 13 lattices SD, GD | swept, 0 record refused; 5,190,752 pairs through T18, 2,508,295 through T20 | `import_sweep.py`, `measures/SWEEP_LAB_2026-10-07.json` |
 | Certificates of the deferred pairs | every deferred pair | stream: 7,762 of 7,762 records with a good certificate (stream regenerated, same sha256; norms 7, orthogonality, witness root); Golay: 17,983 pairs, 0 invalid | `q/cert_stream.py`, `cert_census.py`, `cert_golay.py` |
 | Corollary Y1 | 003, y_1 representative 181 (no pair record) | a root r with (r,y_1) = -2: no frame has this y_1, whatever y_2 (T18, T20); two certificates, two checkers | `q/cert_y1.py`, `q/check_cert_y1.py`, `lemma/t20_CODEX/` |
@@ -71,9 +71,11 @@ The records of the pair-level methods are of three kinds (column "engine" of the
 
 - **Package engine**: the record carries the code version of an engine archived in a package of the campaign. All 13 lattices
   SD / GD, and 36 of the 91 lattices S entirely. Of the 220,260,576 pairs of the lattices S, 212,804,047 are in such records.
-- **Lab version**: 39 lattices S have y_1 representatives (6,282 of 43,718) covered only by records of the lab PC of 28-29/09 whose
-  stream wrapper `hstage_stream.py` has a version (4e310e72) that is in no package and is no longer on the lab PC; the core
-  `frame_dfs.py` of these records is the one of package v1. 4,409,816 pairs.
+- **Lab version, recovered**: 39 lattices S have y_1 representatives (6,282 of 43,718) covered only by records of the lab PC of
+  29/09 (11:33 to 18:14) whose stream wrapper `hstage_stream.py` has the hash 4e310e72, which is in no package. The file was found
+  on the lab PC on 07/10 under a backup name (`scripts/hstage_stream_v_pre_telemetry.py`, same hash) and is archived with the other
+  backups of that week in `q/tools/lab_2026-10-07/engine_history/`; the core `frame_dfs.py` of these records is the one of package
+  v1. 4,409,816 pairs. So for these records the program is identified.
 - **No version**: 26 lattices S have representatives (4,520) covered only by records without any recorded code version.
   3,046,713 pairs.
 - The 29 lattices H, F, H3, and G, O: lab-PC or early runs, single reading, not recounted on 07/10.
@@ -88,10 +90,11 @@ T20) no frame has such a y_1, whatever y_2 and whatever the old record says. The
 the certificates listing every representative with such a root, not only the 9,143). For these representatives the exclusion no
 longer rests on the lab-PC records, but it now rests on T18 and T20, like the 13 last lattices.
 
-Left: **1,659 y_1 representatives** (column "engine" of the table, per lattice) whose only records are of a lab version or without
-version, and the 32 lattices not recounted. A re-run of these representatives with the archived v10 engine would remove the
-reservation for the group S; its cost has not been measured. The user decided on 07/10 not to re-run the lab lattices for now;
-the question is put to him again with these numbers.
+Left without an identified program and without a Y1 certificate: **713 y_1 representatives, in 25 lattices** (043, 049-052,
+055-058, 070, 073-075, 078, 095, 098-102, 104, 107, 112, 114, 118), covered only by records without code version (runs of
+29/09, 00:00 to 13:00). For them the version can only be inferred by dating the record against the backups kept on the lab PC
+(`engine_history/README.md`); that is an inference, not a record. And the 32 lattices not recounted. A re-run of these 713
+representatives with the archived v10 engine would close the point for the group S; its cost has not been measured.
 
 Where the records are: 33 lattices S entirely on machine branches `run/*` of the compute repository; the others on the lab PC,
 copied as they are to the branch `lab-records-2026-10-07`.

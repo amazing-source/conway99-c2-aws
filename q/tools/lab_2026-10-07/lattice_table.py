@@ -70,7 +70,7 @@ def main():
         if g == "S":
             a = ASE[l]; assert a["ok"] and a["covered"] == a["y1_reps"] and not a["covered_twice"] and a["defer_T18"] == 0 and a["defer_T20"] == 0, l
             t = a["by_tier"]; r.update(pairs=a["pairs"], search=a["excl_search"])
-            r["eng"] = "package" if t["P"] == a["y1_reps"] else "; ".join(x for x in ("package %d" % t["P"] if t["P"] else "", "lab version %d" % t["L"] if t["L"] else "",
+            r["eng"] = "package" if t["P"] == a["y1_reps"] else "; ".join(x for x in ("package %d" % t["P"] if t["P"] else "", "lab version (recovered) %d" % t["L"] if t["L"] else "",
                                                                                      "no version %d" % t["N"] if t["N"] else "") if x) + " of %d y1" % a["y1_reps"]
             if l in Y1S:
                 assert Y1S[l][1] == t["L"] + t["N"], l
@@ -106,7 +106,7 @@ def main():
     L += ["", "Columns: N2 = number of roots (exact shell check); pairs = pairs of the sweep's records; search = pairs excluded by a frame search (the others: "
           "excluded at once by a witness vector, swap-covered, or transferred to a twin lattice); T18, T20 = pairs excluded through the bridge by these lemmas, "
           "each with an exact certificate; engine = code version of the records that cover the y_1 representatives: \"package\" = an engine archived in a package of the "
-          "campaign, \"lab version\" = a lab-PC version of 28-29/09 of the stream wrapper (same core frame_dfs.py as package v1) that is not archived, \"no version\" = "
+          "campaign, \"lab version (recovered)\" = the lab-PC stream wrapper of 29/09 with hash 4e310e72, found on the lab PC and archived in q/tools/lab_2026-10-07/engine_history (core frame_dfs.py = package v1), \"no version\" = "
           "records without recorded code version; H2 = rigid-kernel audit (only the 27 lattices where the hole can occur); records = where the pair records are. "
           "An empty cell means: not applicable, or no checked report gives the number (then see the tracker text in the appendix).", "",
           "| id | roots | neighbours | N2 | method | pairs | search | T18 | T20 | certificates | engine | H2 audit | records |", "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
