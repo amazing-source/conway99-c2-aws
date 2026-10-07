@@ -10,7 +10,7 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 
 | # | Item | Owner | Status (07/10) | Next deliverable | Due |
 |---|---|---|---|---|---|
-| A1 | Route A: lab decomposition (base S u {p} u X_3 u X_0', 700 classes, engine eng5z). 183 bases closed, 0 complete; heavy bases cost 1-4 CPU-h each; run stopped at 11:43 | LAB | measuring | measurement job (8-core free machine): estimated core-hours per remaining base and total, method written out | 12:45 |
+| A1 | Route A: lab decomposition (base S u {p} u X_3 u X_0', 700 classes, engine eng5z). 183 classes closed by search, 0 complete; 101 more excluded by hand (isolation lemma); 416 left. Size very unequal: closed bases median 83 s, but one unfinished base sampled at about 2 million nodes = about 4 CPU-h (my first figure, 3.7 CPU-min per base, was biased: closed bases only). Run stopped at 11:43 | LAB | measurement job pushed 11:48 (`cloud/jobs/t20_n3_sample.sh`, master 33def8550; method in `t20_HAND/n3_split.py`); waits for the 8-core machine | `sample/ESTIMATE.txt` on the run branch: estimated nodes and core-hours per remaining base and in total; then this line | 12:45 |
 | A2 | Route B: N(p) and the X_3 orbit in the base (the decomposition that closed n_3 = 0 at 0.3 s per base) | LAP (agent) | started 11:50 | number of bases after stage 1 for the 6 graphs x 2 profiles; measured stage-2 sample; estimated core-hours | 12:45 |
 | A3 | **Decision**: one route, with a measured cost, proposed to the user; the other route stops | LAP | pending A1, A2 | time and price | 12:45 |
 | A4 | Run of the chosen route (first program) | LAP launches | - | 0 complete configurations or the list of survivors | after A3 |
@@ -43,7 +43,7 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | D1 | `lemma/T20_PROOF.md`: self-contained text, same form as `T18_PROOF.md`, for everything in B; the n_3 = 2 section left as a marked placeholder | LAP (agent) | starting 11:55 | 17:00 |
 | D2 | n_3 = 2 section of the text, once A4 is done | owner of the chosen route | - | after A4 |
 | D3 | One referee pass on `T20_PROOF.md` (a reader who has seen none of the code) | CDX | after D1, D2 | - |
-| D4 | Importer on the lab PC: `merged` records, DEFERRED verdicts and index lists, `producer_max_out` (accepted, condition producer.complete), fine blocks of 001; per-pair certificate (norms 7, orthogonality, root, Y = 5 or 4) | LAB | not started (waits for T20) | after A4 |
+| D4 | Importer on the lab PC: `merged` records, DEFERRED verdicts and index lists, `producer_max_out` (accepted, condition producer.complete), fine blocks of 001; per-pair certificate (norms 7, orthogonality, root, Y = 5 or 4). The pairs stay DEFERRED in the lab tracker until T20 is closed | LAB | starts 12:00, in parallel with A (does not wait for T20) | importer run on two swept lattices (013, 016) with counts equal to `sweep_report.py` | 17:00 |
 | D5 | Final statement: T18 + T20 + bridge + sweep records => the 156 envelopes are excluded, with the list of what it rests on (upstream reduction: "source only, not re-read") | LAB | after D1-D4 | - |
 
 ## E. Sweep (route C)
