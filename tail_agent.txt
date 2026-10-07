@@ -1,1 +1,2 @@
 2026-10-07 02:28:57 tail runner start: 12 keys, 28 shards per job, 7 at a time
+2026-10-07 02:29:01 start 009:347:353 on 28 shards, 7 at a time
