@@ -1,0 +1,137 @@
+{
+  "verified": true,
+  "checkpoint_commit": "414e68d23",
+  "tracker_before_excluded": 143,
+  "tracker_after_excluded": 156,
+  "changed_lattice_ids": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "changed_fields": {
+    "1": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "2": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "3": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "5": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "6": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "7": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "8": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "9": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "11": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "12": [
+      "by",
+      "reviewed_by",
+      "status",
+      "status_note"
+    ],
+    "13": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "14": [
+      "by",
+      "reviewed_by",
+      "status"
+    ],
+    "15": [
+      "by",
+      "reviewed_by",
+      "status"
+    ]
+  },
+  "live_tracker_matches_archived": true,
+  "tracker_canonical_sha256": "4fa68b2e960f7c10968a32f2411737c1391279d0419ea99cafce9600685efb59",
+  "backup_canonical_sha256": "72f7813713ffbad15bdea68cc43acbc41082f22da7deddfb959adfe75717dd31",
+  "accepted_record_matches_live": true,
+  "accepted_proof_blobs_checked": {
+    "T18": "6cbcf896a7ec76a5498943ac5cd9d9524a1ba13c",
+    "T20": "e50d5be079a594101ed9078ed2a12596687dac95"
+  },
+  "accepted_record_canonical_sha256": "41ce373abcaba774b916ef089c241b0f8c7a8b6161e2e153047728259ba7cd1d",
+  "input_encodings": {
+    "C:/home/researcher/Desktop/t20-codex/measures/finishC_tracker_2026-10-07_156.json": "utf-8",
+    "C:/home/researcher/Desktop/c2_experimental/data/finishC/finishC_tracker.json": "utf-8",
+    "C:/home/researcher/Desktop/c2_experimental/logs/finishC_tracker_before_convert_1007_1947.json": "utf-8",
+    "C:/home/researcher/Desktop/t20-codex/measures/lemmas_accepted_2026-10-07.json": "cp1252",
+    "C:/home/researcher/Desktop/c2_experimental/data/finishC/lemmas_accepted.json": "cp1252"
+  },
+  "f4_run_commit": "a0ade8b74c5af101cc9b464dcef1594ecb55d517",
+  "f4_064_result": {
+    "id": 64,
+    "independent": {
+      "pairs": 1050528,
+      "y1_orbits": 1856,
+      "n_admissible_lines": 19501464
+    },
+    "producer": {
+      "pairs_in_stream": 2100288,
+      "distinct_after_canonical_form": 1050528,
+      "duplicates": 1049760,
+      "y1_orbits": 1856,
+      "stream_complete": true
+    },
+    "only_in_independent": 0,
+    "only_in_producer": 0,
+    "examples_only_in_independent": [],
+    "examples_only_in_producer": [],
+    "equal": true,
+    "seconds": 3744.7,
+    "t": "2026-10-07 17:43:14",
+    "norm7_lines": 22892544,
+    "norm7_lines_expected": 22892544,
+    "norm7_count_ok": true
+  },
+  "f4_064_all_28_chunk_counters_checked": true,
+  "f4_140_reference_run_commit": "8e4c29cf29166ebc7f41566ae636e7fa87aa072d",
+  "f4_140_control_matches_except_timing": true,
+  "proof_or_enumerations_replayed": false,
+  "whole_proof_referee_pass_completed": false,
+  "lean_formalisation_completed": false
+}
