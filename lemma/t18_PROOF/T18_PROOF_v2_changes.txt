@@ -1,0 +1,239 @@
+T18_PROOF_v2.txt: list of changes with respect to lemma/T18_PROOF.md (1812 lines)
+
+One entry per change. "Pn" = problem n of section 2 of lemma/t18_REFEREE2/REPORT.md; "(i)" = rule (i) of the task
+(second referee added to the status section 9.x); "(ii)" = rule (ii) (his programs and outputs added to the appendix);
+"opt" = his optional remarks (a)-(d), listed in the new section 9.7 as not used and unrefereed.
+Line numbers are those of the ORIGINAL file lemma/T18_PROOF.md. "after line n" = pure insertion, nothing removed.
+Everything not listed here is identical, byte for byte, to the original.
+
+ 1. [(i)] after line 8 (insertion of 7 lines): front matter: new paragraph after the opening paragraph (date and
+    origin of the revision, pointer to section 9.6, convention: "the referee" = the first referee, "the second
+    referee" = author of t18_REFEREE2/REPORT.md)
+
+ 2. [P1, P2, P3] lines 19-26: section 0.1, the three points to know before reading: (P2) the 16 classes now come from
+    two programs, selection by four programs; (P3) the types.json entries were recomputed from budgets alone by the
+    second referee; (P1) survivors are defined mathematically, pointer to the table of section 6.3
+
+ 3. [P11] after line 44 (insertion of 21 lines): section 0.2: three notation bullets added (meaning of each of the
+    letters B, C, E, V, R, H; the stage names "stage B/C/D" are kept, always with the word "stage"; bracketed labels;
+    H' and H16; program tags ENUM, VERIF, CMINE, REF1, REF2 instead of single letters; renamed symbols eps_i, kappa_O,
+    a_0)
+
+ 4. [P11] lines 171-194: proof of Proposition 3.1: c_O renamed kappa_O and its value c renamed kappa (the letter c is
+    the index of the orbits of N(p)); paragraphs re-wrapped; no change of content
+
+ 5. [P11] lines 300-356: section 4.7 (setup and proof of Lemma 4.7): inner indicator h_i renamed eps_i (11 occurrences
+    on lines 301, 309, 311, 323, 342, 343, 346, 349, 355), since h_0, h_1, h_2 are the profile counts of section 5.5;
+    no change of content
+
+ 6. [P2] line 432: section 4.10: the sentence "The list of 16 classes comes from this program only" replaced; new
+    bullet for the second referee's q9.py (same result: 1,024,380 graphs, 16 classes, 3 with codegrees <= 2)
+
+ 7. [P2] line 437: section 4.10: "done by three programs" -> "done by four programs" (q9.py added)
+
+ 8. [P11] line 517: section 5.4, notation line: the abbreviation c(v) = a_0(v) is dropped; a_0(v) keeps its name
+
+ 9. [P11] lines 521-523: statement of Lemma 5.4 (a), notation only: c(v) (abbreviation of a_0(v)) replaced by a_0 (the
+    letter c is the index of the orbits of N(p)); no change of content
+
+10. [P11] lines 537-538: proof of Lemma 5.4 (a): c(v) (abbreviation of a_0(v)) replaced by a_0 (the letter c is the
+    index of the orbits of N(p)); no change of content
+
+11. [P11] lines 547-548: proof of Lemma 5.4 (c): c(v) (abbreviation of a_0(v)) replaced by a_0 (the letter c is the
+    index of the orbits of N(p)); no change of content
+
+12. [P11] lines 598-599: proof of Lemma 5.6: c(v) (abbreviation of a_0(v)) replaced by a_0 (the letter c is the index
+    of the orbits of N(p)); no change of content
+
+13. [P1] lines 636-637: section 6.1, definition of a PSD violation: added that a PSD violation on Y exists iff M1[Y]
+    or M2[Y] is not PSD (integer entries), so "no PSD violation on Y" is a statement about the graph, independent of
+    any program
+
+14. [P1, P11] lines 662-680: section 6.3 rewritten from "The computations have the following form" to the end:
+    survivor defined mathematically (candidate satisfying the named forced numbers, no budget violation, M1[Y] and
+    M2[Y] PSD); (6.1) unchanged; new: what a program rejects (three kinds of exact witnesses), kept list, (6.2) = the
+    data of a configuration are in every kept list, the two ways a computation excludes; exactness paragraph kept
+    (second referee's programs added, REF1 tag); threshold -10^-6 for r3_verify.py; new table of the lists verified
+    exactly PSD and by whom; list of the "kept" decisions that remain floating-point; statement that the exclusions
+    rest on empty kept lists and on Computation 8.6
+
+15. [P11] line 879: proof of Lemma 7.4 (a): c(v) (abbreviation of a_0(v)) replaced by a_0 (the letter c is the index
+    of the orbits of N(p)); no change of content
+
+16. [P11] line 883: proof of Lemma 7.4 (b): c(v) (abbreviation of a_0(v)) replaced by a_0 (the letter c is the index
+    of the orbits of N(p)); no change of content
+
+17. [P11] line 892: proof of Lemma 7.4 (c): c(v) (abbreviation of a_0(v)) replaced by a_0 (the letter c is the index
+    of the orbits of N(p)); no change of content
+
+18. [P5] lines 928-929: section 7.3, data bullet "the rows": a table defined as a counted object (unordered set of
+    three row-orbits {R, sigma R} plus a sigma-invariant G'; a row may contain both vertices of an orbit of X_2'; same
+    table up to the order of the orbits of X_0' and the exchange q / sigma q); this is what lines 3a, 3b count
+
+19. [P1, P5] lines 990-995: Computation 7.6, steps 2-4: "no PSD violation ... is found" replaced by "M1 and M2 are
+    both PSD" on Y1, Y, Y u W; step 3 refers to tables in the sense of section 7.3; counts and Result unchanged
+
+20. [P1] after line 997 (insertion of 9 lines): after Computation 7.6: new paragraph (the lists are lists of
+    survivors; the exclusion uses (6.2) and exact rejections only; the kept lists of steps 2 and 3 are the survivors
+    by the exact acceptances of I2)
+
+21. [P11] line 1024: section 7.5, list of implementations: tag R -> REF1
+
+22. [P11] lines 1030-1036: section 7.5, table, column "programs": R -> REF1 (7 rows)
+
+23. [P11] lines 1064-1079: section 7.6, "Both matrices are needed": R -> REF1 (2 occurrences)
+
+24. [P7] lines 1081-1087: section 7.6, remark "Line 1": corrected. The test of r2_hfirst.py is (F5) only; a complete
+    existence test has two conditions (cell room; no vertex of A_p in the cell, with the reason); table of the three
+    sets of numbers 3510/7224/2406, 1958/4332/1309, 1834/4096/1265 (recount.py, recount2.py); the old attribution of
+    1834/4096/1265 to cell room alone is withdrawn
+
+25. [P11] lines 1089-1095: section 7.6, "Counters that are not comparable": R -> REF1 (3 occurrences); paragraph
+    re-wrapped
+
+26. [P11] line 1141: proof of Lemma 8.1 (b): c(v) (abbreviation of a_0(v)) replaced by a_0 (the letter c is the index
+    of the orbits of N(p)); no change of content
+
+27. [P4] line 1155: section 8.2, data bullet H: added that the four pairs between the two orbits of A_p are not
+    parameters but non-adjacent (Lemma 8.1 (a); one-line reason: p and a would have the two common neighbours sigma a,
+    a')
+
+28. [P4] line 1166: Lemma 8.2, table: row "X_2 with X_2 | parameter H" split into "A_p with A_p: the 2 mate edges only
+    (Lemma 8.1 (a))" and "A_p with X_2', X_2' with X_2': parameter H; no mate edge inside X_2' (Lemma 2.1 (a))"
+
+29. [P4] lines 1188-1189: Lemma 8.3 (C2): added "H contains no pair between the two orbits of A_p"
+
+30. [P4] lines 1202-1203: proof of Lemma 8.3, (C2): reference to Lemma 8.1 (a) added (lines re-broken)
+
+31. [P1, P4] lines 1216-1219: Computation 8.4, statement: "no PSD violation for M1, M2 is found" -> "M1[Y37] and
+    M2[Y37] are both PSD"; added that H does not range over the four pairs between the two orbits of A_p; counts
+    unchanged
+
+32. [P1] line 1224: Computation 8.4, table, second row label: "of which no PSD violation found on these 23 vertices"
+    -> "of which M1 and M2 are both PSD on these 23 vertices"; numbers unchanged
+
+33. [P11] lines 1230-1257: section 8.3, programs and notes: tags E -> ENUM, V -> VERIF, R -> REF1 (all occurrences);
+    the paragraphs made too long are re-wrapped; no other change
+
+34. [P1, P4, P10] after line 1257 (insertion of 15 lines): end of section 8.3: three new paragraphs: (P10) pointer to
+    the note on the numbers of files (17, 15, 14); (P1) every stage-B triple verified exactly PSD on Y37 by the second
+    referee (exactB.py); (P4) note on the pairs between the two orbits of A_p: the list is the same with them forced
+    absent (second referee's stageB.py, same list as VERIF; also absent in ENUM and VERIF as read in their sources)
+
+35. [P1] lines 1261-1263: Computation 8.5, statement: "no PSD violation for M1, M2 is found" -> "M1[Y47] and M2[Y47]
+    are both PSD"; results unchanged
+
+36. [P1] after line 1273 (insertion of 5 lines): after the remark on (C6): new paragraph (what is established by exact
+    rejections; the four graphs of B1 and the stage-B triples are verified exactly PSD elsewhere)
+
+37. [P11] lines 1275-1287: section 8.4, list of programs: tags E -> ENUM, C -> CMINE, V -> VERIF, R -> REF1
+
+38. [P10, P11] lines 1289-1302: section 8.4, table of the stage-C runs: program tags renamed; (P10) row B0/ENUM now
+    points to b0_stageC_done_*.jsonl and b0_stageC_survivors.json (REPORT.md is only a summary); row B0/VERIF: "a
+    sample of 29 triples" -> the run of part 0 of 150 cut by its time limit after 29 triples; row B2/VERIF: first run
+    cut after 86 of 98 triples, the four runs treat 86 + 43 + 43 + 24 = 196; results unchanged
+
+39. [P6, P11] lines 1304-1305: section 8.4, sentence after the table: "for each of the three graphs ... at least two
+    complete exact implementations (E and C)" corrected: true for B1 and B2; for B0, CMINE is complete and ENUM is
+    complete only modulo the stabiliser reduction; the second referee's stage C treats all 5595 triples
+
+40. [P11] lines 1309-1313: section 8.4, note "Status in the working reports": C -> CMINE
+
+41. [P6, P11] lines 1314-1318: section 8.4, note on the reduction modulo stabilisers: added the second referee's
+    recount (closure, 2667 orbits, stabiliser orders 1 x85, 2 x36, 4 x9, 6, 8, 72; stored representatives not
+    compared); tags renamed
+
+42. [P11] lines 1319-1335: section 8.4, notes "Inputs of C", "Work done", "Type solutions": tags E -> ENUM, C ->
+    CMINE, V -> VERIF; bullets re-wrapped; numbers unchanged
+
+43. [P1] lines 1339-1342: section 8.5, first sentence: the second referee's survivors.py added to the programs that
+    establish exactly that both matrices are PSD on the four survivors
+
+44. [P11] lines 1377-1383: section 8.6, list of programs: "as found by C" -> CMINE, "as found by R" -> REF1; paragraph
+    re-wrapped
+
+45. [P9] after line 1432 (insertion of 7 lines): section 8.7, after the list of programs: new note on the words "0
+    configurations on 55 vertices left" printed by r4_stageD.py and d_stage.py (no 55-vertex set is used or determined
+    in the text; (D1) covers 48 and 49 vertices only)
+
+46. [(i), P2, P6, P11] lines 1482-1500: section 9.2, table, column "implementations": REF2 added on the seven computed
+    rows; Computation 4.10: 3 -> 4 programs (P2); Computation 8.5: statement corrected for B0 (P6); tags renamed (P11)
+
+47. [(i)] after line 1507 (insertion of 3 lines): section 9.2, after the paragraph on the first referee's audit: one
+    sentence pointing to section 9.6 (second referee)
+
+48. [P1, P11] lines 1511-1521: section 9.3, item 1: tags renamed; threshold -10^-6 for r3_verify.py; the list of exact
+    positive statements now refers to the table of section 6.3 and includes the second referee's exact checks (stage-B
+    triples, pairs (tau, F) on 23 vertices); (6.2) quoted
+
+49. [(i)] lines 1522-1524: section 9.3, item 2: one sentence added (the item is about the first referee; the second
+    referee's programs reject exactly)
+
+50. [(i)] lines 1525-1530: section 9.3, item 3: one sentence added (the second referee did not audit the repository
+    programs either)
+
+51. [P11, (i)] lines 1531-1534: section 9.3, item 4: tags renamed (R -> REF1, C -> CMINE, V -> VERIF, E -> ENUM); REF2
+    added to the programs that do not read r2_tau_<s>.json; the second referee's stage1.py added to the checks of that
+    file
+
+52. [P2] lines 1535-1538: section 9.3, item 5: the list of 16 classes now also comes from the second referee's q9.py;
+    "three programs" -> "four programs"
+
+53. [P3, P11] lines 1539-1549: section 9.3, item 6: list of the readers of types.json completed
+    (r2_ext2_bruteforce.py; unused level1.py, level1_count.py, r2_gram.py, star.py); second referee's recomputation
+    added (entries with d = 0, 1, 2 = the types with no budget violation on 21 vertices: 1/1, 81/72, 198/126; d = 3
+    differs for B1 and is not read); his search of the sources of the second implementations; tags renamed
+
+54. [P11] lines 1555-1558: section 9.3, item 8: tags renamed (E -> ENUM, V -> VERIF, C -> CMINE)
+
+55. [P6] lines 1562-1564: section 9.3, item 10: the stabiliser reduction for B0 has been recounted by the second
+    referee (closure, number of orbits, stabiliser orders; representatives not compared); line 4a also found by the
+    second referee
+
+56. [P8, (i)] lines 1567-1572: section 9.3, item 12: the two check scripts are in lemma/t18_PROOF/ (not "the folder of
+    this document"); the parts formerly checked by the author only have since been checked by the second referee; what
+    is unrefereed now is the text of the present revision
+
+57. [(i), opt] after line 1605 (insertion of 120 lines): end of section 9: new section 9.6 (second referee: what REF2
+    covered = section 5 of his report, program by program with the counts; what he did not check = his section 6; list
+    of the eleven corrections) and new section 9.7 (one paragraph: his four optional simplifying remarks (a)-(d),
+    marked not used and unrefereed)
+
+58. [(ii)] after line 1615 (insertion of 6 lines): appendix A, introduction: paragraph on the second referee's
+    programs (dependencies; command lines not recorded; .out files are saved standard outputs)
+
+59. [(ii)] after line 1624 (insertion of 1 lines): appendix A.1: row added for lemma/t18_REFEREE2/q9.py -> q9.out
+
+60. [(ii)] after line 1635 (insertion of 1 lines): appendix A.2: row added for lemma/t18_REFEREE2/stage1.py ->
+    stage1.out, my_tau_<s>.json
+
+61. [P11] lines 1652-1653: appendix A.3: tag R -> REF1 (2 rows)
+
+62. [(ii)] after line 1653 (insertion of 3 lines): appendix A.3: three rows added for REF2 (p331.py; p331_m1.py;
+    recount.py, recount2.py) with their output files
+
+63. [P11] lines 1659-1668: appendix A.4: tags E -> ENUM, V -> VERIF, R -> REF1 (7 rows)
+
+64. [(ii)] after line 1669 (insertion of 4 lines): appendix A.4: four rows added for REF2 (stageB.py; exactB.py;
+    orbitsB0.py; recount.py) with their output files
+
+65. [P10, P11] lines 1675-1685: appendix A.5: tags renamed (11 rows); (P10) row B0/ENUM: the result is in
+    b0_stageC_done_*.jsonl and b0_stageC_survivors.json, REPORT.md is only a summary; row B0/VERIF: "on a sample" ->
+    part 0 of 150 cut by its time limit after 29 triples; row B2/VERIF: first run cut after 86 of 98 triples, 86 + 43
+    + 43 + 24 = 196
+
+66. [(ii)] after line 1685 (insertion of 2 lines): appendix A.5: two rows added for REF2 (stageC.py; compareC.py) with
+    their output files
+
+67. [P10, P11] lines 1687-1688: appendix A.5, paragraph after the table: tags renamed; new "Notes on A.4 and A.5": the
+    numbers of files 14 / 17 / 15 explained; location of the B0 result of ENUM; b0_verC_sample.out is a run cut after
+    29 triples; the four B2 runs of VERIF (86 + 43 + 43 + 24)
+
+68. [(ii)] after line 1702 (insertion of 21 lines): appendix A.6: row added for REF2 survivors.py; new section A.7
+    listing the 118 files of lemma/t18_REFEREE2 with the computed line each reproduces
+
+69. [P11, (ii)] lines 1707-1709: appendix B, first paragraph: tags C -> CMINE, E -> ENUM; added that the second
+    referee redid Computation 8.6 from this appendix (survivors.py)
+
+70. [P8, P11] lines 1768-1771: appendix B, last paragraph: _check_survivors.py is in lemma/t18_PROOF/ (not "the folder
+    of this document"); tag E -> ENUM

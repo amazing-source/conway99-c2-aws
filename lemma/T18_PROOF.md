@@ -7,6 +7,13 @@ hand statement used below is proved below, from the definitions. The finite comp
 (what is enumerated, by which tests, with which result), and for each of them the programs and their output files
 are listed in the appendix.
 
+Revised on 2026-10-07 after the report of a second referee (`lemma/t18_REFEREE2/REPORT.md`), who read this text only
+and re-did every Computation with programs of his own, written from it. He found no error and listed eleven gaps or
+problems of presentation. The corrections are listed in section 9.6; apart from them no count, statement or proof
+has been changed. In this text "the referee", without qualification, always means the first referee (report
+`lemma/t18_REFEREE/REPORT.md`, written on the working reports before this text existed); the author of the second
+report is always called "the second referee".
+
 ## 0. Front matter
 
 ### 0.1 GAP boxes
@@ -16,14 +23,19 @@ that could not be justified. What is *not* a hand proof is listed in section 9.2
 has not been independently verified is listed in section 9.3. Three points of section 9.3 deserve to be known before
 reading:
 
-- the list of 16 isomorphism classes of 4-regular graphs on 9 vertices comes from one program only; the selection of
-  the three classes that matter is done by three programs, two of which share an isomorphism routine (section 4.10);
+- the list of 16 isomorphism classes of 4-regular graphs on 9 vertices now comes from two programs written
+  separately (in the first version of this text it came from one program only; second referee's remark 2); the
+  selection of the three classes that matter is done by four programs, two of which share an isomorphism routine
+  (section 4.10);
 - the programs of the first implementation read a file `types.json` that was produced with a filter depending on
   another lemma (called H16 in the working reports); the saved output `rows.out` shows that this filter removed
-  nothing on the entries that are read, and the second implementations do not read the file (section 9.3, item 6;
+  nothing on the entries that are read, the second referee has recomputed these entries from the common-neighbour
+  budgets alone and found the same lists, and the second implementations do not read the file (section 9.3, item 6;
   this point is not mentioned in the working reports nor in the referee's report);
-- a "kept" decision of a positive-semidefiniteness test is a floating-point decision in most programs. It is never
-  used as a proof: only rejections are used, and they are exact (sections 6.3 and 9.3, item 1).
+- a survivor of a computation is defined by properties of the graph (budgets satisfied, both matrices PSD on the
+  set), but a "kept" decision of a positive-semidefiniteness test is a floating-point decision in most programs. It
+  is never used as a proof: only rejections are used, and they are exact. Section 6.3 says which lists have been
+  verified to be exactly PSD, and by whom (see also section 9.3, item 1).
 
 ### 0.2 Notation and conventions
 
@@ -42,6 +54,27 @@ reading:
   **Lemma**, **Proposition**, **Theorem** or **Corollary** without that word is proved by hand in the text, except
   that the three final statements (Propositions 7.7 and 8.9, Theorem 9.1) combine hand statements with
   Computations and say so.
+- Letters with several uses (second referee's remark 11). In the first version of this text the letters B, C, E, V,
+  R and H each named a mathematical object and also a program or a stage. Now none of them names a program (next
+  item), and their meanings are these. B is the orbit graph of section 4.9 (B0, B1, B2 are its three possible
+  values). C(a,2) is a binomial coefficient, and C is a set in the proof of Lemma 2.1. E_0, E_3, E_{-4} are the
+  projectors and V_3, V_{-4} the eigenspaces of section 1.1 (V is also a deficient pair in section 7.1). R is a set
+  of orbit representatives (section 6.4), and R_q is a row (section 7.3). H is a set of edges inside X_2 (sections
+  7.3 and 8.2); H' occurs only in Lemma 6.2; H16 is the name given in the working reports to an earlier lemma (no
+  configuration of squared norm <= 16), which is not used here. The stages of the enumeration of section 8 keep
+  their names "stage B", "stage C", "stage D", because the programs and their output files carry them (`B250`,
+  `C250`, `stageC`, `stageD`); they are always written with the word "stage" (as in "stage-C survivor"). "Case A",
+  "Case B", "Case C" are the three cases of the proof of Lemma 4.7. A label in round brackets with a digit, such as
+  (I1), (R2), (F7), (C4), (D3), is the name of a numbered identity or condition.
+- Programs and families of programs are never called by a single letter. They are called by their file names or by
+  the tags I1, I2, I3 (section 7.5), ENUM, VERIF, CMINE (sections 8.3 and 8.4; they were E, V, C in the first
+  version of this text), REF1 (the programs of the referee; R in the first version) and REF2 (the programs of the
+  second referee, section 9.6).
+- Three symbols of the first version have been renamed, so that they no longer share a letter with another object:
+  the inner indicator of section 4.7 is eps_i (it was h_i, while h_0, h_1, h_2 are the profile counts of section
+  5.5); the numbers attached to the orbits in section 3 are kappa_O (they were c_O); and the number of neighbours of
+  v in X_0 is written a_0(v) everywhere (it was also written c(v), while c is the index of the orbits of N(p): a_c,
+  b_c, w_c, K_c).
 
 
 ## 1. Setting and statement
@@ -168,30 +201,31 @@ referee's, checked.
 Then phi takes only the values 0, +1, -1, and the set S+ = {x : phi(x) = +1} has exactly 9 vertices. Moreover
 S- = {x : phi(x) = -1} = sigma S+, and p is in neither.
 
-*Proof.* phi(p) = 0. For an orbit O = {x, sigma x} put c_O = |phi(x)| = |phi(sigma x)|, an integer >= 0.
-Then sum over the 49 orbits of 2 c_O^2 = 18, i.e.
+*Proof.* phi(p) = 0. For an orbit O = {x, sigma x} put kappa_O = |phi(x)| = |phi(sigma x)|, an integer >= 0.
+Then sum over the 49 orbits of 2 kappa_O^2 = 18, i.e.
 
-    sum_O c_O^2 = 9.                                                                             (3.1)
+    sum_O kappa_O^2 = 9.                                                                         (3.1)
 
-*Claim: if c_O = c > 0, then the sum of c_O' over the orbits O' != O is at least 3c.* Choose x in O with
-phi(x) = c > 0. The eigen-equation at x is
+*Claim: if kappa_O = kappa > 0, then the sum of kappa_O' over the orbits O' != O is at least 3 kappa.* Choose x in O
+with phi(x) = kappa > 0. The eigen-equation at x is
 
-    -4c = sum over the neighbours y of x of phi(y).
+    -4 kappa = sum over the neighbours y of x of phi(y).
 
 Sort the neighbours of x by orbit. The neighbour p (if x ~ p) contributes 0. The mate sigma x, if it is a neighbour
-of x, contributes phi(sigma x) = -c. An orbit O' = {y, sigma y} different from O contributes 0 if x is adjacent to
-none of its two vertices, +-phi(y) if x is adjacent to exactly one of them, and phi(y) + phi(sigma y) = 0 if x is
-adjacent to both; in all cases at least -c_O'. Hence -4c >= -c - sum_{O' != O} c_O', which is the claim.
+of x, contributes phi(sigma x) = -kappa. An orbit O' = {y, sigma y} different from O contributes 0 if x is adjacent
+to none of its two vertices, +-phi(y) if x is adjacent to exactly one of them, and phi(y) + phi(sigma y) = 0 if x is
+adjacent to both; in all cases at least -kappa_O'. Hence -4 kappa >= -kappa - sum_{O' != O} kappa_O', which is the
+claim.
 
-By (3.1) the multiset of the non-zero values c_O is one of {3}, {2,2,1}, {2,1,1,1,1,1}, {1,1,1,1,1,1,1,1,1}
+By (3.1) the multiset of the non-zero values kappa_O is one of {3}, {2,2,1}, {2,1,1,1,1,1}, {1,1,1,1,1,1,1,1,1}
 (the ways of writing 9 as a sum of squares 9, 4, 1). The claim excludes the first three:
 
-    {3}:           c = 3, the others sum to 0  <  9;
-    {2,2,1}:       c = 2, the others sum to 3  <  6;
-    {2,1,1,1,1,1}: c = 2, the others sum to 5  <  6.
+    {3}:           kappa = 3, the others sum to 0  <  9;
+    {2,2,1}:       kappa = 2, the others sum to 3  <  6;
+    {2,1,1,1,1,1}: kappa = 2, the others sum to 5  <  6.
 
-So exactly 9 orbits have c_O = 1 and the other 40 have c_O = 0. In each of the 9 orbits one vertex has phi = +1 and
-its mate has phi = -1. QED
+So exactly 9 orbits have kappa_O = 1 and the other 40 have kappa_O = 0. In each of the 9 orbits one vertex has
+phi = +1 and its mate has phi = -1. QED
 
 From now on a configuration is a triple (G, sigma, phi) with phi as in Proposition 3.1, and
 
@@ -298,7 +332,7 @@ impossible. If Q = 4 it is 0, so d(z) <= 1 for every z outside S; but by (I2) su
 ### 4.7 e = 1 is impossible  [A3]
 
 Label S+ = {x_0, ..., x_8} and put y_i = sigma x_i, so S- = {y_0, ..., y_8}. Call the index i **inner** if x_i is in
-N(p) and **outer** otherwise, and put h_i = 1 if i is inner, 0 if i is outer. By Lemma 2.1 (a),
+N(p) and **outer** otherwise, and put eps_i = 1 if i is inner, 0 if i is outer. By Lemma 2.1 (a),
 
     x_i ~ y_i  if and only if  i is inner.                                                       (4.4)
 
@@ -306,9 +340,9 @@ For an index j let M_j = {i != j : x_j ~ y_i}. Applying sigma, x_j ~ y_i if and 
 
     i is in M_j  if and only if  j is in M_i.                                                    (4.5)
 
-d-(x_j) = |M_j| + h_j by (4.4), so by (4.2)
+d-(x_j) = |M_j| + eps_j by (4.4), so by (4.2)
 
-    |M_j| = d+(x_j) + 4 - h_j.                                                                   (4.6)
+    |M_j| = d+(x_j) + 4 - eps_j.                                                                 (4.6)
 
 **Lemma 4.7.** e != 1.
 
@@ -320,7 +354,7 @@ inside N(p) are mate edges, so x_b would be the mate of x_a; but the mate of x_a
 Impossible. (This case is not mentioned in the working report.)
 
 *Case A: a and b are both outer.* Renumber so that a = 0, b = 1. By (4.6), |M_0| = |M_1| = 5 and
-|M_j| = 4 - h_j for j >= 2.
+|M_j| = 4 - eps_j for j >= 2.
 
 The pair x_0, x_1 is adjacent, so it has exactly one common neighbour. For i in M_0 n M_1 the vertex y_i is
 adjacent to x_0 and to x_1. So
@@ -339,20 +373,20 @@ Let j be in P \ {r}. Then j is in M_0 and not in M_1; by (4.5), 0 is in M_j and 
 
 - The vertices x_j and x_0 are not adjacent (the only edge inside S+ is {x_0, x_1} and j >= 2), so they have at most
   2 common neighbours. For i in M_j n M_0 the vertex y_i is a common neighbour; and y_j is a common neighbour when
-  h_j = 1 (x_j ~ y_j by (4.4), and x_0 ~ y_j because j is in M_0). These vertices are distinct (i != j for i in
-  M_j). As 1 is not in M_j, M_j n M_0 = M_j n P. Hence |M_j n P| + h_j <= 2.
+  eps_j = 1 (x_j ~ y_j by (4.4), and x_0 ~ y_j because j is in M_0). These vertices are distinct (i != j for i in
+  M_j). As 1 is not in M_j, M_j n M_0 = M_j n P. Hence |M_j n P| + eps_j <= 2.
 - The vertices x_j and x_1 are not adjacent. y_0 is a common neighbour (0 is in M_j and 0 is in M_1), and so is y_i
   for every i in M_j n P' (P' is contained in M_1). Hence 1 + |M_j n P'| <= 2, i.e. |M_j n P'| <= 1.
-- M_j contains 0, does not contain 1, and has 4 - h_j elements, so |M_j n {2,...,8}| = 3 - h_j. Since
+- M_j contains 0, does not contain 1, and has 4 - eps_j elements, so |M_j n {2,...,8}| = 3 - eps_j. Since
   {2,...,8} = P u P' and P n P' = {r},
 
-      3 - h_j = |M_j n P| + |M_j n P'| - [r in M_j] <= (2 - h_j) + 1 - [r in M_j].
+      3 - eps_j = |M_j n P| + |M_j n P'| - [r in M_j] <= (2 - eps_j) + 1 - [r in M_j].
 
   Hence r is not in M_j.
 
 The same argument with the roles of 0 and 1 (and of P and P') exchanged shows that r is not in M_j for j in
 P' \ {r}. So r is not in M_j for every j in {2,...,8} \ {r}; by (4.5), M_r contains no such j, i.e. M_r is a
-subset of {0, 1} and |M_r| <= 2. But |M_r| = 4 - h_r >= 3 by (4.6). Contradiction.
+subset of {0, 1} and |M_r| <= 2. But |M_r| = 4 - eps_r >= 3 by (4.6). Contradiction.
 
 *Case B: a is outer and b is inner.* By Lemma 4.2 the number of inner indices is k = 2 (it is not 0 since b is
 inner). Renumber so that a = 0, b = 7, and the other inner index is 8. (The working report uses the label 8
@@ -429,12 +463,17 @@ What exactly was computed, and by whom:
   them into isomorphism classes: 16 classes, all connected. Exactly 3 classes have all codegrees <= 2; they contain
   5040 + 30240 + 20160 = 55440 = 9!/72 + 9!/12 + 9!/18 labelled graphs, they have minimum codegree 1, and they are
   the classes of B0, B1, B2. Each of the other 13 classes has a pair of vertices with 3 or 4 common neighbours.
-  **The list of 16 classes comes from this program only.**
+  In the first version of this text the list of 16 classes came from this program only.
+- `lemma/t18_REFEREE2/q9.py` (the second referee's program: pure Python, no code of the repository) does the same
+  enumeration again and gives the same result: 1,024,380 labelled graphs; 16 isomorphism classes, all connected;
+  exactly 3 classes with all codegrees <= 2, containing 5040 + 30240 + 20160 = 55440 labelled graphs, with minimum
+  codegree 1, isomorphic to B0, B1, B2; maximum codegree 3 or 4 in each of the other 13 classes. **So the list of 16
+  classes now comes from two programs written separately.**
 - `lemma/t18/enum_S.py` enumerates directly the labelled 4-regular graphs with all codegrees <= 2 in which the
   neighbours of vertex 0 are 1, 2, 3, 4: 792 graphs (= 55440 / C(8,4)), in 3 isomorphism classes.
 - `lemma/t18/verify_S.py` enumerates them without that normalisation: 55440 labelled graphs, 3 classes.
 
-So the selection "4-regular, all codegrees <= 2 => B0, B1 or B2" is a finite computation done by three programs.
+So the selection "4-regular, all codegrees <= 2 => B0, B1 or B2" is a finite computation done by four programs.
 Two caveats: `verify_S.py` imports the isomorphism-class routine of `enum_S.py` (its enumeration is independent, its
 class count is not), and `enum_S.py` / `verify_S.py` impose the condition in the form "common-neighbour budgets on
 the 18 vertices of S", which for a bipartite graph between S+ and S- given by B is exactly "all codegrees of B are
@@ -514,13 +553,13 @@ The argument uses neither the graph B, nor the neighbourhood of p, nor any compu
 
 Since a_3 = 0 everywhere, write for a vertex v outside S:
 
-    a(v) = a_2(v)  (neighbours in X_2),   b(v) = a_1(v)  (in X_1),   c(v) = a_0(v)  (in X_0).
+    a(v) = a_2(v)  (neighbours in X_2),   b(v) = a_1(v)  (in X_1);   a_0(v)  (in X_0) keeps its name.
 
 **Lemma 5.4.**
 
-(a) For z in X_0:  c = a - 4,  b = 18 - 2a;  in particular a >= 4.
-    For z in X_1:  c = a - 1,  b = 13 - 2a;  in particular a >= 1.
-    For z in X_2:  c = a + 2,  b = 8 - 2a;   in particular a <= 4.
+(a) For z in X_0:  a_0 = a - 4,  b = 18 - 2a;  in particular a >= 4.
+    For z in X_1:  a_0 = a - 1,  b = 13 - 2a;  in particular a >= 1.
+    For z in X_2:  a_0 = a + 2,  b = 8 - 2a;   in particular a <= 4.
 
 (b) Every vertex of S has exactly 4 neighbours in X_2 and 6 in X_1 (and 4 in S, none in X_0).
 
@@ -534,8 +573,8 @@ Since a_3 = 0 everywhere, write for a vertex v outside S:
 
     Each of the three sums is >= 0, and t <= 9.
 
-*Proof.* (a) Lemma 5.1 with a_3 = 0 gives b + 2a = 18 - 5d and c = a + 3d - 4. The inequalities follow from
-c >= 0 and b >= 0.
+*Proof.* (a) Lemma 5.1 with a_3 = 0 gives b + 2a = 18 - 5d and a_0 = a + 3d - 4. The inequalities follow from
+a_0 >= 0 and b >= 0.
 
 (b) Let x be in S+. It has 4 neighbours in S- and none in S+, hence 10 neighbours outside S, each with d >= 1
 (it is adjacent to x), so none in X_0. Count the pairs (w, s) with s in S+ \ {x}, w ~ x and w ~ s: each of the 8
@@ -544,8 +583,8 @@ an outside neighbour w has d(w) - 1. So 16 = 12 + sum_{w ~ x, w outside} (d(w) -
 or 2, sum to 14: four are 2 and six are 1. Apply sigma for S-.
 
 (c) sum_{X_2} a counts each edge inside X_2 twice. The number of edges between X_0 and X_2 is
-sum_{s in X_2} c(s) = sum_{X_2} (a + 2) = 2t + 36, and it is also sum_{z in X_0} a(z). The number of edges inside X_0
-is half of sum_{X_0} c = sum_{X_0} (a - 4) = 36 + 2t - 36 = 2t. The number of edges between X_1 and X_2 is
+sum_{s in X_2} a_0(s) = sum_{X_2} (a + 2) = 2t + 36, and it is also sum_{z in X_0} a(z). The number of edges inside X_0
+is half of sum_{X_0} a_0 = sum_{X_0} (a - 4) = 36 + 2t - 36 = 2t. The number of edges between X_1 and X_2 is
 sum_{X_2} b = sum_{X_2} (8 - 2a) = 144 - 4t = sum_{X_1} a.
 
 (d) sum over all 99 vertices v of |N(v) n X_2|^2 is the number of triples (v, s, s') with s, s' in X_2 and v adjacent
@@ -595,8 +634,8 @@ the number of common neighbours of p and s. p is not in X_2, so this number is 2
 2 * 18 - a_2(p) = 36 - 2 h_2.
 
 If w is in N(p) n X_2, its mate sigma w is adjacent to w (Lemma 2.1 (a)) and lies in X_2: a_2(w) >= 1.
-If w is in N(p) n X_1, then c(w) = a_2(w) - 1 by Lemma 5.4 (a), and p is a neighbour of w in X_0: c(w) >= 1.
-If w is in N(p) n X_0, then c(w) = a_2(w) - 4, and p and sigma w are two neighbours of w in X_0: c(w) >= 2. QED
+If w is in N(p) n X_1, then a_0(w) = a_2(w) - 1 by Lemma 5.4 (a), and p is a neighbour of w in X_0: a_0(w) >= 1.
+If w is in N(p) n X_0, then a_0(w) = a_2(w) - 4, and p and sigma w are two neighbours of w in X_0: a_0(w) >= 2. QED
 
 **Proposition 5.7.** h_0 <= 1. So profile (4,1,2) is impossible, for B0, B1 and B2. In profile (3,3,1) all the
 inequalities of Lemma 5.6 are equalities: a_2 = 1 on N(p) n X_2, a_2 = 2 on N(p) n X_1, a_2 = 6 on N(p) n X_0.
@@ -634,7 +673,10 @@ M1[Y] and M2[Y] depend only on the induced subgraph of G on Y: with A_Y its adja
 M1[Y] = 27 I - 9 A_Y + J and M2[Y] = 44 I + 11 A_Y - 2J (I and J of size |Y|).
 
 A **PSD violation** on Y is an integer vector x indexed by Y with x^T M1[Y] x < 0 or x^T M2[Y] x < 0. Checking a
-given violation is one integer computation.
+given violation is one integer computation. Since M1[Y] and M2[Y] have integer entries, a PSD violation on Y exists
+if and only if M1[Y] or M2[Y] is not PSD (a real vector with negative quadratic form can be replaced by a rational
+vector close to it, and then multiplied by a common denominator). So "there is no PSD violation on Y" and "M1[Y] and
+M2[Y] are both PSD" are the same statement about the graph on Y, and it does not depend on any program.
 
 ### 6.2 The common-neighbour budget
 
@@ -659,25 +701,87 @@ with the names of its vertices, can be written down from D alone. For every dete
 gives a table that says, for every pair of classes of vertices of Y, whether the adjacency is a parameter in D or
 is forced, and by which lemma.
 
-The computations have the following form. A finite list L of candidate data D is defined (all values of the
-parameters). For each D in L the graph on Y is built and tested; D is **rejected** if a budget violation or a PSD
-violation is found on Y or on a subset of Y (for partial data: a budget violation on the partial graph, or a PSD
-violation on a subset whose adjacencies are all decided), or if a forced number proved in the text fails. The data
-that are not rejected are the **survivors**. Since the data of a configuration pass every necessary condition:
+The computations have the following form. A finite list L of candidate data D is defined: all values of the
+parameters that satisfy the forced numbers named in the statement of the Computation. For D in L, write G_D for the
+graph on Y built from D.
+
+**Definition (survivor).** A candidate D in L is a **survivor** if G_D has no budget violation and the matrices
+M1[Y] and M2[Y] of G_D are both PSD. This is a property of D alone: it does not refer to a program, to the order of
+the tests or to a numerical threshold. (In the first version of this text a survivor was a candidate for which "no
+violation is found", which depended on the program; second referee's remark 1.) The data of a configuration satisfy
+the forced numbers, which are proved in the text, and pass both tests by Lemmas 6.1 and 6.2. Hence:
 
     the data D of any configuration belong to the list of survivors.                              (6.1)
 
 So an empty list of survivors is a contradiction, and a non-empty list reduces the problem to its members.
 
-Exactness. According to their sources (for the programs read for this text) or their headers (for the others; see
-section 9.3, item 3), in all the programs of the repository a rejection is exact: a budget violation is an integer
-count, and a PSD violation is an integer vector x whose quadratic form is evaluated in integer arithmetic (or, in
-some programs, an exact elimination or an exact characteristic polynomial). A candidate for which no violation is found
-is kept; for most programs this "kept" rests on a floating-point eigenvalue (smallest eigenvalue above a threshold
-of about -10^-7) and **is not a proof of positive semidefiniteness and is never used as one**: keeping too much can
-only make the list of survivors larger, which is harmless for (6.1). The referee's own programs are different: they
-reject on the floating-point eigenvalue alone, without an exact certificate; they are used here only as count
-checks (section 9.3).
+*What a program does.* Apart from the referee's programs REF1, which are used only as count checks (see "Exactness
+of the rejections" below), a program **rejects** a candidate D only when it has an exact witness that D cannot be
+the data of a configuration. There are three kinds of witnesses:
+
+- a budget violation on G_D, or on a partial graph, i.e. a graph on a subset of Y all of whose edges are edges of
+  G_D (this is how partial data are tested, see section 6.2);
+- a PSD violation on Y, or on a subset of Y all of whose adjacencies are decided;
+- a forced number proved in the text that fails. Besides the forced numbers named in the Computation, some programs
+  of the repository use other ones, also proved in the text. Those mentioned in this text are (F2) and (F7) (section
+  7.3), and (C3), (C4) and the existence of five types satisfying (C5) (section 8.3); the text reports each time
+  that they remove nothing.
+
+The candidates that a program does not reject form its **kept list**. The data of a configuration admit no witness
+of any of the three kinds: a principal submatrix of a PSD matrix is PSD (Lemma 6.1), a graph all of whose edges are
+edges of G has no budget violation (Lemma 6.2), and the forced numbers are proved. Hence, for every program whose
+rejections are exact:
+
+    the data D of any configuration belong to the kept list.                                      (6.2)
+
+(6.2) rests on exact rejections only, and it is all that the exclusions of this text use. A computation excludes
+something in one of two ways:
+
+- its kept list is empty: then no configuration has its data in L;
+- its kept list is not empty, and the next step is run over the kept list (not over the list of survivors): by (6.2)
+  the data of a configuration are still among the candidates.
+
+A witness of the first or of the second kind also shows that D is not a survivor, for the same two reasons. So a
+program with exact rejections that uses no forced number other than those named in the Computation never rejects a
+survivor, and its kept list contains the list of survivors; according to their headers this is the case of the
+programs of the second referee (`lemma/t18_REFEREE2`). In the other direction a kept list may be larger than the
+list of survivors, because of the way "kept" is decided (see below). This never matters for an exclusion. It matters
+only for the question whether a number printed in this text is the number of survivors or only the size of a kept
+list.
+
+*Exactness of the rejections.* According to their sources (for the programs read for this text) or their headers
+(for the others; see section 9.3, item 3), in all the programs of the repository a rejection is exact: a budget
+violation is an integer count, and a PSD violation is an integer vector x whose quadratic form is evaluated in
+integer arithmetic (or, in some programs, an exact elimination or an exact characteristic polynomial). The same
+holds for the programs of the second referee (integer vector evaluated in Python integers, or exact characteristic
+polynomial). The referee's own programs (REF1) are different: they reject on the floating-point eigenvalue alone,
+without an exact certificate; they are used here only as count checks (section 9.3).
+
+*"Kept" decisions.* A candidate for which no violation is found is kept; for most programs this "kept" rests on a
+floating-point eigenvalue (smallest eigenvalue above a threshold of about -10^-7; the threshold is -10^-6 in
+`r3_verify.py`) and **is not a proof of positive semidefiniteness and is never used as one**: keeping too much can
+only make the kept list larger, which is harmless by (6.2).
+
+For the following lists, which are the lists with a PSD condition whose sizes are printed in the Computations, it
+has been verified exactly that every member is a survivor, i.e. that both matrices are PSD on the whole set (the
+budgets are integer counts in every program):
+
+| list | vertex set | every member exactly PSD: verified by |
+|---|---|---|
+| 39-vertex survivors of profile (3,3,1) (383 / 481 / 7) | Y1 | I2, which decides its acceptances at 39, 45 and 51 vertices by the exact characteristic polynomial (section 7.5). I1 (and I3 for B2) keep on a floating-point eigenvalue and obtain the same sets. Not re-checked by the second referee |
+| tables of line 3b of section 7.5 (23 / 164 / 0) | Y (45 vertices) | I2 (as above). I1 keeps on a floating-point eigenvalue and obtains the same sets. Not re-checked by the second referee |
+| pairs (tau, F) of the second row of the table of Computation 8.4 (4904 / 11509 / 3863) | S u {p} u A_p (23 vertices) | the second referee (`recount.py`, exact characteristic polynomial). ENUM and VERIF keep on a floating-point eigenvalue |
+| stage-B triples (5595 / 4977 / 196) | Y37 | the second referee (`exactB.py`: exact characteristic polynomials of M1[Y37] and M2[Y37] for every triple, and all budgets), on his own list, which is the list of VERIF up to the action of Aut(B) (`orbitsB_<s>.out`). ENUM and VERIF keep on a floating-point eigenvalue |
+| the four stage-C survivors of B1 | Y47 | `r3_survivors.py` and `ref8_survivors.py` (both matrices), `r4_verifyD.py` (M1), and the second referee (`survivors.py`, both matrices); see section 8.5 |
+
+All the other "kept" decisions are floating-point and remain so: the intermediate decisions taken during a search on
+a subset of Y or on partial data (they only prune); the counters specific to one program that are quoted in the
+notes (for instance the numbers of sets K "without PSD violation" on 39 vertices in section 8.4); the kept lists of
+REF1; and the kept lists of the second referee's programs other than those of the table. The lists of the remarks of
+section 7.6 (enumeration with M1 alone) are not used in the proof and are not covered by the table. None of this
+enters an exclusion: the exclusions rest on empty kept lists (line 4b of the table of section 7.5; stage C for B0
+and B2; stage D), which involve no acceptance at all, and on Computation 8.6, which is an exact integer computation
+on four explicit graphs.
 
 ### 6.4 The rank bound  [P2]
 
@@ -876,11 +980,11 @@ In this section the profile is (h_2, h_1, h_0) = (3, 3, 1). Notation:
 *Proof.* By Proposition 5.7, a_2 = 1 on A_p, a_2 = 2 on W and a_2 = 6 on z_0 and sigma z_0. Recall that inside N(p)
 a vertex is adjacent only to its mate (Lemma 2.1 (b)), and that mates lie in the same class X_d.
 
-(a) The mate is a neighbour in X_2 and a_2 = 1. By Lemma 5.4 (a), c = a + 2 = 3; p is one of the three neighbours in
+(a) The mate is a neighbour in X_2 and a_2 = 1. By Lemma 5.4 (a), a_0 = a + 2 = 3; p is one of the three neighbours in
 X_0; z_0 and sigma z_0 are vertices of N(p) other than the mate, so they are not neighbours; the two remaining ones
 are in X_0'.
 
-(b) a_2(w) = 2 and c(w) = a_2(w) - 1 = 1, and p is a neighbour of w in X_0. The two neighbours in X_2 are not in
+(b) a_2(w) = 2 and a_0(w) = a_2(w) - 1 = 1, and p is a neighbour of w in X_0. The two neighbours in X_2 are not in
 A_p, which is inside N(p). If they were s and sigma s, then w would be a common neighbour of s and sigma s, where s
 is outside N[p]; by Lemma 2.1 (d) the common neighbours of s and sigma s are outside N[p], but w is in N(p). The
 same argument shows i != j: if i = j, then w would be a common neighbour of x_i and its mate y_i, and x_i is outside
@@ -889,7 +993,7 @@ of W and suppose they have the same unordered type; replacing w' by its mate we 
 (i ; j). Then w and w' are distinct, not adjacent (they are in N(p) and not mates), and have the three common
 neighbours p, x_i, y_j: impossible.
 
-(c) z_0 is in X_0, so it has no neighbour in S. Inside N(p) it is adjacent only to sigma z_0. c(z_0) = 6 - 4 = 2 and
+(c) z_0 is in X_0, so it has no neighbour in S. Inside N(p) it is adjacent only to sigma z_0. a_0(z_0) = 6 - 4 = 2 and
 p, sigma z_0 are two neighbours in X_0. So A_{z_0} is a 6-subset of X_2'. Applying sigma, the neighbours of
 sigma z_0 in X_2 form sigma A_{z_0}. A vertex in both A_{z_0} and sigma A_{z_0} would be a common neighbour of z_0
 and sigma z_0 other than p, which Lemma 2.1 (c) forbids. So A_{z_0} and sigma A_{z_0} are disjoint 6-subsets of the
@@ -926,7 +1030,15 @@ All three are sigma-invariant. The data:
   replaces A_{z_0} by its complement; the programs fix the names by requiring that A_{z_0} contain a prescribed
   vertex of the first orbit, so there are 2^5 choices;
 - **the rows**: for each q in X_0' the set R_q = N(q) n X_2, with R_{sigma q} = sigma R_q; and **G'**, the set of
-  edges inside X_0', invariant under sigma. (rows, G') is called a **table**;
+  edges inside X_0', invariant under sigma. (rows, G') is called a **table**. As an object to be enumerated and
+  counted (second referee's remark 5), a table is defined as follows. The six vertices of X_0' have no names given
+  by the earlier data, so a table is an unordered set of three row-orbits {R, sigma R}, R being a subset of X_2,
+  together with a sigma-invariant set G' of edges on the six vertices that carry these rows. A row may contain both
+  vertices of an orbit of X_2'. Two tables that differ only by the order of the three orbits of X_0', or by the
+  exchange of q and sigma q inside an orbit, are the same table. (As soon as there is no budget violation on Y the
+  six rows are pairwise distinct, because a row has at least 4 elements by (F4) below and two distinct vertices have
+  at most 2 common neighbours; so the rows identify the six vertices.) This is the object counted in lines 3a and 3b
+  of section 7.5;
 - **for W**: the three types (i ; j), and for each w in W the 2-set K_w = N(w) n X_2', with K_{sigma w} = sigma K_w.
 
 **Lemma 7.5.** Y1 is determined by (tau, F, H, A_{z_0}); Y is determined by these data and the table; Y u W is
@@ -988,13 +1100,24 @@ survivors (section 7.5), (F2) and (F7) remove nothing there.
 > - step 1: all sets F of three rectangles of tau that are usable in N(p), such that the graph on the 25 vertices
 >   S u {p} u A_p has no budget violation;
 > - step 2: for each such (tau, F), all (H, A_{z_0}) such that the graph on Y1 (39 vertices) has no budget violation
->   and no PSD violation for M1 and M2 is found; these (tau, F, H, A_{z_0}) are the **39-vertex survivors**;
-> - step 3: for each 39-vertex survivor, all tables satisfying (F3), (F4); among them those for which the graph on
->   Y (45 vertices) has no budget violation; among those, the ones for which no PSD violation is found on Y;
+>   and M1[Y1] and M2[Y1] are both PSD; these (tau, F, H, A_{z_0}) are the **39-vertex survivors**;
+> - step 3: for each 39-vertex survivor, all tables (in the sense of section 7.3) satisfying (F3), (F4); among them
+>   those for which the graph on Y (45 vertices) has no budget violation; among those, the ones for which M1[Y]
+>   and M2[Y] are both PSD;
 > - step 4: for each table of the last kind, all (types, K) satisfying (F5), (F6); among them those for which the
->   graph on Y u W (51 vertices) has no budget violation; among those, the ones with no PSD violation.
+>   graph on Y u W (51 vertices) has no budget violation; among those, the ones for which M1 and M2 are both PSD
+>   on Y u W.
 >
 > Result: the last list is empty for B0, B1 and B2. The counts are in the table of section 7.5.
+
+All these lists are defined by properties of the graphs: they are lists of survivors in the sense of section 6.3 and
+do not depend on a program. What the exclusion uses is only (6.2): in every implementation each step is run over the
+kept list of the previous step, every rejection is exact, and the kept list of step 4 is empty; by (6.2) no
+configuration has its data there, whatever the floating-point "kept" decisions were. (For a program that uses only
+the forced numbers named above, such as the second referee's, the empty kept list also gives the Result as it is
+stated, because such a program never rejects a survivor.) That the kept lists of steps 2 and 3 are exactly the lists
+of survivors defined here, so that 383 / 481 / 7 and 23 / 164 / 0 in section 7.5 are numbers of survivors, rests on
+the exact acceptances of I2 (section 6.3).
 
 **Proposition 7.7.** Profile (3,3,1) is impossible for B0, B1 and B2.
 
@@ -1021,19 +1144,19 @@ Implementations:
   in Python integers or an exact characteristic polynomial, and the acceptances at 39, 45 and 51 vertices are
   decided by the exact characteristic polynomial.
 - **I3** = `lemma/t18_B2/e331.py` (B2 only, steps 1-3); shares no code with I1 and does not read `types.json`.
-- **R** = the referee's programs `lemma/t18_REFEREE/ref2_stage1.py`, `ref6_p331.py`, `ref7_p331_ext.py`,
+- **REF1** = the referee's programs `lemma/t18_REFEREE/ref2_stage1.py`, `ref6_p331.py`, `ref7_p331_ext.py`,
   `ref7b_p331_ext.py` (own model, no repository code; floating-point PSD rejections: a count check only).
 
 | line | B0 | B1 | B2 | programs |
 |---|---|---|---|---|
 | 0. admissible matchings / orbits (Computation 7.3) | 25514 / 425 | 13799 / 1259 | 9229 / 528 | 4 programs (section 7.1) |
-| 1. pairs (tau, F) with no budget violation on the 25 vertices S u {p} u A_p | 3510 | 7224 | 2406 | I1, I2, R |
-| 2. 39-vertex survivors (tau, F, H, A_{z_0}) | 383 | 481 | 7 | I1, I2 (identical sets, see below), R (same counts); I3 for B2 (identical graphs) |
-| 2'. matchings / pairs (tau, F) carrying them | 50 / 95 | 55 / 76 | 1 / 1 | I1, I2, R |
-| 3a. tables with no budget violation on Y (45 vertices) | 8639 | 27203 | 0 | I1, I2, R; I3 for B2 |
-| 3b. of which no PSD violation on Y | 23 | 164 | 0 | I1, I2 (identical sets), R |
-| 4a. graphs on the 51 vertices with no budget violation, over the tables of 3b | 52 | 1839 | - | I2, R |
-| 4b. of which no PSD violation | **0** | **0** | - | I1, I2 (twice: `v3_stage34.py` and `v7_step4_direct.py`), R |
+| 1. pairs (tau, F) with no budget violation on the 25 vertices S u {p} u A_p | 3510 | 7224 | 2406 | I1, I2, REF1 |
+| 2. 39-vertex survivors (tau, F, H, A_{z_0}) | 383 | 481 | 7 | I1, I2 (identical sets, see below), REF1 (same counts); I3 for B2 (identical graphs) |
+| 2'. matchings / pairs (tau, F) carrying them | 50 / 95 | 55 / 76 | 1 / 1 | I1, I2, REF1 |
+| 3a. tables with no budget violation on Y (45 vertices) | 8639 | 27203 | 0 | I1, I2, REF1; I3 for B2 |
+| 3b. of which no PSD violation on Y | 23 | 164 | 0 | I1, I2 (identical sets), REF1 |
+| 4a. graphs on the 51 vertices with no budget violation, over the tables of 3b | 52 | 1839 | - | I2, REF1 |
+| 4b. of which no PSD violation | **0** | **0** | - | I1, I2 (twice: `v3_stage34.py` and `v7_step4_direct.py`), REF1 |
 
 So every line except 4a has two exact implementations (I1 and I2) that share no code, plus the referee's count
 check; for B2, where the enumeration stops at line 3a, there are three exact implementations. Line 4a is an
@@ -1062,7 +1185,7 @@ Notes on the table.
 ### 7.6 Remarks and corrections to the working reports
 
 **Both matrices are needed.** The working report states that "the violated matrix is 9(3I - A) + J". This is false
-in general. I2 and R ran the whole enumeration with M1 alone:
+in general. I2 and REF1 ran the whole enumeration with M1 alone:
 
 | with M1 alone | B0 | B1 | B2 |
 |---|---|---|---|
@@ -1070,7 +1193,7 @@ in general. I2 and R ran the whole enumeration with M1 alone:
 | tables with no violation on 45 vertices | 102 | 190 | 0 |
 | graphs with no violation on 51 vertices | 0 | 10 | 0 |
 
-(39 and 51 vertices: I2 and R; 45 vertices: I2.) So with M1 alone ten configurations of B1 would survive on 51
+(39 and 51 vertices: I2 and REF1; 45 vertices: I2.) So with M1 alone ten configurations of B1 would survive on 51
 vertices. They all lie in one orbit of matchings, have t = 3 and no edge of H, satisfy every budget, and M1 is
 exactly PSD on them; each is rejected by an explicit integer vector x with x^T M2 x = -88, -594 or -726
 (`lemma/t18_VERIF331/v6_m1_final.out`). In the direct step 4 of I2, 1829 of the 1839 graphs of line 4a are rejected
@@ -1078,21 +1201,41 @@ by M1 and exactly these 10 by M2 only. At 39 vertices, 504 configurations of B0 
 only. I1 tests both matrices (this is visible in the source of `r2_hfirst.py`, `r2_stage2.py`, `r2_ext2.py`), which
 is why its counts agree with the two-matrix runs.
 
-**Line 1 (referee's remark 6).** The working report describes the numbers 3510, 7224, 2406 as the pairs (tau, F)
-"passing the N(p) tests ... [such that] the 3 pairs of N(p) n X_1 exist". They are in fact the numbers of pairs
-with no budget violation on S u {p} u A_p, as defined in line 1: the existence test coded in `r2_hfirst.py` does
-not include the condition that the cell (i, j) of a vertex of W of type (i ; j) still has room (see (C6) in section
-8.2 for this condition) and removes nothing. With a complete existence test the referee counts 1834, 4096, 1265
-(`ref2_stage1_B*.out`). This changes nothing downstream: the omitted condition is a valid necessary condition and
+**Line 1 (referee's remark 6; corrected after the second referee's remark 7).** The working report describes the
+numbers 3510, 7224, 2406 as the pairs (tau, F) "passing the N(p) tests ... [such that] the 3 pairs of N(p) n X_1
+exist". They are in fact the numbers of pairs with no budget violation on S u {p} u A_p, as defined in line 1: the
+existence test coded in `r2_hfirst.py` only asks for three types satisfying (F5), and it removes nothing (every one
+of the 3510, 7224, 2406 pairs admits such types). A complete existence test asks in addition, for each type (i ; j)
+of an orbit {w, sigma w} of W, the two following conditions:
+
+- (cell room) the number of deficient pairs U with i in U and j in tau U is at most 1 - [i ~_B j], and the same with
+  i and j exchanged. This is condition (C6) of section 8.2: w and these vertices s_U are distinct common neighbours
+  of x_i and y_j;
+- (no vertex of A_p in the cell) no vertex s_U of A_p has i in U and j in tau U, or j in U and i in tau U. Such a
+  vertex and w (respectively sigma w) would be two non-adjacent vertices of N(p) with the three common neighbours p,
+  x_i, y_j (respectively p, x_j, y_i).
+
+The numbers of pairs (tau, F) that admit three types are then:
+
+| existence test | B0 | B1 | B2 |
+|---|---|---|---|
+| (F5) only (the test of `r2_hfirst.py`) | 3510 | 7224 | 2406 |
+| (F5) and cell room | 1958 | 4332 | 1309 |
+| (F5), cell room, and no vertex of A_p in the cell | 1834 | 4096 | 1265 |
+
+(Second referee: `lemma/t18_REFEREE2/recount.py`, `recount2.py`.) The last row is what the referee counted
+(`ref2_stage1_B*.out`). The first version of this text said that the cell-room condition alone gives 1834, 4096,
+1265; this was imprecise: cell room alone gives 1958, 4332, 1309, and the second condition is needed to reach the
+referee's numbers. This changes nothing downstream: the two omitted conditions are valid necessary conditions and
 the extra pairs die later.
 
 **Counters that are not comparable between programs.** The working report gives "completions C": 23155 (B0),
-93684 (B1), 44 (B2). I2 gives 11797, 45362, 88, and so does R ("covers"). These are two different objects: I1
-counts the choices of rows before H is fixed, I2 and R count, for each 39-vertex survivor, the triples of rows with
+93684 (B1), 44 (B2). I2 gives 11797, 45362, 88, and so does REF1 ("covers"). These are two different objects: I1
+counts the choices of rows before H is fixed, I2 and REF1 count, for each 39-vertex survivor, the triples of rows with
 the right numbers (F3). Neither is used in the proof; lines 3a and 3b, which are well defined, agree. The same
 holds for the counters "after the pair tests" (624, 750, 114) and "(H, A_{z_0}) tested" (3810, 4416, 121) of the
 working report, which depend on the order of the tests in `r2_hfirst.py`; the number of complete H on the 37
-vertices S u {p} u X_2 (1618, 927, 16) is found by both I1 and R.
+vertices S u {p} u X_2 (1618, 927, 16) is found by both I1 and REF1.
 
 **Profile (3,3,1) does not need X_0' for B0 and B2**: in I2, adding W directly to the 39 vertices leaves 0, 2, 0
 configurations for B0, B1, B2 (`v5_summary.out`, "dual order"). This is an observation, not used.
@@ -1138,7 +1281,7 @@ different orbits of W and have the same unordered type, replace w' by its mate s
 then w and w' are distinct, non-adjacent by (a), with the three common neighbours p, x_i, y_j. K_w avoids A_p by (a).
 a_2(w) >= 2 is Lemma 5.6. If K_w contained s and sigma s, then w would be a common neighbour of s and sigma s with s
 outside N[p], contradicting Lemma 2.1 (d) again. K_{sigma w} = sigma K_w because sigma is an automorphism. The last
-statement is Lemma 5.4 (a), c = a_2 - 1.
+statement is Lemma 5.4 (a), a_0 = a_2 - 1.
 (c) By Lemma 5.6 the sum of a_2 over N(p) is 36 - 2 * 2 = 32, and 32 - 4 * 1 - 10 * 2 = 8; the lower bounds of
 Lemma 5.6 give the signs. (d) and (e): s and x_i are outside N[p]; Corollary 2.2. (f) N(p) contains no vertex of
 X_0. z is in X_0: no neighbour in S. z is not in N(p), so z not~ sigma z by Lemma 2.1 (a); Corollary 2.2. QED
@@ -1152,7 +1295,10 @@ Both are sigma-invariant. The data:
 
 - **tau** (a representative, by (7.1));
 - **F**, the set of the two rectangles of tau whose orbits form A_p; each must be usable in N(p);
-- **H**, the set of all edges inside X_2 (here H includes the two mate edges of A_p); it is invariant under sigma;
+- **H**, the set of all edges inside X_2 (here H includes the two mate edges of A_p); it is invariant under sigma.
+  The four pairs between the two orbits of A_p are not parameters: they are non-adjacent by Lemma 8.1 (a) (an edge
+  {a, a'} between the two orbits would give the adjacent vertices p and a the two common neighbours sigma a and a').
+  So the free pairs of H are those with at least one vertex in X_2';
 - **the types**: five unordered pairs {i_c, j_c}, c = 1..5; w_c denotes the vertex of type (i_c ; j_c) and sigma w_c
   the vertex of type (j_c ; i_c);
 - **K_c** = N(w_c) n X_2, a subset of X_2', for c = 1..5.
@@ -1163,7 +1309,8 @@ Both are sigma-invariant. The data:
 |---|---|---|
 | S+ with S+, S- with S-; S+ with S-; S with p; S with X_2 | as in Lemma 7.5 | Corollary 4.8, definition of B, Lemma 7.1 |
 | p with X_2 | exactly the 4 vertices of A_p | parameter F |
-| X_2 with X_2 | parameter H; s ~ sigma s iff s is in A_p | Lemma 2.1 (a) |
+| A_p with A_p | the 2 mate edges only: no edge between the two orbits of A_p | Lemma 8.1 (a) |
+| A_p with X_2', X_2' with X_2' | parameter H; no mate edge inside X_2' | Lemma 2.1 (a) |
 | W with p | adjacent | definition |
 | W with W | the 5 mate edges only | Lemma 8.1 (a) |
 | W with A_p | none | Lemma 8.1 (a) |
@@ -1185,8 +1332,8 @@ sets on which the programs test partial data:
 **Lemma 8.3 (forced numbers).** The data of a configuration satisfy:
 
 - (C1) both rectangles of F are usable in N(p);
-- (C2) H contains the mate edge {s, sigma s} if and only if s is in A_p, and every vertex of X_2 has at most 4
-  neighbours in X_2;
+- (C2) H contains the mate edge {s, sigma s} if and only if s is in A_p, H contains no pair between the two orbits
+  of A_p, and every vertex of X_2 has at most 4 neighbours in X_2;
 - (C3) FL := sum over A_p of (a_2 - 1) is the number of edges between A_p and X_2'; it is even and FL <= 8;
 - (C4) t <= 9 and  sum over X_2 of a_2 (a_2 - 1) + m(t) <= 36,  where m(t) is twice the minimum of
   y_1^2 + y_2^2 + y_3^2 + y_4^2 over the non-negative integers with y_1 + y_2 + y_3 + y_4 = t
@@ -1199,8 +1346,9 @@ sets on which the programs test partial data:
 - (C8) every s in X_2' belongs to exactly req(s) = 2 - |N(s) n A_p| of the ten sets K_1, sigma K_1, ..., K_5,
   sigma K_5. In particular req(s) >= 0, and req(sigma s) = req(s).
 
-*Proof.* (C1) Lemma 7.2 (R3). (C2) Lemma 2.1 (a) and Lemma 5.4 (a). (C3) A vertex of A_p has a_2 - 1 neighbours in
-X_2 other than its mate, and they are in X_2' by Lemma 8.1 (a). a_2 takes the same value on mates, so FL is even.
+*Proof.* (C1) Lemma 7.2 (R3). (C2) Lemma 2.1 (a), Lemma 8.1 (a) and Lemma 5.4 (a). (C3) A vertex of A_p has a_2 - 1
+neighbours in X_2 other than its mate, and they are in X_2' by Lemma 8.1 (a). a_2 takes the same value on mates,
+so FL is even.
 FL <= 8 by Lemma 8.1 (c). (C4) t <= 9 is Lemma 5.4 (d). In identity (*), the vertex p has a_2(p) = 4 and contributes
 0 to the first sum; the other 8 vertices of X_0 form 4 orbits, a_2 - 4 is a non-negative integer y_q constant on
 each orbit, and 2 (y_1 + y_2 + y_3 + y_4) = sum_{X_0} (a_2 - 4) = 2t by Lemma 5.4 (c); so the first sum is
@@ -1214,14 +1362,15 @@ s is in K_c, and to sigma w_c iff s is in sigma K_c. QED
 ### 8.3 Stage B: the 37 vertices
 
 > **Computation 8.4 (stage B).** For each B in {B0, B1, B2} and each representative tau, list all (F, H) where F is
-> a set of two rectangles of tau usable in N(p) and H is a sigma-invariant set of edges on X_2 satisfying (C2),
-> such that the graph on Y37 has no budget violation and no PSD violation for M1, M2 is found. The triples
-> (tau, F, H) obtained are the **stage-B triples**:
+> a set of two rectangles of tau usable in N(p) and H is a sigma-invariant set of edges on X_2 satisfying (C2) (so
+> H does not range over the four pairs between the two orbits of A_p: they are absent), such that the graph on Y37
+> has no budget violation and M1[Y37] and M2[Y37] are both PSD. The triples (tau, F, H) obtained are the
+> **stage-B triples**:
 >
 > | | B0 | B1 | B2 |
 > |---|---|---|---|
 > | pairs (tau, F) with no budget violation on the 23 vertices S u {p} u A_p | 5545 | 12366 | 4347 |
-> | of which no PSD violation found on these 23 vertices | 4904 | 11509 | 3863 |
+> | of which M1 and M2 are both PSD on these 23 vertices | 4904 | 11509 | 3863 |
 > | **stage-B triples (tau, F, H)** | **5595** | **4977** | **196** |
 > | matchings / pairs (tau, F) carrying them | 133 / 901 | 275 / 1015 | 53 / 74 |
 > | triples with t = 2 / 4 / 6 | 459 / 2584 / 2552 | 386 / 2351 / 2240 | 6 / 80 / 110 |
@@ -1229,37 +1378,52 @@ s is in K_c, and to sigma w_c iff s is in sigma K_c. QED
 
 Programs:
 
-- **E** ("the enumerator") = `lemma/t18/r3_p250.py`, stage B: the orbits of X_2' are added one at a time, with the
+- **ENUM** ("the enumerator") = `lemma/t18/r3_p250.py`, stage B: the orbits of X_2' are added one at a time, with the
   states of their edges to the earlier orbits; budgets on partial graphs, PSD when an orbit is complete; it uses
   (C2), (C3) during the search and applies (C4) to the complete H. It reads `types.json`.
-- **V** ("the verifier") = `lemma/t18/r3_verify.py B250`: no shared code, graphs re-entered as edge lists, orbits
+- **VERIF** ("the verifier") = `lemma/t18/r3_verify.py B250`: no shared code, graphs re-entered as edge lists, orbits
   added in the reverse order, budgets by integer matrix products; it uses (C2), (C3) and not (C4).
-- **R** = `lemma/t18_REFEREE/ref4_stageB.py` (own model; floating-point PSD).
+- **REF1** = `lemma/t18_REFEREE/ref4_stageB.py` (own model; floating-point PSD).
 
-E and V produce **identical sets of triples** for the three graphs (`lemma/t18/r3_finalB.out` for B1,
-`lemma/t18_B0/b0_compareB.out` for B0, `lemma/t18_B2/b2_compareB.out` for B2). R finds the same numbers of triples,
+ENUM and VERIF produce **identical sets of triples** for the three graphs (`lemma/t18/r3_finalB.out` for B1,
+`lemma/t18_B0/b0_compareB.out` for B0, `lemma/t18_B2/b2_compareB.out` for B2). REF1 finds the same numbers of triples,
 of pairs (tau, F), of matchings, and the same distributions by t and by largest a_2. So the list of stage-B triples
 has two exact implementations and one count check.
 
-Notes. The first row is given by E and R for B0 and B2, and by R alone for B1 (for B1 the runs of E overlap and its
-counter cannot be summed). The second row is given by V and R for the three graphs and by E for B0 and B2.
-E and V also discard a pair (tau, F) when some f_i exceeds 2 or when no set of five types satisfies (C5) (Lemma 8.3;
-E takes the types from `types.json`, V from its own 21-vertex test); R does not. This removes nothing: in every
-output of E and of V the counter is the same before and after this test (for instance 5545 = 5545 for B0 and
-4347 = 4347 for B2 in E), and R obtains the same triples counts without it.
-Condition (C4) removes nothing: in every run the number of complete H is the same before and after it (E:
-5595 = 5595 and 196 = 196; comparison files: "4977 after the counting conditions"; R: (C4) true on all triples).
+Notes. The first row is given by ENUM and REF1 for B0 and B2, and by REF1 alone for B1 (for B1 the runs of ENUM
+overlap and its counter cannot be summed). The second row is given by VERIF and REF1 for the three graphs and by
+ENUM for B0 and B2. ENUM and VERIF also discard a pair (tau, F) when some f_i exceeds 2 or when no set of five types
+satisfies (C5) (Lemma 8.3; ENUM takes the types from `types.json`, VERIF from its own 21-vertex test); REF1 does
+not. This removes nothing: in every output of ENUM and of VERIF the counter is the same before and after this test
+(for instance 5545 = 5545 for B0 and 4347 = 4347 for B2 in ENUM), and REF1 obtains the same triples counts without
+it. Condition (C4) removes nothing: in every run the number of complete H is the same before and after it (ENUM:
+5595 = 5595 and 196 = 196; comparison files: "4977 after the counting conditions"; REF1: (C4) true on all triples).
 The last two rows are data, not proved facts: on all stage-B triples t is 2, 4 or 6 and a_2 <= 2 on X_2. (Hand
 proofs that t is even and different from 8 exist in the working report `lemma/t18_STRUCT`; they are not needed.)
 
-For B1 the stage-B list of E was produced in five launches, some of them cut by a time limit; the bookkeeping
+For B1 the stage-B list of ENUM was produced in five launches, some of them cut by a time limit; the bookkeeping
 script `lemma/t18_B0_VERIFC/b1_coverage.py` checks that each of the 1259 matchings is completed by exactly one of
-the 14 files used and that the 4977 triples so obtained are the set of V (`04_b1_coverage.out`).
+the 14 files used and that the 4977 triples so obtained are the set of VERIF (`04_b1_coverage.out`).
+
+(Other outputs quote other numbers of files read, 17 and 15; see the notes at the end of appendix A.5.)
+
+That the kept lists of ENUM and VERIF are the list of stage-B triples of the definition, i.e. that every one of the
+5595 + 4977 + 196 triples is exactly PSD for both matrices on Y37, was verified by the second referee
+(`lemma/t18_REFEREE2/exactB.py`; section 6.3).
+
+*The pairs between the two orbits of A_p (second referee's remark 4).* In the first version of this text the row
+"X_2 with X_2" of Lemma 8.2 made every pair of X_2 a parameter of H, and (C2) did not record that the four pairs
+between the two orbits of A_p are non-adjacent (Lemma 8.1 (a)). The list of stage-B triples does not depend on this:
+a set H containing such a pair {a, a'} has a budget violation on Y37, because the adjacent vertices p and a then
+have the two common neighbours sigma a and a'. In the programs these pairs are never chosen. This is so in
+`stageB.py` of the second referee, whose list of triples is the list of VERIF (identical multisets of canonical
+forms under Aut(B) for the three graphs: `lemma/t18_REFEREE2/orbitsB_<s>.out`); and, as read in their sources for
+this revision, in ENUM and VERIF, which only choose the edges between an orbit of X_2' and the other orbits.
 
 ### 8.4 Stage C: the 47 vertices
 
 > **Computation 8.5 (stage C).** For every stage-B triple (tau, F, H), list all (types, K_1, ..., K_5) satisfying
-> (C5), (C7), (C8) such that the graph on Y47 has no budget violation and no PSD violation for M1, M2 is found.
+> (C5), (C7), (C8) such that the graph on Y47 has no budget violation and M1[Y47] and M2[Y47] are both PSD.
 > The (tau, F, H, types, K) obtained are the **stage-C survivors**.
 >
 > - For **B0**: there is no stage-C survivor.
@@ -1272,64 +1436,79 @@ the 14 files used and that the 4977 triples so obtained are the set of V (`04_b1
 (C6) is not listed among the conditions because it is implied by the absence of budget violation on Y47; the
 programs use it, or an equivalent budget test on a partial graph, as a filter.
 
+As in section 6.3, what the programs establish by exact rejections is that their kept lists of stage C are empty for
+B0 and B2 and consist of the same four graphs for B1. That these four graphs are survivors in the sense of the
+definition, i.e. exactly PSD on Y47, is verified separately (section 8.5); and the stage-B triples over which
+stage C is run have been verified to be exactly PSD on Y37 (section 6.3).
+
 Programs:
 
-- **E** = `lemma/t18/r3_p250.py`, stage C: the orbits of W are added one at a time, each with its set K_c; tests on
+- **ENUM** = `lemma/t18/r3_p250.py`, stage C: the orbits of W are added one at a time, each with its set K_c; tests on
   the 27-, 29- and 33-vertex subsets of section 8.2 and on S u {p} u X_2 u (the orbits of W already placed).
-- **C** = `c_mine.py` (written in `lemma/t18_B2`; the copy used for B0 and B1 is in `lemma/t18_B0_VERIFC`): for
+- **CMINE** = `c_mine.py` (written in `lemma/t18_B2`; the copy used for B0 and B1 is in `lemma/t18_B0_VERIFC`): for
   every type, all sets K with no violation on the 39 vertices S u {p} u X_2 u {w, sigma w}; then an exact cover of
   the numbers req(s) by one K per orbit of W, with a test on 41 vertices for every two orbits; then the test on 47
-  vertices. It shares no code with E or V, does not read `types.json`, and takes the stage-B triples as input.
+  vertices. It shares no code with ENUM or VERIF, does not read `types.json`, and takes the stage-B triples as input.
   A PSD rejection is an integer vector evaluated in Python integers, or else an exact fraction-free elimination.
-- **V** = `lemma/t18/r3_verify.py C250`: "dual" order (one orbit of X_2' at a time: which vertices of W it sees).
+- **VERIF** = `lemma/t18/r3_verify.py C250`: "dual" order (one orbit of X_2' at a time: which vertices of W it sees).
   Complete for B2, partial for B0 and B1. Two further partial programs for B1: `lemma/t18/r4_verifyC.py` and
   `lemma/t18/r4_verifyC2.py`.
-- **R** = `lemma/t18_REFEREE/ref5_stageC.py`, on the referee's own stage-B triples (floating-point PSD).
+- **REF1** = `lemma/t18_REFEREE/ref5_stageC.py`, on the referee's own stage-B triples (floating-point PSD).
 
 | graph | program | scope | stage-C survivors | where |
 |---|---|---|---|---|
-| B0 | E (as `b0_stageC.py`, `b0_stageC2.py`) | 2667 representatives of the 5595 triples modulo the stabilisers of the matchings | 0 | `lemma/t18_B0/REPORT.md` (section "FINAL STATE", generated from the logs `b0_stageC_done_*.jsonl`) |
-| B0 | C | all 5595 triples, each exactly once (24 parts) | 0 | `lemma/t18_B0_VERIFC/09_B0_check_complete.out` |
-| B0 | R | all 5595 triples | 0 | `lemma/t18_REFEREE/ref9_totals.out` |
-| B0 | V | a sample of 29 triples | 0 | `lemma/t18_B0/b0_verC_sample.out` |
-| B1 | E | all 1259 matchings (4977 triples) | 4 | `lemma/t18/r3_finalB.out`, `r3_round5.out` |
-| B1 | C | all 4977 triples, each exactly once (24 parts) | 4, the same 47-vertex graphs as E | `lemma/t18_B0_VERIFC/11_B1_check_complete.out`, `13_B1_survivors_compare.out` |
-| B1 | R | all 4977 triples | 4, same matchings and F | `lemma/t18_REFEREE/ref9_totals.out` |
-| B1 | V, `r4_verifyC.py`, `r4_verifyC2.py` | 2086 of the 4977 triples, including the 170 triples of matchings #813 and #975 | the same 4, no other | `lemma/t18/r4_compareC_final.out` |
-| B2 | E | all 528 matchings (196 triples) | 0 | `lemma/t18_B2/b2_BC_0of2.out`, `b2_BC_1of2.out` |
-| B2 | V | all 196 triples (four runs) | 0 | `lemma/t18_B2/b2v_C250_*.out` |
-| B2 | C | all 196 triples | 0 | `lemma/t18_B2/c_mine_2_all.out` |
-| B2 | R | all 196 triples | 0 | `lemma/t18_REFEREE/ref5_stageC_B2.out` |
+| B0 | ENUM (as `b0_stageC.py`, `b0_stageC2.py`) | 2667 representatives of the 5595 triples modulo the stabilisers of the matchings | 0 | `lemma/t18_B0/b0_stageC_done_*.jsonl` and `b0_stageC_survivors.json` (checked by the second referee: 2667 lines, every index 0..2666 exactly once, no survivor); `lemma/t18_B0/REPORT.md`, section "FINAL STATE", is only a summary generated from these logs |
+| B0 | CMINE | all 5595 triples, each exactly once (24 parts) | 0 | `lemma/t18_B0_VERIFC/09_B0_check_complete.out` |
+| B0 | REF1 | all 5595 triples | 0 | `lemma/t18_REFEREE/ref9_totals.out` |
+| B0 | VERIF | 29 triples: the run of part 0 of 150, cut by its time limit after 29 triples (not a designed sample) | 0 | `lemma/t18_B0/b0_verC_sample.out` |
+| B1 | ENUM | all 1259 matchings (4977 triples) | 4 | `lemma/t18/r3_finalB.out`, `r3_round5.out` |
+| B1 | CMINE | all 4977 triples, each exactly once (24 parts) | 4, the same 47-vertex graphs as ENUM | `lemma/t18_B0_VERIFC/11_B1_check_complete.out`, `13_B1_survivors_compare.out` |
+| B1 | REF1 | all 4977 triples | 4, same matchings and F | `lemma/t18_REFEREE/ref9_totals.out` |
+| B1 | VERIF, `r4_verifyC.py`, `r4_verifyC2.py` | 2086 of the 4977 triples, including the 170 triples of matchings #813 and #975 | the same 4, no other | `lemma/t18/r4_compareC_final.out` |
+| B2 | ENUM | all 528 matchings (196 triples) | 0 | `lemma/t18_B2/b2_BC_0of2.out`, `b2_BC_1of2.out` |
+| B2 | VERIF | all 196 triples, in four runs: the first was cut by its time limit after 86 of the 98 triples of its part, and the four runs together treat 86 + 43 + 43 + 24 = 196 triples | 0 | `lemma/t18_B2/b2v_C250_*.out` |
+| B2 | CMINE | all 196 triples | 0 | `lemma/t18_B2/c_mine_2_all.out` |
+| B2 | REF1 | all 196 triples | 0 | `lemma/t18_REFEREE/ref5_stageC_B2.out` |
 
-So for each of the three graphs the stage-C result has at least two complete exact implementations sharing no code
-(E and C; for B2 also V), plus the referee's complete count check.
+So the stage-C result has two complete exact implementations sharing no code for B1 and for B2 (ENUM and CMINE; for
+B2 also VERIF), plus the referee's complete count check (REF1). For B0 the first version of this text also claimed
+"two complete exact implementations"; this was too strong (second referee's remark 6). CMINE treats all 5595 triples
+of B0, but ENUM treats 2667 representatives: it is complete only modulo the reduction to orbits under the
+stabilisers, which exists in one program of the repository (see the note below). This is harmless: besides CMINE and
+REF1, the stage C of the second referee, which rejects exactly, treats all 5595 triples of B0 and finds no survivor
+(section 9.6).
 
 Notes.
 
 - *Status in the working reports.* `LEMMA_TARGET_2026-10-06.md` (section 8) and `lemma/t18/T18_REPORT.md` say that B0
   is open and that stage C of B1 has one complete implementation, the second covering 2086 triples;
   `lemma/t18_B0/REPORT.md` says that stage C of B0 has one implementation. These statements are superseded by the
-  later complete runs of C stored in `lemma/t18_B0_VERIFC` (run on 2026-10-06/07, after those reports) and by the
+  later complete runs of CMINE stored in `lemma/t18_B0_VERIFC` (run on 2026-10-06/07, after those reports) and by the
   referee's runs.
-- *The reduction modulo stabilisers (B0, program E only).* An automorphism g of B fixing tau maps a stage-B triple
-  (tau, F, H) to (tau, gF, gH) and maps the completions of the first to the completions of the second (it is a
-  relabelling of the orbits of the support, as in (7.1)). So it is enough to complete one triple in each orbit. This
-  reduction exists in one implementation (`b0_orbitsB.py`, which asserts that the set of triples is closed); it is
-  not needed for the result, since C and R treat all 5595 triples.
-- *Inputs of C.* For B0, C reads the stage-B file of E, which is the set of V (`08_b0_input_crosscheck.out`). For B1
-  it reads the list built by `b1_coverage.py`, equal to the set of V; `12_B1_check_complete_verifier_list.out`
-  checks the completeness of the run against the list of V directly. A control run of C on the 170 triples of
-  matchings #813 and #975, read from the files of V, gives the same four graphs (`05_control_B1_check.out`,
-  `06_control_B1_compare.out`).
-- *Work done* (program-specific counters, not comparable between programs). E on the 2667 representatives of B0:
+- *The reduction modulo stabilisers (B0, program ENUM only).* An automorphism g of B fixing tau maps a stage-B
+  triple (tau, F, H) to (tau, gF, gH) and maps the completions of the first to the completions of the second (it is
+  a relabelling of the orbits of the support, as in (7.1)). So it is enough to complete one triple in each orbit. In
+  the repository this reduction exists in one implementation (`b0_orbitsB.py`, which asserts that the set of triples
+  is closed). The second referee has recounted it on his own list of triples (`lemma/t18_REFEREE2/orbitsB0.py`,
+  `orbitsB_0.out`): the 5595 triples are closed under the stabilisers and form 2667 orbits, and the stabiliser
+  orders of the 133 matchings carrying triples are those of `b0_orbitsB.out` (order 1 for 85 matchings, 2 for 36, 4
+  for 9, and 6, 8, 72 for one matching each). He did not compare the 2667 stored representatives
+  (`b0_stageB_reps.json`) themselves. The reduction is not needed for the result, since CMINE, REF1 and the stage C
+  of the second referee treat all 5595 triples.
+- *Inputs of CMINE.* For B0, CMINE reads the stage-B file of ENUM, which is the set of VERIF
+  (`08_b0_input_crosscheck.out`). For B1 it reads the list built by `b1_coverage.py`, equal to the set of VERIF;
+  `12_B1_check_complete_verifier_list.out` checks the completeness of the run against the list of VERIF directly. A
+  control run of CMINE on the 170 triples of matchings #813 and #975, read from the files of VERIF, gives the same
+  four graphs (`05_control_B1_check.out`, `06_control_B1_compare.out`).
+- *Work done* (program-specific counters, not comparable between programs). ENUM on the 2667 representatives of B0:
   262850 (triple, type solution) pairs examined, 170382 of them dead by the counting and forced-orbit tests, 701270
-  search nodes, 340605 rejections by a budget violation and 704789 by a PSD violation. C on B0: 132132 types
+  search nodes, 340605 rejections by a budget violation and 704789 by a PSD violation. CMINE on B0: 132132 types
   tested, 603053 sets K without budget violation on 39 vertices, 52580 without PSD violation, 3165 cover nodes, no
-  cover reaching the 47-vertex test, 611642 PSD certificates and no use of the exact fallback. C on B1: 115473
+  cover reaching the 47-vertex test, 611642 PSD certificates and no use of the exact fallback. CMINE on B1: 115473
   types, 905578 and 75295 sets K, 9248 cover nodes, 43 tests on 47 vertices, 4 survivors, 959041 certificates, no
-  fallback. C on B2: 4222 types, 39107 and 1535 sets K, 173 cover nodes, no 47-vertex test, 40845 certificates.
+  fallback. CMINE on B2: 4222 types, 39107 and 1535 sets K, 173 cover nodes, no 47-vertex test, 40845 certificates.
 - *"Type solutions" (referee's remark 6).* The B2 report gives "11235 type solutions over the 74 pairs (tau, F), of
-  which 4227 pass on the 33 vertices S u N[p]", found by E and by C. These numbers count the sets of five types
+  which 4227 pass on the 33 vertices S u N[p]", found by ENUM and by CMINE. These numbers count the sets of five types
   satisfying (C5) only, i.e. **without the cell-room condition (C6)**; with (C6) the referee counts 770 type
   solutions, 514 of which pass on the 33 vertices (`ref5b_types_variants_B2.out`). Both programs apply (C6) later,
   as a budget test, so nothing changes downstream.
@@ -1339,7 +1518,8 @@ Notes.
 For the four stage-C survivors of B1 (appendix B), the following is established exactly by programs that share no
 code with the enumerations (`lemma/t18/r3_survivors.py`, by rational elimination, for both matrices;
 `lemma/t18/r4_verifyD.py`, for M1; `lemma/t18_REFEREE/ref8_survivors.py`, by exact characteristic polynomials, for
-both matrices):
+both matrices; and, since the second referee's report, `lemma/t18_REFEREE2/survivors.py`, which rebuilds the four
+graphs from appendix B alone, by exact characteristic polynomials, for both matrices):
 
 | survivor | t | a_2 on A_p | orbits of W with a_2 = 3 / with a_2 = 2 | M1 on the 47 vertices | M2 on the 47 vertices |
 |---|---|---|---|---|---|
@@ -1377,8 +1557,8 @@ independently. So none of the four graphs is the induced subgraph on Y47 of a co
 Programs (five codes written separately, all exact): `lemma/t18/r4_rank.py`
 (fraction-free Bareiss determinant, ranks by rational elimination), `lemma/t18_STRUCT/rank_survivors.py` (ranks) and
 `rank_survivors_check2.py` (Bareiss determinant; rank modulo two primes), `lemma/t18_B2/rank_B1_survivors.py` with
-`rankbound.py` (determinant and ranks, on the survivors as found by C), `lemma/t18_B0/b0_rank47.py` (ranks),
-`lemma/t18_REFEREE/ref8_survivors.py` (determinant and ranks, on the survivors as found by R). All give the values
+`rankbound.py` (determinant and ranks, on the survivors as found by CMINE), `lemma/t18_B0/b0_rank47.py` (ranks),
+`lemma/t18_REFEREE/ref8_survivors.py` (determinant and ranks, on the survivors as found by REF1). All give the values
 of the table. The smallest eigenvalue of G_odd is about 0.011 (#813) and 0.012 (#975) in floating point: the matrix
 is positive definite, which is why a PSD test cannot see the obstruction.
 
@@ -1430,6 +1610,13 @@ Programs (three exact, plus the referee):
   certificates, re-checked (`lemma/t18_B2/b2_certs_check.out`);
 - `lemma/t18_REFEREE/ref8_survivors.py`: 678 and 678; 849 and 849 without the upper bound of (D3), of which 846
   satisfy it; none passes the (floating-point) PSD test.
+
+*On "55 vertices" (second referee's remark 9).* The outputs of `r4_stageD.py` and of `d_stage.py` contain the words
+"0 configurations on 55 vertices left". No set of 55 vertices is used, or shown to be determined, in this text: (D1)
+covers only the 48 vertices Y47 u {z} and the 49 vertices Y47 u {z, sigma z}, and Computation 8.8 stops there. For
+the 55 vertices Y47 u (X_0 \ {p}), the adjacencies between vertices of two different orbits of X_0 \ {p} are neither
+forced by a lemma of this text nor listed as a parameter. The printed words only mean that, no set Z being left for
+one orbit {z, sigma z}, nothing is left that could be extended to the four orbits of X_0 \ {p}.
 
 *Remark (not used).* On the four survivors the kernel of M1[Y47] is spanned by the vector 4 e_p + 1_{N(p)}, which
 is in the kernel of M1 for the whole graph; so the condition "the row of a new vertex is orthogonal to the kernel"
@@ -1484,20 +1671,20 @@ of the four survivors of B1; Computation 8.8 is an independent alternative to 8.
 | Lemma 2.1, Corollary 2.2 | sigma and N(p) | hand | - |
 | Proposition 3.1 | integer values => 0, +1, -1, nine at +1 | hand | - |
 | Lemmas 4.2-4.7, Corollary 4.8, Lemma 4.9 | k = 0, e = 0, B is 4-regular with codegrees <= 2 | hand | - |
-| Computation 4.10 | B is B0, B1 or B2; their codegrees are 1 or 2 | computed | 3 programs (`enum_S.py`, `verify_S.py`, `ref1_quartic9.py`), see 9.3 item 5 |
+| Computation 4.10 | B is B0, B1 or B2; their codegrees are 1 or 2 | computed | 4 programs (`enum_S.py`, `verify_S.py`, `ref1_quartic9.py`, and REF2: `q9.py`), see 9.3 item 5 |
 | Lemmas 5.1, 5.2, Theorem 5.3 | path count; n_3 = 0 | hand | - |
 | Lemmas 5.4, 5.5, 5.6, Proposition 5.7 | identities; the three profiles; (4,1,2) impossible | hand | - |
 | Lemmas 6.1, 6.2, 6.3, Proposition 6.4 | the two PSD matrices, the budget, the rank bound | hand | - |
 | Lemmas 7.1, 7.2 | X_2 and the matching tau; stage-1 tests | hand | - |
-| Computation 7.3 | the admissible matchings and their orbits | computed | 4 programs, same numbers; representatives checked by 2 of them |
+| Computation 7.3 | the admissible matchings and their orbits | computed | 4 programs, same numbers; representatives checked by 2 of them; REF2: same numbers, stored representatives checked |
 | Lemmas 7.4, 7.5 | structure and determined sets of profile (3,3,1) | hand | - |
-| Computation 7.6 | profile (3,3,1): nothing survives on 51 vertices (B0, B1), on 45 (B2) | computed | 2 exact implementations sharing no code (I1, I2), identical intermediate sets; a third for B2 (I3); referee's count check (R) |
+| Computation 7.6 | profile (3,3,1): nothing survives on 51 vertices (B0, B1), on 45 (B2) | computed | 2 exact implementations sharing no code (I1, I2), identical intermediate sets; a third for B2 (I3); referee's count check (REF1); REF2: same counts on every line of section 7.5, exact rejections |
 | Lemmas 8.1, 8.2, 8.3 | structure and determined sets of profile (2,5,0) | hand | - |
-| Computation 8.4 | stage B: 5595 / 4977 / 196 triples | computed | 2 exact implementations (E, V), identical sets; R: same counts |
-| Computation 8.5 | stage C: 0 / 4 / 0 survivors | computed | 2 complete exact implementations sharing no code (E, C); a third for B2 (V); partial ones for B0, B1; R: same result |
-| Computation 8.6 | the four survivors violate the rank bound | computed | 5 exact codes written separately |
+| Computation 8.4 | stage B: 5595 / 4977 / 196 triples | computed | 2 exact implementations (ENUM, VERIF), identical sets; REF1: same counts; REF2: same list as VERIF up to Aut(B), every triple verified exactly PSD on Y37 |
+| Computation 8.5 | stage C: 0 / 4 / 0 survivors | computed | B1 and B2: 2 complete exact implementations sharing no code (ENUM, CMINE), and a third for B2 (VERIF); B0: CMINE complete, ENUM complete modulo the stabiliser reduction (section 8.4); partial runs of VERIF for B0, B1; REF1: same result; REF2: same result on all triples, exact rejections |
+| Computation 8.6 | the four survivors violate the rank bound | computed | 5 exact codes written separately; REF2: same values, from appendix B alone |
 | Lemma 8.7 | forced numbers of stage D | hand | - |
-| Computation 8.8 | no vertex of X_0 \ {p} can be added to the four survivors | computed | 3 exact programs sharing no code; R |
+| Computation 8.8 | no vertex of X_0 \ {p} can be added to the four survivors | computed | 3 exact programs sharing no code; REF1; REF2: same numbers, every Z rejected exactly |
 
 The hand part was audited by a referee who re-derived every statement from the definitions before reading the
 given proof (`lemma/t18_REFEREE/REPORT.md`): every load-bearing hand statement was found correct, and the referee's
@@ -1506,70 +1693,98 @@ list of defects of the written text is addressed in section 9.5. The referee als
 and an involution with one fixed point, the Paley graph on 9 vertices and the srg(243,22,1,2), with x -> -x
 (`ref3_bvls.out`).
 
+A second referee then read this text itself and re-did every Computation with his own programs (REF2 in the table
+above); what he covered and what he did not check is in section 9.6.
+
 ### 9.3 What has not been independently verified, and other caveats
 
-1. **Floating-point "kept" decisions.** In E (`r3_p250.py`), V (`r3_verify.py`), C (`c_mine.py`), I1, `e331.py`,
-   `d_stage.py`, `r4_stageD.py`, a candidate is kept when the smallest floating-point eigenvalue is above about
-   -10^-7; this is never used as a proof of semidefiniteness. A rejection requires an exact witness: an integer
-   vector with negative quadratic form (64-bit integers in `r3_p250.py` and `r4_stageD.py`, with the bound
-   |x^T M x| < 2 * 10^15 stated in the source of `r3_p250.py`; Python integers elsewhere), or an exact elimination
-   (fallback of `c_mine.py`, `r2_hfirst.py`, `r2_ext2.py`; it produced no rejection in the runs reported), or an
-   exact characteristic polynomial (I2). When the eigenvalue is negative and no witness is found, `r3_p250.py`
-   keeps the candidate and counts it ("psd_float_neg_no_cert"): 0 cases in every run reported; `r3_verify.py` and
-   `r4_verifyD.py` report 0 "ambiguous" cases. The only places where a positive statement of semidefiniteness is
-   made are exact: the four survivors of B1 (section 8.5), and the acceptances of I2 at 39, 45, 51 vertices; none
-   of these positive statements is needed for Theorem 9.1.
+1. **Floating-point "kept" decisions.** In ENUM (`r3_p250.py`), VERIF (`r3_verify.py`), CMINE (`c_mine.py`), I1,
+   `e331.py`, `d_stage.py`, `r4_stageD.py`, a candidate is kept when the smallest floating-point eigenvalue is above
+   about -10^-7 (-10^-6 in `r3_verify.py`); this is never used as a proof of semidefiniteness. A rejection requires
+   an exact witness: an integer vector with negative quadratic form (64-bit integers in `r3_p250.py` and
+   `r4_stageD.py`, with the bound |x^T M x| < 2 * 10^15 stated in the source of `r3_p250.py`; Python integers
+   elsewhere), or an exact elimination (fallback of `c_mine.py`, `r2_hfirst.py`, `r2_ext2.py`; it produced no
+   rejection in the runs reported), or an exact characteristic polynomial (I2). When the eigenvalue is negative and
+   no witness is found, `r3_p250.py` keeps the candidate and counts it ("psd_float_neg_no_cert"): 0 cases in every
+   run reported; `r3_verify.py` and `r4_verifyD.py` report 0 "ambiguous" cases. The places where a positive
+   statement of semidefiniteness is made are exact; they are listed in the table of section 6.3: the four survivors
+   of B1 (section 8.5), the acceptances of I2 at 39, 45, 51 vertices, and, since the second referee's report, the
+   stage-B triples on Y37 and the pairs (tau, F) on 23 vertices (`exactB.py`, `recount.py`). None of these positive
+   statements is needed for Theorem 9.1: by (6.2) the exclusions use exact rejections only. They are needed only to
+   know that the numbers printed for these lists are numbers of survivors in the sense of the definition of section
+   6.3. Every other "kept" decision is floating-point.
 2. **The referee's runs use floating-point PSD rejections** (threshold -10^-7) with no exact certificate. They are
    checks of the model and of the counts, not further exact proofs. Exception: the ranks and determinants of the
-   four survivors in `ref8_survivors.py` are exact.
+   four survivors in `ref8_survivors.py` are exact. (This item is about the first referee; the programs of the
+   second referee reject exactly, see section 9.6.)
 3. **The programs were not audited line by line.** The referee states that it did not verify "the repo's programs
    themselves and their exact certificates (only that they agree with the referee's model at every checkpoint)".
    For this text the following were read in full: `r2_stage1.py`, `r2_hfirst.py`, `r3_p250.py`, `c_mine.py`,
    `v1_stage1.py`, `v3_stage34.py`, `vcommon.py`, `rows.py`; in part: `r3_verify.py`, `v2_stage2.py`,
    `r4_verifyD.py`, `ref4_stageB.py`; for the others only the header. That each program enumerates exactly the list
    described in the text is supported by the agreement of implementations that share no code, not by a proof.
-4. **Shared inputs.** Every program except those of I2 and R reads the matching representatives from
-   `lemma/t18/r2_tau_<s>.json` (file checked by `r3_verify.py stage1` and by `ref10_tau_files.py`). C takes the
-   stage-B triples as input (lists shown identical to the set of V). I1 and E read `structures.json` (the three
-   graphs; the other programs re-enter them as edge lists).
-5. **Computation 4.10.** The list of the 16 classes of 4-regular graphs on 9 vertices comes from one program
-   (`ref1_quartic9.py`). The three classes with codegrees <= 2 are found by three programs, but `verify_S.py`
-   imports the isomorphism routine of `enum_S.py`. The printed output of `enum_S.py` is quoted in the working
-   report and not saved in a file; its result file `structures.json` is in the repository.
-6. **`types.json` and the lemma H16.** I1 and E (`r2_stage1.py`, `r2_hfirst.py`, `r2_stage2.py`, `r2_ext2.py`,
+   The second referee did not audit the programs of the repository either (section 9.6).
+4. **Shared inputs.** Every program except those of I2, REF1 and REF2 reads the matching representatives from
+   `lemma/t18/r2_tau_<s>.json` (file checked by `r3_verify.py stage1`, by `ref10_tau_files.py` and by the second
+   referee's `stage1.py`). CMINE takes the stage-B triples as input (lists shown identical to the set of VERIF). I1
+   and ENUM read `structures.json` (the three graphs; the other programs re-enter them as edge lists).
+5. **Computation 4.10.** In the first version of this text the list of the 16 classes of 4-regular graphs on 9
+   vertices came from one program (`ref1_quartic9.py`). It is now also the output of the second referee's
+   enumeration (`lemma/t18_REFEREE2/q9.py`, no shared code), with the same result. The three classes with
+   codegrees <= 2 are found by four programs, but `verify_S.py` imports the isomorphism routine of `enum_S.py`. The
+   printed output of `enum_S.py` is quoted in the working report and not saved in a file; its result file
+   `structures.json` is in the repository.
+6. **`types.json` and the lemma H16.** I1 and ENUM (`r2_stage1.py`, `r2_hfirst.py`, `r2_stage2.py`, `r2_ext2.py`,
    `r3_p250.py` and its copies `b0_stageC.py`, `b0_stageC2.py`) read lists of admissible "types" from
-   `lemma/t18/types.json`, produced by `lemma/t18/rows.py`. The last filter of `rows.py` (called L in its header) is
-   conditional on H16, an earlier lemma (no configuration of squared norm <= 16) that is **not proved in this
-   document**. The saved output `lemma/t18/rows.out` shows that, for the entries that are read (types with one or
-   two neighbours in S+), the three counters "graph filters", "graph filters + PSD", "graph filters + PSD + L" are
-   equal for B0, B1 and B2 (81 = 81 = 81 and 72 = 72 = 72 for d = 1; 198 = 198 = 198 and 126 = 126 = 126 for
-   d = 2). So neither the PSD filter nor L removed anything there, and the lists that are read are those of the
-   graph filters alone, which are instances of Lemma 6.2 and Lemma 2.1. In addition, every computed line has an
-   implementation that does not read `types.json` (V, C, I2, I3, `d_stage.py`, R). H16 is therefore not used; but
-   this was not pointed out in the working reports nor by the referee, and it rests on `rows.out`.
+   `lemma/t18/types.json`, produced by `lemma/t18/rows.py`. So does the check program `r2_ext2_bruteforce.py`, and
+   so do four programs that are not used in this text (`level1.py`, `level1_count.py`, `r2_gram.py`, `star.py`); the
+   first version of this text omitted these five from the list of readers (second referee's remark 3). The last
+   filter of `rows.py` (called L in its header) is conditional on H16, an earlier lemma (no configuration of squared
+   norm <= 16) that is **not proved in this document**. The saved output `lemma/t18/rows.out` shows that, for the
+   entries that are read (types with one or two neighbours in S+), the three counters "graph filters", "graph
+   filters + PSD", "graph filters + PSD + L" are equal for B0, B1 and B2 (81 = 81 = 81 and 72 = 72 = 72 for d = 1;
+   198 = 198 = 198 and 126 = 126 = 126 for d = 2). So neither the PSD filter nor L removed anything there, and the
+   lists that are read are those of the graph filters alone, which are instances of Lemma 6.2 and Lemma 2.1. This no
+   longer rests on `rows.out` alone: the second referee recomputed the lists directly
+   (`lemma/t18_REFEREE2/recount.py`, `recount.out`) and found that, for each of B0, B1, B2, the entries of
+   `types.json` with d = 0, 1, 2 are exactly the types with no budget violation on the 21 vertices
+   S u {p, w, sigma w}: 1, 81 and 198 types (for d = 0, 1, 2) when the orbit {w, sigma w} is outside N(p), and 1, 72
+   and 126 types when it is inside N(p). Neither the PSD filter nor the H16 filter plays any role there. (For d = 3,
+   which is not among the entries that are read, his output shows a difference for B1: 12 types by budgets alone,
+   none in `types.json`.) In addition, every computed line has an implementation that does not read `types.json`
+   (VERIF, CMINE, I2, I3, `d_stage.py`, REF1, REF2); the second referee confirmed this by searching the sources
+   (`r3_verify.py`, `c_mine.py`, everything in `lemma/t18_VERIF331`, `e331.py`, `d_stage.py`, everything in
+   `lemma/t18_REFEREE`, `r4_stageD.py`, `r4_verifyD.py`, `r4_verifyC.py`, `r4_verifyC2.py`: the file name occurs
+   there in comments only). H16 is therefore not used; this was not pointed out in the working reports nor by the
+   referee.
 7. **Saved certificates.** Only samples of the PSD witnesses were saved and re-checked: 50000 for stages B and C of
    B1 (out of roughly 1.6 million rejections), 12000 for B2, all valid; the 3048 witnesses of stage D are complete
    and were re-checked in both implementations; the witnesses saved for B0 (`r3cert_0_*.jsonl`) were not
    re-checked. Files larger than 1 MB (among them `r4cert_stageD_B1.jsonl` and `t18_B0/r3_p250_0_0of1_B.json`) are
    not in git; `lemma/LARGE_FILES_NOT_IN_GIT.txt` lists them, and they are regenerated by the scripts.
-8. **Runs cut by time limits.** The B1 runs of E were made in five launches; the stage-B run of V for B0 in two
-   (matchings 0..417, then 418..424); the stage-C run of V for B2 in four. Completeness is checked by bookkeeping
-   scripts (`b1_coverage.py`, `b0_input_crosscheck.py`, `check_complete.py`), not by a rerun in one piece. The runs
-   of C are complete, every triple being processed exactly once.
+8. **Runs cut by time limits.** The B1 runs of ENUM were made in five launches; the stage-B run of VERIF for B0 in
+   two (matchings 0..417, then 418..424); the stage-C run of VERIF for B2 in four. Completeness is checked by
+   bookkeeping scripts (`b1_coverage.py`, `b0_input_crosscheck.py`, `check_complete.py`), not by a rerun in one
+   piece. The runs of CMINE are complete, every triple being processed exactly once.
 9. **Patched scripts.** Several scripts were edited during the sessions (`_patch_*.py`). The working reports state
    that the scripts in place are the final ones; that the stored outputs were produced by exactly these versions
    was not verified.
 10. **Single implementations** (none is load-bearing): the reduction of the B0 stage-B triples modulo stabilisers
-    (section 8.4); the rank-bound confirmation of step 4 of profile (3,3,1) for B1 (`r4_rank331.py`). Line 4a of
-    the table of section 7.5 has one exact implementation (I2) and the referee's.
+    (section 8.4), which exists in one program of the repository (its closure, its number of orbits and its
+    stabiliser orders have been recounted by the second referee; the stored representatives were not compared); the
+    rank-bound confirmation of step 4 of profile (3,3,1) for B1 (`r4_rank331.py`). Line 4a of the table of section
+    7.5 has one exact implementation (I2) and the referee's; the second referee's program finds the same numbers.
 11. **Not verified at all, and not used:** the dictionary between T18 and the lattice statement (section 1.4), the
     lemma H16, everything about the analogous statement for squared norm 20.
-12. **Parts of this text that only its author has checked:** Proposition 3.1 as written here (it is the referee's
-    proof); the completed case analysis of Lemma 4.7; the proofs of (F7) in Lemma 7.5 and of the upper bound of
-    (D3) in Lemma 8.7; item 6 above. Two small scripts written for this text (`_check_text_defs.py`,
-    `_check_survivors.py`, in the folder of this document) confirm that the definitions (R1), (R2) of section 7.1
-    reproduce the numbers 99, 63, 25514, 13799, 9229, and that the data printed in appendix B reproduce the
-    determinants 47684 and 874944; they are transcription checks, not part of the proof.
+12. **Parts of this text that only its author had checked** when the first version was written: Proposition 3.1 as
+    written here (it is the referee's proof); the completed case analysis of Lemma 4.7; the proofs of (F7) in Lemma
+    7.5 and of the upper bound of (D3) in Lemma 8.7; item 6 above. All of these have since been checked by the
+    second referee (section 3 of his report for the hand proofs; his remark 3 and `recount.py` for item 6). Two
+    small scripts written for the first version (`_check_text_defs.py`, `_check_survivors.py`, in
+    `lemma/t18_PROOF/`) confirm that the definitions (R1), (R2) of section 7.1 reproduce the numbers 99, 63, 25514,
+    13799, 9229, and that the data printed in appendix B reproduce the determinants 47684 and 874944; they are
+    transcription checks, not part of the proof. What only its author has checked now is the text written for the
+    present revision (the passages listed in section 9.6).
 
 ### 9.4 Statements of the working reports that are not used and are left out
 
@@ -1604,6 +1819,126 @@ and an involution with one fixed point, the Paley graph on 9 vertices and the sr
    implementation for stage C of B1" (section 8.4), the d = 3 classes of A6 (section 9.4).
 9. Unverified and unused statements left out: section 9.4.
 
+### 9.6 The second referee: what his reproduction covered, what he did not check, the eleven corrections
+
+A second referee read the first version of this text (`lemma/t18_REFEREE2/REPORT.md`). He read this text only (not
+the working reports, not the first referee's report). He checked every hand statement line by line (section 3 of his
+report: every statement marked "hand" in section 9.2, and the remark on the kernel in section 8.7, is found correct,
+and nothing is used before it is proved). He traced every pair of classes of every determined set used by the proof
+to a lemma or to a listed parameter (section 4 of his report: the sets of 37, 39, 45, 47, 48, 49 and 51 vertices,
+and the sets of 39 and 41 vertices with one or two orbits of W). And he re-did every Computation with programs
+written from this text alone. His verdict: no error that breaks the proof, and every Computation (4.10, 7.3, 7.6,
+8.4, 8.5, 8.6, 8.8) reproduced with every count equal.
+
+His programs, called REF2 in this text, are in `lemma/t18_REFEREE2` (appendix A.7). They form one more
+implementation of every computed line of section 9.2, written from this text alone, with no code of the repository:
+Python with numpy and python-flint, no solver. In REF2 a rejection is exact (an integer count; an integer vector
+with negative quadratic form, evaluated in Python integers; or an exact characteristic polynomial). A "kept"
+decision of REF2 is floating-point (threshold -10^-7), except in the exact checks named below. Four of these
+programs open data files of the repository, for comparison only: `r2_tau_<s>.json` (`stage1.py`, `survivors.py`,
+`orbitsB0.py`), `types.json` (`recount.py`) and the stage-B files of VERIF (`orbitsB0.py`).
+
+**What REF2 covered** (section 5 of the report; the numbers below were compared with his output files for this
+revision).
+
+*Computation 4.10* (`q9.py`): 1,024,380 labelled 4-regular graphs on 9 vertices; 16 isomorphism classes, all
+connected; exactly 3 classes with all codegrees <= 2 (5040 + 30240 + 20160 = 55440 labelled graphs, minimum codegree
+1, isomorphic to B0, B1, B2); maximum codegree 3 or 4 in each of the other 13 classes.
+
+*Data on B0, B1, B2 and Computation 7.3* (`stage1.py`): 72 / 12 / 18 automorphisms and 6 / 8 / 9 triangles; 99
+admissible rectangles, 63 of them usable in N(p); 25514 / 13799 / 9229 admissible matchings; 425 / 1259 / 528 orbits
+under Aut(B), also by Burnside's count. His output also shows that the lists of deficient pairs printed after
+Corollary 4.11 are the right ones, and that the representatives stored in `r2_tau_<s>.json` are admissible
+matchings, one in each orbit.
+
+*Computation 7.6* (`p331.py`; it uses (F1), (F3), (F4), (F5), (F6), and neither (F2) nor (F7)):
+
+| line of section 7.5 | B0 | B1 | B2 |
+|---|---|---|---|
+| 1. pairs (tau, F), budgets on 25 vertices | 3510 | 7224 | 2406 |
+| 2. kept on 39 vertices | 383 | 481 | 7 |
+| 2'. matchings / pairs (tau, F) carrying them | 50 / 95 | 55 / 76 | 1 / 1 |
+| 3a. tables, budgets on 45 vertices | 8639 | 27203 | 0 |
+| 3b. of which kept after the PSD test on 45 vertices | 23 | 164 | 0 |
+| 4a. graphs on 51 vertices, budgets | 52 | 1839 | - |
+| 4b. of which kept after the PSD test on 51 vertices | 0 | 0 | - |
+
+With M1 alone (`p331_m1.py`): 887 / 672 / 7 kept on 39 vertices, then 102 / 190 / 0 tables, then 0 / 10 / 0 graphs
+on 51 vertices, as in the table of section 7.6.
+
+*Computation 8.4* (`stageB.py`; the pairs between the two orbits of A_p are absent; the degree cap of (C2), (C3) and
+(C4) are not used, only recorded): 5545 / 12366 / 4347 pairs (tau, F) with no budget violation on the 23 vertices,
+of which 4904 / 11509 / 3863 are exactly PSD (`recount.py`); 5595 / 4977 / 196 stage-B triples, with the same
+numbers of matchings and of pairs (tau, F) carrying them, and the same distributions by t and by largest a_2, as in
+the table of Computation 8.4. This list is the list of VERIF up to the action of Aut(B) (`orbitsB0.py`). Every
+triple is exactly PSD for both matrices and has no budget violation on Y37 (`exactB.py`), and every triple satisfies
+the degree cap of (C2), (C3) and (C4).
+
+*Computation 8.5* (`stageC.py`, run on all the 5595 + 4977 + 196 triples of his stage-B list; it uses (C5), (C7),
+(C8)): no survivor for B0, none for B2, exactly 4 for B1, which are the four graphs of appendix B (`compareC.py`).
+
+*Computations 8.6 and 8.8* (`survivors.py`, which rebuilds the four graphs from appendix B alone): on each of them
+(C1)-(C8) hold and there is no budget violation; M1[Y47] is PSD of rank 46 and M2[Y47] is PSD of rank 45, exactly;
+det G_odd = 47684, 47684, 874944, 874944, rank G_odd = 23 and rank G_even = 23; in stage D there are 678, 678, 846,
+846 pairs {Z, sigma Z} (849 and 849 for the two survivors of matching #975 without the upper bound of (D3)); none of
+the oriented sets Z is exactly PSD on the 49 vertices, nor already on the 48 vertices Y47 u {z}, and on the 49
+vertices the violated matrix is always M1.
+
+*Checks made for his remarks 3, 6 and 7*: `recount.py` (the entries of `types.json`; section 9.3, item 6),
+`orbitsB0.py` (the reduction modulo stabilisers for B0; section 8.4) and `recount2.py` (the remark on line 1 in
+section 7.6).
+
+*Comparison with output files of the repository*: his report says that 18 groups of counts quoted in this text were
+compared with the output files and that all agree, among them `ref1_quartic9.out`, `verify_S.out`,
+`r2_stage1_*.out`, `v4_compare.out`, `r2_summary_*.out`, `v7_step4_*.out`, `r4_rank331.out`,
+`09_B0_check_complete.out`, `11_B1_check_complete.out`, `13_B1_survivors_compare.out`, `rows.out`. The complete list
+of the 18 groups is not in his folder (the report refers to a file `SPOTCHECK.txt`, which is not there).
+
+**What the second referee did not check** (section 6 of his report):
+
+- the programs of the repository line by line; that the stored outputs were produced by the scripts now in place;
+  the PSD certificates saved in the repository (he produced rejections of his own instead);
+- the exact positive semidefiniteness of the 39- and 45-vertex survivors of profile (3,3,1) (only rejections matter
+  for the proof; section 6.3 says who verified it);
+- section 1.4 of this text (the lattice dictionary), the lemma H16, and the case of squared norm 20.
+
+So items 3, 7, 9 and 11 of section 9.3 stand as they were. The passages written for the present revision (listed
+below) have not been read by any referee.
+
+**The eleven corrections made after his report** (numbered as in section 2 of the report; apart from them no count,
+statement or proof has been changed).
+
+1. *Definition of a survivor.* A survivor is now defined by properties of the graph (no budget violation, M1 and M2
+   PSD on the set) and no longer by "no violation is found": sections 6.1 and 6.3, Computations 7.6, 8.4, 8.5.
+   Section 6.3 states (6.2), on which every exclusion rests and which uses exact rejections only, and gives the
+   table of the lists verified to be exactly PSD, with the name of who verified them; every other "kept" decision is
+   floating-point (also section 9.3, item 1).
+2. *The 16 classes of Computation 4.10* now come from two programs written separately (section 4.10; section 9.3,
+   item 5).
+3. *`types.json` and H16.* The entries that are read have been recomputed from the budgets alone; the list of the
+   programs that read the file is completed (section 9.3, item 6).
+4. *Pairs between the two orbits of A_p.* They are recorded as non-adjacent in the data H, in Lemma 8.2 and in (C2);
+   Computation 8.4 says that H does not range over them; note in section 8.3.
+5. *Tables* are defined as counted objects (section 7.3; step 3 of Computation 7.6).
+6. *Stage C of B0.* The statement on the number of complete implementations is corrected (section 8.4; section 9.2;
+   section 9.3, item 10); the reduction modulo stabilisers has been recounted.
+7. *Remark on line 1 of section 7.5*: the two conditions and the three sets of numbers (section 7.6).
+8. *Location of the two check scripts*: `lemma/t18_PROOF/` (section 9.3, item 12; appendix B).
+9. *"55 vertices"*: note in section 8.7.
+10. *Appendix.* Location of the B0 result of ENUM; the run of 29 triples of VERIF for B0; the four B2 runs of VERIF;
+    the numbers of files 14, 15 and 17 (table of section 8.4; appendix A.5 and its notes).
+11. *Notation.* eps_i for the inner indicator of section 4.7; kappa_O in section 3; a_0 instead of c(v); the tags
+    ENUM, VERIF, CMINE, REF1 instead of the letters E, V, C, R for programs; conventions of section 0.2; threshold
+    of `r3_verify.py` (-10^-6, not -10^-7).
+
+### 9.7 Possible simplifications (not used; unrefereed)
+
+The second referee added four remarks that would simplify the text. They are his own and have not been refereed, and
+**nothing in this document uses them**: (a) rank M1[Y47] = 46 > 44 = rank M1 would already exclude the four
+survivors by Lemma 6.1 alone, without Lemma 6.3, Proposition 6.4 or stage D; (b) the four survivors are two graphs
+up to the stabiliser of the matching; (c) (D3) can be sharpened to 3 (a_2(z) - 4) <= 2t; (d) (F2), (F7), the degree
+cap of (C2), (C3), (C4) and the upper bound of (D3) are never needed: runs without them give the same lists.
+
 
 ## Appendix A. Programs, outputs and commands
 
@@ -1614,6 +1949,12 @@ are those recorded in the working reports, in the driver logs, or in the headers
 arguments of a run were not recorded, the usage line is given and the names of the output files show how the work
 was split. s (or g) is 0, 1, 2 for B0, B1, B2.
 
+The programs of the second referee (`lemma/t18_REFEREE2`, tag REF2) run with Python 3, numpy and python-flint, and
+sympy for `stage1.py`. Their command lines were not recorded: the usage line of the script is given, and each `.out`
+file is the saved standard output of the run whose arguments appear in its name. `stage1.py` writes
+`my_tau_<s>.json` (his own representatives), which his later enumeration programs read. All his files are listed in
+A.7.
+
 ### A.1 Computation 4.10 (the three graphs)
 
 | program | command | output |
@@ -1622,6 +1963,7 @@ was split. s (or g) is 0, 1, 2 for B0, B1, B2.
 | `lemma/t18/verify_S.py` | `python verify_S.py` | `verify_S.out` ("(i) e=0: labelled 55440, iso classes 3") |
 | `lemma/t18/show_structs.py`, `check_iso.py` | `python show_structs.py`, `python check_iso.py` | `show_structs.out` (edges, automorphisms, codegrees), `check_iso.out` |
 | `lemma/t18_REFEREE/ref1_quartic9.py` | `python ref1_quartic9.py` | `ref1_quartic9.out` (1024380 labelled graphs, 16 classes, 3 with codegrees <= 2) |
+| `lemma/t18_REFEREE2/q9.py` (REF2) | `python q9.py` | `q9.out` (1024380 labelled graphs, 16 classes, 3 with codegrees <= 2, isomorphic to B0, B1, B2) |
 
 ### A.2 Computation 7.3 (stage 1)
 
@@ -1633,6 +1975,7 @@ was split. s (or g) is 0, 1, 2 for B0, B1, B2.
 | `lemma/t18_VERIF331/v1_stage1.py` | `python v1_stage1.py <g>` | `v1_stage1_<g>.out`, `v1_tau_<g>.json`, `v1_tau_<g>_nopsd.json` |
 | `lemma/t18_REFEREE/ref2_stage1.py` | `python ref2_stage1.py B0 B1 B2` | `ref2_stage1_B<g>.out` |
 | `lemma/t18_REFEREE/ref10_tau_files.py` | `python ref10_tau_files.py` (after `ref4_stageB.py`) | `ref10_tau_files.out` |
+| `lemma/t18_REFEREE2/stage1.py` (REF2) | `python stage1.py` | `stage1.out`, `my_tau_<s>.json` |
 
 ### A.3 Computation 7.6 (profile (3,3,1))
 
@@ -1649,43 +1992,73 @@ was split. s (or g) is 0, 1, 2 for B0, B1, B2.
 | comparison of the sets | I2: `v4_compare39.py`, `v4_compare45.py` | `python v4_compare39.py <g>`, `python v4_compare45.py <g>` | `v4_compare.out` |
 | summary; M1 alone | I2: `v5_summary.py`, `v6_m1_final.py` | `python v5_summary.py`, `python v6_m1_final.py 1` | `v5_summary.out`, `v6_m1_final.out` |
 | 1-3 (B2) | I3: `lemma/t18_B2/e331.py` | `python e331.py 2 0 1 280` ; `python e331_compare.py 2 r2_hfirst_2_0of1.json` | `e331_2.out`, `e331_compare_2.out` |
-| 1, 2 | R: `lemma/t18_REFEREE/ref6_p331.py` | `python ref6_p331.py <B0, B1 or B2>` (REF_M1ONLY=1 for M1 alone) | `ref6_p331_B<g>.out`, `ref6_p331_B<g>_0of1.json` (and `_M1only`) |
-| 3a-4b | R: `ref7_p331_ext.py` (B2), `ref7b_p331_ext.py` (B0, B1) | `python ref7b_p331_ext.py <B0 or B1> ref6_p331_B<g>_0of1.json <part> 3` | `ref7_p331_ext_B2.out`, `ref7b_p331_ext_B<g>_<part>of3.out`; totals in `ref9_totals.out` (`python ref9_totals.py`) |
+| 1, 2 | REF1: `lemma/t18_REFEREE/ref6_p331.py` | `python ref6_p331.py <B0, B1 or B2>` (REF_M1ONLY=1 for M1 alone) | `ref6_p331_B<g>.out`, `ref6_p331_B<g>_0of1.json` (and `_M1only`) |
+| 3a-4b | REF1: `ref7_p331_ext.py` (B2), `ref7b_p331_ext.py` (B0, B1) | `python ref7b_p331_ext.py <B0 or B1> ref6_p331_B<g>_0of1.json <part> 3` | `ref7_p331_ext_B2.out`, `ref7b_p331_ext_B<g>_<part>of3.out`; totals in `ref9_totals.out` (`python ref9_totals.py`) |
+| 1, 2, 2', 3a, 3b, 4a, 4b | REF2: `lemma/t18_REFEREE2/p331.py` | `python p331.py <s> <part> <nparts>` (B0: 3 parts; B1: 4 parts; B2: 1 part) | `p331_0_{0,1,2}.out`, `p331_1_{0,1,2,3}.out` (no log was saved for B2); `my331_0_{0,1,2}of3.json`, `my331_1_{0,1,2,3}of4.json`, `my331_2_0of1.json` |
+| M1 alone (section 7.6) | REF2: `lemma/t18_REFEREE2/p331_m1.py` | `python p331_m1.py <s> <part> <nparts>` with the environment variable M1ONLY set | `p331m1_0_{0,1,2}.out`, `p331m1_1_{0,1,2,3}.out`, `p331m1_2_0.out`; `my331_M1_0_{0,1,2}of3.json`, `my331_M1_1_{0,1,2,3}of4.json`, `my331_M1_2_0of1.json` |
+| 1; the remark on line 1 (section 7.6) | REF2: `lemma/t18_REFEREE2/recount.py`, `recount2.py` | `python recount.py` ; `python recount2.py` | `recount.out`, `recount2.out` |
 
 ### A.4 Computation 8.4 (stage B of profile (2,5,0))
 
 | graph | program | command | output |
 |---|---|---|---|
-| B1 | E: `lemma/t18/r3_p250.py` | `python r3_p250.py 1 <part> <nparts> <time limit> BC`, with R3_IDX=<matchings> for the later launches | 14 files `r3_p250_1_*_BC.json` (listed, with the launch of each, in `lemma/t18_B0_VERIFC/04_b1_coverage.out`); logs `r3_1_*.out` |
-| B1 | V: `lemma/t18/r3_verify.py` | `python r3_verify.py B250 1 <part> 3 <time limit>` | `r3v_B250_1_{0,1,2}.out`, `r3v_B250_1_{0,1,2}of3.json` |
+| B1 | ENUM: `lemma/t18/r3_p250.py` | `python r3_p250.py 1 <part> <nparts> <time limit> BC`, with R3_IDX=<matchings> for the later launches | 14 files `r3_p250_1_*_BC.json` (listed, with the launch of each, in `lemma/t18_B0_VERIFC/04_b1_coverage.out`); logs `r3_1_*.out` |
+| B1 | VERIF: `lemma/t18/r3_verify.py` | `python r3_verify.py B250 1 <part> 3 <time limit>` | `r3v_B250_1_{0,1,2}.out`, `r3v_B250_1_{0,1,2}of3.json` |
 | B1 | comparison | `python r3_finalB.py` | `lemma/t18/r3_finalB.out` |
-| B0 | E: `lemma/t18_B0/r3_p250.py` (unchanged copy) | `python r3_p250.py 0 0 1 540 B` | `b0_enumB.out`, `r3_p250_0_0of1_B.json` (not in git) |
-| B0 | V: `lemma/t18_B0/r3_verify.py`, `b0_verify.py` | `python r3_verify.py B250 0 0 1 540`, then `b0_verify.py` (the same program with the list R3V_TAUS of matchings 418..424) | `b0_verB.out`, `b0_verB_t418.out`, `r3v_B250_0_0of1.json`, `r3v_B250_0_0of1_t418.json` |
+| B0 | ENUM: `lemma/t18_B0/r3_p250.py` (unchanged copy) | `python r3_p250.py 0 0 1 540 B` | `b0_enumB.out`, `r3_p250_0_0of1_B.json` (not in git) |
+| B0 | VERIF: `lemma/t18_B0/r3_verify.py`, `b0_verify.py` | `python r3_verify.py B250 0 0 1 540`, then `b0_verify.py` (the same program with the list R3V_TAUS of matchings 418..424) | `b0_verB.out`, `b0_verB_t418.out`, `r3v_B250_0_0of1.json`, `r3v_B250_0_0of1_t418.json` |
 | B0 | comparison | `python b0_compareB.py` | `lemma/t18_B0/b0_compareB.out` |
-| B2 | E: `lemma/t18_B2/r3_p250.py` (unchanged copy) | `python r3_p250.py 2 0 2 560 BC` ; `python r3_p250.py 2 1 2 560 BC` | `b2_BC_0of2.out`, `b2_BC_1of2.out`, `r3_p250_2_{0,1}of2_BC.json`, statistics `b2_stats.out` |
-| B2 | V: `lemma/t18_B2/r3_verify.py` | `python r3_verify.py B250 2 0 1 540` | `b2v_B250.out`, `r3v_B250_2_0of1.json` |
+| B2 | ENUM: `lemma/t18_B2/r3_p250.py` (unchanged copy) | `python r3_p250.py 2 0 2 560 BC` ; `python r3_p250.py 2 1 2 560 BC` | `b2_BC_0of2.out`, `b2_BC_1of2.out`, `r3_p250_2_{0,1}of2_BC.json`, statistics `b2_stats.out` |
+| B2 | VERIF: `lemma/t18_B2/r3_verify.py` | `python r3_verify.py B250 2 0 1 540` | `b2v_B250.out`, `r3v_B250_2_0of1.json` |
 | B2 | comparison | `python r3_verify.py compareB 2 r3_p250_2_0of2_BC.json r3_p250_2_1of2_BC.json` | `lemma/t18_B2/b2_compareB.out` |
-| all | R: `lemma/t18_REFEREE/ref4_stageB.py` | `python ref4_stageB.py <B0, B1 or B2>` | `ref4_stageB_B<g>.out`, `ref4_stageB_B<g>_0of1.json` |
+| all | REF1: `lemma/t18_REFEREE/ref4_stageB.py` | `python ref4_stageB.py <B0, B1 or B2>` | `ref4_stageB_B<g>.out`, `ref4_stageB_B<g>_0of1.json` |
 | all | observed distributions | `python check_lemmas_stageB.py` (`lemma/t18_STRUCT`) | `check_lemmas_stageB.out` |
+| all | REF2: `lemma/t18_REFEREE2/stageB.py` | `python stageB.py <s> [first] [last]` (B0 in four runs, B1 in three, B2 in one) | `stageB_0_{a,b,c,d}.out`, `stageB_1_{a,b,c}.out`, `stageB_2.out`; `myB_0_0_300.json`, `myB_0_300_380.json`, `myB_0_380_410.json`, `myB_0_410_425.json`, `myB_1_0_420.json`, `myB_1_420_840.json`, `myB_1_840_1259.json`, `myB_2_0_528.json` |
+| all | REF2: every stage-B triple exactly PSD on Y37 (`exactB.py`) | `python exactB.py` | `exactB.out` |
+| all | REF2: orbits under the stabilisers; comparison with the files of VERIF (`orbitsB0.py`) | `python orbitsB0.py <s>` | `orbitsB_<s>.out` |
+| all | REF2: first two rows of the table of Computation 8.4 (`recount.py`) | `python recount.py` | `recount.out` |
 
 ### A.5 Computation 8.5 (stage C of profile (2,5,0))
 
 | graph | program | command | output |
 |---|---|---|---|
-| B1 | E | the runs of A.4 (stages "BC") | `r3_finalB.out`, `r3_round5.out`; survivors in `r3_p250_1_0of3_idx752_BC.json` (#813) and `r3_p250_1_2of3_idx758_BC.json` (#975) |
-| B1 | C: `lemma/t18_B0_VERIFC/c_mine.py` | `python b1_coverage.py in_B1 in_B1v B1/b1_stageB_all.json` ; `python run_parts.py B1 6 1 24 3000 all B1/b1_stageB_all.json` (which runs `python c_mine.py 1 <part> 24 3000 b1_stageB_all.json` for the 24 parts) ; `python check_complete.py B1 1 4977 275 - B1/b1_stageB_all.json` ; `python b1_survivors_compare.py B1 in_B1 control_B1/c_mine_1_0of1_t813.json` | `04_b1_coverage.out`; `B1/c_mine_1_<part>of24.json`, `.out`; `11_B1_check_complete.out`, `12_B1_check_complete_verifier_list.out`, `13_B1_survivors_compare.out` |
-| B1 | C, control on #813 and #975 | `C_TAUS=813,975 python run_parts.py control_B1 1 1 1 3000 all in_B1v/r3v_B250_1_{0,1,2}of3.json` ; `python check_complete.py control_B1 1 170 2 813,975 <the same three files>` | `control_B1/c_mine_1_0of1_t813.json`, `05_control_B1_check.out`, `06_control_B1_compare.out`, `07_control_B1_vs_B2session.out` |
-| B1 | partial: V, `r4_verifyC.py`, `r4_verifyC2.py` | `python r3_verify.py C250 1 ...` ; `R4V_FULL=1 python r4_verifyC2.py 1 <part> 2 470` ; `python r4_compareC_final.py` | `lemma/t18/r4_compareC_final.out` |
-| B0 | E: `lemma/t18_B0/b0_stageC.py`, `b0_stageC2.py` | `python b0_orbitsB.py` ; `bash b0_loopC.sh` (slices of at most 560 s) ; `python b0_summaryC.py` | `b0_orbitsB.out`, `b0_stageB_reps.json`; `b0_stageC_done_*.jsonl`, `b0_stageC_r*_*.out`; summary in `lemma/t18_B0/REPORT.md` ("FINAL STATE") |
-| B0 | C: `lemma/t18_B0_VERIFC/c_mine.py` | `python run_parts.py B0 6 0 24 3000 all in_B0/r3_p250_0_0of1_B.json` ; `python check_complete.py B0 0 5595 133 - in_B0/r3_p250_0_0of1_B.json` ; `python b0_input_crosscheck.py <enumerator file> <the two verifier files> r2_tau_0.json` | `B0/c_mine_0_<part>of24.json`, `.out`; `09_B0_check_complete.out`; `08_b0_input_crosscheck.out` |
-| B0 | V on a sample | `python b0_verify.py C250 0 0 150 270` | `lemma/t18_B0/b0_verC_sample.out` |
-| B2 | E | the runs of A.4 | `b2_BC_0of2.out`, `b2_BC_1of2.out` |
-| B2 | V | `python r3_verify.py C250 2 0 2 550`, then with R3V_SKIP / R3V_TAKE (0/86 and 86/86 with part 1 of 2, 172/24 with part 0 of 1) | `b2v_C250_0of2.out`, `b2v_C250_odd_skip0.out`, `b2v_C250_odd_skip86.out`, `b2v_C250_skip172.out` |
-| B2 | C: `lemma/t18_B2/c_mine.py` | `python c_mine.py 2 0 1 520 r3_p250_2_0of2_BC.json r3_p250_2_1of2_BC.json` | `c_mine_2_all.out`, `c_mine_2_0of1.json` |
-| all | R: `lemma/t18_REFEREE/ref5_stageC.py` | `python ref5_stageC.py <B0, B1 or B2> ref4_stageB_B<g>_0of1.json full ...` ; `python ref9_totals.py` | `ref5_stageC_B0_all_*of3.out`, `ref5_stageC_B1_all_*of3.out`, `ref5_stageC_B2.out`, `ref9_totals.out`; type-solution variants in `ref5b_types_variants_B2.out` |
+| B1 | ENUM | the runs of A.4 (stages "BC") | `r3_finalB.out`, `r3_round5.out`; survivors in `r3_p250_1_0of3_idx752_BC.json` (#813) and `r3_p250_1_2of3_idx758_BC.json` (#975) |
+| B1 | CMINE: `lemma/t18_B0_VERIFC/c_mine.py` | `python b1_coverage.py in_B1 in_B1v B1/b1_stageB_all.json` ; `python run_parts.py B1 6 1 24 3000 all B1/b1_stageB_all.json` (which runs `python c_mine.py 1 <part> 24 3000 b1_stageB_all.json` for the 24 parts) ; `python check_complete.py B1 1 4977 275 - B1/b1_stageB_all.json` ; `python b1_survivors_compare.py B1 in_B1 control_B1/c_mine_1_0of1_t813.json` | `04_b1_coverage.out`; `B1/c_mine_1_<part>of24.json`, `.out`; `11_B1_check_complete.out`, `12_B1_check_complete_verifier_list.out`, `13_B1_survivors_compare.out` |
+| B1 | CMINE, control on #813 and #975 | `C_TAUS=813,975 python run_parts.py control_B1 1 1 1 3000 all in_B1v/r3v_B250_1_{0,1,2}of3.json` ; `python check_complete.py control_B1 1 170 2 813,975 <the same three files>` | `control_B1/c_mine_1_0of1_t813.json`, `05_control_B1_check.out`, `06_control_B1_compare.out`, `07_control_B1_vs_B2session.out` |
+| B1 | partial: VERIF, `r4_verifyC.py`, `r4_verifyC2.py` | `python r3_verify.py C250 1 ...` ; `R4V_FULL=1 python r4_verifyC2.py 1 <part> 2 470` ; `python r4_compareC_final.py` | `lemma/t18/r4_compareC_final.out` |
+| B0 | ENUM: `lemma/t18_B0/b0_stageC.py`, `b0_stageC2.py` | `python b0_orbitsB.py` ; `bash b0_loopC.sh` (slices of at most 560 s) ; `python b0_summaryC.py` | `b0_orbitsB.out`, `b0_stageB_reps.json`; the result is in `b0_stageC_done_*.jsonl` (one line per representative) and `b0_stageC_survivors.json`; logs `b0_stageC_r*_*.out`; `lemma/t18_B0/REPORT.md` ("FINAL STATE") is only a summary generated from them |
+| B0 | CMINE: `lemma/t18_B0_VERIFC/c_mine.py` | `python run_parts.py B0 6 0 24 3000 all in_B0/r3_p250_0_0of1_B.json` ; `python check_complete.py B0 0 5595 133 - in_B0/r3_p250_0_0of1_B.json` ; `python b0_input_crosscheck.py <enumerator file> <the two verifier files> r2_tau_0.json` | `B0/c_mine_0_<part>of24.json`, `.out`; `09_B0_check_complete.out`; `08_b0_input_crosscheck.out` |
+| B0 | VERIF, part 0 of 150, cut by its time limit after 29 triples (not a designed sample) | `python b0_verify.py C250 0 0 150 270` | `lemma/t18_B0/b0_verC_sample.out` |
+| B2 | ENUM | the runs of A.4 | `b2_BC_0of2.out`, `b2_BC_1of2.out` |
+| B2 | VERIF | `python r3_verify.py C250 2 0 2 550` (cut by its time limit after 86 of the 98 triples of its part), then with R3V_SKIP / R3V_TAKE (0/86 and 86/86 with part 1 of 2, 172/24 with part 0 of 1); the four runs together treat 86 + 43 + 43 + 24 = 196 triples | `b2v_C250_0of2.out`, `b2v_C250_odd_skip0.out`, `b2v_C250_odd_skip86.out`, `b2v_C250_skip172.out` |
+| B2 | CMINE: `lemma/t18_B2/c_mine.py` | `python c_mine.py 2 0 1 520 r3_p250_2_0of2_BC.json r3_p250_2_1of2_BC.json` | `c_mine_2_all.out`, `c_mine_2_0of1.json` |
+| all | REF1: `lemma/t18_REFEREE/ref5_stageC.py` | `python ref5_stageC.py <B0, B1 or B2> ref4_stageB_B<g>_0of1.json full ...` ; `python ref9_totals.py` | `ref5_stageC_B0_all_*of3.out`, `ref5_stageC_B1_all_*of3.out`, `ref5_stageC_B2.out`, `ref9_totals.out`; type-solution variants in `ref5b_types_variants_B2.out` |
+| all | REF2: `lemma/t18_REFEREE2/stageC.py` | `python stageC.py <s> <part> <nparts> <files myB_<s>_*.json>` (B0 and B1: 8 parts; B2: 6 parts) | `stageC_0_<part>.out` and `stageC_1_<part>.out` (part 0..7), `stageC_2_<part>.out` (part 0..5); `myC_0_<part>of8.json`, `myC_1_<part>of8.json`, `myC_2_<part>of6.json` |
+| B1 | REF2: his four survivors compared with appendix B (`compareC.py`) | `python compareC.py` | `compareC.out` |
 
-The input file `in_B0/r3_p250_0_0of1_B.json` of the B0 run of C is the stage-B file of E (1.2 MB, not in git); the
-log `00_setup_hashes.log` records its hash and that of the copies of `c_mine.py` and `r2_tau_<s>.json`.
+The input file `in_B0/r3_p250_0_0of1_B.json` of the B0 run of CMINE is the stage-B file of ENUM (1.2 MB, not in
+git); the log `00_setup_hashes.log` records its hash and that of the copies of `c_mine.py` and `r2_tau_<s>.json`.
+
+Notes on A.4 and A.5 (second referee's remark 10).
+
+- *Numbers of files of ENUM for B1.* Three outputs quote three numbers: 14 files in `04_b1_coverage.out`, 17 in
+  `lemma/t18/r3_finalB.out`, 15 in `13_B1_survivors_compare.out`. This text relies on the 14 files of
+  `04_b1_coverage.out`, in which every matching is taken from the one file that completed it. The scripts of the two
+  other outputs take every file `r3_p250_1_*.json` whose name contains `_BC` (respectively ends in `_BC.json`), so
+  they also read files that `04_b1_coverage.out` lists as not used: byte-identical copies (`_round1`) of three of
+  the 14 files, and the early trial `r3_p250_1_0of40_BC.json`. Today the folder `in_B1` contains 15 files ending in
+  `_BC.json` (the 14 and that trial), and `lemma/t18` contains 18 files whose name contains `_BC` (the 14, the three
+  copies and the trial); `r3_finalB.out` does not list the 17 files it read. The extra files add nothing:
+  `r3_finalB.out` reports the same 4977 triples and the same four survivors, and `13_B1_survivors_compare.out` the
+  same four survivors.
+- *B0, ENUM.* The result is in the files `b0_stageC_done_*.jsonl` and `b0_stageC_survivors.json` of `lemma/t18_B0`,
+  not in `REPORT.md`, whose section "FINAL STATE" is generated from them. Checked by the second referee: 2667 lines,
+  every index from 0 to 2666 exactly once, no survivor, and the counters 262850 / 170382 / 701270 / 340605 / 704789
+  quoted in the notes of section 8.4.
+- *B0, VERIF.* `b0_verC_sample.out` is not a designed sample: it is the run of part 0 of 150, which was cut by its
+  time limit after 29 triples.
+- *B2, VERIF.* The first of the four runs was cut by its time limit after 86 of the 98 triples of its part; the
+  three other runs take the rest, and the four runs together treat 86 + 43 + 43 + 24 = 196 triples.
 
 ### A.6 Computations 8.6 and 8.8 (the four survivors of B1)
 
@@ -1700,13 +2073,34 @@ log `00_setup_hashes.log` records its hash and that of the copies of `c_mine.py`
 | stage D | `lemma/t18/r4_stageD.py` | `python r4_stageD.py 1 <files r3_p250_1_*_BC.json>` ; `python r3_verify.py certs r4cert_stageD_B1.jsonl` | `r4_stageD_B1.out`, `r4_stageD_B1.json`, `r4cert_stageD_B1.jsonl` (not in git) |
 | stage D | `lemma/t18/r4_verifyD.py` | `python r4_verifyD.py 1 <files r3_p250_1_*_BC.json>` | `r4_verifyD.out` |
 | stage D | `lemma/t18_B2/d_stage.py` | `python d_stage.py 1 B1check <file with the survivors>` ; `python r3_verify.py certs ...` | `d_stage_B1check.out`, `d_stage_B1check.json`, `b2_certs_check.out` |
+| exact re-examination, rank bound, stage D | REF2: `lemma/t18_REFEREE2/survivors.py` (the four graphs rebuilt from appendix B) | `python survivors.py` | `survivors.out` |
+
+### A.7 The files of the second referee (`lemma/t18_REFEREE2`)
+
+The folder contains 118 files: the report `REPORT.md` and the 117 files of the following table.
+
+| files | what they are | computed line reproduced |
+|---|---|---|
+| `common.py` | helpers: the graphs B0, B1, B2 and the deficient pairs as printed in this text, automorphisms, budget test | - |
+| `q9.py`, `q9.out` | enumeration of the 4-regular graphs on 9 vertices | Computation 4.10 (A.1) |
+| `stage1.py`, `stage1.out`; `my_tau_0.json`, `my_tau_1.json`, `my_tau_2.json` | data on B0, B1, B2; rectangles, matchings, orbits; his representatives | Computation 7.3 (A.2) |
+| `p331.py`; `p331_0_0.out`, `p331_0_1.out`, `p331_0_2.out`; `p331_1_0.out`, `p331_1_1.out`, `p331_1_2.out`, `p331_1_3.out`; `my331_0_0of3.json`, `my331_0_1of3.json`, `my331_0_2of3.json`; `my331_1_0of4.json`, `my331_1_1of4.json`, `my331_1_2of4.json`, `my331_1_3of4.json`; `my331_2_0of1.json` | profile (3,3,1), steps 1-4, both matrices. No `.out` log was saved for B2: its counters are in `my331_2_0of1.json` | Computation 7.6, lines 1 to 4b of section 7.5 (A.3) |
+| `p331_m1.py`; `p331m1_0_0.out`, `p331m1_0_1.out`, `p331m1_0_2.out`; `p331m1_1_0.out`, `p331m1_1_1.out`, `p331m1_1_2.out`, `p331m1_1_3.out`; `p331m1_2_0.out`; `my331_M1_0_0of3.json`, `my331_M1_0_1of3.json`, `my331_M1_0_2of3.json`; `my331_M1_1_0of4.json`, `my331_M1_1_1of4.json`, `my331_M1_1_2of4.json`, `my331_M1_1_3of4.json`; `my331_M1_2_0of1.json` | the same with M1 alone | the table of section 7.6 (A.3) |
+| `recount.py`, `recount.out` | `types.json` against budgets alone; recount of line 1 of section 7.5 and of the first two rows of the table of Computation 8.4 | section 9.3, item 6; A.3, A.4 |
+| `recount2.py`, `recount2.out` | pairs (tau, F) admitting types, under three existence tests | the remark on line 1 in section 7.6 (A.3) |
+| `stageB.py`; `stageB_0_a.out`, `stageB_0_b.out`, `stageB_0_c.out`, `stageB_0_d.out`; `stageB_1_a.out`, `stageB_1_b.out`, `stageB_1_c.out`; `stageB_2.out`; `myB_0_0_300.json`, `myB_0_300_380.json`, `myB_0_380_410.json`, `myB_0_410_425.json`; `myB_1_0_420.json`, `myB_1_420_840.json`, `myB_1_840_1259.json`; `myB_2_0_528.json` | stage B | Computation 8.4 (A.4) |
+| `exactB.py`, `exactB.out` | exact PSD and budgets of every stage-B triple on Y37; ranks | section 6.3 (A.4) |
+| `orbitsB0.py`; `orbitsB_0.out`, `orbitsB_1.out`, `orbitsB_2.out` | orbits of the stage-B triples under the stabilisers; comparison with the files of VERIF | sections 8.3 and 8.4 (A.4) |
+| `stageC.py`; `stageC_0_0.out` to `stageC_0_7.out`; `stageC_1_0.out` to `stageC_1_7.out`; `stageC_2_0.out` to `stageC_2_5.out`; `myC_0_0of8.json` to `myC_0_7of8.json`; `myC_1_0of8.json` to `myC_1_7of8.json`; `myC_2_0of6.json` to `myC_2_5of6.json` | stage C | Computation 8.5 (A.5) |
+| `compareC.py`, `compareC.out` | his four stage-C survivors of B1 against appendix B | Computation 8.5 (A.5) |
+| `survivors.py`, `survivors.out` | the four graphs of appendix B: forced numbers, budgets, exact PSD and ranks, G_odd, G_even, stage D | section 8.5; Computations 8.6 and 8.8 (A.6) |
 
 
 ## Appendix B. The four stage-C survivors of B1, explicitly
 
-The data below are copied from the output files of C (`lemma/t18_B0_VERIFC/B1/c_mine_1_{3,4,5}of24.json`), which
-contain the same four 47-vertex graphs as the output files of E. They allow Computation 8.6 to be redone
-independently of all the files.
+The data below are copied from the output files of CMINE (`lemma/t18_B0_VERIFC/B1/c_mine_1_{3,4,5}of24.json`), which
+contain the same four 47-vertex graphs as the output files of ENUM. They allow Computation 8.6 to be redone
+independently of all the files; the second referee did so (`lemma/t18_REFEREE2/survivors.py`, section 9.6).
 
 Graph B1: edges 01 02 03 04 14 17 18 23 26 28 35 36 45 47 56 57 68 78. Its deficient pairs, with their indices k:
 
@@ -1765,10 +2159,10 @@ R = {x_0, ..., x_8} u {s_k : k < tau k} u {w_0, ..., w_4} (23 vertices).
     w_3: type (6;7), K = {2, 9, 11}       (tau K = {4, 7, 17})
     w_4: type (7;8), K = {0, 12, 16}      (tau K = {1, 5, 13})
 
-Transcription check made for this text (`_check_survivors.py`, in the folder of this document; not part of the
-proof): the four graphs built from these lists are sigma-invariant, satisfy every budget, coincide with the
-graphs stored by E, and give det G_odd = 47684, 47684, 874944, 874944 (fraction-free Bareiss in Python integers)
-and rank G_even = 23.
+Transcription check made for this text (`_check_survivors.py`, in `lemma/t18_PROOF/`; not part of the proof): the
+four graphs built from these lists are sigma-invariant, satisfy every budget, coincide with the graphs stored by
+ENUM, and give det G_odd = 47684, 47684, 874944, 874944 (fraction-free Bareiss in Python integers) and rank
+G_even = 23.
 
 
 ## Appendix C. Correspondence with the labels of the working reports
