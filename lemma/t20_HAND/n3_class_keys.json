@@ -1,0 +1,6314 @@
+{
+"I.0": [
+{
+"index": 0,
+"key": "d30478f766ca8cfa780ff6e1123d305cee557e2e",
+"type": "034 179",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 1,
+"key": "4b806be8490e77b6996c58cc5117b0f2cd97842b",
+"type": "034 179",
+"case": "i",
+"inner": null,
+"bits": 1,
+"class_size": 3
+},
+{
+"index": 2,
+"key": "0c878f17faf79b4a84694de952d43bfc74b68a4f",
+"type": "034 179",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 3,
+"key": "d19ed067376bd6f22cb75d6a62f3be15589ee50e",
+"type": "034 179",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 4,
+"key": "7bd89eaaa4447cf2ab6ca97329be0b2b55ab414b",
+"type": "034 179",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 5,
+"key": "1806d87a2ca16330a4cbf336ec5b8ca62df9cffe",
+"type": "034 179",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 6,
+"key": "7e4ead6ca63f9d46707e3c4ae7eb0b98d38ce375",
+"type": "034 179",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 7,
+"key": "4d41935f8fe482637282391bb1d19173a0c0ea29",
+"type": "034 179",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 8,
+"key": "99d6223cbc01bfeaf224a1ade6d08103911505c5",
+"type": "034 179",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 9,
+"key": "c934fe05fe2e4f23d1cac844ad5ae6c447820ad0",
+"type": "034 179",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 10,
+"key": "32a3ffbd2c9113dd5d2f1b7a77de080a6869c675",
+"type": "034 179",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 11,
+"key": "4b5956517952fa1c2c4dd5e86b46a9a0dfbb687a",
+"type": "034 179",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 12,
+"key": "366ee306943aae1460724630fe7482044fa7ddfc",
+"type": "034 179",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 13,
+"key": "368bf7252a7dd14cbde241e83aa3101a696ed33d",
+"type": "034 179",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 14,
+"key": "4f60a69bb70710a5c41611ea508cfe908a26b0a2",
+"type": "034 179",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 15,
+"key": "035df4a8e4357e65021cbe0da8ec3dce0ec3d38a",
+"type": "034 179",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 16,
+"key": "8f787065b4adc07ed2ca82fef0b17f8238456ce7",
+"type": "034 179",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 17,
+"key": "195e8a9054d8f3937e17f3acffed4a4f0ace3c5e",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 18,
+"key": "378307f172a944cd2c178c13f8274d0a839061e1",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 19,
+"key": "ea112d4ef8eaaac0695638ef8b7a4d6da6f95362",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 20,
+"key": "908781fe161d37eb2b5a7d5b94f2a4abfcbedb67",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 21,
+"key": "d05733c6d41120b8615a133e6416a81528b5a885",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 22,
+"key": "6ddd51440d34731fde06902951d61fd923d20cad",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 23,
+"key": "6fc78b44894903044e98b29f59b22807c368d87f",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 24,
+"key": "233ac9c57d7c4f5c669cd62ab1471a34d3c189e6",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 25,
+"key": "830bf7e6edaa41955d8a3d603beb56ef0f5086cc",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 26,
+"key": "d3fd65201b0f4645565b48613101abdc6e9c528d",
+"type": "034 179",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 27,
+"key": "469e5a3ea39fc8e0f681bbe42b60f21fb9f724ac",
+"type": "034 179",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 28,
+"key": "70b8f004f1fb18b084be5a98c0bd1da5fd7a1a05",
+"type": "034 179",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 29,
+"key": "98c9e6b1025fccbfb26e5b0d06e4802d4b4dc9b6",
+"type": "034 179",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 30,
+"key": "599e485553053e568fd6d26b893ce3a42dc768d0",
+"type": "034 179",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 31,
+"key": "9622ee129b3e0db66d4aa1e0fd5f93a5be9a1514",
+"type": "034 179",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 32,
+"key": "b952bd2aa68678e7795b28034b9de9ebbcbe16c5",
+"type": "034 179",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 33,
+"key": "3e51196a3ae47c9409ce64be421c3688c9b63b68",
+"type": "034 179",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 34,
+"key": "d00fb9c5e0c998b93731d44e980dfda10993b352",
+"type": "034 179",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 35,
+"key": "756dbdc342df2b09c8f01fea66effb218fcf0355",
+"type": "034 179",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 36,
+"key": "415203df4ed4fe8358b933c94f57a3c310551cb7",
+"type": "034 179",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 37,
+"key": "63e906cd7ceb5d848fab3843d57037620846f03b",
+"type": "034 179",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 38,
+"key": "65315bd02175a47e1dcef1303a260f2c8e2816dd",
+"type": "034 179",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 39,
+"key": "afe7aa0c449381878b9ce088fe860a43644c1b80",
+"type": "034 179",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 40,
+"key": "b0e5c0852a0096525c9f293926da88de552a8fd8",
+"type": "034 179",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 41,
+"key": "1f87bed1d960d4db7149a95f03e0ecb43aaa44a6",
+"type": "034 179",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 42,
+"key": "dc1611d7ffddefed68a57181229846e1bb73df70",
+"type": "034 179",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 43,
+"key": "6d8cf33d67cc02ef6bb258a6a24929d72b2f0d4d",
+"type": "034 179",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+}
+],
+"I.1": [
+{
+"index": 0,
+"key": "93e06c46120f4ceed542422b1dde0f3bb3cbc0c8",
+"type": "034 178",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 1,
+"key": "45f24cc9a858522576a25caafaa053069472fc1a",
+"type": "034 178",
+"case": "i",
+"inner": null,
+"bits": 1,
+"class_size": 3
+},
+{
+"index": 2,
+"key": "2501bd14ed45703af143f88190a4b0a47d2fb505",
+"type": "034 178",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 3,
+"key": "c3545d6205995ed30ba3f7a21e1dff114e7dd960",
+"type": "034 178",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 4,
+"key": "0836dd55b720f4eec94b492c0119d75574c05f07",
+"type": "034 178",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 5,
+"key": "90aaf9992e133fbbf4e08f2c03d8b46472d6b83b",
+"type": "034 178",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 6,
+"key": "54633b5f8ffc5aaa3659e685ddf0d57c72074e50",
+"type": "034 178",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 7,
+"key": "a379a56d3cf234e825c510e59f47c1ecf0b34e75",
+"type": "034 178",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 8,
+"key": "2c6cc638f2fde0223b26e510b50e909c3d866539",
+"type": "034 178",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 9,
+"key": "3ae5cb945e1b35fe0712d29c4aafe0c9d2dd2e17",
+"type": "034 178",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 10,
+"key": "482d24ed5a5843115439e1d0a2806f4e17f369a8",
+"type": "034 178",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 11,
+"key": "f7ae966fe4956f05c6cd419ece01108301ca55b0",
+"type": "034 178",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 12,
+"key": "a91dd51417a0fad7877b111cbd90fde97f01c2c7",
+"type": "034 178",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 13,
+"key": "016fe126facd836b44b4785f50b10257477dd755",
+"type": "034 178",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 14,
+"key": "44173bce81dbf0168f5fe064b5a3b50349494bf4",
+"type": "034 258",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 15,
+"key": "6b7ef234bd0bba610ac29822466ffec1b2f4ddff",
+"type": "034 258",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 16,
+"key": "2152f10b13580b73d69470ab7021a25ed1b2e1c2",
+"type": "034 258",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 17,
+"key": "6fa18eb39a3e67b30d52850da02db02b05b83d32",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 18,
+"key": "2887f92242ef17ca1f703a6ec22657239880a02d",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 19,
+"key": "96d325c7155ff0a2dab086ababfcb53484d46e2b",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 20,
+"key": "7aacb95788e283788895b3b60fffa2dca82a97a9",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 21,
+"key": "4ce7ad645de6711a0170f6b054eda690067dd8ae",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 22,
+"key": "309925470aeaf578b5f0c7d6a6c844028ef713b4",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 23,
+"key": "b8eb70aa3427391fa22411f3848a2f671423e820",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 24,
+"key": "8bc176c81c6ae13aa52b234dc8a9bc26caec994f",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 25,
+"key": "afcf26c95e9a884664ca930ca2aba8b9c7d134f4",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 26,
+"key": "0d9a48df823c87c17b04d38c2e29aa8b508b8f62",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 27,
+"key": "bc411b5a3d21c9177861f512597b4b61d3146793",
+"type": "034 258",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 28,
+"key": "774e3158b3c82d657ebe4027a5980db1b61dc85e",
+"type": "034 258",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 29,
+"key": "598f3d1f8ed1f63b1cead2e0cae4d2572d23f3d9",
+"type": "034 258",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 30,
+"key": "5ba2c34e31c32b1cf08c8f14deb635a8d38a6474",
+"type": "034 258",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 31,
+"key": "ebfd742f228b78776a8438c4eb7f5cb6afca3410",
+"type": "034 258",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 32,
+"key": "2ae5ca2c43ffb301ed1b74f7c4c9966e50fe4561",
+"type": "034 258",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 33,
+"key": "1ab797442a60716fee6dedb92c7f07ee19698b94",
+"type": "034 258",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 34,
+"key": "42f077568e7a13297dc8de281b3be524215592a1",
+"type": "034 258",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 35,
+"key": "115533eed306e8f5930bcb7c652101a8baee34ed",
+"type": "034 258",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 36,
+"key": "c91c9fddc03cd03f19b02e9cf93e7c491ada6e7e",
+"type": "034 258",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 37,
+"key": "994b27648ca7863e37e8741932dc6a8bca9ee5fb",
+"type": "034 258",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 38,
+"key": "3ae609bba28152d896f7e0daf8227d4c31cac51c",
+"type": "034 258",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 39,
+"key": "864dd8415715ea730b775e9798ea33934e717188",
+"type": "034 258",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 40,
+"key": "8f9b26e4b363fb85f76e23e3c787d656a1fe2cc7",
+"type": "034 258",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 41,
+"key": "687f710f4615293eb40fbba954613d53da680508",
+"type": "034 258",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 42,
+"key": "b5220b412cdee5984062c8f2ba36a4eec3855198",
+"type": "034 258",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 43,
+"key": "2c63102b1f347e23abf8a6f445675677d0939265",
+"type": "034 278",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 44,
+"key": "7a4236e912c94c9fdce2df76d437663bce6ef030",
+"type": "034 278",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 45,
+"key": "4a5d2e8c92ae91f5b7ef80eab05e53bb446258f1",
+"type": "034 278",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 46,
+"key": "aa264a1fe7ff44c79f08e548b6e503f8257d6c66",
+"type": "034 278",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 47,
+"key": "3f347ef7945df960f87d350664d0b510ddb2068c",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 48,
+"key": "292fa949ca99f3a4bb6c9ce2530fc01dca5ee745",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 49,
+"key": "7bc45acd825d26b7b581d2a03be5569648bd1f92",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 50,
+"key": "7111df397570ecf6824a5e950633cbd382be2aba",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 51,
+"key": "63257d27425dd3dcaea489dca976f568687cea4d",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 52,
+"key": "638f051c2555cf4c04a312fa2f3f14a5af43c3bc",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 53,
+"key": "4d119b1a955619994af66565f3e215e41789724e",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 54,
+"key": "030b3f9f0e752ce1baf4dc0e904fe17b860a7e11",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 55,
+"key": "7043496b5766f8aa4d22cc13e3792d3fbfeff5c5",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 56,
+"key": "f4e49532677291a480a9626b811f6fb1b4c2100a",
+"type": "034 278",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 57,
+"key": "a569e14ebe03eb0ebd8d30880d4036716ffc322f",
+"type": "034 278",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 58,
+"key": "ca0bdaba48425ba8869822a532ba1bd4b6358330",
+"type": "034 278",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 59,
+"key": "c85e3427024f653f523560d25027d58454f845db",
+"type": "034 278",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 60,
+"key": "4cc898e439abc217d7c4486b1de692018a4032f7",
+"type": "034 278",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 61,
+"key": "c65f2565513a673008eaa81d7cf8c845f058d1c6",
+"type": "034 278",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 62,
+"key": "aa7ab2d1ff91d8504a5d23456f9f799fd466ce6d",
+"type": "034 278",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 63,
+"key": "099e52eb3e6e456e8b0332866d194c080ba29c7c",
+"type": "034 278",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 64,
+"key": "d6c112f9a26af7ce7df909b142507ca92ae89070",
+"type": "034 278",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 65,
+"key": "4774655ad201a7cc25da742329d13cdeceaf40fa",
+"type": "034 278",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 66,
+"key": "e929e6dd3d51a9707ed9e933791db8aebcf09883",
+"type": "034 278",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 67,
+"key": "9938dfbe420ad670a15f117d3f51b6ad68793eab",
+"type": "034 278",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 68,
+"key": "f1e4bd5447bfec9bfbb60544812cf89a4183e49f",
+"type": "034 278",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 69,
+"key": "8ca2930d985254b4179bb538a4815d1c8751bdae",
+"type": "034 278",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 70,
+"key": "a0de584be0dea9510686dc984df6edbcaa9518e8",
+"type": "034 278",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 71,
+"key": "31c1e162aa74fe8cfba6b670f12198866e951560",
+"type": "034 278",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 72,
+"key": "a4ed3f016f880ec575360dd680507dd847ed5a51",
+"type": "257 268",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 73,
+"key": "a0286551bd92750ca8c50d6aeec725632c310af7",
+"type": "257 268",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 74,
+"key": "a3996a8c82496a0cdb3912bc9caa6766e080001a",
+"type": "257 268",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 75,
+"key": "60f27454ae27fc770f323cf303c33c81424a917f",
+"type": "257 268",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 76,
+"key": "36dd683cefb2023644fd88e731b41ac26fb50696",
+"type": "257 268",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 77,
+"key": "96ddfae78396730731623ad7fd58cc0ac8e3aee9",
+"type": "257 268",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 78,
+"key": "d3d48956026cc6dce3d102eaa16361b147cf46f4",
+"type": "257 268",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 79,
+"key": "9768550654a0f177b96486f9ec6aa86ad5350d94",
+"type": "257 268",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 80,
+"key": "9e2e6f7f6dfd202c18e4c455f994b595cf1a6920",
+"type": "257 268",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 81,
+"key": "8c4eea5ca601cf6d5172db5cf0c30bf1b9e23726",
+"type": "257 268",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 82,
+"key": "1553a4d32d96eaac45e3a00402108398f52ebd87",
+"type": "257 268",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 83,
+"key": "fb56262576685438c4cb8655c1e8e41c17d3cc1a",
+"type": "257 268",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 84,
+"key": "ab4ada89b7eae83dd0b8d88680449c1c5354640f",
+"type": "257 268",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 85,
+"key": "86879d13e6a3423d052b0a4f7a9d45ed0796d419",
+"type": "257 268",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 86,
+"key": "fe7e29f91492b1dab34af253ab45d7f24eb5e996",
+"type": "257 268",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 87,
+"key": "ba5306a6018838cfd42bc269aeb741d108126112",
+"type": "257 268",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 88,
+"key": "87c9dc5a5c3f88d8072894dfb84d6862dfc4d0d9",
+"type": "257 368",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 89,
+"key": "b65cfb596cf774a90fc94390c53e9f5b374cc561",
+"type": "257 368",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 90,
+"key": "2726638aa1ea53021cef0c12f3bad84287a72957",
+"type": "257 368",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 91,
+"key": "8817d70c1a35029519ab4d83fec31d16fab53c09",
+"type": "257 368",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 92,
+"key": "e17ac686c01312b9fb182fa7bf2b133a6689da48",
+"type": "257 368",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 93,
+"key": "2035dca37bd6bac13802e5bafa58b27de0181904",
+"type": "257 368",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 94,
+"key": "8b576674b181dce9110ecc24d6c29eae96f34033",
+"type": "257 368",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 95,
+"key": "9854d54e078c6e6329a8d33e0ae09410a6ae2d42",
+"type": "257 368",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 96,
+"key": "537c9a660ebae05c59cc5cad4233ddf363e21f68",
+"type": "257 368",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 97,
+"key": "d3069f86ddbb92ec41c0a60a2eb8d95f448d509e",
+"type": "257 368",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 98,
+"key": "c8cb0815eca579b7f4600f2f4232d9ca175355d4",
+"type": "257 368",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 99,
+"key": "bd3587dd09c929ad6543ec78f4ca992906cf1821",
+"type": "257 368",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 100,
+"key": "1143f126341cd9d18917a3c10979c0a74ae440b2",
+"type": "257 368",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 101,
+"key": "7bf2178c83423540eda0639b194a5e84063abedd",
+"type": "257 368",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 102,
+"key": "62d69b65b24124a37db947912405e610bd45b56d",
+"type": "257 368",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 103,
+"key": "e74dea9d3db715d466db21f8941c469eb44f7a35",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 104,
+"key": "d98141ffb4657d733bb75c56759b1048f93b157c",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 105,
+"key": "0e161289dd859c7e6c70dba199488f60b1214c00",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 106,
+"key": "ec4abe0e97a8f56846bc7f22b0ba54b2dcdb6eb2",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 107,
+"key": "829d29fd28432cdf525108b443c58acd99a21d56",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 108,
+"key": "351d9c8954fe0c83b388dc8ccd971ea7f1b69660",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 109,
+"key": "a5e85429b5afb7c2e45fc7271dd90a443ccbab28",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 110,
+"key": "9f696b813eb3b723b89e23c99dc2b3a81ecb03f1",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 111,
+"key": "4e803be93e54f1f18b796bd3b235d95e0896dce6",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 112,
+"key": "243c4623d5f4698f418df1bc70290eae519df3ca",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 113,
+"key": "0b39fd7f794a3ba41294fa250b215c0263b28951",
+"type": "257 368",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 114,
+"key": "1e46de01eb3e7db28b692fe0408946a91d95feed",
+"type": "257 368",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 115,
+"key": "85f15d999d49ea09d35262174b23e442145b3fb9",
+"type": "257 368",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 116,
+"key": "daa9be48e4449396a14cae659dab20a54162ebcb",
+"type": "257 368",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 117,
+"key": "f1aee52b42f33b761fc803d2978224bfd9c2a75a",
+"type": "257 368",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 118,
+"key": "f31c54d17095f9b56e11dfc2aad1427a58060d48",
+"type": "257 368",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 119,
+"key": "69d6124523d75e72f1a3059c79b289b8065039b2",
+"type": "257 368",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 120,
+"key": "093f33343999e67c80e0662ce9893d0711b78b4e",
+"type": "257 368",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 121,
+"key": "6535c23157fa6999e22b8696ac06778e55f39a99",
+"type": "257 368",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 122,
+"key": "9b8f0fbf25454cc634c26b700388072c6e999370",
+"type": "257 368",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 123,
+"key": "c79c182590eafc1bed7cc00024d2cfae17553e0d",
+"type": "257 368",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 124,
+"key": "9b3d1770241fb8ba30c4432cb36f0af7e46f6538",
+"type": "257 368",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 125,
+"key": "8c83373ded971fed297a78c5a2f5f159f537cd11",
+"type": "257 368",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 126,
+"key": "700882e8471ba1f3e7cd8e11908606bc8baa8122",
+"type": "257 368",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 127,
+"key": "d2f3a6be5a51d5b007901344dce12cec2808fd5f",
+"type": "257 368",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 128,
+"key": "574fd91b36ab769394855594b0d818bb26f91ac3",
+"type": "257 368",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 129,
+"key": "5cad7169b1d616b1d72f680c754b4b4873c0ee7f",
+"type": "257 368",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 130,
+"key": "c31285c48926dddcf2f607afa0ebea6192b30b85",
+"type": "257 368",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 131,
+"key": "cb6949d82b6f7a51d6806258599de0e2c093bdef",
+"type": "257 678",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 132,
+"key": "60a6fcc09b6c25360c4ba1ecc4945db83678be65",
+"type": "257 678",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 133,
+"key": "880e0052454f06f33b1b7f071ff2230248b2aff7",
+"type": "257 678",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 134,
+"key": "c4a07da2c518b2024c82df1c7fe944367978e166",
+"type": "257 678",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 135,
+"key": "a1e6ec56f4ea77e390ea71569b8e5d916deb04c7",
+"type": "257 678",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 136,
+"key": "fa2f4f5ea1fbfd7503afe63947803d07cf6f6754",
+"type": "257 678",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 137,
+"key": "267179a7d06215f8d2f6abb79c96f51ee35c7eba",
+"type": "257 678",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 138,
+"key": "17ce3fa386c1a489e0cd87418c6b040be549c04c",
+"type": "257 678",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 139,
+"key": "91403ef678105db5f76f2fa04648e5ba7281d7e7",
+"type": "257 678",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 140,
+"key": "e9ce7d0158d781d5b77c9927dc717d633d38e054",
+"type": "257 678",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 141,
+"key": "e307c6136e8dc5555edfb3609421ef081aa9d2db",
+"type": "257 678",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 142,
+"key": "bc5b79c31a6cd4032454fcaef6af4ed2ee1ceedf",
+"type": "257 678",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 143,
+"key": "5ae68326372cae7a9b92400774b96278bdb1b89b",
+"type": "257 678",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 144,
+"key": "b13348bd0959640cb4b4f825c3f05c42833d651b",
+"type": "257 678",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 145,
+"key": "04957a9105f27fb8fbadaa0a09eed67e782ea810",
+"type": "258 345",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 146,
+"key": "ef2c83c1233550a359333a050287a0482c14551c",
+"type": "258 345",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 147,
+"key": "14ad4a049029c371f8a84572ae75258384fdebcd",
+"type": "258 345",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 148,
+"key": "c1889b49100b0539fb1ad5c5ef886fd51cc9afc8",
+"type": "258 345",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 149,
+"key": "b03bed12923f26013413d6b7903f900001d10a98",
+"type": "258 345",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 150,
+"key": "7ffa854be3a33e502155b964e4dffb58d9fcec49",
+"type": "258 345",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 151,
+"key": "fbb362c4248165642250268680886984d42c045f",
+"type": "258 345",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 152,
+"key": "7068fdf9e9ccac05820c5725b662220b3338f36b",
+"type": "258 345",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 153,
+"key": "c4c99e6545724bcc7b94bea73b59f86e98e9c3a3",
+"type": "258 345",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 154,
+"key": "cb7a7913cf4408653b6c537d2426485cd6e09fd8",
+"type": "258 345",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 155,
+"key": "29808c7b87423a77565b510bdbc7abdfb2aa88eb",
+"type": "258 345",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 156,
+"key": "a3d6f11a4f21446187410ae127379eb7165ce90e",
+"type": "258 345",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 157,
+"key": "0e1c22674a8429a068414f6110db5d6e773369b9",
+"type": "258 345",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 158,
+"key": "3d60982464b8ec14b4541612fa86306d4f20dd69",
+"type": "258 345",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 159,
+"key": "9e4b7a1df5f25c6bba26356e2dcd8082710f1c1e",
+"type": "258 345",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 160,
+"key": "32e40a8e2bd17cdeae8d279a5502636df764bba9",
+"type": "258 345",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 161,
+"key": "161f6d34179dfca2b557b661093001d22067cd9c",
+"type": "278 349",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 162,
+"key": "1a7e56c7414ceffa109d7818246b54a50b7c3297",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 163,
+"key": "a8a9e52d75b9894e30ff25f7c4d4f76a3d725c49",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 164,
+"key": "e0de357483342cbc0ed6ac3970eb16ce2d5945fe",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 165,
+"key": "1b438c2984ebe55c8c0faab4eccb0e91e94834b3",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 166,
+"key": "bbd4511d0193bc6de836df9abb01637cb74c7608",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 167,
+"key": "b1b54dcd44b349414581641ec074cb7f130c6082",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 168,
+"key": "feaa3c88a698badc6d43cc3ac2dbe83e9a27721d",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 169,
+"key": "9ed17bc7812798d4ee2f22ba8355692449910b08",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 170,
+"key": "78a7400e161a890b0dad943324ab209adc70de8b",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 171,
+"key": "f37cb9119aad06466e95ba1cbabc60a43710ecae",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 172,
+"key": "ff526131e5c25062e2cb57e82d6e14c8753de4ab",
+"type": "278 349",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 173,
+"key": "e340d0f37722f131df53a7040b15e18951ba5320",
+"type": "278 349",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 174,
+"key": "8588369b6eaf5ab95173b32691a8128886d4b095",
+"type": "278 349",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 175,
+"key": "b68184cb9b2846494579552eae56d374032a9775",
+"type": "278 349",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 176,
+"key": "b44bd7c225f0fae6fa7f3ad4dd03261a9ff8ffb9",
+"type": "278 349",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 177,
+"key": "8b27ae2d91ef9e5f0df45ec1eec1d6a2831620aa",
+"type": "278 349",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 178,
+"key": "bc56f6f685722c2305e485b5d72ef98686cb69d8",
+"type": "278 349",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 179,
+"key": "23ca1107c79e140a575a766ae15b8a6831455188",
+"type": "278 349",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 180,
+"key": "56287e5cf2c2962dcfebc1010dda0b8fa288168b",
+"type": "278 349",
+"case": "iii",
+"inner": 1,
+"bits": 6,
+"class_size": 4
+},
+{
+"index": 181,
+"key": "10c1fb3884b08ff637c3d4164053f5bac1f224f3",
+"type": "278 349",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 182,
+"key": "fbffa7ff22a12bc10742f4e9b65021fa9e6a4e1d",
+"type": "278 349",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 183,
+"key": "7a068cc86fbb5b8637fd16243fb11fcaebf08bf2",
+"type": "368 457",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 184,
+"key": "879e5b9f1addc241bc066bbd3b5c583ff6701552",
+"type": "368 457",
+"case": "i",
+"inner": null,
+"bits": 1,
+"class_size": 3
+},
+{
+"index": 185,
+"key": "73c5cc6ae0d43050fcc52e849672ea5dede9f11e",
+"type": "368 457",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 186,
+"key": "e4b9e2b96478e0b50c45640c97a3e3d999b7575d",
+"type": "368 457",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 187,
+"key": "1a5adc897d75958121d23299ce0e3cbde00e4a7c",
+"type": "368 457",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 188,
+"key": "183ff6e218d50197bcd9540b9b73648654ed0e64",
+"type": "368 457",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 189,
+"key": "da7173634456b7ae86223eaaccd836d5ec40aa34",
+"type": "368 457",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 190,
+"key": "e477cfc367f9901bff114d9f05e15cad20344f2a",
+"type": "368 457",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 191,
+"key": "fb7f756b2563750629a1dd80e1edbb1e44bca257",
+"type": "368 457",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 192,
+"key": "d4527387cbc46026642ab8ec5b8d8d788b0044b7",
+"type": "368 457",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 193,
+"key": "88b5bc9cfa427761732673315437e8dcb56775c8",
+"type": "368 457",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 194,
+"key": "cdb1292a5e154c655768bc7adc7d01fbdae93984",
+"type": "368 457",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 195,
+"key": "9815e1a398adcb440a52e5b056eac38fc912882b",
+"type": "368 457",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 196,
+"key": "b82c5394ab868791a7e34c0786388cbc02fd0995",
+"type": "368 457",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 197,
+"key": "09dfa8571bde6cde71b69f7eb46a29ba78d2e698",
+"type": "368 457",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 198,
+"key": "8e2b0eb68e9d90367b347e61ec49a00e8166dcc3",
+"type": "368 457",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 199,
+"key": "61460c206a34fa6ef61140701d215bf3e86d1824",
+"type": "368 457",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 200,
+"key": "24c62cea51f388175118218a1eb9f22b287665df",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 201,
+"key": "c6d2a16c09805c4e72b3116e53b368039a3ffbd4",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 202,
+"key": "1bfe407bbdfcf8e59ff4891fe94a26c76f145991",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 203,
+"key": "ce8f290375ab31b359cf46def1b4e43bc050b823",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 204,
+"key": "5268d61c0b831b9e48f20df5110421e5b6e6b357",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 205,
+"key": "f1d0a302f0cb3b1d1c603b4463fc055b2d113366",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 206,
+"key": "411b1ab0a372fe67065b8b6b2323e6b848955591",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 207,
+"key": "4d2c0c9c1458a19b67954706b0d5b5fa8ac887cc",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 208,
+"key": "067f9a3775decde22c182a792f1ee415849412f8",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 209,
+"key": "b04dfd8f568b6e6da2973665b18745834680fa9b",
+"type": "368 457",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 210,
+"key": "ae05a32c3a66b6c02f9ea66d5256d1a6a0df2887",
+"type": "368 457",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 211,
+"key": "ae5c32db20887fc9f50eba66098d353202b51ba0",
+"type": "368 457",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 212,
+"key": "789b40a16daf62622c4767492cf238ef810b665a",
+"type": "368 457",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 213,
+"key": "ffd8616a0f6c3a781e4dff29ed381ba9ecafb85b",
+"type": "368 457",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 214,
+"key": "c65867af410dcdda617698733d37d63211229c3f",
+"type": "368 457",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 215,
+"key": "4b93c4c6b14c202c01083e9f27393c4468a9570e",
+"type": "368 457",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 216,
+"key": "7d63ce1054e40d15d407b9de74ce62aaf21024bd",
+"type": "368 457",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 217,
+"key": "080c36322ebd775182fa01358130d3c948275c58",
+"type": "368 457",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 218,
+"key": "d3c7a92262460eaf7b8e2a73bab8968e07c44598",
+"type": "368 457",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 219,
+"key": "1ef4ef2e555fd68e31424872256dbe46f9d87465",
+"type": "368 457",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 220,
+"key": "c8363941b519c7b8d1186521043023870408b5d2",
+"type": "368 457",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 221,
+"key": "60d0d6fa79f9273373f3521509cebcfbd5035a3c",
+"type": "368 457",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 222,
+"key": "77c206f5d65618ffab4e4f70dc178ba64d74e8e3",
+"type": "368 457",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 223,
+"key": "aa4a63c5030ebfed9be907873d50962135efbd00",
+"type": "368 457",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 224,
+"key": "713535f2254c3b43ae552d479864d311938ebad2",
+"type": "368 457",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 225,
+"key": "110905206c2002297fe2c5a9f00ea2bd55baefbd",
+"type": "368 457",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 226,
+"key": "dee1c04906083dd422e930d55adffec14125fa31",
+"type": "368 457",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+}
+],
+"I.2": [
+{
+"index": 0,
+"key": "469338dea76f465d361465a9522b098193d3cfc6",
+"type": "034 189",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 1,
+"key": "9b0c272bd70cf28a49e03100e7ff3ba699496df7",
+"type": "034 189",
+"case": "i",
+"inner": null,
+"bits": 1,
+"class_size": 3
+},
+{
+"index": 2,
+"key": "b697333b5fafc692d744283f2a82edb1bac63b95",
+"type": "034 189",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 3,
+"key": "37c478f0f61a2c206fa7519cab9e7c6fb6e4d811",
+"type": "034 189",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 4,
+"key": "2449274fb7aa12bbc741ced2886489017f445237",
+"type": "034 189",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 5,
+"key": "d9636d9f142dbec1defca8f5964591b67ca4d1f7",
+"type": "034 189",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 6,
+"key": "42a7b8907c1a9386c0e60207b29666f68669d580",
+"type": "034 189",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 7,
+"key": "ad6b5fa97309d0d1b4baaf18ab6939aef3d080c8",
+"type": "034 189",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 8,
+"key": "9efe98ee848a5b5a226efee357b0b53eebe20263",
+"type": "034 189",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 9,
+"key": "4cb55589595466084fdc9f21522424968d805b54",
+"type": "034 189",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 10,
+"key": "d8fdb196c1d19bcb75968c1fb3520557a4b81a9a",
+"type": "034 189",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 11,
+"key": "836135b3f0cf215c6d3349d5f160fee47d65f673",
+"type": "034 189",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 12,
+"key": "1d59c09fc459079d77d2313b37a93a3981a91d99",
+"type": "034 189",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 13,
+"key": "19c077a20dde54778319d64e922adefe7da8ba75",
+"type": "034 189",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 14,
+"key": "c885f8b185025d9810b852935657759043bd7ed7",
+"type": "034 189",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 15,
+"key": "8b165cff7ffd1911ff9fc0699054140834e30612",
+"type": "034 189",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 16,
+"key": "fcef12c7b18426fe1356d84ead9284d63366bbf1",
+"type": "034 189",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 17,
+"key": "8204928adc75772111aacff88b3f42b0104a83d1",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 18,
+"key": "d91050798c85d48088fbbc7a3ea7edbecbdcf293",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 19,
+"key": "3a89edfe33740209756eb290b14eccb55505a330",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 20,
+"key": "8732a4e3964fdfbeb6bbe291b5b73c54ccd02e32",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 21,
+"key": "b2f913fe652085efdb8a77316e2a677ddcc6b97d",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 22,
+"key": "f615288a0eeee4c4111136a250b0baec1c1f797c",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 23,
+"key": "5771260dd2a7a6e1ac4e009a689e29e6d321e7a1",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 24,
+"key": "55e9f9789ecfe9c500ecd9d661af4391feb34dbc",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 25,
+"key": "ac8e3939109809878a65a8d7f40eeb88a361f003",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 26,
+"key": "b4109550d524380e9786253d50b28ce99082752d",
+"type": "034 189",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 27,
+"key": "62cbe09e3ba7f24e32451cb7cac36bd2702c4826",
+"type": "034 189",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 28,
+"key": "f9ac82d84a9af0f1a1380ffed9f3f1bf37c8c49f",
+"type": "034 189",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 29,
+"key": "3621aa85338e8eba10f489a725fc8bf7fb4651ed",
+"type": "034 189",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 30,
+"key": "5201a4e4b87dc4313c40ba56aa8b5410a1ca3637",
+"type": "034 189",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 31,
+"key": "30e2de2928fa89e505cf1ac4dc2ee1ff911b22fe",
+"type": "034 189",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 32,
+"key": "8f69fafc784f58f06748ee27789354f4114d7a7b",
+"type": "034 189",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 33,
+"key": "a7e4a206888d04d95d341dc4fc9cfe5dba204afb",
+"type": "034 189",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 34,
+"key": "1af5c99a591b0e264312b3c53a533fb15c22bd27",
+"type": "034 189",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 35,
+"key": "347e359ed87e36b2b862f39aa55ea61bedd13788",
+"type": "034 189",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 36,
+"key": "03f22a36539e001d066d53db8f6ba1b91747c128",
+"type": "034 189",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 37,
+"key": "ea3aba093866eb722efb635ebae0272f430b2d86",
+"type": "034 189",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 38,
+"key": "ff130dfabf7a9546c13859f54b5a4f023578ac5e",
+"type": "034 189",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 39,
+"key": "cf98618076c7eb31ce7f08e15b0bd62e7948936f",
+"type": "034 189",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 40,
+"key": "5b184735dc374a74da93574fb3a6eb5f6e2cd1e4",
+"type": "034 189",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 41,
+"key": "c0c448be31d488604dc18d696176c6f83a7ac5b3",
+"type": "034 189",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 42,
+"key": "676e5b9928125e6d972a7de8157899bc962abe14",
+"type": "034 189",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 43,
+"key": "b88b1f7c951129d21a05e83be4cc02ebf27735e4",
+"type": "034 189",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 44,
+"key": "87751ad27784fe6f733b93ba4cadbefd29a7dce1",
+"type": "034 589",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 45,
+"key": "d61f18d071995fcb80e6d471eaed310f824c88d9",
+"type": "034 589",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 46,
+"key": "badb15b7065f3ab2eb5a0cc6975237ec97c44b33",
+"type": "034 589",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 47,
+"key": "c4d000218e1799cbbff197c2483717c51cade4c1",
+"type": "034 589",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 48,
+"key": "34312c31363131b9f7bcf78a068f54beabde70c8",
+"type": "034 589",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 49,
+"key": "09c230cb6f7321ae9d651015ea9417a8107fa451",
+"type": "034 589",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 50,
+"key": "549443bbc67e08f36b10e0c5a59ea0fba1e50b7c",
+"type": "034 589",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 51,
+"key": "b2bbc3fb5c8c13cfd8177e8b3ba16d691e986ccb",
+"type": "034 589",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 52,
+"key": "1fe9545bd982b5a7667beff970efce362b0bc99f",
+"type": "034 589",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 53,
+"key": "451a0ce1a5c70e22fbd38984249a80f80793b97b",
+"type": "034 589",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 54,
+"key": "4d092d384d818a3ff9035759c975bc0426e344b1",
+"type": "034 589",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 55,
+"key": "ef6cb277b8b1864cb31127ffe66f78e150035a89",
+"type": "034 589",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 56,
+"key": "93dfd40dea59096482888509ce5c06e3e1a90559",
+"type": "034 589",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 57,
+"key": "45f2dc84554748f7bd69c8f060da5140a284a971",
+"type": "034 589",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 58,
+"key": "510f6a4f8342b46e2f9e1c9b83e44e51ba9cffd1",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 59,
+"key": "6e9b714213cf46b5270b0d521f3739172bb9935c",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 60,
+"key": "5ae01dc3e42091e58f3be8f27e6baef8b880a990",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 61,
+"key": "e9302fb4ce770f846cda0f43866c76593d97fa31",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 62,
+"key": "24fd8e4e09992aafacb0dd58cfd662656d833a14",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 63,
+"key": "262e97ffcc56c600868a6e429ff201eeac5d6753",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 64,
+"key": "2ca331268d16e6afe0c817eec1163e6bbab3d2e2",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 65,
+"key": "d38a61b18240798b1cc1072f6f86eae074014c0e",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 66,
+"key": "b789e7e77aaebe26733a8b63c8930775be327954",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 67,
+"key": "df152c3ecd222472f4b61a3fad9271d70458e8e3",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 68,
+"key": "80b4c6b187b060bc018bfee300d9bf9cfab9fec5",
+"type": "034 589",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 69,
+"key": "1524ac92f78490079b154e2bfa66907d8b55309d",
+"type": "034 589",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 70,
+"key": "f9ce5f155161cd4b913f779f2aadc95a2ff11218",
+"type": "034 589",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 71,
+"key": "8e6ca700e2fe959b7169679e9cf2d8493ab87d8b",
+"type": "034 589",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 72,
+"key": "5981215b98347691f760e8af3c34610af351a854",
+"type": "034 589",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 73,
+"key": "6034356658ac71a41e95327b3fc625e64a28bc74",
+"type": "034 589",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 74,
+"key": "7f8456ebecdff8455b33ab429c1b559b143cb3e5",
+"type": "034 589",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 75,
+"key": "e5c767681fb47a806b2df864621c66d7ea85a4b2",
+"type": "034 589",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 76,
+"key": "89c15a12e17aa4bce8310538b43f8f5fda612b44",
+"type": "034 589",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 77,
+"key": "8b102dc580a196f3c5f756e9a0b4a98e17598d32",
+"type": "034 589",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 78,
+"key": "1ddbf41ce629cfc998a3d86a1600aa4ce323024e",
+"type": "034 589",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 79,
+"key": "5c34490315b156070b169c08edde2991e4bdba0e",
+"type": "034 589",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 80,
+"key": "b4fb4500e514dd1a6f0b71d8bd27abf08af0eb6e",
+"type": "034 589",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 81,
+"key": "43bc4aee0e1519154e8ad7f8a692dc3d213d0ac9",
+"type": "034 589",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 82,
+"key": "d4e6b0804301eab41e68dbfdc9a59a8fab0f80f0",
+"type": "034 589",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 83,
+"key": "4c4d9ef606b1765da408febdf243fa21d33fa7bb",
+"type": "034 589",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 84,
+"key": "ac3e2890a1777823214c73ea183324f019382014",
+"type": "034 589",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 85,
+"key": "a98a7accd3d79f2d602b39d84ff300debe478e22",
+"type": "034 589",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 86,
+"key": "9b0395adac450ef9bf2c48aef6728904fece280e",
+"type": "345 389",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+}
+],
+"I.3": [
+{
+"index": 0,
+"key": "ec9c546d5abcb8ba66202a4d1df19699f9db0ffe",
+"type": "034 156",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 1,
+"key": "eeb8f132e684c357b6972d2397b7859f20deb867",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 2,
+"key": "5523a712d02552c5750a951b52faec6d2fb0933c",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 3,
+"key": "ee53ecaba0fbf97a5132b9d832b0775a3a65e617",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 4,
+"key": "a280c7903c9e461bc4abdf5fd085aa9295f6fb07",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 5,
+"key": "ece4ff7e2fd7aff6abf954d78d5dd0955b2e933e",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 6,
+"key": "20f6dcd4f0f1a05f410bc2a9f7edc000213b0397",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 7,
+"key": "0e00b7840a2f016d48da021d892398946a8a872b",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 8,
+"key": "531719f63ef36aef94e76718dcc720ae000816f7",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 9,
+"key": "539691f44b76219e2d5c57af5465f31897765b06",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 10,
+"key": "ba53127182c05c16dc8bcb80bbb9d9e4e5d6446b",
+"type": "034 156",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 11,
+"key": "37922c5268db5ee213b67c24fa9e97ca51e4327e",
+"type": "034 156",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 12,
+"key": "61cad9748ac95f03da31542ed54a8bbc44b6eee1",
+"type": "034 156",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 13,
+"key": "779b07ef1fffaaae0d06acbb350d30e8646d2282",
+"type": "034 156",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 14,
+"key": "0bb657b1f02adfa7086d35d28d7eff27df5510be",
+"type": "034 156",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 15,
+"key": "90a1128ffd230e092e95be3038a0341f9ab44943",
+"type": "034 156",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 16,
+"key": "61cf27825b587a8e671f3355ee63d2a562939e0f",
+"type": "034 156",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 17,
+"key": "fad36ae427eec598a10154050a463ece5e3d4af9",
+"type": "034 156",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 18,
+"key": "21b330d2cd7a4afc8ba6f51e8c8a87b42e182c83",
+"type": "034 156",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 19,
+"key": "767434bfb28304488a508eb238ee91ce4e5dfa66",
+"type": "034 156",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 20,
+"key": "baf5a22f02fdf1d7de24b6685d4944ade7621de7",
+"type": "034 159",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 21,
+"key": "333280350d7aaf65096f8b31edab8d189de0de78",
+"type": "034 159",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 22,
+"key": "c53ee2428741032caa9ccb4320d8ada0515e88c8",
+"type": "034 159",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 23,
+"key": "4aeb5c3a68ba82606687c72e442ddd23548609d2",
+"type": "034 159",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 24,
+"key": "e69edb89b3b466750084812960e027b30bbb77b7",
+"type": "034 159",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 25,
+"key": "8007f599d0e01316fe271ad96069de986457025d",
+"type": "034 159",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 26,
+"key": "0365d4acf07428c1e7416b5833d056ccefe9c6bc",
+"type": "034 159",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 27,
+"key": "eaefa6e9571b3bafeafc5957891f50e2ab4f00ac",
+"type": "034 159",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 28,
+"key": "4c9681bc400dbfa3a58fea38401b0073a8f82928",
+"type": "034 159",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 29,
+"key": "179d0035641f1df7b93f5d2d1852a6147cec165a",
+"type": "034 159",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 30,
+"key": "edec95f41d2da13ea7a444c64f3f11f9cfd49f3a",
+"type": "034 159",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 31,
+"key": "69aa7890c82509abefced820aeaad3bcd8ad0440",
+"type": "034 159",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 32,
+"key": "a32d4435975c7b954e429deaa5e6f8126e8953b7",
+"type": "034 159",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 33,
+"key": "5ccd56824ad6339d2b88305ce9c4dd21fec357ed",
+"type": "034 159",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 34,
+"key": "dbaacd5e6e546a4d406369428b9bd94cf3b8f529",
+"type": "034 159",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 35,
+"key": "c29acaa534addf0c38689a6635701038e5cba14a",
+"type": "034 159",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 36,
+"key": "c817f3afd2f55a11b5ce1fedadcc919ace75c860",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 37,
+"key": "da04ac688f7c3e48cc38e148d63b0d549614c9d5",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 38,
+"key": "3af818959e74750aa66ffecee8e501d65946dff7",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 39,
+"key": "c19e2f9afedf2e75fa6ffa3a504609e2a62f3e2c",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 40,
+"key": "012f74ec854b3181ec457d1d0887298607f02c03",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 41,
+"key": "f0855884cfab184041aeadcffe37171067de8672",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 42,
+"key": "cd83189edc6859574f4af82aa60e5706b091e4fd",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 43,
+"key": "b942b815bc49f9f7658744025babb549d7f41430",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 44,
+"key": "77d35d1236fa560169d5d889fc4ef28c8121dea3",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 45,
+"key": "46174c7d7312ec07b51dc36a61fae1cc83aecf72",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 46,
+"key": "250be3c0549789e9770b0c93245182ffa5ad1dc9",
+"type": "034 159",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 47,
+"key": "17570a8133c8cee4abddee3fd05134ed39fdcfe2",
+"type": "034 159",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 48,
+"key": "6ea5427f1e82ef1a279917af5e1b1e3207a2ca13",
+"type": "034 159",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 49,
+"key": "a039f9fab2033c6f5ded6df05e2c71892a61957e",
+"type": "034 159",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 50,
+"key": "94dea15ab432d52fad7db0c266901b9d64f14c3f",
+"type": "034 159",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 51,
+"key": "0dbaa9088bf80a4182e8ec964a00141c40c268b7",
+"type": "034 159",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 52,
+"key": "ea7532a0f93fe4c45b9854bae63049796aea1cd4",
+"type": "034 159",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 53,
+"key": "cdffcecc66cff676c7c9b129e01c05a036a5544b",
+"type": "034 159",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 54,
+"key": "37ac793db2d5c429e2d92133d3f7c5d119a05eb6",
+"type": "034 159",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 55,
+"key": "62d766166cbbfce8fb7f57daa1c2a1fc8a2b5ef4",
+"type": "034 159",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 56,
+"key": "a689730028d83115f58db842f2ad4781b2397e58",
+"type": "034 159",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 57,
+"key": "921a9a91ac9bed1cabbc243cdbec7403184166ff",
+"type": "034 159",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 58,
+"key": "598295c6cf228d55634a57b6b42daf9ef9779baf",
+"type": "034 159",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 59,
+"key": "6b6290f03a09fd490500048d2512c5a5faa60c93",
+"type": "034 159",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 60,
+"key": "c53e2f8309aa858d0f46d57155aaa2d93ca8dccc",
+"type": "034 159",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 61,
+"key": "4d6d15157a1623d6052f388ecaffd5a0b891e925",
+"type": "034 159",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 62,
+"key": "d9d8588ca243373357d604b65dee3f24dc54dcb8",
+"type": "034 159",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 63,
+"key": "359347e475f2feb74fbf30576407218c7370adb5",
+"type": "034 159",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 64,
+"key": "869874a9ad9a6283e6a184ec4ff9ec583b41dd3c",
+"type": "159 168",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 65,
+"key": "ec043ae031830cbc6366d1fb8a7c3a9932b356ee",
+"type": "159 168",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 66,
+"key": "3ab3e22cc6fcf09cb56eec5beba4e1e6f3fce572",
+"type": "159 168",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 67,
+"key": "a3caa21ddf16db3ef2ebc1395994927fa22eb1ce",
+"type": "159 168",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 68,
+"key": "12e85a2493d1ec661157ca7cc3c062785df4eb27",
+"type": "159 168",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 69,
+"key": "9df2917b8880108776d3cb03cf049d01d4da1a2c",
+"type": "159 168",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 70,
+"key": "43bb39c4c8cdf4b4993fa9eb9ba43fb6dd2a6b0a",
+"type": "159 168",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 71,
+"key": "7fb9265f163fcc3d5bd3206855d17a4058256507",
+"type": "159 168",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 72,
+"key": "28eb1f1dc3cd837359c6e015d282bb11d6229d54",
+"type": "159 168",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 73,
+"key": "b411c36de4350fb4aa48199c6d20f3c5fec07479",
+"type": "159 168",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 74,
+"key": "546eb521a6766af61fb527ec79dd43e8b1a50800",
+"type": "159 168",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 75,
+"key": "75fe13e0cd04d7fb88774e98d237c8770d601ae4",
+"type": "159 168",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 76,
+"key": "cfb65def4251dc4a13a3d95a4b12dda96ac274f6",
+"type": "159 168",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 77,
+"key": "31f0abe52f69eea2766beca0fdca15e74e9e6182",
+"type": "159 368",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 78,
+"key": "cafd80f93b280262ceac3d1081d38de135d17dbd",
+"type": "159 368",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 79,
+"key": "8c37bc37a3f3717bfe224d7b2da22e34978f0972",
+"type": "159 368",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 80,
+"key": "7954cd8ad12c1729f326525f4b70b424919e0968",
+"type": "159 368",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 81,
+"key": "4e0375723ae1bae15f10688f8f4fef3b259451b8",
+"type": "159 368",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 82,
+"key": "93013055bf1829168260a0594147d8b3e47d0a93",
+"type": "159 368",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 83,
+"key": "19770e716c462db478f6b51660d4a7671858ce74",
+"type": "159 368",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 84,
+"key": "895ceda5f6e5b670dc8fa94c7006f7c019d5b328",
+"type": "159 368",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 85,
+"key": "5d2b063e96efd7c52ffef2c3a9337a5c96b1e922",
+"type": "159 368",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 86,
+"key": "d15ff13acdd7cf5bfe47fec621166de0468ff0be",
+"type": "159 368",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 87,
+"key": "aaa3d53ebabd5b95fe80a7c5b8d73886d9e706f1",
+"type": "159 368",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 88,
+"key": "e03018706675b8699934fb68cc412dccbb0f51e0",
+"type": "159 368",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 89,
+"key": "ba0f8baa715cdfb570e81dd2ee050d4520dbcdad",
+"type": "159 368",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 90,
+"key": "73e1eee9644cce680106196bd1725aee4eac1742",
+"type": "159 368",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 91,
+"key": "f02c80c42e3bb0091efcc522e6135a1fbee83968",
+"type": "159 368",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 92,
+"key": "00987bc31205ee5fbd1d4515b9ca0e0982744ad4",
+"type": "159 368",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 93,
+"key": "9fb9895beff5915ccc5e6ec074ee3f0bfe6bdfe7",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 94,
+"key": "67f3817adf8660e52aaed9779c1ceda61225da31",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 95,
+"key": "404129c086a304de9c654308d62bf58464ba2f99",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 96,
+"key": "46640a2fce3fdd5bc1c393ffbb58ee391869ac52",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 97,
+"key": "e3ec33b55830236c44a5c8beaa497a328795341f",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 98,
+"key": "4b121e64efc10ab1a80e871855e9fb3e006fe909",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 99,
+"key": "728a2d01635b63374a2376e2fa0af2f7900793f1",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 100,
+"key": "4e83b77b5edbae447a9dbcc92bd223fce3857d82",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 101,
+"key": "fa45f3e7b7e3bcf07bfbd1f79f0e26dc4f25064b",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 102,
+"key": "dbd8f461ddabe5770562972f06552936a6f91ffe",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 103,
+"key": "a8c0ece9aede39cd9146bc4b05e09c2107eefa2d",
+"type": "159 368",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 104,
+"key": "81afcf5ed3f917afb659eb3b136f835d33b1a303",
+"type": "159 368",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 105,
+"key": "4e8410eda816e004eddd10fbf688fc4382421e1a",
+"type": "159 368",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 106,
+"key": "d3046030190412b99cfe33f607645ff5b134d8b8",
+"type": "159 368",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 107,
+"key": "ec7876fc9369ccef2a12e7dac36130255a351a65",
+"type": "159 368",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 108,
+"key": "3e7d495cc6e07beee50b40524406b51720242b9a",
+"type": "159 368",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 109,
+"key": "7a449711a6a76e7c7f8f8775c12b6d02890b8c35",
+"type": "159 368",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 110,
+"key": "8984aa4a3c9ae688ec1da3878191f02d03fbb356",
+"type": "159 368",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 111,
+"key": "57fa23666212c8c3ab77fbf28bbce5a10b2d2577",
+"type": "159 368",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 112,
+"key": "6c736b1355b43fa9862818e16084c362f5168cad",
+"type": "159 368",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 113,
+"key": "37675a5c04dc9049ba8feea6865ff021bf38945e",
+"type": "159 368",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 114,
+"key": "e1b59eb0d7d0a635d5b574e19cfa719532ee7681",
+"type": "159 368",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 115,
+"key": "d67564634c0dc45cd9a3ceb6373b484c447eec71",
+"type": "159 368",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 116,
+"key": "71bd588a1947f3d144ad085685947ec53e6a79dd",
+"type": "159 368",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 117,
+"key": "4adad5221e61235e097a9186149ab854398c951d",
+"type": "159 368",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 118,
+"key": "7ccc52d79031eee054921a89c4a38d22a9370cad",
+"type": "159 368",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 119,
+"key": "b134eb174b9fd3309e140b1080bfbfce0150f2d3",
+"type": "159 368",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 120,
+"key": "72e86e38ddfe78c88e2f19c2631e2652a154b201",
+"type": "159 368",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+}
+],
+"I.4": [
+{
+"index": 0,
+"key": "8e88c7d9f83b4e9eecb4e84ce023d72085969909",
+"type": "025 279",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 1,
+"key": "1470f8bde405a2823711ea0550e6fc8899beeb3c",
+"type": "025 279",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 2,
+"key": "a91519790f7216564a9ca48ee2e97ac20ee78aa4",
+"type": "025 279",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 3,
+"key": "2bdb12cf2a5e23440ee8682d3794d08fa4eeb617",
+"type": "025 279",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 4,
+"key": "b596dac40e34bb24390fd121134c4bcc3d67bf55",
+"type": "025 279",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 5,
+"key": "c7cf0600ad453ad4607af37a70cd6f386cab159c",
+"type": "025 279",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 6,
+"key": "dcd531da4e38c62ac68b1326de71311339e4df67",
+"type": "025 279",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 7,
+"key": "08a3ab491a08428dfbb86391eba7c126b211b3fa",
+"type": "025 279",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 8,
+"key": "210ffc3a43005e33e31be7b4571b0d1ccc7def7f",
+"type": "025 279",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 9,
+"key": "d2212bff581d1e5ba08a26d58dc5eafb796c2fb6",
+"type": "025 279",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 10,
+"key": "5e6796cabfae38307c1b3263463915f65ebaf17f",
+"type": "025 279",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 11,
+"key": "41370a364d88c0d0ba57ae769697f2316748d885",
+"type": "025 279",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 12,
+"key": "b31eef019f993a6651b45c79240cf1fb66d05551",
+"type": "025 279",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 13,
+"key": "8b40380d7f8b49d7fe8bacbd089bfcde8bc82da5",
+"type": "025 279",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 14,
+"key": "243c977acacca40f9252c2a205d21cc4b2949703",
+"type": "027 035",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 15,
+"key": "1e5906ad456d5436316fdfbffb2c29980ba5cd93",
+"type": "027 035",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 16,
+"key": "dccf7198099891d937a66d0848049f3d0734be75",
+"type": "027 035",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 17,
+"key": "f0749ca0e048dffe6d7150de2d1d14859ec538bb",
+"type": "027 035",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 18,
+"key": "a0797b5087853dde9b8303361dfd5a656d910912",
+"type": "027 035",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 19,
+"key": "b2d76ab2deafd52aa4437faca324a60c80ce1eb0",
+"type": "027 035",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 20,
+"key": "b97cb9b6939ea86eee926604479d2e8acb060a8b",
+"type": "027 035",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 21,
+"key": "274fc4a0e606f9377df5d5812974c722a95ee9f8",
+"type": "027 035",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 22,
+"key": "a4474768ed2ca2d0f0cf2ae00ebc190974c3d011",
+"type": "027 035",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 23,
+"key": "7bca80c32ba546976af21edd77bc52d4ca34937a",
+"type": "027 035",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 24,
+"key": "b7e549bf4e9096b0448ec5e29b8585aec451b3a5",
+"type": "027 035",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 25,
+"key": "9d20ca4ae6b429ddabb02a86813f4b2b6c688384",
+"type": "027 035",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 26,
+"key": "4148ac24842000043ecf1d3c22c45018129257f8",
+"type": "035 169",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 27,
+"key": "a37af1f3b559972c42d11349c3d50fa399ab704d",
+"type": "035 169",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 28,
+"key": "5b2afe61d6d8f2d460e793310a36493cd8e99e56",
+"type": "035 169",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 29,
+"key": "666a3e1bff248c8658362a20fa1d78089e6cfe68",
+"type": "035 169",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 30,
+"key": "1f127734247db964ce1cdc68df38370823a1abf6",
+"type": "035 169",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 31,
+"key": "a86e3169a08ce3dae1aa52ad9b14264787546626",
+"type": "035 169",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 32,
+"key": "92eb2883625f14c5718da8df3cb564e544195bd4",
+"type": "035 169",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 33,
+"key": "48d6453a30a733d857b8fac37c2040f373aa5158",
+"type": "035 169",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 34,
+"key": "4ee9b9c2d996dd115ca090ae1e5472d0a86b3f31",
+"type": "035 169",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 35,
+"key": "a4f2aec531c6107d775f234a1fd87670c7051df2",
+"type": "035 169",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 36,
+"key": "2055774dc05cdfeb746f88e167ea99f77148bc29",
+"type": "035 169",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 37,
+"key": "9a3a1c1d2aa7fff6c570b845877d2f36267aadc5",
+"type": "035 169",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 38,
+"key": "d171bec72a28c3de308e084e04a7b01f28d5b28e",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 39,
+"key": "559758097cecacb96aec0a0c4291badf4faabebd",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 40,
+"key": "b71ddc8be824a9b9cd679e9350f5e4f0c0171156",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 41,
+"key": "fe41ec5b79cbd3cae430c8a8d70e07f810760571",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 42,
+"key": "6e1831b14271f229e7538b00cfc0c762eb27eca8",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 43,
+"key": "b21e1de059af609b3d52ef1b15bc45a83350466c",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 44,
+"key": "4cef1f62cb5a92dc599fa5f6e89ce158becb251f",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 45,
+"key": "5b1f2855237cd0b542e4e009524d55e47279ad62",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 46,
+"key": "c22af064a43fa459d89f5a7f31843a0894f23d58",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 47,
+"key": "2df00b882e2732fc807e34350caccf1d30d7e711",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 48,
+"key": "3b3cbbf81bd50e855a6fb627fd979f448bde3df5",
+"type": "035 169",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 49,
+"key": "164e6768d115785fda791d26c56fd677b3f6c855",
+"type": "035 169",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 50,
+"key": "fa22de29d29810399ef6bb6581a0ac2c16842f57",
+"type": "035 169",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 51,
+"key": "51f2995534b2e2cb16544d582c5382dc7963ef05",
+"type": "035 169",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 52,
+"key": "8713f4b019821f8e53f991754b7d3987cdd317a3",
+"type": "035 169",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 53,
+"key": "87762baac2683d61bbceb2a9d3d662875ce2ac54",
+"type": "035 169",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 54,
+"key": "9338bce7263bd5c63f1892628560a77d100571ef",
+"type": "035 169",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 55,
+"key": "16918b15595d662065960cd711944738e30618a3",
+"type": "035 169",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 56,
+"key": "8ede604edce8f9b8055ad2f4b462ae5ece8bfe2b",
+"type": "035 169",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 57,
+"key": "cb4ffe8b0040cabc22b93df4ee42f4945dbaf5ee",
+"type": "035 169",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 58,
+"key": "4d6b65e6bfca836eebb0902e2b861a77c9c7fa74",
+"type": "035 169",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 59,
+"key": "2e08f4e06eb92e241f7b2e3ebd9749ac33874ea3",
+"type": "035 169",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 60,
+"key": "ebac950f6bcd92fb1574e866b7bf71635b39fa6e",
+"type": "035 169",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 61,
+"key": "fade9ba20eff0f35d1f3343a0cb201a3f99d5418",
+"type": "035 169",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 62,
+"key": "a70c54b51c2b6a0951b5b530ddca69ea3e349d5a",
+"type": "035 169",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 63,
+"key": "066fa9a565ed493d58c57ac5dfa181e75f35eb49",
+"type": "035 169",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 64,
+"key": "fea1f4d3eb404d73340947c6719dde7b55390f17",
+"type": "035 169",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 65,
+"key": "7ef0e35da9e345b49171b2fd274a650b65c5fddd",
+"type": "035 169",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 66,
+"key": "0e25b15817a7ba4dac7af6a302c417202b83dcaa",
+"type": "035 279",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 67,
+"key": "b9a88c208dfc10aac6e53c973ae613e3cb16725e",
+"type": "035 279",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 68,
+"key": "3e62758ba52b6f5498a9509d62a9d6b302941a7e",
+"type": "035 279",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 69,
+"key": "70bc4ed4fed5d691c3ea5eeb3f5c18f5b30260bb",
+"type": "035 279",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 70,
+"key": "e14a8b86fbf71d60be6773a0b53356240d212815",
+"type": "035 279",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 71,
+"key": "0e91f9b76ef76c694c8af908da6c34e772188302",
+"type": "035 279",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 72,
+"key": "4efa19d7873fddfb3be95dbc80185626a5f4958e",
+"type": "035 279",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 73,
+"key": "305b8963f0bf14d8e0db8fbacfaac8790c9f7576",
+"type": "035 279",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 74,
+"key": "3d06cb33b841174143cdaaac841511bf3211edd0",
+"type": "035 279",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 75,
+"key": "4a2c160134640816b32045fae853311b497cf68f",
+"type": "035 279",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 76,
+"key": "352dded74b79b1b1196971a7b3c0a3b08ac1e43c",
+"type": "035 279",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 77,
+"key": "63fdf703f2c2582f4c208ff819c411766ac98182",
+"type": "035 279",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 78,
+"key": "a0f18d1738f94dbe854d3fec4fa843aa17d68202",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 79,
+"key": "ea5b5637bffdd9405b1fb3e88f119a791fdf51b9",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 80,
+"key": "d362e7419dfcf6dbf7e5e4e6f1e001d25056361b",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 81,
+"key": "6cf2dce0912aeb8b05e2093da90592336f536b6f",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 82,
+"key": "6941555edbefaa375eda4658c0023566fdee138a",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 83,
+"key": "2257d14ac60912076ba4c3f65370250ec418585a",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 84,
+"key": "37cbb6839812fbf6cb161844bc7739026e9f1390",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 85,
+"key": "4984860d8f4c14dbc863e908ed4bf2484c66574a",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 86,
+"key": "a4bc9866f329c69e09b3a4286eacb839b69edd43",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 87,
+"key": "42938296079bae3ad483e26616729164d034fd8c",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 88,
+"key": "ede10ffa6158d06d643ed226082e99d00204dd71",
+"type": "035 279",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 89,
+"key": "d204a66901c26890b4d4c5e325754dfada498124",
+"type": "035 279",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 90,
+"key": "e9d4f97b996a2d5e055237eee91f4e1b5a6f092f",
+"type": "035 279",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 91,
+"key": "75edb62d83caa7d4d81e24bd237ae1daee14eecd",
+"type": "035 279",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 92,
+"key": "e1249fded40393b087739689ec3965b20d144d00",
+"type": "035 279",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 93,
+"key": "f3a96bf0c7073f7b403b9ac81587632487534edf",
+"type": "035 279",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 94,
+"key": "3fb7127e321d1eae5ca52ca0156586a62907b47c",
+"type": "035 279",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 95,
+"key": "383ff4cf5370fa730c6e209a1e5405279d22ca75",
+"type": "035 279",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 96,
+"key": "131e7fe14657891ea7c68034806c416e5fc58ee3",
+"type": "035 279",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 97,
+"key": "6cd94fcc5b47a82deba320b764437b2ea4b57b22",
+"type": "035 279",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 98,
+"key": "c4eb568d1d745f5b5994b2f55f8d30d060562521",
+"type": "035 279",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 99,
+"key": "34285c01f65e920f43444bfa2bcfc588076b3b78",
+"type": "035 279",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 100,
+"key": "fffc7bba02313729ce2282ccb78efe4127deae27",
+"type": "035 279",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 101,
+"key": "2aecbf5dfc1382bf5f7e90cf3afa61bb5ede498b",
+"type": "035 279",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 102,
+"key": "afc044b42698b485e96439d072b860acbb2544ca",
+"type": "035 279",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 103,
+"key": "c66375050f6eabaff5b5083c7127c9a17364882f",
+"type": "035 279",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 104,
+"key": "f582d463a933017a2cf68a3342dab5750ca83122",
+"type": "035 279",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 105,
+"key": "630e4d5e305d6d148b642537073d8c19f25ef5a7",
+"type": "035 279",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 106,
+"key": "adf044066610ab5f362a9cb5a2199d1e048fe7c4",
+"type": "279 348",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 107,
+"key": "22fd29dc9d70d1e811058a23f08d18b1774aab44",
+"type": "279 348",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 108,
+"key": "1c3d904602ea5b8d76f338f1d9e5ca0b8640ccc5",
+"type": "279 348",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 109,
+"key": "1b106045c0378280657fc7cd9b240e9e6be2ccb6",
+"type": "279 348",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 110,
+"key": "5db3cbf4d252681b7473fa359fa4b18439bb3c03",
+"type": "279 348",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 111,
+"key": "bda382ce92e3fef91414c9f32117125f085b574b",
+"type": "279 348",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 112,
+"key": "fc65cf301f3e6a9312d38ca518b69b375b28f3bf",
+"type": "279 348",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 113,
+"key": "fdf322158b848a2710fb6bbf5475442ce49c7db9",
+"type": "279 348",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 114,
+"key": "11dc9f9d2050c0241cd701a1b172272f2aaf59dc",
+"type": "279 348",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 115,
+"key": "5f1202bc6d1a9c100abd9bda171ef4aa851e8c2d",
+"type": "279 348",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 116,
+"key": "e24dea2db2b5763f9b7d79602cc20a57996f97df",
+"type": "279 348",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 117,
+"key": "0a370723058900bc25b556c47d41123d8f74d0db",
+"type": "279 348",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 118,
+"key": "1597a009f7ebf3a1ef9bd811fb7ac7388de5b473",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 119,
+"key": "a1f991d9cfd3ca37e3447a90555058e19c9caf4b",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 120,
+"key": "c24e031f7e39de66b422310291ddfc27a7d58434",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 121,
+"key": "f42c209d9d9f7dceac57f2dc77fe3ec91e0723ff",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 122,
+"key": "e0e35903925e60cf71c9d60603b050703af04a5e",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 123,
+"key": "ebb8a9b22a41467095c5648201ac09271bdee9cb",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 124,
+"key": "a0b9a0ecab51c6caa805cf746070a7b68ffd8d4f",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 125,
+"key": "ce5a6c6de9d0afd3825762d35b1f071e0b48637f",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 126,
+"key": "7247fa0c4ada9f6f1f941708b4b3e2ad63d4bfa2",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 127,
+"key": "d17ba627f2cb4b32444940d6b5fb2ddab8432e2d",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 128,
+"key": "a9199b0112e39ad791bbbca702e9f811127085be",
+"type": "279 348",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 129,
+"key": "2787b1b99f3e10f19af0ad2e2aaf9e2bd66c52d6",
+"type": "279 348",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 130,
+"key": "f04d6f5d3b1b37cf19b1c0437d85c695d0d2cfc2",
+"type": "279 348",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 131,
+"key": "432a4da983f5f96c8581f173d2b4360ab1c5628e",
+"type": "279 348",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 132,
+"key": "a55bf183eeb40d871ef8d86c9c8fbfb59102373b",
+"type": "279 348",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 133,
+"key": "b1c47ba3b5f67a50bbbe800bdb97be0d8692f459",
+"type": "279 348",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 134,
+"key": "0a8fd1b1dd1c64961fe544421ce32075d32f5b76",
+"type": "279 348",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 135,
+"key": "8fe5d98c0c6e2ddc32649eed95a5ead988eb71a7",
+"type": "279 348",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 136,
+"key": "d60a58a9ecc634344616b597f47345843e4fd2b5",
+"type": "279 348",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 137,
+"key": "fab3b6516b0d5eac5b8fc99782f1d32b8a53f094",
+"type": "279 348",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 138,
+"key": "8f378d602c41311fe0c3bc8050019d4af76d96aa",
+"type": "279 348",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 139,
+"key": "cfe27392cbfa53dac5e1c85e4ed14f433e45fb75",
+"type": "279 348",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 140,
+"key": "72d1cb5ad96a70e9485538a2b4deebf8f670db23",
+"type": "279 348",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 141,
+"key": "07149693c5e49b03fdceef51a4ee692e8ab2d299",
+"type": "279 348",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 142,
+"key": "99707f5daea8dcb9bc0ed0601de5c23f419dc0a6",
+"type": "279 348",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 143,
+"key": "66df148a5c2442acdb11a85b779fc8a9e4d649ab",
+"type": "279 348",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 144,
+"key": "9630f4f6a061782fb80b4bfdb026125c5cc3bdcc",
+"type": "279 348",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 145,
+"key": "0c5b55185406ac061d91905c756b1839096a73d4",
+"type": "279 348",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+}
+],
+"I.5": [
+{
+"index": 0,
+"key": "63fe41970cd7a22d86b19d4f7f4cfa31aeac9773",
+"type": "012 168",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 1,
+"key": "eedacf960a86f7a69eed57dcbc26627d1623fc71",
+"type": "012 168",
+"case": "i",
+"inner": null,
+"bits": 1,
+"class_size": 3
+},
+{
+"index": 2,
+"key": "1bb5eea4d66f19be30315f615ffc5482076c5aa2",
+"type": "012 168",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 3,
+"key": "8c578c9115bf3cba034963cbc384adb1337a0a4b",
+"type": "012 168",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 4,
+"key": "5e2993a962d31310072e1c5962b5863c2aa6fb29",
+"type": "012 168",
+"case": "i",
+"inner": null,
+"bits": 6,
+"class_size": 6
+},
+{
+"index": 5,
+"key": "a337eab491c3b3e6db0eea96005ab7475e247ee8",
+"type": "012 168",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 6,
+"key": "06bb3f2792fe8c2200f9db1d35860a5ae8c6b7d3",
+"type": "012 168",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 7,
+"key": "4e7fc2e0bd7f39eb4b5166df87cc11480f0544a6",
+"type": "012 168",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 8,
+"key": "882897f745469c44c34969db3b8685a1ac9348a9",
+"type": "012 168",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 9,
+"key": "1d79617817672db4afc0d463513c82e624b58755",
+"type": "012 168",
+"case": "i",
+"inner": 0,
+"bits": 1,
+"class_size": 6
+},
+{
+"index": 10,
+"key": "6b6783f5fba8d57a8bb78a6017ba890a5e61f798",
+"type": "012 168",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 11,
+"key": "e7b875186c7da26e5ba4659802f5ad4521280206",
+"type": "012 168",
+"case": "i",
+"inner": 0,
+"bits": 16,
+"class_size": 3
+},
+{
+"index": 12,
+"key": "fce43de5cc5198aaf91a0f31d8314fc9bfb0c941",
+"type": "012 168",
+"case": "i",
+"inner": 0,
+"bits": 18,
+"class_size": 6
+},
+{
+"index": 13,
+"key": "b6ba5d0bbb614222f9098a9cf51aa7ee4ee5b978",
+"type": "012 168",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 14,
+"key": "d29f0d61744a57985b8fa1331cedebacc23f0ad4",
+"type": "012 168",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 15,
+"key": "587d918acda055feda137ea4036c2b3eaa8e4f1b",
+"type": "012 168",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 16,
+"key": "79d0d1ea591bbea4072503bc866cba78bff3b0b8",
+"type": "012 168",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 17,
+"key": "aa51afcf4d713408decfad196224b935dafe5007",
+"type": "012 579",
+"case": "i",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 18,
+"key": "524611670e126262e9986b4ef70d719d3cd59161",
+"type": "012 579",
+"case": "i",
+"inner": null,
+"bits": 2,
+"class_size": 3
+},
+{
+"index": 19,
+"key": "9caf9578abbea78ffa37df601636b5af3cec332e",
+"type": "012 579",
+"case": "i",
+"inner": null,
+"bits": 3,
+"class_size": 3
+},
+{
+"index": 20,
+"key": "661d10cd3d33c89b3bdb999116565275a018d087",
+"type": "012 579",
+"case": "i",
+"inner": null,
+"bits": 10,
+"class_size": 3
+},
+{
+"index": 21,
+"key": "279bca634dd1aa8ae4e9e342365d854eb23765bf",
+"type": "012 579",
+"case": "i",
+"inner": null,
+"bits": 11,
+"class_size": 6
+},
+{
+"index": 22,
+"key": "94d30442670c27450dfdc762d49ae9ffaf84763c",
+"type": "012 579",
+"case": "i",
+"inner": null,
+"bits": 42,
+"class_size": 1
+},
+{
+"index": 23,
+"key": "aa1db81be1773ea3757d1ef2947ce7da197af8e0",
+"type": "012 579",
+"case": "i",
+"inner": 0,
+"bits": 0,
+"class_size": 3
+},
+{
+"index": 24,
+"key": "676dc422888a71c5ad3040fa1482ae8f018f4003",
+"type": "012 579",
+"case": "i",
+"inner": 0,
+"bits": 2,
+"class_size": 6
+},
+{
+"index": 25,
+"key": "b2c25bc019774a37abead1a20e1ea9f9c5b63f06",
+"type": "012 579",
+"case": "i",
+"inner": 0,
+"bits": 32,
+"class_size": 3
+},
+{
+"index": 26,
+"key": "3315ce40c7562680995d1cecc646e355302656d3",
+"type": "012 579",
+"case": "i",
+"inner": 0,
+"bits": 33,
+"class_size": 6
+},
+{
+"index": 27,
+"key": "06136820786138792398fbd6bb50b417a93cbc53",
+"type": "012 579",
+"case": "i",
+"inner": 0,
+"bits": 34,
+"class_size": 6
+},
+{
+"index": 28,
+"key": "1582918ac977e0b9f2438dfcc32c9721ea6a3905",
+"type": "012 579",
+"case": "i",
+"inner": 0,
+"bits": 48,
+"class_size": 3
+},
+{
+"index": 29,
+"key": "99548a412ae264d9ee3a2f22b03a743333e95c7d",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 30,
+"key": "9a97801abf5346b349cc2558c4659a3edce44044",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 31,
+"key": "92a7a09e420e3aa9d2d2e3aed578a5df73a94b04",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 32,
+"key": "c868bf98f8a5756747e76aad76df10ac09163a85",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 33,
+"key": "3d5fa1cfd14fbef35ab5a38213c14d7b76a3b29a",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 34,
+"key": "b73651f01db156a8564707e752b3927cb8a272bd",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 35,
+"key": "8e0fd956d156acf594bb19e7866a733f3bad6e83",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 36,
+"key": "e2a272097a08d84852a502e48b1b7a4f70a3bead",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 37,
+"key": "3973c7323c7b2f58410c38e4d90815ef8884f008",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 38,
+"key": "1d91187f131278becb48fbc291e1b08af200e241",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 39,
+"key": "a3250295796e9a56de9d7bdc36021b5e27c1ff85",
+"type": "012 579",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 40,
+"key": "27f4bd56e071bf977cd0d5754cddcd47cf7ff19c",
+"type": "012 579",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 41,
+"key": "e1fdcef511d481eb03cc843daf82fdf119ed24d5",
+"type": "012 579",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 42,
+"key": "4fbebca0cf7c5dfc86f750c9d77559c6c939721d",
+"type": "012 579",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 43,
+"key": "8a2567aff96fae81d03a0574482bef04b5cbbcda",
+"type": "012 579",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 44,
+"key": "2308d402be6e915e3bc540aaad73f8140e5084e8",
+"type": "012 579",
+"case": "iii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 45,
+"key": "7224dd3acb453ee0b04ca968d379390573c2c7d9",
+"type": "012 579",
+"case": "iii",
+"inner": null,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 46,
+"key": "c018db37be69b4e84754f68b6956a988532ec7f5",
+"type": "012 579",
+"case": "iii",
+"inner": null,
+"bits": 6,
+"class_size": 2
+},
+{
+"index": 47,
+"key": "fdfae91addcff802cdc490aac48543f57703a2a5",
+"type": "012 579",
+"case": "iii",
+"inner": null,
+"bits": 16,
+"class_size": 1
+},
+{
+"index": 48,
+"key": "2d62346a7034c559c1cfadbb30370dc624a2e2c0",
+"type": "012 579",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 49,
+"key": "bc5a44a8e873a5e0e492d882f0634e99aff88305",
+"type": "012 579",
+"case": "iii",
+"inner": null,
+"bits": 33,
+"class_size": 4
+},
+{
+"index": 50,
+"key": "3d3528275a32b8b3b9999a0a56b403fd66a4688a",
+"type": "012 579",
+"case": "iii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 51,
+"key": "ec43943413107f440181af1e9e89acfb78cb6eaf",
+"type": "012 579",
+"case": "iii",
+"inner": 1,
+"bits": 0,
+"class_size": 2
+},
+{
+"index": 52,
+"key": "329397f4853a391eac7f0583313e63321da02be0",
+"type": "012 579",
+"case": "iii",
+"inner": 1,
+"bits": 1,
+"class_size": 4
+},
+{
+"index": 53,
+"key": "ad0d48f73336b3f96c623e26e2ad76c186ef4ae7",
+"type": "012 579",
+"case": "iii",
+"inner": 1,
+"bits": 4,
+"class_size": 4
+},
+{
+"index": 54,
+"key": "def2ec0a1a6b15f30f428de94d50522047045205",
+"type": "012 579",
+"case": "iii",
+"inner": 1,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 55,
+"key": "57c880647ae608ae7122b38035bbf98543d0f395",
+"type": "012 579",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 56,
+"key": "06cd9b02dae1699da756c49f25ef277437469238",
+"type": "012 579",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+},
+{
+"index": 57,
+"key": "d07908d0c716fd2940c16105ba3b51320171549a",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 58,
+"key": "3beb15d624488b79d69b80cf36dc10310491cf60",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 59,
+"key": "103e9f130c4f6573d921b53cfb0a901e93e24212",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 60,
+"key": "4d08f5249023e1d28260a43db81fc3190557c80b",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 61,
+"key": "c9203947aa996b71096e68a5c3bea27db57d9893",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 16,
+"class_size": 2
+},
+{
+"index": 62,
+"key": "56ee802411c7943a230dbfb369d2a9ca6b5260c0",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 17,
+"class_size": 4
+},
+{
+"index": 63,
+"key": "71a50f06e4d303bd2d2fb1b408ec23e6c40a4eff",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 20,
+"class_size": 4
+},
+{
+"index": 64,
+"key": "0e425342e6e15fd7effb1965b794a7635525c6dc",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 22,
+"class_size": 4
+},
+{
+"index": 65,
+"key": "9c373d60a979c6710c1207a086f5e26d0c983d3a",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 48,
+"class_size": 1
+},
+{
+"index": 66,
+"key": "136335b783532f4054b3157da571b2690be1b6e2",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 49,
+"class_size": 2
+},
+{
+"index": 67,
+"key": "c0e918b857edf0d4ba0094799e1914309b08efd4",
+"type": "016 359",
+"case": "ii",
+"inner": null,
+"bits": 52,
+"class_size": 2
+},
+{
+"index": 68,
+"key": "60bd1e6a5f3dd5978734104bda39168161624562",
+"type": "016 359",
+"case": "ii",
+"inner": 1,
+"bits": 0,
+"class_size": 1
+},
+{
+"index": 69,
+"key": "4a15b70534ca036aaff9037f013c42a3fc48d2f7",
+"type": "016 359",
+"case": "ii",
+"inner": 1,
+"bits": 1,
+"class_size": 2
+},
+{
+"index": 70,
+"key": "23d646e773121a67b1b52e3408226e306b72d5a0",
+"type": "016 359",
+"case": "ii",
+"inner": 1,
+"bits": 4,
+"class_size": 2
+},
+{
+"index": 71,
+"key": "e4bd7c94f9c87ac1d191a21c396aa4240e2e3ded",
+"type": "016 359",
+"case": "ii",
+"inner": 1,
+"bits": 5,
+"class_size": 4
+},
+{
+"index": 72,
+"key": "9605fa14533b088f08ae9b342eb6debf1281df15",
+"type": "016 359",
+"case": "iii",
+"inner": null,
+"bits": 32,
+"class_size": 1
+},
+{
+"index": 73,
+"key": "49b4d7ac6e17b9f81be8192a097c60e0d344dde4",
+"type": "016 359",
+"case": "iii",
+"inner": 1,
+"bits": 32,
+"class_size": 2
+},
+{
+"index": 74,
+"key": "160a6a57260a068343321e7fc34c833496e3ab7d",
+"type": "016 359",
+"case": "iii",
+"inner": 1,
+"bits": 36,
+"class_size": 4
+}
+]
+}
