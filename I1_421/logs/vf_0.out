@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/conway99-c2-aws/lemma/t20_R3_I/in_verify.py", line 643, in <module>
+    step_follow(sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5]), sys.argv[6], first, every, sub)
+  File "/home/ubuntu/conway99-c2-aws/lemma/t20_R3_I/in_verify.py", line 603, in step_follow
+    st, left = follow(B, A21, defi, base, r.get("plan", []), ztype)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/conway99-c2-aws/lemma/t20_R3_I/in_verify.py", line 572, in follow
+    dfs(A0, list(SIG), [], [], [], {w: 0 for w in NPV + list(Z)}, units)
+  File "/home/ubuntu/conway99-c2-aws/lemma/t20_R3_I/in_verify.py", line 570, in dfs
+    dfs(Bm, sg, orbs + [(U0, V, N0)], caps + [tg], d2 + [used], c2, rem3)
+  File "/home/ubuntu/conway99-c2-aws/lemma/t20_R3_I/in_verify.py", line 570, in dfs
+    dfs(Bm, sg, orbs + [(U0, V, N0)], caps + [tg], d2 + [used], c2, rem3)
+  File "/home/ubuntu/conway99-c2-aws/lemma/t20_R3_I/in_verify.py", line 570, in dfs
+    dfs(Bm, sg, orbs + [(U0, V, N0)], caps + [tg], d2 + [used], c2, rem3)
+  [Previous line repeated 3 more times]
+  File "/home/ubuntu/conway99-c2-aws/lemma/t20_R3_I/in_verify.py", line 500, in dfs
+    assert pl[0] == t, "plan out of step"
+           ^^^^^^^^^^
+AssertionError: plan out of step

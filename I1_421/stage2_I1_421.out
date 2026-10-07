@@ -1,0 +1,13 @@
+I.1 profile (4, 2, 1): stage-1 file /home/ubuntu/lemma_out/I1_421/s1_I1_421.json, 56300 bases, sha1 73e106a376242ad4c261f993ae97562310cd7b96
+   parts 8; sha1 recorded by the parts: ['73e106a376242ad4c261f993ae97562310cd7b96']; bases finished 56300; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [56300, 275161, 597528, 416434, 60366, 1128]  total 1406917
+   candidates (chosen unit)  : [275161, 2494081, 6718997, 5121021, 759700, 12710]  total 15381670
+     rejected by budgets     : [0, 0, 281206, 486052, 117790, 3042]
+     rejected by PSD (exact) : [0, 1896553, 6021357, 4574603, 640782, 9666]
+     kept                    : [275161, 597528, 416434, 60366, 1128, 2]
+     of which dead by rank   : [0, 0, 0, 0, 0, 2]
+   complete configurations: 0
+   stats: no_pattern=18705378, pair_budget=101443899, psd_reject_M1even=4811663, psd_reject_M1odd=15162799, psd_reject_M2even=11639, psd_reject_M2odd=997201, rank_odd_23=2, single_psd=7840341
+   cpu seconds: 5217 (mean 0.093 per base, max 5.5)
