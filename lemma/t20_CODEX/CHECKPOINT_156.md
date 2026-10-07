@@ -96,9 +96,10 @@ The total is 220,260,576 pairs, replacing the earlier unreproduced total
 | N: no code version recorded | 3,046,713 | 26 have some N coverage |
 
 The union of L and N comprises **55 lattices and 7,456,529 pairs** (ten
-lattices have both). A reported L hash identifies an unavailable historical
-version; it does not restore its source. P identifies a packaged engine;
-that alone does not prove the engine or its enumeration correct.
+lattices have both). The statement relayed in message 83 that the L wrapper
+was unavailable was withdrawn in message 85: the source was found and
+checked, as detailed below. P identifies a packaged engine; that alone
+does not prove the engine or its enumeration correct.
 
 The four displayed verdict totals (97,628,147 at once, 22,702,398 search,
 6,107,330 twin, 93,822,540 swap) omit **161 originally INCOMPLETE pairs**.
@@ -123,5 +124,56 @@ lattices plus 000, 004 and 010 are outside this 91-lattice recount, as are
 the 13 newly converted entries and the 20 lattice-level exclusions.
 In particular, **003 is not in this historical lot**; its fixed-first-normal
 certificate and the previously documented T18/T20 dependencies stand as
-before. The number 156 still denotes recorded exclusions, with these
-provenance gaps explicitly open. The combined proof is not yet frozen.
+before. The number 156 still denotes recorded exclusions. The current,
+smaller provenance reservation is detailed below. The combined proof is
+not yet frozen.
+
+## Recovered source and Y1 certificates (message 85)
+
+**Correction: the L wrapper is recovered, not missing.** The backup
+`engine_history/hstage_stream_v_pre_telemetry.py` has CRLF SHA-256
+`4e310e729b7df3d0702677ce4b38746aac6830f89368acda9eb47734e154d31d`.
+Its recorded 16-digit prefix matches all the L records selected for the
+recount. Their full recorded engine dictionary also matches the recovered
+wrapper plus the package-v1 core and twin-transfer program. We recomputed
+both LF and CRLF hashes of all 19 archived backups and the byte hashes of
+the three package-v1 engine files. The L wrapper occurs in 251 stored
+records; **234 selected records** contribute the 4,409,816 L pairs in this
+recount. These record counts must not be conflated.
+
+We independently checked the **55 Y1 certificates and all 12,193 listed
+representatives**, using rational basis changes and integer arithmetic in
+scaled ambient coordinates. For each lattice the plan basis is an exact
+unimodular change of the supplied generators, its Gram matrix is integral
+with determinant one, and every witness satisfies y1^2 = 7, r^2 = 2 and
+|(r,y1)| = 2. The plan file/basis hashes and representative indices agree.
+Perturbing root coordinates or y1 coordinates is rejected. This checker
+does not use the candidate-root catalogue or `q/check_cert_y1.py`.
+
+Replaying the recount's metadata selection and matching its per-lattice
+totals gives:
+
+| Historical tier | Representatives | Certified by Y1 | Without Y1 certificate |
+|---|---:|---:|---:|
+| L, source now recovered | 6,282 | 5,336 | 946 |
+| N, no recorded version | 4,520 | 3,807 | 713 |
+| Total | 10,802 | 9,143 | 1,659 |
+
+Thus **713 representatives in 25 lattices** still have neither an attested
+engine version nor a Y1 certificate. The 946 uncertified L representatives
+have an identified engine. The Y1 replacement of older searches explicitly
+uses **R, T18 and T20**; these are new dependencies for those historical
+entries. The N versions proposed from record times and backup modification
+times remain an inference, not a recorded provenance check.
+
+```text
+python lemma/t20_CODEX/check_historical_y1_frontier.py <lab-root>
+```
+
+The fresh run took about eight seconds locally. Its output
+`historical_y1_frontier_check.json` lists the 713 indices, per-lattice
+counts, input hashes and full recovered-source hashes. The exact witness
+checks are independent; metadata selection reuses the archived importer's
+record checks. No pair enumeration or exclusion search was rerun. The
+32 early lattices outside the recount, producer completeness, engine
+correctness and the global proof review retain their previous scope.
