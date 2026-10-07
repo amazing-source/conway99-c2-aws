@@ -1,0 +1,5 @@
+start 13:19:30 graph I.2 profile (4,2,1) processes 8 
+stage 1 done 13:19:47
+stage 2 done 13:22:48
+second program, stage 1 done 13:22:59
+second program done 13:41:09

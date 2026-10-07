@@ -1,0 +1,8 @@
+I.2 profile (4,2,1), second program, stage 1 (8 parts): |Aut(B)| = 10 (first program: 10); rectangle sets tested 870723; configurations with the right coverage 491745
+   passing the budget count on 35 vertices: 412875 (first program: 412875); sum of the orbit sizes of the representatives: 412875 (must be equal)
+   orbits under Aut(B): 41441 (first program: 41441); rejected by PSD (exact) 27516; kept 13925 (first program: 13925)
+   in the first list only: 0; in this list only: 0
+   STAGE 1 AGREES: True
+   stage 2 re-traversed: bases 13925 of 13925 (stage-1 list: 13925); parts not finished: none
+   totals: {'nodes': 421773, 'cands': 13917389, 'budget': 513715574, 'psd': 12831623, 'kept': 407848, 'complete': 0, 'impossible': 0, 'rank_nodes': 0, 'rank_nodes_closed_by_own_search': 0, 'rank_nodes_closed_by_rank_bound': 0, 'holes_located_by_own_rank': 0, 'free_nodes': 0, 'free_cands': 0, 'free_budget': 0, 'free_psd': 0, 'free_deepest': 0, 'free_complete': 0, 'free_capped': 0, 'recount_checks': 876330}; certificates: integer vector 12831623, exact elimination 0
+   STAGE 2 AGREES AT EVERY NODE, 0 complete, all bases: True
