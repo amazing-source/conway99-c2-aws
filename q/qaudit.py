@@ -14,6 +14,8 @@ A job = the package's own producer for chunk k/n of the lattice (with --from-pla
 paths starting with "repo:" are files of this repository, the others are files of the package), piped into q/audit_rigid.py.
 A job with "producer_max_out" runs its producer through q/producer_big.py with that cap (the package's producer stops the y2 of one y1
 at 10^6 candidates and then says complete = false: such a job FAILS here, it is never counted as audited).
+A job with "lll" (a json of reduced bases, "repo:" path) runs its producer through q/producer_lll.py, so that a plan made on the lab PC
+is valid on this machine for a lattice that is not in the package's basis cache.
 One output file per job, audit/<lid>_<k>_<n>.json, pushed to run/<NAME> as the work goes; a job whose file is already there is
 skipped (a restarted machine resumes). At the end audit/SUMMARY_*.json: per lattice, pairs, pairs with a zero-footprint candidate,
 general, exposed, exposed pairs not excluded again, jobs failed. Exit 0 = finished or interrupted."""
@@ -55,6 +57,8 @@ def main():
         U = os.path.join(a.pkg, "external_runs", "structures_3eceb4d", "U", "%s.json" % m["lid"])
         # a job with "producer_max_out" runs the producer through q/producer_big.py (raised cap on the y2 candidates of one y1), as the sweep did
         head = [os.path.join(HERE, "producer_big.py"), a.pkg, str(m["producer_max_out"])] if m.get("producer_max_out") else [os.path.join(a.pkg, "c1", "code", "y_pairs_gamma.py")]
+        # a job with "lll" runs the producer through q/producer_lll.py: the lab PC's reduced basis for a lattice outside the package's basis cache
+        if m.get("lll"): head = [os.path.join(HERE, "producer_lll.py"), a.pkg, path(m["lll"]), str(m.get("producer_max_out") or 0)]
         cmd = [sys.executable] + head + [U, path(m["gamma"]), os.path.join(work, tag + "_producer_stats.json")]
         if m.get("plan"): cmd += ["--from-plan", path(m["plan"])]
         if m["n"] > 1: cmd += ["--chunk", "%d/%d" % (m["k"], m["n"])]
