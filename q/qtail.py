@@ -4,6 +4,8 @@ Started by q/qmachine.sh instead of the queue agent when Q_TAIL_KEYS is set (sam
   Q_TAIL_KEYS="016:414:479 016:431:479 ..."   the jobs, in the order given
   Q_PAR_WORKERS=31                             consumers running at the same time (default: cores - 1)
   Q_PAR=124                                    shards per job (default: 4 x workers)
+  Q_NODE_LIMIT=200000000                       node limit of one search (default 4000000000, the package's production value); a pair
+                                               that reaches it comes back INCOMPLETE and is listed in not_excluded, never excluded
   Q_PRODUCER_MAXOUT=50000000                   run the producer through q/producer_big.py with this cap on the y2 of one y1
   Q_TAIL_SKIP_OWNED=1                          skip a key that another machine has claimed (use it when the list is work done in
                                                advance; leave it unset to finish jobs their owners have been on for hours)
@@ -49,7 +51,7 @@ def main():
                                  "--from-plan", os.path.join(a.pkg, job["plan"]), "--chunk", "%d/%d" % (k, n), "--stream", "-", "--max-seconds", "86400"],
                                 env=envx, cwd=os.path.join(a.pkg, "c1", "code"), stdout=subprocess.PIPE,
                                 stderr=open(os.path.join(out, tag + "_producer.err"), "w"))      # = run_jobs.start, producer side
-        cons = subprocess.Popen([sys.executable, os.path.join(HERE, "par_consumer.py"), a.pkg, lid, "-", res, "4000000000", str(P), str(W)], env=envx, cwd=a.pkg,
+        cons = subprocess.Popen([sys.executable, os.path.join(HERE, "par_consumer.py"), a.pkg, lid, "-", res, Q.env("Q_NODE_LIMIT", "4000000000"), str(P), str(W)], env=envx, cwd=a.pkg,
                                 stdin=prod.stdout, stdout=open(os.path.join(out, tag + "_consumer.out"), "w"), stderr=subprocess.STDOUT)
         prod.stdout.close(); t0 = time.time(); last = t0; a.log("start %s on %d shards, %d at a time" % (key, P, W))
         while cons.poll() is None:
