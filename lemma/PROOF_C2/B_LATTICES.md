@@ -136,10 +136,11 @@ gives every admissible y_1 up to the Weyl group (`measures/rerun_28/plan_<lid>.j
    an exact standalone checker (`check_hand_witness.py`: basis of U, norms 7, orthogonality, norm of the witness, value of E)
    passes on all 22 files: 171,056 pairs with a valid witness, 0 invalid. (First version, corrected after Codex's remark: only
    50 witnesses per lattice were kept.) A valid witness excludes its pair whatever the completeness of any list.
-   **Open at 19:05 UTC:** Codex found that this checker does not test that the stored coordinates are integers (a half-integer
-   "witness" in a float array would pass); it is writing the corrected version. The 22 official files do hold integer arrays
-   (checked apart: dtypes, shapes, recorded sha256), so the counts are not expected to change; they are to be re-stated after the
-   corrected checker has passed.
+   **Closed at 19:15 UTC.** Codex found that the first checker did not test that the stored coordinates are integers (a
+   half-integer "witness" in a float array passed) and corrected it: integer arrays required before any conversion, exact shapes,
+   consistent and unique indices. The corrected checker passes on the 22 official files, here and on Codex's side: 173,708 pairs,
+   171,056 with a valid witness, 2,652 survivors; its counterexample and three other corrupted files are rejected. Codex also
+   rebuilt every line of the producer streams from the arrays: the 22 stream sha256 match (`lemma/t20_CODEX/REFEREE_HAND_WITNESSES.md`).
 
 | id | roots | y_1 (up to the Weyl group) | with a root of product 2 | y_1 left | pairs of the y_1 left | E <= 7 or 8 | E = 9 | E = 10 | no witness (min E >= 11) |
 |---|---|---|---|---|---|---|---|---|---|

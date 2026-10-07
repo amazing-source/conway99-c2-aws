@@ -97,6 +97,7 @@ def main():
         print("%-4s %5d %8d %10d | %s%s" % (l, o["jobs"], o["accepted"], o["pairs"], "OK: " if ok else "", res))
     if "--need" in sys.argv:                                              # the lattices that MUST be in the manifest, e.g. --need 043,049,...
         need_l = set(sys.argv[sys.argv.index("--need") + 1].split(",")); print("lattices of the manifest = the lattices needed: %s" % (set(per) == need_l))
+        if set(per) != need_l: print("REFUSED: the manifest does not hold exactly the lattices needed"); sys.exit(1)      # a guard, not a remark (Codex, 07/10)
     print("copies per job (number of branches holding it -> jobs): %s" % dict(sorted(copies.items())))
     print("lattices accepted: %d of %d; jobs %d, records accepted %d; pairs of the accepted records %d" % (
         nok, len(per), sum(o["jobs"] for o in per.values()), sum(o["accepted"] for o in per.values()), sum(o["pairs"] for o in per.values())))
