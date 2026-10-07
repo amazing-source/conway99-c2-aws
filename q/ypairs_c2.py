@@ -207,7 +207,13 @@ if __name__ == "__main__":
         for _, res in done: pairs.extend(res)                              # same order as the sequential loop
         print("y2 stage on %d processes" % NW, flush=True)
     else:
-        for y1 in Y1:
+        # 07/10 (lab), fallback without fork: YP_PART="k/N" treats only the y1 of index k, k + N, ... (same statements), and the
+        # output file records which indices it holds; q/ypairs_merge.py puts N such files together and checks that every index
+        # 0 .. n_y1_orbits - 1 is there exactly once. Unset: all y1, as before.
+        PK, PN = [int(x) for x in os.environ.get("YP_PART", "0/1").split("/")]; assert 0 <= PK < PN; counts = []
+        for t_y1, y1 in enumerate(Y1):
+            if t_y1 % PN != PK: continue
+            n_before = len(pairs)
             idx = y2_candidates(Y, G @ y1, RG @ y1, X3G @ y1, SG @ y1, RG, X3G, SG)
             # candidates are W_J-invariant (W_J = Stab_W(y1), J = simple roots orthogonal to y1): keep the J-dominant members,
             # and identify v with the J-dominant representative of -v (pairs up to the sign of y2)
@@ -220,6 +226,12 @@ if __name__ == "__main__":
                     w = dominant(-v, J, G) if len(J) else -v
                     key = min(tuple(v), tuple(w))
                     if key not in seen: seen.add(key); pairs.append([[int(t) for t in y1], [int(t) for t in key]])   # plain ints (json)
+            counts.append([t_y1, len(pairs) - n_before])
+        if PN > 1:
+            json.dump({"source": sys.argv[1], "basis": [[str(x) for x in row] for row in L["B"]], "coords": "coefficients in 'basis'",
+                       "n_admissible_lines": int(cnt), "n_y1_orbits": len(Y1), "part": [PK, PN], "y1_counts": counts, "pairs": pairs,
+                       "norm7_lines": int(tot)}, open(outp, "w"))
+            print("part %d/%d: %d y1, pairs %d (%.0fs)" % (PK, PN, len(counts), len(pairs), time.time() - t0), flush=True); sys.exit(0)
     print("pairs (y1 W-dominant, y2 W_J-dominant up to sign): %d (%.0fs)" % (len(pairs), time.time() - t0), flush=True)
     json.dump({"source": sys.argv[1], "basis": [[str(x) for x in row] for row in L["B"]], "coords": "coefficients in 'basis'",
                "n_admissible_lines": int(cnt), "n_y1_orbits": len(Y1), "pairs": pairs}, open(outp, "w"))
