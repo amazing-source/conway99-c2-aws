@@ -1,0 +1,249 @@
+{
+ "part": [
+  0,
+  3
+ ],
+ "batch": "all",
+ "jobs_in_share": 129,
+ "done_here": 129,
+ "failed": [],
+ "jobs_with_a_pair_not_excluded_again": [],
+ "skipped_already_done": 0,
+ "per_lattice": {
+  "043": {
+   "jobs": 4,
+   "pairs": 5425,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 3898,
+   "TWIN-DEFERRED": 180,
+   "SWAP-COVERED (I(y1)>I(y2))": 70,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 857,
+   "EXCLUDED (twin transfer)": 154,
+   "EXCLUDED (stage 1 empty: no 7 h)": 258,
+   "TWIN-CANON (k(U+)<k(U))": 8
+  },
+  "049": {
+   "jobs": 1,
+   "pairs": 388,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (twin transfer)": 32,
+   "EXCLUDED (char-vector trap)": 236,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 83,
+   "TWIN-CANON (k(U+)<k(U))": 9,
+   "SWAP-COVERED (I(y1)>I(y2))": 1,
+   "EXCLUDED (stage 1 empty: no 7 h)": 27
+  },
+  "051": {
+   "jobs": 13,
+   "pairs": 3826,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 2976,
+   "EXCLUDED (twin transfer)": 163,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 430,
+   "SWAP-COVERED (I(y1)>I(y2))": 92,
+   "EXCLUDED (stage 1 empty: no 7 h)": 165
+  },
+  "055": {
+   "jobs": 13,
+   "pairs": 10907,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 8419,
+   "EXCLUDED (stage 1 empty: no 7 h)": 635,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 1030,
+   "EXCLUDED (twin transfer)": 397,
+   "SWAP-COVERED (I(y1)>I(y2))": 346,
+   "TWIN-CANON (k(U+)<k(U))": 80
+  },
+  "056": {
+   "jobs": 4,
+   "pairs": 3655,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (twin transfer)": 155,
+   "EXCLUDED (char-vector trap)": 2760,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 411,
+   "SWAP-COVERED (I(y1)>I(y2))": 151,
+   "EXCLUDED (stage 1 empty: no 7 h)": 178
+  },
+  "057": {
+   "jobs": 7,
+   "pairs": 6685,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 5169,
+   "EXCLUDED (twin transfer)": 188,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 784,
+   "EXCLUDED (stage 1 empty: no 7 h)": 340,
+   "SWAP-COVERED (I(y1)>I(y2))": 204
+  },
+  "058": {
+   "jobs": 5,
+   "pairs": 123106,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (twin transfer)": 1667,
+   "SWAP-COVERED (I(y1)>I(y2))": 57604,
+   "EXCLUDED (char-vector trap)": 51194,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 6595,
+   "EXCLUDED (stage 1 empty: no 7 h)": 6046
+  },
+  "070": {
+   "jobs": 5,
+   "pairs": 105125,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 42300,
+   "SWAP-COVERED (I(y1)>I(y2))": 49267,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 4954,
+   "EXCLUDED (stage 1 empty: no 7 h)": 7416,
+   "EXCLUDED (twin transfer)": 1188
+  },
+  "073": {
+   "jobs": 6,
+   "pairs": 58740,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 24732,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 3374,
+   "EXCLUDED (stage 1 empty: no 7 h)": 3200,
+   "SWAP-COVERED (I(y1)>I(y2))": 26314,
+   "EXCLUDED (twin transfer)": 1120
+  },
+  "074": {
+   "jobs": 5,
+   "pairs": 118528,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (twin transfer)": 1854,
+   "EXCLUDED (char-vector trap)": 52410,
+   "SWAP-COVERED (I(y1)>I(y2))": 50022,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 5928,
+   "EXCLUDED (stage 1 empty: no 7 h)": 8314
+  },
+  "075": {
+   "jobs": 5,
+   "pairs": 75614,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 36319,
+   "SWAP-COVERED (I(y1)>I(y2))": 28169,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 4380,
+   "EXCLUDED (twin transfer)": 2414,
+   "EXCLUDED (stage 1 empty: no 7 h)": 4332
+  },
+  "078": {
+   "jobs": 6,
+   "pairs": 47972,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 18246,
+   "EXCLUDED (twin transfer)": 880,
+   "EXCLUDED (stage 1 empty: no 7 h)": 3140,
+   "SWAP-COVERED (I(y1)>I(y2))": 23756,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 1950
+  },
+  "095": {
+   "jobs": 5,
+   "pairs": 47344,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 18619,
+   "EXCLUDED (twin transfer)": 2031,
+   "SWAP-COVERED (I(y1)>I(y2))": 21825,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 2532,
+   "EXCLUDED (stage 1 empty: no 7 h)": 2337
+  },
+  "098": {
+   "jobs": 5,
+   "pairs": 27124,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 10323,
+   "EXCLUDED (twin transfer)": 1008,
+   "SWAP-COVERED (I(y1)>I(y2))": 13537,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 920,
+   "EXCLUDED (stage 1 empty: no 7 h)": 1336
+  },
+  "099": {
+   "jobs": 6,
+   "pairs": 37382,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (twin transfer)": 1072,
+   "EXCLUDED (char-vector trap)": 13697,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 1542,
+   "SWAP-COVERED (I(y1)>I(y2))": 19059,
+   "EXCLUDED (stage 1 empty: no 7 h)": 2012
+  },
+  "100": {
+   "jobs": 5,
+   "pairs": 19423,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 8278,
+   "EXCLUDED (twin transfer)": 612,
+   "SWAP-COVERED (I(y1)>I(y2))": 8227,
+   "EXCLUDED (stage 1 empty: no 7 h)": 1856,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 450
+  },
+  "101": {
+   "jobs": 5,
+   "pairs": 22030,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (twin transfer)": 1233,
+   "EXCLUDED (char-vector trap)": 7374,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 1312,
+   "EXCLUDED (stage 1 empty: no 7 h)": 1501,
+   "SWAP-COVERED (I(y1)>I(y2))": 10610
+  },
+  "102": {
+   "jobs": 6,
+   "pairs": 18959,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 7879,
+   "EXCLUDED (twin transfer)": 419,
+   "EXCLUDED (stage 1 empty: no 7 h)": 2293,
+   "SWAP-COVERED (I(y1)>I(y2))": 7898,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 470
+  },
+  "104": {
+   "jobs": 5,
+   "pairs": 20168,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (twin transfer)": 1242,
+   "SWAP-COVERED (I(y1)>I(y2))": 7826,
+   "EXCLUDED (char-vector trap)": 8076,
+   "EXCLUDED (stage 1 empty: no 7 h)": 1778,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 1246
+  },
+  "107": {
+   "jobs": 5,
+   "pairs": 16961,
+   "exposed_not_excluded_again": 0,
+   "SWAP-COVERED (I(y1)>I(y2))": 7607,
+   "EXCLUDED (char-vector trap)": 6664,
+   "EXCLUDED (twin transfer)": 642,
+   "EXCLUDED (stage 1 empty: no 7 h)": 1360,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 688
+  },
+  "112": {
+   "jobs": 6,
+   "pairs": 7495,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (char-vector trap)": 2751,
+   "EXCLUDED (twin transfer)": 256,
+   "EXCLUDED (stage 1 empty: no 7 h)": 742,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 196,
+   "SWAP-COVERED (I(y1)>I(y2))": 3550
+  },
+  "114": {
+   "jobs": 5,
+   "pairs": 7032,
+   "exposed_not_excluded_again": 0,
+   "SWAP-COVERED (I(y1)>I(y2))": 3070,
+   "EXCLUDED (char-vector trap)": 2842,
+   "EXCLUDED (twin transfer)": 494,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 204,
+   "EXCLUDED (stage 1 empty: no 7 h)": 422
+  },
+  "118": {
+   "jobs": 2,
+   "pairs": 140,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (twin transfer)": 26,
+   "EXCLUDED (char-vector trap)": 88,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 18,
+   "EXCLUDED (stage 1 empty: no 7 h)": 6,
+   "SWAP-COVERED (I(y1)>I(y2))": 2
+  }
+ },
+ "hours": 0.16
+}
