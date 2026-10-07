@@ -81,16 +81,12 @@ File: `lemma/upstream/AUDIT_REDUCTION.md`. No sub-agents for this (weekly limit)
 | F9 | H4: pairs excluded by an LP status ("pair budget", FD_PREBUDGET=1) in lab-local files | LAB | **found 14:10: they all belong to ONE lattice, 105** (6,310 of its 14,169 Gamma-reduced pairs, lab run of 29/09; my first count 12,620 read the files twice). No cloud record carries this verdict. Repair: 105 goes again through the v10 producer and consumer, without solver: `measures/SWEEP_EXTRA_MANIFEST_2026-10-07.json` (16 jobs with 143; runner `q/qaudit.py`, consumer = sweep) | records of 105 imported, all pairs excluded without LP | when LAP has a slot |
 | F10 | H5: the 9/7 rule rests on T16 (no eigenfunction of squared norm 16): text pushed by the lab (9ad23660d); one referee pass | LAB (text), CDX (referee, after A5) | - | - |
 
-## Machines running: THREE, on the free account only, for lattice 044 (07/10, 19:30 UTC, real clock)
+## Machines running: NONE (07/10, 20:29 UTC, date -u)
 
-| Account | Region | Instance | Type | Job | Branch |
-|---|---|---|---|---|---|
-| free (`frere`) | eu-north-1 | i-01ad68b6cbef7c9c0 | c7a.2xlarge on-demand | re-run of the 28 old lattices, part 1/3; left: chunks of 044 | `run/q-i-01ad68b6cbef7c9c0` |
-| free (`frere`) | eu-west-2 | i-0f24682d95b245093 | c7a.2xlarge on-demand | part 2/3; left: chunks of 044 | `run/q-i-0f24682d95b245093` |
-| free (`frere`) | us-east-2 | i-01d993ebe8987ed6a | c7a.2xlarge on-demand | part 3/3; left: chunks of 044 | `run/q-i-01d993ebe8987ed6a` |
-
-The user's own account: no instance since the end of the evening re-runs, and **none is to be started there again without asking
-him first** (his words of 07/10, about 18:40 UTC). Deploy key **165703093** (created for the evening re-runs) is still active and
-is to be revoked when 044 ends; 165097369 and 165551629 were revoked at about 18:05 UTC. Lab tracker: 156 excluded of 156 since
-17:47 UTC (`measures/finishC_tracker_2026-10-07_156.json`). The paper: `lemma/PROOF_C2/paper/` (main.tex, supplement.tex).
-State of everything: `HANDOFF_2026-10-01.md` section 20.
+Lattice 044 finished on the three free machines (224 of 224 jobs of the 28-lattice manifest, 0 failed); they are terminated.
+Both accounts checked region by region at 20:27 UTC (17 regions of the user's account, 3 of the free one): 0 instance,
+0 volume, 0 Spot request. Deploy key 165703093 revoked at 20:28 UTC: the repository has no deploy key, and the local copies of
+the private key are deleted. **No machine is to be started on the user's account without asking him first.** The 044 chunks
+(each run ONCE): `run/q-i-01ad68b6cbef7c9c0` (0, 3, 6), `run/q-i-0f24682d95b245093` (1, 4, 7), `run/q-i-01d993ebe8987ed6a` (2, 5).
+The papers: `lemma/PROOF_C2/paper/` (main.tex, asymmetric.tex, supplement.tex). State of everything:
+`HANDOFF_2026-10-01.md` section 20 and its addenda.
