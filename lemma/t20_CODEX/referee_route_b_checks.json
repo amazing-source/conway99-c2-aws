@@ -1,0 +1,91 @@
+{
+  "types": [
+    {
+      "graph": "I.0",
+      "automorphisms": 16,
+      "ordered_types": 8,
+      "classes": 1,
+      "epsilon_one_representatives": []
+    },
+    {
+      "graph": "I.1",
+      "automorphisms": 4,
+      "ordered_types": 46,
+      "classes": 9,
+      "epsilon_one_representatives": [
+        "257;268",
+        "257;678",
+        "258;345"
+      ]
+    },
+    {
+      "graph": "I.2",
+      "automorphisms": 10,
+      "ordered_types": 30,
+      "classes": 3,
+      "epsilon_one_representatives": [
+        "345;389"
+      ]
+    },
+    {
+      "graph": "I.3",
+      "automorphisms": 4,
+      "ordered_types": 24,
+      "classes": 4,
+      "epsilon_one_representatives": [
+        "159;168"
+      ]
+    },
+    {
+      "graph": "I.4",
+      "automorphisms": 4,
+      "ordered_types": 24,
+      "classes": 5,
+      "epsilon_one_representatives": [
+        "025;279",
+        "027;035"
+      ]
+    },
+    {
+      "graph": "I.5",
+      "automorphisms": 20,
+      "ordered_types": 50,
+      "classes": 3,
+      "epsilon_one_representatives": [
+        "012;168"
+      ]
+    }
+  ],
+  "attachments_without_Z": 84,
+  "attachments_with_Z_before_quotient": 84,
+  "attachments_with_Z_after_quotient": 72,
+  "I0_421_reference_representatives": 1875,
+  "I0_421_raw_attachment_count": 157500,
+  "I0_421_reduced_attachment_count": 135000,
+  "archived_summary_rows_checked": 50,
+  "archived_summary_totals": {
+    "bases": 64528,
+    "classes": 64498,
+    "nodes": 86968
+  },
+  "seconds": 0.2970000000059372,
+  "sources": {
+    "lemma/t20_R3_I/SPEC_ROUTE_B_N3.txt": {
+      "sha256_bytes": "024201ea5e45a4cd261945444a39504921c623e58b5cedc3816b487e38ae3350",
+      "sha256_lf": "024201ea5e45a4cd261945444a39504921c623e58b5cedc3816b487e38ae3350"
+    },
+    "lemma/T20_PROOF.md": {
+      "sha256_bytes": "0eacc70b514cf334e6ffb4c5c2850081969ce14885d14502579c0f65f64193f9",
+      "sha256_lf": "0eacc70b514cf334e6ffb4c5c2850081969ce14885d14502579c0f65f64193f9"
+    },
+    "lemma/t20_R3_I/n3_verify.out": {
+      "sha256_bytes": "48dbf91e1566243fdb979152a1492561f3ae9154581cc34285562fa78dc1902d",
+      "sha256_lf": "48dbf91e1566243fdb979152a1492561f3ae9154581cc34285562fa78dc1902d"
+    },
+    "lemma/t20_R3_I/n3_check.out": {
+      "sha256_bytes": "e7993d89605484c67d26a404e4c4668ed33aca168b706df241fd8117bfe6edab",
+      "sha256_lf": "e7993d89605484c67d26a404e4c4668ed33aca168b706df241fd8117bfe6edab"
+    }
+  },
+  "scope": "Printed small type list, attachment quotient and summary arithmetic; no N-configuration enumeration, no search-code audit, no large search replay."
+}

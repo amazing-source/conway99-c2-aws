@@ -220,3 +220,112 @@ conditions above. When section 9.B is replaced by a completed route-B
 argument and its artifacts, that addition and the resulting section-10
 conclusion require a new pass. This report must not be cited as approval
 of an unwritten n3=2 exclusion or of the final 156-envelope conversion.
+
+## Addendum: completed route B, section 9.B.6 and Theorem 10.2
+
+CDX, 2026-10-07, requested in bridge message 57 (board A5/D3).
+Single errors-only mathematical pass, independent of the search code.
+Reviewed `../t20_R3_I/SPEC_ROUTE_B_N3.txt` in full, section 9.B.6
+(lines 2327-2479) and the resulting section-10 conclusion in
+`../T20_PROOF.md`, including the cited N-configuration definition and
+Lemmas 9.22-9.23. Snapshot: master `e47944ae1`, proof addition
+`f7e726ff2`. Byte and LF-normalized hashes are in
+`referee_route_b_checks.json`.
+
+**No blocking error found in the hand reduction or in the route-B model.**
+Lemmas 9.27-9.28 and Proposition 9.30 give the advertised exclusion,
+conditional on Computations 4.12 and 9.29. Together with the earlier
+reviewed argument, this supports Theorem 10.2, **conditional on all its
+stated Computations**. Section 9.B is now a written complete model and
+argument; the earlier report's description of it as unfinished is superseded.
+The computational provenance/contract conditions G1 and G2 above remain
+separate, and this is not a certification of all 156 lattice exclusions.
+
+### Corrections in this addition
+
+1. **The I.0 reference table mixes the raw and reduced Z-attachment
+   conventions.** Specification section 9, lines 249-253, counts 84
+   attachments on each of 1,875 representatives, giving 157,500 tests
+   and 54 kept bases, 27 classes. Section 6, line 184, and Computation
+   9.29(b), lines 2427-2428, instead use one end of a Z-pair, giving 72
+   attachments per representative. On the same 1,875 representatives
+   that is **135,000**, not 157,500. The specification's later totals
+   and both archived summaries give 27 kept bases for I.0/(4,2,1).
+
+   Either label the reference block explicitly as a separate run using
+   both Z ends (and identify its output), or replace the block with
+   results using the stated reduced convention. Do not change only the
+   attachment total while leaving the rejection/kept counts unexplained.
+   The N-configuration prefilter used in the reference block should also
+   remain explicit: it is not the same counter as the 10,146 / 2,594
+   N-configuration totals in the current `n3_check.out` I.0 line.
+   Both attachment conventions are complete; this discrepancy is not a
+   missing mathematical case. The **72** in Computation 9.29 is correct.
+
+2. **Equal candidate counts still do not establish identical kept lists.**
+   Computation 9.29, lines 2470-2471, concludes that "the two programs
+   keep the same ones". The stated stage-2 comparison is equality of
+   counts at each node, not equality of candidate identities. Replace
+   this with the actual claim: the second program completes its own
+   exhaustive traversal, using valid remaining units supplied by the
+   first, with the same kept counts at every node and zero complete
+   configurations. Stage 1 separately reports equality of canonical
+   base classes. This is the existing G2 distinction applied to the new
+   section, not a reason to rerun the search. The four-part verifier
+   contract in G2 must apply to this branch as well; no new inspection
+   of `in_verify.py` was performed in this mathematical pass.
+
+### The five requested points
+
+- **Stage-1 coverage and symmetry:** all unordered pairs in distinct
+  mate edges give `C(14,2)-7=84` attachments. With one Z-pair, 60
+  attachments avoid it, and the other 24 are paired by its local flip;
+  hence `60+12=72`. This relabelling preserves the base and all possible
+  extensions. The type quotient under Aut(B) and z/z' exchange, followed
+  by the N-configuration quotient under G_z and all attachments of a
+  representative, loses no configuration. Quotienting attachments by the
+  remaining stabilizer is optional; duplicate bases are harmless.
+- **Lemma 9.27(a):** its proof of deficient pairs, disjoint rows, the
+  partial-matching condition, compatibility and double coverage works
+  for n3=2. Compatibility also forbids repeated types or a deficient
+  pair occurring in two A-types: the corresponding two inner vertices
+  would share two support neighbours in addition to p. Thus the Boolean
+  subtraction defining m_z is legitimate. The specification's broader
+  description in section 2(b) is tightened by its necessary budget test;
+  it does not silently require the n3=0 lemma.
+- **Caps Z4:** for an added word s, G0 and `a0(s)<=4` give
+  `a2(s)<=4-2a3(s)`; subtract its known inner A-neighbours. For z use
+  `a2(z)<=1`. For an inner w use exactly Lemma 9.23(f), subtracting its
+  mate only in kind A and bounding rho by `3-h0`; the kind-Z bound from
+  `a1>=0` gives the stated floor. These are necessary upper bounds in
+  every true partial state. No final equality is assumed.
+- **The eight epsilon=1 types:** the triples share one index but no
+  2-subset, so six distinct pair deficits are consumed and their total
+  is still 24. The two common neighbours of z,z' are already in S;
+  any further common neighbour in a retained state fails the budget
+  test. Omitting the X0 words only relaxes the problem. Neither the caps
+  nor the unit induction assumes epsilon=0, so no extra branch is needed.
+- **Conclusion:** any true incomplete state leaves a positive residual
+  unit, realized by an unplaced true orbit whose entire adjacency data
+  is among the enumerated choices. The true determined subgraph passes
+  budgets, PSD and caps. Induction reaches level 8 or 9; the reported
+  absence even of level 4 contradicts this. Proposition 9.30 and its
+  use in Theorem 10.2 are valid under the stated computational premises.
+
+### Small independent check and its limits
+
+`referee_route_b_checks.py` imports no enumeration-engine code. From the
+six printed B edge lists it independently enumerates the 3-subset types
+on the 23-vertex induced base and computes Aut(B). It recovers ordered
+type counts **8,46,30,24,24,50**, class counts **1,9,3,4,5,3**, the exact
+25 printed representatives up to equivalence, and precisely the eight
+listed epsilon=1 classes. Each representative has nonnegative pair
+needs summing to 24. It also verifies the 84-to-72 attachment quotient.
+
+Finally it checks the arithmetic and agreement fields in the 50 rows of
+`n3_verify.out`: 64,528 bases, 64,498 classes and 86,968 nodes, with each
+reported complete count zero. These checks took approximately 0.3 seconds.
+They do **not** enumerate the N-configurations, replay the large searches,
+verify their negative-vector certificates, or authenticate their historical
+source/output linkage. The first and second run summaries were read as
+archived evidence, with those limits preserved.
