@@ -34,7 +34,7 @@ def main():
                                   "enumeration skeleton",
                  "accepted_by": who, "scope": scope}}
     assert all(len(d[k]["git_blob"]) == 40 for k in d), "proof text not found at HEAD"
-    json.dump(d, open(out, "w"), indent=1, ensure_ascii=False)
+    json.dump(d, open(out, "w", encoding="ascii", newline=chr(10)), indent=1, ensure_ascii=True)   # portable: no platform encoding
     print("written: %s\n%s" % (out, json.dumps({k: (v["git_blob"][:16], v["date"]) for k, v in d.items()})))
 
 

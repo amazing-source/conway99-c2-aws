@@ -5,7 +5,7 @@
   "repo_commit": "3272aee0fb00637b9ae308931693bd3f9ab7de3d",
   "date": "2026-10-07 17:47 UTC",
   "referees": "lemma/t18_REFEREE/REPORT.md (on the working reports); lemma/t18_REFEREE2/REPORT.md (read the text only and re-did every computation with programs of his own: no error, eleven presentation points, merged)",
-  "accepted_by": "the user, 2026-10-07: asked by the lab session at 15:26 UTC for his explicit word before T18 and T20 are written as accepted, he replied \"Pouruqoi on les considererait pas comme acceptés?\"; the lab session told him it took this as a yes, with the scope below, and that it would write this file once the last checks were in",
+  "accepted_by": "the user, 2026-10-07: asked by the lab session at 15:26 UTC for his explicit word before T18 and T20 are written as accepted, he replied \"Pouruqoi on les considererait pas comme accept\u00e9s?\"; the lab session told him it took this as a yes, with the scope below, and that it would write this file once the last checks were in",
   "scope": "checked by AI sessions only (authors, referees, second programs); no human reader; not formalised; not reread by the lab session"
  },
  "T20": {
@@ -15,7 +15,7 @@
   "date": "2026-10-07 17:47 UTC",
   "referees": "Codex, lemma/t20_CODEX/REFEREE_T20_PROOF.md (two passes, no blocking error; corrections merged per the laptop session); two programs for every computation; provenance table lemma/ARTIFACTS_T18_T20.md (not reviewed)",
   "open_reserves": "G2 (wording of the verifier contract); case III.1: the second verification shares the model file and part of the enumeration skeleton",
-  "accepted_by": "the user, 2026-10-07: asked by the lab session at 15:26 UTC for his explicit word before T18 and T20 are written as accepted, he replied \"Pouruqoi on les considererait pas comme acceptés?\"; the lab session told him it took this as a yes, with the scope below, and that it would write this file once the last checks were in",
+  "accepted_by": "the user, 2026-10-07: asked by the lab session at 15:26 UTC for his explicit word before T18 and T20 are written as accepted, he replied \"Pouruqoi on les considererait pas comme accept\u00e9s?\"; the lab session told him it took this as a yes, with the scope below, and that it would write this file once the last checks were in",
   "scope": "checked by AI sessions only (authors, referees, second programs); no human reader; not formalised"
  }
 }

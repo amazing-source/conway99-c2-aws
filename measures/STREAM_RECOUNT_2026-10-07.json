@@ -1,0 +1,2845 @@
+{
+ "016": {
+  "y1_reps": 479,
+  "covered": 479,
+  "by_tier": {
+   "P": 479,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 479
+  },
+  "pairs": 9661027,
+  "pairs_by_tier": {
+   "P": 9661027,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 4851344,
+  "excl_search": 353773,
+  "twin": 500506,
+  "swap": 3955404,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "017": {
+  "y1_reps": 88,
+  "covered": 88,
+  "by_tier": {
+   "P": 88,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 1193626,
+  "pairs_by_tier": {
+   "P": 1193626,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 538192,
+  "excl_search": 104715,
+  "twin": 59830,
+  "swap": 490889,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "018": {
+  "y1_reps": 4116,
+  "covered": 4116,
+  "by_tier": {
+   "P": 4116,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 446
+  },
+  "pairs": 57409330,
+  "pairs_by_tier": {
+   "P": 57409330,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 2,
+  "twin_classes_pending": 0,
+  "excl_at_once": 25624704,
+  "excl_search": 5355985,
+  "twin": 2089775,
+  "swap": 24338864,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 2,
+  "other": 0,
+  "ok": true
+ },
+ "019": {
+  "y1_reps": 887,
+  "covered": 887,
+  "by_tier": {
+   "P": 887,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 247
+  },
+  "pairs": 12492920,
+  "pairs_by_tier": {
+   "P": 12492920,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 5442408,
+  "excl_search": 1210159,
+  "twin": 453065,
+  "swap": 5387288,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "020": {
+  "y1_reps": 100,
+  "covered": 100,
+  "by_tier": {
+   "P": 100,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 1080309,
+  "pairs_by_tier": {
+   "P": 1080309,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 503004,
+  "excl_search": 106281,
+  "twin": 30213,
+  "swap": 440811,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "021": {
+  "y1_reps": 490,
+  "covered": 490,
+  "by_tier": {
+   "P": 490,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 88
+  },
+  "pairs": 6720913,
+  "pairs_by_tier": {
+   "P": 6720913,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 3112494,
+  "excl_search": 638194,
+  "twin": 277699,
+  "swap": 2692526,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "022": {
+  "y1_reps": 506,
+  "covered": 506,
+  "by_tier": {
+   "P": 506,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 22
+  },
+  "pairs": 3719056,
+  "pairs_by_tier": {
+   "P": 3719056,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1574590,
+  "excl_search": 411475,
+  "twin": 102669,
+  "swap": 1630322,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "023": {
+  "y1_reps": 419,
+  "covered": 419,
+  "by_tier": {
+   "P": 419,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 2902784,
+  "pairs_by_tier": {
+   "P": 2902784,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 5,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1246166,
+  "excl_search": 344783,
+  "twin": 77992,
+  "swap": 1233838,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 5,
+  "other": 0,
+  "ok": true
+ },
+ "024": {
+  "y1_reps": 473,
+  "covered": 473,
+  "by_tier": {
+   "P": 473,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 12
+  },
+  "pairs": 3331604,
+  "pairs_by_tier": {
+   "P": 3331604,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 54,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1408316,
+  "excl_search": 387198,
+  "twin": 102581,
+  "swap": 1433455,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 54,
+  "other": 0,
+  "ok": true
+ },
+ "025": {
+  "y1_reps": 1557,
+  "covered": 1557,
+  "by_tier": {
+   "P": 1557,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 42
+  },
+  "pairs": 12685851,
+  "pairs_by_tier": {
+   "P": 12685851,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 5672761,
+  "excl_search": 1316548,
+  "twin": 293848,
+  "swap": 5402694,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "026": {
+  "y1_reps": 685,
+  "covered": 685,
+  "by_tier": {
+   "P": 685,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 16
+  },
+  "pairs": 5525802,
+  "pairs_by_tier": {
+   "P": 5525802,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 24,
+  "twin_classes_pending": 0,
+  "excl_at_once": 2348183,
+  "excl_search": 597257,
+  "twin": 158777,
+  "swap": 2421561,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 24,
+  "other": 0,
+  "ok": true
+ },
+ "027": {
+  "y1_reps": 232,
+  "covered": 232,
+  "by_tier": {
+   "P": 232,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 1858950,
+  "pairs_by_tier": {
+   "P": 1858950,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 802700,
+  "excl_search": 202485,
+  "twin": 47086,
+  "swap": 806679,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "028": {
+  "y1_reps": 20,
+  "covered": 20,
+  "by_tier": {
+   "P": 20,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 50646,
+  "pairs_by_tier": {
+   "P": 50646,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 39,
+  "twin_classes_pending": 0,
+  "excl_at_once": 21006,
+  "excl_search": 8088,
+  "twin": 1989,
+  "swap": 19524,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 39,
+  "other": 0,
+  "ok": true
+ },
+ "029": {
+  "y1_reps": 2241,
+  "covered": 2241,
+  "by_tier": {
+   "P": 2241,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 135
+  },
+  "pairs": 20342381,
+  "pairs_by_tier": {
+   "P": 20342381,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 8999727,
+  "excl_search": 2103221,
+  "twin": 600303,
+  "swap": 8639130,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "030": {
+  "y1_reps": 202,
+  "covered": 202,
+  "by_tier": {
+   "P": 202,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 1460380,
+  "pairs_by_tier": {
+   "P": 1460380,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 696319,
+  "excl_search": 166827,
+  "twin": 59300,
+  "swap": 537934,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "031": {
+  "y1_reps": 363,
+  "covered": 363,
+  "by_tier": {
+   "P": 363,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 30
+  },
+  "pairs": 2051633,
+  "pairs_by_tier": {
+   "P": 2051633,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 899307,
+  "excl_search": 221699,
+  "twin": 37933,
+  "swap": 892694,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "032": {
+  "y1_reps": 3250,
+  "covered": 3250,
+  "by_tier": {
+   "P": 3250,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 226
+  },
+  "pairs": 19608530,
+  "pairs_by_tier": {
+   "P": 19608530,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 8543747,
+  "excl_search": 2108197,
+  "twin": 397692,
+  "swap": 8558894,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "033": {
+  "y1_reps": 375,
+  "covered": 375,
+  "by_tier": {
+   "P": 375,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 20
+  },
+  "pairs": 2049478,
+  "pairs_by_tier": {
+   "P": 2049478,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 945512,
+  "excl_search": 216006,
+  "twin": 42217,
+  "swap": 845743,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "034": {
+  "y1_reps": 1225,
+  "covered": 1225,
+  "by_tier": {
+   "P": 1225,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 159
+  },
+  "pairs": 7280902,
+  "pairs_by_tier": {
+   "P": 7280902,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 3236690,
+  "excl_search": 793546,
+  "twin": 177773,
+  "swap": 3072893,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "035": {
+  "y1_reps": 499,
+  "covered": 499,
+  "by_tier": {
+   "P": 499,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 12
+  },
+  "pairs": 1658601,
+  "pairs_by_tier": {
+   "P": 1658601,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 724128,
+  "excl_search": 198640,
+  "twin": 21917,
+  "swap": 713916,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "036": {
+  "y1_reps": 672,
+  "covered": 672,
+  "by_tier": {
+   "P": 672,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 15
+  },
+  "pairs": 2379274,
+  "pairs_by_tier": {
+   "P": 2379274,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1034935,
+  "excl_search": 270033,
+  "twin": 31625,
+  "swap": 1042681,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "037": {
+  "y1_reps": 409,
+  "covered": 409,
+  "by_tier": {
+   "P": 409,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 18
+  },
+  "pairs": 1438751,
+  "pairs_by_tier": {
+   "P": 1438751,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 30,
+  "twin_classes_pending": 0,
+  "excl_at_once": 585479,
+  "excl_search": 183248,
+  "twin": 29261,
+  "swap": 640733,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 30,
+  "other": 0,
+  "ok": true
+ },
+ "038": {
+  "y1_reps": 1168,
+  "covered": 1168,
+  "by_tier": {
+   "P": 1168,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 42
+  },
+  "pairs": 4421657,
+  "pairs_by_tier": {
+   "P": 4421657,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1957676,
+  "excl_search": 501305,
+  "twin": 59259,
+  "swap": 1903417,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "039": {
+  "y1_reps": 971,
+  "covered": 971,
+  "by_tier": {
+   "P": 971,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 12
+  },
+  "pairs": 3948897,
+  "pairs_by_tier": {
+   "P": 3948897,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1712707,
+  "excl_search": 463095,
+  "twin": 66063,
+  "swap": 1707032,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "040": {
+  "y1_reps": 434,
+  "covered": 434,
+  "by_tier": {
+   "P": 434,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 1720526,
+  "pairs_by_tier": {
+   "P": 1720526,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 747164,
+  "excl_search": 204985,
+  "twin": 32436,
+  "swap": 735941,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "041": {
+  "y1_reps": 1178,
+  "covered": 1178,
+  "by_tier": {
+   "P": 1178,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 22
+  },
+  "pairs": 4400394,
+  "pairs_by_tier": {
+   "P": 4400394,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1949956,
+  "excl_search": 490201,
+  "twin": 62031,
+  "swap": 1898206,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "042": {
+  "y1_reps": 169,
+  "covered": 169,
+  "by_tier": {
+   "P": 169,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 546423,
+  "pairs_by_tier": {
+   "P": 546423,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 242895,
+  "excl_search": 63594,
+  "twin": 5988,
+  "swap": 233946,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "043": {
+  "y1_reps": 299,
+  "covered": 299,
+  "by_tier": {
+   "P": 223,
+   "L": 0,
+   "N": 76
+  },
+  "selected_records": {
+   "P": 6,
+   "N": 2
+  },
+  "pairs": 1051604,
+  "pairs_by_tier": {
+   "P": 784337,
+   "L": 0,
+   "N": 267267
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 482078,
+  "excl_search": 129019,
+  "twin": 15967,
+  "swap": 424540,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "045": {
+  "y1_reps": 893,
+  "covered": 893,
+  "by_tier": {
+   "P": 893,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 24
+  },
+  "pairs": 2340518,
+  "pairs_by_tier": {
+   "P": 2340518,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1033179,
+  "excl_search": 274814,
+  "twin": 21956,
+  "swap": 1010569,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "046": {
+  "y1_reps": 1417,
+  "covered": 1417,
+  "by_tier": {
+   "P": 1417,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 83
+  },
+  "pairs": 4087798,
+  "pairs_by_tier": {
+   "P": 4087798,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1743885,
+  "excl_search": 475079,
+  "twin": 48398,
+  "swap": 1820436,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "047": {
+  "y1_reps": 663,
+  "covered": 663,
+  "by_tier": {
+   "P": 663,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 10
+  },
+  "pairs": 1834000,
+  "pairs_by_tier": {
+   "P": 1834000,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 795893,
+  "excl_search": 214970,
+  "twin": 28334,
+  "swap": 794803,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "048": {
+  "y1_reps": 110,
+  "covered": 110,
+  "by_tier": {
+   "P": 96,
+   "L": 14,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 7,
+   "L": 1
+  },
+  "pairs": 301557,
+  "pairs_by_tier": {
+   "P": 263871,
+   "L": 37686,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 141103,
+  "excl_search": 36564,
+  "twin": 6255,
+  "swap": 117635,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "049": {
+  "y1_reps": 196,
+  "covered": 196,
+  "by_tier": {
+   "P": 146,
+   "L": 25,
+   "N": 25
+  },
+  "selected_records": {
+   "P": 6,
+   "L": 1,
+   "N": 1
+  },
+  "pairs": 296093,
+  "pairs_by_tier": {
+   "P": 234048,
+   "L": 33785,
+   "N": 28260
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 2,
+  "twin_classes_pending": 0,
+  "excl_at_once": 119480,
+  "excl_search": 44514,
+  "twin": 3370,
+  "swap": 128727,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 2,
+  "other": 0,
+  "ok": true
+ },
+ "050": {
+  "y1_reps": 526,
+  "covered": 526,
+  "by_tier": {
+   "P": 460,
+   "L": 0,
+   "N": 66
+  },
+  "selected_records": {
+   "P": 7,
+   "N": 1
+  },
+  "pairs": 1011185,
+  "pairs_by_tier": {
+   "P": 892112,
+   "L": 0,
+   "N": 119073
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 404121,
+  "excl_search": 141412,
+  "twin": 11215,
+  "swap": 454437,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "051": {
+  "y1_reps": 230,
+  "covered": 230,
+  "by_tier": {
+   "P": 57,
+   "L": 57,
+   "N": 116
+  },
+  "selected_records": {
+   "P": 2,
+   "L": 2,
+   "N": 4
+  },
+  "pairs": 318627,
+  "pairs_by_tier": {
+   "P": 95744,
+   "L": 71913,
+   "N": 150970
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 139958,
+  "excl_search": 44932,
+  "twin": 1489,
+  "swap": 132248,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "052": {
+  "y1_reps": 119,
+  "covered": 119,
+  "by_tier": {
+   "P": 74,
+   "L": 15,
+   "N": 30
+  },
+  "selected_records": {
+   "P": 5,
+   "L": 1,
+   "N": 2
+  },
+  "pairs": 210503,
+  "pairs_by_tier": {
+   "P": 131887,
+   "L": 34547,
+   "N": 44069
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 4,
+  "twin_classes_pending": 0,
+  "excl_at_once": 83240,
+  "excl_search": 30374,
+  "twin": 2232,
+  "swap": 94653,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 4,
+  "other": 0,
+  "ok": true
+ },
+ "053": {
+  "y1_reps": 590,
+  "covered": 590,
+  "by_tier": {
+   "P": 516,
+   "L": 74,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 7,
+   "L": 1
+  },
+  "pairs": 1141132,
+  "pairs_by_tier": {
+   "P": 1003554,
+   "L": 137578,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 460805,
+  "excl_search": 156360,
+  "twin": 10086,
+  "swap": 513881,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "054": {
+  "y1_reps": 716,
+  "covered": 716,
+  "by_tier": {
+   "P": 626,
+   "L": 90,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 7,
+   "L": 1
+  },
+  "pairs": 1186218,
+  "pairs_by_tier": {
+   "P": 1028619,
+   "L": 157599,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 513121,
+  "excl_search": 143056,
+  "twin": 6669,
+  "swap": 523372,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "055": {
+  "y1_reps": 1062,
+  "covered": 1062,
+  "by_tier": {
+   "P": 929,
+   "L": 0,
+   "N": 133
+  },
+  "selected_records": {
+   "P": 7,
+   "N": 1
+  },
+  "pairs": 2118801,
+  "pairs_by_tier": {
+   "P": 1866982,
+   "L": 0,
+   "N": 251819
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 901631,
+  "excl_search": 266307,
+  "twin": 16600,
+  "swap": 934263,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "056": {
+  "y1_reps": 392,
+  "covered": 392,
+  "by_tier": {
+   "P": 245,
+   "L": 49,
+   "N": 98
+  },
+  "selected_records": {
+   "P": 5,
+   "L": 1,
+   "N": 2
+  },
+  "pairs": 802087,
+  "pairs_by_tier": {
+   "P": 498134,
+   "L": 98145,
+   "N": 205808
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 351519,
+  "excl_search": 114197,
+  "twin": 7578,
+  "swap": 328793,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "057": {
+  "y1_reps": 467,
+  "covered": 467,
+  "by_tier": {
+   "P": 233,
+   "L": 58,
+   "N": 176
+  },
+  "selected_records": {
+   "P": 4,
+   "L": 1,
+   "N": 3
+  },
+  "pairs": 854034,
+  "pairs_by_tier": {
+   "P": 413518,
+   "L": 112760,
+   "N": 327756
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 383196,
+  "excl_search": 103795,
+  "twin": 6536,
+  "swap": 360507,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "058": {
+  "y1_reps": 193,
+  "covered": 193,
+  "by_tier": {
+   "P": 0,
+   "L": 48,
+   "N": 145
+  },
+  "selected_records": {
+   "L": 2,
+   "N": 6
+  },
+  "pairs": 368757,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 91612,
+   "N": 277145
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 164086,
+  "excl_search": 47503,
+  "twin": 1691,
+  "swap": 155477,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "059": {
+  "y1_reps": 1072,
+  "covered": 1072,
+  "by_tier": {
+   "P": 1072,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 2562400,
+  "pairs_by_tier": {
+   "P": 2562400,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 1184880,
+  "excl_search": 425777,
+  "twin": 50063,
+  "swap": 901680,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "060": {
+  "y1_reps": 401,
+  "covered": 401,
+  "by_tier": {
+   "P": 401,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 568181,
+  "pairs_by_tier": {
+   "P": 568181,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 238210,
+  "excl_search": 68406,
+  "twin": 3626,
+  "swap": 257939,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "061": {
+  "y1_reps": 422,
+  "covered": 422,
+  "by_tier": {
+   "P": 422,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 560384,
+  "pairs_by_tier": {
+   "P": 560384,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 239750,
+  "excl_search": 66786,
+  "twin": 3509,
+  "swap": 250339,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "062": {
+  "y1_reps": 760,
+  "covered": 760,
+  "by_tier": {
+   "P": 760,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 15
+  },
+  "pairs": 1043635,
+  "pairs_by_tier": {
+   "P": 1043635,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 450650,
+  "excl_search": 126248,
+  "twin": 9632,
+  "swap": 457105,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "063": {
+  "y1_reps": 299,
+  "covered": 299,
+  "by_tier": {
+   "P": 299,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 13
+  },
+  "pairs": 462316,
+  "pairs_by_tier": {
+   "P": 462316,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 195315,
+  "excl_search": 59317,
+  "twin": 5012,
+  "swap": 202672,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "064": {
+  "y1_reps": 80,
+  "covered": 80,
+  "by_tier": {
+   "P": 80,
+   "L": 0,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 8
+  },
+  "pairs": 87520,
+  "pairs_by_tier": {
+   "P": 87520,
+   "L": 0,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 40072,
+  "excl_search": 10449,
+  "twin": 433,
+  "swap": 36566,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "065": {
+  "y1_reps": 216,
+  "covered": 216,
+  "by_tier": {
+   "P": 0,
+   "L": 216,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 170548,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 170548,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 71370,
+  "excl_search": 22325,
+  "twin": 1097,
+  "swap": 75756,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "066": {
+  "y1_reps": 319,
+  "covered": 319,
+  "by_tier": {
+   "P": 0,
+   "L": 319,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 304034,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 304034,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 127190,
+  "excl_search": 38166,
+  "twin": 1344,
+  "swap": 137334,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "067": {
+  "y1_reps": 519,
+  "covered": 519,
+  "by_tier": {
+   "P": 0,
+   "L": 519,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 559433,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 559433,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 235305,
+  "excl_search": 73377,
+  "twin": 4004,
+  "swap": 246747,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "068": {
+  "y1_reps": 622,
+  "covered": 622,
+  "by_tier": {
+   "P": 0,
+   "L": 622,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 620319,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 620319,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 259930,
+  "excl_search": 78724,
+  "twin": 2902,
+  "swap": 278763,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "069": {
+  "y1_reps": 67,
+  "covered": 67,
+  "by_tier": {
+   "P": 0,
+   "L": 67,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 64133,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 64133,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 26631,
+  "excl_search": 7984,
+  "twin": 428,
+  "swap": 29090,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "070": {
+  "y1_reps": 330,
+  "covered": 330,
+  "by_tier": {
+   "P": 0,
+   "L": 246,
+   "N": 84
+  },
+  "selected_records": {
+   "L": 6,
+   "N": 2
+  },
+  "pairs": 295716,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 207081,
+   "N": 88635
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 125731,
+  "excl_search": 38802,
+  "twin": 947,
+  "swap": 130236,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "071": {
+  "y1_reps": 156,
+  "covered": 156,
+  "by_tier": {
+   "P": 96,
+   "L": 60,
+   "N": 0
+  },
+  "selected_records": {
+   "P": 5,
+   "L": 3
+  },
+  "pairs": 171216,
+  "pairs_by_tier": {
+   "P": 103844,
+   "L": 67372,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 81530,
+  "excl_search": 26571,
+  "twin": 3467,
+  "swap": 59648,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "073": {
+  "y1_reps": 185,
+  "covered": 185,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 185
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 161453,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 161453
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 66338,
+  "excl_search": 20414,
+  "twin": 0,
+  "swap": 74701,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "074": {
+  "y1_reps": 513,
+  "covered": 513,
+  "by_tier": {
+   "P": 0,
+   "L": 128,
+   "N": 385
+  },
+  "selected_records": {
+   "L": 2,
+   "N": 6
+  },
+  "pairs": 367327,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 87680,
+   "N": 279647
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 156389,
+  "excl_search": 46932,
+  "twin": 664,
+  "swap": 163342,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "075": {
+  "y1_reps": 330,
+  "covered": 330,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 330
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 248990,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 248990
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 109711,
+  "excl_search": 32855,
+  "twin": 0,
+  "swap": 106424,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "076": {
+  "y1_reps": 116,
+  "covered": 116,
+  "by_tier": {
+   "P": 0,
+   "L": 116,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 52015,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 52015,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 22277,
+  "excl_search": 7805,
+  "twin": 302,
+  "swap": 21631,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "077": {
+  "y1_reps": 122,
+  "covered": 122,
+  "by_tier": {
+   "P": 0,
+   "L": 122,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 62031,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 62031,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 23142,
+  "excl_search": 11040,
+  "twin": 501,
+  "swap": 27348,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "078": {
+  "y1_reps": 224,
+  "covered": 224,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 224
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 103280,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 103280
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 42828,
+  "excl_search": 13704,
+  "twin": 0,
+  "swap": 46748,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "079": {
+  "y1_reps": 150,
+  "covered": 150,
+  "by_tier": {
+   "P": 0,
+   "L": 150,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 100895,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 100895,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 38435,
+  "excl_search": 15282,
+  "twin": 628,
+  "swap": 46550,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "080": {
+  "y1_reps": 64,
+  "covered": 64,
+  "by_tier": {
+   "P": 0,
+   "L": 64,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 31122,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 31122,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 1,
+  "twin_classes_pending": 0,
+  "excl_at_once": 11988,
+  "excl_search": 6099,
+  "twin": 284,
+  "swap": 12750,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 1,
+  "other": 0,
+  "ok": true
+ },
+ "081": {
+  "y1_reps": 244,
+  "covered": 244,
+  "by_tier": {
+   "P": 0,
+   "L": 244,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 154990,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 154990,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 64863,
+  "excl_search": 22363,
+  "twin": 1391,
+  "swap": 66373,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "082": {
+  "y1_reps": 162,
+  "covered": 162,
+  "by_tier": {
+   "P": 0,
+   "L": 162,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 90976,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 90976,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 37973,
+  "excl_search": 14071,
+  "twin": 541,
+  "swap": 38391,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "083": {
+  "y1_reps": 288,
+  "covered": 288,
+  "by_tier": {
+   "P": 0,
+   "L": 288,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 166234,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 166234,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 69180,
+  "excl_search": 23010,
+  "twin": 1363,
+  "swap": 72681,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "084": {
+  "y1_reps": 362,
+  "covered": 362,
+  "by_tier": {
+   "P": 0,
+   "L": 362,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 169401,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 169401,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 72736,
+  "excl_search": 21966,
+  "twin": 650,
+  "swap": 74049,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "085": {
+  "y1_reps": 85,
+  "covered": 85,
+  "by_tier": {
+   "P": 0,
+   "L": 85,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 38140,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 38140,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 16465,
+  "excl_search": 5116,
+  "twin": 239,
+  "swap": 16320,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "086": {
+  "y1_reps": 130,
+  "covered": 130,
+  "by_tier": {
+   "P": 0,
+   "L": 130,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 74583,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 74583,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 32925,
+  "excl_search": 10603,
+  "twin": 1151,
+  "swap": 29904,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "088": {
+  "y1_reps": 243,
+  "covered": 243,
+  "by_tier": {
+   "P": 0,
+   "L": 243,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 107203,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 107203,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 44056,
+  "excl_search": 14130,
+  "twin": 656,
+  "swap": 48361,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "089": {
+  "y1_reps": 109,
+  "covered": 109,
+  "by_tier": {
+   "P": 0,
+   "L": 109,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 49570,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 49570,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 21196,
+  "excl_search": 6838,
+  "twin": 484,
+  "swap": 21052,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "090": {
+  "y1_reps": 156,
+  "covered": 156,
+  "by_tier": {
+   "P": 0,
+   "L": 156,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 60345,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 60345,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 24975,
+  "excl_search": 7763,
+  "twin": 445,
+  "swap": 27162,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "091": {
+  "y1_reps": 205,
+  "covered": 205,
+  "by_tier": {
+   "P": 0,
+   "L": 205,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 71608,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 71608,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 29342,
+  "excl_search": 9666,
+  "twin": 327,
+  "swap": 32273,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "092": {
+  "y1_reps": 261,
+  "covered": 261,
+  "by_tier": {
+   "P": 0,
+   "L": 261,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 67915,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 67915,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 27640,
+  "excl_search": 9394,
+  "twin": 264,
+  "swap": 30617,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "093": {
+  "y1_reps": 128,
+  "covered": 128,
+  "by_tier": {
+   "P": 0,
+   "L": 128,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 32952,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 32952,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 12966,
+  "excl_search": 4944,
+  "twin": 58,
+  "swap": 14984,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "095": {
+  "y1_reps": 403,
+  "covered": 403,
+  "by_tier": {
+   "P": 0,
+   "L": 301,
+   "N": 102
+  },
+  "selected_records": {
+   "L": 6,
+   "N": 2
+  },
+  "pairs": 144220,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 109745,
+   "N": 34475
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 58814,
+  "excl_search": 20340,
+  "twin": 1270,
+  "swap": 63796,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "098": {
+  "y1_reps": 320,
+  "covered": 320,
+  "by_tier": {
+   "P": 0,
+   "L": 240,
+   "N": 80
+  },
+  "selected_records": {
+   "L": 6,
+   "N": 2
+  },
+  "pairs": 82476,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 61148,
+   "N": 21328
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 34844,
+  "excl_search": 10880,
+  "twin": 624,
+  "swap": 36128,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "099": {
+  "y1_reps": 328,
+  "covered": 328,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 328
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 93802,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 93802
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 38304,
+  "excl_search": 12782,
+  "twin": 86,
+  "swap": 42630,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "100": {
+  "y1_reps": 378,
+  "covered": 378,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 378
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 58356,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 58356
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 26388,
+  "excl_search": 8658,
+  "twin": 162,
+  "swap": 23148,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "101": {
+  "y1_reps": 210,
+  "covered": 210,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 210
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 62300,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 62300
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 22370,
+  "excl_search": 12014,
+  "twin": 0,
+  "swap": 27916,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "102": {
+  "y1_reps": 298,
+  "covered": 298,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 298
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 49692,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 49692
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 20062,
+  "excl_search": 8204,
+  "twin": 0,
+  "swap": 21426,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "103": {
+  "y1_reps": 79,
+  "covered": 79,
+  "by_tier": {
+   "P": 0,
+   "L": 79,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 17228,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 17228,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 6021,
+  "excl_search": 3172,
+  "twin": 219,
+  "swap": 7816,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "104": {
+  "y1_reps": 288,
+  "covered": 288,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 288
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 70108,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 70108
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 24200,
+  "excl_search": 13108,
+  "twin": 0,
+  "swap": 32800,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "107": {
+  "y1_reps": 276,
+  "covered": 276,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 276
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 49804,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 49804
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 20064,
+  "excl_search": 8360,
+  "twin": 0,
+  "swap": 21380,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "109": {
+  "y1_reps": 110,
+  "covered": 110,
+  "by_tier": {
+   "P": 0,
+   "L": 110,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 16386,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 16386,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 6714,
+  "excl_search": 1934,
+  "twin": 80,
+  "swap": 7658,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "110": {
+  "y1_reps": 49,
+  "covered": 49,
+  "by_tier": {
+   "P": 0,
+   "L": 49,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 6920,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 6920,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 3074,
+  "excl_search": 816,
+  "twin": 78,
+  "swap": 2952,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "112": {
+  "y1_reps": 184,
+  "covered": 184,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 184
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 20846,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 20846
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 8094,
+  "excl_search": 3360,
+  "twin": 0,
+  "swap": 9392,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "113": {
+  "y1_reps": 71,
+  "covered": 71,
+  "by_tier": {
+   "P": 0,
+   "L": 71,
+   "N": 0
+  },
+  "selected_records": {
+   "L": 8
+  },
+  "pairs": 12184,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 12184,
+   "N": 0
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 5012,
+  "excl_search": 2142,
+  "twin": 195,
+  "swap": 4835,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "114": {
+  "y1_reps": 180,
+  "covered": 180,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 180
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 19806,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 19806
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 7912,
+  "excl_search": 3156,
+  "twin": 0,
+  "swap": 8738,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "118": {
+  "y1_reps": 114,
+  "covered": 114,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 114
+  },
+  "selected_records": {
+   "N": 8
+  },
+  "pairs": 11980,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 11980
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 4880,
+  "excl_search": 2067,
+  "twin": 0,
+  "swap": 5033,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ },
+ "149": {
+  "y1_reps": 9,
+  "covered": 9,
+  "by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 9
+  },
+  "selected_records": {
+   "N": 2
+  },
+  "pairs": 44,
+  "pairs_by_tier": {
+   "P": 0,
+   "L": 0,
+   "N": 44
+  },
+  "covered_twice": 0,
+  "other_faults": [],
+  "incomplete_resolved_pairs": 0,
+  "twin_classes_pending": 0,
+  "excl_at_once": 0,
+  "excl_search": 44,
+  "twin": 0,
+  "swap": 0,
+  "defer_T18": 0,
+  "defer_T20": 0,
+  "incomplete": 0,
+  "other": 0,
+  "ok": true
+ }
+}
