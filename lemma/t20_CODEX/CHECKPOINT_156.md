@@ -159,8 +159,9 @@ totals gives:
 | N, no recorded version | 4,520 | 3,807 | 713 |
 | Total | 10,802 | 9,143 | 1,659 |
 
-Thus **713 representatives in 25 lattices** still have neither an attested
-engine version nor a Y1 certificate. The 946 uncertified L representatives
+At that checkpoint **713 representatives in 25 lattices** still had neither
+an attested engine version nor a Y1 certificate; their later rerun is
+checked below. The 946 uncertified L representatives
 have an identified engine. The Y1 replacement of older searches explicitly
 uses **R, T18 and T20**; these are new dependencies for those historical
 entries. The N versions proposed from record times and backup modification
@@ -177,3 +178,25 @@ checks are independent; metadata selection reuses the archived importer's
 record checks. No pair enumeration or exclusion search was rerun. The
 32 early lattices outside the recount, producer completeness, engine
 correctness and the global proof review retain their previous scope.
+
+## The 713 rerun checked (message 87)
+
+**The specific historical provenance gap for those 713 representatives is
+now covered.** A read-only audit of four pinned machine branches checks
+386 distinct jobs, each with two complete v10 records and matching stream
+hashes: 772 records, 2,419,830 pairs counted once. Exact basis changes,
+ordered-plan identity with the old plans and coverage of all 713 previous
+indices were independently checked. This closes that provenance issue;
+it does not prove the producer and engine correct.
+
+The same review checks all 4,073 Y1 witnesses in the new 28-lattice lot.
+Its pair-witness scan reports 17 lattices excluded without a frame search,
+but the archived program retained only the first 50 pair witnesses per
+lattice, without unique pair references, then deleted the streams. Full
+independent pair-certificate verification therefore remains outstanding.
+The issue was sent to LAB/LAP for correction.
+
+See `REFEREE_RERUN_713.md`, the reproducible checker
+`referee_rerun_713.py` and its pinned output `referee_rerun_713.json` for
+the results and exact scope. The combined proof is still not frozen or
+refereed as a whole.
