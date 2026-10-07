@@ -193,6 +193,42 @@ prefix matches the inspected engine. This is evidence for 001, not an
 independent replay or a completion of the remaining 24 lattice audits.
 H2 remains open globally.
 
+**Follow-up, message 68: archived coverage, not a new engine replay.** CDX
+read `measures/AUDIT_COVERAGE_2026-10-07.json` and the coverage collector
+archived at `q/tools/lab_2026-10-07/audit_coverage.py`. The report records
+22 of the 25 lattices covered; 003, 022 and 026 remain incomplete. Every
+entry has `exposed_not_excluded_again=0`. For the twelve complete plan
+entries using neither fixed-normal certificates nor overlapping chunks,
+the recorded audited pair totals equal the sweep totals. These are checks
+of the archived report, not independently regenerated streams or searches.
+
+For **003**, 174 of 182 first-normal representatives have accepted audit
+files (`stream_ok && ok`); five more, `[157,162,174,176,181]`, are disposed
+of by the separately checked fixed-normal certificate, **conditional on
+T18 and T20**. The remaining representatives are `[2,3,180]`. The report
+keeps these dispositions separate: it does not invent audit files or pair
+counts for a theorem-covered representative. Its 17,279,427 actually
+audited pairs include 313 exposed pairs, all recorded as re-excluded.
+The 172 selected files can cover 174 representatives because a chunk may
+contain several representatives. This H2 audit coverage is distinct from
+the complete first-normal coverage of the original 003 sweep.
+
+The collector checks coverage of the plan's residue-class representatives;
+for identity-based streams it requires all chunks from one source. It
+does not itself certify the provenance of every input/plan/engine used by
+those files, or the validity of every engine verdict. Those obligations
+and the other holes in this report remain. The reported engine hash prefix
+is `1591aeeac9c0be5c`, agreeing with the inspected engine. No jobs, manifests,
+or exclusion-tracker records were changed by this review.
+
+Snapshot SHA256 pins (file bytes):
+
+- Coverage report, LF checkout: `65f13c00438f1923b9cbe1bc1ec1ee72af5c53fe48c4ddc679f994e98ec74fe4`.
+  The lab's CRLF copy has SHA256
+  `720b7fd152026441d86d0bb961c99127fede220990c5fefde8389a1c2ed20738`;
+  the texts agree after CRLF-to-LF normalization.
+- Archived collector: `a957667ea0e10ed1b46cebb689b0892467647a3a6012046d92f6063f7cf4c856`.
+
 ### H3. Exhaustive numerical catalogues are not certified by exact acceptance
 
 FD:69-131 prunes Fincke-Pohst branches with floating Cholesky/LDL data and
