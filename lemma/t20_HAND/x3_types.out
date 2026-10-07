@@ -1,0 +1,31 @@
+I.0: |Aut| 16, det(3I+B) nonzero; classes passing (L): 1; with rho >= 0: 1
+   U=034 V=179 |UnV|=0 e(U)=3 e(V)=3 e(U,V)=2 rho=3/2
+I.1: |Aut| 4, det(3I+B) nonzero; classes passing (L): 9; with rho >= 0: 9
+   U=034 V=178 |UnV|=0 e(U)=3 e(V)=3 e(U,V)=3 rho=7/5
+   U=034 V=258 |UnV|=0 e(U)=3 e(V)=1 e(U,V)=3 rho=333/455
+   U=034 V=278 |UnV|=0 e(U)=3 e(V)=1 e(U,V)=3 rho=51/65
+   U=257 V=268 |UnV|=1 e(U)=2 e(V)=2 e(U,V)=3 rho=9/7
+   U=257 V=368 |UnV|=0 e(U)=2 e(V)=3 e(U,V)=2 rho=557/455
+   U=257 V=678 |UnV|=1 e(U)=2 e(V)=2 e(U,V)=3 rho=101/91
+   U=258 V=345 |UnV|=1 e(U)=1 e(V)=2 e(U,V)=3 rho=583/455
+   U=278 V=349 |UnV|=0 e(U)=1 e(V)=1 e(U,V)=3 rho=3/5
+   U=368 V=457 |UnV|=0 e(U)=3 e(V)=3 e(U,V)=2 rho=11/7
+I.2: |Aut| 10, det(3I+B) nonzero; classes passing (L): 3; with rho >= 0: 3
+   U=034 V=189 |UnV|=0 e(U)=3 e(V)=3 e(U,V)=2 rho=17/11
+   U=034 V=589 |UnV|=0 e(U)=3 e(V)=2 e(U,V)=2 rho=37/33
+   U=345 V=389 |UnV|=1 e(U)=2 e(V)=2 e(U,V)=3 rho=7/11
+I.3: |Aut| 4, det(3I+B) nonzero; classes passing (L): 4; with rho >= 0: 4
+   U=034 V=156 |UnV|=0 e(U)=3 e(V)=1 e(U,V)=3 rho=29/48
+   U=034 V=159 |UnV|=0 e(U)=3 e(V)=2 e(U,V)=2 rho=5/4
+   U=159 V=168 |UnV|=1 e(U)=2 e(V)=2 e(U,V)=3 rho=31/24
+   U=159 V=368 |UnV|=0 e(U)=2 e(V)=3 e(U,V)=2 rho=5/4
+I.4: |Aut| 4, det(3I+B) nonzero; classes passing (L): 5; with rho >= 0: 5
+   U=025 V=279 |UnV|=1 e(U)=1 e(V)=2 e(U,V)=3 rho=9/8
+   U=027 V=035 |UnV|=1 e(U)=1 e(V)=2 e(U,V)=3 rho=17/16
+   U=035 V=169 |UnV|=0 e(U)=2 e(V)=2 e(U,V)=2 rho=1
+   U=035 V=279 |UnV|=0 e(U)=2 e(V)=2 e(U,V)=2 rho=1
+   U=279 V=348 |UnV|=0 e(U)=2 e(V)=2 e(U,V)=2 rho=1
+I.5: |Aut| 20, det(3I+B) nonzero; classes passing (L): 3; with rho >= 0: 3
+   U=012 V=168 |UnV|=1 e(U)=2 e(V)=2 e(U,V)=3 rho=3/2
+   U=012 V=579 |UnV|=0 e(U)=2 e(V)=2 e(U,V)=2 rho=1
+   U=016 V=359 |UnV|=0 e(U)=1 e(V)=1 e(U,V)=3 rho=1/2
