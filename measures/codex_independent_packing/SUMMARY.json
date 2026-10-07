@@ -1,0 +1,560 @@
+{
+  "implementation_sha256": "1418cb5cc41670fe5d74d7e9c9bbf2b6296fe25d3bec38b2f30513df9297cd93",
+  "sympy_version": "1.14.0",
+  "numpy_version": "2.5.3",
+  "brute_force_enumeration_controls": 7,
+  "records": {
+    "094": {
+      "roots": "d_5^4",
+      "norm2_vectors": 160,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        128,
+        80
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "2": 1920,
+          "10": 128
+        },
+        {
+          "2": 1920,
+          "10": 128
+        }
+      ],
+      "sum_42_smallest": [
+        84,
+        84
+      ],
+      "new_root_capacity": 80,
+      "test_1_excludes": true,
+      "seconds": 1.047,
+      "excluded": true
+    },
+    "117": {
+      "roots": "d_8d_4^4",
+      "norm2_vectors": 208,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        128,
+        128
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "0": 1024,
+          "8": 1024
+        },
+        {
+          "0": 1024,
+          "8": 1024
+        }
+      ],
+      "sum_42_smallest": [
+        0,
+        0
+      ],
+      "new_root_capacity": 128,
+      "test_1_excludes": false,
+      "seconds": 2.0,
+      "admissible_sign_classes": 2048,
+      "components": [
+        {
+          "classes": 2048,
+          "span_rank": 24,
+          "orthogonal_dimension": 0,
+          "short_dual_sign_classes": 8,
+          "short_dual_span_dimension": 8,
+          "short_dual_norm_histogram": {
+            "1": 8
+          },
+          "test_2_excludes": true
+        }
+      ],
+      "excluded": true
+    },
+    "128": {
+      "roots": "a_9e_6d_6a_1",
+      "norm2_vectors": 224,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        208,
+        64
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "2": 1404,
+          "4": 320,
+          "6": 240,
+          "12": 64,
+          "18": 20
+        },
+        {
+          "2": 1404,
+          "4": 320,
+          "6": 240,
+          "12": 64,
+          "18": 20
+        }
+      ],
+      "sum_42_smallest": [
+        84,
+        84
+      ],
+      "new_root_capacity": 64,
+      "test_1_excludes": true,
+      "seconds": 1.11,
+      "excluded": true
+    },
+    "129": {
+      "roots": "e_6^2d_5^2",
+      "norm2_vectors": 224,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        208,
+        64
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "2": 1728,
+          "10": 320
+        },
+        {
+          "2": 1728,
+          "10": 320
+        }
+      ],
+      "sum_42_smallest": [
+        84,
+        84
+      ],
+      "new_root_capacity": 64,
+      "test_1_excludes": true,
+      "seconds": 1.078,
+      "excluded": true
+    },
+    "133": {
+      "roots": "a_{13}d_6a_3a_1",
+      "norm2_vectors": 256,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        128,
+        176
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "4": 1176,
+          "6": 672,
+          "12": 192,
+          "28": 8
+        },
+        {
+          "4": 1176,
+          "6": 672,
+          "12": 192,
+          "28": 8
+        }
+      ],
+      "sum_42_smallest": [
+        168,
+        168
+      ],
+      "new_root_capacity": 128,
+      "test_1_excludes": true,
+      "seconds": 1.14,
+      "excluded": true
+    },
+    "134": {
+      "roots": "d_9a_7^2",
+      "norm2_vectors": 256,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        128,
+        176
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "2": 1152,
+          "10": 896
+        },
+        {
+          "2": 1152,
+          "10": 896
+        }
+      ],
+      "sum_42_smallest": [
+        84,
+        84
+      ],
+      "new_root_capacity": 128,
+      "test_1_excludes": false,
+      "seconds": 1.985,
+      "admissible_sign_classes": 2048,
+      "components": [
+        {
+          "classes": 2048,
+          "span_rank": 24,
+          "orthogonal_dimension": 0,
+          "short_dual_sign_classes": 9,
+          "short_dual_span_dimension": 9,
+          "short_dual_norm_histogram": {
+            "1": 9
+          },
+          "test_2_excludes": true
+        }
+      ],
+      "excluded": true
+    },
+    "136": {
+      "roots": "a_{11}^2",
+      "norm2_vectors": 264,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        48,
+        264
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "2": 1584,
+          "6": 440,
+          "22": 24
+        },
+        {
+          "2": 1584,
+          "6": 440,
+          "22": 24
+        }
+      ],
+      "sum_42_smallest": [
+        84,
+        84
+      ],
+      "new_root_capacity": 48,
+      "test_1_excludes": true,
+      "seconds": 1.031,
+      "excluded": true
+    },
+    "142": {
+      "roots": "d_{10}d_6^2a_1^2",
+      "norm2_vectors": 304,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        224,
+        128
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "4": 1280,
+          "12": 768
+        },
+        {
+          "4": 1280,
+          "12": 768
+        }
+      ],
+      "sum_42_smallest": [
+        168,
+        168
+      ],
+      "new_root_capacity": 128,
+      "test_1_excludes": true,
+      "seconds": 1.016,
+      "excluded": true
+    },
+    "144": {
+      "roots": "a_{16}a_7",
+      "norm2_vectors": 328,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        104,
+        272
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "4": 1088,
+          "10": 952,
+          "34": 8
+        },
+        {
+          "4": 1088,
+          "10": 952,
+          "34": 8
+        }
+      ],
+      "sum_42_smallest": [
+        168,
+        168
+      ],
+      "new_root_capacity": 104,
+      "test_1_excludes": true,
+      "seconds": 1.062,
+      "excluded": true
+    },
+    "145": {
+      "roots": "d_8^2d_8",
+      "norm2_vectors": 336,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        384,
+        0
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "0": 2048
+        },
+        {
+          "0": 2048
+        }
+      ],
+      "sum_42_smallest": [
+        0,
+        0
+      ],
+      "new_root_capacity": 0,
+      "test_1_excludes": false,
+      "seconds": 1.672,
+      "admissible_sign_classes": 2048,
+      "components": [
+        {
+          "classes": 2048,
+          "span_rank": 24,
+          "orthogonal_dimension": 0,
+          "short_dual_sign_classes": 8,
+          "short_dual_span_dimension": 8,
+          "short_dual_norm_histogram": {
+            "1": 8
+          },
+          "test_2_excludes": true
+        }
+      ],
+      "excluded": true
+    },
+    "146": {
+      "roots": "d_8^3",
+      "norm2_vectors": 336,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        384,
+        0
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "0": 2048
+        },
+        {
+          "0": 2048
+        }
+      ],
+      "sum_42_smallest": [
+        0,
+        0
+      ],
+      "new_root_capacity": 0,
+      "test_1_excludes": false,
+      "seconds": 1.781,
+      "admissible_sign_classes": 2048,
+      "components": [
+        {
+          "classes": 2048,
+          "span_rank": 24,
+          "orthogonal_dimension": 0,
+          "short_dual_sign_classes": 24,
+          "short_dual_span_dimension": 24,
+          "short_dual_norm_histogram": {
+            "1": 24
+          },
+          "test_2_excludes": true
+        }
+      ],
+      "excluded": true
+    },
+    "147": {
+      "roots": "a_{15}d_8",
+      "norm2_vectors": 352,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        368,
+        32
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "2": 1920,
+          "16": 128
+        },
+        {
+          "2": 1920,
+          "16": 128
+        }
+      ],
+      "sum_42_smallest": [
+        84,
+        84
+      ],
+      "new_root_capacity": 32,
+      "test_1_excludes": true,
+      "seconds": 0.985,
+      "excluded": true
+    },
+    "148": {
+      "roots": "a_{15}e_7a_1",
+      "norm2_vectors": 368,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        352,
+        64
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "4": 896,
+          "6": 1120,
+          "30": 32
+        },
+        {
+          "4": 896,
+          "6": 1120,
+          "30": 32
+        }
+      ],
+      "sum_42_smallest": [
+        168,
+        168
+      ],
+      "new_root_capacity": 64,
+      "test_1_excludes": true,
+      "seconds": 1.187,
+      "excluded": true
+    },
+    "150": {
+      "roots": "d_8e_7^2a_1^2",
+      "norm2_vectors": 368,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        352,
+        64
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "4": 1792,
+          "16": 256
+        },
+        {
+          "4": 1792,
+          "16": 256
+        }
+      ],
+      "sum_42_smallest": [
+        168,
+        168
+      ],
+      "new_root_capacity": 64,
+      "test_1_excludes": true,
+      "seconds": 0.922,
+      "excluded": true
+    },
+    "151": {
+      "roots": "d_{12}d_8d_4",
+      "norm2_vectors": 400,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        320,
+        128
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "8": 1536,
+          "16": 512
+        },
+        {
+          "8": 1536,
+          "16": 512
+        }
+      ],
+      "sum_42_smallest": [
+        336,
+        336
+      ],
+      "new_root_capacity": 128,
+      "test_1_excludes": true,
+      "seconds": 0.891,
+      "excluded": true
+    },
+    "152": {
+      "roots": "e_8d_8^2",
+      "norm2_vectors": 464,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        256,
+        256
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "16": 2048
+        },
+        {
+          "16": 2048
+        }
+      ],
+      "sum_42_smallest": [
+        672,
+        672
+      ],
+      "new_root_capacity": 256,
+      "test_1_excludes": true,
+      "seconds": 0.937,
+      "excluded": true
+    },
+    "154": {
+      "roots": "a_{23}",
+      "norm2_vectors": 552,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        552,
+        48
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "6": 2024,
+          "46": 24
+        },
+        {
+          "6": 2024,
+          "46": 24
+        }
+      ],
+      "sum_42_smallest": [
+        252,
+        252
+      ],
+      "new_root_capacity": 48,
+      "test_1_excludes": true,
+      "seconds": 0.891,
+      "excluded": true
+    },
+    "155": {
+      "roots": "d_{16}d_8",
+      "norm2_vectors": 592,
+      "norm3_sign_classes": 2048,
+      "new_shadow_roots_by_coset": [
+        128,
+        512
+      ],
+      "m_histograms_sign_classes": [
+        {
+          "16": 2048
+        },
+        {
+          "16": 2048
+        }
+      ],
+      "sum_42_smallest": [
+        672,
+        672
+      ],
+      "new_root_capacity": 128,
+      "test_1_excludes": true,
+      "seconds": 0.843,
+      "excluded": true
+    }
+  },
+  "differences_from_announced_numbers": [],
+  "all_computed_lattices_excluded": true
+}
