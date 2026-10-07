@@ -78,6 +78,8 @@ def main():
     for name, prefix in engine.items():
         engine_files[name] = sha((pkg/'scripts'/name).read_bytes())
         assert engine_files[name][:16] == prefix
+    packaged_tracker = pkg/'data/finishC/finishC_tracker.json'
+    packaged_lattices = read(packaged_tracker)['lattices']
     classes = collections.defaultdict(set)
     for v in read(lab/'data/finishC/finishC_tracker.json')['lattices']:
         counts = collections.Counter()
@@ -88,7 +90,8 @@ def main():
     packaged_cache = read(pkg/'c1/code/lll_cache.json')
     extra = read(REPO/'measures/rerun_713/lll_lab.json')
     basis_info = {}
-    per = {lid: {'jobs': 0, 'pairs': 0, 'reps': set(), 'verdicts': collections.Counter()} for lid in lids}
+    per = {lid: {'jobs': 0, 'pairs': 0, 'reps': set(), 'verdicts': collections.Counter(),
+                 'raw_verdicts': collections.Counter()} for lid in lids}
     pair_records = []
     for name, m in wanted.items():
         lid = m['lid']
@@ -126,6 +129,7 @@ def main():
         assert len(got) == 2, (name, 'not exactly two machines')
         assert len({r['sha256'] for r in got.values()}) == 1
         assert len({r['n_pairs'] for r in got.values()}) == 1
+        assert len({json.dumps(r['verdicts'], sort_keys=True) for r in got.values()}) == 1
         for branch, r in got.items():
             assert not importer.check(r, lid, m['k'], m['n'], st, go, par, defer)
             assert importer.open_state(r) == 'done'
@@ -145,6 +149,7 @@ def main():
         o['pairs'] += r['n_pairs']
         for v, count in r['verdicts'].items():
             o['verdicts'][importer.cls(v)] += count
+            o['raw_verdicts'][v] += count
         pair_records.append({'file': name, 'branches': sorted(got), 'stream_sha256': r['sha256'], 'pairs': r['n_pairs']})
     for lid, o in per.items():
         need = frontier['certificates'][lid]['uncertified_by_tier']['N']
@@ -183,6 +188,14 @@ def main():
            'hand_28': hand, 'hand_28_Y1_certificates_checked': sum(r['y1_with_root_of_product_2'] for r in hand.values()),
            'hand_28_pair_witnesses_independently_checked': False,
            'producer_completeness_proved': False, 'whole_proof_verified': False}
+    out['twin_status_dependency'] = {
+        'package_tracker_sha256': sha(packaged_tracker.read_bytes()),
+        'package_tracker_excluded_lattices': sum(v['status'] == 'excluded' for v in packaged_lattices),
+        'status_transfer_pairs_counted_once': sum(o['raw_verdicts']['EXCLUDED (twin transfer)'] for o in per.values()),
+        'status_targets_retained_per_pair': False,
+        'target_exclusions_independently_verified': False,
+        'dependency_acyclicity_verified': False,
+        'note': 'The consumer reads the packaged tracker. Current lab tracker statuses checked above for named deferred types do not prove the packaged status shortcuts. No claim that all old proof dependencies are superseded.'}
     target = HERE/'referee_rerun_713.json'
     target.write_text(json.dumps(out, indent=2, sort_keys=True)+'\n', encoding='utf-8')
     print(json.dumps({k: out[k] for k in ('lattices', 'jobs', 'records_checked', 'pairs', 'hand_28_Y1_certificates_checked')}))

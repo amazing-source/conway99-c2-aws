@@ -12,8 +12,10 @@ state at message 87.
 
 ## The particular 713 rerun: coverage and records checked
 
-**The historical 713-representative provenance gap is covered by the new
-records**, subject to the already stated producer/engine proof scope.
+**The historical 713-representative traversal/provenance gap is covered by
+the new records**, subject to the already stated producer/engine proof scope
+and the inherited twin-target exclusions below. This does not mean that
+the new records replace all earlier exclusion proofs.
 `referee_rerun_713.py` pins four machine branches by full commit ID and
 checks the following against the manifest, the published acceptance report
 and our independently computed previous frontier:
@@ -50,6 +52,29 @@ pinned commits, per-job stream hashes, per-lattice coverage and basis checks.
 It does not prove the pair producer or the exclusion engine correct.
 Recorded twin statuses do not by themselves prove an acyclic dependency
 argument; that remains in the previously documented campaign proof.
+
+### Correction and explicit dependency, bridge message 107
+
+The v10 consumer reads `data/finishC/finishC_tracker.json` **inside the
+package**, not the current lab tracker. That snapshot has 102 excluded
+lattices. Its `EXCLUDED (twin transfer)` shortcut precedes both the
+strictly-increasing-root test and the same-type canonical-key test. In the
+713 rerun it accounts for **59,697 pairs**, counted once per job. There are
+also **428 TWIN-DEFERRED** and **183 TWIN-CANON** pairs. The sum, 60,308,
+is all three twin verdicts, not the status shortcut alone. Both copies of
+every job have the same ungrouped verdict counts. The updated checker
+records the exact snapshot hash and the ungrouped verdicts.
+
+Our original check of named `twin_deferred` types against the current lab
+tracker did not establish this shortcut's target dependencies: the record
+does not retain those targets per pair. In particular, exact identification
+of a target already labelled excluded, possibly the source itself, does
+not prove its exclusion. Acyclicity was explicitly left conditional above;
+the opening wording nevertheless needed this qualification. Retain the
+earlier independently anchored target proofs, or recertify these transfers
+by a well-founded order or twin-disabled residual searches. See
+`REFEREE_TWIN_DEPENDENCIES.md`. The new records certify traversal and the
+recorded verdicts, not a fresh proof independent of the packaged snapshot.
 
 ## Launcher and acceptance code
 

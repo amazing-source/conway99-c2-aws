@@ -1,0 +1,7228 @@
+{
+  "script_sha256": "05c88fafacf717ba53a9dc7f8b33efe5ce9237a44c53762077ba34be31bad602",
+  "input_sha256": "0db40f76521b86985134e6fa651cc6ad32e9893e5f5a2936cf2feba832d282d7",
+  "all_156_match_independent_rational_rank": true,
+  "negative_controls": {
+    "duplicate_signs": true,
+    "wrong_norm": true,
+    "fractional_dtype": true,
+    "nonintegral_gram": true,
+    "incomplete_A2": true,
+    "overflow_bound": true
+  },
+  "construction_control": true,
+  "historical_twin_streams_checked": false,
+  "records": [
+    {
+      "id": 0,
+      "type": {},
+      "components": []
+    },
+    {
+      "id": 1,
+      "type": {
+        "a1": 8
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": {
+        "a1": 12
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": {
+        "a1": 10,
+        "a2": 2
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": {
+        "a1": 16
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": {
+        "a1": 8,
+        "a2": 4
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": {
+        "a1": 12,
+        "a3": 2
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": {
+        "a1": 6,
+        "a2": 4,
+        "a3": 1
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": {
+        "a2": 8
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": {
+        "a1": 6,
+        "a2": 6
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": {
+        "a1": 24
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": {
+        "a1": 4,
+        "a2": 4,
+        "a3": 2
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "type": {
+        "a1": 4,
+        "a2": 8
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "type": {
+        "a1": 2,
+        "a2": 2,
+        "a3": 4
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "type": {
+        "a1": 4,
+        "a2": 4,
+        "a3": 1,
+        "a4": 1
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "type": {
+        "a1": 2,
+        "a2": 4,
+        "a3": 3
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "type": {
+        "a1": 8,
+        "a3": 4
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "type": {
+        "a1": 8,
+        "a3": 4
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "type": {
+        "a1": 2,
+        "a2": 2,
+        "a3": 3,
+        "a4": 1
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "type": {
+        "a1": 4,
+        "a2": 4,
+        "a4": 2
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "type": {
+        "a3": 6
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "type": {
+        "a2": 4,
+        "a3": 4
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "type": {
+        "a2": 6,
+        "a4": 1,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "type": {
+        "a1": 4,
+        "a3": 4,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "type": {
+        "a1": 7,
+        "a3": 3,
+        "a5": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "type": {
+        "a1": 2,
+        "a3": 3,
+        "a4": 2
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "type": {
+        "a1": 1,
+        "a2": 4,
+        "a3": 2,
+        "a5": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "type": {
+        "a1": 4,
+        "a3": 4,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "type": {
+        "a1": 16,
+        "d4": 2
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "type": {
+        "a1": 2,
+        "a2": 2,
+        "a3": 2,
+        "a4": 2
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "type": {
+        "a1": 4,
+        "a3": 6
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "type": {
+        "a1": 4,
+        "a4": 4
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "type": {
+        "a1": 1,
+        "a2": 2,
+        "a3": 2,
+        "a4": 1,
+        "a5": 1
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "type": {
+        "a3": 4,
+        "a4": 2
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "type": {
+        "a1": 2,
+        "a2": 2,
+        "a3": 1,
+        "a4": 3
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "type": {
+        "a1": 3,
+        "a4": 3,
+        "a5": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "type": {
+        "a2": 2,
+        "a3": 2,
+        "a5": 2
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "type": {
+        "a2": 3,
+        "a3": 3,
+        "a6": 1
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "type": {
+        "a2": 2,
+        "a4": 3,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "type": {
+        "a1": 3,
+        "a3": 3,
+        "a5": 1,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "type": {
+        "a1": 6,
+        "a3": 2,
+        "a5": 2
+      },
+      "components": [
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "type": {
+        "a1": 1,
+        "a3": 2,
+        "a4": 2,
+        "a5": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "type": {
+        "a3": 4,
+        "d4": 2
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "type": {
+        "a3": 3,
+        "a4": 3
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "type": {
+        "a3": 8
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "type": {
+        "a1": 2,
+        "a4": 2,
+        "a5": 2
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "type": {
+        "a1": 2,
+        "a2": 1,
+        "a3": 1,
+        "a4": 2,
+        "a6": 1
+      },
+      "components": [
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "type": {
+        "a2": 2,
+        "a3": 1,
+        "a4": 1,
+        "a5": 2
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "type": {
+        "a3": 2,
+        "a4": 4
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "type": {
+        "a3": 4,
+        "d4": 1,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "type": {
+        "a1": 3,
+        "a3": 3,
+        "a5": 1,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "type": {
+        "a1": 2,
+        "a5": 2,
+        "d4": 2
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "type": {
+        "a1": 4,
+        "a3": 4,
+        "a7": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "type": {
+        "a2": 2,
+        "a4": 3,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "type": {
+        "a2": 1,
+        "a4": 2,
+        "a6": 1,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "type": {
+        "a1": 1,
+        "a2": 1,
+        "a3": 1,
+        "a4": 1,
+        "a5": 1,
+        "a6": 1
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "type": {
+        "a1": 2,
+        "a3": 2,
+        "a5": 2,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "type": {
+        "a3": 1,
+        "a4": 2,
+        "a5": 2
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "type": {
+        "a1": 2,
+        "a3": 2,
+        "a5": 2,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "type": {
+        "a1": 8,
+        "d4": 4
+      },
+      "components": [
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "type": {
+        "a3": 2,
+        "a4": 2,
+        "a7": 1
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "type": {
+        "a1": 2,
+        "a3": 1,
+        "a4": 1,
+        "a6": 2
+      },
+      "components": [
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "type": {
+        "a2": 1,
+        "a3": 1,
+        "a5": 2,
+        "a6": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "type": {
+        "a2": 2,
+        "a3": 2,
+        "a6": 2
+      },
+      "components": [
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "type": {
+        "a5": 4
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "type": {
+        "a2": 2,
+        "a5": 2,
+        "a7": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "type": {
+        "a1": 1,
+        "a4": 2,
+        "a5": 1,
+        "a7": 1
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "type": {
+        "a1": 3,
+        "a3": 1,
+        "a5": 1,
+        "a7": 1,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "type": {
+        "a2": 1,
+        "a4": 2,
+        "a6": 1,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "type": {
+        "a3": 4,
+        "d5": 2
+      },
+      "components": [
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "type": {
+        "a1": 2,
+        "a5": 2,
+        "d4": 1,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "type": {
+        "a1": 1,
+        "a3": 1,
+        "a5": 3,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "type": {
+        "a1": 4,
+        "a5": 4
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "type": {
+        "a3": 2,
+        "a4": 2,
+        "a8": 1
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "type": {
+        "a1": 1,
+        "a2": 1,
+        "a5": 1,
+        "a6": 1,
+        "a7": 1
+      },
+      "components": [
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "type": {
+        "a1": 1,
+        "a4": 1,
+        "a5": 1,
+        "a6": 2
+      },
+      "components": [
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "type": {
+        "a1": 4,
+        "a7": 2,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "type": {
+        "a3": 2,
+        "a5": 2,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "type": {
+        "a3": 1,
+        "a5": 2,
+        "a8": 1
+      },
+      "components": [
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "type": {
+        "a3": 2,
+        "a5": 2,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "type": {
+        "a1": 6,
+        "d4": 3,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "type": {
+        "a1": 3,
+        "a3": 1,
+        "a5": 1,
+        "a7": 1,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "type": {
+        "a1": 2,
+        "a5": 2,
+        "d5": 2
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "type": {
+        "a3": 2,
+        "a7": 1,
+        "d4": 1,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "type": {
+        "a4": 1,
+        "a6": 2,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "type": {
+        "a1": 2,
+        "a5": 2,
+        "d5": 2
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "type": {
+        "a5": 2,
+        "a6": 2
+      },
+      "components": [
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "type": {
+        "d4": 6
+      },
+      "components": [
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "type": {
+        "a1": 1,
+        "a2": 1,
+        "a5": 1,
+        "a6": 1,
+        "a8": 1
+      },
+      "components": [
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "type": {
+        "a4": 2,
+        "a7": 2
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "type": {
+        "a1": 2,
+        "a3": 1,
+        "a5": 1,
+        "a9": 1,
+        "d4": 1
+      },
+      "components": [
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "type": {
+        "a1": 1,
+        "a3": 1,
+        "a5": 1,
+        "a7": 1,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "type": {
+        "a2": 1,
+        "a6": 1,
+        "a8": 1,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "type": {
+        "a5": 2,
+        "d5": 1,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "type": {
+        "d5": 4
+      },
+      "components": [
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "type": {
+        "a3": 1,
+        "a4": 1,
+        "a7": 1,
+        "a8": 1
+      },
+      "components": [
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "type": {
+        "a3": 2,
+        "a7": 1,
+        "d5": 2
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "type": {
+        "a7": 2,
+        "d4": 2
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "type": {
+        "a3": 2,
+        "a8": 2
+      },
+      "components": [
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "type": {
+        "a2": 1,
+        "a5": 1,
+        "a6": 1,
+        "a9": 1
+      },
+      "components": [
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "type": {
+        "a7": 3
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "type": {
+        "a1": 1,
+        "a5": 3,
+        "d7": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "d7",
+          "rank": 7,
+          "root_lines": 42,
+          "neighbours": 20
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "type": {
+        "a1": 3,
+        "a9": 1,
+        "d5": 2
+      },
+      "components": [
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "type": {
+        "a3": 2,
+        "a7": 1,
+        "d4": 1,
+        "e6": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "e6",
+          "rank": 6,
+          "root_lines": 36,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "type": {
+        "a4": 1,
+        "a6": 2,
+        "e6": 1
+      },
+      "components": [
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "e6",
+          "rank": 6,
+          "root_lines": 36,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "type": {
+        "a1": 2,
+        "a5": 2,
+        "d5": 1,
+        "e6": 1
+      },
+      "components": [
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "e6",
+          "rank": 6,
+          "root_lines": 36,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "type": {
+        "a1": 4,
+        "d4": 2,
+        "d6": 2
+      },
+      "components": [
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "type": {
+        "a1": 2,
+        "a7": 2,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "type": {
+        "a7": 2,
+        "d4": 1,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "type": {
+        "a1": 1,
+        "a10": 1,
+        "a5": 1,
+        "a6": 1
+      },
+      "components": [
+        {
+          "type": "a10",
+          "rank": 10,
+          "root_lines": 55,
+          "neighbours": 18
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "type": {
+        "a7": 2,
+        "a8": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "type": {
+        "a2": 2,
+        "a9": 2
+      },
+      "components": [
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        },
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a2",
+          "rank": 2,
+          "root_lines": 3,
+          "neighbours": 2
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "type": {
+        "a3": 1,
+        "a7": 1,
+        "d5": 1,
+        "d7": 1
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d7",
+          "rank": 7,
+          "root_lines": 42,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "type": {
+        "a3": 1,
+        "a5": 1,
+        "a9": 1,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "type": {
+        "a5": 1,
+        "a8": 1,
+        "a9": 1
+      },
+      "components": [
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "type": {
+        "a7": 2,
+        "d5": 2
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "type": {
+        "a7": 1,
+        "a8": 2
+      },
+      "components": [
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "type": {
+        "d4": 4,
+        "d8": 1
+      },
+      "components": [
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "type": {
+        "a1": 2,
+        "a5": 1,
+        "a9": 1,
+        "d7": 1
+      },
+      "components": [
+        {
+          "type": "d7",
+          "rank": 7,
+          "root_lines": 42,
+          "neighbours": 20
+        },
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "type": {
+        "a11": 1,
+        "a3": 1,
+        "d4": 1,
+        "d5": 1
+      },
+      "components": [
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "a11",
+          "rank": 11,
+          "root_lines": 66,
+          "neighbours": 20
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "type": {
+        "a1": 1,
+        "a7": 1,
+        "a9": 1,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "type": {
+        "a1": 1,
+        "a7": 1,
+        "a9": 1,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "type": {
+        "a1": 2,
+        "d4": 1,
+        "d6": 3
+      },
+      "components": [
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "type": {
+        "a11": 1,
+        "a3": 1,
+        "a8": 1
+      },
+      "components": [
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a11",
+          "rank": 11,
+          "root_lines": 66,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "type": {
+        "a7": 2,
+        "d8": 1
+      },
+      "components": [
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "type": {
+        "a1": 1,
+        "a11": 1,
+        "a5": 1,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "a11",
+          "rank": 11,
+          "root_lines": 66,
+          "neighbours": 20
+        },
+        {
+          "type": "a5",
+          "rank": 5,
+          "root_lines": 15,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "type": {
+        "a10": 1,
+        "a6": 1,
+        "e6": 1
+      },
+      "components": [
+        {
+          "type": "a6",
+          "rank": 6,
+          "root_lines": 21,
+          "neighbours": 10
+        },
+        {
+          "type": "a10",
+          "rank": 10,
+          "root_lines": 55,
+          "neighbours": 18
+        },
+        {
+          "type": "e6",
+          "rank": 6,
+          "root_lines": 36,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "type": {
+        "a3": 1,
+        "a7": 1,
+        "d7": 1,
+        "e6": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "d7",
+          "rank": 7,
+          "root_lines": 42,
+          "neighbours": 20
+        },
+        {
+          "type": "e6",
+          "rank": 6,
+          "root_lines": 36,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "type": {
+        "a1": 1,
+        "a9": 1,
+        "d6": 1,
+        "e6": 1
+      },
+      "components": [
+        {
+          "type": "e6",
+          "rank": 6,
+          "root_lines": 36,
+          "neighbours": 20
+        },
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "type": {
+        "d5": 2,
+        "e6": 2
+      },
+      "components": [
+        {
+          "type": "e6",
+          "rank": 6,
+          "root_lines": 36,
+          "neighbours": 20
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        },
+        {
+          "type": "e6",
+          "rank": 6,
+          "root_lines": 36,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "type": {
+        "a12": 1,
+        "a4": 1,
+        "a7": 1
+      },
+      "components": [
+        {
+          "type": "a4",
+          "rank": 4,
+          "root_lines": 10,
+          "neighbours": 6
+        },
+        {
+          "type": "a12",
+          "rank": 12,
+          "root_lines": 78,
+          "neighbours": 22
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "type": {
+        "a1": 4,
+        "d6": 2,
+        "d8": 1
+      },
+      "components": [
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "type": {
+        "d6": 4
+      },
+      "components": [
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "type": {
+        "a1": 1,
+        "a13": 1,
+        "a3": 1,
+        "d6": 1
+      },
+      "components": [
+        {
+          "type": "a13",
+          "rank": 13,
+          "root_lines": 91,
+          "neighbours": 24
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "type": {
+        "a7": 2,
+        "d9": 1
+      },
+      "components": [
+        {
+          "type": "d9",
+          "rank": 9,
+          "root_lines": 72,
+          "neighbours": 28
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "type": {
+        "a11": 1,
+        "d5": 1,
+        "d7": 1
+      },
+      "components": [
+        {
+          "type": "a11",
+          "rank": 11,
+          "root_lines": 66,
+          "neighbours": 20
+        },
+        {
+          "type": "d7",
+          "rank": 7,
+          "root_lines": 42,
+          "neighbours": 20
+        },
+        {
+          "type": "d5",
+          "rank": 5,
+          "root_lines": 20,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "type": {
+        "a11": 2
+      },
+      "components": [
+        {
+          "type": "a11",
+          "rank": 11,
+          "root_lines": 66,
+          "neighbours": 20
+        },
+        {
+          "type": "a11",
+          "rank": 11,
+          "root_lines": 66,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "type": {
+        "a7": 1,
+        "a9": 1,
+        "e7": 1
+      },
+      "components": [
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        },
+        {
+          "type": "a9",
+          "rank": 9,
+          "root_lines": 45,
+          "neighbours": 16
+        },
+        {
+          "type": "e7",
+          "rank": 7,
+          "root_lines": 63,
+          "neighbours": 32
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "type": {
+        "a1": 1,
+        "d4": 1,
+        "d6": 2,
+        "e7": 1
+      },
+      "components": [
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "e7",
+          "rank": 7,
+          "root_lines": 63,
+          "neighbours": 32
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "type": {
+        "d4": 2,
+        "d8": 2
+      },
+      "components": [
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "type": {
+        "a11": 1,
+        "a3": 1,
+        "d9": 1
+      },
+      "components": [
+        {
+          "type": "d9",
+          "rank": 9,
+          "root_lines": 72,
+          "neighbours": 28
+        },
+        {
+          "type": "a11",
+          "rank": 11,
+          "root_lines": 66,
+          "neighbours": 20
+        },
+        {
+          "type": "a3",
+          "rank": 3,
+          "root_lines": 6,
+          "neighbours": 4
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "type": {
+        "a11": 1,
+        "a12": 1
+      },
+      "components": [
+        {
+          "type": "a12",
+          "rank": 12,
+          "root_lines": 78,
+          "neighbours": 22
+        },
+        {
+          "type": "a11",
+          "rank": 11,
+          "root_lines": 66,
+          "neighbours": 20
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "type": {
+        "a1": 2,
+        "d10": 1,
+        "d6": 2
+      },
+      "components": [
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d10",
+          "rank": 10,
+          "root_lines": 90,
+          "neighbours": 32
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "type": {
+        "a15": 1,
+        "a8": 1
+      },
+      "components": [
+        {
+          "type": "a8",
+          "rank": 8,
+          "root_lines": 36,
+          "neighbours": 14
+        },
+        {
+          "type": "a15",
+          "rank": 15,
+          "root_lines": 120,
+          "neighbours": 28
+        }
+      ]
+    },
+    {
+      "id": 144,
+      "type": {
+        "a16": 1,
+        "a7": 1
+      },
+      "components": [
+        {
+          "type": "a16",
+          "rank": 16,
+          "root_lines": 136,
+          "neighbours": 30
+        },
+        {
+          "type": "a7",
+          "rank": 7,
+          "root_lines": 28,
+          "neighbours": 12
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "type": {
+        "d8": 3
+      },
+      "components": [
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "type": {
+        "d8": 3
+      },
+      "components": [
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "type": {
+        "a15": 1,
+        "d8": 1
+      },
+      "components": [
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "a15",
+          "rank": 15,
+          "root_lines": 120,
+          "neighbours": 28
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "type": {
+        "a1": 1,
+        "a15": 1,
+        "e7": 1
+      },
+      "components": [
+        {
+          "type": "e7",
+          "rank": 7,
+          "root_lines": 63,
+          "neighbours": 32
+        },
+        {
+          "type": "a15",
+          "rank": 15,
+          "root_lines": 120,
+          "neighbours": 28
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "type": {
+        "a1": 1,
+        "d10": 1,
+        "d6": 1,
+        "e7": 1
+      },
+      "components": [
+        {
+          "type": "d6",
+          "rank": 6,
+          "root_lines": 30,
+          "neighbours": 16
+        },
+        {
+          "type": "d10",
+          "rank": 10,
+          "root_lines": 90,
+          "neighbours": 32
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "e7",
+          "rank": 7,
+          "root_lines": 63,
+          "neighbours": 32
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "type": {
+        "a1": 2,
+        "d8": 1,
+        "e7": 2
+      },
+      "components": [
+        {
+          "type": "e7",
+          "rank": 7,
+          "root_lines": 63,
+          "neighbours": 32
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        },
+        {
+          "type": "e7",
+          "rank": 7,
+          "root_lines": 63,
+          "neighbours": 32
+        },
+        {
+          "type": "a1",
+          "rank": 1,
+          "root_lines": 1,
+          "neighbours": 0
+        }
+      ]
+    },
+    {
+      "id": 151,
+      "type": {
+        "d12": 1,
+        "d4": 1,
+        "d8": 1
+      },
+      "components": [
+        {
+          "type": "d12",
+          "rank": 12,
+          "root_lines": 132,
+          "neighbours": 40
+        },
+        {
+          "type": "d4",
+          "rank": 4,
+          "root_lines": 12,
+          "neighbours": 8
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "type": {
+        "d8": 2,
+        "e8": 1
+      },
+      "components": [
+        {
+          "type": "e8",
+          "rank": 8,
+          "root_lines": 120,
+          "neighbours": 56
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "type": {
+        "d12": 2
+      },
+      "components": [
+        {
+          "type": "d12",
+          "rank": 12,
+          "root_lines": 132,
+          "neighbours": 40
+        },
+        {
+          "type": "d12",
+          "rank": 12,
+          "root_lines": 132,
+          "neighbours": 40
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "type": {
+        "a23": 1
+      },
+      "components": [
+        {
+          "type": "a23",
+          "rank": 23,
+          "root_lines": 276,
+          "neighbours": 44
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "type": {
+        "d16": 1,
+        "d8": 1
+      },
+      "components": [
+        {
+          "type": "d16",
+          "rank": 16,
+          "root_lines": 240,
+          "neighbours": 56
+        },
+        {
+          "type": "d8",
+          "rank": 8,
+          "root_lines": 56,
+          "neighbours": 24
+        }
+      ]
+    }
+  ]
+}
