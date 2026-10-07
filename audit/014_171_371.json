@@ -1,0 +1,91 @@
+{
+"id": 14,
+"chunk": [
+171,
+371
+],
+"n_pairs": 86048,
+"sha256": "63de929968b6971d2e3c725c398ec689281da404f148682f965727dd7eb26e3e",
+"stream_ok": true,
+"lattice": {
+"rigid": false,
+"norm4_lines": 48360,
+"zero_footprint_norm4_lines": 15,
+"new_root_pairs": 56
+},
+"counts": {
+"setup_impossible": 0,
+"general": 86047,
+"rigid": 1,
+"with_zero_candidate": 31477,
+"exposed": 1
+},
+"exposed": [
+{
+"position": 124,
+"o": 171,
+"y1": [
+"-7/16",
+"1/16",
+"11/16",
+"-1/16",
+"-1/16",
+"7/16",
+"-1/16",
+"3/16",
+"19/16",
+"-5/16",
+"-19/16",
+"3/16",
+"11/16",
+"13/16",
+"-7/16",
+"-1/16",
+"3/16",
+"5/16",
+"-19/16",
+"3/16",
+"-5/16",
+"-1/16",
+"5/16",
+"3/16"
+],
+"y2": [
+"3/16",
+"-5/16",
+"-7/16",
+"5/16",
+"5/16",
+"-3/16",
+"5/16",
+"17/16",
+"1/16",
+"-7/16",
+"-1/16",
+"-15/16",
+"-7/16",
+"-1/16",
+"3/16",
+"5/16",
+"17/16",
+"7/16",
+"-1/16",
+"-15/16",
+"-7/16",
+"5/16",
+"7/16",
+"17/16"
+],
+"verdict_general_kernel": "EXCLUDED (char-vector trap)",
+"nodes": null,
+"zero_footprint_candidates": 15
+}
+],
+"exposed_not_excluded_again": 0,
+"ok": true,
+"audit_rigid_sha256": "a555ddb3aa62b9c1",
+"engine_sha256": "1591aeeac9c0be5c",
+"seconds": 167.2,
+"t": "2026-10-07 14:38:27",
+"job_seconds": 168.9
+}
