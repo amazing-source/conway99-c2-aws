@@ -5,7 +5,12 @@
 # folder to the branch lemma-run/<job>-<instance id> every 10 minutes and at the end, then powers the machine off
 # ("Shutdown behavior: terminate"). Dead-man switch: powers off after LEMMA_MAX_HOURS (default 12) whatever happens.
 # A job script gets: $1 = output folder, $PY = the venv python, $NPROC = number of cores; BLAS is single-threaded.
-JOB="${1:?job name}"; REPO="$HOME/conway99-c2-aws"; OUT="$HOME/lemma_out"; mkdir -p "$OUT"
+# Optional second argument: a branch lemma-run/... of an interrupted run of the same job; its files are copied into the output
+# folder before the job starts, so that a job which skips finished pieces resumes instead of starting again.
+JOB="${1:?job name}"; RESTORE="${2:-}"; REPO="$HOME/conway99-c2-aws"; OUT="$HOME/lemma_out"; mkdir -p "$OUT"
+if [ -n "$RESTORE" ] && git -C "$REPO" fetch -q origin "refs/heads/$RESTORE"; then
+  git -C "$REPO" archive FETCH_HEAD | tar -x -C "$OUT"; rm -f "$OUT/STATUS.txt"; mv "$OUT/job.log" "$OUT/job_before_restore.log" 2>/dev/null
+fi
 sudo shutdown -h +$(( ${LEMMA_MAX_HOURS:-12} * 60 )) >/dev/null 2>&1
 TOK=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H 'X-aws-ec2-metadata-token-ttl-seconds: 300')
 IID=$(curl -s -H "X-aws-ec2-metadata-token: $TOK" http://169.254.169.254/latest/meta-data/instance-id); IID=${IID:-unknown}
