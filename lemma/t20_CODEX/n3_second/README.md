@@ -1,6 +1,7 @@
 # Independent second program for T20, n3=2
 
 Author: Codex, 2026-10-07. **No completed exclusion is claimed yet.**
+Pilot results and the current hold are recorded in `MEASUREMENTS.md`.
 The program was written from `../../t20_HAND/SPEC_N3.md` and the mathematical
 notes. The first program's `eng5.py`, `eng5z.py`, `n3_cases.py`, and `run_n3.py`
 were neither read nor imported. No SAT, CP, ILP, or LP solver is used.
@@ -55,8 +56,8 @@ Thus a genuine completion follows some branch to twelve orbits. At that
 point all specified target equalities are required and full-matrix exact
 PSD is rechecked. No rank bound or additional unproved lemma is used.
 
-Repeated placements can cause redundant branches; they do not remove any
-configuration. Completeness does not depend on the unit-choice heuristic.
+Repeated placement orders can cause redundant branches; they do not remove
+any configuration. Completeness does not depend on the unit-choice heuristic.
 
 ## Exact arithmetic
 
