@@ -1,0 +1,165 @@
+{
+"what": "lattices passed again through the v10 producer and consumer (q/qaudit.py with consumer = sweep): 143 (excluded so far by one unreviewed lattice-level test) and 105 (6,310 of its 14,169 pairs were excluded on 29/09 by the per-pair budget ILP, i.e. by an LP solver status). Identity-only symmetry files: complete up to W(R).",
+"jobs": [
+{
+"lid": "143",
+"k": 0,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_143_identity.json",
+"gamma_sha256": "0d2e648e991136f785650b84fd6e119369728006c8434ed16fdd0c860ed3b8d7",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "143",
+"k": 1,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_143_identity.json",
+"gamma_sha256": "0d2e648e991136f785650b84fd6e119369728006c8434ed16fdd0c860ed3b8d7",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "143",
+"k": 2,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_143_identity.json",
+"gamma_sha256": "0d2e648e991136f785650b84fd6e119369728006c8434ed16fdd0c860ed3b8d7",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "143",
+"k": 3,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_143_identity.json",
+"gamma_sha256": "0d2e648e991136f785650b84fd6e119369728006c8434ed16fdd0c860ed3b8d7",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "143",
+"k": 4,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_143_identity.json",
+"gamma_sha256": "0d2e648e991136f785650b84fd6e119369728006c8434ed16fdd0c860ed3b8d7",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "143",
+"k": 5,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_143_identity.json",
+"gamma_sha256": "0d2e648e991136f785650b84fd6e119369728006c8434ed16fdd0c860ed3b8d7",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "143",
+"k": 6,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_143_identity.json",
+"gamma_sha256": "0d2e648e991136f785650b84fd6e119369728006c8434ed16fdd0c860ed3b8d7",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "143",
+"k": 7,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_143_identity.json",
+"gamma_sha256": "0d2e648e991136f785650b84fd6e119369728006c8434ed16fdd0c860ed3b8d7",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "105",
+"k": 0,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_105_identity.json",
+"gamma_sha256": "9189e22a07cd3037486ebd025e5f9f778a44d49d99d29e5de40c9a9c2e8a4654",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "105",
+"k": 1,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_105_identity.json",
+"gamma_sha256": "9189e22a07cd3037486ebd025e5f9f778a44d49d99d29e5de40c9a9c2e8a4654",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "105",
+"k": 2,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_105_identity.json",
+"gamma_sha256": "9189e22a07cd3037486ebd025e5f9f778a44d49d99d29e5de40c9a9c2e8a4654",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "105",
+"k": 3,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_105_identity.json",
+"gamma_sha256": "9189e22a07cd3037486ebd025e5f9f778a44d49d99d29e5de40c9a9c2e8a4654",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "105",
+"k": 4,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_105_identity.json",
+"gamma_sha256": "9189e22a07cd3037486ebd025e5f9f778a44d49d99d29e5de40c9a9c2e8a4654",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "105",
+"k": 5,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_105_identity.json",
+"gamma_sha256": "9189e22a07cd3037486ebd025e5f9f778a44d49d99d29e5de40c9a9c2e8a4654",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "105",
+"k": 6,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_105_identity.json",
+"gamma_sha256": "9189e22a07cd3037486ebd025e5f9f778a44d49d99d29e5de40c9a9c2e8a4654",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+},
+{
+"lid": "105",
+"k": 7,
+"n": 8,
+"gamma": "repo:q/audit_data/gamma_105_identity.json",
+"gamma_sha256": "9189e22a07cd3037486ebd025e5f9f778a44d49d99d29e5de40c9a9c2e8a4654",
+"plan": null,
+"batch": 1,
+"consumer": "sweep"
+}
+]
+}

@@ -2669,511 +2669,511 @@
 "lid": "103",
 "k": 0,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_103.json",
+"gamma": "repo:q/audit_data/gamma_103_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 17228,
-"gamma_sha256": "2f7b2d9f088f57925602582236fe3e9fdc1b631195a603ae55e4b11aa3850ab4"
+"gamma_sha256": "1cd8a2c99982dbdafa526370feed5645359d0ffd948772abf801d866c1d8c008"
 },
 {
 "lid": "103",
 "k": 1,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_103.json",
+"gamma": "repo:q/audit_data/gamma_103_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 17228,
-"gamma_sha256": "2f7b2d9f088f57925602582236fe3e9fdc1b631195a603ae55e4b11aa3850ab4"
+"gamma_sha256": "1cd8a2c99982dbdafa526370feed5645359d0ffd948772abf801d866c1d8c008"
 },
 {
 "lid": "103",
 "k": 2,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_103.json",
+"gamma": "repo:q/audit_data/gamma_103_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 17228,
-"gamma_sha256": "2f7b2d9f088f57925602582236fe3e9fdc1b631195a603ae55e4b11aa3850ab4"
+"gamma_sha256": "1cd8a2c99982dbdafa526370feed5645359d0ffd948772abf801d866c1d8c008"
 },
 {
 "lid": "103",
 "k": 3,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_103.json",
+"gamma": "repo:q/audit_data/gamma_103_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 17228,
-"gamma_sha256": "2f7b2d9f088f57925602582236fe3e9fdc1b631195a603ae55e4b11aa3850ab4"
+"gamma_sha256": "1cd8a2c99982dbdafa526370feed5645359d0ffd948772abf801d866c1d8c008"
 },
 {
 "lid": "103",
 "k": 4,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_103.json",
+"gamma": "repo:q/audit_data/gamma_103_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 17228,
-"gamma_sha256": "2f7b2d9f088f57925602582236fe3e9fdc1b631195a603ae55e4b11aa3850ab4"
+"gamma_sha256": "1cd8a2c99982dbdafa526370feed5645359d0ffd948772abf801d866c1d8c008"
 },
 {
 "lid": "103",
 "k": 5,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_103.json",
+"gamma": "repo:q/audit_data/gamma_103_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 17228,
-"gamma_sha256": "2f7b2d9f088f57925602582236fe3e9fdc1b631195a603ae55e4b11aa3850ab4"
+"gamma_sha256": "1cd8a2c99982dbdafa526370feed5645359d0ffd948772abf801d866c1d8c008"
 },
 {
 "lid": "103",
 "k": 6,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_103.json",
+"gamma": "repo:q/audit_data/gamma_103_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 17228,
-"gamma_sha256": "2f7b2d9f088f57925602582236fe3e9fdc1b631195a603ae55e4b11aa3850ab4"
+"gamma_sha256": "1cd8a2c99982dbdafa526370feed5645359d0ffd948772abf801d866c1d8c008"
 },
 {
 "lid": "103",
 "k": 7,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_103.json",
+"gamma": "repo:q/audit_data/gamma_103_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 17228,
-"gamma_sha256": "2f7b2d9f088f57925602582236fe3e9fdc1b631195a603ae55e4b11aa3850ab4"
+"gamma_sha256": "1cd8a2c99982dbdafa526370feed5645359d0ffd948772abf801d866c1d8c008"
 },
 {
 "lid": "080",
 "k": 0,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_080.json",
+"gamma": "repo:q/audit_data/gamma_080_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 31122,
-"gamma_sha256": "e195b4d035a0355a278737251434d57f0afdaac3225f3b8b184fe87b24086d8e"
+"gamma_sha256": "1804b41d031dd63bac46ec3f3f90d02366f8810b3ab2c271d2d4b79dbc9f35a1"
 },
 {
 "lid": "080",
 "k": 1,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_080.json",
+"gamma": "repo:q/audit_data/gamma_080_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 31122,
-"gamma_sha256": "e195b4d035a0355a278737251434d57f0afdaac3225f3b8b184fe87b24086d8e"
+"gamma_sha256": "1804b41d031dd63bac46ec3f3f90d02366f8810b3ab2c271d2d4b79dbc9f35a1"
 },
 {
 "lid": "080",
 "k": 2,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_080.json",
+"gamma": "repo:q/audit_data/gamma_080_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 31122,
-"gamma_sha256": "e195b4d035a0355a278737251434d57f0afdaac3225f3b8b184fe87b24086d8e"
+"gamma_sha256": "1804b41d031dd63bac46ec3f3f90d02366f8810b3ab2c271d2d4b79dbc9f35a1"
 },
 {
 "lid": "080",
 "k": 3,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_080.json",
+"gamma": "repo:q/audit_data/gamma_080_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 31122,
-"gamma_sha256": "e195b4d035a0355a278737251434d57f0afdaac3225f3b8b184fe87b24086d8e"
+"gamma_sha256": "1804b41d031dd63bac46ec3f3f90d02366f8810b3ab2c271d2d4b79dbc9f35a1"
 },
 {
 "lid": "080",
 "k": 4,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_080.json",
+"gamma": "repo:q/audit_data/gamma_080_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 31122,
-"gamma_sha256": "e195b4d035a0355a278737251434d57f0afdaac3225f3b8b184fe87b24086d8e"
+"gamma_sha256": "1804b41d031dd63bac46ec3f3f90d02366f8810b3ab2c271d2d4b79dbc9f35a1"
 },
 {
 "lid": "080",
 "k": 5,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_080.json",
+"gamma": "repo:q/audit_data/gamma_080_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 31122,
-"gamma_sha256": "e195b4d035a0355a278737251434d57f0afdaac3225f3b8b184fe87b24086d8e"
+"gamma_sha256": "1804b41d031dd63bac46ec3f3f90d02366f8810b3ab2c271d2d4b79dbc9f35a1"
 },
 {
 "lid": "080",
 "k": 6,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_080.json",
+"gamma": "repo:q/audit_data/gamma_080_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 31122,
-"gamma_sha256": "e195b4d035a0355a278737251434d57f0afdaac3225f3b8b184fe87b24086d8e"
+"gamma_sha256": "1804b41d031dd63bac46ec3f3f90d02366f8810b3ab2c271d2d4b79dbc9f35a1"
 },
 {
 "lid": "080",
 "k": 7,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_080.json",
+"gamma": "repo:q/audit_data/gamma_080_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 31122,
-"gamma_sha256": "e195b4d035a0355a278737251434d57f0afdaac3225f3b8b184fe87b24086d8e"
+"gamma_sha256": "1804b41d031dd63bac46ec3f3f90d02366f8810b3ab2c271d2d4b79dbc9f35a1"
 },
 {
 "lid": "077",
 "k": 0,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_077.json",
+"gamma": "repo:q/audit_data/gamma_077_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62031,
-"gamma_sha256": "b064402ae8db6247c550ed4c2fa9616186f678c4de9b346bab13790e9abfda70"
+"gamma_sha256": "9947d3826a0d42e55734e0e401b0c880420b9f9b5b72e1ae1d603f91c351db7a"
 },
 {
 "lid": "077",
 "k": 1,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_077.json",
+"gamma": "repo:q/audit_data/gamma_077_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62031,
-"gamma_sha256": "b064402ae8db6247c550ed4c2fa9616186f678c4de9b346bab13790e9abfda70"
+"gamma_sha256": "9947d3826a0d42e55734e0e401b0c880420b9f9b5b72e1ae1d603f91c351db7a"
 },
 {
 "lid": "077",
 "k": 2,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_077.json",
+"gamma": "repo:q/audit_data/gamma_077_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62031,
-"gamma_sha256": "b064402ae8db6247c550ed4c2fa9616186f678c4de9b346bab13790e9abfda70"
+"gamma_sha256": "9947d3826a0d42e55734e0e401b0c880420b9f9b5b72e1ae1d603f91c351db7a"
 },
 {
 "lid": "077",
 "k": 3,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_077.json",
+"gamma": "repo:q/audit_data/gamma_077_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62031,
-"gamma_sha256": "b064402ae8db6247c550ed4c2fa9616186f678c4de9b346bab13790e9abfda70"
+"gamma_sha256": "9947d3826a0d42e55734e0e401b0c880420b9f9b5b72e1ae1d603f91c351db7a"
 },
 {
 "lid": "077",
 "k": 4,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_077.json",
+"gamma": "repo:q/audit_data/gamma_077_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62031,
-"gamma_sha256": "b064402ae8db6247c550ed4c2fa9616186f678c4de9b346bab13790e9abfda70"
+"gamma_sha256": "9947d3826a0d42e55734e0e401b0c880420b9f9b5b72e1ae1d603f91c351db7a"
 },
 {
 "lid": "077",
 "k": 5,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_077.json",
+"gamma": "repo:q/audit_data/gamma_077_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62031,
-"gamma_sha256": "b064402ae8db6247c550ed4c2fa9616186f678c4de9b346bab13790e9abfda70"
+"gamma_sha256": "9947d3826a0d42e55734e0e401b0c880420b9f9b5b72e1ae1d603f91c351db7a"
 },
 {
 "lid": "077",
 "k": 6,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_077.json",
+"gamma": "repo:q/audit_data/gamma_077_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62031,
-"gamma_sha256": "b064402ae8db6247c550ed4c2fa9616186f678c4de9b346bab13790e9abfda70"
+"gamma_sha256": "9947d3826a0d42e55734e0e401b0c880420b9f9b5b72e1ae1d603f91c351db7a"
 },
 {
 "lid": "077",
 "k": 7,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_077.json",
+"gamma": "repo:q/audit_data/gamma_077_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62031,
-"gamma_sha256": "b064402ae8db6247c550ed4c2fa9616186f678c4de9b346bab13790e9abfda70"
+"gamma_sha256": "9947d3826a0d42e55734e0e401b0c880420b9f9b5b72e1ae1d603f91c351db7a"
 },
 {
 "lid": "101",
 "k": 0,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_101.json",
+"gamma": "repo:q/audit_data/gamma_101_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62300,
-"gamma_sha256": "6a55037e7319afb7af029793736202d40e0e836015c716d3f8ebda952459f7a5"
+"gamma_sha256": "e4bcf1a710a9afcf4bf4905c32545fda8626319e2fa5cdd4ba7d005c5563ea7e"
 },
 {
 "lid": "101",
 "k": 1,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_101.json",
+"gamma": "repo:q/audit_data/gamma_101_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62300,
-"gamma_sha256": "6a55037e7319afb7af029793736202d40e0e836015c716d3f8ebda952459f7a5"
+"gamma_sha256": "e4bcf1a710a9afcf4bf4905c32545fda8626319e2fa5cdd4ba7d005c5563ea7e"
 },
 {
 "lid": "101",
 "k": 2,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_101.json",
+"gamma": "repo:q/audit_data/gamma_101_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62300,
-"gamma_sha256": "6a55037e7319afb7af029793736202d40e0e836015c716d3f8ebda952459f7a5"
+"gamma_sha256": "e4bcf1a710a9afcf4bf4905c32545fda8626319e2fa5cdd4ba7d005c5563ea7e"
 },
 {
 "lid": "101",
 "k": 3,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_101.json",
+"gamma": "repo:q/audit_data/gamma_101_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62300,
-"gamma_sha256": "6a55037e7319afb7af029793736202d40e0e836015c716d3f8ebda952459f7a5"
+"gamma_sha256": "e4bcf1a710a9afcf4bf4905c32545fda8626319e2fa5cdd4ba7d005c5563ea7e"
 },
 {
 "lid": "101",
 "k": 4,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_101.json",
+"gamma": "repo:q/audit_data/gamma_101_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62300,
-"gamma_sha256": "6a55037e7319afb7af029793736202d40e0e836015c716d3f8ebda952459f7a5"
+"gamma_sha256": "e4bcf1a710a9afcf4bf4905c32545fda8626319e2fa5cdd4ba7d005c5563ea7e"
 },
 {
 "lid": "101",
 "k": 5,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_101.json",
+"gamma": "repo:q/audit_data/gamma_101_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62300,
-"gamma_sha256": "6a55037e7319afb7af029793736202d40e0e836015c716d3f8ebda952459f7a5"
+"gamma_sha256": "e4bcf1a710a9afcf4bf4905c32545fda8626319e2fa5cdd4ba7d005c5563ea7e"
 },
 {
 "lid": "101",
 "k": 6,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_101.json",
+"gamma": "repo:q/audit_data/gamma_101_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62300,
-"gamma_sha256": "6a55037e7319afb7af029793736202d40e0e836015c716d3f8ebda952459f7a5"
+"gamma_sha256": "e4bcf1a710a9afcf4bf4905c32545fda8626319e2fa5cdd4ba7d005c5563ea7e"
 },
 {
 "lid": "101",
 "k": 7,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_101.json",
+"gamma": "repo:q/audit_data/gamma_101_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 62300,
-"gamma_sha256": "6a55037e7319afb7af029793736202d40e0e836015c716d3f8ebda952459f7a5"
+"gamma_sha256": "e4bcf1a710a9afcf4bf4905c32545fda8626319e2fa5cdd4ba7d005c5563ea7e"
 },
 {
 "lid": "104",
 "k": 0,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_104.json",
+"gamma": "repo:q/audit_data/gamma_104_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 70108,
-"gamma_sha256": "b06a66770b20ce34f08c9f856427b6296294d585792193617db7701cfb19dde8"
+"gamma_sha256": "660e555203ed9ea6a6400acc7f56b65ade4b7431a5f400b4722db8329063b889"
 },
 {
 "lid": "104",
 "k": 1,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_104.json",
+"gamma": "repo:q/audit_data/gamma_104_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 70108,
-"gamma_sha256": "b06a66770b20ce34f08c9f856427b6296294d585792193617db7701cfb19dde8"
+"gamma_sha256": "660e555203ed9ea6a6400acc7f56b65ade4b7431a5f400b4722db8329063b889"
 },
 {
 "lid": "104",
 "k": 2,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_104.json",
+"gamma": "repo:q/audit_data/gamma_104_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 70108,
-"gamma_sha256": "b06a66770b20ce34f08c9f856427b6296294d585792193617db7701cfb19dde8"
+"gamma_sha256": "660e555203ed9ea6a6400acc7f56b65ade4b7431a5f400b4722db8329063b889"
 },
 {
 "lid": "104",
 "k": 3,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_104.json",
+"gamma": "repo:q/audit_data/gamma_104_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 70108,
-"gamma_sha256": "b06a66770b20ce34f08c9f856427b6296294d585792193617db7701cfb19dde8"
+"gamma_sha256": "660e555203ed9ea6a6400acc7f56b65ade4b7431a5f400b4722db8329063b889"
 },
 {
 "lid": "104",
 "k": 4,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_104.json",
+"gamma": "repo:q/audit_data/gamma_104_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 70108,
-"gamma_sha256": "b06a66770b20ce34f08c9f856427b6296294d585792193617db7701cfb19dde8"
+"gamma_sha256": "660e555203ed9ea6a6400acc7f56b65ade4b7431a5f400b4722db8329063b889"
 },
 {
 "lid": "104",
 "k": 5,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_104.json",
+"gamma": "repo:q/audit_data/gamma_104_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 70108,
-"gamma_sha256": "b06a66770b20ce34f08c9f856427b6296294d585792193617db7701cfb19dde8"
+"gamma_sha256": "660e555203ed9ea6a6400acc7f56b65ade4b7431a5f400b4722db8329063b889"
 },
 {
 "lid": "104",
 "k": 6,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_104.json",
+"gamma": "repo:q/audit_data/gamma_104_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 70108,
-"gamma_sha256": "b06a66770b20ce34f08c9f856427b6296294d585792193617db7701cfb19dde8"
+"gamma_sha256": "660e555203ed9ea6a6400acc7f56b65ade4b7431a5f400b4722db8329063b889"
 },
 {
 "lid": "104",
 "k": 7,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_104.json",
+"gamma": "repo:q/audit_data/gamma_104_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 70108,
-"gamma_sha256": "b06a66770b20ce34f08c9f856427b6296294d585792193617db7701cfb19dde8"
+"gamma_sha256": "660e555203ed9ea6a6400acc7f56b65ade4b7431a5f400b4722db8329063b889"
 },
 {
 "lid": "079",
 "k": 0,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_079.json",
+"gamma": "repo:q/audit_data/gamma_079_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 100895,
-"gamma_sha256": "98fb35a2acb0b366b0b436ad0805ce7e24c87e6127788a51f70150c5d22ac141"
+"gamma_sha256": "be3d6067039592bad3fee3312ca4dfb0864d93d4138b0ac1b945b3a3ef335d3f"
 },
 {
 "lid": "079",
 "k": 1,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_079.json",
+"gamma": "repo:q/audit_data/gamma_079_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 100895,
-"gamma_sha256": "98fb35a2acb0b366b0b436ad0805ce7e24c87e6127788a51f70150c5d22ac141"
+"gamma_sha256": "be3d6067039592bad3fee3312ca4dfb0864d93d4138b0ac1b945b3a3ef335d3f"
 },
 {
 "lid": "079",
 "k": 2,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_079.json",
+"gamma": "repo:q/audit_data/gamma_079_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 100895,
-"gamma_sha256": "98fb35a2acb0b366b0b436ad0805ce7e24c87e6127788a51f70150c5d22ac141"
+"gamma_sha256": "be3d6067039592bad3fee3312ca4dfb0864d93d4138b0ac1b945b3a3ef335d3f"
 },
 {
 "lid": "079",
 "k": 3,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_079.json",
+"gamma": "repo:q/audit_data/gamma_079_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 100895,
-"gamma_sha256": "98fb35a2acb0b366b0b436ad0805ce7e24c87e6127788a51f70150c5d22ac141"
+"gamma_sha256": "be3d6067039592bad3fee3312ca4dfb0864d93d4138b0ac1b945b3a3ef335d3f"
 },
 {
 "lid": "079",
 "k": 4,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_079.json",
+"gamma": "repo:q/audit_data/gamma_079_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 100895,
-"gamma_sha256": "98fb35a2acb0b366b0b436ad0805ce7e24c87e6127788a51f70150c5d22ac141"
+"gamma_sha256": "be3d6067039592bad3fee3312ca4dfb0864d93d4138b0ac1b945b3a3ef335d3f"
 },
 {
 "lid": "079",
 "k": 5,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_079.json",
+"gamma": "repo:q/audit_data/gamma_079_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 100895,
-"gamma_sha256": "98fb35a2acb0b366b0b436ad0805ce7e24c87e6127788a51f70150c5d22ac141"
+"gamma_sha256": "be3d6067039592bad3fee3312ca4dfb0864d93d4138b0ac1b945b3a3ef335d3f"
 },
 {
 "lid": "079",
 "k": 6,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_079.json",
+"gamma": "repo:q/audit_data/gamma_079_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 100895,
-"gamma_sha256": "98fb35a2acb0b366b0b436ad0805ce7e24c87e6127788a51f70150c5d22ac141"
+"gamma_sha256": "be3d6067039592bad3fee3312ca4dfb0864d93d4138b0ac1b945b3a3ef335d3f"
 },
 {
 "lid": "079",
 "k": 7,
 "n": 8,
-"gamma": "repo:q/audit_data/gamma_079.json",
+"gamma": "repo:q/audit_data/gamma_079_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 100895,
-"gamma_sha256": "98fb35a2acb0b366b0b436ad0805ce7e24c87e6127788a51f70150c5d22ac141"
+"gamma_sha256": "be3d6067039592bad3fee3312ca4dfb0864d93d4138b0ac1b945b3a3ef335d3f"
 },
 {
 "lid": "105",
 "k": 0,
 "n": 1,
-"gamma": "repo:q/audit_data/gamma_105.json",
+"gamma": "repo:q/audit_data/gamma_105_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 14169,
-"gamma_sha256": "c7e8e689c2e9f2addaa127402939a054bdc3582fba6ff9dcecdf3a029bad8776"
+"gamma_sha256": "9189e22a07cd3037486ebd025e5f9f778a44d49d99d29e5de40c9a9c2e8a4654"
 },
 {
 "lid": "137",
 "k": 0,
 "n": 1,
-"gamma": "repo:q/audit_data/gamma_137.json",
+"gamma": "repo:q/audit_data/gamma_137_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 604,
-"gamma_sha256": "2f76e8ea6eeaa2c6b45a5a197a2eb066b328fb108cc9b42feb87af44c63d764f"
+"gamma_sha256": "e7181ee8fb5a46863e8a16cbbf811c31069e467fdc167b4ee8401dad5c2cba63"
 },
 {
 "lid": "138",
 "k": 0,
 "n": 1,
-"gamma": "repo:q/audit_data/gamma_138.json",
+"gamma": "repo:q/audit_data/gamma_138_identity.json",
 "plan": null,
 "batch": 1,
 "pairs_expected_lattice": 558,
-"gamma_sha256": "1106a5ed1df58de3ca45c351fc142fba36ce39862056796b2f638ac5cc1da14a"
+"gamma_sha256": "6013f914f6108699ff0a745bb10173396ae15a7c7fbaa8eb3100aad43fb5c12f"
 },
 {
 "lid": "006",
@@ -18139,5 +18139,6 @@
 "gamma_sha256": "ce486331995806001912b0c50391090e855870faabfe9ed62eb8213b6368082c",
 "plan_sha256": "b5280f99f6666fdda7a9417f144676b5d5ae2712058917a769238ab243b8cf04"
 }
-]
+],
+"note_gamma": "lattices outside the v10 package use an identity-only symmetry file (valid in any LLL basis; the enumeration is complete up to W(R) alone, so it lists more pairs than the Gamma-reduced one; nothing is lost). The lab's and C1's Gamma files for them have no basis and abort on a machine with another LLL basis (seen for 143 on the lab PC)."
 }

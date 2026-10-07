@@ -8,6 +8,8 @@ own branch run/<NAME>.
   Q_AUDIT_LIDS="137 138 105 ..."                                   only these lattices, in this order (after the batch filter)
   Q_AUDIT_PART="i/n"                                               this machine takes the jobs i, i+n, ... of the (filtered) list
   Q_AUDIT_WORKERS=8                                                jobs running at the same time (default: number of cores)
+A job with "consumer": "sweep" in the manifest is piped into the package's own consumer scripts/hstage_stream_next.py instead (a normal
+sweep record, copied to results/<lid>_<k>_<n>.jsonl): used to pass a lattice that is not in the package's job list through the engine.
 A job = the package's own producer for chunk k/n of the lattice (with --from-plan when the manifest gives a plan; gamma and plan
 paths starting with "repo:" are files of this repository, the others are files of the package), piped into q/audit_rigid.py.
 One output file per job, audit/<lid>_<k>_<n>.json, pushed to run/<NAME> as the work goes; a job whose file is already there is
@@ -54,9 +56,15 @@ def main():
         if m["n"] > 1: cmd += ["--chunk", "%d/%d" % (m["k"], m["n"])]
         cmd += ["--stream", "-", "--max-seconds", "86400"]
         prod = subprocess.Popen(cmd, env=envx, cwd=os.path.join(a.pkg, "c1", "code"), stdout=subprocess.PIPE, stderr=open(os.path.join(work, tag + "_producer.err"), "w"))
-        tmp = os.path.join(work, tag + "_audit.json")
-        aud = subprocess.Popen([sys.executable, os.path.join(HERE, "audit_rigid.py"), a.pkg, m["lid"], tmp, str(m["k"]), str(m["n"])], env=envx, cwd=a.pkg,
-                               stdin=prod.stdout, stdout=open(os.path.join(work, tag + "_audit.out"), "w"), stderr=subprocess.STDOUT)
+        if m.get("consumer") == "sweep":                               # the package's own stream consumer: a normal sweep record
+            tmp = os.path.join(work, tag + ".jsonl")
+            if os.path.exists(tmp): os.remove(tmp)
+            aud = subprocess.Popen([sys.executable, os.path.join(a.pkg, "scripts", "hstage_stream_next.py"), m["lid"], "-", tmp, "4000000000"], env=envx, cwd=a.pkg,
+                                   stdin=prod.stdout, stdout=open(os.path.join(work, tag + "_audit.out"), "w"), stderr=subprocess.STDOUT)
+        else:
+            tmp = os.path.join(work, tag + "_audit.json")
+            aud = subprocess.Popen([sys.executable, os.path.join(HERE, "audit_rigid.py"), a.pkg, m["lid"], tmp, str(m["k"]), str(m["n"])], env=envx, cwd=a.pkg,
+                                   stdin=prod.stdout, stdout=open(os.path.join(work, tag + "_audit.out"), "w"), stderr=subprocess.STDOUT)
         prod.stdout.close(); running[tag] = (m, prod, aud, tmp, time.time())
 
     def status(state="EN_COURS"):
@@ -68,7 +76,12 @@ def main():
         for tag, (m, prod, aud, tmp, t0) in list(running.items()):
             if aud.poll() is None: continue
             prod.wait(); del running[tag]; d = None
-            try: d = json.load(open(tmp))
+            try:
+                if m.get("consumer") == "sweep":                       # last record of the consumer's jsonl; same fields for the bookkeeping below
+                    r = [json.loads(l) for l in open(tmp) if l.strip()][-1]
+                    open_ = [x for x in (r.get("not_excluded") or [])]
+                    d = dict(r, stream_ok=bool(r.get("chunk_ok")), ok=bool(r.get("chunk_done")), counts=r.get("verdicts", {}), exposed_not_excluded_again=len(open_))
+                else: d = json.load(open(tmp))
             except Exception: pass
             if d is None or prod.returncode != 0 or not d.get("stream_ok"):
                 failed.append(tag); a.log("FAIL %s (producer %s audit %s)" % (tag, prod.returncode, aud.returncode))
@@ -80,6 +93,9 @@ def main():
                 continue
             d["job_seconds"] = round(time.time() - t0, 1)
             json.dump(d, open(outfile(m), "w"), indent=0); done.append(tag); a.done_here.append(tag)
+            if m.get("consumer") == "sweep":                           # also the record itself, where the lab importer reads sweep records
+                os.makedirs(os.path.join(a.pd, "results"), exist_ok=True)
+                with open(tmp) as x, open(os.path.join(a.pd, "results", tag + ".jsonl"), "w") as y: y.write(x.read())
             if not d.get("ok"): notok.append(tag)
             a.log("%s %s in %.0f s: pairs %d, counts %s" % ("audited" if d.get("ok") else "NOT OK", tag, time.time() - t0, d["n_pairs"], d["counts"]))
         if a.spot_interrupted():
