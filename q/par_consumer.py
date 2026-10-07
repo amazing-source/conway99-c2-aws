@@ -25,6 +25,7 @@ import sys, os, json, time, hashlib, subprocess, collections, tempfile, shutil
 
 DEF18 = "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)"
 DEF20 = "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)"
+DEF20N4 = "DEFERRED (pending T20: norm-4 x with |(x,y1)| = |(x,y2)| = 3)"       # Q_DEFER_N4=1 (q/defer_consumer.py)
 
 
 def positions(shard_file, i, P, entries):
@@ -59,7 +60,7 @@ def main():
     full_sha = sh.hexdigest()
     defer = os.environ.get("Q_DEFER", "") == "1"
     dcons = os.path.join(os.path.dirname(os.path.abspath(__file__)), "defer_consumer.py")
-    aside = {"T18": [], "T20": []}                                     # stream positions of the pairs set aside (deferral mode)
+    aside = {"T18": [], "T20": [], "T20_norm4": []}                                     # stream positions of the pairs set aside (deferral mode)
     P = max(1, min(P, max(1, len(pairs))))
     W = max(1, int(sys.argv[7])) if len(sys.argv) > 7 else P
     tmp = tempfile.mkdtemp(prefix="par_%s_" % os.path.basename(outp).replace(".jsonl", ""), dir=os.path.dirname(os.path.abspath(outp)))
@@ -98,12 +99,12 @@ def main():
             bad.append({"shard": i, "exit": rc, "record": None if r is None else {k: r.get(k) for k in ("chunk_ok", "n_pairs", "sha256")},
                         "expected": [ni, si]})
         if r is not None and defer:                                  # DEFERRED pairs: y vectors -> stream positions
-            for tag, name in (("T18", DEF18), ("T20", DEF20)):
+            for tag, name in (("T18", DEF18), ("T20", DEF20), ("T20_norm4", DEF20N4)):
                 pos = positions(f, i, P, [e for e in r.get("not_excluded", []) if e.get("verdict") == name])
                 if pos is None or len(pos) != r.get("verdicts", {}).get(name, 0):
                     bad.append({"shard": i, "deferred_not_located": tag})
                 else: aside[tag] += pos
-            r["not_excluded"] = [e for e in r.get("not_excluded", []) if e.get("verdict") not in (DEF18, DEF20)]
+            r["not_excluded"] = [e for e in r.get("not_excluded", []) if e.get("verdict") not in (DEF18, DEF20, DEF20N4)]
         if r is not None: recs.append(r)
     cnt = collections.Counter(); deferred = collections.Counter(); tel = collections.defaultdict(collections.Counter); keep = []; sample = []
     for r in recs:
@@ -130,11 +131,15 @@ def main():
     ok = ok and not bad and len(recs) == P
     ok = ok and sum(r["n_pairs"] for r in recs) == n
     if defer:
-        ok = ok and cnt.get(DEF18, 0) == len(aside["T18"]) and cnt.get(DEF20, 0) == len(aside["T20"])
+        ok = ok and cnt.get(DEF18, 0) == len(aside["T18"]) and cnt.get(DEF20, 0) == len(aside["T20"]) and cnt.get(DEF20N4, 0) == len(aside["T20_norm4"])
         out["deferred"] = {"rule": "pair not decided by the engine within defer_nodes nodes, and U has a root r (one per +- pair) with "
                                    "(r,y1)^2 + (r,y2)^2 = 5 (T18) or, failing that, = 4 (T20); "
                                    "indices are 0-based positions among the pair lines of the producer stream",
                            "T18": sorted(aside["T18"]), "T20": sorted(aside["T20"])}
+        if os.environ.get("Q_DEFER_N4", "") == "1":
+            out["deferred"]["T20_norm4"] = sorted(aside["T20_norm4"])
+            out["deferred"]["rule_norm4"] = "no such root, and U has a vector x of norm 4 with |(x,y1)| = |(x,y2)| = 3 (E = 10, T20)"
+            out["merged"]["defer_n4"] = True
     out["chunk_ok"] = ok
     out["chunk_done"] = ok and n == sum(c for v, c in cnt.items() if v.startswith("EXCLUDED") or v.startswith("SWAP-COVERED") or v == "TWIN-DEFERRED"
                                         or v.startswith("TWIN-CANON"))

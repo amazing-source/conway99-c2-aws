@@ -62,7 +62,7 @@ def main():
         if golay:
             ok(len(r.get("not_excluded", [])) == d, "%s: not_excluded lists the %d deferred pairs" % (j, d))
         else:
-            dd = r.get("deferred", {}); pos = dd.get("T18", []) + dd.get("T20", [])
+            dd = r.get("deferred", {}); pos = dd.get("T18", []) + dd.get("T20", []) + dd.get("T20_norm4", [])
             ok(len(pos) == d == len(set(pos)) and all(0 <= p < r["n_pairs"] for p in pos) and not r.get("not_excluded"), "%s: %d distinct stream positions listed, not_excluded empty" % (j, len(pos)))
     ok(ndef > 0, "at least one pair was deferred in the rehearsal (%d), so the deferral path was exercised" % ndef)
     print("RESULT:", "PASS" if not FAILS else "FAIL (%d)" % len(FAILS))

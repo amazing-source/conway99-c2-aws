@@ -22,6 +22,11 @@ as usual. If none fires the pair is DEFERRED without calling the engine's search
 unchanged. Compared with the budget variant, the few searches that would end within the budget are deferred too; no verdict
 other than DEFERRED is ever produced by this file.
 A golay_pairs record also gets the field "deferral" (node budget, sha256 of this file); a stream record gets it from par_consumer.
+Norm-4 witnesses, Q_DEFER_N4=1 (07/10): the bridge theorem (lemma/BRIDGE.md) holds for every v of U, not only for roots: a pair
+with a vector x of norm 4 such that |(x,y1)| = |(x,y2)| = 3 has E(x) = 28 - 18 = 10 and would give an integer eigenfunction of
+squared norm 20, which T20 forbids. With this switch such a pair (when no root gives 5 or 4) is DEFERRED with its own verdict,
+"DEFERRED (pending T20: norm-4 x ...)". Measured on lattice 003 (1,876 searched pairs sampled in the sweep records): 1,197 have such
+an x, among them every one of the 100 heaviest searches; the last y1 classes of 003 are made of them.
 User's decision of 06/10 evening: set those pairs aside, never count them as excluded on the strength of an unproved lemma."""
 import sys, os, json, hashlib
 
@@ -35,7 +40,9 @@ REAL = FD.search
 BUDGET = int(os.environ.get("Q_DEFER_NODES", "10000"))
 DEF18 = "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)"
 DEF20 = "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)"
-_RG = {}
+DEF20N4 = "DEFERRED (pending T20: norm-4 x with |(x,y1)| = |(x,y2)| = 3)"
+N4 = os.environ.get("Q_DEFER_N4", "") == "1"
+_RG = {}; _X4 = {}
 
 
 def witness(L, y1, y2):
@@ -47,6 +54,13 @@ def witness(L, y1, y2):
         a = RG @ y1; b = RG @ y2; Y = a * a + b * b
         if (Y == 5).any(): return DEF18
         if (Y == 4).any(): return DEF20
+    if N4:
+        X = _X4.get(id(L))
+        if X is None:
+            X4 = np.asarray(L["X4"], dtype=np.int64)                     # the engine's list of norm-4 vectors, one per +- pair
+            assert len(X4) == 0 or (np.einsum("ij,jk,ik->i", X4, np.asarray(L["G"], dtype=np.int64), X4) == 4).all()
+            X = _X4[id(L)] = (X4 @ L["G"]).astype(np.int64)
+        if len(X) and ((np.abs(X @ y1) == 3) & (np.abs(X @ y2) == 3)).any(): return DEF20N4
     return None
 
 
