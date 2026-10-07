@@ -71,6 +71,8 @@ $A status INSTALLATION "calibration EQUIVALENT, starting the agent"
 touch "$HOME/q_calibrated_$NAME"                                                 # used by the rehearsal only
 if [ -n "${Q_TAIL_KEYS:-}" ]; then                                            # 06/10: tail runner (heavy jobs cut over all the cores, q/qtail.py)
   .venv/bin/python "$REPO/q/qtail.py" > "$HOME/qtail.out" 2>&1; RC=$?
+elif [ "${Q_CERT:-}" = "1" ]; then                                          # 07/10: certificate runner for the DEFERRED pairs (q/qcert.py, lab session)
+  .venv/bin/python "$REPO/q/qcert.py" > "$HOME/qcert.out" 2>&1; RC=$?
 else
   .venv/bin/python "$REPO/q/qagent.py" run; RC=$?
 fi

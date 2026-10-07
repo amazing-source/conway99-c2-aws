@@ -53,6 +53,16 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | All queue jobs except one: done (`q/tools/laptop_2026-10-06/sweep_report.py`) | LAP | closed |
 | 003:181:182: running since 07:46 on 124 cores (i-00a0ab97a6a8099fd); stop at 13:00 if not back, then treated apart | LAP | running |
 
+## Note of 12:30 (LAP)
+
+The LAB session reached its usage limit at 12:30 and stopped. Until it is back, LAP reads the A1 measurement and keeps the LAB
+lines; the relay to CDX goes through the LAB session's bridge, so CDX cannot be reached from the laptop in the meantime.
+Left by LAB at 12:30 (its message): certificate runner pushed and tested (`q/qcert.py`, `q/cert_stream.py`,
+`measures/CERT_MANIFEST_2026-10-07.json`: 7,762 stream records, 5,179,532 + 2,501,532 deferred pairs); Golay pairs certified
+without the producer (`measures/cert_golay_001.json`, `cert_golay_002.json`: 4,545 + 3,169 and 6,675 + 3,594 pairs, 0 invalid).
+Not done by LAB: the conversion step DEFERRED -> excluded (dry run), the review of CDX's second program, passing the route-B
+specification to CDX.
+
 ## Machines running (LAP keeps this current)
 
 | Account | Machine | Job | Since |
