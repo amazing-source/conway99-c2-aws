@@ -1,0 +1,167 @@
+{
+"id": 139,
+"chunk": [
+4,
+8
+],
+"n_pairs": 65,
+"orbits": 3,
+"sha256": "8031220cff6ee62c785b303654603610b05e889232c636a0b89abcf7fc2a51cd",
+"producer": {
+"end": true,
+"id": 139,
+"chunk": [
+4,
+8
+],
+"pairs": 65,
+"complete": true,
+"sha256": "8031220cff6ee62c785b303654603610b05e889232c636a0b89abcf7fc2a51cd"
+},
+"producer_info": [
+{
+"rank": 24,
+"components": 4,
+"label_vectors": 164,
+"dominant_y1": 26,
+"id": 139,
+"roots": "d_8^2d_4^2",
+"gamma": 1,
+"y1_orbits": 26,
+"gamma_verified": true,
+"gamma_converted": false,
+"seconds": 0.7
+}
+],
+"verdicts": {
+"EXCLUDED (twin transfer)": 27,
+"EXCLUDED (char-vector trap)": 35,
+"EXCLUDED (stage 1 empty: no 7 h)": 1,
+"SWAP-COVERED (I(y1)>I(y2))": 2
+},
+"twin_deferred": {},
+"telemetry": {
+"trap_Yz": {
+"74": 33,
+"98": 2
+},
+"search_nodes_log2": {
+"9": 1
+},
+"search_K": {
+"48": 1
+},
+"search_depth_max": {
+"3": 1
+},
+"E_pair_trap": {
+"(74, 90)": 18,
+"(74, 74)": 6,
+"(66, 74)": 2,
+"(66, 82)": 6,
+"(66, 90)": 1,
+"(74, 82)": 2
+},
+"E_pair_search": {
+"(74, 90)": 1
+}
+},
+"sample_search": [
+{
+"y1": [
+"1",
+"0",
+"1/2",
+"-1/2",
+"0",
+"1/2",
+"-1/2",
+"-1/2",
+"-1/2",
+"0",
+"-1/2",
+"-1/2",
+"-1/2",
+"1",
+"0",
+"0",
+"1/2",
+"1/2",
+"-1/2",
+"1/2",
+"-1/2",
+"-1",
+"-1/2",
+"1/2"
+],
+"y2": [
+"0",
+"-1/2",
+"1",
+"0",
+"0",
+"1",
+"1/2",
+"1/2",
+"1",
+"1/2",
+"-1/2",
+"1",
+"0",
+"0",
+"-1/2",
+"-1/2",
+"1/2",
+"1/2",
+"-1/2",
+"0",
+"0",
+"0",
+"1/2",
+"-1/2"
+],
+"nodes": [
+1,
+29,
+153,
+720,
+0,
+0,
+0,
+0
+],
+"K": 48,
+"flex": 120,
+"points": 208,
+"E": [
+74,
+90
+],
+"verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+}
+],
+"not_excluded": [],
+"wall_secs": 2.4,
+"machine": "labpc",
+"frame_dfs": "U+ general mode",
+"code_sha": {
+"frame_dfs_next.py": "1591aeeac9c0be5c",
+"hstage_stream_next.py": "f48520f7ebac4bf8",
+"twin_transfer.py": "77a446c7cb8b3922"
+},
+"node_limit": 4000000000,
+"conway99_c1_commit": "",
+"t": "2026-10-07 18:34:31",
+"chunk_ok": true,
+"chunk_done": true,
+"stream_ok": true,
+"ok": true,
+"counts": {
+"EXCLUDED (twin transfer)": 27,
+"EXCLUDED (char-vector trap)": 35,
+"EXCLUDED (stage 1 empty: no 7 h)": 1,
+"SWAP-COVERED (I(y1)>I(y2))": 2
+},
+"exposed_not_excluded_again": 0,
+"job_seconds": 10.4
+}
