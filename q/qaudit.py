@@ -5,6 +5,7 @@ own branch run/<NAME>.
   Q_AUDIT_MANIFEST=measures/AUDIT_RIGID_MANIFEST_2026-10-07.json   the jobs (written by the lab): lid, k, n, gamma, plan, batch
   Q_AUDIT_BATCH=1                                                  only the jobs of this batch (1 = the lattices already counted as
                                                                    excluded, 2 = the open ones); default: all
+  Q_AUDIT_LIDS="137 138 105 ..."                                   only these lattices, in this order (after the batch filter)
   Q_AUDIT_PART="i/n"                                               this machine takes the jobs i, i+n, ... of the (filtered) list
   Q_AUDIT_WORKERS=8                                                jobs running at the same time (default: number of cores)
 A job = the package's own producer for chunk k/n of the lattice (with --from-plan when the manifest gives a plan; gamma and plan
@@ -22,6 +23,8 @@ def main():
     man = json.load(open(os.path.join(REPO, Q.env("Q_AUDIT_MANIFEST", "measures/AUDIT_RIGID_MANIFEST_2026-10-07.json"))))["jobs"]
     batch = Q.env("Q_AUDIT_BATCH", "")
     if batch: man = [m for m in man if str(m.get("batch")) == batch]
+    lids = (Q.env("Q_AUDIT_LIDS", "") or "").split()                 # optional: only these lattices, in the order given
+    if lids: man = [m for l in lids for m in man if m["lid"] == l]
     i0, n0 = [int(x) for x in Q.env("Q_AUDIT_PART", "0/1").split("/")]; assert 0 <= i0 < n0
     mine = man[i0::n0]
     W = int(Q.env("Q_AUDIT_WORKERS", str(max(1, os.cpu_count() or 1))))
