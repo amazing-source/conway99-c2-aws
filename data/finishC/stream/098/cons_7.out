@@ -1,0 +1,1 @@
+{"id": 98, "chunk": [7, 8], "n_pairs": 11634, "orbits": 40, "verdicts": {"SWAP-COVERED (I(y1)>I(y2))": 5898, "EXCLUDED (twin transfer)": 56, "EXCLUDED (stage 1 empty: no 7 h)": 1392, "EXCLUDED (char-vector trap)": 4286, "TWIN-DEFERRED": 2}, "chunk_ok": true, "chunk_done": true, "wall_secs": 718.3}

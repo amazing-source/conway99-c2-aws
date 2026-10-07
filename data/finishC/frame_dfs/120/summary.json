@@ -1,0 +1,48 @@
+{
+ "id": 120,
+ "pairs_file": "..\\..\\AppData\\Local\\Temp\\claude\\C--Users-RESEARCHER-Desktop\\19a7c411-3446-4f59-9793-6c42892ed6cd\\scratchpad\\ext\\conway99-c1\\data\\finishC\\ypairs\\gpairs_120.json",
+ "pairs_sha256": "06dfd31de84e4bc8c958b59420640ecb44009a9fb42049c2303372cacb131146",
+ "n_pairs": 5233,
+ "missing": [],
+ "verdicts": {
+  "EXCLUDED (stage 1 empty: no 7 h)": 5233
+ },
+ "split": {},
+ "lemma_U_plus": true,
+ "node_limit": 200000000,
+ "slowest": [
+  [
+   54.94,
+   169
+  ],
+  [
+   47.86,
+   3208
+  ],
+  [
+   37.51,
+   3256
+  ],
+  [
+   37.0,
+   180
+  ],
+  [
+   28.54,
+   39
+  ],
+  [
+   25.99,
+   36
+  ],
+  [
+   25.11,
+   118
+  ],
+  [
+   21.81,
+   111
+  ]
+ ],
+ "wall_secs": 2248.5
+}

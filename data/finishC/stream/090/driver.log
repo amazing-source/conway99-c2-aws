@@ -1,0 +1,12 @@
+04:18:58 no portable Gamma for 090: stop
+12:44:14 plan: {"rank": 23, "components": 6, "label_vectors": 3866, "dominant_y1": 303, "id": 90, "roots": "a_9a_5d_4a_3a_1a_1", "gamma": 2, "y1_orbits": 156, "gamma_verified": true, "gamma_converted": false} 
+12:44:14 lattice 090: 8 chunks, 0 done, gamma gamma_c2/gamma_090.json (sha 28bec067b724), plan sha ebc6e05a0c02, conway99-c1 888e731
+12:44:14 chunk 0/8 started
+12:48:14 chunk 0/8 finished (producer exit 0, consumer exit 0)
+12:48:14 chunk 1/8 started
+run_chunk 2/8 finished (producer 0, consumer 0)
+run_chunk 4/8 finished (producer 0, consumer 0)
+run_chunk 5/8 finished (producer 0, consumer 0)
+run_chunk 3/8 finished (producer 0, consumer 0)
+run_chunk 6/8 finished (producer 0, consumer 0)
+run_chunk 7/8 finished (producer 0, consumer 0)

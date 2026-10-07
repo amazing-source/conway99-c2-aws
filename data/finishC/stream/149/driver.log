@@ -1,0 +1,20 @@
+23:02:00 plan:  \y_pairs_gamma.py", line 187, in <module>
+    main()
+  File "C:\Users\RESEARCHER\AppData\Local\Temp\claude\C--Users-RESEARCHER-Desktop\19a7c411-3446-4f59-9793-6c42892ed6cd\scratchpad\ext\conway99-c1\code\y_pairs_gamma.py", line 97, in main
+    assert gam['id'] == rec_['id']
+           ~~~^^^^^^
+KeyError: 'id'
+23:02:00 plan FAILED: stop
+23:02:11 plan: {"rank": 24, "components": 4, "label_vectors": 86, "dominant_y1": 9, "id": 149, "roots": "d_{10}e_7d_6a_1", "gamma": 1, "y1_orbits": 9, "gamma_verified": true, "gamma_converted": false} 
+23:02:11 lattice 149: 2 chunks, 0 done, gamma 149/gamma_identity_149.json (sha db5f16c38c36), plan sha 436216b46e41, conway99-c1 86aa064
+23:02:11 chunk 0/2 started
+23:02:26 chunk 0/2 finished (producer exit 120, consumer exit 1)
+23:02:26 chunk 1/2 started
+23:02:41 chunk 1/2 finished (producer exit 120, consumer exit 1)
+23:02:56 lattice 149: 0/2 chunks done, 0 pairs in done chunks -- NOT all chunks done: see chunks.jsonl (not_excluded / chunk_ok)
+23:03:14 lattice 149: 2 chunks, 0 done, gamma 149/gamma_identity_149.json (sha db5f16c38c36), plan sha 436216b46e41, conway99-c1 86aa064
+23:03:14 chunk 0/2 started
+23:03:29 chunk 0/2 finished (producer exit 0, consumer exit 0)
+23:03:29 chunk 1/2 started
+23:03:59 chunk 1/2 finished (producer exit 0, consumer exit 0)
+23:04:14 lattice 149: 2/2 chunks done, 44 pairs in done chunks

@@ -1,0 +1,6 @@
+{"nodes": [1, 184, 67586, 3796965, 51798839, 37535874, 394884, 26788], "complete": true, "leaves": 26788, "lemmaZ": 26744, "local_star_sums": 11, "joint": 0, "frame": 0, "secs": 994.8, "bmod": 10, "brem": 6, "k": 21}
+{"nodes": [1, 184, 68511, 3968848, 54021786, 39244887, 409773, 27294], "complete": true, "leaves": 27294, "lemmaZ": 27239, "local_star_sums": 25, "joint": 0, "frame": 0, "secs": 3428.0, "bmod": 10, "brem": 4, "k": 21}
+{"nodes": [1, 185, 69742, 4199421, 55838076, 38870814, 395885, 27014], "complete": true, "leaves": 27014, "lemmaZ": 26959, "local_star_sums": 19, "joint": 0, "frame": 0, "secs": 3752.0, "bmod": 10, "brem": 3, "k": 21}
+{"nodes": [1, 184, 66737, 3776057, 49973334, 35802854, 368503, 24703], "complete": true, "leaves": 24703, "lemmaZ": 24651, "local_star_sums": 16, "joint": 0, "frame": 0, "secs": 4130.5, "bmod": 10, "brem": 5, "k": 21}
+{"nodes": [1, 184, 67743, 3862840, 52319162, 37760063, 405152, 28016], "complete": true, "leaves": 28016, "lemmaZ": 27976, "local_star_sums": 22, "joint": 0, "frame": 0, "secs": 4656.7, "bmod": 10, "brem": 8, "k": 21}
+{"nodes": [1, 185, 68586, 3965615, 54629539, 40565485, 421283, 28742], "complete": true, "leaves": 28742, "lemmaZ": 28684, "local_star_sums": 27, "joint": 0, "frame": 0, "secs": 6124.3, "bmod": 10, "brem": 0, "k": 21}

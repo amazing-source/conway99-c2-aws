@@ -1,0 +1,24 @@
+19:10:27 lattice 075: 4 chunks, 0 done, gamma gamma_ps/gamma_075.json (sha 4c1da412dbd4), plan sha 7b86f8cc0b94, conway99-c1 472456e
+19:10:27 chunk 0/4 started
+19:10:27 chunk 1/4 started
+20:21:44 lattice 075: 8 chunks, 0 done, gamma gamma_ps/gamma_075.json (sha 4c1da412dbd4), plan sha 7b86f8cc0b94, conway99-c1 472456e
+20:21:44 chunk 0/8 started
+20:21:44 chunk 1/8 started
+23:41:52 lattice 075: 8 chunks, 0 done, gamma gamma_ps/gamma_075.json (sha 4c1da412dbd4), plan sha 7b86f8cc0b94, conway99-c1 472456e
+23:41:52 chunk 0/8 started
+00:20:38 chunk 0/8 finished (producer exit 0, consumer exit 0)
+00:20:38 chunk 1/8 started
+00:54:39 chunk 1/8 finished (producer exit 0, consumer exit 0)
+00:54:39 chunk 2/8 started
+01:26:40 chunk 2/8 finished (producer exit 0, consumer exit 0)
+01:26:40 chunk 3/8 started
+01:57:56 chunk 3/8 finished (producer exit 0, consumer exit 0)
+01:57:56 chunk 4/8 started
+02:29:42 chunk 4/8 finished (producer exit 0, consumer exit 0)
+02:29:42 chunk 5/8 started
+03:04:43 chunk 5/8 finished (producer exit 0, consumer exit 0)
+03:04:43 chunk 6/8 started
+03:41:44 chunk 6/8 finished (producer exit 0, consumer exit 0)
+03:41:44 chunk 7/8 started
+04:24:02 chunk 7/8 finished (producer exit 0, consumer exit 0)
+04:24:17 lattice 075: 8/8 chunks done, 248990 pairs in done chunks

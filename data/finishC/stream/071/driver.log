@@ -1,0 +1,14 @@
+19:10:27 lattice 071: 4 chunks, 0 done, gamma gamma_ps/gamma_071.json (sha 47173f2dfae1), plan sha 0a4700101bc6, conway99-c1 472456e
+19:10:28 chunk 0/4 started
+19:10:28 chunk 1/4 started
+20:21:45 lattice 071: 8 chunks, 0 done, gamma gamma_ps/gamma_071.json (sha 47173f2dfae1), plan sha 0a4700101bc6, conway99-c1 472456e
+20:21:45 chunk 0/8 started
+20:21:45 chunk 1/8 started
+run_chunk 0/8 finished (producer 0, consumer 0)
+run_chunk 2/8 finished (producer 0, consumer 0)
+run_chunk 1/8 finished (producer 0, consumer 0)
+run_chunk 4/8 finished (producer 0, consumer 0)
+run_chunk 3/8 finished (producer 0, consumer 0)
+run_chunk 6/8 finished (producer 0, consumer 0)
+run_chunk 5/8 finished (producer 0, consumer 0)
+run_chunk 7/8 finished (producer 0, consumer 0)

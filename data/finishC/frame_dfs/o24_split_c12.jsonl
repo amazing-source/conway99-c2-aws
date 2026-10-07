@@ -1,0 +1,10 @@
+{"nodes": [1, 178, 65436, 3949851, 52001480, 34956008, 288958, 14694], "complete": true, "leaves": 14694, "lemmaZ": 14675, "local_star_sums": 0, "joint": 0, "frame": 0, "secs": 80.6, "bmod": 10, "brem": 9, "k": 12}
+{"nodes": [1, 178, 65141, 3948788, 52032539, 35330158, 300489, 15816], "complete": true, "leaves": 15816, "lemmaZ": 15788, "local_star_sums": 0, "joint": 0, "frame": 0, "secs": 81.2, "bmod": 10, "brem": 6, "k": 12}
+{"nodes": [1, 178, 65490, 4089121, 54536437, 36968575, 300003, 15207], "complete": true, "leaves": 15207, "lemmaZ": 15177, "local_star_sums": 0, "joint": 0, "frame": 0, "secs": 85.0, "bmod": 10, "brem": 5, "k": 12}
+{"nodes": [1, 178, 65959, 4125890, 55347838, 37485641, 300691, 15269], "complete": true, "leaves": 15269, "lemmaZ": 15232, "local_star_sums": 0, "joint": 0, "frame": 0, "secs": 85.8, "bmod": 10, "brem": 4, "k": 12}
+{"nodes": [1, 178, 67381, 4230164, 56829338, 38718212, 311663, 16095], "complete": true, "leaves": 16095, "lemmaZ": 16070, "local_star_sums": 0, "joint": 0, "frame": 0, "secs": 87.6, "bmod": 10, "brem": 7, "k": 12}
+{"nodes": [1, 179, 64833, 3837650, 50467729, 33465575, 278656, 14416], "complete": true, "leaves": 14416, "lemmaZ": 14398, "local_star_sums": 2, "joint": 0, "frame": 0, "secs": 73.8, "bmod": 10, "brem": 2, "k": 12}
+{"nodes": [1, 178, 65259, 3991507, 53630145, 36481035, 298395, 14901], "complete": true, "leaves": 14901, "lemmaZ": 14876, "local_star_sums": 2, "joint": 0, "frame": 0, "secs": 94.1, "bmod": 10, "brem": 3, "k": 12}
+{"nodes": [1, 178, 65744, 4066641, 54289267, 36611661, 306810, 16051], "complete": true, "leaves": 16051, "lemmaZ": 16019, "local_star_sums": 2, "joint": 0, "frame": 0, "secs": 96.4, "bmod": 10, "brem": 8, "k": 12}
+{"nodes": [1, 179, 67260, 4198800, 56838373, 39071388, 324455, 16495], "complete": true, "leaves": 16495, "lemmaZ": 16476, "local_star_sums": 2, "joint": 0, "frame": 0, "secs": 113.2, "bmod": 10, "brem": 1, "k": 12}
+{"nodes": [1, 179, 67188, 4067528, 56294960, 39460492, 315374, 16124], "complete": true, "leaves": 16124, "lemmaZ": 16089, "local_star_sums": 2, "joint": 0, "frame": 0, "secs": 114.9, "bmod": 10, "brem": 0, "k": 12}

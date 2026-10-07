@@ -1,0 +1,20 @@
+04:18:57 no portable Gamma for 109: stop
+12:11:55 plan: {"rank": 22, "components": 4, "label_vectors": 5937, "dominant_y1": 220, "id": 109, "roots": "a_{10}a_6a_5a_1", "gamma": 2, "y1_orbits": 110, "gamma_verified": true, "gamma_converted": false} 
+12:11:55 lattice 109: 8 chunks, 0 done, gamma gamma_c2/gamma_109.json (sha bd7f3708a7d7), plan sha 2b5761203cd8, conway99-c1 888e731
+12:11:55 chunk 0/8 started
+12:11:55 chunk 1/8 started
+12:11:55 chunk 2/8 started
+12:14:56 chunk 0/8 finished (producer exit 0, consumer exit 0)
+12:14:57 chunk 3/8 started
+12:15:12 chunk 1/8 finished (producer exit 0, consumer exit 0)
+12:15:12 chunk 2/8 finished (producer exit 0, consumer exit 0)
+12:15:12 chunk 4/8 started
+12:15:12 chunk 5/8 started
+12:18:43 chunk 3/8 finished (producer exit 0, consumer exit 0)
+12:18:43 chunk 6/8 started
+12:19:13 chunk 4/8 finished (producer exit 0, consumer exit 0)
+12:19:13 chunk 7/8 started
+12:19:28 chunk 5/8 finished (producer exit 0, consumer exit 0)
+12:21:29 chunk 6/8 finished (producer exit 0, consumer exit 0)
+12:21:44 chunk 7/8 finished (producer exit 0, consumer exit 0)
+12:21:59 lattice 109: 8/8 chunks done, 16386 pairs in done chunks

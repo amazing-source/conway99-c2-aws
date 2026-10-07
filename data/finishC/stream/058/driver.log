@@ -1,0 +1,19 @@
+04:18:57 lattice 058: 8 chunks, 0 done, gamma gamma_ps/gamma_058.json (sha 95653910da10), plan sha a8376e78f23d, conway99-c1 472456e
+04:18:57 chunk 0/8 started
+06:21:03 chunk 0/8 finished (producer exit 0, consumer exit 0)
+06:21:03 chunk 1/8 started
+07:26:29 chunk 1/8 finished (producer exit 0, consumer exit 0)
+07:26:30 chunk 2/8 started
+08:46:39 chunk 2/8 finished (producer exit 0, consumer exit 0)
+08:46:39 chunk 3/8 started
+09:44:28 chunk 3/8 finished (producer exit 0, consumer exit 0)
+09:44:28 chunk 4/8 started
+10:58:19 chunk 4/8 finished (producer exit 0, consumer exit 0)
+10:58:19 chunk 5/8 started
+11:20:35 chunk 5/8 finished (producer exit 4294967295, consumer exit 0)
+11:20:35 chunk 6/8 started
+11:51:21 chunk 6/8 finished (producer exit 0, consumer exit 0)
+11:51:21 chunk 7/8 started
+12:35:07 chunk 7/8 finished (producer exit 0, consumer exit 0)
+12:35:22 lattice 058: 7/8 chunks done, 325183 pairs in done chunks -- NOT all chunks done: see chunks.jsonl (not_excluded / chunk_ok)
+run_chunk 5/8 finished (producer 0, consumer 0)

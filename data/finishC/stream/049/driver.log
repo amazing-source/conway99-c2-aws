@@ -1,0 +1,6 @@
+04:18:57 lattice 049: 8 chunks, 0 done, gamma gamma_ps/gamma_049.json (sha df97a4ea2a0c), plan sha 866383e8031d, conway99-c1 472456e
+04:18:58 chunk 0/8 started
+11:16:04 chunk 0/8 finished (producer exit 4294967295, consumer exit 4294967295)
+11:16:04 chunk 1/8 started
+12:02:36 chunk 1/8 finished (producer exit 0, consumer exit 0)
+12:02:36 chunk 2/8 started

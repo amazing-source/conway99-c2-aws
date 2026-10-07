@@ -1,0 +1,3 @@
+23:07:16 plan: {"rank": 21, "components": 8, "label_vectors": 172889, "dominant_y1": 4812, "id": 34, "roots": "a_4^2a_4a_3a_2^2a_1^2", "gamma": 4, "y1_orbits": 1225, "gamma_verified": true, "gamma_converted": false} 
+23:07:16 lattice 034: 60 chunks, 0 done, gamma gamma_ps/gamma_034.json (sha 23f189c9d979), plan sha 1be521bf8fa6, conway99-c1 ca40a3f
+23:07:16 chunk 0/60 started

@@ -1,0 +1,48 @@
+{
+ "id": 131,
+ "pairs_file": "external_runs\\c1_pairs\\gpairs_131.json",
+ "pairs_sha256": "6e04d2447a01b7e4c167f82501ade234d69c138034a7b7d3b68b227f46fb9839",
+ "n_pairs": 1257,
+ "missing": [],
+ "verdicts": {
+  "EXCLUDED (stage 1 empty: no 7 h)": 1257
+ },
+ "split": {},
+ "lemma_U_plus": true,
+ "node_limit": 200000000,
+ "slowest": [
+  [
+   90.64,
+   682
+  ],
+  [
+   76.9,
+   715
+  ],
+  [
+   64.77,
+   681
+  ],
+  [
+   57.8,
+   714
+  ],
+  [
+   52.52,
+   180
+  ],
+  [
+   52.26,
+   327
+  ],
+  [
+   46.42,
+   179
+  ],
+  [
+   46.34,
+   16
+  ]
+ ],
+ "wall_secs": 3032.6
+}

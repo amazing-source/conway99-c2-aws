@@ -1,0 +1,844 @@
+{
+ "001": {
+  "covered": true,
+  "source": "Golay pair files",
+  "pairs": 117068,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 117050,
+   "rigid": 18,
+   "with_zero_candidate": 117068,
+   "exposed": 18
+  },
+  "exposed_not_excluded_again": 0
+ },
+ "003": {
+  "files_accepted": 172,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 182,
+  "by_certificate": [
+   157,
+   162,
+   174,
+   176,
+   181
+  ],
+  "certificate_sha256": "bb32f307103f55e5b4e45c3e70757cc120ea2f78407cf584f9a54a67e7d7c9d0",
+  "missing": [
+   2,
+   3,
+   180
+  ],
+  "covered_twice": 0,
+  "pairs_expected": 17757312,
+  "covered": false,
+  "source": "plan, 1 source(s)",
+  "files_selected": 172,
+  "pairs": 17279427,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 17278986,
+   "rigid": 441,
+   "with_zero_candidate": 12062878,
+   "exposed": 313
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 313,
+  "exposed_with_search_nodes": 2,
+  "coverage": "NOT COVERED: 174 of 182 y1 representatives by audit files; 5 by the fixed-y1 certificate, PENDING T18 and T20: [157, 162, 174, 176, 181]; MISSING [2, 3, 180]",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "006": {
+  "files_accepted": 71,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 228,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 7051414,
+  "covered": true,
+  "source": "plan, 1 source(s)",
+  "files_selected": 71,
+  "pairs": 7051414,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 7050774,
+   "rigid": 640,
+   "with_zero_candidate": 6978142,
+   "exposed": 620
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 620,
+  "exposed_with_search_nodes": 1,
+  "coverage": "COVERED: 228 of 228 y1 representatives by audit files; pairs = the sweep's 7051414",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "007": {
+  "files_accepted": 627,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 1234,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 62629395,
+  "covered": true,
+  "source": "plan, 1 source(s)",
+  "files_selected": 627,
+  "pairs": 62629395,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 62627645,
+   "rigid": 1750,
+   "with_zero_candidate": 13227068,
+   "exposed": 737
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 737,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 1234 of 1234 y1 representatives by audit files; pairs = the sweep's 62629395",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "014": {
+  "files_accepted": 371,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 1877,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 37020901,
+  "covered": true,
+  "source": "plan, 1 source(s)",
+  "files_selected": 371,
+  "pairs": 37020901,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 37018829,
+   "rigid": 2072,
+   "with_zero_candidate": 21906363,
+   "exposed": 1562
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 1562,
+  "exposed_with_search_nodes": 2,
+  "coverage": "COVERED: 1877 of 1877 y1 representatives by audit files; pairs = the sweep's 37020901",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "022": {
+  "files_accepted": 38,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 506,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 3719056,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 38,
+  "pairs": 3719056,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 3718634,
+   "rigid": 422,
+   "with_zero_candidate": 2125452,
+   "exposed": 348
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 348,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 506 of 506 y1 representatives by audit files; pairs = the sweep's 3719056",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "023": {
+  "files_accepted": 30,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 419,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 2902784,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 30,
+  "pairs": 2902784,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 2902444,
+   "rigid": 340,
+   "with_zero_candidate": 1653540,
+   "exposed": 286
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 286,
+  "exposed_with_search_nodes": 1,
+  "coverage": "COVERED: 419 of 419 y1 representatives by audit files; pairs = the sweep's 2902784",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "024": {
+  "files_accepted": 34,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 473,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 3331604,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 34,
+  "pairs": 3331604,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 3331116,
+   "rigid": 488,
+   "with_zero_candidate": 2971218,
+   "exposed": 480
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 480,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 473 of 473 y1 representatives by audit files; pairs = the sweep's 3331604",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "026": {
+  "files_accepted": 56,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 685,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 5525802,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 56,
+  "pairs": 5525802,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 5525187,
+   "rigid": 615,
+   "with_zero_candidate": 4908794,
+   "exposed": 607
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 607,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 685 of 685 y1 representatives by audit files; pairs = the sweep's 5525802",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "027": {
+  "files_accepted": 19,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 232,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 1858950,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 19,
+  "pairs": 1858950,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 1858820,
+   "rigid": 130,
+   "with_zero_candidate": 1048043,
+   "exposed": 130
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 130,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 232 of 232 y1 representatives by audit files; pairs = the sweep's 1858950",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "028": {
+  "files_accepted": 1,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 20,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 50646,
+  "covered": true,
+  "source": "plan, 1 source(s)",
+  "files_selected": 1,
+  "pairs": 50646,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 50586,
+   "rigid": 60,
+   "with_zero_candidate": 50646,
+   "exposed": 60
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 60,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 20 of 20 y1 representatives by audit files; pairs = the sweep's 50646",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "037": {
+  "files_accepted": 15,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 409,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 1438751,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 15,
+  "pairs": 1438751,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 1438343,
+   "rigid": 408,
+   "with_zero_candidate": 1434295,
+   "exposed": 408
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 408,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 409 of 409 y1 representatives by audit files; pairs = the sweep's 1438751",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "049": {
+  "files_accepted": 3,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 196,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 296093,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 3,
+  "pairs": 296093,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 295964,
+   "rigid": 129,
+   "with_zero_candidate": 268837,
+   "exposed": 129
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 129,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 196 of 196 y1 representatives by audit files; pairs = the sweep's 296093",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "050": {
+  "files_accepted": 11,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 526,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 1011185,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 11,
+  "pairs": 1011185,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 1010830,
+   "rigid": 355,
+   "with_zero_candidate": 924241,
+   "exposed": 343
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 343,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 526 of 526 y1 representatives by audit files; pairs = the sweep's 1011185",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "052": {
+  "files_accepted": 3,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 119,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 210503,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 3,
+  "pairs": 210503,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 210307,
+   "rigid": 196,
+   "with_zero_candidate": 210503,
+   "exposed": 196
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 196,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 119 of 119 y1 representatives by audit files; pairs = the sweep's 210503",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "053": {
+  "files_accepted": 12,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "plan",
+  "y1_reps": 590,
+  "by_certificate": [],
+  "certificate_sha256": null,
+  "missing": [],
+  "covered_twice": 0,
+  "pairs_expected": 1141132,
+  "covered": true,
+  "source": "plan, 2 source(s)",
+  "files_selected": 12,
+  "pairs": 1141132,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 1140882,
+   "rigid": 250,
+   "with_zero_candidate": 1033676,
+   "exposed": 246
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 246,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: 590 of 590 y1 representatives by audit files; pairs = the sweep's 1141132",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "077": {
+  "files_accepted": 20,
+  "files_not_ok": [],
+  "same_job_different_stream": [
+   [
+    1,
+    8
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    7,
+    8
+   ]
+  ],
+  "kind": "identity",
+  "other_complete_sources": [],
+  "covered": true,
+  "source": "run/q-i-0dd8a09a554760841",
+  "files_selected": 8,
+  "pairs": 468425,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 467709,
+   "rigid": 716,
+   "with_zero_candidate": 468425,
+   "exposed": 716
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 716,
+  "exposed_with_search_nodes": 12,
+  "coverage": "COVERED: all 8 chunks from one source",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "079": {
+  "files_accepted": 16,
+  "files_not_ok": [],
+  "same_job_different_stream": [
+   [
+    1,
+    8
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    7,
+    8
+   ]
+  ],
+  "kind": "identity",
+  "other_complete_sources": [],
+  "covered": true,
+  "source": "run/q-i-0dd8a09a554760841",
+  "files_selected": 8,
+  "pairs": 403580,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 403268,
+   "rigid": 312,
+   "with_zero_candidate": 403580,
+   "exposed": 312
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 312,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: all 8 chunks from one source",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "080": {
+  "files_accepted": 16,
+  "files_not_ok": [],
+  "same_job_different_stream": [
+   [
+    1,
+    8
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    7,
+    8
+   ]
+  ],
+  "kind": "identity",
+  "other_complete_sources": [],
+  "covered": true,
+  "source": "lab",
+  "files_selected": 8,
+  "pairs": 344248,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 343792,
+   "rigid": 456,
+   "with_zero_candidate": 344248,
+   "exposed": 456
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 456,
+  "exposed_with_search_nodes": 24,
+  "coverage": "COVERED: all 8 chunks from one source",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "101": {
+  "files_accepted": 12,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "identity",
+  "other_complete_sources": [],
+  "covered": true,
+  "source": "lab",
+  "files_selected": 8,
+  "pairs": 62300,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 62116,
+   "rigid": 184,
+   "with_zero_candidate": 62300,
+   "exposed": 184
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 184,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: all 8 chunks from one source",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "103": {
+  "files_accepted": 16,
+  "files_not_ok": [],
+  "same_job_different_stream": [
+   [
+    1,
+    8
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    7,
+    8
+   ]
+  ],
+  "kind": "identity",
+  "other_complete_sources": [],
+  "covered": true,
+  "source": "lab",
+  "files_selected": 8,
+  "pairs": 64596,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 64432,
+   "rigid": 164,
+   "with_zero_candidate": 64596,
+   "exposed": 164
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 164,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: all 8 chunks from one source",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "104": {
+  "files_accepted": 12,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "identity",
+  "other_complete_sources": [],
+  "covered": true,
+  "source": "lab",
+  "files_selected": 8,
+  "pairs": 70108,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 70066,
+   "rigid": 42,
+   "with_zero_candidate": 70108,
+   "exposed": 42
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 42,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: all 8 chunks from one source",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "105": {
+  "files_accepted": 16,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "identity",
+  "other_complete_sources": [
+   "run/q-i-0dd6dbc530afb831d"
+  ],
+  "covered": true,
+  "source": "lab",
+  "files_selected": 8,
+  "pairs": 56544,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 56480,
+   "rigid": 64,
+   "with_zero_candidate": 56544,
+   "exposed": 64
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 64,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: all 8 chunks from one source",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "137": {
+  "files_accepted": 1,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "identity",
+  "other_complete_sources": [],
+  "covered": true,
+  "source": "lab",
+  "files_selected": 1,
+  "pairs": 1208,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 1208,
+   "rigid": 0,
+   "with_zero_candidate": 1208,
+   "exposed": 0
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 0,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: all 1 chunks from one source",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ },
+ "138": {
+  "files_accepted": 2,
+  "files_not_ok": [],
+  "same_job_different_stream": [],
+  "kind": "identity",
+  "other_complete_sources": [
+   "run/q-i-00a7b5e21909a98d1"
+  ],
+  "covered": true,
+  "source": "lab",
+  "files_selected": 1,
+  "pairs": 1026,
+  "counts": {
+   "setup_impossible": 0,
+   "general": 1018,
+   "rigid": 8,
+   "with_zero_candidate": 1026,
+   "exposed": 8
+  },
+  "exposed_not_excluded_again": 0,
+  "exposed_listed": 8,
+  "exposed_with_search_nodes": 0,
+  "coverage": "COVERED: all 1 chunks from one source",
+  "audit_rigid_sha256": [
+   "a555ddb3aa62b9c1"
+  ],
+  "engine_sha256": [
+   "1591aeeac9c0be5c"
+  ]
+ }
+}

@@ -1,0 +1,20 @@
+04:18:57 no portable Gamma for 093: stop
+12:21:42 plan: {"rank": 21, "components": 4, "label_vectors": 2506, "dominant_y1": 494, "id": 93, "roots": "d_6d_5a_5^2", "gamma": 4, "y1_orbits": 128, "gamma_verified": true, "gamma_converted": false} 
+12:21:42 lattice 093: 8 chunks, 0 done, gamma gamma_c2/gamma_093.json (sha 1e210369182a), plan sha 40c02bd00b8d, conway99-c1 888e731
+12:21:42 chunk 0/8 started
+12:24:57 chunk 0/8 finished (producer exit 0, consumer exit 0)
+12:24:57 chunk 1/8 started
+12:27:42 chunk 1/8 finished (producer exit 0, consumer exit 0)
+12:27:42 chunk 2/8 started
+12:30:57 chunk 2/8 finished (producer exit 0, consumer exit 0)
+12:30:57 chunk 3/8 started
+12:33:42 chunk 3/8 finished (producer exit 0, consumer exit 0)
+12:33:42 chunk 4/8 started
+12:35:27 chunk 4/8 finished (producer exit 0, consumer exit 0)
+12:35:27 chunk 5/8 started
+12:38:27 chunk 5/8 finished (producer exit 0, consumer exit 0)
+12:38:27 chunk 6/8 started
+12:41:42 chunk 6/8 finished (producer exit 0, consumer exit 0)
+12:41:42 chunk 7/8 started
+12:43:57 chunk 7/8 finished (producer exit 0, consumer exit 0)
+12:44:12 lattice 093: 8/8 chunks done, 32952 pairs in done chunks

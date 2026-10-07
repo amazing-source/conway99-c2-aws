@@ -1,0 +1,20 @@
+04:18:57 no portable Gamma for 101: stop
+07:30:40 plan: {"rank": 23, "components": 5, "label_vectors": 1280, "dominant_y1": 210, "id": 101, "roots": "d_7a_5^2a_5a_1", "gamma": 1, "y1_orbits": 210, "gamma_verified": true, "gamma_converted": false} 
+07:30:40 lattice 101: 8 chunks, 0 done, gamma 101/gamma_identity_101.json (sha 29ea5cd34707), plan sha 3bb307d962de, conway99-c1 888e731
+07:30:40 chunk 0/8 started
+07:44:40 chunk 0/8 finished (producer exit 0, consumer exit 0)
+07:44:41 chunk 1/8 started
+07:58:56 chunk 1/8 finished (producer exit 0, consumer exit 0)
+07:58:56 chunk 2/8 started
+08:11:42 chunk 2/8 finished (producer exit 0, consumer exit 0)
+08:11:42 chunk 3/8 started
+08:25:27 chunk 3/8 finished (producer exit 0, consumer exit 0)
+08:25:27 chunk 4/8 started
+08:39:58 chunk 4/8 finished (producer exit 0, consumer exit 0)
+08:39:58 chunk 5/8 started
+08:53:59 chunk 5/8 finished (producer exit 0, consumer exit 0)
+08:53:59 chunk 6/8 started
+09:10:00 chunk 6/8 finished (producer exit 0, consumer exit 0)
+09:10:00 chunk 7/8 started
+09:25:01 chunk 7/8 finished (producer exit 0, consumer exit 0)
+09:25:16 lattice 101: 8/8 chunks done, 62300 pairs in done chunks

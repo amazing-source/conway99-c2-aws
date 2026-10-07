@@ -1,0 +1,1964 @@
+{
+ "classes": {
+  "C": [
+   "000",
+   "004",
+   "010",
+   "044",
+   "072",
+   "087",
+   "096",
+   "097",
+   "105",
+   "106",
+   "108",
+   "111",
+   "115",
+   "116",
+   "119",
+   "120",
+   "121",
+   "122",
+   "123",
+   "124",
+   "125",
+   "126",
+   "127",
+   "130",
+   "131",
+   "132",
+   "133",
+   "134",
+   "135",
+   "136",
+   "137",
+   "138",
+   "139",
+   "140",
+   "141"
+  ],
+  "A": [
+   "016",
+   "017",
+   "018",
+   "019",
+   "020",
+   "021",
+   "022",
+   "023",
+   "024",
+   "025",
+   "026",
+   "027",
+   "029",
+   "030",
+   "031",
+   "032",
+   "033",
+   "034",
+   "035",
+   "036",
+   "037",
+   "038",
+   "039",
+   "040",
+   "041",
+   "042",
+   "045",
+   "046",
+   "047",
+   "059",
+   "062",
+   "063",
+   "064"
+  ],
+  "B": [
+   "028",
+   "043",
+   "048",
+   "049",
+   "050",
+   "051",
+   "052",
+   "053",
+   "054",
+   "055",
+   "056",
+   "057",
+   "058",
+   "060",
+   "061",
+   "065",
+   "066",
+   "067",
+   "068",
+   "069",
+   "070",
+   "071",
+   "073",
+   "074",
+   "075",
+   "076",
+   "077",
+   "078",
+   "079",
+   "080",
+   "081",
+   "082",
+   "083",
+   "084",
+   "085",
+   "086",
+   "088",
+   "089",
+   "090",
+   "091",
+   "092",
+   "093",
+   "095",
+   "098",
+   "099",
+   "100",
+   "101",
+   "102",
+   "103",
+   "104",
+   "107",
+   "109",
+   "110",
+   "112",
+   "113",
+   "114",
+   "118",
+   "149"
+  ],
+  "D": [
+   "094",
+   "117",
+   "128",
+   "129",
+   "142",
+   "143",
+   "144",
+   "145",
+   "146",
+   "147",
+   "148",
+   "150",
+   "151",
+   "152",
+   "153",
+   "154",
+   "155"
+  ]
+ },
+ "lattices": {
+  "000": {
+   "by": "O24: 141 (y1,y2) classes (C1 48eabf2). 86 EXCLUDED by the whole-class LP (structures 4e48848; integer certificates verified twice: structures + C2). 55 LP-feasi",
+   "other_lab_folders": [
+    "o24_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "004": {
+   "by": "open | 02/10 C2 cloud (package v4): all 416383 pair classes of the Golay frame (golay_work/golay_gen.py (validated on 001 against structures' pipeline)) EXCLUDE",
+   "other_lab_folders": [
+    "golay"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "010": {
+   "by": "open | 02/10 C2 cloud (package v4): all 3962 pair classes of the Golay frame (golay_work/golay_gen.py (validated on 001 against structures' pipeline)) EXCLUDED ",
+   "other_lab_folders": [
+    "golay"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "016": {
+   "by": "29/09 C2 stream sweep (a): 479/479 chunks done, 9661027 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer),",
+   "other_lab_folders": [
+    "o24_dfs"
+   ],
+   "kind": "stream",
+   "y1_reps": 479,
+   "done_records": 479,
+   "records_by_machine": {
+    "labpc": 479
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 479,
+   "reps_covered_by_records_in_compute_repo": 479,
+   "class": "A"
+  },
+  "017": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1193626 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [
+    "o24_dfs"
+   ],
+   "kind": "stream",
+   "y1_reps": 88,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 88,
+   "reps_covered_by_records_in_compute_repo": 88,
+   "class": "A"
+  },
+  "018": {
+   "by": "29/09 C2 stream sweep (a): 446 done chunks of several chunkings covering all 4116 y1 representatives, 57409330 ordered pairs, all EXCLUDED (char trap / stage 1 ",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 4116,
+   "done_records": 446,
+   "records_by_machine": {
+    "labpc": 446
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 4116,
+   "reps_covered_by_records_in_compute_repo": 4116,
+   "class": "A"
+  },
+  "019": {
+   "by": "29/09 C2 stream sweep (a): 256 done chunks of several chunkings covering all 887 y1 representatives, 12492920 ordered pairs, all EXCLUDED (char trap / stage 1 w",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 887,
+   "done_records": 256,
+   "records_by_machine": {
+    "labpc": 256
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 887,
+   "reps_covered_by_records_in_compute_repo": 887,
+   "class": "A"
+  },
+  "020": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1080309 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 100,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 100,
+   "reps_covered_by_records_in_compute_repo": 100,
+   "class": "A"
+  },
+  "021": {
+   "by": "29/09 C2 stream sweep (a): 88/88 chunks done, 6720913 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [
+    "o24_dfs"
+   ],
+   "kind": "stream",
+   "y1_reps": 490,
+   "done_records": 88,
+   "records_by_machine": {
+    "labpc": 88
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 490,
+   "reps_covered_by_records_in_compute_repo": 490,
+   "class": "A"
+  },
+  "022": {
+   "by": "29/09 C2 stream sweep (a): 22/22 chunks done, 3719056 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 506,
+   "done_records": 22,
+   "records_by_machine": {
+    "labpc": 22
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 506,
+   "reps_covered_by_records_in_compute_repo": 506,
+   "class": "A"
+  },
+  "023": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 2902784 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [
+    "o24_dfs"
+   ],
+   "kind": "stream",
+   "y1_reps": 419,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 419,
+   "reps_covered_by_records_in_compute_repo": 419,
+   "class": "A"
+  },
+  "024": {
+   "by": "29/09 C2 stream sweep (a): 12/12 chunks done, 3331604 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 473,
+   "done_records": 12,
+   "records_by_machine": {
+    "labpc": 12
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 473,
+   "reps_covered_by_records_in_compute_repo": 473,
+   "class": "A"
+  },
+  "025": {
+   "by": "29/09 C2 stream sweep (a): 42/42 chunks done, 12685851 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), ",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 1557,
+   "done_records": 42,
+   "records_by_machine": {
+    "labpc": 42
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 1557,
+   "reps_covered_by_records_in_compute_repo": 1557,
+   "class": "A"
+  },
+  "026": {
+   "by": "29/09 C2 stream sweep (a): 16/16 chunks done, 5525802 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 685,
+   "done_records": 16,
+   "records_by_machine": {
+    "labpc": 16
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 685,
+   "reps_covered_by_records_in_compute_repo": 685,
+   "class": "A"
+  },
+  "027": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1858950 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 232,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 232,
+   "reps_covered_by_records_in_compute_repo": 232,
+   "class": "A"
+  },
+  "028": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 50646 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 20,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 20,
+   "reps_covered_by_records_in_compute_repo": 17,
+   "class": "B"
+  },
+  "029": {
+   "by": "29/09 C2 stream sweep (a): 135/135 chunks done, 20342381 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer)",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 2241,
+   "done_records": 135,
+   "records_by_machine": {
+    "labpc": 135
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 2241,
+   "reps_covered_by_records_in_compute_repo": 2241,
+   "class": "A"
+  },
+  "030": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1460380 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 202,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 202,
+   "reps_covered_by_records_in_compute_repo": 202,
+   "class": "A"
+  },
+  "031": {
+   "by": "29/09 C2 stream sweep (a): 30/30 chunks done, 2051633 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [
+    "o24_cloud",
+    "o24_dfs"
+   ],
+   "kind": "stream",
+   "y1_reps": 363,
+   "done_records": 30,
+   "records_by_machine": {
+    "labpc": 30
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 363,
+   "reps_covered_by_records_in_compute_repo": 363,
+   "class": "A"
+  },
+  "032": {
+   "by": "29/09 C2 stream sweep (a): 226/226 chunks done, 19608530 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer)",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 3250,
+   "done_records": 226,
+   "records_by_machine": {
+    "labpc": 226
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 3250,
+   "reps_covered_by_records_in_compute_repo": 3250,
+   "class": "A"
+  },
+  "033": {
+   "by": "29/09 C2 stream sweep (a): 20/20 chunks done, 2049478 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 375,
+   "done_records": 20,
+   "records_by_machine": {
+    "labpc": 20
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 375,
+   "reps_covered_by_records_in_compute_repo": 375,
+   "class": "A"
+  },
+  "034": {
+   "by": "29/09 C2 stream sweep (a): 159/159 chunks done, 7280902 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer),",
+   "other_lab_folders": [
+    "o24_dfs"
+   ],
+   "kind": "stream",
+   "y1_reps": 1225,
+   "done_records": 159,
+   "records_by_machine": {
+    "labpc": 159
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 1225,
+   "reps_covered_by_records_in_compute_repo": 1225,
+   "class": "A"
+  },
+  "035": {
+   "by": "29/09 C2 stream sweep (a): 12/12 chunks done, 1658601 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 499,
+   "done_records": 12,
+   "records_by_machine": {
+    "labpc": 12
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 499,
+   "reps_covered_by_records_in_compute_repo": 499,
+   "class": "A"
+  },
+  "036": {
+   "by": "29/09 C2 stream sweep (a): 15/15 chunks done, 2379274 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 672,
+   "done_records": 15,
+   "records_by_machine": {
+    "labpc": 15
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 672,
+   "reps_covered_by_records_in_compute_repo": 672,
+   "class": "A"
+  },
+  "037": {
+   "by": "29/09 C2 stream sweep (a): 18/18 chunks done, 1438751 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 409,
+   "done_records": 18,
+   "records_by_machine": {
+    "labpc": 18
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 409,
+   "reps_covered_by_records_in_compute_repo": 409,
+   "class": "A"
+  },
+  "038": {
+   "by": "29/09 C2 stream sweep (a): 42/42 chunks done, 4421657 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 1168,
+   "done_records": 42,
+   "records_by_machine": {
+    "labpc": 42
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 1168,
+   "reps_covered_by_records_in_compute_repo": 1168,
+   "class": "A"
+  },
+  "039": {
+   "by": "29/09 C2 stream sweep (a): 12/12 chunks done, 3948897 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 971,
+   "done_records": 12,
+   "records_by_machine": {
+    "labpc": 12
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 971,
+   "reps_covered_by_records_in_compute_repo": 971,
+   "class": "A"
+  },
+  "040": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1720526 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 434,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 434,
+   "reps_covered_by_records_in_compute_repo": 434,
+   "class": "A"
+  },
+  "041": {
+   "by": "29/09 C2 stream sweep (a): 22/22 chunks done, 4400394 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 1178,
+   "done_records": 22,
+   "records_by_machine": {
+    "labpc": 22
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 1178,
+   "reps_covered_by_records_in_compute_repo": 1178,
+   "class": "A"
+  },
+  "042": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 546423 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 169,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 169,
+   "reps_covered_by_records_in_compute_repo": 169,
+   "class": "A"
+  },
+  "043": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1051604 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 299,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 2,
+   "reps_covered": 299,
+   "reps_covered_by_records_in_compute_repo": 223,
+   "class": "B"
+  },
+  "044": {
+   "by": "29/09 C2 h-stage sweep (a): all 14496 pairs of gpairs_044 EXCLUDED (last 34 incl. hard pair 11781 with the 29/09 code: trap+EC+boundary points)",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "045": {
+   "by": "29/09 C2 stream sweep (a): 24/24 chunks done, 2340518 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 893,
+   "done_records": 24,
+   "records_by_machine": {
+    "labpc": 24
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 893,
+   "reps_covered_by_records_in_compute_repo": 893,
+   "class": "A"
+  },
+  "046": {
+   "by": "29/09 C2 stream sweep (a): 83/83 chunks done, 4087798 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 1417,
+   "done_records": 83,
+   "records_by_machine": {
+    "labpc": 83
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 1417,
+   "reps_covered_by_records_in_compute_repo": 1417,
+   "class": "A"
+  },
+  "047": {
+   "by": "29/09 C2 stream sweep (a): 10/10 chunks done, 1834000 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 663,
+   "done_records": 10,
+   "records_by_machine": {
+    "labpc": 10
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 663,
+   "reps_covered_by_records_in_compute_repo": 663,
+   "class": "A"
+  },
+  "048": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 301557 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 110,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 110,
+   "reps_covered_by_records_in_compute_repo": 96,
+   "class": "B"
+  },
+  "049": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 296093 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 196,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 1,
+   "reps_covered": 196,
+   "reps_covered_by_records_in_compute_repo": 146,
+   "class": "B"
+  },
+  "050": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1011185 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 526,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 1,
+   "reps_covered": 526,
+   "reps_covered_by_records_in_compute_repo": 460,
+   "class": "B"
+  },
+  "051": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 318627 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 230,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 4,
+   "reps_covered": 230,
+   "reps_covered_by_records_in_compute_repo": 57,
+   "class": "B"
+  },
+  "052": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 210503 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 119,
+   "done_records": 16,
+   "records_by_machine": {
+    "labpc": 16
+   },
+   "records_without_code_version": 2,
+   "reps_covered": 119,
+   "reps_covered_by_records_in_compute_repo": 74,
+   "class": "B"
+  },
+  "053": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1141132 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 590,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 590,
+   "reps_covered_by_records_in_compute_repo": 516,
+   "class": "B"
+  },
+  "054": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1186218 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 716,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 716,
+   "reps_covered_by_records_in_compute_repo": 626,
+   "class": "B"
+  },
+  "055": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 2118801 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 1062,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 1,
+   "reps_covered": 1062,
+   "reps_covered_by_records_in_compute_repo": 929,
+   "class": "B"
+  },
+  "056": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 802087 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 392,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 2,
+   "reps_covered": 392,
+   "reps_covered_by_records_in_compute_repo": 245,
+   "class": "B"
+  },
+  "057": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 854034 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 467,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 3,
+   "reps_covered": 467,
+   "reps_covered_by_records_in_compute_repo": 233,
+   "class": "B"
+  },
+  "058": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 368757 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 193,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 6,
+   "reps_covered": 193,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "059": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 2562400 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swa",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 1072,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 1072,
+   "reps_covered_by_records_in_compute_repo": 1072,
+   "class": "A"
+  },
+  "060": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 568181 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 401,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 401,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "061": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 560384 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 422,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 422,
+   "reps_covered_by_records_in_compute_repo": 210,
+   "class": "B"
+  },
+  "062": {
+   "by": "29/09 C2 stream sweep (a): 15/15 chunks done, 1043635 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), s",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 760,
+   "done_records": 15,
+   "records_by_machine": {
+    "labpc": 15
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 760,
+   "reps_covered_by_records_in_compute_repo": 760,
+   "class": "A"
+  },
+  "063": {
+   "by": "29/09 C2 stream sweep (a): 13/13 chunks done, 462316 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), sw",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "stream",
+   "y1_reps": 299,
+   "done_records": 13,
+   "records_by_machine": {
+    "labpc": 13
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 299,
+   "reps_covered_by_records_in_compute_repo": 299,
+   "class": "A"
+  },
+  "064": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 87520 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 80,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 80,
+   "reps_covered_by_records_in_compute_repo": 80,
+   "class": "A"
+  },
+  "065": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 170548 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 216,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 216,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "066": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 304034 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 319,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 319,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "067": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 559433 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 519,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 519,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "068": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 620319 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 622,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 622,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "069": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 64133 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 67,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 67,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "070": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 295716 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 330,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 2,
+   "reps_covered": 330,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "071": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 171216 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [],
+   "kind": "stream",
+   "y1_reps": 156,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 156,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "072": {
+   "by": "open | 28/09 evening C2: h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "073": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 161453 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 185,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 185,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "074": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 367327 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 513,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 6,
+   "reps_covered": 513,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "075": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 248990 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 330,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 330,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "076": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 52015 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 116,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 116,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "077": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 62031 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 122,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 122,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "078": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 103,280 ordered pairs: char-vector trap (Astra, norm-16 characteristic z, (z,y1)^2+(z,y2)^2<=66; witness per pair) +",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 224,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 224,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "079": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 100895 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 150,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 150,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "080": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 31122 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 64,
+   "done_records": 24,
+   "records_by_machine": {
+    "labpc": 24
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 64,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "081": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 154990 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 244,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 244,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "082": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 90976 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 162,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 162,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "083": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 166234 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 288,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 288,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "084": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 169401 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 362,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 362,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "085": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 38140 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 85,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 85,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "086": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 74583 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 130,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 130,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "087": {
+   "by": "C2 27/09 (computer, h-stage): frame_dfs (rigid mode) on ALL 3913 Gamma-reduced (y1,y2) pairs of C1 gpairs_087.json (conway99-c1 ca5dd2d, sha256 d4d8f150..., com",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud",
+    "ypairs_c2"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "088": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 107203 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 243,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 243,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "089": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 49570 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 109,
+   "done_records": 9,
+   "records_by_machine": {
+    "labpc": 9
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 109,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "090": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 60345 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 156,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 156,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "091": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 71608 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 205,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 205,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "092": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 67915 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 261,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 261,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "093": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 32952 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 128,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 128,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "094": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 84 > 80 new roots",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "095": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 144220 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 403,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 2,
+   "reps_covered": 403,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "096": {
+   "by": "open | 28/09 evening C2: h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "097": {
+   "by": "open | 28/09 evening C2: h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "098": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 82476 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 320,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 2,
+   "reps_covered": 320,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "099": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 93802 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 328,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 328,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "100": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 58356 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 378,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 378,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "101": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 62300 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 210,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 210,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "102": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 49692 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 298,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 298,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "103": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 17228 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 79,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 79,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "104": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 70108 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 288,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 288,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "105": {
+   "by": "29/09 C2 h-stage sweep (a): all 14169 pairs of gpairs_105 EXCLUDED (finished with the 29/09 frame_dfs) | 07/10 C2 (engine audit H4, H2): the 6,310 pairs exclude",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "106": {
+   "by": "29/09 C2 h-stage sweep (a): all 12,410 pairs of gpairs_106 (C1) EXCLUDED (u_ + c_ files in data/finishC/frame_dfs/106, every index checked)",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "107": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 49804 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/",
+   "other_lab_folders": [
+    "o24_cloud",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 276,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 276,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "108": {
+   "by": "open | 28/09 evening C2: h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "109": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 16386 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 110,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 110,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "110": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 6920 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/f",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 49,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 49,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "111": {
+   "by": "C2 27/09 21:45 (a) DONE (sweep-first): frame_dfs + C1 Lemma U+ on all 3992/3992 Gamma-reduced pairs of gpairs_111.json (sha256 4ca28044d792..., conway99-c1 ?): ",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "112": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 20846 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 184,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 184,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "113": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 12184 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 71,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 0,
+   "reps_covered": 71,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "114": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 19806 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 180,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 180,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "115": {
+   "by": "C1: 1472 Gamma-reduced pairs, rigid; structures 8b74348 frame LP 1470/1472 excluded with certificates, the 2 LP-feasible (1077, 1113) dead in C1 h-check; C2 fra",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "116": {
+   "by": "open | 28/09 evening C2: h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "117": {
+   "by": "C1 notes/139 s.2 criterion (E): D8 spinor cost 28 > 26; depends on Sol's theta theorems; independently packing (C1 envelope_pack.py 19af6fb, run + argument re-r",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "118": {
+   "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 11980 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/",
+   "other_lab_folders": [
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 114,
+   "done_records": 8,
+   "records_by_machine": {
+    "labpc": 8
+   },
+   "records_without_code_version": 8,
+   "reps_covered": 114,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "119": {
+   "by": "open | 28/09 evening C2: h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "120": {
+   "by": "open | 28/09 evening C2: h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "121": {
+   "by": "open | 28/09 evening C2: h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "122": {
+   "by": "C2 27/09 (a) DONE: frame_dfs + C1 Lemma U+ on all 4158 Gamma-reduced pairs (external_runs\\c1_pairs\\gpairs_122.json, sha256 896184379fc3...): every pair EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "123": {
+   "by": "C2 27/09 22:42 (a) DONE (sweep-first): frame_dfs + C1 Lemma U+ on all 3809/3809 Gamma-reduced pairs of gpairs_123.json (sha256 bf021e359247..., conway99-c1 ?): ",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "124": {
+   "by": "C2 27/09 (a) DONE: frame_dfs general mode + C1 Lemma U+ (notes/145; frame_dfs FD_LEMMA_U=1) on all 1286/1286 Gamma-reduced pairs (conway99-c1 ed0259f, Gamma = 4",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "125": {
+   "by": "C2 27/09 22:37 (a) DONE (sweep-first): frame_dfs + C1 Lemma U+ on all 2147/2147 Gamma-reduced pairs of gpairs_125.json (sha256 0a6c5a49cf65..., conway99-c1 357f",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "126": {
+   "by": "C2 27/09 (a) DONE: frame_dfs general mode + C1 Lemma U+ (notes/145; frame_dfs FD_LEMMA_U=1) on all 2084/2084 Gamma-reduced pairs (conway99-c1 2508108, Gamma = 2",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "127": {
+   "by": "open | 28/09 evening C2: h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "128": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 84 > 64 new roots",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "129": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 84 > 64 new roots",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "130": {
+   "by": "open | 28/09 evening C2: component-budget test (lattice level, exact integer check) + h-stage sweep (a): all pairs EXCLUDED",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "131": {
+   "by": "C2 27/09 (a) DONE: frame_dfs + C1 Lemma U+ (FD_LEMMA_U=1) on all 1257/1257 Gamma-reduced pairs of C1 external_runs/c1_pairs/gpairs_131.json (sha256 6e04d2447a01",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "132": {
+   "by": "C1 40b37bf: 304 Gamma-reduced (y1,y2) pairs (complete up to Aut(U) x signs), rigid, pair_h_check (fixed bitsets) finds no h-configuration for any; structures 85",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "133": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 168 > 128 new roots",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "134": {
+   "by": "C1 notes/139 s.2 criterion (E): 36 > 32; independently packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing-admissible trap: 9 short dua",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "135": {
+   "by": "C2 27/09 22:12 (a) DONE (sweep-first): frame_dfs + C1 Lemma U+ on all 464/464 Gamma-reduced pairs of gpairs_135.json (sha256 4e8030694f48..., conway99-c1 357f74",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "136": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 84 > 48 new roots",
+   "other_lab_folders": [
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "137": {
+   "by": "C2 27/09 22:20 (a) DONE (sweep-first): frame_dfs + C1 Lemma U+ on all 604/604 Gamma-reduced pairs of gpairs_137.json (sha256 f005dba54c5d..., conway99-c1 357f74",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "138": {
+   "by": "C2 27/09 (a) DONE: frame_dfs + C1 Lemma U+ (FD_LEMMA_U=1) on all 558/558 Gamma-reduced pairs of C1 external_runs/c1_pairs/gpairs_138.json (sha256 6801fbbdbd42..",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "139": {
+   "by": "C2 27/09 (a) DONE: frame_dfs + C1 Lemma U+ (FD_LEMMA_U=1) on all 504/504 Gamma-reduced pairs of C1 external_runs/c1_pairs/gpairs_139.json (sha256 28d91e8f1968..",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "140": {
+   "by": "C2 27/09 21:37 (a) DONE (sweep-first): frame_dfs + C1 Lemma U+ on all 288/288 Gamma-reduced pairs of gpairs_140.json (sha256 744a30d76556..., conway99-c1 ?): ev",
+   "other_lab_folders": [
+    "frame_dfs",
+    "o24_cloud"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "141": {
+   "by": "C2 27/09 21:15 (a) DONE (sweep-first): frame_dfs + C1 Lemma U+ on all 319/319 Gamma-reduced pairs of gpairs_141.json (sha256 6d86bedb188b..., conway99-c1 cd1ed2",
+   "other_lab_folders": [
+    "frame_dfs"
+   ],
+   "kind": "other lab records",
+   "class": "C"
+  },
+  "142": {
+   "by": "C1 notes/139 s.2 criterion (E): 45 > 38; independently packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 168 > ",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "143": {
+   "by": "open | 28/09 evening C2: component-budget test (lattice level, no pairs; MILP + exact integer enumeration agree; scripts/component_budget.py, exact_budget.py)",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "144": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 168 > 104 new roots",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "145": {
+   "by": "Sol 0836 D8^3; re-read C1 notes/139 (check_d8cube_trap.py); also packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing-admissible trap: 8",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "146": {
+   "by": "Sol 0836 D8^3; re-read C1 notes/139 (check_d8cube_trap.py); also packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing-admissible trap: 2",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "147": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 84 > 32 new roots",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "148": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 168 > 64 new roots",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "149": {
+   "by": "C2 27/09 (a) DONE: frame_dfs + C1 Lemma U+ (FD_LEMMA_U=1) on all 44/44 Gamma-reduced pairs of C1 external_runs/c1_pairs/gpairs_149.json (sha256 f549e6b44b0e...,",
+   "other_lab_folders": [
+    "frame_dfs",
+    "telemetry_backfill"
+   ],
+   "kind": "stream",
+   "y1_reps": 9,
+   "done_records": 2,
+   "records_by_machine": {
+    "labpc": 2
+   },
+   "records_without_code_version": 2,
+   "reps_covered": 9,
+   "reps_covered_by_records_in_compute_repo": 0,
+   "class": "B"
+  },
+  "150": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 168 > 64 new roots",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "151": {
+   "by": "Sol 0836 D>=12 (G18_G20_D12_COLLAGE); re-read C1 notes/139 s.3; also packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "152": {
+   "by": "Sol 0836 E8 (minuscule weight 0 => span E8 in N-perp); re-read C1 notes/139 s.2-3; also packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): pac",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "153": {
+   "by": "Sol 0836 D>=12; re-read C1 notes/139 s.3",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "154": {
+   "by": "packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 252 > 48 new roots",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  },
+  "155": {
+   "by": "Sol 0836 D>=12; re-read C1 notes/139 s.3; also packing (C1 envelope_pack.py 19af6fb, run + argument re-read by C2): packing: 42 smallest m sum to 672 > 128 new ",
+   "other_lab_folders": [],
+   "kind": "lattice-level argument",
+   "class": "D"
+  }
+ }
+}

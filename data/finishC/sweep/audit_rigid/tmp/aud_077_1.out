@@ -1,0 +1,1 @@
+{"id": 77, "chunk": [1, 8], "n_pairs": 59936, "stream_ok": true, "counts": {"setup_impossible": 0, "general": 59853, "rigid": 83, "with_zero_candidate": 59936, "exposed": 83}, "exposed_not_excluded_again": 0, "ok": true, "seconds": 144.5}

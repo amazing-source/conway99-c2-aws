@@ -1,0 +1,34 @@
+{
+ "id": 2,
+ "pairs_total": 718422,
+ "pair_files_sha256": "77aedb380a8419f773073c01e4271d264e4485742b7e2900364692b0f00dc054",
+ "records": 3769,
+ "state": {
+  "not_covered": 0,
+  "incomplete_or_other": 0,
+  "deferred_T20": 3594,
+  "deferred_T18": 6675,
+  "excluded": 708153
+ },
+ "lattice": {
+  "det": 1,
+  "roots_pm": 12,
+  "denominator": 1,
+  "scale": 8
+ },
+ "T18": {
+  "listed": 6675,
+  "certified": 6675
+ },
+ "T20": {
+  "listed": 3594,
+  "certified": 3594,
+  "also_T18": 0
+ },
+ "invalid": [],
+ "n_invalid": 0,
+ "ok": true,
+ "cert_golay_sha256": "f816fe56edbe5c69",
+ "seconds": 5.8,
+ "t": "2026-10-07 12:13:18"
+}

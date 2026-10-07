@@ -1,0 +1,30 @@
+{"id": "000", "verdict": "no roots: test empty"}
+{"id": "001", "roots": "a_1^8", "components": 8, "ranks": [1, 1, 1, 1, 1, 1, 1, 1], "rank_R": 8, "ntypes": {"u": 29, "h": 128}, "verdict": "feasible", "secs": 5.8}
+{"id": "002", "roots": "a_1^{12}", "components": 12, "ranks": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "rank_R": 12, "ntypes": {"u": 232, "h": 759}, "verdict": "feasible", "secs": 6.5}
+{"id": "003", "roots": "a_2^2a_1^{10}", "components": 12, "ranks": [1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1], "rank_R": 14, "ntypes": {"u": 167, "h": 880}, "verdict": "feasible", "secs": 6.4}
+{"id": "004", "roots": "a_1^{16}", "components": 16, "ranks": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "rank_R": 16, "ntypes": {"u": 120, "h": 715}, "verdict": "feasible", "secs": 8.7}
+{"id": "005", "roots": "a_2^4a_1^8", "components": 12, "ranks": [2, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 1], "rank_R": 16, "ntypes": {"u": 144, "h": 741}, "verdict": "feasible", "secs": 9.2}
+{"id": "006", "roots": "a_3^2a_1^{12}", "components": 14, "ranks": [1, 3, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1], "rank_R": 18, "ntypes": {"u": 79, "h": 440}, "verdict": "feasible", "secs": 7.7}
+{"id": "007", "roots": "a_3a_2^4a_1^6", "components": 11, "ranks": [2, 3, 2, 1, 1, 1, 1, 1, 2, 1, 2], "rank_R": 17, "ntypes": {"u": 99, "h": 525}, "verdict": "feasible", "secs": 6.4}
+{"id": "008", "roots": "a_2^8", "components": 8, "ranks": [2, 2, 2, 2, 2, 2, 2, 2], "rank_R": 16, "ntypes": {"u": 93, "h": 246}, "verdict": "feasible", "secs": 5.0}
+{"id": "009", "roots": "a_2^6a_1^6", "components": 12, "ranks": [2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 2], "rank_R": 18, "ntypes": {"u": 87, "h": 596}, "verdict": "feasible", "secs": 7.0}
+{"id": "010", "roots": "a_1^{24}", "components": 24, "ranks": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "rank_R": 24, "ntypes": {"u": 64, "h": 600}, "verdict": "feasible", "secs": 16.1}
+{"id": "011", "roots": "a_3^2a_2^4a_1^4", "components": 10, "ranks": [2, 2, 1, 2, 2, 3, 3, 1, 1, 1], "rank_R": 18, "ntypes": {"u": 78, "h": 397}, "verdict": "feasible", "secs": 7.3}
+{"id": "012", "roots": "a_2^8a_1^4", "components": 12, "ranks": [2, 1, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2], "rank_R": 20, "ntypes": {"u": 52, "h": 352}, "verdict": "feasible", "secs": 6.8}
+{"id": "013", "roots": "a_3^4a_2^2a_1^2", "components": 8, "ranks": [2, 3, 3, 1, 3, 3, 2, 1], "rank_R": 18, "ntypes": {"u": 59, "h": 264}, "verdict": "feasible", "secs": 5.0}
+{"id": "014", "roots": "a_4a_3a_2^4a_1^4", "components": 10, "ranks": [2, 3, 2, 1, 1, 2, 4, 1, 2, 1], "rank_R": 19, "ntypes": {"u": 59, "h": 334}, "verdict": "feasible", "secs": 6.1}
+{"id": "015", "roots": "a_3^2a_3a_2^4a_1^2", "components": 9, "ranks": [3, 1, 2, 2, 1, 2, 3, 2, 3], "rank_R": 19, "ntypes": {"u": 54, "h": 263}, "verdict": "feasible", "secs": 5.6}
+{"id": "016", "roots": "a_3^4a_1^4a_1^4", "components": 12, "ranks": [3, 3, 1, 3, 3, 1, 1, 1, 1, 1, 1, 1], "rank_R": 20, "ntypes": {"u": 48, "h": 244}, "verdict": "feasible", "secs": 6.5}
+{"id": "017", "roots": "a_3^4a_1^8", "components": 12, "ranks": [3, 3, 1, 1, 1, 1, 1, 3, 3, 1, 1, 1], "rank_R": 20, "ntypes": {"u": 48, "h": 221}, "verdict": "feasible", "secs": 6.7}
+{"id": "018", "roots": "a_4a_3^2a_3a_2^2a_1^2", "components": 8, "ranks": [4, 3, 1, 3, 2, 3, 2, 1], "rank_R": 19, "ntypes": {"u": 50, "h": 222}, "verdict": "feasible", "secs": 5.0}
+{"id": "019", "roots": "a_4^2a_2^4a_1^4", "components": 10, "ranks": [4, 2, 2, 2, 4, 2, 1, 1, 1, 1], "rank_R": 20, "ntypes": {"u": 44, "h": 243}, "verdict": "feasible", "secs": 5.7}
+{"id": "020", "roots": "a_3^6", "components": 6, "ranks": [3, 3, 3, 3, 3, 3], "rank_R": 18, "ntypes": {"u": 56, "h": 135}, "verdict": "feasible", "secs": 4.1}
+{"id": "021", "roots": "a_3^4a_2^4", "components": 8, "ranks": [2, 2, 3, 2, 2, 3, 3, 3], "rank_R": 20, "ntypes": {"u": 40, "h": 187}, "verdict": "feasible", "secs": 3.2}
+{"id": "022", "roots": "d_4a_4a_2^6", "components": 8, "ranks": [4, 2, 2, 4, 2, 2, 2, 2], "rank_R": 20, "ntypes": {"u": 38, "h": 148}, "verdict": "feasible", "secs": 3.2}
+{"id": "023", "roots": "d_4a_3^4a_1^4", "components": 9, "ranks": [3, 4, 1, 3, 3, 1, 3, 1, 1], "rank_R": 20, "ntypes": {"u": 35, "h": 157}, "verdict": "feasible", "secs": 3.6}
+{"id": "024", "roots": "a_5a_3^3a_1^6a_1", "components": 11, "ranks": [3, 1, 5, 3, 3, 1, 1, 1, 1, 1, 1], "rank_R": 21, "ntypes": {"u": 36, "h": 166}, "verdict": "feasible", "secs": 4.2}
+{"id": "025", "roots": "a_4^2a_3^2a_3a_1^2", "components": 7, "ranks": [3, 3, 4, 4, 3, 1, 1], "rank_R": 19, "ntypes": {"u": 42, "h": 167}, "verdict": "feasible", "secs": 3.1}
+{"id": "026", "roots": "a_5a_3^2a_2^4a_1", "components": 8, "ranks": [1, 3, 2, 3, 2, 5, 2, 2], "rank_R": 20, "ntypes": {"u": 35, "h": 150}, "verdict": "feasible", "secs": 3.2}
+{"id": "027", "roots": "d_4a_3^4a_1^4", "components": 9, "ranks": [3, 3, 1, 4, 3, 1, 3, 1, 1], "rank_R": 20, "ntypes": {"u": 36, "h": 138}, "verdict": "feasible", "secs": 3.3}
+{"id": "028", "roots": "d_4^2a_1^{16}", "components": 18, "ranks": [4, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "rank_R": 24, "ntypes": {"u": 40, "h": 257}, "verdict": "feasible", "secs": 5.6}
+{"id": "029", "roots": "a_4^2a_3^2a_2^2a_1^2", "components": 8, "ranks": [3, 2, 2, 3, 4, 4, 1, 1], "rank_R": 20, "ntypes": {"u": 37, "h": 179}, "verdict": "feasible", "secs": 3.2}

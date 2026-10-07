@@ -1,0 +1,70 @@
+{
+ "lattices": {
+  "016": {
+   "records_accepted": 486,
+   "pairs": 9661027,
+   "selected": 479,
+   "y1_reps": 479,
+   "not_covered": 0,
+   "covered_twice": 0,
+   "kind": "stream",
+   "twin_classes": 35,
+   "twin_pending": [],
+   "excl_at_once": 4851344,
+   "excl_search": 353773,
+   "twin": 500506,
+   "swap": 3955404,
+   "defer_T18": 0,
+   "defer_T20": 0,
+   "incomplete": 0,
+   "other": 0,
+   "state": "fully computed; twin classes not yet excluded: 0 of 35"
+  },
+  "013": {
+   "records_accepted": 999,
+   "pairs": 21063451,
+   "selected": 999,
+   "y1_reps": 1120,
+   "not_covered": 0,
+   "covered_twice": 0,
+   "kind": "stream",
+   "twin_classes": 35,
+   "twin_pending": [],
+   "excl_at_once": 10339279,
+   "excl_search": 910033,
+   "twin": 946396,
+   "swap": 8793030,
+   "defer_T18": 64761,
+   "defer_T20": 9952,
+   "incomplete": 0,
+   "other": 0,
+   "state": "swept; 64761 + 9952 pairs pending T18 / T20; twin classes not yet excluded: 0 of 35"
+  },
+  "012": {
+   "records_accepted": 26,
+   "pairs": 2624309,
+   "selected": 26,
+   "y1_reps": 102,
+   "not_covered": 0,
+   "covered_twice": 0,
+   "kind": "stream",
+   "twin_classes": 39,
+   "twin_pending": [
+    "((('A', 1), 2), (('A', 2), 2), (('A', 3), 4))",
+    "((('A', 1), 2), (('A', 2), 4), (('A', 3), 3))",
+    "((('A', 1), 4), (('A', 2), 4), (('A', 3), 1), (('A', 4), 1))",
+    "((('A', 1), 8), (('A', 3), 4))"
+   ],
+   "excl_at_once": 1244367,
+   "excl_search": 185244,
+   "twin": 202439,
+   "swap": 992259,
+   "defer_T18": 0,
+   "defer_T20": 0,
+   "incomplete": 0,
+   "other": 0,
+   "state": "fully computed; twin classes not yet excluded: 4 of 39"
+  }
+ },
+ "refused": []
+}

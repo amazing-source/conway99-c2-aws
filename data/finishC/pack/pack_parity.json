@@ -1,0 +1,1250 @@
+{
+"0": {
+"roots_type": "",
+"old": "survives",
+"new_min": 0,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"1": {
+"roots_type": "a_1^8",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"2": {
+"roots_type": "a_1^{12}",
+"old": "survives",
+"new_min": 24,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"3": {
+"roots_type": "a_2^2a_1^{10}",
+"old": "survives",
+"new_min": 40,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"4": {
+"roots_type": "a_1^{16}",
+"old": "survives",
+"new_min": 16,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"5": {
+"roots_type": "a_2^4a_1^8",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"6": {
+"roots_type": "a_3^2a_1^{12}",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"7": {
+"roots_type": "a_3a_2^4a_1^6",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"8": {
+"roots_type": "a_2^8",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"9": {
+"roots_type": "a_2^6a_1^6",
+"old": "survives",
+"new_min": 24,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"10": {
+"roots_type": "a_1^{24}",
+"old": "survives",
+"new_min": 0,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"11": {
+"roots_type": "a_3^2a_2^4a_1^4",
+"old": "survives",
+"new_min": 40,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"12": {
+"roots_type": "a_2^8a_1^4",
+"old": "survives",
+"new_min": 16,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"13": {
+"roots_type": "a_3^4a_2^2a_1^2",
+"old": "survives",
+"new_min": 56,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"14": {
+"roots_type": "a_4a_3a_2^4a_1^4",
+"old": "survives",
+"new_min": 56,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"15": {
+"roots_type": "a_3^2a_3a_2^4a_1^2",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"16": {
+"roots_type": "a_3^4a_1^4a_1^4",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"17": {
+"roots_type": "a_3^4a_1^8",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"18": {
+"roots_type": "a_4a_3^2a_3a_2^2a_1^2",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"19": {
+"roots_type": "a_4^2a_2^4a_1^4",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"20": {
+"roots_type": "a_3^6",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"21": {
+"roots_type": "a_3^4a_2^4",
+"old": "survives",
+"new_min": 24,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"22": {
+"roots_type": "d_4a_4a_2^6",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"23": {
+"roots_type": "d_4a_3^4a_1^4",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"24": {
+"roots_type": "a_5a_3^3a_1^6a_1",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"25": {
+"roots_type": "a_4^2a_3^2a_3a_1^2",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"26": {
+"roots_type": "a_5a_3^2a_2^4a_1",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"27": {
+"roots_type": "d_4a_3^4a_1^4",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"28": {
+"roots_type": "d_4^2a_1^{16}",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"29": {
+"roots_type": "a_4^2a_3^2a_2^2a_1^2",
+"old": "survives",
+"new_min": 40,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"30": {
+"roots_type": "a_3^4a_3^2a_1^4",
+"old": "survives",
+"new_min": 16,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"31": {
+"roots_type": "a_4^4a_1^4",
+"old": "survives",
+"new_min": 56,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"32": {
+"roots_type": "a_5a_4a_3a_3a_2a_2a_1",
+"old": "survives",
+"new_min": 56,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"33": {
+"roots_type": "a_4^2a_3^4",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"34": {
+"roots_type": "a_4^2a_4a_3a_2^2a_1^2",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"35": {
+"roots_type": "a_5a_4^3a_1^3",
+"old": "survives",
+"new_min": 72,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"36": {
+"roots_type": "a_5^2a_3^2a_2^2",
+"old": "survives",
+"new_min": 72,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"37": {
+"roots_type": "a_6a_3^3a_2^3",
+"old": "survives",
+"new_min": 72,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"38": {
+"roots_type": "d_4a_4^2a_4a_2^2",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"39": {
+"roots_type": "a_5d_4a_3^2a_3a_1^2a_1",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"40": {
+"roots_type": "a_5^2a_3^2a_1^2a_1^2a_1^2",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"41": {
+"roots_type": "a_5a_4^2a_3a_3a_1",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"42": {
+"roots_type": "d_4^2a_3^4",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"43": {
+"roots_type": "a_4^3a_3^3",
+"old": "survives",
+"new_min": 24,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"44": {
+"roots_type": "a_3^8",
+"old": "survives",
+"new_min": 0,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"45": {
+"roots_type": "a_5^2a_4^2a_1^2",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"46": {
+"roots_type": "a_6a_4a_4a_3a_2a_1a_1",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"47": {
+"roots_type": "a_5^2a_4a_3a_2^2",
+"old": "survives",
+"new_min": 40,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"48": {
+"roots_type": "a_4^4a_3^2",
+"old": "survives",
+"new_min": 16,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"49": {
+"roots_type": "d_5d_4a_3^4",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"50": {
+"roots_type": "d_5a_5a_3^2a_3a_1^2a_1",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"51": {
+"roots_type": "a_5^2d_4^2a_1^2",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"52": {
+"roots_type": "a_7a_3^4a_1^4",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"53": {
+"roots_type": "d_5a_4a_4^2a_2^2",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"54": {
+"roots_type": "a_6d_4a_4^2a_2",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"55": {
+"roots_type": "a_6a_5a_4a_3a_2a_1",
+"old": "survives",
+"new_min": 56,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"56": {
+"roots_type": "a_5^2d_4a_3^2a_1^2",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"57": {
+"roots_type": "a_5a_5a_4^2a_3",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"58": {
+"roots_type": "a_5^2d_4a_3^2a_1^2",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"59": {
+"roots_type": "d_4^4a_1^8",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"60": {
+"roots_type": "a_7a_4^2a_3^2",
+"old": "survives",
+"new_min": 72,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"61": {
+"roots_type": "a_6^2a_4a_3a_1^2",
+"old": "survives",
+"new_min": 72,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"62": {
+"roots_type": "a_6a_5a_5a_3a_2",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"63": {
+"roots_type": "a_6^2a_3^2a_2^2",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"64": {
+"roots_type": "a_5^4",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"65": {
+"roots_type": "a_7a_5^2a_2^2",
+"old": "survives",
+"new_min": 88,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"66": {
+"roots_type": "a_7a_5a_4^2a_1",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"67": {
+"roots_type": "a_7a_5d_4a_3a_1a_1a_1",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"68": {
+"roots_type": "a_6d_5a_4a_4a_2",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"69": {
+"roots_type": "d_5^2a_3^4",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"70": {
+"roots_type": "d_5a_5^2d_4a_1^2",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"71": {
+"roots_type": "a_5^2a_5d_4a_3a_1",
+"old": "survives",
+"new_min": 16,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"72": {
+"roots_type": "a_5^4a_1^4",
+"old": "survives",
+"new_min": 16,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"73": {
+"roots_type": "a_8a_4^2a_3^2",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"74": {
+"roots_type": "a_7a_6a_5a_2a_1",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"75": {
+"roots_type": "a_6a_6a_5a_4a_1",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"76": {
+"roots_type": "a_7^2d_4a_1^4",
+"old": "survives",
+"new_min": 96,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"77": {
+"roots_type": "d_6a_5^2a_3^2",
+"old": "survives",
+"new_min": 96,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"78": {
+"roots_type": "a_8a_5^2a_3",
+"old": "survives",
+"new_min": 96,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"79": {
+"roots_type": "d_6a_5^2a_3^2",
+"old": "survives",
+"new_min": 96,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"80": {
+"roots_type": "d_6d_4^3a_1^6",
+"old": "survives",
+"new_min": 96,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"81": {
+"roots_type": "a_7d_5a_5a_3a_1a_1a_1",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"82": {
+"roots_type": "d_5d_5a_5^2a_1^2",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"83": {
+"roots_type": "a_7d_5d_4a_3a_3",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"84": {
+"roots_type": "a_6a_6d_5a_4",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"85": {
+"roots_type": "d_5^2a_5^2a_1^2",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"86": {
+"roots_type": "a_6^2a_5^2",
+"old": "survives",
+"new_min": 24,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"87": {
+"roots_type": "d_4^6",
+"old": "survives",
+"new_min": 0,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"88": {
+"roots_type": "a_8a_6a_5a_2a_1",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"89": {
+"roots_type": "a_7^2a_4^2",
+"old": "survives",
+"new_min": 40,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"90": {
+"roots_type": "a_9a_5d_4a_3a_1a_1",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"91": {
+"roots_type": "a_7d_6a_5a_3a_1",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"92": {
+"roots_type": "a_8a_6d_5a_2",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"93": {
+"roots_type": "d_6d_5a_5^2",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"94": {
+"roots_type": "d_5^4",
+"old": "EXCLUDED (packing: 42 smallest m sum to 84 > 80 new roots)",
+"new_min": 80,
+"sum42_even": 84,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 84 > 80)"
+},
+"95": {
+"roots_type": "a_8a_7a_4a_3",
+"old": "survives",
+"new_min": 56,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"96": {
+"roots_type": "a_7d_5^2a_3^2",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"97": {
+"roots_type": "a_7^2d_4^2",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"98": {
+"roots_type": "a_8^2a_3^2",
+"old": "survives",
+"new_min": 72,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"99": {
+"roots_type": "a_9a_6a_5a_2",
+"old": "survives",
+"new_min": 72,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"100": {
+"roots_type": "a_7^3",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"101": {
+"roots_type": "d_7a_5^2a_5a_1",
+"old": "survives",
+"new_min": 112,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"102": {
+"roots_type": "a_9d_5^2a_1^2a_1",
+"old": "survives",
+"new_min": 112,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"103": {
+"roots_type": "a_7e_6d_4a_3^2",
+"old": "survives",
+"new_min": 112,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"104": {
+"roots_type": "e_6a_6^2a_4",
+"old": "survives",
+"new_min": 112,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"105": {
+"roots_type": "e_6d_5a_5^2a_1^2",
+"old": "survives",
+"new_min": 112,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"106": {
+"roots_type": "d_6^2d_4^2a_1^4",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"107": {
+"roots_type": "a_7^2d_6a_1^2",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"108": {
+"roots_type": "a_7^2d_5d_4",
+"old": "survives",
+"new_min": 16,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"109": {
+"roots_type": "a_{10}a_6a_5a_1",
+"old": "survives",
+"new_min": 104,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"110": {
+"roots_type": "a_8a_7^2",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"111": {
+"roots_type": "a_9^2a_2^2",
+"old": "survives",
+"new_min": 120,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"112": {
+"roots_type": "d_7a_7d_5a_3",
+"old": "survives",
+"new_min": 96,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"113": {
+"roots_type": "a_9d_6a_5a_3",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"114": {
+"roots_type": "a_9a_8a_5",
+"old": "survives",
+"new_min": 48,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"115": {
+"roots_type": "a_7^2d_5^2",
+"old": "survives",
+"new_min": 0,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"116": {
+"roots_type": "a_8^2a_7",
+"old": "survives",
+"new_min": 16,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"117": {
+"roots_type": "d_8d_4^4",
+"old": "EXCLUDED (packing-admissible trap: 8 short dual dims + 0 ort",
+"new_min": 128,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"118": {
+"roots_type": "a_9d_7a_5a_1a_1",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"119": {
+"roots_type": "a_{11}d_5d_4a_3",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"120": {
+"roots_type": "a_9a_7d_6a_1",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"121": {
+"roots_type": "a_9a_7d_6a_1",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"122": {
+"roots_type": "d_6^2d_6d_4a_1^2",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"123": {
+"roots_type": "a_{11}a_8a_3",
+"old": "survives",
+"new_min": 96,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"124": {
+"roots_type": "d_8a_7^2",
+"old": "survives",
+"new_min": 112,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"125": {
+"roots_type": "a_{11}d_6a_5a_1",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"126": {
+"roots_type": "a_{10}e_6a_6",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"127": {
+"roots_type": "d_7a_7e_6a_3",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"128": {
+"roots_type": "a_9e_6d_6a_1",
+"old": "EXCLUDED (packing: 42 smallest m sum to 84 > 64 new roots)",
+"new_min": 64,
+"sum42_even": 84,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 84 > 64)"
+},
+"129": {
+"roots_type": "e_6^2d_5^2",
+"old": "EXCLUDED (packing: 42 smallest m sum to 84 > 64 new roots)",
+"new_min": 64,
+"sum42_even": 84,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 84 > 64)"
+},
+"130": {
+"roots_type": "a_{12}a_7a_4",
+"old": "survives",
+"new_min": 80,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"131": {
+"roots_type": "d_8d_6^2a_1^2a_1^2",
+"old": "survives",
+"new_min": 96,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"132": {
+"roots_type": "d_6^4",
+"old": "survives",
+"new_min": 0,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"133": {
+"roots_type": "a_{13}d_6a_3a_1",
+"old": "EXCLUDED (packing: 42 smallest m sum to 168 > 128 new roots)",
+"new_min": 128,
+"sum42_even": 168,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 168 > 128)"
+},
+"134": {
+"roots_type": "d_9a_7^2",
+"old": "EXCLUDED (packing-admissible trap: 9 short dual dims + 0 ort",
+"new_min": 128,
+"sum42_even": 84,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"135": {
+"roots_type": "a_{11}d_7d_5",
+"old": "survives",
+"new_min": 32,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"136": {
+"roots_type": "a_{11}^2",
+"old": "EXCLUDED (packing: 42 smallest m sum to 84 > 48 new roots)",
+"new_min": 48,
+"sum42_even": 84,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 84 > 48)"
+},
+"137": {
+"roots_type": "a_9e_7a_7",
+"old": "survives",
+"new_min": 160,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"138": {
+"roots_type": "e_7d_6d_6d_4a_1",
+"old": "survives",
+"new_min": 160,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"139": {
+"roots_type": "d_8^2d_4^2",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"140": {
+"roots_type": "a_{11}d_9a_3",
+"old": "survives",
+"new_min": 96,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"141": {
+"roots_type": "a_{12}a_{11}",
+"old": "survives",
+"new_min": 24,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"142": {
+"roots_type": "d_{10}d_6^2a_1^2",
+"old": "EXCLUDED (packing: 42 smallest m sum to 168 > 128 new roots)",
+"new_min": 128,
+"sum42_even": 168,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 168 > 128)"
+},
+"143": {
+"roots_type": "a_{15}a_8",
+"old": "survives",
+"new_min": 72,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"144": {
+"roots_type": "a_{16}a_7",
+"old": "EXCLUDED (packing: 42 smallest m sum to 168 > 104 new roots)",
+"new_min": 104,
+"sum42_even": 168,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 168 > 104)"
+},
+"145": {
+"roots_type": "d_8^2d_8",
+"old": "EXCLUDED (packing-admissible trap: 8 short dual dims + 0 ort",
+"new_min": 0,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"146": {
+"roots_type": "d_8^3",
+"old": "EXCLUDED (packing-admissible trap: 24 short dual dims + 0 or",
+"new_min": 0,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"147": {
+"roots_type": "a_{15}d_8",
+"old": "EXCLUDED (packing: 42 smallest m sum to 84 > 32 new roots)",
+"new_min": 32,
+"sum42_even": 84,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 84 > 32)"
+},
+"148": {
+"roots_type": "a_{15}e_7a_1",
+"old": "EXCLUDED (packing: 42 smallest m sum to 168 > 64 new roots)",
+"new_min": 64,
+"sum42_even": 168,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 168 > 64)"
+},
+"149": {
+"roots_type": "d_{10}e_7d_6a_1",
+"old": "survives",
+"new_min": 64,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"150": {
+"roots_type": "d_8e_7^2a_1^2",
+"old": "EXCLUDED (packing: 42 smallest m sum to 168 > 64 new roots)",
+"new_min": 64,
+"sum42_even": 168,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 168 > 64)"
+},
+"151": {
+"roots_type": "d_{12}d_8d_4",
+"old": "EXCLUDED (packing: 42 smallest m sum to 336 > 128 new roots)",
+"new_min": 128,
+"sum42_even": 336,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 336 > 128)"
+},
+"152": {
+"roots_type": "e_8d_8^2",
+"old": "EXCLUDED (packing: 42 smallest m sum to 672 > 256 new roots)",
+"new_min": 256,
+"sum42_even": 672,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 672 > 256)"
+},
+"153": {
+"roots_type": "d_{12}^2",
+"old": "survives",
+"new_min": 0,
+"sum42_even": 0,
+"odd_m_lines": 0,
+"verdict": "survives"
+},
+"154": {
+"roots_type": "a_{23}",
+"old": "EXCLUDED (packing: 42 smallest m sum to 252 > 48 new roots)",
+"new_min": 48,
+"sum42_even": 252,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 252 > 48)"
+},
+"155": {
+"roots_type": "d_{16}d_8",
+"old": "EXCLUDED (packing: 42 smallest m sum to 672 > 128 new roots)",
+"new_min": 128,
+"sum42_even": 672,
+"odd_m_lines": 0,
+"verdict": "EXCLUDED (parity packing: 42 smallest even m sum to 672 > 128)"
+}
+}

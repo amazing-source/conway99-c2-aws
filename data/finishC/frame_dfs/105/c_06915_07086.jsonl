@@ -1,0 +1,171 @@
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.85, "dfs": 0.0, "stage2": 0.0}, "k": 6915, "secs_total": 0.85}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.45, "dfs": 0.0, "stage2": 0.0}, "k": 6916, "secs_total": 0.45}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.1, "dfs": 0.0, "stage2": 0.0}, "k": 6917, "secs_total": 1.1}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.48, "dfs": 0.0, "stage2": 0.0}, "k": 6918, "secs_total": 0.48}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.47, "dfs": 0.0, "stage2": 0.0}, "k": 6919, "secs_total": 0.47}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.48, "dfs": 0.0, "stage2": 0.0}, "k": 6920, "secs_total": 0.48}
+{"nH": 5354, "nW": 365, "points": 112, "yhits": 48, "flex": 64, "nodes": [1, 1462, 7260, 37620, 30240, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 0.7, "dfs": 4.1, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 6921, "secs_total": 4.85}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.45, "dfs": 0.0, "stage2": 0.0}, "k": 6922, "secs_total": 0.45}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.55, "dfs": 0.0, "stage2": 0.0}, "k": 6923, "secs_total": 0.55}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.52, "dfs": 0.0, "stage2": 0.0}, "k": 6924, "secs_total": 0.52}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.42, "dfs": 0.0, "stage2": 0.0}, "k": 6925, "secs_total": 0.42}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.42, "dfs": 0.0, "stage2": 0.0}, "k": 6926, "secs_total": 0.42}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.44, "dfs": 0.0, "stage2": 0.0}, "k": 6927, "secs_total": 0.44}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.42, "dfs": 0.0, "stage2": 0.0}, "k": 6928, "secs_total": 0.42}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.46, "dfs": 0.0, "stage2": 0.0}, "k": 6929, "secs_total": 0.46}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.43, "dfs": 0.0, "stage2": 0.0}, "k": 6930, "secs_total": 0.43}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.45, "dfs": 0.0, "stage2": 0.0}, "k": 6931, "secs_total": 0.46}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.44, "dfs": 0.0, "stage2": 0.0}, "k": 6932, "secs_total": 0.44}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.41, "dfs": 0.0, "stage2": 0.0}, "k": 6933, "secs_total": 0.41}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.42, "dfs": 0.0, "stage2": 0.0}, "k": 6934, "secs_total": 0.42}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.45, "dfs": 0.0, "stage2": 0.0}, "k": 6935, "secs_total": 0.45}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.93, "dfs": 0.0, "stage2": 0.0}, "k": 6936, "secs_total": 0.93}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.48, "dfs": 0.0, "stage2": 0.0}, "k": 6937, "secs_total": 0.48}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.53, "dfs": 0.0, "stage2": 0.0}, "k": 6938, "secs_total": 0.54}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.57, "dfs": 0.0, "stage2": 0.0}, "k": 6939, "secs_total": 0.57}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.75, "dfs": 0.0, "stage2": 0.0}, "k": 6940, "secs_total": 1.75}
+{"nH": 5245, "nW": 345, "points": 112, "yhits": 36, "flex": 76, "nodes": [1, 1424, 22278, 146260, 278652, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 2.6, "dfs": 1.4, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 6941, "secs_total": 3.98}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.84, "dfs": 0.0, "stage2": 0.0}, "k": 6942, "secs_total": 0.84}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.0, "dfs": 0.0, "stage2": 0.0}, "k": 6943, "secs_total": 1.01}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.01, "dfs": 0.0, "stage2": 0.0}, "k": 6944, "secs_total": 2.01}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.78, "dfs": 0.0, "stage2": 0.0}, "k": 6945, "secs_total": 0.78}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.73, "dfs": 0.0, "stage2": 0.0}, "k": 6946, "secs_total": 0.73}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.47, "dfs": 0.0, "stage2": 0.0}, "k": 6947, "secs_total": 0.47}
+{"nH": 5266, "nW": 371, "points": 112, "yhits": 36, "flex": 76, "nodes": [1, 1471, 21836, 132284, 59328, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 0.9, "dfs": 0.3, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 6948, "secs_total": 1.15}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.6, "dfs": 0.0, "stage2": 0.0}, "k": 6949, "secs_total": 0.6}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.25, "dfs": 0.0, "stage2": 0.0}, "k": 6950, "secs_total": 1.25}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.44, "dfs": 0.0, "stage2": 0.0}, "k": 6951, "secs_total": 2.44}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.56, "dfs": 0.0, "stage2": 0.0}, "k": 6952, "secs_total": 1.56}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.49, "dfs": 0.0, "stage2": 0.0}, "k": 6953, "secs_total": 1.49}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.43, "dfs": 0.0, "stage2": 0.0}, "k": 6954, "secs_total": 1.44}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.46, "dfs": 0.0, "stage2": 0.0}, "k": 6955, "secs_total": 1.46}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.52, "dfs": 0.0, "stage2": 0.0}, "k": 6956, "secs_total": 1.52}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.99, "dfs": 0.0, "stage2": 0.0}, "k": 6957, "secs_total": 2.99}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.21, "dfs": 0.0, "stage2": 0.0}, "k": 6958, "secs_total": 2.21}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.98, "dfs": 0.0, "stage2": 0.0}, "k": 6959, "secs_total": 1.98}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.13, "dfs": 0.0, "stage2": 0.0}, "k": 6960, "secs_total": 2.13}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.1, "dfs": 0.0, "stage2": 0.0}, "k": 6961, "secs_total": 2.1}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.86, "dfs": 0.0, "stage2": 0.0}, "k": 6962, "secs_total": 1.86}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 4.34, "dfs": 0.0, "stage2": 0.0}, "k": 6963, "secs_total": 4.34}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.98, "dfs": 0.0, "stage2": 0.0}, "k": 6964, "secs_total": 1.98}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.8, "dfs": 0.0, "stage2": 0.0}, "k": 6965, "secs_total": 1.8}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 3.52, "dfs": 0.0, "stage2": 0.0}, "k": 6966, "secs_total": 3.52}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.4, "dfs": 0.0, "stage2": 0.0}, "k": 6967, "secs_total": 0.4}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.49, "dfs": 0.0, "stage2": 0.0}, "k": 6968, "secs_total": 0.49}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.69, "dfs": 0.0, "stage2": 0.0}, "k": 6969, "secs_total": 0.69}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.71, "dfs": 0.0, "stage2": 0.0}, "k": 6970, "secs_total": 0.71}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.43, "dfs": 0.0, "stage2": 0.0}, "k": 6971, "secs_total": 0.44}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.43, "dfs": 0.0, "stage2": 0.0}, "k": 6972, "secs_total": 0.43}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.47, "dfs": 0.0, "stage2": 0.0}, "k": 6973, "secs_total": 0.47}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.45, "dfs": 0.0, "stage2": 0.0}, "k": 6974, "secs_total": 0.45}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.41, "dfs": 0.0, "stage2": 0.0}, "k": 6975, "secs_total": 0.41}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.57, "dfs": 0.0, "stage2": 0.0}, "k": 6976, "secs_total": 0.57}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.66, "dfs": 0.0, "stage2": 0.0}, "k": 6977, "secs_total": 0.67}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.47, "dfs": 0.0, "stage2": 0.0}, "k": 6978, "secs_total": 0.47}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.41, "dfs": 0.0, "stage2": 0.0}, "k": 6979, "secs_total": 0.41}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.46, "dfs": 0.0, "stage2": 0.0}, "k": 6980, "secs_total": 0.46}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.43, "dfs": 0.0, "stage2": 0.0}, "k": 6981, "secs_total": 0.43}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.45, "dfs": 0.0, "stage2": 0.0}, "k": 6982, "secs_total": 0.45}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.48, "dfs": 0.0, "stage2": 0.0}, "k": 6983, "secs_total": 0.48}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.47, "dfs": 0.0, "stage2": 0.0}, "k": 6984, "secs_total": 0.47}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.41, "dfs": 0.0, "stage2": 0.0}, "k": 6985, "secs_total": 0.41}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 5.03, "dfs": 0.0, "stage2": 0.0}, "k": 6986, "secs_total": 5.03}
+{"nH": 5284, "nW": 412, "points": 112, "yhits": 36, "flex": 76, "nodes": [1, 1476, 38618, 254296, 156768, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 2.9, "dfs": 2.6, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 6987, "secs_total": 5.55}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.07, "dfs": 0.0, "stage2": 0.0}, "k": 6988, "secs_total": 2.07}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.64, "dfs": 0.0, "stage2": 0.0}, "k": 6989, "secs_total": 2.65}
+{"nH": 5252, "nW": 354, "points": 112, "yhits": 36, "flex": 76, "nodes": [1, 1458, 21542, 130852, 62784, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 2.3, "dfs": 0.5, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 6990, "secs_total": 2.77}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.4, "dfs": 0.0, "stage2": 0.0}, "k": 6991, "secs_total": 0.4}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.44, "dfs": 0.0, "stage2": 0.0}, "k": 6992, "secs_total": 0.44}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.38, "dfs": 0.0, "stage2": 0.0}, "k": 6993, "secs_total": 0.38}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.47, "dfs": 0.0, "stage2": 0.0}, "k": 6994, "secs_total": 0.48}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.46, "dfs": 0.0, "stage2": 0.0}, "k": 6995, "secs_total": 0.46}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.44, "dfs": 0.0, "stage2": 0.0}, "k": 6996, "secs_total": 0.44}
+{"nH": 5295, "nW": 328, "points": 112, "yhits": 44, "flex": 68, "nodes": [1, 1476, 12478, 71824, 15648, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 0.7, "dfs": 0.1, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 6997, "secs_total": 0.79}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.16, "dfs": 0.0, "stage2": 0.0}, "k": 6998, "secs_total": 1.16}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.52, "dfs": 0.0, "stage2": 0.0}, "k": 6999, "secs_total": 0.52}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.66, "dfs": 0.0, "stage2": 0.0}, "k": 7000, "secs_total": 0.66}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.68, "dfs": 0.0, "stage2": 0.0}, "k": 7001, "secs_total": 0.68}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.44, "dfs": 0.0, "stage2": 0.0}, "k": 7002, "secs_total": 0.44}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.38, "dfs": 0.0, "stage2": 0.0}, "k": 7003, "secs_total": 0.38}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.37, "dfs": 0.0, "stage2": 0.0}, "k": 7004, "secs_total": 0.37}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.44, "dfs": 0.0, "stage2": 0.0}, "k": 7005, "secs_total": 0.44}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.91, "dfs": 0.0, "stage2": 0.0}, "k": 7006, "secs_total": 2.91}
+{"nH": 5295, "nW": 328, "points": 112, "yhits": 44, "flex": 68, "nodes": [1, 1476, 12478, 71756, 15600, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 2.2, "dfs": 0.4, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7007, "secs_total": 2.63}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.5, "dfs": 0.0, "stage2": 0.0}, "k": 7008, "secs_total": 1.5}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.53, "dfs": 0.0, "stage2": 0.0}, "k": 7009, "secs_total": 1.53}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.43, "dfs": 0.0, "stage2": 0.0}, "k": 7010, "secs_total": 1.43}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.9, "dfs": 0.0, "stage2": 0.0}, "k": 7011, "secs_total": 1.9}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.68, "dfs": 0.0, "stage2": 0.0}, "k": 7012, "secs_total": 1.68}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.83, "dfs": 0.0, "stage2": 0.0}, "k": 7013, "secs_total": 1.83}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.92, "dfs": 0.0, "stage2": 0.0}, "k": 7014, "secs_total": 1.92}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.84, "dfs": 0.0, "stage2": 0.0}, "k": 7015, "secs_total": 1.84}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.93, "dfs": 0.0, "stage2": 0.0}, "k": 7016, "secs_total": 1.93}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.05, "dfs": 0.0, "stage2": 0.0}, "k": 7017, "secs_total": 2.05}
+{"nH": 5271, "nW": 337, "points": 112, "yhits": 44, "flex": 68, "nodes": [1, 1383, 3235, 3300, 0, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 2.8, "dfs": 0.1, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7018, "secs_total": 2.97}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.68, "dfs": 0.0, "stage2": 0.0}, "k": 7019, "secs_total": 1.68}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.55, "dfs": 0.0, "stage2": 0.0}, "k": 7020, "secs_total": 1.55}
+{"nH": 5235, "nW": 319, "points": 112, "yhits": 44, "flex": 68, "nodes": [1, 1438, 17158, 83760, 86400, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 2.6, "dfs": 1.1, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7021, "secs_total": 3.71}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.26, "dfs": 0.0, "stage2": 0.0}, "k": 7022, "secs_total": 2.26}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.05, "dfs": 0.0, "stage2": 0.0}, "k": 7023, "secs_total": 2.05}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.88, "dfs": 0.0, "stage2": 0.0}, "k": 7024, "secs_total": 1.88}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.08, "dfs": 0.0, "stage2": 0.0}, "k": 7025, "secs_total": 2.08}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.88, "dfs": 0.0, "stage2": 0.0}, "k": 7026, "secs_total": 1.88}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.67, "dfs": 0.0, "stage2": 0.0}, "k": 7027, "secs_total": 1.67}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.69, "dfs": 0.0, "stage2": 0.0}, "k": 7028, "secs_total": 1.69}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.25, "dfs": 0.0, "stage2": 0.0}, "k": 7029, "secs_total": 1.25}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.41, "dfs": 0.0, "stage2": 0.0}, "k": 7030, "secs_total": 0.42}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.42, "dfs": 0.0, "stage2": 0.0}, "k": 7031, "secs_total": 0.42}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.46, "dfs": 0.0, "stage2": 0.0}, "k": 7032, "secs_total": 0.46}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.45, "dfs": 0.0, "stage2": 0.0}, "k": 7033, "secs_total": 0.45}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.42, "dfs": 0.0, "stage2": 0.0}, "k": 7034, "secs_total": 0.42}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.41, "dfs": 0.0, "stage2": 0.0}, "k": 7035, "secs_total": 0.41}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.48, "dfs": 0.0, "stage2": 0.0}, "k": 7036, "secs_total": 0.48}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.43, "dfs": 0.0, "stage2": 0.0}, "k": 7037, "secs_total": 0.44}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.04, "dfs": 0.0, "stage2": 0.0}, "k": 7038, "secs_total": 1.04}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.46, "dfs": 0.0, "stage2": 0.0}, "k": 7039, "secs_total": 0.46}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.47, "dfs": 0.0, "stage2": 0.0}, "k": 7040, "secs_total": 0.47}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.49, "dfs": 0.0, "stage2": 0.0}, "k": 7041, "secs_total": 0.49}
+{"nH": 5313, "nW": 392, "points": 112, "yhits": 36, "flex": 76, "nodes": [1, 1483, 16674, 65352, 47520, 51840, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 0.6, "dfs": 0.4, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7042, "secs_total": 1.02}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.41, "dfs": 0.0, "stage2": 0.0}, "k": 7043, "secs_total": 0.41}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.38, "dfs": 0.0, "stage2": 0.0}, "k": 7044, "secs_total": 0.38}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.4, "dfs": 0.0, "stage2": 0.0}, "k": 7045, "secs_total": 0.4}
+{"nH": 5182, "nW": 325, "points": 112, "yhits": 48, "flex": 64, "nodes": [1, 1185, 14102, 135360, 0, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 0.6, "dfs": 0.2, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7046, "secs_total": 0.73}
+{"nH": 5267, "nW": 379, "points": 112, "yhits": 46, "flex": 66, "nodes": [1, 1387, 1015, 0, 0, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 1.7, "dfs": 0.0, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7047, "secs_total": 1.7}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.44, "dfs": 0.0, "stage2": 0.0}, "k": 7048, "secs_total": 0.44}
+{"nH": 5306, "nW": 347, "points": 112, "yhits": 40, "flex": 72, "nodes": [1, 1377, 26535, 61920, 4320, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 0.6, "dfs": 0.1, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7049, "secs_total": 0.73}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.43, "dfs": 0.0, "stage2": 0.0}, "k": 7050, "secs_total": 0.43}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 0.42, "dfs": 0.0, "stage2": 0.0}, "k": 7051, "secs_total": 0.43}
+{"nH": 5325, "nW": 362, "points": 112, "yhits": 40, "flex": 72, "nodes": [1, 1396, 9174, 43040, 23040, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 5.8, "dfs": 0.5, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7052, "secs_total": 6.32}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.75, "dfs": 0.0, "stage2": 0.0}, "k": 7053, "secs_total": 1.75}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.0, "dfs": 0.0, "stage2": 0.0}, "k": 7054, "secs_total": 2.0}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.7, "dfs": 0.0, "stage2": 0.0}, "k": 7055, "secs_total": 1.7}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.78, "dfs": 0.0, "stage2": 0.0}, "k": 7056, "secs_total": 1.78}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.82, "dfs": 0.0, "stage2": 0.0}, "k": 7057, "secs_total": 1.82}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.84, "dfs": 0.0, "stage2": 0.0}, "k": 7058, "secs_total": 1.84}
+{"nH": 5331, "nW": 409, "points": 112, "yhits": 34, "flex": 78, "nodes": [1, 1482, 120, 0, 0, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 4.3, "dfs": 0.2, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7059, "secs_total": 4.47}
+{"nH": 5310, "nW": 399, "points": 112, "yhits": 30, "flex": 82, "nodes": [1, 1458, 35022, 254852, 156528, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 3.1, "dfs": 2.9, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7060, "secs_total": 6.02}
+{"nH": 5310, "nW": 399, "points": 112, "yhits": 30, "flex": 82, "nodes": [1, 1458, 35022, 255806, 158688, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 3.4, "dfs": 3.8, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7061, "secs_total": 7.2}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.11, "dfs": 0.0, "stage2": 0.0}, "k": 7062, "secs_total": 2.11}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.96, "dfs": 0.0, "stage2": 0.0}, "k": 7063, "secs_total": 1.96}
+{"nH": 5166, "nW": 386, "points": 112, "yhits": 28, "flex": 84, "nodes": [1, 1434, 30975, 367432, 383760, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 8.0, "dfs": 6.6, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7064, "secs_total": 14.57}
+{"nH": 5207, "nW": 384, "points": 112, "yhits": 28, "flex": 84, "nodes": [1, 1453, 39205, 191573, 212832, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 3.7, "dfs": 4.2, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7065, "secs_total": 7.88}
+{"nH": 5263, "nW": 384, "points": 112, "yhits": 34, "flex": 78, "nodes": [1, 1457, 18708, 0, 0, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 6.8, "dfs": 0.3, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7066, "secs_total": 7.07}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.65, "dfs": 0.0, "stage2": 0.0}, "k": 7067, "secs_total": 1.65}
+{"nH": 5207, "nW": 384, "points": 112, "yhits": 28, "flex": 84, "nodes": [1, 1453, 39205, 194988, 217152, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 2.8, "dfs": 3.5, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7068, "secs_total": 6.33}
+{"nH": 5166, "nW": 386, "points": 112, "yhits": 28, "flex": 84, "nodes": [1, 1434, 30975, 366901, 383184, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 8.2, "dfs": 5.5, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7069, "secs_total": 13.7}
+{"nH": 5263, "nW": 384, "points": 112, "yhits": 34, "flex": 78, "nodes": [1, 1457, 18708, 0, 0, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 5.3, "dfs": 0.1, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7070, "secs_total": 5.46}
+{"nH": 5331, "nW": 409, "points": 112, "yhits": 34, "flex": 78, "nodes": [1, 1482, 120, 0, 0, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 4.1, "dfs": 0.1, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7071, "secs_total": 4.23}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.77, "dfs": 0.0, "stage2": 0.0}, "k": 7072, "secs_total": 1.77}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.72, "dfs": 0.0, "stage2": 0.0}, "k": 7073, "secs_total": 1.72}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.85, "dfs": 0.0, "stage2": 0.0}, "k": 7074, "secs_total": 1.85}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.69, "dfs": 0.0, "stage2": 0.0}, "k": 7075, "secs_total": 1.7}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.88, "dfs": 0.0, "stage2": 0.0}, "k": 7076, "secs_total": 1.89}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 2.24, "dfs": 0.0, "stage2": 0.0}, "k": 7077, "secs_total": 2.24}
+{"nH": 5229, "nW": 349, "points": 112, "yhits": 32, "flex": 80, "nodes": [1, 1448, 19794, 168620, 159456, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 8.1, "dfs": 2.9, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7078, "secs_total": 10.97}
+{"nH": 5206, "nW": 357, "points": 112, "yhits": 32, "flex": 80, "nodes": [1, 1442, 22244, 178956, 213408, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 3.4, "dfs": 2.8, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7079, "secs_total": 6.37}
+{"nH": 5287, "nW": 379, "points": 112, "yhits": 38, "flex": 74, "nodes": [1, 1423, 2472, 0, 0, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 8.2, "dfs": 0.0, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7080, "secs_total": 8.2}
+{"nH": 5197, "nW": 349, "points": 112, "yhits": 36, "flex": 76, "nodes": [1, 1444, 13186, 91164, 28224, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 2.5, "dfs": 0.8, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7081, "secs_total": 3.36}
+{"nH": 5277, "nW": 377, "points": 112, "yhits": 36, "flex": 76, "nodes": [1, 1476, 14652, 94752, 103248, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 5.5, "dfs": 1.2, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7082, "secs_total": 6.71}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 7.26, "dfs": 0.0, "stage2": 0.0}, "k": 7083, "secs_total": 7.26}
+{"nH": 5192, "nW": 385, "points": 112, "yhits": 34, "flex": 78, "nodes": [1, 1434, 19042, 179702, 96480, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 3.0, "dfs": 1.2, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 7084, "secs_total": 4.22}
+{"verdict": "EXCLUDED (pair budget)", "complete": true, "secs": {"setup": 1.63, "dfs": 0.0, "stage2": 0.0}, "k": 7085, "secs_total": 1.63}

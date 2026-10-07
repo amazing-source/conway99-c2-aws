@@ -1,0 +1,1 @@
+{"nH": 6514, "nW": 224, "points": 96, "yhits": 32, "flex": 0, "nodes": [1, 1224, 18928, 29952, 0, 0, 0, 0], "complete": true, "counts": {"leaves": 0, "lemmaZ": 0, "local_star_sums": 0, "joint_star_sums": 0, "frame": 0}, "secs": {"setup": 0.4, "dfs": 0.1, "stage2": 0.0}, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "k": 3912, "secs_total": 0.53}

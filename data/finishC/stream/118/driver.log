@@ -1,0 +1,22 @@
+04:18:56 no portable Gamma for 118: stop
+05:05:40 plan: {"rank": 23, "components": 5, "label_vectors": 1840, "dominant_y1": 114, "id": 118, "roots": "a_9d_7a_5a_1a_1", "gamma": 1, "y1_orbits": 114, "gamma_verified": true, "gamma_converted": false} 
+05:05:40 lattice 118: 8 chunks, 0 done, gamma 118/gamma_identity_118.json (sha fce2402f2a06), plan sha 229ffe9baf3e, conway99-c1 888e731
+05:05:40 chunk 0/8 started
+05:07:36 lattice 118: 8 chunks, 0 done, gamma 118/gamma_identity_118.json (sha fce2402f2a06), plan sha 229ffe9baf3e, conway99-c1 888e731
+05:07:36 chunk 0/8 started
+05:16:10 chunk 0/8 finished (producer exit 0, consumer exit 0)
+05:16:10 chunk 1/8 started
+05:28:00 chunk 1/8 finished (producer exit 0, consumer exit 0)
+05:28:00 chunk 2/8 started
+05:33:02 chunk 2/8 finished (producer exit 0, consumer exit 0)
+05:33:02 chunk 3/8 started
+05:34:47 chunk 3/8 finished (producer exit 0, consumer exit 0)
+05:34:47 chunk 4/8 started
+05:36:33 chunk 4/8 finished (producer exit 0, consumer exit 0)
+05:36:33 chunk 5/8 started
+05:38:48 chunk 5/8 finished (producer exit 0, consumer exit 0)
+05:38:48 chunk 6/8 started
+05:41:04 chunk 6/8 finished (producer exit 0, consumer exit 0)
+05:41:04 chunk 7/8 started
+05:43:19 chunk 7/8 finished (producer exit 0, consumer exit 0)
+05:43:34 lattice 118: 8/8 chunks done, 11980 pairs in done chunks

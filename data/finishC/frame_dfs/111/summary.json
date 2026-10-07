@@ -1,0 +1,65 @@
+{
+ "id": 111,
+ "pairs_file": "external_runs\\c1_pairs\\gpairs_111.json",
+ "pairs_sha256": "4ca28044d79218a987b48ac5370d6dffc04752a89f0662887d9ac71aa33f1c1c",
+ "n_pairs": 3992,
+ "missing": [],
+ "verdicts": {
+  "EXCLUDED (stage 1 empty: no 7 h)": 3992
+ },
+ "split": {
+  "37": {
+   "parts": 2,
+   "complete": true,
+   "leaves": 0,
+   "frame": 0,
+   "nodes": [
+    2,
+    1240,
+    6272,
+    940800,
+    43537824,
+    389776656,
+    0,
+    0
+   ]
+  }
+ },
+ "lemma_U_plus": true,
+ "node_limit": 200000000,
+ "slowest": [
+  [
+   460.81,
+   37
+  ],
+  [
+   153.7,
+   107
+  ],
+  [
+   141.4,
+   2417
+  ],
+  [
+   121.44,
+   52
+  ],
+  [
+   120.11,
+   55
+  ],
+  [
+   110.37,
+   101
+  ],
+  [
+   99.55,
+   163
+  ],
+  [
+   93.67,
+   142
+  ]
+ ],
+ "wall_secs": 9552.1
+}

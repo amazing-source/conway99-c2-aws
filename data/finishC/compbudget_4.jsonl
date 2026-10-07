@@ -1,0 +1,20 @@
+{"id": "080", "roots": "d_6d_4^3a_1^6", "components": 10, "ranks": [6, 1, 4, 4, 1, 4, 1, 1, 1, 1], "rank_R": 24, "ntypes": {"u": 15, "h": 62}, "verdict": "feasible", "secs": 6.3}
+{"id": "081", "roots": "a_7d_5a_5a_3a_1a_1a_1", "components": 7, "ranks": [5, 5, 3, 1, 1, 7, 1], "rank_R": 23, "ntypes": {"u": 10, "h": 34}, "verdict": "feasible", "secs": 4.3}
+{"id": "082", "roots": "d_5d_5a_5^2a_1^2", "components": 6, "ranks": [5, 5, 5, 5, 1, 1], "rank_R": 22, "ntypes": {"u": 13, "h": 40}, "verdict": "feasible", "secs": 30.5}
+{"id": "083", "roots": "a_7d_5d_4a_3a_3", "components": 5, "ranks": [5, 3, 3, 7, 4], "rank_R": 22, "ntypes": {"u": 11, "h": 36}, "verdict": "feasible", "secs": 19.1}
+{"id": "084", "roots": "a_6a_6d_5a_4", "components": 4, "ranks": [5, 6, 4, 6], "rank_R": 21, "ntypes": {"u": 15, "h": 38}, "verdict": "feasible", "secs": 6.5}
+{"id": "085", "roots": "d_5^2a_5^2a_1^2", "components": 6, "ranks": [5, 5, 5, 5, 1, 1], "rank_R": 22, "ntypes": {"u": 11, "h": 38}, "verdict": "feasible", "secs": 36.4}
+{"id": "086", "roots": "a_6^2a_5^2", "components": 4, "ranks": [6, 5, 5, 6], "rank_R": 22, "ntypes": {"u": 11, "h": 30}, "verdict": "feasible", "secs": 4.7}
+{"id": "088", "roots": "a_8a_6a_5a_2a_1", "components": 5, "ranks": [5, 2, 8, 6, 1], "rank_R": 22, "ntypes": {"u": 11, "h": 31}, "verdict": "feasible", "secs": 26.1}
+{"id": "089", "roots": "a_7^2a_4^2", "components": 4, "ranks": [4, 7, 7, 4], "rank_R": 22, "ntypes": {"u": 10, "h": 26}, "verdict": "feasible", "secs": 11.7}
+{"id": "090", "roots": "a_9a_5d_4a_3a_1a_1", "components": 6, "ranks": [5, 4, 1, 3, 9, 1], "rank_R": 23, "ntypes": {"u": 8, "h": 26}, "verdict": "feasible", "secs": 23.3}
+{"id": "091", "roots": "a_7d_6a_5a_3a_1", "components": 5, "ranks": [5, 3, 6, 7, 1], "rank_R": 22, "ntypes": {"u": 11, "h": 30}, "verdict": "feasible", "secs": 10.8}
+{"id": "092", "roots": "a_8a_6d_5a_2", "components": 4, "ranks": [5, 6, 8, 2], "rank_R": 21, "ntypes": {"u": 14, "h": 31}, "verdict": "feasible", "secs": 4.8}
+{"id": "093", "roots": "d_6d_5a_5^2", "components": 4, "ranks": [5, 5, 6, 5], "rank_R": 21, "ntypes": {"u": 12, "h": 31}, "verdict": "feasible", "secs": 12.4}
+{"id": "095", "roots": "a_8a_7a_4a_3", "components": 4, "ranks": [8, 7, 3, 4], "rank_R": 22, "ntypes": {"u": 11, "h": 27}, "verdict": "feasible", "secs": 9.7}
+{"id": "096", "roots": "a_7d_5^2a_3^2", "components": 5, "ranks": [5, 3, 7, 5, 3], "rank_R": 23, "ntypes": {"u": 6, "h": 23}, "verdict": "feasible", "secs": 3.4}
+{"id": "097", "roots": "a_7^2d_4^2", "components": 4, "ranks": [7, 4, 4, 7], "rank_R": 22, "ntypes": {"u": 7, "h": 21}, "verdict": "feasible", "secs": 2.9}
+{"id": "098", "roots": "a_8^2a_3^2", "components": 4, "ranks": [8, 3, 3, 8], "rank_R": 22, "ntypes": {"u": 10, "h": 23}, "verdict": "feasible", "secs": 19.4}
+{"id": "099", "roots": "a_9a_6a_5a_2", "components": 4, "ranks": [5, 2, 9, 6], "rank_R": 22, "ntypes": {"u": 10, "h": 23}, "verdict": "feasible", "secs": 5.6}
+{"id": "100", "roots": "a_7^3", "components": 3, "ranks": [7, 7, 7], "rank_R": 21, "ntypes": {"u": 13, "h": 21}, "verdict": "feasible", "secs": 12.3}
+{"id": "101", "roots": "d_7a_5^2a_5a_1", "components": 5, "ranks": [5, 7, 5, 1, 5], "rank_R": 23, "ntypes": {"u": 8, "h": 20}, "verdict": "feasible", "secs": 7.4}

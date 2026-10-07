@@ -1,0 +1,23 @@
+19:10:27 lattice 074: 4 chunks, 0 done, gamma gamma_ps/gamma_074.json (sha ba3998bf0f6a), plan sha 9eace2f1a12d, conway99-c1 472456e
+19:10:27 chunk 0/4 started
+19:10:27 chunk 1/4 started
+20:21:44 lattice 074: 8 chunks, 0 done, gamma gamma_ps/gamma_074.json (sha ba3998bf0f6a), plan sha 9eace2f1a12d, conway99-c1 472456e
+20:21:44 chunk 0/8 started
+20:21:45 chunk 1/8 started
+03:01:58 lattice 074: 8 chunks, 0 done, gamma gamma_ps/gamma_074.json (sha ba3998bf0f6a), plan sha 9eace2f1a12d, conway99-c1 472456e
+03:01:58 chunk 0/8 started
+05:05:32 chunk 0/8 finished (producer exit 0, consumer exit 0)
+05:05:32 chunk 1/8 started
+06:55:12 chunk 1/8 finished (producer exit 0, consumer exit 0)
+06:55:12 chunk 2/8 started
+07:59:22 chunk 2/8 finished (producer exit 0, consumer exit 0)
+07:59:22 chunk 3/8 started
+09:09:28 chunk 3/8 finished (producer exit 0, consumer exit 0)
+09:09:28 chunk 4/8 started
+10:13:48 chunk 4/8 finished (producer exit 0, consumer exit 0)
+10:13:48 chunk 5/8 started
+11:44:23 chunk 5/8 finished (producer exit 0, consumer exit 0)
+11:44:23 chunk 6/8 started
+12:27:24 chunk 6/8 finished (producer exit 0, consumer exit 0)
+12:27:24 chunk 7/8 started
+run_chunk 7/8 finished (producer 0, consumer 0)

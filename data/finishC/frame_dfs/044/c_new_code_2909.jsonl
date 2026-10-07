@@ -1,0 +1,34 @@
+{"k": 11781, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 411, 12706, 26390, 1510, 124, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11782, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 255, 7634, 9374, 342, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11783, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 328, 228, 472, 678, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11784, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11785, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 251, 1569, 1540, 1093, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11786, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 328, 228, 472, 684, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11787, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 255, 7643, 9292, 378, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11788, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11789, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11790, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 247, 7785, 24002, 5516, 96, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11791, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11792, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 340, 11090, 22584, 928, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11793, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 1670, 33505, 29153, 5208, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11794, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 147, 4135, 5699, 1275, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11795, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 141, 4387, 5969, 3044, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11796, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11797, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 214, 4409, 2544, 138, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11798, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 259, 1163, 968, 110, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11799, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 212, 1059, 489, 30, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11800, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 242, 906, 840, 98, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11801, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11802, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11803, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 153, 3818, 7735, 6268, 936, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11804, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11805, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 147, 4135, 5474, 1369, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11806, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11807, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11808, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11809, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 262, 1145, 1336, 441, 140, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11810, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 259, 1593, 1923, 1703, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11811, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 316, 2034, 2470, 600, 12, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11812, "verdict": "EXCLUDED (stage 1 empty: no 7 h)", "nodes": [1, 152, 1881, 2851, 92, 0, 0, 0], "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11813, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}
+{"k": 11814, "verdict": "EXCLUDED (char-vector trap)", "nodes": null, "code": "frame_dfs 29/09 (trap+EC+16 boundary pts)"}

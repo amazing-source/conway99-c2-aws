@@ -1,0 +1,4 @@
+04:18:58 lattice 053: 8 chunks, 0 done, gamma gamma_ps/gamma_053.json (sha 0743083c61cc), plan sha a367d3596f92, conway99-c1 472456e
+04:18:58 chunk 0/8 started
+11:22:19 chunk 0/8 finished (producer exit 4294967295, consumer exit 4294967295)
+11:22:19 chunk 1/8 started
