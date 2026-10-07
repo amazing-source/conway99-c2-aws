@@ -1,4 +1,4 @@
-# Route (C): the final statement and what it rests on — DRAFT 5 of 2026-10-07, state at 15:37 UTC (clock of the lab PC)
+# Route (C): the final statement and what it rests on — DRAFT 6 of 2026-10-07, state at 15:47 UTC (clock of the lab PC)
 
 Lab session (Claude). Board line D5 of `lemma/T20_BOARD.md` (compute repo). This is a recheck by AI sessions, not a human referee
 and not a formal proof.
@@ -27,7 +27,7 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 | R5 | T16: no eigenfunction of squared norm 16 (rule "norm-3 x with Y = 13") | `lemma/T16_PROOF.md` + dossier of 04/10 | refereed by Codex on 07/10: no blocking error (one defect in the dossier's verifier, covered by a stronger recheck) |
 | R6 | T18: squared norm 18 | `lemma/T18_PROOF.md` | proved and refereed twice per the laptop session; not reread by me |
 | R7 | T20: squared norm 20 | `lemma/T20_PROOF.md` | section 3 |
-| R8 | Bridge and witnesses: norm 3 with Y = 13 (E = 8); root with Y = 5 (E = 9); root with Y = 4 or norm-4 vector with (+-3, +-3) (E = 10). These rules are complete for E <= 10 (hand remark of 07/10) | `lemma/BRIDGE.md`; certificates `q/cert_stream.py`, `cert_golay.py` | Golay 001 / 002: 17,983 pairs certified, 0 invalid. Stream: **7,760 of 7,762 records have a good certificate** (same stream sha256, ok, as many certified pairs as deferred ones: 5,179,506 pending T18, 2,501,531 pending T20), 0 certificate not good, 5 records certified twice and agreeing; the two last records are running (`scripts/cloud/cert_census.py`) |
+| R8 | Bridge and witnesses: norm 3 with Y = 13 (E = 8); root with Y = 5 (E = 9); root with Y = 4 or norm-4 vector with (+-3, +-3) (E = 10). These rules are complete for E <= 10 (hand remark of 07/10) | `lemma/BRIDGE.md`; certificates `q/cert_stream.py`, `cert_golay.py` | Golay 001 / 002: 17,983 pairs certified, 0 invalid. Stream: **7,762 of 7,762 records have a good certificate** (15:46; same stream sha256, ok, as many certified pairs as deferred ones: 5,179,532 pending T18, 2,501,532 pending T20; with the Golay pairs these are the 5,190,752 and 2,508,295 deferred pairs), 0 certificate not good, 5 records certified twice and agreeing (`scripts/cloud/cert_census.py`, `measures/CERT_CENSUS_2026-10-07.json`) |
 | R8' | Corollary Y1 (Codex, 07/10): with T18 and T20, every root has \|(r,y_1)\| <= 1 and \|(r,y_2)\| <= 1; so a y_1 with a root r, (r,y_1) = +-2, hosts no frame **whatever y_2** (E(r) = 10 - (r,y_2)^2) | `lemma/BRIDGE.md` Corollary Y1; `lemma/t20_CODEX/FIXED_Y1_003.md` | three-line proof, reread by the lab and by the laptop session. Used for ONE y_1 representative, 003:181 (the only one of the campaign without a record): two certificates by two authors (`q/cert_y1.py`, Codex's `CERT_003_FIXED_Y1.json`), two standalone exact checkers, negative controls rejected. 96 of the 182 y_1 representatives of 003 have such a root; the 95 others keep their records |
 | R9 | Coverage of the 156 lattices | section 4 | - |
 
@@ -84,9 +84,9 @@ Twin deferrals: 1,622 dependencies between the 104 stream lattices, no cycle (OK
 
 The 13 open lattices: all swept. 5,190,752 pairs pending T18 and 2,508,295 pending T20; no INCOMPLETE pair; one y_1
 representative, 003:181, carries no pair record and is covered by the fixed-y1 certificate (pending T18 and T20, like every deferred
-pair). Dry run of the conversion at 15:10 with the real certificates: **153 if T18 and T20 were accepted today** (003 and 006 wait for
-one certificate each, 005 for 006 through a twin class); 156 with the two last certificates. Nothing is written in the tracker:
-`lemmas_accepted.json` does not exist.
+pair). Dry run of the conversion at 15:47 with all the real certificates: **156 of 156 if T18 and T20 are accepted**; without
+that assumption every one of the 13 is blocked by "T18 / T20 not accepted" and by nothing else. Nothing is written in the tracker:
+`lemmas_accepted.json` does not exist yet.
 
 Provenance of the records of the 143 excluded lattices (recensement of 07/10, `measures/RECONCILE_RECORDS_2026-10-07.json`, script
 `q/tools/lab_2026-10-07/reconcile_records.py`; it locates records, it re-derives nothing):
@@ -105,7 +105,7 @@ is; not a certified archive). The user decided on 07/10 not to re-run the lab-lo
 1. ~~T20: archival G1~~ done at 15:26 per the laptop session (`lemma/ARTIFACTS_T18_T20.md`: one line per computation of T16 / T18 / T20, program versions, run branches; raw outputs of n_3 = 2 on the branch `lemma-archive/t20_n3_routeB`). Not reviewed by me or by Codex; the page says itself that the machines did not record the commit they cloned (versions inferred from launch times). Left in the text of T20: G2 (wording of the verifier contract).
 2. ~~Rigid-kernel audit H2~~ done: 25 of 25 lattices (15:36).
 3. ~~143~~ done: hand proof refereed by Codex (accepted).
-4. The two last stream certificates (003:162:182, 006:224:228). Done: 7,760 of 7,762.
+4. ~~Stream certificates~~ done: 7,762 of 7,762 (15:46).
 5. ~~003:181:182~~ done at 15:00 without computation (Corollary Y1 and its certificates).
 6. Pair enumeration (R3): 140, 135 and 141 equal; 064, the one whose roots do not span (a_5^4, rank 20), is running.
 7. Then: `data/finishC/lemmas_accepted.json` written with the references of T18 and T20 (T16 is already a rule of the engine),
