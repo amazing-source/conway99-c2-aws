@@ -73,6 +73,8 @@ if [ -n "${Q_TAIL_KEYS:-}" ]; then                                            # 
   .venv/bin/python "$REPO/q/qtail.py" > "$HOME/qtail.out" 2>&1; RC=$?
 elif [ "${Q_CERT:-}" = "1" ]; then                                          # 07/10: certificate runner for the DEFERRED pairs (q/qcert.py, lab session)
   .venv/bin/python "$REPO/q/qcert.py" > "$HOME/qcert.out" 2>&1; RC=$?
+elif [ "${Q_AUDIT:-}" = "1" ]; then                                         # 07/10: rigid-kernel audit runner (q/qaudit.py, lab session; hole H2)
+  .venv/bin/python "$REPO/q/qaudit.py" > "$HOME/qaudit.out" 2>&1; RC=$?
 else
   .venv/bin/python "$REPO/q/qagent.py" run; RC=$?
 fi

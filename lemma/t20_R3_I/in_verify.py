@@ -17,6 +17,9 @@
 #          re-enumerates the configurations of N(p) (n_3 = 0) by another method (rectangles first, tested by a
 #          count on the graph S u {p} u pairs; then the X_1 types as a graph with prescribed degrees; full count on
 #          35 vertices), reduces them under Aut(B) (own computation); "merge" compares with the stage-1 file.
+# step 1, branch n_3 = 2 (X_3 = {z, sigma z} of type (U3 ; V3) in the base, 37 vertices):
+#          python in_verify.py basesz <graph> <h2> <h1> <h0> <a,b,c:d,e,f> <out prefix>_<i>of<n>.json part=i/n
+#          python in_verify.py mergez <stage1.json> <out prefix> <n> [<follow prefix>]
 # step 2:  python in_verify.py follow <stage1.json> <stage2 prefix> <part> <nparts> <out prefix>_<part>of<nparts>.json [first=K] [every=E] [sub=j/m]
 #          for the bases of that part: re-traverses the search tree of eng6.  The unit treated at each node is read
 #          from the plan stored in the jsonl file (the choice of the unit is not part of the proof); ALL candidates
@@ -410,6 +413,304 @@ def step_merge(s1file, prefix, nparts, follow_prefix):
             not missing and nb == len(s1["bases"]) and tot.get("complete", 1) == 0))
 
 
+# ------------------------------------------------------------------ step 1, branch n_3 = 2
+
+def orbit_counts_batch(A0, sig, R):
+    """EXACT (int64).  A0: a sigma-invariant graph without budget violation; R: rows (one per candidate) = the
+    neighbourhood, inside A0, of a new vertex s not adjacent to its mate sigma s (whose row is the image under sigma).
+    True where A0 + {s, sigma s} has a pair of vertices with more than 2 - [adjacent] common neighbours.  Such a pair
+    is: (s, old v): (R A0)_v + R_v > 2;  (s, sigma s): R . (R o sigma) > 2;  two old vertices u, v of N(s) with
+    C_uv + A_uv + 1 + [both in N(sigma s)] > 2 (C = A0^2);  the pairs containing sigma s are the images of these."""
+    CA = A0 @ A0 + A0
+    Q1 = (CA >= 2).astype(np.int64); np.fill_diagonal(Q1, 0)
+    Q2 = (CA >= 1).astype(np.int64); np.fill_diagonal(Q2, 0)
+    RS = R[:, np.array(sig)]
+    bad = ((R @ A0 + R) > 2).any(1)
+    bad |= (R * RS).sum(1) > 2
+    bad |= ((R @ Q1) * R).sum(1) > 0
+    T = R * RS
+    bad |= ((T @ Q2) * T).sum(1) > 0
+    return bad
+
+
+def zkey_image(items, g, swap):
+    """items: list of (type, zp), type = ("A", U, V) with U < V, ("W", i, k) with i < k, or ("Z",);
+    zp = 0 (no neighbour of the pair is adjacent to z), 1 (the first vertex of the pair is: the one adjacent to x_U
+    resp. x_i), 2 (the second one).  Image under the relabelling g of the indices; swap = 1 when z and sigma z are
+    renamed (g exchanges U3 and V3).  The two vertices of a Z pair are interchangeable: zp is 0 or 1 there."""
+    out = []
+    for tp, zp in items:
+        flip = False
+        if tp[0] == "A":
+            U = tuple(sorted(g[i] for i in tp[1])); V = tuple(sorted(g[i] for i in tp[2]))
+            if U > V:
+                U, V = V, U
+                flip = True
+            tp2 = ("A", U, V)
+        elif tp[0] == "W":
+            i, k = g[tp[1]], g[tp[2]]
+            if i > k:
+                i, k = k, i
+                flip = True
+            tp2 = ("W", i, k)
+        else:
+            tp2 = ("Z",)
+        z2 = zp
+        if zp and tp[0] != "Z" and (flip != bool(swap)):
+            z2 = 3 - zp
+        if tp[0] == "Z" and zp:
+            z2 = 1
+        out.append((tp2, z2))
+    return tuple(sorted(out))
+
+
+def zgroup(B, U3, V3):
+    G = []
+    for g in automorphisms(B):
+        gu = tuple(sorted(g[i] for i in U3)); gv = tuple(sorted(g[i] for i in V3))
+        if (gu, gv) == (U3, V3):
+            G.append((g, 0))
+        if (gu, gv) == (V3, U3):
+            G.append((g, 1))
+    return G
+
+
+def zkey(items, G):
+    return min(zkey_image(items, g, sw) for g, sw in G)
+
+
+def step_bases_z(name, h2, h1, h0, U3, V3, outfile, part, nparts):
+    """Branch n_3 = 2.  All configurations of N(p) whose first rectangle has rank = part mod nparts, tested by exact
+    counts on S u {p, z, sigma z} u pairs with z not yet attached (a spanning subgraph of the true graph: the
+    counts are upper bounds there).  A configuration passing the count on the 37 vertices is treated if it is the
+    smallest of its images under G_z (elements of Aut(B) preserving {U3, V3}).  Then every choice of N(z) n N(p) =
+    two vertices of two different pairs (84 choices): exact count on the complete 37-vertex graph, the hand filter
+    a_2(z) <= 1 (not two vertices of A pairs), exact PSD test.  The kept bases are written as canonical keys."""
+    t0 = time.time()
+    B = load_B(name)
+    A21 = support21(B)
+    defi = deficient(B)
+    G = zgroup(B, U3, V3)
+    dl = sorted(defi)
+    rects = [(U, V) for U in dl for V in dl if U < V and not set(U) & set(V)]
+    nb = 37
+    sig37 = sigma(37)
+    ZV, SZV = 35, 36
+
+    def start(n):
+        A = np.zeros((n, n), dtype=np.int64)
+        A[:21, :21] = A21
+        return A
+
+    def put_z(A, zv, szv):
+        for i in U3:
+            A[zv, i] = A[i, zv] = 1; A[szv, 10 + i] = A[10 + i, szv] = 1
+        for i in V3:
+            A[zv, 10 + i] = A[10 + i, zv] = 1; A[szv, i] = A[i, szv] = 1
+    chk = start(23)
+    put_z(chk, 21, 22)
+    assert not budget_violation(chk), "the type of z fails the count on S u {p, z, sigma z}"
+    res = {"rect_sets": 0, "coverage": 0, "pass37": 0, "reps": 0, "osum": 0, "attach": 0, "att_budget": 0,
+           "att_hand_a2z": 0, "att_psd": 0, "kept": 0, "batches": 0, "recounts": 0}
+    sig35 = sigma(35)
+    ATT = [(a_, b_) for a_ in range(14) for b_ in range(a_ + 1, 14) if a_ // 2 != b_ // 2]
+    ZROW = np.zeros(35, dtype=np.int64)
+    for i in U3:
+        ZROW[i] = 1
+    for i in V3:
+        ZROW[10 + i] = 1
+    keys = {}
+
+    def cfg_only_image(cfg, g):
+        return tuple(sorted(tp for tp, zp in zkey_image([(tp, 0) for tp in cfg], g, 0)))
+
+    def treat(cfg):
+        c = tuple(sorted(cfg))
+        imgs = set(cfg_only_image(cfg, g) for g, sw in G)
+        if c != min(imgs):
+            return
+        res["reps"] += 1
+        res["osum"] += len(imgs)
+        full = list(c) + [("Z",)] * h0
+        A35 = start(35)
+        for t, tp in enumerate(full):
+            add_pair(A35, t, tp)
+        A = start(37)
+        A[:35, :35] = A35
+        put_z(A, ZV, SZV)
+        isA = [tp[0] == "A" for tp in full]
+        R = np.zeros((len(ATT), 35), dtype=np.int64)
+        for q, (a_, b_) in enumerate(ATT):
+            R[q, :] = ZROW
+            R[q, 21 + a_] = 1
+            R[q, 21 + b_] = 1
+        bad = orbit_counts_batch(A35, sig35, R)
+        res["attach"] += len(ATT)
+        res["att_budget"] += int(bad.sum())
+        res["batches"] += 1
+        check = [int(q) for q in np.flatnonzero(~bad)]
+        if res["batches"] % 20 == 0:
+            check += [res["batches"] % len(ATT), (7 * res["batches"]) % len(ATT)]
+        for q in sorted(set(check)):              # explicit recount on the complete 37-vertex graph
+            a_, b_ = ATT[q]
+            A2 = A.copy()
+            for w in (21 + a_, 21 + b_):
+                A2[ZV, w] = A2[w, ZV] = 1
+                A2[SZV, sig37[w]] = A2[sig37[w], SZV] = 1
+            assert budget_violation(A2) == bool(bad[q]), "batch count differs from the explicit recount"
+            res["recounts"] += 1
+            if bad[q]:
+                continue
+            if isA[a_ // 2] and isA[b_ // 2]:
+                res["att_hand_a2z"] += 1          # hand: a_2(z) <= 1
+                continue
+            if psd_rejected(A2, sig37):
+                res["att_psd"] += 1
+                continue
+            res["kept"] += 1
+            items = [(tp, (1 + (a_ % 2) if a_ // 2 == t else 1 + (b_ % 2) if b_ // 2 == t else 0))
+                     for t, tp in enumerate(full)]
+            k = zkey(items, G)
+            keys[k] = keys.get(k, 0) + 1
+
+    def finish(rs, cov):
+        need = [2 - c for c in cov]
+        if sum(need) != 2 * h1:
+            return
+
+        def wrec(es, nd, li, lk):
+            if len(es) == h1:
+                if not any(nd):
+                    res["coverage"] += 1
+                    cfg = [("A", U, V) for (U, V) in rs] + [("W", i, k) for (i, k) in es]
+                    A = start(37)
+                    for t, tp in enumerate(cfg):
+                        add_pair(A, t, tp)
+                    for t in range(len(cfg), 7):
+                        add_pair(A, t, ("Z",))
+                    put_z(A, ZV, SZV)
+                    if not budget_violation(A):
+                        res["pass37"] += 1
+                        treat(cfg)
+                return
+            i = next((j for j in range(10) if nd[j]), None)
+            if i is None:
+                return
+            for k in range(i + 1, 10):
+                if i == li and k <= lk:
+                    continue
+                if nd[k]:
+                    nd[i] -= 1; nd[k] -= 1
+                    wrec(es + [(i, k)], nd, i, k)
+                    nd[i] += 1; nd[k] += 1
+        wrec([], need, -1, -1)
+
+    def rrec(startidx, rs, cov):
+        if len(rs) == h2:
+            finish(rs, cov)
+            return
+        for a in range(startidx, len(rects)):
+            if not rs and a % nparts != part:
+                continue
+            U, V = rects[a]
+            if any(cov[i] >= 2 for i in U + V):
+                continue
+            rs2 = rs + [(U, V)]
+            res["rect_sets"] += 1
+            n = 23 + 2 * len(rs2)
+            A = start(n)
+            for t, (U_, V_) in enumerate(rs2):
+                add_pair(A, t, ("A", U_, V_))
+            put_z(A, n - 2, n - 1)
+            if budget_violation(A):
+                continue
+            for i in U + V:
+                cov[i] += 1
+            rrec(a + 1, rs2, cov)
+            for i in U + V:
+                cov[i] -= 1
+    rrec(0, [], [0] * 10)
+    out = {"graph": name, "profile": [h2, h1, h0], "ztype": [list(U3), list(V3)], "part": part, "nparts": nparts,
+           "group_order": len(G), "counts": res, "keys": [[repr(k), v] for k, v in sorted(keys.items())],
+           "certificates": {"integer_vector": NCERT[0], "exact_elimination": NCERT[1]},
+           "seconds": round(time.time() - t0, 1)}
+    json.dump(out, open(outfile, "w"))
+    print("part %d of %d: %s   [%.0f s]" % (part, nparts, res, time.time() - t0))
+
+
+def step_merge_z(s1file, prefix, nparts, follow_prefix):
+    s1 = json.load(open(s1file))
+    name = s1["graph"]
+    h2, h1, h0 = s1["profile"]
+    U3, V3 = (tuple(t) for t in s1["ztype"])
+    B = load_B(name)
+    G = zgroup(B, U3, V3)
+    parts = [json.load(open("%s_%dof%d.json" % (prefix, i, nparts))) for i in range(nparts)]
+    tot = {}
+    mine = set()
+    for i, p in enumerate(parts):
+        assert p["part"] == i and p["nparts"] == nparts and p["graph"] == name and p["profile"] == [h2, h1, h0]
+        assert tuple(tuple(t) for t in p["ztype"]) == (U3, V3)
+        for k, v in p["counts"].items():
+            tot[k] = tot.get(k, 0) + v
+        mine |= set(k for k, v in p["keys"])
+    ref = set()
+    for b in s1["bases"]:
+        items = []
+        for t, tp in enumerate(b["pairs"]):
+            zp = 0
+            for a_ in b["zn"]:
+                if a_ // 2 == t:
+                    zp = 1 + (a_ % 2)
+            if tp[0] == "A":
+                items.append((("A", tuple(tp[1]), tuple(tp[2])), zp))
+            elif tp[0] == "W":
+                items.append((("W", tp[1], tp[2]), zp))
+            else:
+                items.append((("Z",), zp))
+        ref.add(repr(zkey(items, G)))
+    print("%s profile (%d,%d,%d) z = %s ; %s, second program, stage 1 (%d parts): |G_z| with the exchange = %d (first "
+          "program, without it: %d)" % (name, h2, h1, h0, U3, V3, nparts, len(G), s1["group_order"]))
+    print("   rectangle sets tested %d; right coverage %d; passing the count on 37 vertices (z not attached) %d; "
+          "representatives %d (orbit sizes %d, must equal the previous number)" % (
+              tot["rect_sets"], tot["coverage"], tot["pass37"], tot["reps"], tot["osum"]))
+    print("   attachments of z tested %d: rejected by the count %d, by the hand filter a_2(z) <= 1: %d, by PSD (exact) "
+          "%d, kept %d" % (tot["attach"], tot["att_budget"], tot["att_hand_a2z"], tot["att_psd"], tot["kept"]))
+    print("   kept bases as classes (canonical keys): this program %d, first program %d (from %d bases); in the first "
+          "list only: %d; in this list only: %d" % (len(mine), len(ref), len(s1["bases"]), len(ref - mine), len(mine - ref)))
+    ok1 = (mine == ref and tot["osum"] == tot["pass37"])
+    print("   STAGE 1 AGREES: %s" % ok1)
+    if follow_prefix:
+        ftot = {}
+        nbf = 0
+        cert = [0, 0]
+        missing = []
+        for i in range(nparts):
+            fn = "%s_%dof%d.json" % (follow_prefix, i, nparts)
+            if not os.path.exists(fn):
+                missing.append(i)
+                continue
+            f = json.load(open(fn))
+            if f.get("partial"):
+                missing.append(i)
+                continue
+            nbf += f["bases_followed"]
+            cert[0] += f["certificates"]["integer_vector"]; cert[1] += f["certificates"]["exact_elimination"]
+            for k, v in f["totals"].items():
+                ftot[k] = max(ftot.get(k, 0), v) if k == "free_deepest" else ftot.get(k, 0) + v
+        print("   stage 2 re-traversed: bases %d (stage-1 list: %d); parts not finished: %s" % (
+            nbf, len(s1["bases"]), missing if missing else "none"))
+        print("   totals: %s; certificates: integer vector %d, exact elimination %d" % (ftot, cert[0], cert[1]))
+        if ftot.get("rank_nodes", 0):
+            print("   nodes rejected by the rank bound in the first program: %d; closed here by the own search (no "
+                  "rank bound): %d, with %d more nodes, deepest node with %d orbits of X_2 placed; closed here by an "
+                  "own exact rank computation: %d" % (
+                      ftot["rank_nodes"], ftot.get("rank_nodes_closed_by_own_search", 0), ftot.get("free_nodes", 0),
+                      ftot.get("free_deepest", 0), ftot.get("rank_nodes_closed_by_rank_bound", 0)))
+        print("   STAGE 2 AGREES AT EVERY NODE, 0 complete, all bases: %s" % (
+            not missing and nbf == len(s1["bases"]) and ftot.get("complete", 0 if not s1["bases"] else 1) == 0))
+
+
 # ------------------------------------------------------------------ step 2
 
 def follow(B, A21, defi, rec, plan, ztype):
@@ -766,6 +1067,18 @@ if sys.argv[1] == "bases":
         if a.startswith("part="):
             part, nparts = (int(t) for t in a[5:].split("/"))
     step_bases(sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), sys.argv[6], part, nparts)
+elif sys.argv[1] == "basesz":
+    # python in_verify.py basesz <graph> <h2> <h1> <h0> <a,b,c:d,e,f> <out.json> [part=i/n]
+    part, nparts = 0, 1
+    for a in sys.argv[8:]:
+        if a.startswith("part="):
+            part, nparts = (int(t) for t in a[5:].split("/"))
+    u_, v_ = sys.argv[6].split(":")
+    step_bases_z(sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]),
+                 tuple(int(t) for t in u_.split(",")), tuple(int(t) for t in v_.split(",")), sys.argv[7], part, nparts)
+elif sys.argv[1] == "mergez":
+    # python in_verify.py mergez <stage1.json> <basesz prefix> <nparts> [<follow prefix>]
+    step_merge_z(sys.argv[2], sys.argv[3], int(sys.argv[4]), sys.argv[5] if len(sys.argv) > 5 else None)
 elif sys.argv[1] == "merge":
     # python in_verify.py merge <stage1.json> <bases prefix> <nparts> [<follow prefix>]
     step_merge(sys.argv[2], sys.argv[3], int(sys.argv[4]), sys.argv[5] if len(sys.argv) > 5 else None)

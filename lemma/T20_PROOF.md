@@ -1,24 +1,23 @@
 # T20: no sigma-odd integer (-4)-eigenfunction of squared norm 20 on a srg(99,14,1,2)
 
-> **Updates since this text was written (main session, 07/10, 13:30 UTC); not yet merged into the sections below.**
-> 1. III.1 now has a second verification: a verifier re-traversed the whole tree (1,628,864 nodes, same counts per level, same
+> **State of this text (main session, 07/10, 14:10 UTC).**
+> 1. Every case of the proof is now closed: the last one, case I with n_3 = 2, is section 9.B.6 (Computation 9.29, two
+>    programs, written on 07/10 at 14:00 UTC). **Section 9.B.6 has not yet had its referee pass**; until it has, read
+>    Theorem 10.2 as "proved, last section awaiting review".
+> 2. III.1 has a second verification: a verifier re-traversed the whole tree (1,628,864 nodes, same counts per level, same
 >    kept count at every node, 0 complete), and the single node the first program rejected by the rank bound is also dead
 >    without it (`lemma/t20_III1/VERIF.md`). Scope of its independence, as that report says: its budget test, its PSD test and
 >    its bookkeeping are its own; it shares the model file `cases.py` and parts of the enumeration skeleton and of the
->    candidate-generation loops with the first program. It is a second verification implementation with those shared
->    components, not a second enumeration written from the text. Sections 0.2, 7.3, 7.4, 10.2 and 10.3 still say "one program".
-> 2. Case I, n_3 = 0: the second program (`in_verify.py`, no code shared with the first) is complete on ten of the twelve
+>    candidate-generation loops with the first program. Sections 0.2, 7.3, 7.4, 10.2 and 10.3 still say "one program".
+> 3. Case I, n_3 = 0: the second program (`in_verify.py`, no code shared with the first) is complete on eleven of the twelve
 >    cases: stage 1 identical, stage 2 agreeing at every node, 0 complete configurations; where the first program used the
 >    rank bound, the second closes the node by its own search. I.1 (3,4,0): 7,279,961 nodes, branch
->    `lemma-run/t20_I1_340-i-019e86d399c17954f`; the nine others on the branches `lemma-run/t20_Iv_{B,C,D,E,I,J}-*`. Two cases,
->    I.1 (4,2,1) and I.2 (4,2,1), are running (`lemma/T20_BOARD.md`, line C2).
-> 3. Case I, n_3 = 2: a first program has closed it by "route B" (the X_3 orbit in the base with N(p): 50 cases, 64,528 bases,
->    86,968 nodes, 0 complete configurations). Its second program is being written. **Section 9.B below is still the
->    placeholder, so this text does not yet prove T20.** Statements below that "n_3 = 2 has no program" are out of date.
+>    `lemma-run/t20_I1_340-i-019e86d399c17954f`; the ten others on the branches `lemma-run/t20_Iv_{B,C,D,E,H,I,J}-*`. The last
+>    case, I.1 (4,2,1), is running (`lemma/T20_BOARD.md`, line C2). Sections 0.2, 9.A and 10.2 still give the earlier counts.
 > 4. Corrections of the referee report `lemma/t20_CODEX/REFEREE_T20_PROOF.md` merged on 07/10: E1 (sign in the proof of
->    Corollary 5.2), E2 (split parameter 3 means tasks of level 4), C2 (paths), G3 (item 1 above). Still to merge: G1, G2, C1, C3.
+>    Corollary 5.2), E2 (split parameter 3 means tasks of level 4), C2 (paths), G3 (item 2 above). Still to merge: G1, G2, C3.
 
-## Proof text for everything that is established on 2026-10-07. One sub-case (k = 0, n_3 = 2) is NOT closed.
+## Proof text, state of 2026-10-07. Every case is closed; the last section (9.B.6) awaits its referee pass.
 
 Self-contained proof text, written on 2026-10-07 from the working reports of the repository `conway99-c2-aws`
 (`lemma/T20_WORK.md`, `lemma/T20_BOARD.md`, `lemma/t20/T20_REPORT.md`, `lemma/t20_R2/REPORT.md`, `lemma/t20_III1/`,
@@ -30,8 +29,8 @@ listed in appendix A.
 
 **This text does not prove T20.** It proves, by hand statements and finite computations, Theorem 10.1: a
 configuration, if there is one, has no active inner orbit (k = 0), has exactly two outside vertices with three
-neighbours in S+ (n_3 = 2), and has profile (3,4,0) or (4,2,1). The exclusion of that last sub-case is being computed
-at the time of writing; section 9.B is a placeholder for it and contains only what is proved by hand so far.
+neighbours in S+ (n_3 = 2), and has profile (3,4,0) or (4,2,1). The exclusion of that last sub-case is Computation 9.29
+(section 9.B.6, two programs).
 
 (This file is `lemma/T20_PROOF.md`; its working files are in `lemma/t20_PROOF/`.)
 
@@ -40,8 +39,8 @@ at the time of writing; section 9.B is a placeholder for it and contains only wh
 ### 0.1 GAP boxes
 
 **GAP boxes in this document: none.** Every hand statement was re-derived while it was written, and no step was
-found that could not be justified. This sentence is about the hand proofs only. It says nothing about the open
-sub-case (section 0.2), about the finite computations (section 10.2) or about what has not been independently
+found that could not be justified. This sentence is about the hand proofs only. It says nothing about the
+finite computations (section 10.2) or about what has not been independently
 verified (section 10.4). Four points of section 10.4 deserve to be known before reading:
 
 - several proofs of this text are not in the working reports and were written for it (list in section 10.4,
@@ -60,8 +59,8 @@ verified (section 10.4). Four points of section 10.4 deserve to be known before 
 
 ### 0.2 What is NOT covered
 
-1. **Case k = 0, n_3 = 2** (section 9.B): open. Its enumeration is not finished, and no second program exists for
-   it. Section 9.B is a marked placeholder.
+1. **Case k = 0, n_3 = 2** (section 9.B): closed on 07/10 by Computation 9.29 (two programs). The section has not
+   yet been refereed.
 2. **Computed lines that have one program only at the time of writing** (state of the sources: `T20_BOARD.md` and
    `lemma/t20_R3_I/REPORT.md` of 07/10; runs in progress are not anticipated):
    - configuration III.1 (Computation 7.5): one program; the independent verifier is running;
@@ -169,7 +168,8 @@ exists. **It is not proved here.** What is proved is the following chain; the la
                             2, and the neighbourhood of p has profile (3,4,0) or (4,2,1)
       -> section 9.A (hand model + Computations 9.19, 9.20): n_3 = 0 is impossible for the six graphs and the two
                             profiles (two programs for two of the twelve cases, one for the others)
-      -> section 9.B: n_3 = 2: OPEN (placeholder).
+      -> section 9.B (hand model + Computation 9.29): n_3 = 2 is impossible for the six graphs and the two
+                            profiles (two programs)
 
 Section 5 contains the general facts on the vertices outside the support, and section 6 the tests used by the
 computations (common-neighbour budgets, two PSD matrices, a rank bound) and the form of the searches, with their
@@ -1453,7 +1453,7 @@ delta_c = d(a_c) = d(b_c).
 
 Sections 9.1 and 9.2 reduce the case to four sub-cases (two profiles, n_3 = 0 or 2). Sections 9.3 to 9.6 contain the
 other hand statements established so far; it is said in each place whether the enumeration of section 9.A uses
-them. Section 9.A treats n_3 = 0. Section 9.B (n_3 = 2) is a placeholder.
+them. Section 9.A treats n_3 = 0, section 9.B treats n_3 = 2.
 
 ### 9.1 No inner vertex with d = 3; n_3 is 0 or 2  [I.1, I.2]
 
@@ -2116,14 +2116,11 @@ violation, and the value of the quadratic form). The runs themselves were made w
 certificates).
 
 
-### 9.B  n_3 = 2: PLACEHOLDER. THIS SUB-CASE IS NOT CLOSED.
+### 9.B  n_3 = 2: the hand lemmas, and the enumeration  [round 3]
 
-> **This section is a placeholder.** The sub-case "case I, n_3 = 2, profile (3,4,0) or (4,2,1)" is **not excluded**
-> at the time of writing: its enumeration is not finished and it has no second program. What follows is only what
-> is proved by hand so far (the structure of the orbit X_3, and the lemmas that apply to this sub-case), with the
-> state of the work in 9.B.6. When the enumeration is finished, this section has to receive: the determined sets
-> with the reason for every adjacency class, the Computation with its counts and its programs, and the Proposition
-> "there is no configuration in case I with n_3 = 2".
+Sections 9.B.1 to 9.B.5 are hand lemmas on this sub-case. Section 9.B.6 is the enumeration that excludes it
+(Computation 9.29, Proposition 9.30); it uses Lemma 9.22 (a) and Lemma 9.23 only. Sections 9.B.3 to 9.B.5 are kept
+for the record and are used by nothing.
 
 Throughout 9.B: n_3 = 2, so (n_0, n_1, n_2) = (7, 46, 24);
 
@@ -2327,23 +2324,165 @@ a_2^2 over X_0 u X_1 u X_2 is therefore 960 - 2 e(X_2) - 16 eps - 2 alpha. With 
 The products (a - 3)(a - 4) and (a - 1)(a - 2) are >= 0 for an integer a. On X_0', a_2 = a_0 + 6 - 2 a_3 (Lemma
 9.22 (e)); a_2(p) = 2 h_2. QED
 
-#### 9.B.6 State of the work at the time of writing (not a result)
+#### 9.B.6 The enumeration: N(p) and the orbit X_3 in the base  [SPEC_ROUTE_B_N3]
 
-- **Nothing above excludes n_3 = 2.** According to NOTES H7 and H10 the local structure of Lemmas 9.22 to 9.26 is
-  not contradictory by itself on small vertex sets, and the searches do not die in a few steps.
-- **Route A** (lab session; `lemma/t20_HAND/n3_cases.py`, engine `eng5z.py`, cloud job `t20_n3`): the base is
-  S u {p} u X_3 u X_0' (29 vertices), in 700 classes of bases for the six graphs, and the search places the twelve
-  orbits of X_2. `T20_BOARD.md` (line A1): 183 bases closed, 0 complete configurations, heavy bases cost 1 to 4
-  CPU-hours each, run stopped at 11:43 UTC. (NOTES H10 and `SPEC_N3.md` give 168 of 700 classes closed at 11:30
-  UTC.) One program. According to NOTES H10 the rank bound fired 139 times on the first 168 bases.
-- **Route B** (laptop session; `lemma/t20_R3_I/stage1c.py` with the option `z=`, model `cases6.py`): N(p) and the
-  orbit X_3 in the base, as in section 9.A. `T20_BOARD.md` (line A2): started at 11:50 UTC; no count yet.
-- The choice between the two routes is pending (`T20_BOARD.md`, line A3).
-- **Second program:** none. It is to be written from `lemma/t20_HAND/SPEC_N3.md` (`T20_BOARD.md`, line A5).
-- The computed statements of NOTES H2, H7, H9, H10 (the list of the types (U ; V) of z for the six graphs, the
-  numbers of bases, the effect of Theorem 9.14 and Lemma 9.24 on the bases) come from one program each, with
-  partial cross-checks by the scripts of `lemma/t20_CODEX`; they are not reproduced here and nothing here uses
-  them.
+The determined set is the one of section 9.A with the orbit X_3 added:
+
+    Y_z = S u N[p] u {z, z'}      (20 + 1 + 14 + 2 = 37 vertices).
+
+The free vertices are F = X_2' = X_2 \ A_p: 24 - 2 h_2 words, i.e. n = 9 orbits for profile (3,4,0) and n = 8 orbits
+for profile (4,2,1). The set X_0' is not in the vertex set, and the four cases of Lemma 9.22 (b) are not separated:
+only Lemma 9.22 (a) and Lemma 9.23 are used, and they hold in every case. Sections 9.B.3 to 9.B.5 are not used.
+
+The **attachment** of z is the set N_p(z) = N(z) n N(p).
+
+**Lemma 9.27.** Let n_3 = 2.
+
+(a) The types of the pairs of N(p) form an N-configuration for the profile (definition of 9.A.1).
+
+(b) N_p(z) consists of two vertices lying in two different pairs of N(p), and N_p(z') = sigma N_p(z). At most one
+    of the two vertices is in A_p.
+
+(c) Y_z is determined by B, the type (U ; V) of z, the N-configuration and N_p(z). A state of level t (section 6.5)
+    is determined by these data and, for each added orbit {s, sigma s}: U(s), V(s), N_p(s) = N(s) n N(p), the two
+    bits [s ~ z], [s ~ z'], and one pattern to each earlier orbit. Every adjacency is given by the list of Lemma
+    9.18 (b), in which the line "s with p; s with sigma s" holds because s is a word, together with:
+
+| pair of classes | adjacency | reason |
+|---|---|---|
+| z with S+, with S- | x_i for i in U, y_l for l in V | parameter (the type of z) |
+| z with p; z with z' | not adjacent | Lemma 9.22 (a) |
+| z with N(p) | exactly N_p(z) | parameter |
+| s with z, with z' | the two bits, not both 1 | parameters; Lemma 9.23 (b) |
+| z' with anything | the images under sigma | sigma is an automorphism |
+
+(d) The multiplicities are m_z(i, j) = need_z(i, j) - [{i, j} is one of the two deficient pairs of an A-type of the
+    N-configuration], with need_z as in (9.9); their sum is 24 - 2 h_2. The **model**:
+
+- (Z1) U(s) is the unit chosen at the node; V(s) is a unit different from U(s);
+- (Z2) N_p(s) consists of two vertices of N(p) lying in two different pairs;
+- (Z3) s is adjacent to at most one of z, z';
+- (Z4) with a_3(v) = [v ~ z] + [v ~ z']: a vertex s of an added orbit has at most 4 - 2 a_3(s) - |N_p(s) n A_p|
+  neighbours among the other added orbits; z has at most 1 - |N_p(z) n A_p| neighbours among the added vertices; a
+  vertex w of N(p) has at most 3 - h_0 - 2 a_3(w) neighbours among the added vertices if w is in A_p,
+  7 - h_0 - 2 a_3(w) if w is in W, and min(11 - h_0 - 2 a_3(w), floor((20 - 3 a_3(w)) / 2)) if w is in Z_p.
+
+  (Z4) consists of upper bounds only; no equality is required at the last level.
+
+(e) Aut(B) acts on the data of (c) through the indices, and the exchange of the names z and z' replaces (U ; V) by
+    (V ; U) and N_p(z) by sigma N_p(z), without changing the N-configuration. So one may assume that the type of z
+    is a chosen representative of its class under Aut(B) and the exchange, and then that the N-configuration is
+    any chosen representative of its orbit under the group G_z of the automorphisms of B preserving {U, V}. The two
+    vertices of a Z-pair carry the same data, so for a Z-pair one of its two vertices is enough in N_p(z).
+
+*Proof.* (a) Let w be in N(p). d(w) <= 2 (no vertex of N(p) has d = 3: section 9.1), and w is not adjacent to x_i
+together with y_i: then sigma w would be adjacent to y_i and x_i, and x_i would be adjacent to both vertices of a
+pair of N(p), which already have the common neighbour p. If d(w) = 2, with w adjacent to x_U and y_V: U and V are
+disjoint; the two vertices of x_U have the common neighbour w outside S, so need_z(U) >= 1 and U is a deficient
+pair, and likewise V; for i in U, the adjacent vertices x_i and w have at most one common neighbour, so i has at
+most one B-neighbour in V, and likewise with U and V exchanged. Two vertices of N(p) in two different pairs are
+non-adjacent and have the common neighbour p, so they have at most one common neighbour in S: this is the
+compatibility. Every x_i is a word and has exactly two neighbours in N(p), in two different pairs (section 2):
+every index lies in exactly two of the sets.
+
+(b) z is a word (Lemma 9.22 (a)), so it has exactly two neighbours in N(p), in two different pairs (section 2). A
+vertex of A_p adjacent to z is a neighbour of z in X_2, and z has at most one (Lemma 9.22 (a): alpha <= 1).
+
+(c) The lines of Lemma 9.18 (b) concern S, N[p] and the added orbits; each is proved as there, with statements
+that hold for n_3 = 2 as well (the list at the beginning of 9.B) and the fact that the added vertices are words.
+The five new lines carry their reasons.
+
+(d) By Lemma 9.23 (a) the number of vertices s of X_2 with U(s) = {i, j} is need_z(i, j); a vertex of A_p of type
+{U', V'} is one of them for {i, j} = U', and its mate for {i, j} = V'. So the vertices of X_2' realise every pair
+exactly m_z times, and the sum is 24 - 2 h_2. (Z1): V(s) = U(sigma s) is a unit, different from U(s) (Lemma 9.23
+(a)). (Z2): s is a word. (Z3): Lemma 9.23 (b). (Z4): for s, Lemma 9.23 (c): the neighbours of s in X_2 are the
+vertices of N_p(s) n A_p and its neighbours in X_2', and their number is |W_s| - 2 a_3(s) <= 4 - 2 a_3(s); for z,
+Lemma 9.22 (a) (alpha <= 1); for w, Lemma 9.23 (f) with rho(w) <= 3 - h_0.
+
+(e) The relabellings preserve every statement used. QED
+
+**Lemma 9.28 (what the computation proves).** Suppose that a configuration in case I with n_3 = 2 exists, with
+orbit graph B. Then, after relabelling, the type of z is one of the representatives of Computation 9.29 (a), the
+N-configuration is one of the representatives of (b) for that type and the profile, and the base given by them
+and by N_p(z) passes the budget test and has positive semidefinite matrices M1, M2 on Y_z. From that base, the
+search over units of section 6.5, with the model (Z1)-(Z4), reaches a state of level n (n = 9 or 8), whatever the
+rule choosing the unit.
+
+*Proof.* The graph on S u {p, z, z'} is determined by B and the type of z, and it is an induced subgraph of G, so
+it passes the budget test (section 6.2): the type is in the list of Computation 9.29 (a) up to the relabelling of
+Lemma 9.27 (e). Lemma 9.27 (a), (b) give the form of the data, and (c) the fact that Y_z and every state are
+determined sets (section 6.3), so the tests of section 6 apply to them and the true ones pass. The true orbits of
+X_2' satisfy (Z1)-(Z4) by Lemma 9.27 (d), and a state made of the base and of true orbits, not all of them, has a
+unit realised fewer than m_z times; so the argument of section 6.5 applies as in section 9.A. QED
+
+**Computation 9.29 (two programs; folder `lemma/t20_R3_I`).** For the six graphs:
+
+(a) *Types of z.* The ordered pairs (U ; V) of 3-subsets, U != V, for which the graph on the 23 vertices
+    S u {p, z, z'} passes the budget test number 8, 46, 30, 24, 24, 50 for I.0, ..., I.5; they form 1, 9, 3, 4, 5, 3
+    classes under Aut(B) and the exchange, 25 in all (representatives: `SPEC_ROUTE_B_N3.txt`, section 8; computed
+    by `ztypes.py`; the same list was obtained independently in the lab's notes H2).
+
+(b) *Stage 1: the bases.* For each of the 25 types and each of the two profiles (50 cases): all N-configurations
+    (1,173,102 for profile (4,2,1) and 12,557,760 for profile (3,4,0), over the 25 types), one representative per
+    orbit under G_z (686,675 and 7,461,476), and for each representative all the attachments: two vertices of
+    N(p) in two different pairs, one vertex only for a Z-pair (84 of them, 72 when there is a Z-pair). A base is
+    rejected by the budget test on the 37 vertices, or by an integer vector with negative form for M1 or M2;
+    otherwise it is kept. (The last sentence of Lemma 9.27 (b) is implemented as a separate filter and rejects
+    nothing: such attachments already fail the budget test.) Bases kept:
+
+| graph | types | profile (4,2,1) | profile (3,4,0) |
+|---|---|---|---|
+| I.0 | 1 | 27 | 199 |
+| I.1 | 9 | 5,059 | 30,909 |
+| I.2 | 3 | 1,420 | 8,138 |
+| I.3 | 4 | 1,153 | 9,743 |
+| I.4 | 5 | 751 | 5,791 |
+| I.5 | 3 | 147 | 1,191 |
+| all | 25 | 8,557 | 55,971 |
+
+    The 64,528 bases are 64,498 classes under G_z and the exchange (8,552 and 55,946): in eight cases some
+    N-configurations have a stabiliser and a class is listed twice. The type 034;178 of I.1 has no base in either
+    profile.
+
+(c) *Stage 2: the search.* From each of the 64,528 bases, the search over units with the model (Z1)-(Z4), the
+    budget test and the semidefiniteness test at every node. Numbers of nodes with 0, 1, 2, 3 added orbits:
+
+        profile (4,2,1):    8,557 /  1,494 /   190 /   8
+        profile (3,4,0):   55,971 / 17,994 / 2,646 / 108
+
+    86,968 nodes in all. **No node has four added orbits; no state of level n is reached.** No time limit was
+    reached, no base was abandoned, and the rank bound of section 6.4 was never used.
+
+*The two programs.* First program: `stage1c.py` with the option `z=` and `stage1_merge.py` (stage 1), `cases6.py`,
+`eng6.py`, `run_stage2.py` (stage 2); its coverage is recomputed from its output files by `check_n3.py`
+(`n3_check.out`: one stage-1 file and one stage-2 part per case, every base index exactly once, the hash of the
+base list recomputed, no time-out, no error). Second program: `in_verify.py`, modes `basesz`, `follow`, `mergez`:
+its own enumeration of the N-configurations and of the attachments and its own tests; it shares no code with the
+first program. It finds the same classes of bases in the 50 cases, and it re-traverses the 86,968 nodes with the
+unit chosen by the first program and finds the same number of kept candidates at every node (`n3_verify.out`, one
+line per case). The two programs share the model, which is this section and `SPEC_ROUTE_B_N3.txt`. Everything ran
+on one laptop (about 7 CPU-hours); `python n3_all.py <out> <workers> both 340 421` reproduces both programs.
+
+*What is exact.* Every rejection, in both programs, is exact: a common-neighbour count in integers, or an integer
+vector x with x^T M x < 0 evaluated in integers (second program: 1,950,773 such vectors in stage 1, for 362,754,336
+attachments tested, and 1,978,816 in stage 2; exact rational elimination was needed 0 times). A floating-point
+test is only used to keep a base or a candidate. So the statement "no state of level n" rests on exact
+rejections; the floating-point decisions affect only the sizes of the kept lists, and the two programs keep the
+same ones.
+
+**Proposition 9.30 (hand statements + Computations 4.12, 9.29).** There is no configuration in case I with
+n_3 = 2.
+
+*Proof.* By Lemma 9.28, a configuration would give, for its graph B (one of I.0, ..., I.5) and its profile
+((3,4,0) or (4,2,1), section 9.2), a kept base of Computation 9.29 (b) from which the search reaches a state of
+level n = 9 or 8. By Computation 9.29 (c) no search reaches level 4. QED
+
+#### 9.B.7 The other route (not used)
+
+Route A (lab session; `lemma/t20_HAND/SPEC_N3.md`, `n3_cases.py`, engine `eng5z.py`) takes the base
+S u {p} u X_3 u X_0' (29 vertices, 700 classes of bases) and places the twelve orbits of X_2. It was stopped on 07/10
+with 183 classes closed by search (0 complete configurations) and is used by nothing in this text. The computed
+statements of NOTES H7, H9, H10 are not used either.
 
 
 
@@ -2366,10 +2505,16 @@ case III is impossible by Proposition 7.6 and case II by Proposition 8.10. So it
 4.10), and 3 is Corollary 4.13. By Lemma 9.2, n_3 is 0 or 2, and n_3 = 0 is impossible by Proposition 9.21; the
 sizes are those of Lemma 5.3 (I). 5 is Lemma 9.3 with Proposition 9.4. QED
 
-**So T20 holds provided section 9.B is completed**, i.e. provided it is shown that there is no configuration in
-case I with n_3 = 2 (for the six graphs and the two profiles). Until then T20 is not proved. Two of the
-Computations on which Theorem 10.1 rests have, wholly or partly, one program only at the time of writing: 7.5
-(III.1) and 9.19 / 9.20 (ten of the twelve cases).
+**Theorem 10.2 (T20; Theorem 10.1 + Computation 9.29).** There is no integer-valued sigma-odd function phi with
+A phi = -4 phi and sum phi(x)^2 = 20.
+
+*Proof.* By Theorem 10.1 such a function would give a configuration in case I with n_3 = 2, and there is none by
+Proposition 9.30. QED
+
+State of the verification on 07/10, 14:10 UTC: Computation 9.29 has two programs sharing the model and no code;
+section 9.B.6 has not been refereed yet; Computation 7.5 (III.1) has a second verification with shared components;
+Computations 9.19 / 9.20 have a second program on eleven of the twelve cases, the twelfth running (see the note at
+the top of this text).
 
 ### 10.2 What is proved by hand, what is computed, what is open
 
@@ -2395,7 +2540,7 @@ Computations on which Theorem 10.1 rests have, wholly or partly, one program onl
 | Computation 9.19 | case I, n_3 = 0, stage 1 | computed | 2 for I.0 (4,2,1), I.0 (3,4,0), I.5 (4,2,1) (identical lists); **1** for the nine other cases |
 | Computation 9.20 | case I, n_3 = 0, stage 2: no node of level 6 | computed | 2 for I.0 (4,2,1) and I.5 (4,2,1); **1** for the ten other cases (second program: 372 of 11,150 bases of I.0 (3,4,0), one base of I.1 (4,2,1)); the rank bound at 15 nodes of I.1, first program |
 | Lemmas 9.22-9.26 | case I, n_3 = 2: the orbit X_3, units, a_3(u) = 1, two identities | hand | - |
-| "no configuration in case I with n_3 = 2" | section 9.B | **OPEN** | enumeration not finished; one program in progress; no second program |
+| Computation 9.29, Proposition 9.30 | case I, n_3 = 2: from the 64,528 bases no search reaches level 4 | computed | 2 (one laptop; shared model, no shared code; the second program follows the unit chosen by the first) |
 
 Nobody outside the working sessions has refereed the hand part. The working reports say that the hand lemmas of the
 Codex session (here Theorems 9.14, 9.16, Lemma 9.24, Corollary 9.17) were re-read line by line by the lab session.
@@ -2659,9 +2804,18 @@ Runs of the second program in progress at the time of writing (**not used**): cl
 `lemma-run/t20_I1_340-i-019e86d399c17954f` (status "RUNNING" in the last commit of each that was present in the
 local copy of the repository when this text was written).
 
-### A.6 Section 9.B (n_3 = 2): work in progress, not used
+### A.6 Section 9.B (n_3 = 2)
 
-Route A: `lemma/t20_HAND/n3_cases.py` (bases), `eng5z.py` (generated by `mk_eng5z.py`), `run_n3.py`,
+Computation 9.29 (route B), folder `lemma/t20_R3_I`: specification `SPEC_ROUTE_B_N3.txt`; types of z `ztypes.py`,
+`ztypes.json`, `ztypes.out`; one case, both programs: `n3_case.py`; all cases: `python n3_all.py <out> <workers> both 340 421`;
+first program `stage1c.py` (option `z=`), `stage1_merge.py`, `cases6.py`, `eng6.py`, `run_stage2.py`, `summary2.py`;
+second program `in_verify.py` (modes `basesz`, `follow`, `mergez`); checks `check_n3.py`, `check_n3_verify.py`,
+`table_n3.py`. Outputs kept in the repository: `n3_check.out` (first program, per case), `n3_table.out`,
+`n3_verify.out` (agreement per case, totals on its last lines), `n3_stage1_regen_compare.out` (the 25 stage-1 lists
+of profile (4,2,1) regenerated and identical). The base lists, the stage-2 files with plans and the second
+program's raw outputs (41 MB) are not in the repository; the command above regenerates them.
+
+Not used by the proof. Route A: `lemma/t20_HAND/n3_cases.py` (bases), `eng5z.py` (generated by `mk_eng5z.py`), `run_n3.py`,
 `summary_n3.py`, cloud job `lemma/cloud/jobs/t20_n3.sh`; git branches `lemma-run/t20_n3-i-0b8ae938c1fc89c62` and
 `lemma-run/t20_n3-i-04bb3ac564f658b79` (both with status "RUNNING" in their last commit present locally). Small
 scripts of the hand notes: `x3_types.py`, `n3_base.py`, `dual_test_S.py`, `dual_test_X3.py`, `check_inner.py`.
