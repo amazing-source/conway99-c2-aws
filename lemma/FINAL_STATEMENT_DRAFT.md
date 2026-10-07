@@ -1,4 +1,4 @@
-# Route (C): the final statement and what it rests on — DRAFT 2 of 2026-10-07, state at about 15:00 UTC
+# Route (C): the final statement and what it rests on — DRAFT 3 of 2026-10-07, state at 15:10 UTC
 
 Lab session (Claude). Board line D5 of `lemma/T20_BOARD.md` (compute repo). This is a recheck by AI sessions, not a human referee
 and not a formal proof.
@@ -17,17 +17,18 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 
 ## 2. The chain
 
-| Step | Content | Where | Status on 07/10, 14:20 |
+| Step | Content | Where | Status on 07/10, 15:10 |
 |---|---|---|---|
 | R0 | An automorphism of order 2 has exactly one fixed vertex | `upstream/AUDIT_REDUCTION.md` A.0 | hand proof (laptop session); refereed by Codex: no error |
 | R1 | Theorem R: frame (7 h of norm 4, 42 u of norm 3, y_1, y_2 of norm 7) in an odd unimodular lattice U of rank 24 without vector of norm 1; properties (R-i)..(R-vii), among them E(v) = 7 (v,v) - (v,y_1)^2 - (v,y_2)^2 >= 8 and the dictionary "v in U -> sigma-odd integer eigenfunction of squared norm 2 E(v)" | same, A.1-A.8; U indecomposable: A.9 | hand proof; refereed by Codex: no error. Cited theorems: the oddity formula; classification of forms over F_7. **The input "g in {18, 20}" of the older notes is no longer used** (A.4), and no rule of the engine or of the producer uses g (checked by me and by Codex) |
 | R2 | U is one of 156 lattices | Borcherds' classification (cited) | the 156 data lattices: OK-RECOMPUTED 04/10 (determinant 1, odd, no norm 1, root systems; the seven pairs with equal root systems separated by their even neighbours). Mass check: not done, not needed |
-| R3 | For each lattice, the pairs (y_1, y_2) up to Aut(U) x signs; swap and twin rules | C1 producers; `AUDIT_REDUCTION.md` section C | the producer's filters follow from Theorem R (reread). **Completeness of the enumeration: never compared with an independent enumerator (OPEN, board F4)**; Golay family: two implementations agree on 001 |
+| R3 | For each lattice, the pairs (y_1, y_2) up to Aut(U) x signs; swap and twin rules | C1 producers; `AUDIT_REDUCTION.md` section C | the producer's filters follow from Theorem R (reread). Completeness of the enumeration (board F4): the lab's independent enumerator `q/ypairs_c2.py` (all vectors of norm 7 by Fincke-Pohst, own simple roots) against the producer, both brought to one canonical form: **140 and 135: the two pair sets are EQUAL** (nothing only on one side; 22,892,544 lines of norm 7 = the theta-series value); 141 and 064 running. Golay family: two implementations agree on 001 |
 | R4 | Each pair is excluded by a rule of the engine | `upstream/AUDIT_ENGINE_RULES.md` (Codex: one line per rule, against Theorem R) | no rule uses g. Five qualifications H1-H5, section 3bis |
 | R5 | T16: no eigenfunction of squared norm 16 (rule "norm-3 x with Y = 13") | `lemma/T16_PROOF.md` + dossier of 04/10 | refereed by Codex on 07/10: no blocking error (one defect in the dossier's verifier, covered by a stronger recheck) |
 | R6 | T18: squared norm 18 | `lemma/T18_PROOF.md` | proved and refereed twice per the laptop session; not reread by me |
 | R7 | T20: squared norm 20 | `lemma/T20_PROOF.md` | section 3 |
-| R8 | Bridge and witnesses: norm 3 with Y = 13 (E = 8); root with Y = 5 (E = 9); root with Y = 4 or norm-4 vector with (+-3, +-3) (E = 10). These rules are complete for E <= 10 (hand remark of 07/10) | `lemma/BRIDGE.md`; certificates `q/cert_stream.py`, `cert_golay.py` | Golay 001 / 002: 17,983 pairs certified, 0 invalid. Stream: 7,762 records, run in progress, 0 failure so far |
+| R8 | Bridge and witnesses: norm 3 with Y = 13 (E = 8); root with Y = 5 (E = 9); root with Y = 4 or norm-4 vector with (+-3, +-3) (E = 10). These rules are complete for E <= 10 (hand remark of 07/10) | `lemma/BRIDGE.md`; certificates `q/cert_stream.py`, `cert_golay.py` | Golay 001 / 002: 17,983 pairs certified, 0 invalid. Stream: **7,760 of 7,762 records have a good certificate** (same stream sha256, ok, as many certified pairs as deferred ones: 5,179,506 pending T18, 2,501,531 pending T20), 0 certificate not good, 5 records certified twice and agreeing; the two last records are running (`scripts/cloud/cert_census.py`) |
+| R8' | Corollary Y1 (Codex, 07/10): with T18 and T20, every root has \|(r,y_1)\| <= 1 and \|(r,y_2)\| <= 1; so a y_1 with a root r, (r,y_1) = +-2, hosts no frame **whatever y_2** (E(r) = 10 - (r,y_2)^2) | `lemma/BRIDGE.md` Corollary Y1; `lemma/t20_CODEX/FIXED_Y1_003.md` | three-line proof, reread by the lab and by the laptop session. Used for ONE y_1 representative, 003:181 (the only one of the campaign without a record): two certificates by two authors (`q/cert_y1.py`, Codex's `CERT_003_FIXED_Y1.json`), two standalone exact checkers, negative controls rejected. 96 of the 182 y_1 representatives of 003 have such a root; the 95 others keep their records |
 | R9 | Coverage of the 156 lattices | section 4 | - |
 
 ## 3. T20 on 07/10, 14:20 UTC
@@ -45,7 +46,7 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 | | Finding | Status |
 |---|---|---|
 | H1 | `joint` keeps at most 1000 joint star sums per leaf, without a flag | real in the code, never exercised: the verdict it could falsify occurs in no stored record (17,676 + 356 + 57 files); the lab importer refuses it |
-| H2 | The rigid kernel (pairs without flex point) never builds a frame with an h of zero footprint | **real, and exercised** (24 pairs of lattice 080 were decided by it). Hand lemma (lab): impossible unless the two even neighbours have the same Coxeter number H and U has a root component of Coxeter number H: 27 lattices, 25 of them treated by the engine. Exact audit of their streams (`q/audit_rigid.py`): every exposed pair is searched again with the general kernel. Done: 001, 080, 101, 103, 104, 105, 137, 138 (all exposed pairs excluded again; in 080, 24 exposed pairs of 344,248 had reached the search: stage 1 is empty with the general kernel too); running on machines: the 12 others counted as excluded, and 003, 006, 007, 014 |
+| H2 | The rigid kernel (pairs without flex point) never builds a frame with an h of zero footprint | **real, and exercised** (24 pairs of lattice 080 were decided by it). Hand lemma (lab): impossible unless the two even neighbours have the same Coxeter number H and U has a root component of Coxeter number H: 27 lattices, 25 of them treated by the engine. Exact audit of their streams (`q/audit_rigid.py`): every pair without flex point that has a zero-footprint candidate is searched again with the general kernel. Coverage checked lattice by lattice (`scripts/cloud/audit_coverage.py`, 15:10): **22 of 25 covered, every exposed pair excluded again** (001, 006, 007, 014, 023, 024, 027, 028, 037, 049, 050, 052, 053, 077, 079, 080, 101, 103, 104, 105, 137, 138; for the plan lattices the audited pairs add up exactly to the sweep's pair counts). Not yet: 022 and 026 (one machine still running; 0 pair not excluded again so far), 003 (representatives 2, 3, 180 running; 157, 162, 174, 176 running too and in any case covered by Corollary Y1; 181 has no record: nothing to audit) |
 | H3 | The list of norm-4 vectors is produced by a floating-point enumeration | closed: N3 = 4096 and N4 = 196560 - 24 (N2 + N3) for all 156 lattices (theta series), every vector rechecked |
 | H4 | The per-pair budget test accepts an LP solver status | concerned one lattice, 105 (6,310 pairs, lab run of 29/09). **Closed 14:45**: its 56,544 pairs (enumeration up to W(R)) passed again through the v10 producer and consumer without the budget test: all excluded, swap-covered or twin-transferred; stream sha256 identical on AWS and on the lab PC |
 | H5 | The 9/7 rule needs T16, which Theorem R does not give | T16 refereed (R5) |
@@ -55,10 +56,10 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 Excluded in the tracker: 143. Open: 13.
 
 **Read "excluded" with these reservations until the items of section 5 are done:**
-- 20 lattices are excluded subject to the rigid-kernel audit H2: 022, 023, 024, 026, 027, 028, 037, 049, 050, 052, 053, 077, 079,
-  080, 101, 103, 104, 105, 137, 138 (audit done for 080, 101, 103, 104, 105, 137, 138);
+- 20 lattices were excluded subject to the rigid-kernel audit H2. Audit complete and clean for 18 of them (023, 024, 027, 028,
+  037, 049, 050, 052, 053, 077, 079, 080, 101, 103, 104, 105, 137, 138); **still subject to it: 022 and 026** (running);
 - 105: its 6,310 "pair budget" pairs are now excluded without a solver (H4 closed, 14:45);
-- 143 rests on one lattice-level test that nobody reviewed: passing through the v10 engine (launched 14:17);
+- 143 rests on one lattice-level test that nobody reviewed: passing through the v10 engine (relaunched 14:51, running);
 - 153 had one argument reviewed by its author's side only; it now has a second proof (A.9: U is indecomposable), refereed.
 
 | Method recorded in the tracker | Lattices | Recount on 07/10 |
@@ -77,9 +78,11 @@ Excluded in the tracker: 143. Open: 13.
 
 Twin deferrals: 1,622 dependencies between the 104 stream lattices, no cycle (OK-RECOMPUTED).
 
-The 13 open lattices: all swept in deferral mode except one y1 of 003 (re-run since 13:00 with the norm-4 witness rule); 5,190,752
-pairs pending T18 and 2,508,295 pending T20; no INCOMPLETE pair. Dry run of the conversion: 145 if the lemmas were accepted today,
-155 with all certificates, 156 when 003:181:182 is done.
+The 13 open lattices: all swept. 5,190,752 pairs pending T18 and 2,508,295 pending T20; no INCOMPLETE pair; one y_1
+representative, 003:181, carries no pair record and is covered by the fixed-y1 certificate (pending T18 and T20, like every deferred
+pair). Dry run of the conversion at 15:10 with the real certificates: **153 if T18 and T20 were accepted today** (003 and 006 wait for
+one certificate each, 005 for 006 through a twin class); 156 with the two last certificates. Nothing is written in the tracker:
+`lemmas_accepted.json` does not exist.
 
 Provenance: 84 lattices were computed on the lab PC on 27-29/09, before the cloud packages (26 of the stream ones without a recorded
 code version). The user decided on 07/10 not to re-run them now; the records are on the lab PC (`data/finishC/`, not in any
@@ -88,11 +91,12 @@ repository yet) and partly in the compute repository.
 ## 5. What must still happen before the statement may be claimed
 
 1. T20: archival G1 (outputs, source revisions, commands of every computation cited).
-2. Rigid-kernel audit H2 complete on the 25 lattices, with every exposed pair excluded again.
+2. Rigid-kernel audit H2: the three lattices left (022, 026; 003: representatives 2, 3, 180), with every exposed pair excluded again.
 3. 143 through the v10 engine; its records imported (105: done).
-4. Certificate run complete: every stream record certified.
-5. 003:181:182 finished, imported and certified.
-6. Pair enumeration (R3): an independent enumeration on a few lattices, one of them with non-spanning roots (board F4).
+4. The two last stream certificates (003:162:182, 006:224:228). Done: 7,760 of 7,762.
+5. ~~003:181:182~~ done at 15:00 without computation (Corollary Y1 and its certificates).
+6. Pair enumeration (R3): 140 and 135 equal; 141 and 064 to come (one of the four should have non-spanning roots: to be said
+   explicitly when they are in).
 7. Then: `data/finishC/lemmas_accepted.json` written with the references of T18 and T20 (T16 is already a rule of the engine),
    and `convert_deferred.py --write`.
 8. Decision of the user on the 84 lab-local lattices (reconciliation with the stored records, or re-run).
@@ -103,6 +107,7 @@ repository yet) and partly in the compute repository.
 - The completeness of the pair enumerations, until item 6 is done.
 - The search engine's code: one audit of its rules against Theorem R (Codex), no line-by-line second reading; calibrations between
   versions.
+- Corollary Y1 is used for one y_1 only, and is conditional on T18 and T20 like every deferred pair.
 - T16, T18, T20 are computer-assisted: hand reductions plus exhaustive exact enumerations, each by two programs sharing the hand
   model; the second programs follow the first program's choice of unit (valid by the exhaustiveness lemma; for case I the verifier
   checks that the unit is unfilled and walks its own candidates: read in the code by me).
