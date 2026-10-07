@@ -20,14 +20,14 @@ push() {                                     # the whole output folder, files ov
   git init -q; git remote add origin "$(git -C "$REPO" remote get-url origin)"
   git config user.name amazing-source; git config user.email 206353265+amazing-source@users.noreply.github.com
   (cd "$OUT" && find . -type f -size -40M -print0 | cpio -0pdm --quiet "$HOME/lemma_push") 2>/dev/null
-  echo "$1 $(date -u +%Y-%m-%dT%H:%M:%SZ) job=$JOB instance=$IID nproc=$(nproc)" > STATUS.txt
+  echo "$1 $(date -u +%Y-%m-%dT%H:%M:%SZ) job=$JOB instance=$IID nproc=$(nproc --all)" > STATUS.txt
   git add -A >/dev/null 2>&1; git commit -qm "lemma run $JOB on $IID: $1" >/dev/null 2>&1
   git push -q -f origin HEAD:refs/heads/"$BR" >/dev/null 2>&1
 }
 push "INSTALLING"
 { sudo apt-get update -qq; sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq python3-venv python3-pip cpio; } > "$OUT/install.log" 2>&1
 python3 -m venv "$HOME/venv" >> "$OUT/install.log" 2>&1 && "$HOME/venv/bin/pip" -q install numpy python-flint >> "$OUT/install.log" 2>&1
-export PY="$HOME/venv/bin/python" NPROC="$(nproc)" OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+export PY="$HOME/venv/bin/python" NPROC="$(nproc --all)" OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
 if ! "$PY" -c "import numpy, flint" >> "$OUT/install.log" 2>&1; then push "INSTALL FAILED"; sudo shutdown -h now; exit 1; fi
 ( while true; do sleep 600; push "RUNNING"; done ) &
 LOOP=$!
