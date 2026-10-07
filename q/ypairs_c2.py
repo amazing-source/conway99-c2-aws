@@ -159,6 +159,26 @@ def dominant(y, Sm, G):
         y = y - ip[k] * Sm[k]
 
 
+def _pairs_part(k):
+    """07/10 (laptop session), YP_WORKERS > 1 only: the y1 of index k, k + NW, ... of Y1, each treated by the same statements as the
+    sequential loop of the main block (copied below), in a process forked after Y, Y1 and the tables were built."""
+    out = []
+    for t in range(k, len(Y1), NW):
+        y1 = Y1[t]; res = []
+        idx = y2_candidates(Y, G @ y1, RG @ y1, X3G @ y1, SG @ y1, RG, X3G, SG)
+        J = Sm[(Sm @ G @ y1) == 0] if len(Sm) else Sm; JG = J @ G
+        seen = set()
+        for i in idx:
+            for s_ in (1, -1):
+                v = s_ * Y[i].astype(np.int64)
+                if len(J) and (JG @ v < 0).any(): continue
+                w = dominant(-v, J, G) if len(J) else -v
+                key = min(tuple(v), tuple(w))
+                if key not in seen: seen.add(key); res.append([[int(t_) for t_ in y1], [int(t_) for t_ in key]])
+        out.append((t, res))
+    return out
+
+
 if __name__ == "__main__":
     t0 = time.time(); rec = json.load(open(sys.argv[1])); outp = sys.argv[2]
     L = FD.lattice_data(rec["gens"]); G = L["G"]; R = L["R"]; X3 = L["X3"]; S2 = L["S2"]
@@ -178,19 +198,28 @@ if __name__ == "__main__":
     print("W-orbits of admissible y (both signs): %d (%.0fs)" % (len(Y1), time.time() - t0), flush=True)
     RG, X3G, SG = R @ G, X3 @ G, S2 @ G
     pairs = []
-    for y1 in Y1:
-        idx = y2_candidates(Y, G @ y1, RG @ y1, X3G @ y1, SG @ y1, RG, X3G, SG)
-        # candidates are W_J-invariant (W_J = Stab_W(y1), J = simple roots orthogonal to y1): keep the J-dominant members,
-        # and identify v with the J-dominant representative of -v (pairs up to the sign of y2)
-        J = Sm[(Sm @ G @ y1) == 0] if len(Sm) else Sm; JG = J @ G
-        seen = set()
-        for i in idx:
-            for s_ in (1, -1):
-                v = s_ * Y[i].astype(np.int64)
-                if len(J) and (JG @ v < 0).any(): continue
-                w = dominant(-v, J, G) if len(J) else -v
-                key = min(tuple(v), tuple(w))
-                if key not in seen: seen.add(key); pairs.append([[int(t) for t in y1], [int(t) for t in key]])   # plain ints (json)
+    NW = int(os.environ.get("YP_WORKERS", "1"))
+    if NW > 1:                                                          # 07/10: the loop over y1 dealt to NW forked processes
+        import multiprocessing as mp
+        with mp.get_context("fork").Pool(NW) as pool: parts = pool.map(_pairs_part, range(NW))
+        done = sorted((t, res) for part in parts for t, res in part)
+        assert [t for t, _ in done] == list(range(len(Y1))), "a y1 is missing or doubled"
+        for _, res in done: pairs.extend(res)                              # same order as the sequential loop
+        print("y2 stage on %d processes" % NW, flush=True)
+    else:
+        for y1 in Y1:
+            idx = y2_candidates(Y, G @ y1, RG @ y1, X3G @ y1, SG @ y1, RG, X3G, SG)
+            # candidates are W_J-invariant (W_J = Stab_W(y1), J = simple roots orthogonal to y1): keep the J-dominant members,
+            # and identify v with the J-dominant representative of -v (pairs up to the sign of y2)
+            J = Sm[(Sm @ G @ y1) == 0] if len(Sm) else Sm; JG = J @ G
+            seen = set()
+            for i in idx:
+                for s_ in (1, -1):
+                    v = s_ * Y[i].astype(np.int64)
+                    if len(J) and (JG @ v < 0).any(): continue
+                    w = dominant(-v, J, G) if len(J) else -v
+                    key = min(tuple(v), tuple(w))
+                    if key not in seen: seen.add(key); pairs.append([[int(t) for t in y1], [int(t) for t in key]])   # plain ints (json)
     print("pairs (y1 W-dominant, y2 W_J-dominant up to sign): %d (%.0fs)" % (len(pairs), time.time() - t0), flush=True)
     json.dump({"source": sys.argv[1], "basis": [[str(x) for x in row] for row in L["B"]], "coords": "coefficients in 'basis'",
                "n_admissible_lines": int(cnt), "n_y1_orbits": len(Y1), "pairs": pairs}, open(outp, "w"))
