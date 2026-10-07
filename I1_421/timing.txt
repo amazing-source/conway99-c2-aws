@@ -1,0 +1,3 @@
+start 10:42:56 graph I.1 profile (4,2,1) processes 128 
+stage 1 done 10:43:30
+stage 2 done 10:44:28

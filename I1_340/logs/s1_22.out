@@ -1,0 +1,3 @@
+I.1 profile (3,4,0): |G| = 4; rectangles 161; N-configurations 3508550 (enumeration nodes 12704800), orbits under G 878137
+   PART 22 of 128: only the representatives of rank = 22 mod 128 are tested here
+   bases tested 6861: rejected by budgets 0, by PSD (exact) 5140, kept 1721   stats {'psd_reject_M1': 5140}   [enum 98 s, orbits 0 s, tests 3 s]

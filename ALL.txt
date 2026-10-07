@@ -1,0 +1,153 @@
+=== I.5 (3,4,0) start 10:36:23
+I.5 profile (3, 4, 0): |G| = 20; rectangles 140; N-configurations 2335670, orbits under G 117846   [merged from 128 parts]
+   bases tested 117846: rejected by budgets 0, by PSD (exact) 107170, kept 10676   stats {'psd_reject_M1': 106845, 'psd_reject_M2': 325}
+I.5 profile (3, 4, 0): stage-1 file /home/ubuntu/lemma_out/I5_340/s1_I5_340.json, 10676 bases, sha1 d1d61939d6d6d2e6c14ff258e5061f48db12b3d0
+   parts 128; sha1 recorded by the parts: ['d1d61939d6d6d2e6c14ff258e5061f48db12b3d0']; bases finished 10676; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [10676, 63403, 150861, 120573, 20662, 467]  total 366642
+   candidates (chosen unit)  : [63403, 579521, 1677564, 1443947, 242288, 4864]  total 4011587
+     rejected by budgets     : [0, 0, 21921, 48144, 14303, 434]
+     rejected by PSD (exact) : [0, 428660, 1535070, 1375141, 227518, 4430]
+     kept                    : [63403, 150861, 120573, 20662, 467]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=5272865, pair_budget=28900918, psd_reject_M1even=1407508, psd_reject_M1odd=4106711, psd_reject_M2even=14342, psd_reject_M2odd=211454, single_psd=2169196
+   cpu seconds: 1439 (mean 0.135 per base, max 5.5)
+=== I.5 (3,4,0) end 10:38:03
+=== I.2 (4,2,1) start 10:38:03
+I.2 profile (4, 2, 1): |G| = 10; rectangles 140; N-configurations 412875, orbits under G 41441   [merged from 128 parts]
+   bases tested 41441: rejected by budgets 0, by PSD (exact) 27516, kept 13925   stats {'psd_reject_M1': 27516}
+I.2 profile (4, 2, 1): stage-1 file /home/ubuntu/lemma_out/I2_421/s1_I2_421.json, 13925 bases, sha1 968950595ebf764299944359c517849ac1bb02ef
+   parts 128; sha1 recorded by the parts: ['968950595ebf764299944359c517849ac1bb02ef']; bases finished 13925; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [13925, 78932, 188838, 125200, 14706, 172]  total 421773
+   candidates (chosen unit)  : [78932, 759277, 2179288, 1592267, 193554, 1904]  total 4805222
+     rejected by budgets     : [0, 0, 101142, 178878, 36280, 496]
+     rejected by PSD (exact) : [0, 570439, 1952946, 1398683, 157102, 1408]
+     kept                    : [78932, 188838, 125200, 14706, 172]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=5792281, pair_budget=30869084, psd_reject_M1even=1358983, psd_reject_M1odd=4346891, psd_reject_M2even=1859, psd_reject_M2odd=412098, single_psd=2039253
+   cpu seconds: 1526 (mean 0.110 per base, max 3.9)
+=== I.2 (4,2,1) end 10:38:43
+=== I.2 (3,4,0) start 10:38:43
+I.2 profile (3, 4, 0): |G| = 10; rectangles 140; N-configurations 2301905, orbits under G 230609   [merged from 128 parts]
+   bases tested 230609: rejected by budgets 0, by PSD (exact) 175036, kept 55573   stats {'psd_reject_M1': 175036}
+I.2 profile (3, 4, 0): stage-1 file /home/ubuntu/lemma_out/I2_340/s1_I2_340.json, 55573 bases, sha1 9af751464e8f8c9289fd138a6b77646e31fde21b
+   parts 128; sha1 recorded by the parts: ['9af751464e8f8c9289fd138a6b77646e31fde21b']; bases finished 55573; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [55573, 377489, 940441, 613858, 65549, 777]  total 2053687
+   candidates (chosen unit)  : [377489, 3483888, 9498140, 6401076, 677833, 7427]  total 20445853
+     rejected by budgets     : [0, 0, 223148, 327644, 59377, 1066]
+     rejected by PSD (exact) : [0, 2543447, 8661134, 6007883, 617679, 6361]
+     kept                    : [377489, 940441, 613858, 65549, 777]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=32469379, pair_budget=178870652, psd_reject_M1even=5680202, psd_reject_M1odd=20927502, psd_reject_M2even=23012, psd_reject_M2odd=1991294, single_psd=10785506
+   cpu seconds: 7941 (mean 0.143 per base, max 6.7)
+=== I.2 (3,4,0) end 10:41:23
+=== I.4 (4,2,1) start 10:41:23
+I.4 profile (4, 2, 1): |G| = 4; rectangles 144; N-configurations 495024, orbits under G 124367   [merged from 128 parts]
+   bases tested 124367: rejected by budgets 0, by PSD (exact) 102806, kept 21561   stats {'psd_reject_M1': 102503, 'psd_reject_M2': 303}
+I.4 profile (4, 2, 1): stage-1 file /home/ubuntu/lemma_out/I4_421/s1_I4_421.json, 21561 bases, sha1 c2700cc79592ed9aea8f700220f94ec2a049d592
+   parts 128; sha1 recorded by the parts: ['c2700cc79592ed9aea8f700220f94ec2a049d592']; bases finished 21561; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [21561, 72554, 97281, 41986, 3998, 28]  total 237408
+   candidates (chosen unit)  : [72554, 538463, 960074, 478141, 47198, 270]  total 2096700
+     rejected by budgets     : [0, 0, 39321, 44706, 7248, 52]
+     rejected by PSD (exact) : [0, 441182, 878767, 429437, 39922, 218]
+     kept                    : [72554, 97281, 41986, 3998, 28]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=2046051, pair_budget=14545736, psd_reject_M1even=997559, psd_reject_M1odd=3198578, psd_reject_M2even=1936, psd_reject_M2odd=98795, single_psd=2507342
+   cpu seconds: 1256 (mean 0.058 per base, max 3.3)
+=== I.4 (4,2,1) end 10:42:06
+=== I.3 (4,2,1) start 10:42:06
+I.3 profile (4, 2, 1): |G| = 4; rectangles 146; N-configurations 506294, orbits under G 126655   [merged from 128 parts]
+   bases tested 126655: rejected by budgets 0, by PSD (exact) 94633, kept 32022   stats {'psd_reject_M1': 94633}
+I.3 profile (4, 2, 1): stage-1 file /home/ubuntu/lemma_out/I3_421/s1_I3_421.json, 32022 bases, sha1 39460b17ed6e263fbbf274068f9eb855227619a2
+   parts 128; sha1 recorded by the parts: ['39460b17ed6e263fbbf274068f9eb855227619a2']; bases finished 32022; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [32022, 115957, 179576, 89609, 10602, 218]  total 427984
+   candidates (chosen unit)  : [115957, 921142, 1845694, 1049616, 131052, 2232]  total 4065693
+     rejected by budgets     : [0, 0, 78613, 106345, 21848, 550]
+     rejected by PSD (exact) : [0, 741566, 1677472, 932669, 108986, 1682]
+     kept                    : [115957, 179576, 89609, 10602, 218]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=4224397, pair_budget=28281910, psd_reject_M1even=1726563, psd_reject_M1odd=5306008, psd_reject_M2even=2213, psd_reject_M2odd=256214, single_psd=3828623
+   cpu seconds: 2107 (mean 0.066 per base, max 2.7)
+=== I.3 (4,2,1) end 10:42:56
+=== I.1 (4,2,1) start 10:42:56
+I.1 profile (4, 2, 1): |G| = 4; rectangles 161; N-configurations 722524, orbits under G 180920   [merged from 128 parts]
+   bases tested 180920: rejected by budgets 0, by PSD (exact) 124620, kept 56300   stats {'psd_reject_M1': 124620}
+I.1 profile (4, 2, 1): stage-1 file /home/ubuntu/lemma_out/I1_421/s1_I1_421.json, 56300 bases, sha1 73e106a376242ad4c261f993ae97562310cd7b96
+   parts 128; sha1 recorded by the parts: ['73e106a376242ad4c261f993ae97562310cd7b96']; bases finished 56300; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [56300, 275161, 597528, 416434, 60366, 1128]  total 1406917
+   candidates (chosen unit)  : [275161, 2494081, 6718997, 5121021, 759700, 12710]  total 15381670
+     rejected by budgets     : [0, 0, 281206, 486052, 117790, 3042]
+     rejected by PSD (exact) : [0, 1896553, 6021357, 4574603, 640782, 9666]
+     kept                    : [275161, 597528, 416434, 60366, 1128, 2]
+     of which dead by rank   : [0, 0, 0, 0, 0, 2]
+   complete configurations: 0
+   stats: no_pattern=18705378, pair_budget=101443899, psd_reject_M1even=4811663, psd_reject_M1odd=15162799, psd_reject_M2even=11639, psd_reject_M2odd=997201, rank_odd_23=2, single_psd=7840341
+   cpu seconds: 5721 (mean 0.102 per base, max 6.3)
+=== I.1 (4,2,1) end 10:44:28
+=== I.4 (3,4,0) start 10:44:28
+I.4 profile (3, 4, 0): |G| = 4; rectangles 144; N-configurations 2606408, orbits under G 653570   [merged from 128 parts]
+   bases tested 653570: rejected by budgets 0, by PSD (exact) 577061, kept 76509   stats {'psd_reject_M1': 576570, 'psd_reject_M2': 491}
+I.4 profile (3, 4, 0): stage-1 file /home/ubuntu/lemma_out/I4_340/s1_I4_340.json, 76509 bases, sha1 5683ec8dbf7afc17f4449b07111191db3b096366
+   parts 128; sha1 recorded by the parts: ['5683ec8dbf7afc17f4449b07111191db3b096366']; bases finished 76509; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [76509, 340792, 520484, 237910, 24232, 395]  total 1200322
+   candidates (chosen unit)  : [340792, 2703614, 5022468, 2482849, 252628, 3831]  total 10806182
+     rejected by budgets     : [0, 0, 80608, 94610, 17085, 372]
+     rejected by PSD (exact) : [0, 2183130, 4703950, 2364007, 235148, 3459]
+     kept                    : [340792, 520484, 237910, 24232, 395]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=12773565, pair_budget=92853502, psd_reject_M1even=4929767, psd_reject_M1odd=16928484, psd_reject_M2even=15091, psd_reject_M2odd=705850, single_psd=13089498
+   cpu seconds: 6583 (mean 0.086 per base, max 4.5)
+=== I.4 (3,4,0) end 10:47:12
+=== I.3 (3,4,0) start 10:47:12
+I.3 profile (3, 4, 0): |G| = 4; rectangles 146; N-configurations 2663180, orbits under G 666032   [merged from 128 parts]
+   bases tested 666032: rejected by budgets 0, by PSD (exact) 553664, kept 112368   stats {'psd_reject_M1': 553664}
+I.3 profile (3, 4, 0): stage-1 file /home/ubuntu/lemma_out/I3_340/s1_I3_340.json, 112368 bases, sha1 4d191a727459a83750229f67620a37b25bd0db56
+   parts 128; sha1 recorded by the parts: ['4d191a727459a83750229f67620a37b25bd0db56']; bases finished 112368; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [112368, 507111, 894928, 484271, 56282, 988]  total 2055948
+   candidates (chosen unit)  : [507111, 4139599, 8547848, 4826172, 546953, 9069]  total 18576752
+     rejected by budgets     : [0, 0, 152207, 205857, 40416, 1014]
+     rejected by PSD (exact) : [0, 3244671, 7911370, 4564033, 505549, 8055]
+     kept                    : [507111, 894928, 484271, 56282, 988]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=24855880, pair_budget=166471991, psd_reject_M1even=7305912, psd_reject_M1odd=26674265, psd_reject_M2even=24666, psd_reject_M2odd=1339946, single_psd=19111111
+   cpu seconds: 10555 (mean 0.094 per base, max 3.7)
+=== I.3 (3,4,0) end 10:50:19
+=== I.1 (3,4,0) start 10:50:19
+I.1 profile (3, 4, 0): |G| = 4; rectangles 161; N-configurations 3508550, orbits under G 878137   [merged from 128 parts]
+   bases tested 878137: rejected by budgets 0, by PSD (exact) 658548, kept 219589   stats {'psd_reject_M1': 658548}
+I.1 profile (3, 4, 0): stage-1 file /home/ubuntu/lemma_out/I1_340/s1_I1_340.json, 219589 bases, sha1 9b834b42ae15fbb85423877a985b9513a5a5908c
+   parts 128; sha1 recorded by the parts: ['9b834b42ae15fbb85423877a985b9513a5a5908c']; bases finished 219589; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [219589, 1360986, 3182403, 2207350, 304035, 5598]  total 7279961
+   candidates (chosen unit)  : [1360986, 12178675, 32335953, 23437315, 3189642, 55320]  total 72557891
+     rejected by budgets     : [0, 0, 639893, 1016960, 235388, 6239]
+     rejected by PSD (exact) : [0, 8996272, 29488710, 22116320, 2948656, 49068]
+     kept                    : [1360986, 3182403, 2207350, 304035, 5598, 13]
+     of which dead by rank   : [0, 0, 0, 0, 0, 13]
+   complete configurations: 0
+   stats: no_pattern=111119567, pair_budget=623553649, psd_reject_M1even=22663944, psd_reject_M1odd=76785590, psd_reject_M2even=129926, psd_reject_M2odd=5298686, rank_odd_23=13, single_psd=41279120
+   cpu seconds: 31327 (mean 0.143 per base, max 10.1)
+=== I.1 (3,4,0) end 10:57:06
