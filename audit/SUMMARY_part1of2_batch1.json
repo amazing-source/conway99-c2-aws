@@ -1,0 +1,195 @@
+{
+ "part": [
+  1,
+  2
+ ],
+ "batch": "1",
+ "jobs_in_share": 136,
+ "done_here": 136,
+ "failed": [],
+ "jobs_with_a_pair_not_excluded_again": [],
+ "skipped_already_done": 0,
+ "per_lattice": {
+  "022": {
+   "jobs": 19,
+   "pairs": 2043835,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 2043625,
+   "rigid": 210,
+   "with_zero_candidate": 1136931,
+   "exposed": 170
+  },
+  "023": {
+   "jobs": 15,
+   "pairs": 1471565,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 1471395,
+   "rigid": 170,
+   "with_zero_candidate": 816826,
+   "exposed": 142
+  },
+  "024": {
+   "jobs": 17,
+   "pairs": 1672535,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 1672274,
+   "rigid": 261,
+   "with_zero_candidate": 1486328,
+   "exposed": 255
+  },
+  "026": {
+   "jobs": 28,
+   "pairs": 2736769,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 2736444,
+   "rigid": 325,
+   "with_zero_candidate": 2430489,
+   "exposed": 321
+  },
+  "027": {
+   "jobs": 9,
+   "pairs": 883950,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 883882,
+   "rigid": 68,
+   "with_zero_candidate": 490621,
+   "exposed": 68
+  },
+  "028": {
+   "jobs": 1,
+   "pairs": 50646,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 50586,
+   "rigid": 60,
+   "with_zero_candidate": 50646,
+   "exposed": 60
+  },
+  "037": {
+   "jobs": 8,
+   "pairs": 839366,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 839123,
+   "rigid": 243,
+   "with_zero_candidate": 836786,
+   "exposed": 243
+  },
+  "049": {
+   "jobs": 2,
+   "pairs": 199830,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 199742,
+   "rigid": 88,
+   "with_zero_candidate": 182834,
+   "exposed": 88
+  },
+  "050": {
+   "jobs": 5,
+   "pairs": 439876,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 439692,
+   "rigid": 184,
+   "with_zero_candidate": 401922,
+   "exposed": 176
+  },
+  "052": {
+   "jobs": 1,
+   "pairs": 70550,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 70476,
+   "rigid": 74,
+   "with_zero_candidate": 70550,
+   "exposed": 74
+  },
+  "053": {
+   "jobs": 6,
+   "pairs": 576044,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 575911,
+   "rigid": 133,
+   "with_zero_candidate": 519702,
+   "exposed": 131
+  },
+  "077": {
+   "jobs": 4,
+   "pairs": 238423,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 238060,
+   "rigid": 363,
+   "with_zero_candidate": 238423,
+   "exposed": 363
+  },
+  "079": {
+   "jobs": 4,
+   "pairs": 212803,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 212633,
+   "rigid": 170,
+   "with_zero_candidate": 212803,
+   "exposed": 170
+  },
+  "080": {
+   "jobs": 4,
+   "pairs": 173825,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 173593,
+   "rigid": 232,
+   "with_zero_candidate": 173825,
+   "exposed": 232
+  },
+  "101": {
+   "jobs": 4,
+   "pairs": 31408,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 31316,
+   "rigid": 92,
+   "with_zero_candidate": 31408,
+   "exposed": 92
+  },
+  "103": {
+   "jobs": 4,
+   "pairs": 31943,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 31864,
+   "rigid": 79,
+   "with_zero_candidate": 31943,
+   "exposed": 79
+  },
+  "104": {
+   "jobs": 4,
+   "pairs": 37931,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 37909,
+   "rigid": 22,
+   "with_zero_candidate": 37931,
+   "exposed": 22
+  },
+  "138": {
+   "jobs": 1,
+   "pairs": 1026,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 1018,
+   "rigid": 8,
+   "with_zero_candidate": 1026,
+   "exposed": 8
+  }
+ },
+ "hours": 0.84
+}
