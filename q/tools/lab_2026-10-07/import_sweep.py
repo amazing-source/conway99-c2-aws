@@ -1,6 +1,7 @@
 """Lab import of the deferral sweep (C2, 2026-10-07). READS, CHECKS and REPORTS; it does not write the tracker.
 
   .venv/Scripts/python.exe scripts/cloud/import_sweep.py [--json out.json] [--compare <laptop SWEEP_STATE json>] [--lids 013,016]
+                                                         [--manifest out.json]   (list of the records to certify, for q/qcert.py)
 
 Records: aws_repo/resultats_q/<machine>/results/<lid>_<k>_<n>.jsonl (copied by `q/monitor_q.py --fetch`), kinds "stream" and
 "golay_pairs", for the lattices still open in the tracker; plus the records already in data/finishC/stream/<lid>/chunks.jsonl
@@ -132,6 +133,7 @@ def main():
                 if not d.get("chunk_ok"): continue
                 bad = check(d, lid, k, n, ST, GO, PAR, DEF)
                 if bad: refused.append((f.replace(REPO, ""), bad)); continue
+                d["_src"] = [os.path.basename(os.path.dirname(os.path.dirname(f))), os.path.basename(f)]
                 recs[lid].append(d)
         # records imported earlier by import_results.py (chunks done before the queue existed are only there)
         cf = os.path.join(LAB, "data", "finishC", "stream", lid, "chunks.jsonl")
@@ -146,7 +148,7 @@ def main():
                 bad = check(d, lid, d["chunk"][0], d["chunk"][1], ST, GO, PAR, DEF)
                 if bad: refused.append(("chunks.jsonl of %s, chunk %s" % (lid, d["chunk"]), bad)); continue
                 have.add(kk); recs[lid].append(d); nold += 1
-    out = {}
+    out = {}; manifest = []
     print("files read: %d; records accepted: %d (of which %d only in the lab's chunks.jsonl); refused: %d" % (nfiles, sum(len(v) for v in recs.values()), nold, len(refused)))
     for f, bad in refused[:20]: print("  REFUSED %s: %s" % (f, "; ".join(bad)))
     print("%-4s %7s %11s | %10s %9s %9s %10s | %9s %9s %6s | %s" % ("lid", "records", "pairs", "at once", "search", "twin", "swap", "T18", "T20", "INCOMP", "state"))
@@ -183,6 +185,13 @@ def main():
             for d in sel:
                 for v, m in d["verdicts"].items(): c[cls(v)] += m
                 twins.update(d.get("twin_deferred") or {})
+                df = d.get("deferred") or {}
+                if df.get("T18") or df.get("T20"):
+                    assert "_src" in d, "a deferral record that is only in chunks.jsonl"
+                    manifest.append({"key": "%s:%d:%d" % (lid, d["chunk"][0], d["chunk"][1]), "lid": lid, "k": d["chunk"][0], "n": d["chunk"][1],
+                                     "sha256": d["sha256"], "n_pairs": d["n_pairs"], "T18": len(df.get("T18", [])), "T20": len(df.get("T20", [])),
+                                     "branch": "run/" + d["_src"][0], "file": d["_src"][1], "wall_secs": d.get("wall_secs"),
+                                     "producer_max_out": (d.get("merged") or {}).get("producer_max_out")})
             npairs = sum(d["n_pairs"] for d in sel); dbl = sum(1 for x in cov if x > 1); miss = sum(1 for x in cov if x == 0)
             pend = sorted(k for k in twins if CL.get(eval(k), {"?"}) != {"excluded"})
             st = ("NOT swept: %d of %d y1 representatives not covered" % (miss, NR) if miss else
@@ -205,6 +214,13 @@ def main():
                 same = a["pairs"] == b["pairs"] and all(a[x] == b[x] for x in CLASSES)
             print("  %s: %s" % (lid, "same counts" if same else "DIFFERENT (lab %s / laptop %s)" % (
                 {x: a.get(x) for x in ("pairs", "defer_T18", "defer_T20")}, {x: b.get(x) for x in ("pairs", "defer_T18", "defer_T20", "jobs_done", "jobs")})))
+    if "--manifest" in sys.argv:
+        manifest.sort(key=lambda m: (-m["n_pairs"], m["key"]))
+        json.dump({"what": "stream records with DEFERRED pairs selected by the lab import (scripts/cloud/import_sweep.py); one certificate per "
+                           "record (q/cert_stream.py): the stream is regenerated and every deferred position is checked", "records": manifest},
+                  open(sys.argv[sys.argv.index("--manifest") + 1], "w"), indent=0)
+        print("manifest: %d records, %d + %d deferred pairs, wall of the original jobs %.0f h" % (
+            len(manifest), sum(m["T18"] for m in manifest), sum(m["T20"] for m in manifest), sum(m["wall_secs"] or 0 for m in manifest) / 3600))
     if "--json" in sys.argv: json.dump({"lattices": out, "refused": refused}, open(sys.argv[sys.argv.index("--json") + 1], "w"), indent=1)
 
 

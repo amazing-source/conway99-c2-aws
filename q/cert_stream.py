@@ -25,6 +25,13 @@ from fractions import Fraction as F
 import numpy as np
 
 
+def toF(x):
+    """exact Fraction of a basis entry (Fraction, Python int, numpy integer, or a string)"""
+    if isinstance(x, F): return F(int(x.numerator), int(x.denominator))
+    if isinstance(x, (int, np.integer)): return F(int(x))
+    return F(str(x))
+
+
 def exact_det(M):
     """determinant of an integer matrix, fraction-free (Bareiss), Python integers"""
     A = [[int(x) for x in row] for row in M]; n = len(A); sign = 1; prev = 1
@@ -52,7 +59,7 @@ def main():
     import frame_dfs_next as FD
     gens = json.load(open(os.path.join(pkg, "external_runs", "structures_3eceb4d", "U", "%s.json" % lid)))["gens"]
     L = FD.lattice_data(gens, F(1))
-    Bq = [[F(x) for x in row] for row in L["B"]]
+    Bq = [[toF(x) for x in row] for row in L["B"]]
     # 1. the lattice
     Gq = [[sum(a * b for a, b in zip(u, v)) for v in Bq] for u in Bq]
     assert all(x.denominator == 1 for row in Gq for x in row) and all(Gq[i][j] == Gq[j][i] for i in range(24) for j in range(24)), "Gram not integral"
@@ -63,6 +70,7 @@ def main():
     DEN = 1
     for row in Bq:
         for x in row: DEN = DEN * x.denominator // math.gcd(DEN, x.denominator)
+    DEN = int(DEN)
     BD = np.array([[int(x * DEN) for x in row] for row in Bq], dtype=np.int64); CRn = np.array(CR, dtype=np.int64).reshape(-1, 24)
     # 2. the stream
     sh = hashlib.sha256(); n = 0; end = None; got = {}
