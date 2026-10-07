@@ -1,4 +1,4 @@
-# Route (C): the final statement and what it rests on — DRAFT 4 of 2026-10-07, state at 15:35 UTC
+# Route (C): the final statement and what it rests on — DRAFT 4 of 2026-10-07, state at 15:25 UTC (clock of the lab PC)
 
 Lab session (Claude). Board line D5 of `lemma/T20_BOARD.md` (compute repo). This is a recheck by AI sessions, not a human referee
 and not a formal proof.
@@ -17,7 +17,7 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 
 ## 2. The chain
 
-| Step | Content | Where | Status on 07/10, 15:10 |
+| Step | Content | Where | Status on 07/10, 15:25 |
 |---|---|---|---|
 | R0 | An automorphism of order 2 has exactly one fixed vertex | `upstream/AUDIT_REDUCTION.md` A.0 | hand proof (laptop session); refereed by Codex: no error |
 | R1 | Theorem R: frame (7 h of norm 4, 42 u of norm 3, y_1, y_2 of norm 7) in an odd unimodular lattice U of rank 24 without vector of norm 1; properties (R-i)..(R-vii), among them E(v) = 7 (v,v) - (v,y_1)^2 - (v,y_2)^2 >= 8 and the dictionary "v in U -> sigma-odd integer eigenfunction of squared norm 2 E(v)" | same, A.1-A.8; U indecomposable: A.9 | hand proof; refereed by Codex: no error. Cited theorems: the oddity formula; classification of forms over F_7. **The input "g in {18, 20}" of the older notes is no longer used** (A.4), and no rule of the engine or of the producer uses g (checked by me and by Codex) |
@@ -46,7 +46,7 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 | | Finding | Status |
 |---|---|---|
 | H1 | `joint` keeps at most 1000 joint star sums per leaf, without a flag | real in the code, never exercised: the verdict it could falsify occurs in no stored record (17,676 + 356 + 57 files); the lab importer refuses it |
-| H2 | The rigid kernel (pairs without flex point) never builds a frame with an h of zero footprint | **real, and exercised** (24 pairs of lattice 080 were decided by it). Hand lemma (lab): impossible unless the two even neighbours have the same Coxeter number H and U has a root component of Coxeter number H: 27 lattices, 25 of them treated by the engine. Exact audit of their streams (`q/audit_rigid.py`): every pair without flex point that has a zero-footprint candidate is searched again with the general kernel. Coverage checked lattice by lattice (`scripts/cloud/audit_coverage.py`, 15:10): **24 of 25 covered, every exposed pair excluded again** (15:30; 001, 006, 007, 014, 022, 023, 024, 026, 027, 028, 037, 049, 050, 052, 053, 077, 079, 080, 101, 103, 104, 105, 137, 138; for the plan lattices the audited pairs add up exactly to the sweep's pair counts). The collector and its report were reviewed by Codex (`AUDIT_ENGINE_RULES.md`). Not yet: 003 (representatives 2, 3, 180 running; 157, 162, 174, 176 running too and in any case covered by Corollary Y1; 181 has no record: nothing to audit) |
+| H2 | The rigid kernel (pairs without flex point) never builds a frame with an h of zero footprint | **real, and exercised** (24 pairs of lattice 080 were decided by it). Hand lemma (lab): impossible unless the two even neighbours have the same Coxeter number H and U has a root component of Coxeter number H: 27 lattices, 25 of them treated by the engine. Exact audit of their streams (`q/audit_rigid.py`): every pair without flex point that has a zero-footprint candidate is searched again with the general kernel. Coverage checked lattice by lattice (`scripts/cloud/audit_coverage.py`): **24 of 25 covered, every exposed pair excluded again** (15:22; 001, 006, 007, 014, 022, 023, 024, 026, 027, 028, 037, 049, 050, 052, 053, 077, 079, 080, 101, 103, 104, 105, 137, 138; for the plan lattices the audited pairs add up exactly to the sweep's pair counts). The collector and its report were reviewed by Codex (`AUDIT_ENGINE_RULES.md`). Not yet: 003 (representatives 2, 3, 180 running; 157, 162, 174, 176 running too and in any case covered by Corollary Y1; 181 has no record: nothing to audit) |
 | H3 | The list of norm-4 vectors is produced by a floating-point enumeration | closed: N3 = 4096 and N4 = 196560 - 24 (N2 + N3) for all 156 lattices (theta series), every vector rechecked |
 | H4 | The per-pair budget test accepts an LP solver status | concerned one lattice, 105 (6,310 pairs, lab run of 29/09). **Closed 14:45**: its 56,544 pairs (enumeration up to W(R)) passed again through the v10 producer and consumer without the budget test: all excluded, swap-covered or twin-transferred; stream sha256 identical on AWS and on the lab PC |
 | H5 | The 9/7 rule needs T16, which Theorem R does not give | T16 refereed (R5) |
@@ -56,7 +56,7 @@ every lattice is excluded (sections 3, 4). T4 of `MODEL.md` and the reconstructi
 Excluded in the tracker: 143. Open: 13.
 
 **Read "excluded" with these reservations until the items of section 5 are done:**
-- 20 lattices were excluded subject to the rigid-kernel audit H2: the audit is now complete and clean for all 20 (15:30); this
+- 20 lattices were excluded subject to the rigid-kernel audit H2: the audit is now complete and clean for all 20 (15:22); this
   reservation is lifted for them (the audit of the open lattice 003 is not finished: section 5);
 - 105: its 6,310 "pair budget" pairs are now excluded without a solver (H4 closed, 14:45);
 - 143 rested on one lattice-level test that nobody had reviewed. It now has a two-line hand proof
