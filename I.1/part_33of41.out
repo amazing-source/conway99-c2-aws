@@ -1,0 +1,3 @@
+I.1: 227 classes of bases (labelled {'labelled': 4608, 'after_budget_degree': 1356, 'after_psd': 712})
+BASE I.1 33 | I.1 n3=2 type 034 258 case iii inner None bits 1 | class size 4 | h2 3 alpha 1 | timeout False | visited [1, 9, 68, 264, 615, 286, 27, 1, 0, 0, 0, 0, 0] | kept [9, 68, 264, 615, 286, 27, 1, 0, 0, 0, 0, 0, 0] | rej budget 2556 psd 27558 rank 0 | complete 0 | 12.4 s
+BASE I.1 74 | I.1 n3=2 type 257 268 case i inner None bits 3 | class size 3 | h2 3 alpha 0 | timeout False | visited [1, 52, 1124, 9162, 28976, 25054, 4586, 242, 0, 0, 0, 0, 0] | kept [52, 1124, 9162, 28976, 25054, 4586, 242, 0, 0, 0, 0, 0, 0] | rej budget 740352 psd 3584008 rank 0 | complete 0 | 584.3 s

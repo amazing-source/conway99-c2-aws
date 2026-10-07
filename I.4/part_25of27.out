@@ -1,0 +1,3 @@
+I.4: 146 classes of bases (labelled {'labelled': 2432, 'after_budget_degree': 718, 'after_psd': 439})
+BASE I.4 25 | I.4 n3=2 type 027 035 case i inner 0 bits 48 | class size 3 | h2 4 alpha 0 | timeout False | visited [1, 40, 647, 2802, 1302, 194, 4, 0, 0, 0, 0, 0, 0] | kept [40, 647, 2802, 1302, 194, 4, 0, 0, 0, 0, 0, 0, 0] | rej budget 22734 psd 136841 rank 0 | complete 0 | 35.2 s
+BASE I.4 52 | I.4 n3=2 type 035 169 case ii inner 1 bits 5 | class size 4 | h2 4 alpha 0 | timeout False | visited [1, 90, 1844, 9922, 15051, 4835, 511, 8, 0, 0, 0, 0, 0] | kept [90, 1844, 9922, 15051, 4835, 511, 8, 0, 0, 0, 0, 0, 0] | rej budget 234524 psd 1027399 rank 0 | complete 0 | 235.2 s
