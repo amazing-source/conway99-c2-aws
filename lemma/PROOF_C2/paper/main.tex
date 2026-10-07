@@ -2,8 +2,9 @@
 % lemma/upstream/{LATTICE_143,AUDIT_ENGINE_RULES,AUDIT_REDUCTION}.md. Appendix A is generated (table156.tex, lab session).
 %
 % OPEN POINTS, to be closed before circulation (search for "TODO"):
-%  1. Author block: written on the model of the author's public manuscript on order 7 (conway-C7/tex/order7.tex); to be
-%     confirmed by him, with the correspondence address he wants printed.
+%  1. (closed 07/10, author's instruction) Sole author: Dilan Djematene; AI assistance in the Acknowledgements, without
+%     naming a model. The correspondence address he wants printed is still to be added. All the Conway repositories of
+%     the account are private since 07/10: no sentence of the paper may say that the material is public.
 %  2. Lattice 044: its re-run is in progress; Section 8.5 says so.
 %  3. (closed 07/10) Packing numbers of Table 1: reproduced by a second program (Codex, q/codex_independent_packing.py) and,
 %     for test (a), by a third (lab); Section 9 says so.
@@ -43,11 +44,7 @@
 \newcommand{\repo}{\texttt{github.com/amazing-source/conway99-c2-aws}}
 
 \title[No involution on a strongly regular graph $(99,14,1,2)$]{A strongly regular graph with parameters $(99,14,1,2)$\\ has no automorphism of order two}
-% TODO 1: author block on the model of the order-7 manuscript; to be confirmed.
-\author[Claude and Codex, directed by D.~Djematene]{Claude (Opus~5.5, Anthropic) and Codex (OpenAI)\\[2pt]
-directed by Dilan Djematene}
-\thanks{The proof of Lemma $T_{16}$ reproduced in the supplement was written with ChatGPT (OpenAI). Correspondence:
-Dilan Djematene.}
+\author{Dilan Djematene}
 \date{Draft of 7 October 2026}
 
 \begin{document}
@@ -62,7 +59,7 @@ $136$ others, the pairs of vectors of norm $7$ that could be the two normals of 
 excluded one by one: by a short vector whose existence contradicts one of three nonexistence lemmas for integer eigenfunctions
 of small norm, with an exact certificate for each pair, or by an exhaustive search for the frame. We state which steps were
 verified by independent programs and which rest on a single audited program. All programs, records and certificates are
-public. Together with the known exclusions of the odd prime orders, the theorem implies that a strongly regular graph with
+archived in a repository that will be opened with the paper. Together with the known exclusions of the odd prime orders, the theorem implies that a strongly regular graph with
 parameters $(99,14,1,2)$, if it exists, has no nontrivial automorphism; that consequence and its dependencies are the
 subject of a separate note.
 \end{abstract}
@@ -705,7 +702,7 @@ checked by a separate verifier and were recomputed by an independent program. Fo
 least three programs, one of them written from the text alone. For $T_{20}$ every computed step has a second program; for
 one of the nine configurations the second program shares the description of the model and part of the enumeration skeleton
 with the first, and in the large searches the second program traverses the tree of the first again, with the same choice of
-the object to branch on and its own tests. Each of the three texts was refereed by a session that had not written it.
+the object to branch on and its own tests. Each of the three texts was refereed separately from its writing.
 
 \subsection*{The lists of short vectors} For all $156$ lattices the lists of vectors of norm $2$, $3$, $4$ built by the
 final version of the program were verified in exact arithmetic, on one machine: every vector has its norm, the vectors are
@@ -765,14 +762,19 @@ of norm $1$) are linearly independent.
 \item The completeness of the enumeration of the pairs, compared with an independent enumerator on four lattices.
 \item The correctness of the search program: audited and run again, not duplicated.
 \end{enumerate}
-The whole proof, including the hand arguments of this paper, was produced and cross-checked by several AI systems working
-in separate sessions and refereeing one another, under the direction of D.~Djematene. At the time of writing it has not been read
+The whole proof, including the hand arguments of this paper, was produced with the assistance of AI systems (see the
+Acknowledgements), working in separate sessions and checking one another's work. At the time of writing it has not been read
 by an independent expert, and no part of it has been formalised in a proof assistant; a formalisation of
 Sections~\ref{sec:fix}--\ref{sec:env} and of the certificate checkers is planned.
 
 \subsection*{Reproducibility} The repository \cite{repo} contains the programs, the commands, the records of every run, the
 certificates and their checkers, the referee reports, and a table giving for each computation cited here the program
 version, the location of its output and the line to read.
+
+\section*{Acknowledgements}
+This work was carried out with the assistance of AI systems (large language models), which were used to develop the
+arguments, to write and check the programs, and to draft and cross-check the texts. The author directed the work and takes
+full responsibility for its content.
 
 \appendix
 \section{The 156 lattices}\label{app:table}
@@ -802,13 +804,12 @@ mathematischen Wissenschaften 290, Springer, New York, 1999.
 determinant $1$}, Bull. Amer. Math. Soc. (N.S.) \textbf{23} (1990), no.~2, 383--387.
 \bibitem{CM} D.~Crnkovi\'c and M.~Maksimovi\'c, \emph{Construction of strongly regular graphs having an automorphism group of
 composite order}, Contrib. Discrete Math. \textbf{15} (2020), no.~1, 22--41.
-\bibitem{D3} Claude (Opus~5.5), for D.~Djematene, \emph{Le graphe de Conway $\mathrm{srg}(99,14,1,2)$ n'a pas
+\bibitem{D3} D.~Djematene, \emph{Le graphe de Conway $\mathrm{srg}(99,14,1,2)$ n'a pas
 d'automorphisme d'ordre $3$: une obstruction par les discriminants}, manuscript with a formalisation in Lean~4, September
 2026; not yet refereed.
-\bibitem{D7} ChatGPT and Claude, directed by D.~Djematene, \emph{A computer-free proof that a Conway $99$-graph has no
-automorphism of order seven}, manuscript with a formalisation in Lean~4, October 2026,
-\texttt{github.com/amazing-source/conway-C7}; not yet refereed.
-\bibitem{Note} \emph{A Conway $99$-graph, if it exists, is asymmetric: statement and dependencies}, note accompanying this
+\bibitem{D7} D.~Djematene, \emph{A computer-free proof that a Conway $99$-graph has no
+automorphism of order seven}, manuscript with a formalisation in Lean~4, October 2026; not yet refereed.
+\bibitem{Note} D.~Djematene, \emph{A Conway $99$-graph, if it exists, is asymmetric: statement and dependencies}, note accompanying this
 paper, October 2026.
 \bibitem{LTS} C.~W.~H.~Lam, L.~Thiel and S.~Swiercz, \emph{The non-existence of finite projective planes of order $10$},
 Canad. J. Math. \textbf{41} (1989), no.~6, 1117--1123.
@@ -817,7 +818,8 @@ no.~6, 733--742.
 \bibitem{MM} A.~A.~Makhnev and I.~M.~Minakova, \emph{On automorphisms of strongly regular graphs with parameters
 $\lambda=1$, $\mu=2$}, Diskret. Mat. \textbf{16} (2004), no.~1, 95--104; English transl.: Discrete Math. Appl. \textbf{14}
 (2004), no.~2, 201--210.
-\bibitem{repo} Programs, records, certificates and supplementary proofs: \repo, folder \texttt{lemma/}, 2026.
+\bibitem{repo} D.~Djematene, programs, records, certificates and supplementary proofs for this paper: repository
+\texttt{conway99-c2-aws}, folder \texttt{lemma/}, 2026 (private at the time of writing; to be opened with the paper).
 \end{thebibliography}
 
 \end{document}

@@ -3,7 +3,8 @@
 % Sources read for this note (read, not rebuilt): conway99-c3-experimental (README.md, c3formal/README.md,
 % c3formal/Challenge.lean, pdf/preuve_c3.tex) and conway-C7 (README.md, lean/Challenge.lean, tex/order7.tex);
 % CI runs listed with `gh run list` on 2026-10-07.
-% TODO: author block to be confirmed; public location of the order-3 manuscript; the statements attributed to [MM04],
+% Author: Dilan Djematene alone (his instruction of 07/10); AI assistance in the Acknowledgements, no model named.
+% TODO: location of the order-3 and order-7 manuscripts when the repositories are opened again (all private since 07/10); the statements attributed to [MM04],
 % [Mak10], [B09], [BL11] follow the literature section of the order-3 manuscript and were not re-read in the papers.
 \documentclass[11pt]{amsart}
 \usepackage[utf8]{inputenc}
@@ -23,8 +24,7 @@
 \newcommand{\G}{\Gamma}
 
 \title[A Conway 99-graph is asymmetric]{A Conway $99$-graph, if it exists, is asymmetric:\\ statement and dependencies}
-\author[Claude and Codex, directed by D.~Djematene]{Claude (Opus~5.5, Anthropic) and Codex (OpenAI)\\[2pt]
-directed by Dilan Djematene}
+\author{Dilan Djematene}
 \date{Draft of 7 October 2026}
 
 \begin{document}
@@ -128,22 +128,26 @@ Every search for a Conway $99$-graph that prescribes a nontrivial automorphism i
 nonexistence has to deal with a graph without symmetry.
 \end{remark}
 
+\section*{Acknowledgements}
+This work was carried out with the assistance of AI systems (large language models), which were used to develop the
+arguments, to write and check the programs, and to draft and cross-check the texts. The author directed the work and takes
+full responsibility for its content.
+
 \begin{thebibliography}{99}
 \bibitem[B09]{B09} M.~Behbahani, \emph{On strongly regular graphs}, Ph.D. thesis, Concordia University, Montr\'eal, 2009.
 \bibitem[BL11]{BL11} M.~Behbahani and C.~Lam, \emph{Strongly regular graphs with non-trivial automorphisms}, Discrete Math.
 \textbf{311} (2011), no.~2--3, 132--144.
-\bibitem[C2]{C2} Claude and Codex, directed by D.~Djematene, \emph{A strongly regular graph with parameters $(99,14,1,2)$
+\bibitem[C2]{C2} D.~Djematene, \emph{A strongly regular graph with parameters $(99,14,1,2)$
 has no automorphism of order two}, manuscript and supplement, October 2026.
 \bibitem[CM20]{CM20} D.~Crnkovi\'c and M.~Maksimovi\'c, \emph{Construction of strongly regular graphs having an automorphism
 group of composite order}, Contrib. Discrete Math. \textbf{15} (2020), no.~1, 22--41.
 \bibitem[CW25]{CW25} P.~G.~Cesarz and A.~J.~Woldar, \emph{On the automorphism group of a putative Conway 99-graph}, Algebr.
 Comb. \textbf{8} (2025), no.~2, 379--398.
-\bibitem[D3]{D3} Claude (Opus~5.5), for D.~Djematene, \emph{Le graphe de Conway $\mathrm{srg}(99,14,1,2)$ n'a pas
+\bibitem[D3]{D3} D.~Djematene, \emph{Le graphe de Conway $\mathrm{srg}(99,14,1,2)$ n'a pas
 d'automorphisme d'ordre $3$: une obstruction par les discriminants}, manuscript with a formalisation in Lean~4, September
 2026.
-\bibitem[D7]{D7} ChatGPT and Claude, directed by D.~Djematene, \emph{A computer-free proof that a Conway $99$-graph has no
-automorphism of order seven}, manuscript with a formalisation in Lean~4, October 2026,
-\texttt{github.com/amazing-source/conway-C7}.
+\bibitem[D7]{D7} D.~Djematene, \emph{A computer-free proof that a Conway $99$-graph has no
+automorphism of order seven}, manuscript with a formalisation in Lean~4, October 2026.
 \bibitem[LM14]{LM14} S.~Lou and M.~Murin, \emph{On the strongly regular graph of parameters $(99,14,1,2)$}, MIT PRIMES
 report, 2014.
 \bibitem[Mak10]{Mak10} A.~A.~Makhnev, \emph{On automorphisms of distance-regular graphs}, J. Math. Sci. \textbf{166} (2010),
