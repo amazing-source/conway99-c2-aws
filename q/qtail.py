@@ -7,6 +7,8 @@ Started by q/qmachine.sh instead of the queue agent when Q_TAIL_KEYS is set (sam
   Q_NODE_LIMIT=200000000                       node limit of one search (default 4000000000, the package's production value); a pair
                                                that reaches it comes back INCOMPLETE and is listed in not_excluded, never excluded
   Q_PRODUCER_MAXOUT=50000000                   run the producer through q/producer_big.py with this cap on the y2 of one y1
+  Q_TAIL_NOEVENT=1                             diagnostic run (e.g. with a small Q_NODE_LIMIT, to list the pairs that reach it): the record
+                                               goes to diag/ on the machine branch instead of results/, and no queue event is published
   Q_TAIL_SKIP_OWNED=1                          skip a key that another machine has claimed (use it when the list is work done in
                                                advance; leave it unset to finish jobs their owners have been on for hours)
 For each key, one at a time: the package's own producer command (the one of run_jobs.start), piped into q/par_consumer.py, which
@@ -68,11 +70,14 @@ def main():
             time.sleep(10)
         prod.wait()
         if RJ.done_already(out, job):
-            os.makedirs(os.path.join(a.pd, "results"), exist_ok=True)
-            shutil.copy(res, os.path.join(a.pd, "results", os.path.basename(res)))
+            noev = Q.env("Q_TAIL_NOEVENT", "") == "1"            # 07/10: diagnostic run (small node limit): record under diag/, no queue event
+            dest = "diag" if noev else "results"
+            os.makedirs(os.path.join(a.pd, dest), exist_ok=True)
+            shutil.copy(res, os.path.join(a.pd, dest, os.path.basename(res)))
             ev_ = {"t": round(time.time()), "m": a.name, "op": "done", "jobs": [key]}
             if Q.env("Q_DEFER", "") == "1": ev_["defer"] = 1
-            a.done_here.append(key); a.unpushed.append(ev_)
+            a.done_here.append(key)
+            if not noev: a.unpushed.append(ev_)
             a.log("done %s in %.0f s" % (key, time.time() - t0))
             if a.flush_results("EN_COURS", "tail: %s done in %d s" % (key, time.time() - t0)):      # result on GitHub first
                 a.rearm_deadman()
