@@ -44,7 +44,7 @@ of the proof skeleton). T4 and the reconstruction direction are not used for sta
 | k = 0, n_3 = 2 | route B (N(p) and the X_3 orbit in the base): profile (4,2,1) finished, 8,557 bases, 0 complete; profile (3,4,0) finishing; figures as reported by the laptop session at 12:45, not yet in the repository | first program finishing; second running |
 | Hand lemmas of Codex (isolation of the inner X_0 pair, a_3 = 1, e(X_0) <= 8) | proved, re-read line by line by me; NOT used by the computations | - |
 | Route A for n_3 = 2 (my decomposition) | not run: measured at about 1,000 core-hours; 183 of 700 base classes closed, 0 complete (a partial cross-check only) | - |
-| Referee pass on the text | to do (Codex, board line D3) | - |
+| Referee pass on the text | first pass done on sections 1-10 (Codex, `lemma/t20_CODEX/REFEREE_T20_PROOF.md`): no fatal gap, two repairable errors, three audit gaps; second pass needed on 9.B and the conclusion | - |
 
 ## 4. Coverage of the 156 lattices (lab tracker, 07/10)
 
@@ -80,13 +80,22 @@ with the final engine on free machines and compare.
 3. One referee pass on `lemma/T20_PROOF.md` (section 9.B written after 1), with no open error.
 4. Certificate run complete: every one of the 7,762 stream records certified; any record not certified is a pair to treat apart.
 5. 003:181:182 finished, or its pairs treated apart.
-6. Then: `data/finishC/lemmas_accepted.json` written with the references of T18 and T20, and `convert_deferred.py --write`.
+6. Archival (referee's point G1, `lemma/t20_CODEX/REFEREE_T20_PROOF.md`): for every computation cited by T18 and T20, the per-base outputs
+   and plans, the exact source revision, the hashes of the input lists, the commands and the completion checks are in the repository
+   (some are still only in session scratch folders).
+7. Then: `data/finishC/lemmas_accepted.json` written with the references of T18 and T20, and `convert_deferred.py --write`.
 
 ## 6. What the statement would still rest on without independent recheck (to say plainly in any announcement)
 
 - R2 and R4: the upstream reduction and the completeness of the pair enumerations (source only).
 - The search engine's code (calibrated between versions, not re-read line by line).
 - T18 and T20 are computer-assisted: hand reductions plus exhaustive exact enumerations, each by at least two programs sharing
-  the hand model.
+  the hand model. Scope of that independence (referee's points G2, G3): the second programs follow the first program's choice of
+  the next unit (valid by the exhaustiveness lemma: any unfilled unit may be chosen; for case I the verifier asserts that the unit
+  is unfilled, generates its own candidates and walks its own kept set: checked in the code by me on 07/10); equal counts are a
+  cross-check, not an identity of the states; for III.1 the verifier shares the model file and part of the enumeration skeleton
+  with the first program.
+- First referee pass on `T20_PROOF.md` (Codex, 07/10): no fatal gap in the hand arguments of sections 1-10; one sign error to
+  repair (line 744) and one wording error on the split level; section 9.B and the conclusion need a new pass once written.
 - The 20 lattices excluded by lattice-level arguments (packing, criterion (E), component budget, Sol 0836): re-read earlier per the tracker, not on 07/10.
 - F0, for statement B only.
