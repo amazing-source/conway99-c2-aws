@@ -8,7 +8,8 @@ Per lattice:
   2. for those only, the package producer (c1/code/y_pairs_gamma.py --from-plan, identity symmetry): all pairs (y1, y2), y2 up to sign,
      that pass its necessary filters;
   3. for each pair, in exact integers: (y1,y1) = (y2,y2) = 7, (y1,y2) = 0, and the minimum of E(v) = 7 (v,v) - (v,y1)^2 - (v,y2)^2
-     over ALL vectors v of norm 2, 3, 4 of the lattice (lists of frame_dfs_next.lattice_data, complete: shell check of 07/10).
+     over the vectors v of norm 2 and 3 of the lattice, and of norm 4 when those give no witness (so the recorded minimum is the
+     true minimum over norms 2, 3, 4 only when it is >= 11 or comes from norm 4; a pair is a survivor only if ALL three lists give >= 11) (lists of frame_dfs_next.lattice_data, complete: shell check of 07/10).
      E(v) < 8 contradicts (R-vi); E = 8, 9, 10 contradict T16, T18, T20. A pair with such a v is excluded by that witness (stored: one
      witness per pair). A pair whose minimum is >= 11 has NO such witness: it is listed in <out dir>/<lid>_survivors.json and
      needs a frame search.
@@ -64,10 +65,11 @@ def main():
             assert (C1 @ BD == Y1).all() and (C2 @ BD == Y2).all(), "y not in U"
             g1 = C1 @ G; assert (np.einsum("ij,ij->i", g1, C1) == 7).all() and (np.einsum("ij,ij->i", C2 @ G, C2) == 7).all() and (np.einsum("ij,ij->i", g1, C2) == 0).all()
             best = np.full(len(buf), 10 ** 6, dtype=np.int64); arg = [None] * len(buf)
-            for c7, XG, X, nrm in shells:
-                if not len(X): continue
-                E = c7 - (C1 @ XG.T) ** 2 - (C2 @ XG.T) ** 2; j = E.argmin(axis=1); m = E[np.arange(len(buf)), j]; assert (m > 0).all()
-                for q in np.flatnonzero(m < best): best[q] = m[q]; arg[q] = (nrm, [int(x) for x in X[j[q]]])
+            for c7, XG, X, nrm in shells:                                 # norm 4 (the long list) only for the pairs without a witness of norm 2 or 3
+                sel = np.arange(len(buf)) if nrm < 4 else np.flatnonzero(best >= 11)
+                if not len(X) or not len(sel): continue
+                E = c7 - (C1[sel] @ XG.T) ** 2 - (C2[sel] @ XG.T) ** 2; j = E.argmin(axis=1); m = E[np.arange(len(sel)), j]; assert (m > 0).all()
+                for t in np.flatnonzero(m < best[sel]): q = sel[t]; best[q] = m[t]; arg[q] = (nrm, [int(x) for x in X[j[t]]])
             for q, b in enumerate(buf):
                 e = int(best[q]); by[str(e) if e <= 10 else ">=11"] += 1
                 if e <= 10:

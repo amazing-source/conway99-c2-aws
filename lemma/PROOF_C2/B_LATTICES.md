@@ -118,6 +118,61 @@ text for each lattice. The generator asserts, before writing: 156 lattices, all 
 lattice S recounted without fault; for SD and GD, as many good certificates as deferral records and as many certified pairs as
 deferred ones; the 25 audited lattices covered with no exposed pair left; the shell check passed for all 156.
 
+## B.6 The 28 lattices of the old pair-list methods: what falls without any search
+
+Lattices H, F, H3 except 105 (re-run with v10 on 07/10): 28 lattices, excluded on 27-29/09 on the lab PC from C1's pair lists; their
+stored records say every pair excluded (about 150,000 pairs), without code version. On 07/10 evening they were treated in two ways.
+
+**By the lemmas alone (lab PC, no search).** For each lattice, the package producer's y_1 stage with an identity-only symmetry file
+gives every admissible y_1 up to the Weyl group (`measures/rerun_28/plan_<lid>.json`). Then (`y1_then_witness.py`,
+`measures/hand_28/`):
+1. Corollary Y1: a y_1 with a root r, (r,y_1) = +-2, hosts no frame (certificates `measures/hand_28/cert_y1/`);
+2. for the y_1 left, every pair (y_1, y_2) of the producer, and the minimum of E(v) over the vectors v of norm 2, 3, 4: a v with
+   E(v) < 8 contradicts (R-vi), E = 8, 9, 10 contradict T16, T18, T20 (one witness per pair).
+
+| id | roots | y_1 (up to the Weyl group) | with a root of product 2 | y_1 left | pairs of the y_1 left | E <= 7 or 8 | E = 9 | E = 10 | no witness (min E >= 11) |
+|---|---|---|---|---|---|---|---|---|---|
+| 044 | a_3^8 | 1,168 | 1,152 | 16 | 144,256 | 49,216 | 66,816 | 26,304 | 1,920 |
+| 072 | a_5^4a_1^4 | 456 | 448 | 8 | 11,968 | 3,744 | 6,288 | 1,696 | 240 |
+| 087 | d_4^6 | 240 | 240 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 096 | a_7d_5^2a_3^2 | 262 | 246 | 16 | 3,228 | 2,208 | 740 | 280 | 0 |
+| 097 | a_7^2d_4^2 | 332 | 300 | 32 | 4,584 | 2,096 | 1,976 | 480 | 32 |
+| 106 | d_6^2d_4^2a_1^4 | 174 | 172 | 2 | 364 | 276 | 44 | 12 | 32 |
+| 108 | a_7^2d_5d_4 | 170 | 160 | 10 | 1,876 | 1,300 | 380 | 196 | 0 |
+| 111 | a_9^2a_2^2 | 222 | 170 | 52 | 3,024 | 1,696 | 576 | 432 | 320 |
+| 115 | a_7^2d_5^2 | 64 | 64 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 116 | a_8^2a_7 | 92 | 84 | 8 | 728 | 480 | 152 | 96 | 0 |
+| 119 | a_{11}d_5d_4a_3 | 100 | 90 | 10 | 390 | 204 | 144 | 42 | 0 |
+| 120 | a_9a_7d_6a_1 | 102 | 92 | 10 | 700 | 452 | 176 | 60 | 12 |
+| 121 | a_9a_7d_6a_1 | 86 | 78 | 8 | 312 | 180 | 104 | 28 | 0 |
+| 122 | d_6^2d_6d_4a_1^2 | 72 | 72 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 123 | a_{11}a_8a_3 | 118 | 92 | 26 | 776 | 348 | 212 | 164 | 52 |
+| 124 | d_8a_7^2 | 96 | 82 | 14 | 416 | 192 | 160 | 48 | 16 |
+| 125 | a_{11}d_6a_5a_1 | 73 | 65 | 8 | 268 | 158 | 76 | 34 | 0 |
+| 126 | a_{10}e_6a_6 | 102 | 90 | 12 | 244 | 100 | 96 | 40 | 8 |
+| 127 | d_7a_7e_6a_3 | 72 | 68 | 4 | 60 | 44 | 12 | 4 | 0 |
+| 130 | a_{12}a_7a_4 | 62 | 52 | 10 | 340 | 208 | 84 | 32 | 16 |
+| 131 | d_8d_6^2a_1^2a_1^2 | 51 | 50 | 1 | 26 | 14 | 4 | 4 | 4 |
+| 132 | d_6^4 | 32 | 32 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 135 | a_{11}d_7d_5 | 40 | 36 | 4 | 12 | 12 | 0 | 0 | 0 |
+| 137 | a_9e_7a_7 | 34 | 32 | 2 | 52 | 48 | 0 | 4 | 0 |
+| 138 | e_7d_6d_6d_4a_1 | 27 | 27 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 139 | d_8^2d_4^2 | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 140 | a_{11}d_9a_3 | 30 | 26 | 4 | 32 | 24 | 4 | 4 | 0 |
+| 141 | a_{12}a_{11} | 31 | 27 | 4 | 52 | 44 | 4 | 4 | 0 |
+| all | | 4,334 | 4,073 | 261 | 173,708 | 63,044 | 78,048 | 29,964 | 2,652 |
+
+**17 lattices have no pair left: 087, 096, 108, 115, 116, 119, 121, 122, 125, 127, 132, 135, 137, 138, 139, 140, 141.** They are excluded by Theorem R, T16, T18, T20 and explicit witnesses, with no frame search
+at all; six of them (087, 115, 122, 132, 138, 139) at the level of y_1 alone. In the 11 others, 2,652 pairs in all (044: 1920, 072: 240, 097: 32, 106: 32, 111: 320, 120: 12, 123: 52, 124: 16, 126: 8, 130: 16, 131: 4) pass every
+short-vector test (minimum of E at least 11) and need a search.
+What this rests on, besides the three lemmas: the completeness of the producer's y_1 stage and of its y_2 stage for the y_1 left
+(compared with the independent enumerator on 135, 140, 141: same numbers of orbits), and the completeness of the lists of norm 2,
+3, 4 (shell check).
+
+**By the engine (machines, in progress on 07/10 at 18:40 UTC).** The 28 whole lattices through package v10 with the same plans
+(`measures/RERUN_28_MANIFEST_2026-10-07.json`, 224 jobs, lab basis given to the producer, identity symmetry), on two sets of
+machines; acceptance by `rerun_713_check.py` as for B.3. Result to be written here when the records are in.
+
 ## B.5 What Part B does not establish
 
 - The completeness of Borcherds' list (cited).
