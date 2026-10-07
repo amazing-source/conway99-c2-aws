@@ -199,7 +199,10 @@ def main():
             if dbl: st += "; %d representatives covered twice" % dbl
             st += "; twin classes not yet excluded: %d of %d" % (len(pend), len(twins))
             o.update(pairs=npairs, selected=len(sel), y1_reps=NR, not_covered=miss, covered_twice=dbl, kind="stream", twin_classes=len(twins),
-                     twin_pending=pend, **{x: c[x] for x in CLASSES})
+                     twin_pending=pend, twin_all=sorted(twins), full=bool(full and not miss),
+                     deferral_records=[[d["chunk"][0], d["chunk"][1], d["sha256"], len((d.get("deferred") or {}).get("T18", [])),
+                                        len((d.get("deferred") or {}).get("T20", []))] for d in sel if (d.get("deferred") or {}).get("T18") or (d.get("deferred") or {}).get("T20")],
+                     **{x: c[x] for x in CLASSES})
             print("%-4s %7d %11d | %10d %9d %9d %10d | %9d %9d %6d | %s" % (lid, len(R), npairs, c["excl_at_once"], c["excl_search"], c["twin"], c["swap"],
                                                                      c["defer_T18"], c["defer_T20"], c["incomplete"], st))
         o["state"] = st; out[lid] = o
