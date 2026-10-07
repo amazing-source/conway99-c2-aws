@@ -1,0 +1,80 @@
+﻿{"roots (both signs)": 56, "norm 3": 4096, "norm 4": 96912, "new-root pairs": 52, "det G": 1, "odd": true, "roots field of U file": "a_3^2a_2^4a_1^4", "secs lattice_data": 3.8}
+{
+ "pairs": 400,
+ "norms 7 and orthogonality": "all exact",
+ "min97_witness fires": 363,
+ "same set as the dossier's 363 witnesses": true,
+ "Emin histogram (norm <= 4 vectors)": {
+  "8": 363,
+  "9": 19,
+  "10": 18
+ },
+ "realisers of Emin (Emin, [(norm, Y)...]) -> pairs": {
+  "(8, ((3, 13), (4, 20)))": 363,
+  "(9, ((2, 5),))": 19,
+  "(10, ((2, 4),))": 9,
+  "(10, ((2, 4), (4, 18)))": 9
+ },
+ "E in 1..7 found": 0,
+ "exact projection checks": 312,
+ "det of K = U cap {y1,y2}^perp (sampled pairs)": {
+  "49": 13
+ },
+ "deferral rule on the 37 pairs without Y=13 witness": {
+  "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)": 19,
+  "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)": 18
+ }
+}
+[
+ {
+  "pair": 21,
+  "roots Y=5": 2,
+  "norm 5, E=9": 2,
+  "roots Y=4": 2,
+  "norm 4, Y=18": 0,
+  "norm 5, E=10": 2,
+  "norm 3, Y=13": 0,
+  "norm 4, Y=20": 0
+ },
+ {
+  "pair": 43,
+  "roots Y=5": 1,
+  "norm 5, E=9": 1,
+  "roots Y=4": 1,
+  "norm 4, Y=18": 1,
+  "norm 5, E=10": 3,
+  "norm 3, Y=13": 0,
+  "norm 4, Y=20": 0
+ },
+ {
+  "pair": 100,
+  "roots Y=5": 0,
+  "norm 5, E=9": 0,
+  "roots Y=4": 3,
+  "norm 4, Y=18": 2,
+  "norm 5, E=10": 7,
+  "norm 3, Y=13": 0,
+  "norm 4, Y=20": 0
+ },
+ {
+  "pair": 114,
+  "roots Y=5": 0,
+  "norm 5, E=9": 0,
+  "roots Y=4": 3,
+  "norm 4, Y=18": 2,
+  "norm 5, E=10": 7,
+  "norm 3, Y=13": 0,
+  "norm 4, Y=20": 0
+ },
+ {
+  "pair": 0,
+  "roots Y=5": 1,
+  "norm 5, E=9": 1,
+  "roots Y=4": 2,
+  "norm 4, Y=18": 0,
+  "norm 5, E=10": 2,
+  "norm 3, Y=13": 2,
+  "norm 4, Y=20": 2
+ }
+]
+ALL CHECKS PASSED in 43.7s

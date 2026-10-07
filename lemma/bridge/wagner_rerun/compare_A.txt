@@ -1,0 +1,5 @@
+﻿keys only in rerun: [] | only in dossier: ['enumeration_source', 'enumeration_source_sha256']
+  dossier-only enumeration_source = ENUMERER_WAGNER_PROFIL_A.py
+  dossier-only enumeration_source_sha256 = 0f765970b059d1ccde8af621d0f616d6938b10750daa4861a48c42303bb900a3
+all common keys except 'seconds' identical: True | common keys: ['counts', 'demand_cover_count', 'edge_census', 'four_clique_count', 'limits', 'local_assembly_count', 'records', 'scope', 'seconds', 'status']
+number of certificates: 0 0

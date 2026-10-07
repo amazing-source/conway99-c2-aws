@@ -216,3 +216,21 @@ Supersedes the status table of section 8.
   (`lemma/T18_PROOF.md`, being written from the reports with the nine fixes) has to exist and be read first. The dictionary of
   section 2 (dual lattice vector <=> eigenfunction) is outside the graph lemma and must be part of that reading.
 - **T20**: round 2 running (`t20_R2`), nine configurations open.
+
+## 12. T18 and its bridge at 04:40 local on 07/10
+
+- **`lemma/T18_PROOF.md` (v2)**: consolidated, self-contained proof text. Second referee (`lemma/t18_REFEREE2/REPORT.md`), who read only
+  that text: no error; every hand statement checked line by line; every Computation re-done with programs written from the text
+  alone (exact rejections), every count equal. His eleven presentation points are applied in v2 (`lemma/t18_PROOF/` keeps v1 and the
+  change log). The text added by v2 has been read by no referee.
+- **`lemma/BRIDGE.md`**: the link between the graph lemma and the pairs of the engine, proved by hand from the project's own notes
+  (04/10 dossiers) and the engine code, not from section 2 above (which it confirms). For a pair (y1, y2) of an integral rank-24
+  lattice U with (y1,y1) = (y2,y2) = 7, (y1,y2) = 0, hosting the frame f_1..f_49 of a graph (Gram 3I - S, orthogonal to y1, y2):
+  every v in U gives the integer sigma-odd function phi_v (a_i = (v, f_i) on x_i, -a_i on sigma x_i, 0 on p) with
+  A phi_v = -4 phi_v and sum phi_v^2 = 2 E(v), E(v) = 7 (v,v) - (v,y1)^2 - (v,y2)^2. A root with (r,y1)^2 + (r,y2)^2 = 5 gives 18:
+  excluded by T18. With = 4 it gives 20: pending T20. Being refereed (`bridge_REFEREE`).
+- **One precondition to check at conversion** (H4 of the bridge): the quick deferral path returns before the engine's `pair_setup`
+  asserts the norms and the orthogonality of y1, y2. The producer guarantees them by construction; `lemma/bridge/certify.py` re-checks
+  them exactly, with the witness root, pair by pair. Run it on the deferred pairs before any of them is counted as excluded.
+- **Not covered by any of this**: T20 (the pairs deferred with = 4), and the upstream reduction of the project (every 99-graph gives
+  one of the 156 envelopes and an enumerated pair hosting its frame), which is the lab's and is inherited by every verdict.

@@ -1,0 +1,90 @@
+﻿Paley(9) {
+ "v": 9,
+ "k": 4,
+ "r": 1,
+ "s": -2,
+ "c": 3,
+ "orbits": 4,
+ "inner(norm r+1)": 2,
+ "outer(norm r)": 2,
+ "rank H": 2,
+ "mult(s)": 4,
+ "mult(r)": 4,
+ "glue": {
+  "N(g)": 1,
+  "(g,y1)": 0,
+  "(g,y2)": 0,
+  "sum (g,f_i)^2": 3,
+  "E(g) = c N(g) - Y(g)": 3
+ },
+ "random vectors": {
+  "trials": 300,
+  "with E > 0": 295,
+  "with a glue component not in L+Zy1+Zy2": 201,
+  "distinct E values": 32,
+  "min positive E": 3,
+  "identities sum a^2 = E, A phi = s phi (all vertices), sum phi^2 = 2E": "all hold",
+  "even lift fails to be an s-eigenfunction": "295 of 295"
+ },
+ "complementary Gram S - sI": {
+  "rank": 2,
+  "norm on inner": 1,
+  "norm on outer": 2
+ },
+ "frame Gram rI - S": {
+  "rank": 2,
+  "norm on inner": 2,
+  "norm on outer": 1
+ },
+ "min |a|^2 over rows of H (a = (f_i, f_j)_j)": 3
+}
+BvLS(243) {
+ "v": 243,
+ "k": 22,
+ "r": 4,
+ "s": -5,
+ "c": 9,
+ "orbits": 121,
+ "inner(norm r+1)": 11,
+ "outer(norm r)": 110,
+ "rank H": 55,
+ "mult(s)": 110,
+ "mult(r)": 132,
+ "glue": {
+  "N(g)": 28,
+  "(g,y1)": 0,
+  "(g,y2)": 3,
+  "sum (g,f_i)^2": 243,
+  "E(g) = c N(g) - Y(g)": 243
+ },
+ "random vectors": {
+  "trials": 300,
+  "with E > 0": 296,
+  "with a glue component not in L+Zy1+Zy2": 191,
+  "distinct E values": 168,
+  "min positive E": 36,
+  "identities sum a^2 = E, A phi = s phi (all vertices), sum phi^2 = 2E": "all hold",
+  "even lift fails to be an s-eigenfunction": "296 of 296"
+ },
+ "complementary Gram S - sI": {
+  "rank": 66,
+  "norm on inner": 4,
+  "norm on outer": 5
+ },
+ "frame Gram rI - S": {
+  "rank": 55,
+  "norm on inner": 5,
+  "norm on outer": 4
+ },
+ "min |a|^2 over rows of H (a = (f_i, f_j)_j)": 36
+}
+{
+ "orbits": 49,
+ "inner(norm 4)": 7,
+ "outer(norm 3)": 42,
+ "trace(3I - S) = 3*49 + 7": 154,
+ "rank = trace/7": 22,
+ "mult(-4)": 44,
+ "E(v) = 7 N(v) - Y(v) = sum a_i^2, sum phi^2 = 2 E(v)": "root, Y=5 -> 18; root, Y=4 -> 20; norm 3, Y=13 -> 16"
+}
+ALL CHECKS PASSED

@@ -1,0 +1,1 @@
+﻿{"verified_witnesses": 363, "basis_equals_catalog_lattice": "integer transition matrices in both directions", "gram_determinant_exact": 1, "arithmetic": "Python integers and exact fractions only", "sample_has_K0_pairs": false, "historical_nodes_on_witness_pairs": 125504055, "historical_nodes_total": 159598993, "seconds": 0.7349999999860302}

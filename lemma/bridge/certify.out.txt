@@ -1,0 +1,2 @@
+﻿invalid pair rejected: y1, y2 are not orthogonal vectors of norm 7
+{'T18': 279, 'T20': 113, 'none': 8}

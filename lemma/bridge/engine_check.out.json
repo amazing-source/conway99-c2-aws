@@ -1,0 +1,476 @@
+{
+ "lattice 011": {
+  "roots (both signs)": 56,
+  "norm 3": 4096,
+  "norm 4": 96912,
+  "new-root pairs": 52,
+  "det G": 1,
+  "odd": true,
+  "roots field of U file": "a_3^2a_2^4a_1^4",
+  "secs lattice_data": 3.8
+ },
+ "pairs": {
+  "pairs": 400,
+  "norms 7 and orthogonality": "all exact",
+  "min97_witness fires": 363,
+  "same set as the dossier's 363 witnesses": true,
+  "Emin histogram (norm <= 4 vectors)": {
+   "8": 363,
+   "9": 19,
+   "10": 18
+  },
+  "realisers of Emin (Emin, [(norm, Y)...]) -> pairs": {
+   "(8, ((3, 13), (4, 20)))": 363,
+   "(9, ((2, 5),))": 19,
+   "(10, ((2, 4),))": 9,
+   "(10, ((2, 4), (4, 18)))": 9
+  },
+  "E in 1..7 found": 0,
+  "exact projection checks": 312,
+  "det of K = U cap {y1,y2}^perp (sampled pairs)": {
+   "49": 13
+  },
+  "deferral rule on the 37 pairs without Y=13 witness": {
+   "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)": 19,
+   "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)": 18
+  }
+ },
+ "all (E, norm, Y) classes with 0 < E <= 12 seen on the 400 pairs (counts of +- pairs of vectors)": {
+  "(8, 3, 13)": 756,
+  "(8, 4, 20)": 756,
+  "(9, 2, 5)": 468,
+  "(10, 2, 4)": 843,
+  "(10, 4, 18)": 415,
+  "(11, 3, 10)": 3603,
+  "(11, 4, 17)": 3603,
+  "(12, 2, 2)": 1222,
+  "(12, 3, 9)": 2228,
+  "(12, 4, 16)": 2228
+ },
+ "the 37 pairs without Y=13 witness": [
+  {
+   "pair": 21,
+   "Emin": 9,
+   "roots Y=5": 2,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 2493715,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 43,
+   "Emin": 9,
+   "roots Y=5": 1,
+   "roots Y=4": 1,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 665190,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 70,
+   "Emin": 9,
+   "roots Y=5": 2,
+   "roots Y=4": 3,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 3688395,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 93,
+   "Emin": 9,
+   "roots Y=5": 2,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 1988361,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 100,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 3,
+   "norm-4 Y=18": 2,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 202825,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 113,
+   "Emin": 9,
+   "roots Y=5": 1,
+   "roots Y=4": 1,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 628732,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 114,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 3,
+   "norm-4 Y=18": 2,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 197284,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 136,
+   "Emin": 9,
+   "roots Y=5": 2,
+   "roots Y=4": 1,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 313654,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 143,
+   "Emin": 9,
+   "roots Y=5": 2,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 254762,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 157,
+   "Emin": 9,
+   "roots Y=5": 2,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 801095,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 171,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 158593,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 177,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 239130,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 180,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 3,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 991828,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 182,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 610028,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 183,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 3,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 218102,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 186,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 4,
+   "norm-4 Y=18": 2,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 1104058,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 189,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 3,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 523641,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 193,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 637208,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 195,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 211440,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 196,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 492921,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 203,
+   "Emin": 9,
+   "roots Y=5": 1,
+   "roots Y=4": 5,
+   "norm-4 Y=18": 5,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 509366,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 210,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 4,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 659853,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 220,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 884459,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 238,
+   "Emin": 9,
+   "roots Y=5": 1,
+   "roots Y=4": 3,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 748844,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 239,
+   "Emin": 9,
+   "roots Y=5": 1,
+   "roots Y=4": 3,
+   "norm-4 Y=18": 2,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 230720,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 263,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 2737418,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 293,
+   "Emin": 9,
+   "roots Y=5": 1,
+   "roots Y=4": 1,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 2058304,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 303,
+   "Emin": 9,
+   "roots Y=5": 2,
+   "roots Y=4": 1,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 99860,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 305,
+   "Emin": 9,
+   "roots Y=5": 1,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 457362,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 306,
+   "Emin": 9,
+   "roots Y=5": 1,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 461233,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 313,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 3,
+   "norm-4 Y=18": 1,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 3977438,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 315,
+   "Emin": 9,
+   "roots Y=5": 2,
+   "roots Y=4": 1,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 99535,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 320,
+   "Emin": 9,
+   "roots Y=5": 2,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 1514118,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 331,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 2,
+   "norm-4 Y=18": 2,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 70930,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 340,
+   "Emin": 10,
+   "roots Y=5": 0,
+   "roots Y=4": 1,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T20: root r with (r,y1)^2+(r,y2)^2 = 4)",
+   "historical nodes": 477495,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 343,
+   "Emin": 9,
+   "roots Y=5": 3,
+   "roots Y=4": 0,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 634127,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  },
+  {
+   "pair": 363,
+   "Emin": 9,
+   "roots Y=5": 1,
+   "roots Y=4": 1,
+   "norm-4 Y=18": 0,
+   "rule": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)",
+   "historical nodes": 2052914,
+   "historical verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+  }
+ ],
+ "norm-5 vectors (both signs)": 1130496,
+ "coset structure at norm 5 (counts of +- pairs)": [
+  {
+   "pair": 21,
+   "roots Y=5": 2,
+   "norm 5, E=9": 2,
+   "roots Y=4": 2,
+   "norm 4, Y=18": 0,
+   "norm 5, E=10": 2,
+   "norm 3, Y=13": 0,
+   "norm 4, Y=20": 0
+  },
+  {
+   "pair": 43,
+   "roots Y=5": 1,
+   "norm 5, E=9": 1,
+   "roots Y=4": 1,
+   "norm 4, Y=18": 1,
+   "norm 5, E=10": 3,
+   "norm 3, Y=13": 0,
+   "norm 4, Y=20": 0
+  },
+  {
+   "pair": 100,
+   "roots Y=5": 0,
+   "norm 5, E=9": 0,
+   "roots Y=4": 3,
+   "norm 4, Y=18": 2,
+   "norm 5, E=10": 7,
+   "norm 3, Y=13": 0,
+   "norm 4, Y=20": 0
+  },
+  {
+   "pair": 114,
+   "roots Y=5": 0,
+   "norm 5, E=9": 0,
+   "roots Y=4": 3,
+   "norm 4, Y=18": 2,
+   "norm 5, E=10": 7,
+   "norm 3, Y=13": 0,
+   "norm 4, Y=20": 0
+  },
+  {
+   "pair": 0,
+   "roots Y=5": 1,
+   "norm 5, E=9": 1,
+   "roots Y=4": 2,
+   "norm 4, Y=18": 0,
+   "norm 5, E=10": 2,
+   "norm 3, Y=13": 2,
+   "norm 4, Y=20": 2
+  }
+ ],
+ "secs": 43.6
+}

@@ -1,0 +1,8 @@
+{
+  "verified_profile_A_obstructions": 240,
+  "verified_profile_B_obstructions": 32,
+  "profile_A_candidate_orbits_recomputed": 6544,
+  "arithmetic": "dense int16; maximal sum per matrix entry below 100, no overflow",
+  "coverage": "Requires the supplied enumeration sources, separately cross-checked against the first DFS.",
+  "seconds": 88.11000000004424
+}
