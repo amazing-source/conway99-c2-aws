@@ -23,7 +23,7 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | Reduction to nine support configurations | closed (hand + two programs) | `t20/T20_REPORT.md` |
 | III.0 (k = 4) | closed, two programs | `t20_R2/REPORT.md` |
 | IIa.0 (k = 2) | closed, two independent programs | `t20_R2/REPORT.md` |
-| III.1 (k = 4) | closed by the first program (1,628,864 nodes, 0 complete) | `t20_III1/` |
+| III.1 (k = 4) | closed, first program + independent verifier over the whole tree (1,628,864 nodes, 0 complete; does not need the rank bound) | `t20_III1/README.md`, `VERIF.md` |
 | Case I, n_3 = 0, six graphs x two profiles | closed by the first program (615,405 bases, 0 complete); I.0 (4,2,1), I.5 (4,2,1) by two programs | `t20_R3_I/REPORT.md` |
 | Hand lemmas: profile (5,0,2) impossible; no d = 3 vertex in N(p); n_3 in {0, 2}; X_0 structure for (4,2,1); e(X_0) <= 8; a_3(u) = 1 | proved, re-read | `t20_R2`, `t20_HAND/NOTES.md`, `t20_CODEX/` |
 
@@ -31,7 +31,7 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 
 | # | Item | Owner | Status | Due |
 |---|---|---|---|---|
-| C1 | III.1: independent verifier over the whole tree, plus the one node rejected by rank | LAP (agent) | running on the laptop | 18:00 |
+| C1 | III.1: independent verifier over the whole tree, plus the one node rejected by rank | LAP (agent) | **closed 11:47**: agrees at every node, 0 complete (`t20_III1/VERIF.md`) | done |
 | C2 | n_3 = 0, eleven cases: jobs `t20_Iv_B..F` on the free account | LAP | running since 11:10 | 15:30 |
 | C3 | n_3 = 0, I.1 (3,4,0): job `t20_I1_340`, 128 cores | LAP | running since 11:19 | 12:15 |
 | C4 | n_3 = 0, I.1 (4,2,1): one part of C2 stops at base 12632 (old verifier); re-run that part with the fixed verifier | LAP | to do when C2 is back | 16:00 |
@@ -60,3 +60,4 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | user | i-00a0ab97a6a8099fd, 128 vCPU, eu-north-1 | 003:181:182 | 07:46 |
 | user | i-019e86d399c17954f, 128 vCPU, eu-west-2 | C3 | 11:19 |
 | free | 5 x 8 vCPU | C2 | 11:10 |
+| free | i-0cefd01aef8eade8a, 8 vCPU, eu-north-1 | A1 measurement (`t20_n3_sample`) | 11:50 |

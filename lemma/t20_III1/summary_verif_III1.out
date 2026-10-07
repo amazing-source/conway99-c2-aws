@@ -1,0 +1,26 @@
+III.1, verifier engv2.py (sha1 dcac2193990683032d31a0e6d868a50270546f20) through run_v2_cap.py, 48 parts, plans = plans48/ (re-cut of C:/home/researcher/AppData/Local/Temp/claude/C--Users-RESEARCHER-Desktop-Nouveau/aa6b3504-976d-4158-b7e9-dd8eff8d22bb/scratchpad/t20_III1/e5_III1_*of8.plan, see split_plans48.out)
+parts with a result file: 48 of 48
+engines: {'engv2': (48, '...')}
+   visited          [1, 13, 208, 2156, 21165, 132172, 492124, 764789, 211921, 4315, 0, 0, 0]   total 1628864
+   tested           [13, 208, 2759, 38021, 454766, 3832266, 17830047, 27014074, 6573833, 98491, 0, 0, 0]   total 55844478
+   rejected_budget  [0, 0, 417, 5302, 78704, 681901, 3493190, 5479164, 1244488, 22171, 0, 0, 0]   total 11005337
+   rejected_psd     [0, 0, 186, 11554, 243890, 2658241, 13572068, 21322989, 5325030, 76319, 0, 0, 0]   total 43210277
+   passed           [13, 208, 2156, 21165, 132172, 492124, 764789, 211921, 4315, 1, 0, 0, 0]   total 1628864
+   rejected_rank    [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]   total 1
+   tasks at depth 3: 21165 in every part; done (sum over parts): 21165
+   plan lines read: 1740630  (= 1628864 distinct nodes + 47 x 2378 repeated common nodes); lines left unread: 0
+   complete configurations: 0
+   comparison with each of the 8 parts of the first program (levels >= 4 for nodes, >= 3 for kept):
+      part 0 of 8 = derived parts [0, 8, 16, 24, 32, 40]: nodes [2646, 16270, 59683, 90192, 23833, 468] kept [2646, 16270, 59683, 90192, 23833, 468, 0] rank 0 : EQUAL to eng5
+      part 1 of 8 = derived parts [1, 9, 17, 25, 33, 41]: nodes [2646, 16269, 59838, 90965, 25520, 495] kept [2646, 16269, 59838, 90965, 25520, 495, 0] rank 0 : EQUAL to eng5
+      part 2 of 8 = derived parts [2, 10, 18, 26, 34, 42]: nodes [2646, 16333, 60928, 94712, 26062, 547] kept [2646, 16333, 60928, 94712, 26062, 547, 0] rank 0 : EQUAL to eng5
+      part 3 of 8 = derived parts [3, 11, 19, 27, 35, 43]: nodes [2646, 16888, 64542, 104855, 28749, 522] kept [2646, 16888, 64542, 104855, 28749, 522, 1] rank 1 : EQUAL to eng5
+      part 4 of 8 = derived parts [4, 12, 20, 28, 36, 44]: nodes [2646, 16949, 64814, 102888, 29528, 626] kept [2646, 16949, 64814, 102888, 29528, 626, 0] rank 0 : EQUAL to eng5
+      part 5 of 8 = derived parts [5, 13, 21, 29, 37, 45]: nodes [2645, 16440, 60672, 94327, 26521, 470] kept [2645, 16440, 60672, 94327, 26521, 470, 0] rank 0 : EQUAL to eng5
+      part 6 of 8 = derived parts [6, 14, 22, 30, 38, 46]: nodes [2645, 16383, 59416, 88366, 23771, 536] kept [2645, 16383, 59416, 88366, 23771, 536, 0] rank 0 : EQUAL to eng5
+      part 7 of 8 = derived parts [7, 15, 23, 31, 39, 47]: nodes [2645, 16640, 62231, 98484, 27937, 651] kept [2645, 16640, 62231, 98484, 27937, 651, 0] rank 0 : EQUAL to eng5
+   stats summed over the parts (cached single / pair tests are repeated in each part): {'no_pattern': 41611074, 'pair_budget': 34631354, 'pair_psd': 2074600, 'psd_reject_M1': 44443762, 'psd_reject_M2': 1396447, 'rank_odd_23': 1, 'single_budget': 26256, 'single_psd': 3552}
+   nodes whose candidate count differs from the plan (expected: eng5 has no pair-PSD pre-filter): 1524904
+   CPU seconds: total 37252 (10.3 h); per part min 465 max 991
+   first program, same quantities: candidates 75949406, rejected_budget 17487147, rejected_psd 56833395 (different pre-filter, not comparable)
+PROBLEMS: 0

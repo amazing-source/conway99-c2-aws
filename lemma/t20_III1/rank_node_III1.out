@@ -1,0 +1,28 @@
+input: rank_node_III1_from_engv2.jsonl (sha1 326f2e7faa28862693e4e5b45aed5d3c73702721), dumped by the capture hook of run_v2_cap.py during the engv2 run of part 43 of 48
+node dumped by the verifier: structure III.1, part 43 of 48, level-9 node + 1 orbit, 47 vertices; rank reported 23
+   plan line of the parent node (depth, unit, candidates, kept): [9, 7, 8, 100, 1]
+   orbits (U ; V ; N0): (49;26;21) (27;19;) (25;58;23) (05;46;22) (06;38;) (58;18;25) (14;47;23) (07;45;25) (59;39;25) (78;79;21,23)
+A1  adjacency matrix symmetric, 0/1, zero diagonal: True
+A2  sigma is an involutive automorphism, x_i <-> y_i, p fixed: True
+A3  the first 21 vertices carry the support graph S u {p} of III.1: True
+A4  vertices 21..26 = three mate pairs of N(p) with no other neighbour in the base; N(p) = active pairs + these: True
+A5  the 10 added orbits have the base neighbourhoods (U ; V ; N0) listed above: True
+A6  budget violations (pairs with more than 1 [adjacent] / 2 [non-adjacent] common neighbours): 0
+    sigma-orbits: 23 pairs + 1 fixed vertices
+A7  matrix handed to flint by the verifier == odd Gram D^T(3I-A)D recomputed here in pure Python: True
+A8  odd part of M1  (D^T M1 D = 9 D^T(3I-A)D, 23x23): rank flint 23, rank Fractions 23, rank mod 1000003 23, rank mod 2^31-1 23; det (Bareiss) 17341031120896
+      -> EXCEEDS the bound 22
+A8  even part of M1 (P^T M1 P, 24x24): rank flint 23, rank Fractions 23, rank mod 1000003 23, rank mod 2^31-1 23; det (Bareiss) 0
+      -> EXCEEDS the bound 22
+A9  exact semidefiniteness (Fractions): odd M1 True, odd M2 True, even M1 True, even M2 True
+B0  base of the dumped node == cases.CaseIII(III.1).AB: True ; verifier budgets_fail(node) = False ; verifier Tester.reject(node) = None
+B1  search state recomputed from the matrix (X_2-degrees [1, 0, 1, 1, 0, 1, 0, 1, 0, 1] of targets [1, 0, 1, 1, 0, 1, 1, 1, 1, 2], X_0 counts [3, 3, 3, 3, 3, 3] of [4, 4, 4, 4, 4, 4], uncovered units {(3, 4): 1, (6, 7): 1, (6, 8): 1, (6, 9): 1})
+B2  descendants of the node WITHOUT the rank bound (unit with the fewest kept children chosen; all units shown until one has none):
+    level 10, unit (3, 4): 126 candidates, 112 rejected by budgets, 14 by PSD certificate, 0 kept
+    level 10: nodes 1, candidates 126, rejected by budgets 112, by PSD certificate 14, kept 0
+B3  totals below the node: {'nodes': 1, 'cands': 126, 'budget': 112, 'psd': 14, 'kept': 0, 'complete': 0, 'final_deg': 0, 'certs_checked': 14}
+    -> the node is ALSO dead without the rank bound (complete configurations: 0)
+
+real	0m0.788s
+user	0m0.031s
+sys	0m0.000s

@@ -1,0 +1,64 @@
+RUNS (from sched.log; durations = wall seconds of each process; 6 processes at most, OPENBLAS_NUM_THREADS=1, OMP_NUM_THREADS=1)
+python 3.12.10 numpy 2.5.3 python-flint 0.9.0
+
+engv2 on III.0, 3 parts (validation)                           jobs  3  first start 11:35:46  last end 11:52:07  rc!=0: 0  seconds: total   2823  min  881  max  981
+engv on III.1, parts 0, 1, 43 of 48 (cross-check)              jobs  3  first start 11:35:46  last end 12:12:18  rc!=0: 0  seconds: total   3583  min 1151  max 1251
+engv2 on III.1, 48 parts (the verification)                    jobs 48  first start 11:52:37  last end 13:47:31  rc!=0: 0  seconds: total  37507  min  470  max 1000
+engv2 without pair-PSD pre-filter, part 2 of 48 (explanation)  jobs  1  first start 12:03:37  last end 12:16:48  rc!=0: 0  seconds: total    790  min  790  max  790
+
+per job:
+   val_III0_0   start 11:35:46  end 11:50:27  rc 0    881 s
+   val_III0_1   start 11:35:46  end 11:51:47  rc 0    961 s
+   val_III0_2   start 11:35:46  end 11:52:07  rc 0    981 s
+   v1_III1_0    start 11:35:46  end 11:56:37  rc 0   1251 s
+   v1_III1_1    start 11:37:46  end 11:56:57  rc 0   1151 s
+   v2_III1_43   start 11:52:37  end 12:03:57  rc 0    680 s
+   v1_III1_43   start 11:52:37  end 12:12:18  rc 0   1181 s
+   v2_III1_0    start 11:52:37  end 12:03:37  rc 0    660 s
+   v2_III1_1    start 11:52:37  end 12:03:07  rc 0    630 s
+   v2_III1_2    start 11:56:37  end 12:08:37  rc 0    720 s
+   v2_III1_3    start 11:56:57  end 12:10:17  rc 0    800 s
+   v2_III1_4    start 12:03:07  end 12:18:28  rc 0    920 s
+   expl_2       start 12:03:37  end 12:16:48  rc 0    790 s
+   v2_III1_5    start 12:03:57  end 12:17:28  rc 0    810 s
+   v2_III1_6    start 12:08:37  end 12:23:08  rc 0    870 s
+   v2_III1_7    start 12:10:17  end 12:24:18  rc 0    841 s
+   v2_III1_8    start 12:12:18  end 12:28:38  rc 0    981 s
+   v2_III1_9    start 12:16:48  end 12:32:58  rc 0    971 s
+   v2_III1_10   start 12:17:28  end 12:33:39  rc 0    971 s
+   v2_III1_11   start 12:18:28  end 12:33:49  rc 0    921 s
+   v2_III1_12   start 12:23:08  end 12:38:49  rc 0    940 s
+   v2_III1_13   start 12:24:18  end 12:38:49  rc 0    870 s
+   v2_III1_14   start 12:28:38  end 12:41:49  rc 0    790 s
+   v2_III1_15   start 12:32:58  end 12:47:49  rc 0    890 s
+   v2_III1_16   start 12:33:39  end 12:45:59  rc 0    740 s
+   v2_III1_17   start 12:33:49  end 12:49:19  rc 0    930 s
+   v2_III1_18   start 12:38:49  end 12:51:29  rc 0    760 s
+   v2_III1_19   start 12:38:49  end 12:55:29  rc 0   1000 s
+   v2_III1_20   start 12:41:49  end 12:56:59  rc 0    910 s
+   v2_III1_21   start 12:45:59  end 13:00:59  rc 0    900 s
+   v2_III1_22   start 12:47:49  end 13:00:09  rc 0    740 s
+   v2_III1_23   start 12:49:19  end 13:03:29  rc 0    850 s
+   v2_III1_24   start 12:51:29  end 13:03:39  rc 0    730 s
+   v2_III1_25   start 12:55:29  end 13:08:40  rc 0    790 s
+   v2_III1_26   start 12:56:59  end 13:11:10  rc 0    850 s
+   v2_III1_27   start 13:00:09  end 13:13:50  rc 0    821 s
+   v2_III1_28   start 13:00:59  end 13:16:00  rc 0    901 s
+   v2_III1_29   start 13:03:29  end 13:16:00  rc 0    750 s
+   v2_III1_30   start 13:03:40  end 13:16:20  rc 0    760 s
+   v2_III1_31   start 13:08:40  end 13:22:10  rc 0    810 s
+   v2_III1_32   start 13:11:10  end 13:22:40  rc 0    690 s
+   v2_III1_33   start 13:13:50  end 13:24:20  rc 0    630 s
+   v2_III1_34   start 13:16:00  end 13:29:40  rc 0    820 s
+   v2_III1_35   start 13:16:00  end 13:29:30  rc 0    810 s
+   v2_III1_36   start 13:16:20  end 13:29:00  rc 0    760 s
+   v2_III1_37   start 13:22:10  end 13:33:31  rc 0    680 s
+   v2_III1_38   start 13:22:40  end 13:33:20  rc 0    640 s
+   v2_III1_39   start 13:24:20  end 13:37:41  rc 0    800 s
+   v2_III1_40   start 13:29:00  end 13:40:51  rc 0    710 s
+   v2_III1_41   start 13:29:30  end 13:40:21  rc 0    650 s
+   v2_III1_42   start 13:29:40  end 13:39:41  rc 0    600 s
+   v2_III1_44   start 13:33:21  end 13:43:21  rc 0    600 s
+   v2_III1_45   start 13:33:31  end 13:43:41  rc 0    610 s
+   v2_III1_46   start 13:37:41  end 13:46:31  rc 0    530 s
+   v2_III1_47   start 13:39:41  end 13:47:31  rc 0    470 s

@@ -1,0 +1,67 @@
+T20 / III.1 - independent verification, 07/10/2026 11:27-13:50 (folder t20_III1_VERIF)
+
+1. RESULT (summary_verif_III1.out)
+parts with a result file: 48 of 48
+engines: {'engv2': (48, '...')}
+   visited          [1, 13, 208, 2156, 21165, 132172, 492124, 764789, 211921, 4315, 0, 0, 0]   total 1628864
+   tested           [13, 208, 2759, 38021, 454766, 3832266, 17830047, 27014074, 6573833, 98491, 0, 0, 0]   total 55844478
+   rejected_budget  [0, 0, 417, 5302, 78704, 681901, 3493190, 5479164, 1244488, 22171, 0, 0, 0]   total 11005337
+   rejected_psd     [0, 0, 186, 11554, 243890, 2658241, 13572068, 21322989, 5325030, 76319, 0, 0, 0]   total 43210277
+   passed           [13, 208, 2156, 21165, 132172, 492124, 764789, 211921, 4315, 1, 0, 0, 0]   total 1628864
+   rejected_rank    [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]   total 1
+   tasks at depth 3: 21165 in every part; done (sum over parts): 21165
+   plan lines read: 1740630  (= 1628864 distinct nodes + 47 x 2378 repeated common nodes); lines left unread: 0
+   complete configurations: 0
+PROBLEMS: 0
+
+2. RANK-REJECTED NODE (rank_node_III1.out)
+node dumped by the verifier: structure III.1, part 43 of 48, level-9 node + 1 orbit, 47 vertices; rank reported 23
+   plan line of the parent node (depth, unit, candidates, kept): [9, 7, 8, 100, 1]
+   orbits (U ; V ; N0): (49;26;21) (27;19;) (25;58;23) (05;46;22) (06;38;) (58;18;25) (14;47;23) (07;45;25) (59;39;25) (78;79;21,23)
+A1  adjacency matrix symmetric, 0/1, zero diagonal: True
+A6  budget violations (pairs with more than 1 [adjacent] / 2 [non-adjacent] common neighbours): 0
+    sigma-orbits: 23 pairs + 1 fixed vertices
+A7  matrix handed to flint by the verifier == odd Gram D^T(3I-A)D recomputed here in pure Python: True
+A8  odd part of M1  (D^T M1 D = 9 D^T(3I-A)D, 23x23): rank flint 23, rank Fractions 23, rank mod 1000003 23, rank mod 2^31-1 23; det (Bareiss) 17341031120896
+A9  exact semidefiniteness (Fractions): odd M1 True, odd M2 True, even M1 True, even M2 True
+B0  base of the dumped node == cases.CaseIII(III.1).AB: True ; verifier budgets_fail(node) = False ; verifier Tester.reject(node) = None
+B1  search state recomputed from the matrix (X_2-degrees [1, 0, 1, 1, 0, 1, 0, 1, 0, 1] of targets [1, 0, 1, 1, 0, 1, 1, 1, 1, 2], X_0 counts [3, 3, 3, 3, 3, 3] of [4, 4, 4, 4, 4, 4], uncovered units {(3, 4): 1, (6, 7): 1, (6, 8): 1, (6, 9): 1})
+B2  descendants of the node WITHOUT the rank bound (unit with the fewest kept children chosen; all units shown until one has none):
+    level 10, unit (3, 4): 126 candidates, 112 rejected by budgets, 14 by PSD certificate, 0 kept
+
+3. VALIDATION OF engv2 (validation_engv2_III0.out, cmp_engv_engv2_III1_*.out)
+RESULT III.0 engv (reference, A) vs engv2 (B): 3 pair(s) compared, 0 with differences
+RESULT III.1 part j of 48: engv (A) vs engv2 (B): 2 pair(s) compared, 0 with differences
+RESULT III.1 part 43 of 48 (contains the rank-rejected node): engv (A) vs engv2 (B): 1 pair(s) compared, 0 with differences
+rank-node dump from engv == dump from engv2 (all fields): True ; adjacency equal: True ; rank 23 23
+
+4. CANDIDATE COUNTS (expl/expl_2.out: engv2 with the pair-PSD pre-filter off, part 2 of 48)
+plan followed: lines left unread 0, nodes with a different candidate count 0
+III.1 expl part 2 of 48 split depth 3 order mincand timeout False seconds 785.0
+tasks at split depth: total 21165, mine 441, done 441
+nodes visited per level   : [1, 13, 208, 2156, 441, 2748, 10225, 15528, 4495, 168, 0, 0, 0]
+candidates tested         : [13, 212, 2939, 46605, 12952, 114776, 510389, 724583, 164262, 4100, 0, 0, 0]
+  rejected by budgets     : [0, 0, 453, 6631, 2386, 22750, 120992, 180555, 36057, 826, 0, 0, 0]
+  rejected by PSD (exact) : [0, 4, 330, 18809, 7818, 81801, 373869, 539533, 128037, 3274, 0, 0, 0]
+
+5. NEGATIVE CONTROLS (negctl.out)
+Negative controls (12:58): same runner (run_v2_cap.py), same environment, part 0 of 48, two corrupted copies of plans48/e5_III1_0of48.plan
+1) negctl/keptplus1_0of48.plan: kept count of the first depth-4 line changed from 3 to 4
+   -> AssertionError: DISAGREEMENT with the plan: kept 3, plan 4 at depth 4
+2) negctl/linemissing_0of48.plan: first depth-5 line deleted
+   -> AssertionError: plan out of step (depth)
+No result file is written in either case: 0 json files.
+
+6. CERTIFICATES (check_certs_III1.out)
+structure III.1: 20000 certificates checked, 0 invalid
+  by number of vertices: {31: 8, 35: 555, 37: 1209, 39: 5266, 41: 10428, 43: 2534}
+  by block: {'M1even': 3356, 'M1odd': 16562, 'M2even': 55, 'M2odd': 27}
+
+7. RUNS (runs_table.out)
+RUNS (from sched.log; durations = wall seconds of each process; 6 processes at most, OPENBLAS_NUM_THREADS=1, OMP_NUM_THREADS=1)
+python 3.12.10 numpy 2.5.3 python-flint 0.9.0
+
+engv2 on III.0, 3 parts (validation)                           jobs  3  first start 11:35:46  last end 11:52:07  rc!=0: 0  seconds: total   2823  min  881  max  981
+engv on III.1, parts 0, 1, 43 of 48 (cross-check)              jobs  3  first start 11:35:46  last end 12:12:18  rc!=0: 0  seconds: total   3583  min 1151  max 1251
+engv2 on III.1, 48 parts (the verification)                    jobs 48  first start 11:52:37  last end 13:47:31  rc!=0: 0  seconds: total  37507  min  470  max 1000
+engv2 without pair-PSD pre-filter, part 2 of 48 (explanation)  jobs  1  first start 12:03:37  last end 12:16:48  rc!=0: 0  seconds: total    790  min  790  max  790

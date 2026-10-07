@@ -1,0 +1,45 @@
+Validation of engv2.py (sha1 dcac2193990683032d31a0e6d868a50270546f20, run through run_v2_cap.py) against the validated engv.py output on III.0 (all 3 parts, plans e4_III0_*of3.plan, pointwise symmetry as in the reference run)
+reference files: ref_III0/v_III0_*of3.json = copies of t20_R2/v_III0_*of3.json: part 0 identical copy; part 1 identical copy; part 2 identical copy; 
+III.0 engv (reference, A) vs engv2 (B)
+   A = ref_III0/v_III0_0of3.json  (engine engv, 4478 s)
+   B = val_III0/v2_III0_0of3.json  (engine engv2, 873 s)
+   fields compared: group_order, name, nparts, order, part, passed, plan_candidate_count_mismatches, plan_lines_left, rejected_budget, rejected_psd, rejected_rank, setwise, split_depth, stats, survivors, tasks_done, tasks_mine, tasks_total, tested, timeout, use_rank, visited
+   IDENTICAL.  timeout False, tasks 2370/7109 done 2370, plan lines left 0, candidate-count mismatches 0, complete 0
+      visited          [1, 13, 116, 881, 2370, 10088, 17913, 10453, 1923, 85, 0, 0, 0]
+      tested           [13, 116, 1177, 18126, 59283, 298900, 612946, 340307, 51350, 1441, 0, 0, 0]
+      rejected_budget  [0, 0, 73, 550, 5571, 48149, 102540, 57671, 7925, 203, 0, 0, 0]
+      rejected_psd     [0, 0, 223, 10467, 43624, 232838, 499953, 280713, 43340, 1238, 0, 0, 0]
+      passed           [13, 116, 881, 2370, 10088, 17913, 10453, 1923, 85, 0, 0, 0, 0]
+      rejected_rank    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      stats            {'no_pattern': 1023370, 'pair_budget': 600254, 'pair_psd': 46507, 'psd_reject_M1': 1149991, 'psd_reject_M2': 8981, 'single_budget': 323, 'single_psd': 69}
+III.0 engv (reference, A) vs engv2 (B)
+   A = ref_III0/v_III0_1of3.json  (engine engv, 4417 s)
+   B = val_III0/v2_III0_1of3.json  (engine engv2, 955 s)
+   fields compared: group_order, name, nparts, order, part, passed, plan_candidate_count_mismatches, plan_lines_left, rejected_budget, rejected_psd, rejected_rank, setwise, split_depth, stats, survivors, tasks_done, tasks_mine, tasks_total, tested, timeout, use_rank, visited
+   IDENTICAL.  timeout False, tasks 2370/7109 done 2370, plan lines left 0, candidate-count mismatches 0, complete 0
+      visited          [1, 13, 116, 881, 2370, 9932, 18349, 9962, 1696, 42, 0, 0, 0]
+      tested           [13, 116, 1177, 18126, 59778, 296059, 600970, 322884, 45213, 884, 0, 0, 0]
+      rejected_budget  [0, 0, 73, 550, 5663, 44994, 103841, 55367, 8029, 116, 0, 0, 0]
+      rejected_psd     [0, 0, 223, 10467, 44183, 232716, 487167, 265821, 37142, 768, 0, 0, 0]
+      passed           [13, 116, 881, 2370, 9932, 18349, 9962, 1696, 42, 0, 0, 0, 0]
+      rejected_rank    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      stats            {'no_pattern': 1031650, 'pair_budget': 609971, 'pair_psd': 46051, 'psd_reject_M1': 1116077, 'psd_reject_M2': 8533, 'single_budget': 322, 'single_psd': 72}
+III.0 engv (reference, A) vs engv2 (B)
+   A = ref_III0/v_III0_2of3.json  (engine engv, 4495 s)
+   B = val_III0/v2_III0_2of3.json  (engine engv2, 974 s)
+   fields compared: group_order, name, nparts, order, part, passed, plan_candidate_count_mismatches, plan_lines_left, rejected_budget, rejected_psd, rejected_rank, setwise, split_depth, stats, survivors, tasks_done, tasks_mine, tasks_total, tested, timeout, use_rank, visited
+   IDENTICAL.  timeout False, tasks 2369/7109 done 2369, plan lines left 0, candidate-count mismatches 0, complete 0
+      visited          [1, 13, 116, 881, 2369, 10082, 18065, 10711, 2467, 116, 0, 0, 0]
+      tested           [13, 116, 1177, 18126, 60080, 300622, 604126, 349595, 68414, 2425, 0, 0, 0]
+      rejected_budget  [0, 0, 73, 550, 5679, 47536, 103453, 61955, 11512, 488, 0, 0, 0]
+      rejected_psd     [0, 0, 223, 10467, 44319, 235021, 489962, 285173, 56786, 1937, 0, 0, 0]
+      passed           [13, 116, 881, 2369, 10082, 18065, 10711, 2467, 116, 0, 0, 0, 0]
+      rejected_rank    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      stats            {'no_pattern': 1041952, 'pair_budget': 614479, 'pair_psd': 47543, 'psd_reject_M1': 1162277, 'psd_reject_M2': 9226, 'single_budget': 323, 'single_psd': 72}
+RESULT III.0 engv (reference, A) vs engv2 (B): 3 pair(s) compared, 0 with differences
+exit code 0
+
+text outputs, diff of the tables (lines 2-11 of the .out files; line 2 differs by tag and seconds only):
+  part 0: tables identical line by line
+  part 1: tables identical line by line
+  part 2: tables identical line by line
