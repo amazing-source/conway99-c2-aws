@@ -1,41 +1,42 @@
 {
- "what": "rigid-kernel audit, lattice 003, the y1 representatives 2, 3 and 180 taken alone (chunking n = 182, one representative per chunk). In the chunking n = 178 of AUDIT_RIGID_MANIFEST_2026-10-07.json they share a chunk with another representative (2 with 180: the package's producer stops at 10^6 y2 candidates for the two together; 3 with 181: the producer of 181 does not end in hours). The representatives 157, 162, 174, 176 and 181 are not audited: each has a root r with (r,y1) = +-2, so no pair with that y1 hosts a frame (E(r) = 10 - (r,y2)^2: (R-vi), T18, T20), whatever the kernel did.",
- "jobs": [
-  {
-   "lid": "003",
-   "k": 2,
-   "n": 182,
-   "gamma": "gamma/003/gamma_003.json",
-   "plan": "data/finishC/stream/003/plan.json",
-   "batch": 2,
-   "pairs_expected_lattice": 17757312,
-   "y1_reps": 182,
-   "gamma_sha256": "19c37e33e8e41275bf91b28c09c46f0c9a15bbdb522d6c90f7d3710f7ec8a486",
-   "plan_sha256": "4617b5dc701d93fca3f6a88c8c3b47ac7e2107a3e6371860518b21fb0c43813d"
-  },
-  {
-   "lid": "003",
-   "k": 3,
-   "n": 182,
-   "gamma": "gamma/003/gamma_003.json",
-   "plan": "data/finishC/stream/003/plan.json",
-   "batch": 2,
-   "pairs_expected_lattice": 17757312,
-   "y1_reps": 182,
-   "gamma_sha256": "19c37e33e8e41275bf91b28c09c46f0c9a15bbdb522d6c90f7d3710f7ec8a486",
-   "plan_sha256": "4617b5dc701d93fca3f6a88c8c3b47ac7e2107a3e6371860518b21fb0c43813d"
-  },
-  {
-   "lid": "003",
-   "k": 180,
-   "n": 182,
-   "gamma": "gamma/003/gamma_003.json",
-   "plan": "data/finishC/stream/003/plan.json",
-   "batch": 2,
-   "pairs_expected_lattice": 17757312,
-   "y1_reps": 182,
-   "gamma_sha256": "19c37e33e8e41275bf91b28c09c46f0c9a15bbdb522d6c90f7d3710f7ec8a486",
-   "plan_sha256": "4617b5dc701d93fca3f6a88c8c3b47ac7e2107a3e6371860518b21fb0c43813d"
-  }
- ]
+"what": "rigid-kernel audit, lattice 003, the y1 representatives 2, 3 and 180 taken alone (chunking n = 182, one representative per chunk). In the chunking n = 178 of AUDIT_RIGID_MANIFEST_2026-10-07.json they share a chunk with another representative (2 with 180: the package's producer stops at 10^6 y2 candidates for the two together; 3 with 181: the producer of 181 does not end in hours). The representatives 157, 162, 174, 176 and 181 are not audited: each has a root r with (r,y1) = +-2, so no pair with that y1 hosts a frame (E(r) = 10 - (r,y2)^2: (R-vi), T18, T20), whatever the kernel did. LAB 15:35: job 180 needs \"producer_max_out\": 50000000 (q/qaudit.py then runs q/producer_big.py): representative 180 alone exceeds the package's cap of 10^6 y2 candidates (sweep record 003:180:182: 105,737 pairs, made with that cap; the truncated chunk 2/178 gave 94,477 pairs for 2 and 180 together, 10,977 of them for 2). Without it the job ends with complete = false and is refused.",
+"jobs": [
+{
+"lid": "003",
+"k": 2,
+"n": 182,
+"gamma": "gamma/003/gamma_003.json",
+"plan": "data/finishC/stream/003/plan.json",
+"batch": 2,
+"pairs_expected_lattice": 17757312,
+"y1_reps": 182,
+"gamma_sha256": "19c37e33e8e41275bf91b28c09c46f0c9a15bbdb522d6c90f7d3710f7ec8a486",
+"plan_sha256": "4617b5dc701d93fca3f6a88c8c3b47ac7e2107a3e6371860518b21fb0c43813d"
+},
+{
+"lid": "003",
+"k": 3,
+"n": 182,
+"gamma": "gamma/003/gamma_003.json",
+"plan": "data/finishC/stream/003/plan.json",
+"batch": 2,
+"pairs_expected_lattice": 17757312,
+"y1_reps": 182,
+"gamma_sha256": "19c37e33e8e41275bf91b28c09c46f0c9a15bbdb522d6c90f7d3710f7ec8a486",
+"plan_sha256": "4617b5dc701d93fca3f6a88c8c3b47ac7e2107a3e6371860518b21fb0c43813d"
+},
+{
+"lid": "003",
+"k": 180,
+"n": 182,
+"gamma": "gamma/003/gamma_003.json",
+"plan": "data/finishC/stream/003/plan.json",
+"batch": 2,
+"pairs_expected_lattice": 17757312,
+"y1_reps": 182,
+"gamma_sha256": "19c37e33e8e41275bf91b28c09c46f0c9a15bbdb522d6c90f7d3710f7ec8a486",
+"plan_sha256": "4617b5dc701d93fca3f6a88c8c3b47ac7e2107a3e6371860518b21fb0c43813d",
+"producer_max_out": 50000000
+}
+]
 }
