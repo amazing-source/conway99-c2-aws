@@ -1,0 +1,2359 @@
+{
+  "elapsed_seconds": 0.9370000000053551,
+  "coefficient_range": {
+    "support": "0,1",
+    "z": "-3..3",
+    "X0_orbits": "-2..2"
+  },
+  "results": [
+    {
+      "counts": {
+        "graph": 0,
+        "labelled": 640,
+        "budget_degree": 186,
+        "negative_certificate": 0,
+        "small_positive_certificate": 0,
+        "remaining": 186
+      },
+      "small_positive_witnesses": []
+    },
+    {
+      "counts": {
+        "graph": 1,
+        "labelled": 4608,
+        "budget_degree": 1356,
+        "negative_certificate": 9,
+        "small_positive_certificate": 66,
+        "remaining": 1281
+      },
+      "small_positive_witnesses": [
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": null,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": null,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": null,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": null,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": null,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": null,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 0,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 0,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 0,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 0,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 0,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 1,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 1,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 1,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 1,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 1,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 2,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 2,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 2,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 2,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "i",
+          "inner": 2,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/258",
+          "case": "iii",
+          "inner": null,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            2,
+            5,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": null,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": null,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": null,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": null,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": null,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": null,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 0,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 0,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 0,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 0,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 0,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 1,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 1,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 1,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 1,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 1,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 2,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 2,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 2,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 2,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "i",
+          "inner": 2,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/278",
+          "case": "iii",
+          "inner": null,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            2,
+            7,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": null,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": null,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": null,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": null,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": null,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": null,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 0,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 0,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 0,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 0,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 0,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 1,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 1,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 1,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 1,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 1,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 2,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 2,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 2,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 2,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "i",
+          "inner": 2,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "278/349",
+          "case": "iii",
+          "inner": null,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            3,
+            4,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        }
+      ]
+    },
+    {
+      "counts": {
+        "graph": 2,
+        "labelled": 1536,
+        "budget_degree": 452,
+        "negative_certificate": 0,
+        "small_positive_certificate": 0,
+        "remaining": 452
+      },
+      "small_positive_witnesses": []
+    },
+    {
+      "counts": {
+        "graph": 3,
+        "labelled": 2176,
+        "budget_degree": 638,
+        "negative_certificate": 3,
+        "small_positive_certificate": 22,
+        "remaining": 613
+      },
+      "small_positive_witnesses": [
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": null,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": null,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": null,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": null,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": null,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": null,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 0,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 0,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 0,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 0,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 0,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 1,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 1,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 1,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 1,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 1,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 2,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 2,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 2,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 2,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "i",
+          "inner": 2,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "034/156",
+          "case": "iii",
+          "inner": null,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            1,
+            5,
+            6
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        }
+      ]
+    },
+    {
+      "counts": {
+        "graph": 4,
+        "labelled": 2432,
+        "budget_degree": 718,
+        "negative_certificate": 0,
+        "small_positive_certificate": 9,
+        "remaining": 709
+      },
+      "small_positive_witnesses": [
+        {
+          "type": "035/169",
+          "case": "i",
+          "inner": null,
+          "edges": 1,
+          "k": 3,
+          "I": [
+            1,
+            4,
+            6,
+            8,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 6
+        },
+        {
+          "type": "035/169",
+          "case": "i",
+          "inner": null,
+          "edges": 4,
+          "k": 3,
+          "I": [
+            1,
+            4,
+            6,
+            8,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 6
+        },
+        {
+          "type": "035/169",
+          "case": "i",
+          "inner": null,
+          "edges": 16,
+          "k": 3,
+          "I": [
+            1,
+            4,
+            6,
+            8,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 6
+        },
+        {
+          "type": "035/279",
+          "case": "i",
+          "inner": null,
+          "edges": 1,
+          "k": 3,
+          "I": [
+            2,
+            4,
+            7,
+            8,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 6
+        },
+        {
+          "type": "035/279",
+          "case": "i",
+          "inner": null,
+          "edges": 4,
+          "k": 3,
+          "I": [
+            2,
+            4,
+            7,
+            8,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 6
+        },
+        {
+          "type": "035/279",
+          "case": "i",
+          "inner": null,
+          "edges": 16,
+          "k": 3,
+          "I": [
+            2,
+            4,
+            7,
+            8,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 6
+        },
+        {
+          "type": "279/348",
+          "case": "i",
+          "inner": null,
+          "edges": 1,
+          "k": 3,
+          "I": [
+            1,
+            3,
+            4,
+            6,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 6
+        },
+        {
+          "type": "279/348",
+          "case": "i",
+          "inner": null,
+          "edges": 4,
+          "k": 3,
+          "I": [
+            1,
+            3,
+            4,
+            6,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 6
+        },
+        {
+          "type": "279/348",
+          "case": "i",
+          "inner": null,
+          "edges": 16,
+          "k": 3,
+          "I": [
+            1,
+            3,
+            4,
+            6,
+            8
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 6
+        }
+      ]
+    },
+    {
+      "counts": {
+        "graph": 5,
+        "labelled": 1536,
+        "budget_degree": 452,
+        "negative_certificate": 3,
+        "small_positive_certificate": 22,
+        "remaining": 427
+      },
+      "small_positive_witnesses": [
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": null,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": null,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": null,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": null,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": null,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": null,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 0,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 0,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 0,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 0,
+          "edges": 18,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 0,
+          "edges": 24,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 1,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 1,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 1,
+          "edges": 6,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 1,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 1,
+          "edges": 36,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            0,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 2,
+          "edges": 1,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 2,
+          "edges": 4,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 2,
+          "edges": 9,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 2,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            -1
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "i",
+          "inner": 2,
+          "edges": 33,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            -1,
+            -1,
+            0
+          ],
+          "N": 5
+        },
+        {
+          "type": "016/359",
+          "case": "iii",
+          "inner": null,
+          "edges": 16,
+          "k": 2,
+          "I": [
+            3,
+            5,
+            9
+          ],
+          "outside_coeff": [
+            -2,
+            0,
+            -1,
+            -1
+          ],
+          "N": 5
+        }
+      ]
+    }
+  ]
+}

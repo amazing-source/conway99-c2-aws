@@ -1,0 +1,36 @@
+{
+  "pair_certificates_checked": 19,
+  "n3": [
+    {
+      "graph": 0,
+      "new_after_psd": 0,
+      "certificates": []
+    },
+    {
+      "graph": 1,
+      "new_after_psd": 0,
+      "certificates": []
+    },
+    {
+      "graph": 2,
+      "new_after_psd": 0,
+      "certificates": []
+    },
+    {
+      "graph": 3,
+      "new_after_psd": 0,
+      "certificates": []
+    },
+    {
+      "graph": 4,
+      "new_after_psd": 0,
+      "certificates": []
+    },
+    {
+      "graph": 5,
+      "new_after_psd": 0,
+      "certificates": []
+    }
+  ],
+  "elapsed_seconds": 1.125
+}
