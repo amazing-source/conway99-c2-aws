@@ -1,0 +1,34 @@
+{
+ "part": [
+  0,
+  1
+ ],
+ "batch": "all",
+ "jobs_in_share": 16,
+ "done_here": 8,
+ "failed": [
+  "143_0_8",
+  "143_1_8",
+  "143_2_8",
+  "143_3_8",
+  "143_4_8",
+  "143_5_8",
+  "143_6_8",
+  "143_7_8"
+ ],
+ "jobs_with_a_pair_not_excluded_again": [],
+ "skipped_already_done": 0,
+ "per_lattice": {
+  "105": {
+   "jobs": 8,
+   "pairs": 56544,
+   "exposed_not_excluded_again": 0,
+   "EXCLUDED (twin transfer)": 2688,
+   "EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 2904,
+   "EXCLUDED (char-vector trap)": 20124,
+   "EXCLUDED (stage 1 empty: no 7 h)": 4598,
+   "SWAP-COVERED (I(y1)>I(y2))": 26230
+  }
+ },
+ "hours": 0.33
+}
