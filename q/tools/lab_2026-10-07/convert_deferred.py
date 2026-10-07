@@ -60,9 +60,10 @@ def main():
             if (n18 or n20) and not good: b.append("Golay certificate missing or not matching")
         else:
             miss = 0
-            for k, n, sha, t18, t20 in o.get("deferral_records", []):
-                c = certs.get((lid, k, n, sha))
-                if not (c is not None and c.get("ok") is True and c.get("stream_ok") is True and c["T18"]["certified"] == t18 and c["T20"]["certified"] == t20): miss += 1
+            for k, n, sha, t18, t20, *rest in o.get("deferral_records", []):
+                c = certs.get((lid, k, n, sha)); t20n = rest[0] if rest else 0
+                if not (c is not None and c.get("ok") is True and c.get("stream_ok") is True and c["T18"]["certified"] == t18 and c["T20"]["certified"] == t20
+                        and (c.get("T20_norm4") or {}).get("certified", 0) == t20n): miss += 1
             if miss: b.append("certificates missing: %d of %d records" % (miss, len(o.get("deferral_records", []))))
         block[lid] = b
     if nocert: block = {l: [x for x in b if "ertificate" not in x] for l, b in block.items()}

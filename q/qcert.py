@@ -61,7 +61,8 @@ def main():
             try: d = json.loads(l)
             except ValueError: continue
             df = d.get("deferred") or {}
-            if d.get("sha256") == m["sha256"] and d.get("n_pairs") == m["n_pairs"] and len(df.get("T18", [])) == m["T18"] and len(df.get("T20", [])) == m["T20"]:
+            if (d.get("sha256") == m["sha256"] and d.get("n_pairs") == m["n_pairs"] and len(df.get("T18", [])) == m["T18"] and len(df.get("T20", [])) == m["T20"]
+                    and len(df.get("T20_norm4", [])) == m.get("T20_norm4", 0)):
                 rec = {k: d[k] for k in ("id", "chunk", "sha256", "n_pairs", "deferred")}; break
         if rec is None or m["lid"] not in jobs:
             failed.append(m["key"]); a.log("FAIL %s: record not found on %s" % (m["key"], m["branch"])); return

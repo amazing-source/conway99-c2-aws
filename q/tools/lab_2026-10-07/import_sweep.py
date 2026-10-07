@@ -19,6 +19,8 @@ Checks on a record (a record failing one is REFUSED and listed):
   * deferral: the DEFERRED verdict counts equal the lengths of the index lists (stream: "deferred"; Golay: the DEFERRED entries of
     not_excluded); the indices are distinct and inside the stream;
   * no verdict outside the known classes.
+Since 07/10 a third DEFERRED verdict exists (rule Q_DEFER_N4): "pending T20: norm-4 x with |(x,y1)| = |(x,y2)| = 3", index list
+"T20_norm4"; it is counted with the pairs pending T20 and also reported apart (defer_T20_norm4).
 A DEFERRED pair is NOT excluded. Classes of verdicts: at once (char-vector trap, dual minimum 9/7, set-up), search, twin, swap,
 DEFERRED pending T18, DEFERRED pending T20, INCOMPLETE, other.
 
@@ -80,9 +82,9 @@ def check(d, lid, k, n, ST, GO, PAR, DEF):
         if p is not None and not (p.get("complete") is True and p.get("sha256") == d.get("sha256") and p.get("pairs") == d.get("n_pairs")):
             bad.append("producer end line: not complete, or sha256 / pairs differ")
         if p is None and (d.get("merged") or {}).get("producer_max_out"): bad.append("raised producer cap without the producer end line")
-        df = d.get("deferred") or {}; i18 = df.get("T18", []); i20 = df.get("T20", [])
-        if (nd18, nd20) != (len(i18), len(i20)): bad.append("DEFERRED counts differ from the index lists")
-        allidx = list(i18) + list(i20)
+        df = d.get("deferred") or {}; i18 = df.get("T18", []); i20 = df.get("T20", []); i20n = df.get("T20_norm4", [])
+        if (nd18, nd20) != (len(i18), len(i20) + len(i20n)): bad.append("DEFERRED counts differ from the index lists")
+        allidx = list(i18) + list(i20) + list(i20n)
         if len(set(allidx)) != len(allidx) or any(not (0 <= i < d.get("n_pairs", 0)) for i in allidx): bad.append("deferred indices repeated or out of range")
         if (nd18 or nd20) and not (d.get("merged") or {}).get("defer") and not df: bad.append("DEFERRED verdicts without deferral fields")
     else:
@@ -186,10 +188,11 @@ def main():
                 for v, m in d["verdicts"].items(): c[cls(v)] += m
                 twins.update(d.get("twin_deferred") or {})
                 df = d.get("deferred") or {}
-                if df.get("T18") or df.get("T20"):
+                if df.get("T18") or df.get("T20") or df.get("T20_norm4"):
                     assert "_src" in d, "a deferral record that is only in chunks.jsonl"
                     manifest.append({"key": "%s:%d:%d" % (lid, d["chunk"][0], d["chunk"][1]), "lid": lid, "k": d["chunk"][0], "n": d["chunk"][1],
                                      "sha256": d["sha256"], "n_pairs": d["n_pairs"], "T18": len(df.get("T18", [])), "T20": len(df.get("T20", [])),
+                                     "T20_norm4": len(df.get("T20_norm4", [])),
                                      "branch": "run/" + d["_src"][0], "file": d["_src"][1], "wall_secs": d.get("wall_secs"),
                                      "producer_max_out": (d.get("merged") or {}).get("producer_max_out")})
             npairs = sum(d["n_pairs"] for d in sel); dbl = sum(1 for x in cov if x > 1); miss = sum(1 for x in cov if x == 0)
@@ -201,7 +204,9 @@ def main():
             o.update(pairs=npairs, selected=len(sel), y1_reps=NR, not_covered=miss, covered_twice=dbl, kind="stream", twin_classes=len(twins),
                      twin_pending=pend, twin_all=sorted(twins), full=bool(full and not miss),
                      deferral_records=[[d["chunk"][0], d["chunk"][1], d["sha256"], len((d.get("deferred") or {}).get("T18", [])),
-                                        len((d.get("deferred") or {}).get("T20", []))] for d in sel if (d.get("deferred") or {}).get("T18") or (d.get("deferred") or {}).get("T20")],
+                                        len((d.get("deferred") or {}).get("T20", [])), len((d.get("deferred") or {}).get("T20_norm4", []))]
+                                       for d in sel if any((d.get("deferred") or {}).get(x) for x in ("T18", "T20", "T20_norm4"))],
+                     defer_T20_norm4=sum(len((d.get("deferred") or {}).get("T20_norm4", [])) for d in sel),
                      **{x: c[x] for x in CLASSES})
             print("%-4s %7d %11d | %10d %9d %9d %10d | %9d %9d %6d | %s" % (lid, len(R), npairs, c["excl_at_once"], c["excl_search"], c["twin"], c["swap"],
                                                                      c["defer_T18"], c["defer_T20"], c["incomplete"], st))
@@ -222,8 +227,9 @@ def main():
         json.dump({"what": "stream records with DEFERRED pairs selected by the lab import (scripts/cloud/import_sweep.py); one certificate per "
                            "record (q/cert_stream.py): the stream is regenerated and every deferred position is checked", "records": manifest},
                   open(sys.argv[sys.argv.index("--manifest") + 1], "w"), indent=0)
-        print("manifest: %d records, %d + %d deferred pairs, wall of the original jobs %.0f h" % (
-            len(manifest), sum(m["T18"] for m in manifest), sum(m["T20"] for m in manifest), sum(m["wall_secs"] or 0 for m in manifest) / 3600))
+        print("manifest: %d records, %d + %d + %d (norm 4) deferred pairs, wall of the original jobs %.0f h" % (
+            len(manifest), sum(m["T18"] for m in manifest), sum(m["T20"] for m in manifest), sum(m["T20_norm4"] for m in manifest),
+            sum(m["wall_secs"] or 0 for m in manifest) / 3600))
     if "--json" in sys.argv: json.dump({"lattices": out, "refused": refused}, open(sys.argv[sys.argv.index("--json") + 1], "w"), indent=1)
 
 
