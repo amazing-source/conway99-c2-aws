@@ -113,7 +113,29 @@ The argument above shows that its right side cannot be zero. For
 profile (4,2,1), `PROFILE_421.md` further gives X0=K3 disjoint union R,
 so e(R)<=5. This excludes the entire six-edge possibility on R.
 
+In fact e(R) is even. The involution has no fixed vertex in R and fixes
+no edge of R: a fixed edge would join a word to its mate, which is
+impossible. Thus every edge orbit has size two. It follows that
+
+    e(R)<=4, e(X0)<=7, e(X2)<=34    in profile (4,2,1).
+
+There are only four induced graph types for R, including its mate action:
+the empty six-vertex graph; two disjoint edges plus two isolated vertices;
+a four-cycle plus two isolated vertices; and two disjoint three-vertex
+paths. To see completeness, R consists of three mate orbits with no
+mate edges. One edge orbit is a matching between two mate orbits. There
+are at most two edge orbits. If they use the same pair of mate orbits,
+they form K2,2; if they use two different pairs, they form two P3s.
+With zero or one edge orbit the first two possibilities result.
+
+For profile (3,4,0), p is isolated in X0 and all other X0 vertices are
+words; the same edge-orbit argument gives e(X0) even, hence
+e(X0) in {0,2,4,6,8} and e(X2) in {27,29,31,33,35}.
+
 Dependencies: the already proved identities G0/Q0, the class sizes,
 strong regularity, and the existence of an inner X2 mate edge. No
 computed list of support graphs, PSD computation, dual-norm lemma,
 T18, or exhaustive search is used in this argument.
+
+Review: Claude (lab session) checked the extremal-count proof step by
+step in bridge message 29 and forwarded it to the laptop session.
