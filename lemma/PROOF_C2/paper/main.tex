@@ -188,6 +188,11 @@ modulo $\Z$ on vector spaces over $\F_7$, which we identify with $\F_7$-valued f
 
 \section{An involution fixes exactly one vertex}\label{sec:fix}
 
+The following proposition is due to Makhnev and Minakova \cite[Theorem~1]{MM}, who obtain it from their classification of
+the subgraphs of fixed points. The proof given here counts blocks instead. It has one device in common with theirs, the
+integrality of a character of $\s$: they use the eigenspace of dimension $54$ (p.~100 of the Russian original), we use the
+complementary one, of dimension $44$.
+
 \begin{proposition}\label{prop:fix}
 Let $\s$ be an automorphism of order $2$ of $\G$. Then $\s$ fixes exactly one vertex $p$, it exchanges the two ends of each of
 the seven blocks at $p$, and no vertex outside $N(p)$ is adjacent to its image.
@@ -219,8 +224,7 @@ Each triangle fixed pointwise contributes to $s_p$ for its three vertices:
 \begin{equation}\label{eq:mod3}
 \textstyle\sum_{p\in F}s_p\equiv 0 \pmod 3 .
 \end{equation}
-Finally, the idempotent of the eigenvalue $-4$ is $\frac17(3I-A)+\frac1{63}J$, and the trace of $\s$ on that eigenspace is an
-integer:
+Finally, the idempotent of the eigenvalue $-4$ is $\frac17(3I-A)+\frac1{63}J$, and the trace of $\s$ on that eigenspace is an integer (the device of \cite{MM} recalled above):
 \begin{equation}\label{eq:trace}
 \tfrac17\,(3f-a_1+11)\in\Z .
 \end{equation}
@@ -463,7 +467,7 @@ $y_1,y_2$; but a unimodular lattice of rank $1$ or $2$ contains a vector of norm
 Let $U$ be an odd unimodular lattice of rank $24$ and $U_0$ its sublattice of vectors of even norm. The quotient
 $U_0^*/U_0$ has four classes: $U_0$, $U\setminus U_0$ and two classes $S_1$, $S_2$, whose union is the \emph{shadow}
 $\{z/2: z \text{ characteristic}\}$ of $U$. The vectors of norm $2$ of the shadow are the \emph{new roots} of $U$: they are the
-roots of the even unimodular lattices $U_0\cup S_j$ that are not in $U$. (The shadow and these four classes are described in \cite[\S2]{CS90}; in rank $24$ both $U_0\cup S_1$ and
+roots of the even unimodular lattices $U_0\cup S_j$ that are not in $U$. (The shadow and these four classes are described in \cite[\S2, p.~386]{CS90}; in rank $24$ both $U_0\cup S_1$ and
 $U_0\cup S_2$ are even unimodular lattices, the two \emph{even neighbours} of $U$ \cite{Bor}.)
 \end{definition}
 
