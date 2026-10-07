@@ -1,0 +1,12 @@
+{
+ "part": [
+  1,
+  8
+ ],
+ "records_in_share": 971,
+ "certified": 824,
+ "not_certified": [],
+ "failed": [],
+ "skipped_already_done": 147,
+ "hours": 0.34
+}
