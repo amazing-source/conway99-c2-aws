@@ -1,0 +1,123 @@
+{
+ "Paley(9) = srg(9,4,1,2), sigma: x -> -x": {
+  "n": 9,
+  "k": 4,
+  "r": 1,
+  "s": -2,
+  "c": 3,
+  "mult_r": 4,
+  "mult_s": 4,
+  "trace_P": 1,
+  "trace_PA": 4,
+  "m": 4,
+  "inner": 2,
+  "mult_s_odd": 2,
+  "mult_r_odd": 2,
+  "rank_H": 2,
+  "norm_inner": 2,
+  "norm_outer": 1,
+  "compl_norm_inner": 1,
+  "compl_norm_outer": 2,
+  "compl_rank": 2,
+  "control_zero_diag_fail": 50,
+  "D": 18,
+  "kappa": "1/216",
+  "n_glue": 0,
+  "rank_U": 4,
+  "glue": [],
+  "nrand": 300,
+  "n_glue_used": 0,
+  "n_Epos": 242,
+  "distinct_E": 41,
+  "n_E0": 58,
+  "even_lift_fail": 242,
+  "smallest_E": [
+   3,
+   6,
+   12,
+   15,
+   24,
+   27,
+   30,
+   39
+  ],
+  "control_rank_strict": 100,
+  "control_H4_fail": 75
+ },
+ "BvLS srg(243,22,1,2) (cosets of the ternary Golay code), sigma: x -> -x": {
+  "n": 243,
+  "k": 22,
+  "r": 4,
+  "s": -5,
+  "c": 9,
+  "mult_r": 132,
+  "mult_s": 110,
+  "trace_P": 1,
+  "trace_PA": 22,
+  "m": 121,
+  "inner": 11,
+  "mult_s_odd": 55,
+  "mult_r_odd": 66,
+  "rank_H": 55,
+  "norm_inner": 5,
+  "norm_outer": 4,
+  "compl_norm_inner": 4,
+  "compl_norm_outer": 5,
+  "compl_rank": 66,
+  "control_zero_diag_fail": 50,
+  "D": 243,
+  "kappa": "1/13122",
+  "small_eigfun_sqnorms": [
+   54
+  ],
+  "n_glue": 4,
+  "rank_U": 57,
+  "glue": [
+   [
+    4,
+    3,
+    0
+   ],
+   [
+    4,
+    0,
+    3
+   ],
+   [
+    11,
+    3,
+    3
+   ],
+   [
+    5,
+    3,
+    -3
+   ]
+  ],
+  "nrand": 300,
+  "n_glue_used": 147,
+  "n_Epos": 247,
+  "distinct_E": 111,
+  "n_E0": 53,
+  "even_lift_fail": 247,
+  "smallest_E": [
+   36,
+   45,
+   63,
+   72,
+   90,
+   117,
+   144,
+   153
+  ],
+  "control_rank_strict": 100,
+  "control_H4_fail": 72
+ },
+ "99": {
+  "r": 3,
+  "s": -4,
+  "c": 7,
+  "mult_r": 54,
+  "mult_s": 44
+ }
+}

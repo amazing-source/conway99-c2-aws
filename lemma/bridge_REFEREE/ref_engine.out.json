@@ -1,0 +1,60 @@
+{
+ "nR": 28,
+ "nX3": 2048,
+ "nX4": 48456,
+ "pairs": 400,
+ "agree": 400,
+ "counts": {
+  "T18": 279,
+  "T20": 113,
+  "none": 8
+ },
+ "min97": 363,
+ "emin_hist": {
+  "9": 19,
+  "10": 18
+ },
+ "E_1_7": 0,
+ "shapes": {
+  "8": [
+   [
+    3,
+    13
+   ],
+   [
+    4,
+    20
+   ]
+  ],
+  "9": [
+   [
+    2,
+    5
+   ]
+  ],
+  "10": [
+   [
+    2,
+    4
+   ],
+   [
+    4,
+    18
+   ]
+  ]
+ },
+ "h4_gap_demo": {
+  "why": "y2 + r",
+  "norms": [
+   7,
+   5
+  ],
+  "ip": 0,
+  "verdict": "DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)"
+ },
+ "engine_immediate_demo": [
+  7,
+  1,
+  "EXCLUDED (char-vector trap)"
+ ]
+}

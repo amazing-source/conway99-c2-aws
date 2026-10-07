@@ -1,0 +1,30 @@
+====================================================================================================
+Paley(9) = srg(9,4,1,2), sigma: x -> -x
+n=9 k=4  r=1 s=-2 c=r-s=3  mult(r)=4 mult(s)=4  fixed vertex index 0
+orbits m=4: inner 2, outer 2; trace S=-2; S: eigenvalue s mult 2, eigenvalue r mult 2
+H = rI - S: H^2 = cH, rank 2 (= trace/c = 2), norms inner 2 outer 1, h pairwise orthogonal, each u meets exactly 2 h
+Lemma 1: A lift(a) = lift(S a) at every vertex (p and N(p) included), 50 random integer a
+  control: S with zero diagonal fails Lemma 1 in 50 / 50 cases; S0^2+S0=(k-2)I: False
+concrete model: F_i = (A-r)(A-k)(e_x - e_sx), form kappa x.x', kappa = c/(2 D^2) = 1/216, D = 18: Gram = rI - S exactly
+lattice U' = <f_1..f_4, y1, y2, 0 glue vectors>: integral, rank 4 = 2 + 2; glue (norm; (g,y1),(g,y2)): []
+theorem on 300 random v of U' (0 with a glue component): a_i integers, S a = s a, A phi_v = s phi_v at all 9 vertices incl. p, sum a_i^2 = E(v), sum phi_v^2 = 2 E(v), phi_v = 0 iff E(v) = 0: ALL HOLD
+  E > 0: 242 vectors, 41 distinct values, max 459; E = 0: 58 vectors; even lift fails in 242 / 242
+  control (rank): with an extra orthogonal direction, sum a_i^2 = E(v) - c t^2 < E(v) in 100 / 100 cases (S a = s a still holds)
+  control (H4): with y2 replaced by y1 + y2 the formula for E is wrong in 75 / 100 cases
+====================================================================================================
+BvLS srg(243,22,1,2) (cosets of the ternary Golay code), sigma: x -> -x
+n=243 k=22  r=4 s=-5 c=r-s=9  mult(r)=132 mult(s)=110  fixed vertex index 0
+orbits m=121: inner 11, outer 110; trace S=-11; S: eigenvalue s mult 55, eigenvalue r mult 66
+H = rI - S: H^2 = cH, rank 55 (= trace/c = 55), norms inner 5 outer 4, h pairwise orthogonal, each u meets exactly 2 h
+Lemma 1: A lift(a) = lift(S a) at every vertex (p and N(p) included), 50 random integer a
+  control: S with zero diagonal fails Lemma 1 in 50 / 50 cases; S0^2+S0=(k-2)I: False
+concrete model: F_i = (A-r)(A-k)(e_x - e_sx), form kappa x.x', kappa = c/(2 D^2) = 1/13122, D = 243: Gram = rI - S exactly
+characters with eigenvalue s: 110 (= mult(s)); small integer eigenfunctions (phi_u+phi_u'+phi_u'')/3 found: 72, squared norms [54]
+lattice U' = <f_1..f_121, y1, y2, 4 glue vectors>: integral, rank 57 = 55 + 2; glue (norm; (g,y1),(g,y2)): [(4, 3, 0), (4, 0, 3), (11, 3, 3), (5, 3, -3)]
+theorem on 300 random v of U' (147 with a glue component): a_i integers, S a = s a, A phi_v = s phi_v at all 243 vertices incl. p, sum a_i^2 = E(v), sum phi_v^2 = 2 E(v), phi_v = 0 iff E(v) = 0: ALL HOLD
+  E > 0: 247 vectors, 111 distinct values, max 1944; E = 0: 53 vectors; even lift fails in 247 / 247
+  control (rank): with an extra orthogonal direction, sum a_i^2 = E(v) - c t^2 < E(v) in 100 / 100 cases (S a = s a still holds)
+  control (H4): with y2 replaced by y1 + y2 the formula for E is wrong in 72 / 100 cases
+====================================================================================================
+(99,14,1,2): r=3 s=-4 c=7 mult(r)=54 mult(s)=44; odd parts (traces 0): 27 and 22; trace S = -7 = -7; frame norms inner 4 outer 3; trace H = 154 = c * 22; D = 126, E_s = ((k-2+rk)I - (1+r+k)A + 2J)/D = (54I - 18A + 2J)/126
+ALL CHECKS PASSED

@@ -1,0 +1,25 @@
+squared norm of phi_v = 2E:  norm 2, Y=5: E=9 -> 18;  norm 2, Y=4: E=10 -> 20;  norm 3, Y=13: E=8 -> 16;  norm 4, (3,3): E=10 -> 20
+values of a^2+b^2 with |a|,|b|<=3: [0, 1, 2, 4, 5, 8, 9, 10, 13, 18]
+E =  0:    37 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(0, (0, 0))]
+E =  1:   280 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(2, (2, 3))]
+E =  2:   288 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(1, (1, 2))]
+E =  3:   268 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(1, (0, 2)), (3, (3, 3))]
+E =  4:   288 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(2, (1, 3))]
+E =  5:   292 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(1, (1, 1)), (2, (0, 3))]
+E =  6:   288 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(1, (0, 1)), (2, (2, 2))]
+E =  7:    37 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(1, (0, 0))]
+E =  8:   280 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(3, (2, 3))]
+E =  9:   288 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(2, (1, 2))]
+E = 10:   268 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(2, (0, 2)), (4, (3, 3))]
+E = 11:   280 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(3, (1, 3))]
+E = 12:   284 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(2, (1, 1)), (3, (0, 3))]
+E = 13:   288 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(2, (0, 1)), (3, (2, 2))]
+E = 14:    37 triples (N<80,|a|,|b|<=30) -> reduced representatives (norm, {|a|,|b|}): [(2, (0, 0))]
+table of section 4 (E = 8..14): CONFIRMED;  E = 0 -> only the zero class;  E = 1..7 -> representatives of norm <= 3: {1: [(2, (2, 3))], 2: [(1, (1, 2))], 3: [(1, (0, 2)), (3, (3, 3))], 4: [(2, (1, 3))], 5: [(1, (1, 1)), (2, (0, 3))], 6: [(1, (0, 1)), (2, (2, 2))], 7: [(1, (0, 0))]}
+norm 3 with E = 9 needs Y = 12: representations as a sum of two squares: []
+norm 4 with E = 9 needs Y = 19: representations as a sum of two squares: []
+norm 5 with E = 9 needs Y = 26: {|a|,|b|} in [(1, 5)] -> reduces to {(2, -2, 1), (2, 1, 2), (2, 1, -2), (2, -1, -2)}
+E = 8, norm <= 5: (norm, Y, {|a|,|b|}) = [(3, 13, (2, 3)), (4, 20, (2, 4))]
+E = 9, norm <= 5: (norm, Y, {|a|,|b|}) = [(2, 5, (1, 2)), (5, 26, (1, 5))]
+E = 10, norm <= 5: (norm, Y, {|a|,|b|}) = [(2, 4, (0, 2)), (4, 18, (3, 3)), (5, 25, (0, 5)), (5, 25, (3, 4))]
+ARITHMETIC OK

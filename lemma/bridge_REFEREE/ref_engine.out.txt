@@ -1,0 +1,15 @@
+lattice_data(011): 1.7 s; r = 56, |R| = 28, |X3| = 2048, |X4| = 48456, |S2| = 52
+H2: G = B B^T exactly (integers), exact det = 1, all 24 LDL pivots > 0 (positive definite, rank 24)
+B: every generator of 011.json is an integer combination of B; the generators have full rank mod 2,3,5,7,11,13 in the basis B
+ambient denominators: DEN = 4
+R (28), X3 (2048), X4 (48456): integer coefficient rows, ambient norms exactly 2, 3, 4; one vector per +- pair
+pairs: 400
+H3/H4 on the 400 pairs (exact, ambient): y1, y2 in U, norms 7, orthogonal
+deferral rule: my ambient computation of (r,y1)^2+(r,y2)^2 over the roots agrees with defer_consumer.witness on 400 / 400 pairs; T18 279, T20 113, none 8; pairs with both a Y=5 and a Y=4 root: 251 (labelled T18)
+min97 (norm-3 x with Y=13): mine 363, engine 363; among the 37 others, minimum positive E over norm<=4: {9: 19, 10: 18}; their historical verdicts: {'EXCLUDED (stage 1 empty: no 7 h)': 37}
+pairs with a T18 witness that also have a Y=13 witness: 260 of 279
+vectors of norm <= 4 with E in 1..7 over all pairs: 0;  (norm, Y) realising E = 8: [(3, 13), (4, 20)], E = 9: [(2, 5)], E = 10: [(2, 4), (4, 18)]
+H4 gap (quick variant, Q_DEFER_NODES=0): invalid pair (y2 + r; norms 7, 5, inner product 0) -> defer_consumer.search returns {'verdict': 'DEFERRED (pending T18: root r with (r,y1)^2+(r,y2)^2 = 5)'}
+  the engine's pair_setup raises AssertionError on the same pair (the stream consumer would record INVALID if the pair reached it)
+engine's own search on an invalid pair (norm(y1) = 7, (y1,y2) = 1): verdict 'EXCLUDED (char-vector trap)' (returned before pair_setup's assertions)
+DONE 4.8 s

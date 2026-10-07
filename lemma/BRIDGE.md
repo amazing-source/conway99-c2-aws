@@ -1,5 +1,17 @@
 # The bridge "vector of the envelope -> sigma-odd integer (-4)-eigenfunction" (route (C), 2026-10-07)
 
+> **Referee's corrections, not yet merged into the text below** (`lemma/bridge_REFEREE/REPORT.md`, 2026-10-07; verdict: no error
+> that breaks the theorem or its application).
+> 1. H4 (norms 7 and orthogonality of y1, y2) is essential and is NOT checked on the quick deferral path: the conversion of a
+>    DEFERRED pair into an exclusion requires a per-pair certificate, to be stated in ambient coordinates (y1, y2, r in U;
+>    y.y = 7; y1.y2 = 0; r.r = 2; (r,y1)^2 + (r,y2)^2 = 5).
+> 2. The sentence "the engine would answer INVALID for such a pair" (section 6 point 13, H4 row) is false in general: the engine's
+>    immediate tests and the consumer's filters come before `pair_setup`. The norm guarantee of the campaign rests on the producer.
+> 3. H5 is the hypothesis being refuted; the external assumption is the project's upstream model (every 99-graph gives one of the
+>    156 envelopes and an enumerated pair hosting its frame), which is outside this text.
+> 4. Lemma 3 needs (G) as well as (U), (F). "The converse is false in general" should read "the converse is not available".
+
+
 Folder: `SP\bridge` (SP = session scratchpad). Scripts and outputs are listed in section 7. No SAT / CP / ILP / LP solver was used.
 
 ## 0. Verdict
