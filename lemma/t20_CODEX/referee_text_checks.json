@@ -1,0 +1,57 @@
+{
+  "proof_sha256": "8e223bfc2f4b0ccac5662ae3e27c0672e57f91d6515365e8598c09894353b487",
+  "support_checks": [
+    {
+      "label": "I.0",
+      "automorphisms": 16,
+      "total_units": 30
+    },
+    {
+      "label": "I.1",
+      "automorphisms": 4,
+      "total_units": 30
+    },
+    {
+      "label": "I.2",
+      "automorphisms": 10,
+      "total_units": 30
+    },
+    {
+      "label": "I.3",
+      "automorphisms": 4,
+      "total_units": 30
+    },
+    {
+      "label": "I.4",
+      "automorphisms": 4,
+      "total_units": 30
+    },
+    {
+      "label": "I.5",
+      "automorphisms": 20,
+      "total_units": 30
+    },
+    {
+      "label": "IIa.0",
+      "automorphisms": 1,
+      "total_units": 20
+    },
+    {
+      "label": "III.0",
+      "automorphisms": 3,
+      "total_units": 24
+    },
+    {
+      "label": "III.1",
+      "automorphisms": 4,
+      "total_units": 24
+    }
+  ],
+  "stage1_totals": [
+    17396042,
+    3130401,
+    615405
+  ],
+  "stage2_total_nodes": 15762181,
+  "scope": "printed representatives, units, automorphisms and table arithmetic; no exhaustive rerun"
+}
