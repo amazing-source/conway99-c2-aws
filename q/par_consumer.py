@@ -121,6 +121,8 @@ def main():
            "conway99_c1_commit": recs[0].get("conway99_c1_commit") if recs else None, "t": time.strftime("%Y-%m-%d %H:%M:%S"),
            "merged": {"shards": P, "workers": W, "mode": "round-robin", "defer": defer, "bad": bad,
                       "par_consumer_sha256": hashlib.sha256(open(os.path.abspath(__file__), "rb").read()).hexdigest()[:16]}}
+    if os.environ.get("Q_PRODUCER_MAXOUT"):
+        out["merged"]["producer_max_out"] = int(os.environ["Q_PRODUCER_MAXOUT"])
     if defer:
         out["merged"]["defer_consumer_sha256"] = hashlib.sha256(open(dcons, "rb").read()).hexdigest()[:16]
         out["merged"]["defer_nodes"] = int(os.environ.get("Q_DEFER_NODES", "10000"))

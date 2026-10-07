@@ -4,6 +4,7 @@ Started by q/qmachine.sh instead of the queue agent when Q_TAIL_KEYS is set (sam
   Q_TAIL_KEYS="016:414:479 016:431:479 ..."   the jobs, in the order given
   Q_PAR_WORKERS=31                             consumers running at the same time (default: cores - 1)
   Q_PAR=124                                    shards per job (default: 4 x workers)
+  Q_PRODUCER_MAXOUT=50000000                   run the producer through q/producer_big.py with this cap on the y2 of one y1
   Q_TAIL_SKIP_OWNED=1                          skip a key that another machine has claimed (use it when the list is work done in
                                                advance; leave it unset to finish jobs their owners have been on for hours)
 For each key, one at a time: the package's own producer command (the one of run_jobs.start), piped into q/par_consumer.py, which
@@ -42,7 +43,9 @@ def main():
         job = jobs[key]; lid, k, n = job["lid"], job["k"], job["n"]; tag = "%s_%d_%d" % (lid, k, n)
         res = os.path.join(out, tag + ".jsonl"); stats = os.path.join(out, tag + "_producer_stats.json")
         U = os.path.join(a.pkg, "external_runs", "structures_3eceb4d", "U", "%s.json" % lid)
-        prod = subprocess.Popen([sys.executable, os.path.join(a.pkg, "c1", "code", "y_pairs_gamma.py"), U, os.path.join(a.pkg, job["gamma"]), stats,
+        big = Q.env("Q_PRODUCER_MAXOUT", "")                              # 07/10: jobs whose producer is truncated at 10^6 y2 (q/producer_big.py)
+        head = [os.path.join(HERE, "producer_big.py"), a.pkg, big] if big else [os.path.join(a.pkg, "c1", "code", "y_pairs_gamma.py")]
+        prod = subprocess.Popen([sys.executable] + head + [U, os.path.join(a.pkg, job["gamma"]), stats,
                                  "--from-plan", os.path.join(a.pkg, job["plan"]), "--chunk", "%d/%d" % (k, n), "--stream", "-", "--max-seconds", "86400"],
                                 env=envx, cwd=os.path.join(a.pkg, "c1", "code"), stdout=subprocess.PIPE,
                                 stderr=open(os.path.join(out, tag + "_producer.err"), "w"))      # = run_jobs.start, producer side
@@ -65,7 +68,9 @@ def main():
         if RJ.done_already(out, job):
             os.makedirs(os.path.join(a.pd, "results"), exist_ok=True)
             shutil.copy(res, os.path.join(a.pd, "results", os.path.basename(res)))
-            a.done_here.append(key); a.unpushed.append({"t": round(time.time()), "m": a.name, "op": "done", "jobs": [key]})
+            ev_ = {"t": round(time.time()), "m": a.name, "op": "done", "jobs": [key]}
+            if Q.env("Q_DEFER", "") == "1": ev_["defer"] = 1
+            a.done_here.append(key); a.unpushed.append(ev_)
             a.log("done %s in %.0f s" % (key, time.time() - t0))
             if a.flush_results("EN_COURS", "tail: %s done in %d s" % (key, time.time() - t0)):      # result on GitHub first
                 a.rearm_deadman()
