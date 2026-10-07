@@ -1,0 +1,2 @@
+I.1: 227 classes of bases (labelled {'labelled': 4608, 'after_budget_degree': 1356, 'after_psd': 712})
+BASE I.1 54 | I.1 n3=2 type 034 278 case ii inner None bits 22 | class size 4 | h2 3 alpha 0 | timeout False | visited [1, 97, 2918, 25381, 62726, 32037, 2478, 15, 0, 0, 0, 0, 0] | kept [97, 2918, 25381, 62726, 32037, 2478, 15, 0, 0, 0, 0, 0, 0] | rej budget 1282250 psd 6934988 rank 0 | complete 0 | 1065.6 s

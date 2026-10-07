@@ -1,0 +1,10 @@
+I.0: 44 classes | closed by search 6 (of which 3 also excluded by the hand lemma) | excluded by the hand lemma only 8 | open 30 | nodes 254971 | cpu 0.5 h
+I.1: 227 classes | closed by search 62 (of which 20 also excluded by the hand lemma) | excluded by the hand lemma only 35 | open 130 | nodes 1520662 | cpu 3.6 h
+I.2: 87 classes | closed by search 14 (of which 9 also excluded by the hand lemma) | excluded by the hand lemma only 12 | open 61 | nodes 496179 | cpu 1.0 h
+I.3: 121 classes | closed by search 26 (of which 11 also excluded by the hand lemma) | excluded by the hand lemma only 17 | open 78 | nodes 860006 | cpu 1.8 h
+I.4: 146 classes | closed by search 43 (of which 17 also excluded by the hand lemma) | excluded by the hand lemma only 17 | open 86 | nodes 1289131 | cpu 2.8 h
+I.5: 75 classes | closed by search 32 (of which 11 also excluded by the hand lemma) | excluded by the hand lemma only 7 | open 36 | nodes 1404691 | cpu 2.6 h
+TOTAL: 700 classes | closed by search 183 (71 also by the hand lemma) | hand lemma only 96 | open 421 | nodes 5825640 | cpu 12.4 h
+open bases (first 30): [('I.0:0', 'no file'), ('I.0:2', 'no file'), ('I.0:3', 'no file'), ('I.0:4', 'no file'), ('I.0:5', 'no file'), ('I.0:8', 'no file'), ('I.0:11', 'no file'), ('I.0:13', 'no file'), ('I.0:16', 'no file'), ('I.0:17', 'no file'), ('I.0:18', 'no file'), ('I.0:19', 'no file'), ('I.0:20', 'no file'), ('I.0:21', 'no file'), ('I.0:22', 'no file'), ('I.0:23', 'no file'), ('I.0:24', 'no file'), ('I.0:25', 'no file'), ('I.0:26', 'no file'), ('I.0:27', 'no file'), ('I.0:29', 'no file'), ('I.0:31', 'no file'), ('I.0:32', 'no file'), ('I.0:33', 'no file'), ('I.0:34', 'no file'), ('I.0:35', 'no file'), ('I.0:36', 'no file'), ('I.0:37', 'no file'), ('I.0:38', 'no file'), ('I.0:40', 'no file')]
+COMPLETE CONFIGURATIONS: none
+RESULT: NOT complete (421 bases open)
