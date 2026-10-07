@@ -1,0 +1,268 @@
+Conway-99, C2 : obstruction au prolongement du support de taille 16
+4 octobre 2026 — preuve humaine et portée exacte
+
+RÉSULTAT
+
+PROUVÉ ICI : dans un vrai SRG(99,14,1,2), un vecteur propre f pour -4,
+à valeurs 0,+1,-1, avec huit +1 et huit -1, impair sous une involution,
+ne peut avoir pour matrice B entre ses deux côtés le complément du cube,
+lorsque ses huit orbites actives sont extérieures.
+
+La contradiction est un double compte : au moins 10 incidences, au plus 8.
+Dans le cadre C2 à un sommet fixe, la borne inférieure se renforce à 12.
+
+Ce résultat ferme entièrement B4 de la note 54, dans un vrai graphe.
+Il ne ferme pas B5 (complément du graphe de Wagner). Il ne démontre donc
+ni min N* >= 9/7, ni EX faux, ni une nouvelle exclusion complète de réseau.
+Une configuration locale qui survit ne constitue pas un prolongement.
+
+1. HYPOTHÈSES ET DICTIONNAIRE
+
+A est l'adjacence d'un SRG(99,14,1,2) :
+  A²+A = 12I+2J.
+L'involution σ fixe p et échange les 49 autres paires de sommets.
+Elle a sept paires adjacentes, exactement les sept paires de N(p).
+Les autres paires, dites extérieures, sont non adjacentes.
+
+On suppose Af=-4f et f∘σ=-f, avec
+  P={f=+1}, Q={f=-1}=σP, |P|=|Q|=8.
+Les huit orbites actives sont extérieures. P et Q sont indépendants.
+Le double compte qui établit cette dernière propriété est rappelé §8.
+
+Numérotons Q par les mates de P. B=A[P,Q] est alors symétrique, binaire,
+sans diagonale, de somme de ligne 4. Son carré a ses entrées hors
+diagonale au plus 2, puisqu'elles comptent des voisins communs dans Q.
+
+Pour z hors P∪Q, Af(z)=0 donne
+  |N(z)∩P|=|N(z)∩Q|=:d_z.
+Notons X_d l'ensemble des sommets extérieurs au support avec d_z=d.
+Attention : « extérieur au support » inclut p et les sommets de N(p),
+et ne signifie pas ici « orbite extérieure à N[p] ».
+
+2. LES TYPES EXTÉRIEURS AU SUPPORT
+
+PROUVÉ AILLEURS, puis redérivé ici : d_z≤2.
+Si z voyait trois sommets de P, leurs trois ensembles de quatre voisins
+dans Q auraient des intersections deux à deux au plus 1, car z consomme
+déjà un des deux voisins communs permis. Leur union aurait cardinal
+au moins 12-3=9, dans un ensemble Q de cardinal 8 : impossible.
+
+Les huit sommets de P ont chacun dix voisins hors du support, donc
+  Σ_z d_z=80.
+Les paires de P ont au total 2·C(8,2)=56 voisins communs. Q en fournit
+8·C(4,2)=48, et P n'en fournit aucun. Par conséquent
+  Σ_z C(d_z,2)=8.
+Il s'ensuit
+  |X_0|=11, |X_1|=64, |X_2|=8.
+
+3. LE COMPTE GLOBAL DES ARÊTES X_0—X_2
+
+Pour z∈X_d, notons a_z,b_z,c_z ses nombres de voisins dans X_2,X_1,X_0.
+Comptons les chemins de longueur deux entre z et les 16 sommets P∪Q.
+Le SRG en demande 2·16-2d=32-2d : les 2d paires adjacentes ont un
+commun au lieu de deux.
+Les 2d voisins de z situés dans le support contribuent chacun 4.
+Les autres contribuent 2 pour un voisin dans X_1, et 4 dans X_2. Ainsi
+  8d+2b_z+4a_z=32-2d,
+  b_z+2a_z=16-5d.
+La somme des degrés hors support vaut 14-2d, donc
+  c_z=a_z+3d-2.
+En particulier, sur X_0, c_z=a_z-2 et a_z≥2.
+
+Posons t=e(X_2). Sur X_2 on a c_z=a_z+4 et Σ_{X_2}a_z=2t. Donc
+  e(X_0,X_2)=Σ_{X_2}c_z=32+2t,
+  Σ_{z∈X_0}(a_z-2)=32+2t-22=10+2t≥10.                 (1)
+
+Ces identités sont anciennes : elles figurent dans Wave 81, §5.
+Elles ne sont pas présentées comme une invention de cette note.
+
+4. L'INVOLUTION FORCE UN CYCLE SUR QUATRE PAIRES DÉFICITAIRES
+
+Supposons maintenant B égal au complément du cube Q_3. Numérotons les
+sommets du cube par les trois bits. Les antipodes i et i⊕111 ont zéro
+voisin commun dans B ; toutes les autres paires ont deux voisins communs.
+
+Pour une paire {i,j} de P, le nombre de ses voisins communs hors Q est
+  m_ij=2-(B²)_ij.
+Puisque d_z≤2, chaque contribution non nulle vient d'un sommet de X_2
+dont les deux voisins dans P sont précisément {i,j}.
+
+Les huit sommets X_2 ont donc pour paires de voisins dans P les quatre
+paires antipodales T_0,T_1,T_2,T_3, chacune exactement deux fois.
+La même propriété vaut pour leurs paires de voisins dans Q.
+
+Si z∈X_2 voit T_i dans P et T_j dans Q, σz voit T_j dans P et T_i dans Q.
+L'orbite {z,σz} donne donc une arête i—j sur les quatre labels T.
+Les quatre orbites X_2 forment un multigraphe de degré 2 sur ces labels.
+
+Ce multigraphe n'a pas de boucle : i=j donnerait à z et σz quatre
+voisins communs dans P∪Q. Il n'a pas non plus d'arête répétée : deux
+orbites couplées aux mêmes T_i,T_j fourniraient deux sommets distincts
+ayant les mêmes quatre voisins dans le support. Dans les deux cas,
+on dépasserait μ=2.
+
+Le multigraphe est donc un graphe simple 2-régulier sur quatre sommets :
+exactement un cycle C_4. Aucun couplage possible n'est omis dans cet
+argument. Il n'impose pas qu'un rectangle de support soit un couplage
+PARFAIT : une telle exigence serait injustifiée dans le cas de Wagner.
+
+5. DEUX CYCLES C_4 DE CONCURRENCE SUR X_2
+
+Identifions les huit sommets X_2 aux huit arcs orientés i→j du cycle
+précédent. Les voisins dans le support de i→j sont T_i dans P et T_j
+dans Q.
+
+Deux arcs distincts ont deux voisins communs dans le support exactement
+quand ils ont la même origine ou la même extrémité ; ils en ont zéro sinon.
+La relation « deux voisins communs dans le support » forme deux cycles
+C_4 disjoints sur X_2. En effet, si le cycle des labels a les classes
+bipartites {0,2} et {1,3}, un cycle de concurrence est constitué des
+quatre arcs de la première classe vers la seconde ; l'autre contient
+leurs arcs inverses.
+
+Un sommet z∈X_0 n'est voisin d'aucun sommet du support. Il ne peut être
+voisin simultanément de deux sommets consécutifs d'un de ces cycles :
+ces deux sommets auraient leurs deux voisins communs du support PLUS z.
+N(z)∩X_2 est donc indépendant dans chacun des deux C_4.
+
+6. CONTRADICTION : AU MOINS 10, AU PLUS 8
+
+Soient r_z et s_z les nombres de voisins de z∈X_0 dans les deux cycles.
+On a r_z,s_z∈{0,1,2} et r_z+s_z=a_z. Deux voisins dans un cycle doivent
+être opposés. Le nombre de diagonales des cycles vues entièrement par z est
+  q_z=C(r_z,2)+C(s_z,2)≥r_z+s_z-2=a_z-2.
+
+En sommant et en appliquant (1),
+  Σ_{X_0}q_z≥10+2t≥10.
+Mais les deux cycles ont ensemble quatre diagonales. Chaque diagonale
+est une paire de sommets du vrai graphe, qui a au plus deux voisins communs.
+Elle peut donc être vue entièrement par au plus deux sommets de X_0 :
+  Σ_{X_0}q_z≤4·2=8.
+
+Contradiction. Le support avec B complément du cube ne se prolonge pas.
+Cette preuve ne dépend ni de l'énumération des 156 réseaux, ni d'un
+solveur, ni d'une liste d'étiquetages de racines.
+
+7. RÉDUCTION GLOBALE COMPLÉMENTAIRE : t=1 ET DEUX PROFILS
+
+Cette section apporte une restriction valable aussi pour B de Wagner.
+Elle ne ferme pas ce dernier type.
+
+Chaque sommet du support voit deux X_2 : la somme de ses déficits est
+14-4·3=2. Le support contribue donc 16 aux communs des paires de X_2.
+Le total des communs de ces paires est 56-t. Ainsi
+  Σ_z C(a_z,2)=40-t.
+De §3 on tire Σ_{X_0}a=32+2t et Σ_{X_1}a=48-4t ; avec Σ_{X_2}a=2t :
+  Σ_z a_z=80, Σ_z a_z²=160-2t.
+Sur X_0, a²≥5a-6 car a est entier et a≥2.
+Sur X_1 et X_2, a²≥a. Par conséquent
+  160-2t≥5(32+2t)-66+(48-4t)+2t=142+8t,
+  t≤1.
+La borne t≤1 est ancienne (Wave 81 la vérifie par énumération exacte) ;
+la présente inégalité en donne une preuve humaine courte.
+
+Dans C2, p∈X_0. Comme c_p=a_p-2≥0, p voit au moins deux X_2.
+Ses voisins sont des paires adjacentes de σ. Chaque paire de X_2 voisine
+de p est donc une arête interne de X_2. D'où t≥a_p/2≥1.
+Ainsi
+  t=1, a_p=2, b_p=12, c_p=0.
+L'unique arête de X_2 est l'une des sept paires de N(p). Les six autres
+paires de N(p) sont dans X_1. Le profil de leurs voisins dans P est
+exactement (2,1,1,1,1,1,1), à permutation près.
+
+Les défauts quadratiques satisfont
+  Σ_{X_0}(a-2)(a-3)+Σ_{X_1∪X_2}a(a-1)=18-10t=8.
+Le terme X_2 est nul (deux degrés 1, six degrés 0), celui de p aussi.
+Après division par les orbites de taille deux, le budget vaut 4.
+Les cinq orbites non fixes de X_0 ont Σ a=16. Leur a est 2,3 ou 4,
+car a≥5 consommerait à lui seul au moins 6. Si n_j compte ces orbites,
+  n_4-n_2=1, n_4≤2.
+On obtient exactement deux profils, où les nombres ci-dessous comptent
+des SOMMETS, et a signifie toujours « nombre de voisins dans X_2 » :
+
+  Profil A : X_0 : a=2×1, a=3×8, a=4×2 ;
+             X_1 : a=0×22, a=1×40, a=2×2 ;
+             X_2 : a=0×6, a=1×2.
+
+  Profil B : X_0 : a=2×3, a=3×4, a=4×4 ;
+             X_1 : a=0×20, a=1×44 ;
+             X_2 : a=0×6, a=1×2.
+
+Le profil A donne X_0 = p isolé + deux P_3 échangés par σ + deux K_2
+échangés par σ. Le profil B donne soit deux P_4 échangés plus trois
+isolés, soit un C_4 avec σ demi-tour, deux K_2 échangés et trois isolés.
+Ces graphes ne peuvent contenir une arête z—σz, car aucun X_0 ne voit p.
+Un triangle invariant aurait un sommet fixe, et deux triangles échangés
+nécessiteraient six sommets de degré 2, que les profils n'ont pas.
+
+8. RAPPEL : P ET Q INDÉPENDANTS ; LES DEUX TYPES DE B
+
+Pour un support de m sommets positifs, e=e(P) et d_i=deg_P(i), l'équation
+propre donne deg_Q(i)=d_i+4. Le double compte des communs des paires de P
+donne pour les sommets hors P∪Q
+  D=m(m-7)-7e-Σ_i d_i²≥0.
+Avec m=8 et Σ d_i²≥2e, un e≥1 donnerait D≤8-9e<0. Donc e=0.
+
+Le complément C de B est un graphe cubique sur huit sommets.
+Pour i≠j, (B²)_ij=2C_ij+(C²)_ij. La borne (B²)_ij≤2 interdit tout
+triangle dans C. Un graphe cubique sans triangle sur huit sommets est
+le cube ou le graphe de Wagner ; voici une petite classification humaine.
+
+Fixons un sommet v avec trois voisins indépendants a,b,c, et les quatre
+sommets restants R. Chacun de a,b,c a deux voisins dans R, donc R
+induit trois arêtes. Sans triangle, ces trois arêtes forment une étoile
+K_{1,3} ou un chemin P_4.
+Dans le premier cas, le centre n'a pas de voisin parmi a,b,c et chaque
+feuille en a deux. Les six incidences a,b,c—feuilles forment un cycle
+de longueur 6 : on retrouve le cube.
+Dans le cas R=r_0—r_1—r_2—r_3, les degrés vers a,b,c sont 2,1,1,2.
+Les seules paires non adjacentes utilisables pour un de a,b,c sont
+{r_0,r_2}, {r_0,r_3}, {r_1,r_3}. Les degrés imposent de les utiliser
+chacune une fois : on retrouve Wagner, c'est-à-dire le cycle de huit
+sommets avec les quatre arêtes antipodales.
+
+9. VÉRIFICATIONS, SOURCES ET LIMITE
+
+CALCULÉ en entiers, contrôle indépendant de §4–6 :
+- les 105 appariements parfaits de huit occurrences déficitaires ont
+  été parcourus ; après exclusion des boucles et arêtes répétées,
+  ils donnent les trois cycles C_4 possibles sur les quatre labels ;
+- pour chacun, les huit rectangles ont bien la concurrence 2C_4 ;
+- les 256 sous-ensembles de X_2 ont été vérifiés pour l'inégalité q≥a-2 ;
+- contrôle positif local : les rectangles respectent les capacités
+  2J-B du support et laissent bien 64 incidences de type X_1.
+Ce contrôle positif ne construit pas le graphe complet.
+Résultats : C2_PREUVE_CUBE_CONTROLE.json, dans le même dossier outputs.
+Un processus, moins d'une seconde, budget prévu inférieur à 32 Mio.
+
+Les diagnostics sur Wagner laissent des configurations partielles.
+Les tests de Gram ont aussi laissé des candidats et ne donnent pas
+de contradiction supplémentaire générale. Aucune approximation
+spectrale n'est utilisée pour prouver le théorème sur le cube.
+
+Sources lues pour éviter de redonner les anciennes pistes :
+- laboratoire c2_experimental, notes/54_SOLO_MODELE_JOINT_TEMOIN_28_09.md
+  et scripts/k0_n8_config.py, k0_n8_fast.py, k0_n8_numba.py ;
+- archive conway99-lab-archive/temp_session_eeaf2d22/scratchpad/
+  conway-99-research, attempts/wave78-short-vector-packing/derivation.md,
+  attempts/wave81-norm16-labeled-design/derivation.md et exact_check.py,
+  verification/wave81-norm16-graphical-refinement/derivation.md ;
+- dossier de recherche : MODEL.md, TASK.md, AUDIT_STATUS.md,
+  DUPLICATION_NOTES.md, HANDOVER_2026-10-04.md, les deux CASCADE_STUDY ;
+- laboratoire : notes/PROOF_SKELETON_C2.md et dossier Astra,
+  attaque_globale_27_0803/AUDIT_NORME1_ET_METRIQUES.md.
+
+La recherche dans ces sources n'a pas retrouvé l'obstruction §4–6.
+Cela n'établit aucune priorité dans la littérature ni dans des sources
+non accessibles. Le comptage global §2–3 et t≤1 étaient déjà connus.
+
+La preuve porte sur un VRAI graphe : on ne l'applique pas à une matrice
+signée relâchée N qui n'a pas de prolongement établi. Le raccord d'une
+solution du modèle à un graphe utilise T4 avec son statut dans MODEL.md.
+F0, entrée distincte, n'est pas nécessaire pour le théorème conditionnel
+ci-dessus ; il intervient seulement pour passer des involutions à un
+sommet fixe à toutes les involutions.
+
+Le cas encore à fermer est B égal au complément de Wagner, avec les
+contraintes globales de §7. La borne min N* >= 9/7 reste non prouvée.
+Aucune modification de moteur, de dépôt ou de job AWS n'a été faite.

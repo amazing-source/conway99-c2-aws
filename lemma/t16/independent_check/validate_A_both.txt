@@ -1,0 +1,4 @@
+  ok pair 1 raw 1536 norm 2 t=13s
+  ok pair 2 raw 768 norm 1 t=44s
+validate A mode=both: 2 L3 pairs, unnormalised incidences 2304, normalised 3, normal forms agree
+total time 46.5s

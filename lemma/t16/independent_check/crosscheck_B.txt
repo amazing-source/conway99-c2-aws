@@ -1,0 +1,18 @@
+======================================================================
+PROFILE B  X0 non-p orbit a-values: [2, 3, 3, 4, 4]
+sigma-invariant X0-internal graphs with prescribed degrees (labelled): 18
+matchings passing P-Q common-neighbour bound (L1): 75
+matchings passing all bounds on P u Q u X2 (X2-X2 adjacency unknown) (L2): 31
+(matching, xy-orbit) pairs passing bounds on P u Q u X2 u {p} (L3): 76  Aut(B)-classes: 9
+normalised X0-X2 incidences (summed over L3 pairs): 16  L3 pairs with >=1 incidence: 16
+(incidence, X0-internal graph) combos passing quick filter: 64
+valid Y configurations (labelled, X0-normalised): 32
+valid Y configurations up to isomorphism: 2
+  [time 21.2s]
+per Aut(B)-class of (matching, xy): [#labelled pairs, #incidences, #valid configs]
+   (((0, 1), (2, 4), (3, 5), (6, 7)), (2, 4)) [16, 16, 32]
+config #0 x-side 0: profiles 193/3520, multisets 0, T-internal ok 0, full ok 0
+config #0 x-side 1: profiles 193/3520, multisets 0, T-internal ok 0, full ok 0
+config #1 x-side 0: profiles 193/3520, multisets 0, T-internal ok 0, full ok 0
+config #1 x-side 1: profiles 193/3520, multisets 0, T-internal ok 0, full ok 0
+profile B: 4 runs, total full survivors 0, time 21.2s

@@ -1,0 +1,844 @@
+Profile A: 40 stage-1 configurations up to isomorphism.
+Layout: P0-7, Q0-7 (Q_j = sigma P_j), p, X0 orbits (wk, swk), X2 orbits (zm, szm);
+zm sees P_U, Q_V; szm sees P_V, Q_U.  Adjacency lists of p, X0, X2 restricted to Y.
+
+config #0  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : sw4 sz0 sz1 z2
+  sw1 : w4 z0 z1 sz2
+  w2  : sw3 z0 sz2 z3
+  sw2 : w3 sz0 z2 sz3
+  w3  : sw2 sz1 sz2 z3
+  sw3 : w2 z1 z2 sz3
+  w4  : sw0 sw1 sz0 z1 z3 sz3
+  sw4 : w0 w1 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #1  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : sw3 sz0 sz1 z2
+  sw1 : w3 z0 z1 sz2
+  w2  : w4 z0 sz2 z3
+  sw2 : sw4 sz0 z2 sz3
+  w3  : sw1 sz1 sz2 z3
+  sw3 : w1 z1 z2 sz3
+  w4  : sw0 w2 sz0 z1 z3 sz3
+  sw4 : w0 sw2 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #2  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : w3 sz0 sz1 z2
+  sw1 : sw3 z0 z1 sz2
+  w2  : w4 z0 sz2 z3
+  sw2 : sw4 sz0 z2 sz3
+  w3  : w1 sz1 sz2 z3
+  sw3 : sw1 z1 z2 sz3
+  w4  : sw0 w2 sz0 z1 z3 sz3
+  sw4 : w0 sw2 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #3  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w4 z0 z1 z2
+  sw0 : sw4 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : sw3 z0 sz2 z3
+  sw2 : w3 sz0 z2 sz3
+  w3  : sw2 sz1 sz2 z3
+  sw3 : w2 z1 z2 sz3
+  w4  : w0 w1 sz0 z1 z3 sz3
+  sw4 : sw0 sw1 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #4  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w4 z0 z1 z2
+  sw0 : sw4 sz0 sz1 sz2
+  w1  : sw3 sz0 sz1 z2
+  sw1 : w3 z0 z1 sz2
+  w2  : w4 z0 sz2 z3
+  sw2 : sw4 sz0 z2 sz3
+  w3  : sw1 sz1 sz2 z3
+  sw3 : w1 z1 z2 sz3
+  w4  : w0 w2 sz0 z1 z3 sz3
+  sw4 : sw0 sw2 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #5  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w4 z0 z1 z2
+  sw0 : sw4 sz0 sz1 sz2
+  w1  : w3 sz0 sz1 z2
+  sw1 : sw3 z0 z1 sz2
+  w2  : w4 z0 sz2 z3
+  sw2 : sw4 sz0 z2 sz3
+  w3  : w1 sz1 sz2 z3
+  sw3 : sw1 z1 z2 sz3
+  w4  : w0 w2 sz0 z1 z3 sz3
+  sw4 : sw0 sw2 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #6  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w4 z0 z1 z2
+  sw0 : sw4 sz0 sz1 sz2
+  w1  : w2 sz0 sz1 z2
+  sw1 : sw2 z0 z1 sz2
+  w2  : w1 z0 sz2 z3
+  sw2 : sw1 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : w0 w3 sz0 z1 z3 sz3
+  sw4 : sw0 sw3 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #7  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : sw2 z0 z1 z2
+  sw0 : w2 sz0 sz1 sz2
+  w1  : sw4 sz0 sz1 z2
+  sw1 : w4 z0 z1 sz2
+  w2  : sw0 z0 sz2 z3
+  sw2 : w0 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : sw1 w3 sz0 z1 z3 sz3
+  sw4 : w1 sw3 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #8  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : sw2 z0 z1 z2
+  sw0 : w2 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : sw0 z0 sz2 z3
+  sw2 : w0 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : w1 w3 sz0 z1 z3 sz3
+  sw4 : sw1 sw3 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #9  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w3 z0 z1 z2
+  sw0 : sw3 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : w4 z0 sz2 z3
+  sw2 : sw4 sz0 z2 sz3
+  w3  : w0 sz1 sz2 z3
+  sw3 : sw0 z1 z2 sz3
+  w4  : w1 w2 sz0 z1 z3 sz3
+  sw4 : sw1 sw2 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #10  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w2 z0 z1 z2
+  sw0 : sw2 sz0 sz1 sz2
+  w1  : sw4 sz0 sz1 z2
+  sw1 : w4 z0 z1 sz2
+  w2  : w0 z0 sz2 z3
+  sw2 : sw0 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : sw1 w3 sz0 z1 z3 sz3
+  sw4 : w1 sw3 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #11  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w2 z0 z1 z2
+  sw0 : sw2 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : w0 z0 sz2 z3
+  sw2 : sw0 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : w1 w3 sz0 z1 z3 sz3
+  sw4 : sw1 sw3 z0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 w2 sw4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 sw2 w4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #12  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : sw4 sz0 z1 z2
+  sw0 : w4 z0 sz1 sz2
+  w1  : sw4 z0 sz1 z2
+  sw1 : w4 sz0 z1 sz2
+  w2  : sw3 z0 sz2 z3
+  sw2 : w3 sz0 z2 sz3
+  w3  : sw2 sz1 sz2 z3
+  sw3 : w2 z1 z2 sz3
+  w4  : sw0 sw1 z0 z1 z3 sz3
+  sw4 : w0 w1 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #13  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : sw4 sz0 z1 z2
+  sw0 : w4 z0 sz1 sz2
+  w1  : sw3 z0 sz1 z2
+  sw1 : w3 sz0 z1 sz2
+  w2  : sw4 z0 sz2 z3
+  sw2 : w4 sz0 z2 sz3
+  w3  : sw1 sz1 sz2 z3
+  sw3 : w1 z1 z2 sz3
+  w4  : sw0 sw2 z0 z1 z3 sz3
+  sw4 : w0 w2 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #14  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : sw4 sz0 z1 z2
+  sw0 : w4 z0 sz1 sz2
+  w1  : w3 z0 sz1 z2
+  sw1 : sw3 sz0 z1 sz2
+  w2  : sw4 z0 sz2 z3
+  sw2 : w4 sz0 z2 sz3
+  w3  : w1 sz1 sz2 z3
+  sw3 : sw1 z1 z2 sz3
+  w4  : sw0 sw2 z0 z1 z3 sz3
+  sw4 : w0 w2 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #15  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w4 sz0 z1 z2
+  sw0 : sw4 z0 sz1 sz2
+  w1  : w4 z0 sz1 z2
+  sw1 : sw4 sz0 z1 sz2
+  w2  : sw3 z0 sz2 z3
+  sw2 : w3 sz0 z2 sz3
+  w3  : sw2 sz1 sz2 z3
+  sw3 : w2 z1 z2 sz3
+  w4  : w0 w1 z0 z1 z3 sz3
+  sw4 : sw0 sw1 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #16  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w4 sz0 z1 z2
+  sw0 : sw4 z0 sz1 sz2
+  w1  : sw2 z0 sz1 z2
+  sw1 : w2 sz0 z1 sz2
+  w2  : sw1 z0 sz2 z3
+  sw2 : w1 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : w0 w3 z0 z1 z3 sz3
+  sw4 : sw0 sw3 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #17  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w4 sz0 z1 z2
+  sw0 : sw4 z0 sz1 sz2
+  w1  : w2 z0 sz1 z2
+  sw1 : sw2 sz0 z1 sz2
+  w2  : w1 z0 sz2 z3
+  sw2 : sw1 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : w0 w3 z0 z1 z3 sz3
+  sw4 : sw0 sw3 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #18  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w3 sz0 z1 z2
+  sw0 : sw3 z0 sz1 sz2
+  w1  : sw4 z0 sz1 z2
+  sw1 : w4 sz0 z1 sz2
+  w2  : sw4 z0 sz2 z3
+  sw2 : w4 sz0 z2 sz3
+  w3  : w0 sz1 sz2 z3
+  sw3 : sw0 z1 z2 sz3
+  w4  : sw1 sw2 z0 z1 z3 sz3
+  sw4 : w1 w2 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #19  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w3 sz0 z1 z2
+  sw0 : sw3 z0 sz1 sz2
+  w1  : w4 z0 sz1 z2
+  sw1 : sw4 sz0 z1 sz2
+  w2  : sw4 z0 sz2 z3
+  sw2 : w4 sz0 z2 sz3
+  w3  : w0 sz1 sz2 z3
+  sw3 : sw0 z1 z2 sz3
+  w4  : w1 sw2 z0 z1 z3 sz3
+  sw4 : sw1 w2 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #20  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w2 sz0 z1 z2
+  sw0 : sw2 z0 sz1 sz2
+  w1  : sw4 z0 sz1 z2
+  sw1 : w4 sz0 z1 sz2
+  w2  : w0 z0 sz2 z3
+  sw2 : sw0 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : sw1 w3 z0 z1 z3 sz3
+  sw4 : w1 sw3 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #21  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w2 sz0 z1 z2
+  sw0 : sw2 z0 sz1 sz2
+  w1  : w4 z0 sz1 z2
+  sw1 : sw4 sz0 z1 sz2
+  w2  : w0 z0 sz2 z3
+  sw2 : sw0 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : w1 w3 z0 z1 z3 sz3
+  sw4 : sw1 sw3 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #22  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (1, 7)), ((2, 4), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 2
+  p   : z2 sz2
+  w0  : w1 sz0 z1 z2
+  sw0 : sw1 z0 sz1 sz2
+  w1  : w0 z0 sz1 z2
+  sw1 : sw0 sz0 z1 sz2
+  w2  : sw4 z0 sz2 z3
+  sw2 : w4 sz0 z2 sz3
+  w3  : w4 sz1 sz2 z3
+  sw3 : sw4 z1 z2 sz3
+  w4  : sw2 w3 z0 z1 z3 sz3
+  sw4 : w2 sw3 sz0 sz1 z3 sz3
+  z0  : P0 P2 Q0 Q6 sw0 w1 w2 w4
+  sz0 : P0 P6 Q0 Q2 w0 sw1 sw2 sw4
+  z1  : P1 P3 Q1 Q7 w0 sw1 sw3 w4
+  sz1 : P1 P7 Q1 Q3 sw0 w1 w3 sw4
+  z2  : P2 P4 Q3 Q5 p w0 w1 sw2 sw3 sz2
+  sz2 : P3 P5 Q2 Q4 p sw0 sw1 w2 w3 z2
+  z3  : P4 P6 Q5 Q7 w2 w3 w4 sw4
+  sz3 : P5 P7 Q4 Q6 sw2 sw3 w4 sw4
+
+config #23  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw3 z0 z1 z2
+  sw0 : w3 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : sw4 sz0 z1 z3
+  sw2 : w4 z0 sz1 sz3
+  w3  : sw0 z1 z3 sz3
+  sw3 : w0 sz1 z3 sz3
+  w4  : w1 sw2 z0 z2 sz2 z3
+  sw4 : sw1 w2 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #24  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw3 z0 z1 z2
+  sw0 : w3 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : w4 sz0 z1 z3
+  sw2 : sw4 z0 sz1 sz3
+  w3  : sw0 z1 z3 sz3
+  sw3 : w0 sz1 z3 sz3
+  w4  : w1 w2 z0 z2 sz2 z3
+  sw4 : sw1 sw2 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #25  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : w3 z0 z1 z2
+  sw0 : sw3 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : sw4 sz0 z1 z3
+  sw2 : w4 z0 sz1 sz3
+  w3  : w0 z1 z3 sz3
+  sw3 : sw0 sz1 z3 sz3
+  w4  : w1 sw2 z0 z2 sz2 z3
+  sw4 : sw1 w2 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #26  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : w3 z0 z1 z2
+  sw0 : sw3 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : w4 sz0 z1 z3
+  sw2 : sw4 z0 sz1 sz3
+  w3  : w0 z1 z3 sz3
+  sw3 : sw0 sz1 z3 sz3
+  w4  : w1 w2 z0 z2 sz2 z3
+  sw4 : sw1 sw2 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #27  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : sw3 sz0 sz1 z2
+  sw1 : w3 z0 z1 sz2
+  w2  : sw4 sz0 z1 z3
+  sw2 : w4 z0 sz1 sz3
+  w3  : sw1 z1 z3 sz3
+  sw3 : w1 sz1 z3 sz3
+  w4  : sw0 sw2 z0 z2 sz2 z3
+  sw4 : w0 w2 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #28  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : sw3 sz0 sz1 z2
+  sw1 : w3 z0 z1 sz2
+  w2  : w4 sz0 z1 z3
+  sw2 : sw4 z0 sz1 sz3
+  w3  : sw1 z1 z3 sz3
+  sw3 : w1 sz1 z3 sz3
+  w4  : sw0 w2 z0 z2 sz2 z3
+  sw4 : w0 sw2 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #29  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : w3 sz0 sz1 z2
+  sw1 : sw3 z0 z1 sz2
+  w2  : sw4 sz0 z1 z3
+  sw2 : w4 z0 sz1 sz3
+  w3  : w1 z1 z3 sz3
+  sw3 : sw1 sz1 z3 sz3
+  w4  : sw0 sw2 z0 z2 sz2 z3
+  sw4 : w0 w2 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #30  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : w3 sz0 sz1 z2
+  sw1 : sw3 z0 z1 sz2
+  w2  : w4 sz0 z1 z3
+  sw2 : sw4 z0 sz1 sz3
+  w3  : w1 z1 z3 sz3
+  sw3 : sw1 sz1 z3 sz3
+  w4  : sw0 w2 z0 z2 sz2 z3
+  sw4 : w0 sw2 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #31  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : sw2 sz0 sz1 z2
+  sw1 : w2 z0 z1 sz2
+  w2  : sw1 sz0 z1 z3
+  sw2 : w1 z0 sz1 sz3
+  w3  : sw4 z1 z3 sz3
+  sw3 : w4 sz1 z3 sz3
+  w4  : sw0 sw3 z0 z2 sz2 z3
+  sw4 : w0 w3 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #32  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : sw2 sz0 sz1 z2
+  sw1 : w2 z0 z1 sz2
+  w2  : sw1 sz0 z1 z3
+  sw2 : w1 z0 sz1 sz3
+  w3  : w4 z1 z3 sz3
+  sw3 : sw4 sz1 z3 sz3
+  w4  : sw0 w3 z0 z2 sz2 z3
+  sw4 : w0 sw3 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #33  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : w2 sz0 sz1 z2
+  sw1 : sw2 z0 z1 sz2
+  w2  : w1 sz0 z1 z3
+  sw2 : sw1 z0 sz1 sz3
+  w3  : sw4 z1 z3 sz3
+  sw3 : w4 sz1 z3 sz3
+  w4  : sw0 sw3 z0 z2 sz2 z3
+  sw4 : w0 w3 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #34  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw4 z0 z1 z2
+  sw0 : w4 sz0 sz1 sz2
+  w1  : w2 sz0 sz1 z2
+  sw1 : sw2 z0 z1 sz2
+  w2  : w1 sz0 z1 z3
+  sw2 : sw1 z0 sz1 sz3
+  w3  : w4 z1 z3 sz3
+  sw3 : sw4 sz1 z3 sz3
+  w4  : sw0 w3 z0 z2 sz2 z3
+  sw4 : w0 sw3 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #35  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw2 z0 z1 z2
+  sw0 : w2 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : sw0 sz0 z1 z3
+  sw2 : w0 z0 sz1 sz3
+  w3  : sw4 z1 z3 sz3
+  sw3 : w4 sz1 z3 sz3
+  w4  : w1 sw3 z0 z2 sz2 z3
+  sw4 : sw1 w3 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #36  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : sw2 z0 z1 z2
+  sw0 : w2 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : sw0 sz0 z1 z3
+  sw2 : w0 z0 sz1 sz3
+  w3  : w4 z1 z3 sz3
+  sw3 : sw4 sz1 z3 sz3
+  w4  : w1 w3 z0 z2 sz2 z3
+  sw4 : sw1 sw3 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #37  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : w2 z0 z1 z2
+  sw0 : sw2 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : w0 sz0 z1 z3
+  sw2 : sw0 z0 sz1 sz3
+  w3  : sw4 z1 z3 sz3
+  sw3 : w4 sz1 z3 sz3
+  w4  : w1 sw3 z0 z2 sz2 z3
+  sw4 : sw1 w3 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #38  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : w2 z0 z1 z2
+  sw0 : sw2 sz0 sz1 sz2
+  w1  : w4 sz0 sz1 z2
+  sw1 : sw4 z0 z1 sz2
+  w2  : w0 sz0 z1 z3
+  sw2 : sw0 z0 sz1 sz3
+  w3  : w4 z1 z3 sz3
+  sw3 : sw4 sz1 z3 sz3
+  w4  : w1 w3 z0 z2 sz2 z3
+  sw4 : sw1 sw3 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+
+config #39  matching(U,V) per X2 orbit: [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]  xy-orbit: 1
+  p   : z1 sz1
+  w0  : w1 z0 z1 z2
+  sw0 : sw1 sz0 sz1 sz2
+  w1  : w0 sz0 sz1 z2
+  sw1 : sw0 z0 z1 sz2
+  w2  : sw4 sz0 z1 z3
+  sw2 : w4 z0 sz1 sz3
+  w3  : w4 z1 z3 sz3
+  sw3 : sw4 sz1 z3 sz3
+  w4  : sw2 w3 z0 z2 sz2 z3
+  sw4 : w2 sw3 sz0 z2 sz2 sz3
+  z0  : P0 P2 Q0 Q6 w0 sw1 sw2 w4
+  sz0 : P0 P6 Q0 Q2 sw0 w1 w2 sw4
+  z1  : P1 P3 Q2 Q4 p w0 sw1 w2 w3 sz1
+  sz1 : P2 P4 Q1 Q3 p sw0 w1 sw2 sw3 z1
+  z2  : P1 P7 Q3 Q5 w0 w1 w4 sw4
+  sz2 : P3 P5 Q1 Q7 sw0 sw1 w4 sw4
+  z3  : P4 P6 Q5 Q7 w2 w3 sw3 w4
+  sz3 : P5 P7 Q4 Q6 sw2 w3 sw3 sw4
+

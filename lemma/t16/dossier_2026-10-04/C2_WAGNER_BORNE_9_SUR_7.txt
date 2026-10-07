@@ -1,0 +1,457 @@
+Conway-99, C2 : obstruction de Wagner et nouvelle borne duale 9/7
+4 octobre 2026 — dossier mathématique et certificats reproductibles
+
+RÉSULTAT ET STATUT
+
+Dans un vrai SRG(99,14,1,2) avec une involution sigma fixant seulement p,
+il n'existe pas de fonction propre f pour -4, impaire sous sigma, à
+valeurs 0,+1,-1, avec huit sommets +1, huit sommets -1, toutes les
+orbites actives extérieures, dont B=A[P,sigma(P)] est le complément
+du graphe de Wagner.
+
+STATUT : preuve avec classification finie calculée exactement. La partie
+structurelle est écrite ci-dessous ; les deux assertions finies restantes
+sont accompagnées de leur énumération exhaustive, des tableaux retenus
+et d'un vérificateur indépendant. Ce n'est pas une preuve intégralement
+à la main, ni une formalisation Lean.
+
+Avec l'obstruction du cube et le lemme séparé sur les h actifs, cela donne
+
+             min L* >= 9/7,
+
+où L est le réseau engendré par le cadre physique de dimension 22,
+sept h de norme 4 et quarante-deux u de norme 3. Cette assertion porte
+sur le cadre d'un VRAI graphe, et non sur chaque candidat signé N isolé.
+
+Conséquence pour une enveloppe U et une paire normale y1,y2 :
+
+  x dans U, x²=3, (x,y1)²+(x,y2)²=13  =>  paire impossible pour EX.
+
+Un seul x suffit. Des témoins rationnels/entiers exacts sont joints pour
+363 des 400 paires historiques du réseau 011. Il n'y a dans ce fichier
+aucune paire K=0. Ce résultat ne ferme aucun réseau entier et ne mesure
+aucun gain d'heures AWS. Les jobs et le moteur n'ont pas été modifiés.
+
+1. ENTRÉES ET QUANTIFICATEURS
+
+A est l'adjacence d'un graphe régulier de degré 14 sur 99 sommets, avec
+un voisin commun par paire adjacente et deux par paire non adjacente :
+
+             A²+A=12I+2J.
+
+N(p) est constitué des sept paires adjacentes de sigma. Les 42 autres
+paires sont non adjacentes. Le raccord de ce graphe au modèle EX est
+celui de MODEL.md, utilisant T4 avec son statut relu à la main, non
+formalisé. F0 n'est pas utilisé pour cette obstruction conditionnelle.
+
+On pose P={f=+1}, Q={f=-1}=sigma(P). Ici |P|=|Q|=8. P et Q sont
+indépendants et B est symétrique, sans diagonale, de degré 4. Pour
+chaque paire distincte i,j, ses lignes ont au plus deux indices communs.
+Ces réductions ont été établies dans la note sur le cube, §8, et dans
+la note 54 du laboratoire. Elles ne sont pas annoncées nouvelles ici.
+
+IMPORTANT : le k de la coupe dans la note 54, encore ouvert pour 1,2,3,
+est distinct du nombre de h actifs dans le lemme d'égalité 8/7. Nous
+fermons ici le cas de coupe k=0,n=8. Nous ne fermons pas les autres coupes.
+
+2. CONTRAINTES GLOBALES UTILISÉES
+
+Pour z hors du support P union Q, les nombres de voisins dans P et Q
+sont égaux ; on les note d_z. Ils valent 0,1 ou 2. Les ensembles X_d
+ont les tailles suivantes :
+
+             |X0|=11, |X1|=64, |X2|=8.
+
+Pour z dans X_d, notons a_z,b_z,c_z les nombres de ses voisins dans
+X2,X1,X0. Le comptage des chemins vers le support donne
+
+             b_z+2a_z=16-5d,
+             c_z=a_z+3d-2.
+
+Notons t le nombre d'arêtes dans X2. Les comptes globaux donnent
+
+  e(X0,X2)=32+2t ; e(X1,X2)=48-4t ;
+  somme_{X0 union X1 union X2} a_z=80 ; somme a_z²=160-2t.
+
+Sur X0, a>=2 et a²>=5a-6. Sur X1 et X2, a²>=a. Ainsi
+
+             160-2t >= 142+8t, donc t<=1.
+
+p appartient à X0. Ses voisins sont des paires adjacentes de sigma,
+et a_p>=2 : on a donc t>=a_p/2>=1. Par conséquent
+
+             t=1, a_p=2, b_p=12, c_p=0.
+
+Appelons x,y=sigma(x) l'unique arête de X2. Ils sont voisins de p.
+Les six autres sommets de X2 appartiennent à des orbites extérieures.
+Les six autres paires de N(p) appartiennent à X1.
+
+Le budget de défaut est
+
+  somme_{X0}(a-2)(a-3)+somme_{X1 union X2}a(a-1)=8.
+
+Il impose exactement deux profils, les multiplicateurs comptant ici
+des SOMMETS, pas des orbites :
+
+  Profil A : X0 : a=2 ×1 (p), a=3 ×8, a=4 ×2 ;
+             X1 : a=0 ×22, a=1 ×40, a=2 ×2 ;
+             X2 : a=0 ×6, a=1 ×2.
+
+  Profil B : X0 : a=2 ×3, a=3 ×4, a=4 ×4 ;
+             X1 : a=0 ×20, a=1 ×44 ;
+             X2 : a=0 ×6, a=1 ×2.
+
+Ces identités, t=1 et les profils sont la section 7 de la note sur le
+cube, que Claude a revérifiée à la main dans sa note du 04/10. Le fait
+ancien t<=1 avait aussi été calculé dans Wave 81. Les obstructions des
+sections 5 et 6 ci-dessous sont la nouvelle étape.
+
+3. LES HUIT RECTANGLES DE WAGNER : COUVERTURE DE LA RÉDUCTION
+
+Numérotons les sommets de Wagner par Z/8Z, avec les arêtes i~i+1 et
+i~i+4. Pour B complémentaire, sa ligne i est
+
+             {i+2,i+3,i+5,i+6} modulo 8.
+
+Les huit paires déficitaires sont {i,i+2}, i dans Z/8Z : elles ont
+exactement un voisin commun dans B, contre deux pour les autres paires.
+Chacune a donc exactement un voisin commun hors du support, dans X2.
+
+Un sommet z de X2 voit une paire U de P et une paire V de Q. Les paires
+U et V appartiennent aux huit paires déficitaires. Son mate voit V dans
+P et U dans Q. Comme chaque paire déficitaire apparaît exactement une
+fois du côté P, les quatre orbites de X2 appairent les huit paires
+déficitaires distinctes. Il y a exactement 7×5×3×1=105 appariements.
+
+Pour chacun, les huit rectangles (U,V),(V,U) doivent respecter :
+
+  (i) chaque ligne ET chaque colonne de B[U,V] a au plus une entrée 1 ;
+  (ii) deux rectangles ont au plus deux voisins communs du support ;
+  (iii) leur nombre total d'occurrences sur chaque cellule (i,j) est
+        au plus 2-B_ij, le budget des voisins communs de P_i,Q_j.
+
+(i) vient de lambda=1 pour un sommet de X2 adjacent à un sommet du
+support. Il s'agit d'un COUPLAGE PARTIEL, qui peut être vide. Exiger un
+couplage parfait serait une hypothèse supplémentaire injustifiée.
+
+Ces tests exacts retiennent 31 appariements. Il faut ensuite choisir
+quelle orbite est x,y. Comme p est déjà leur unique voisin commun,
+leurs rectangles doivent avoir U intersection V vide. Marquer toutes
+les orbites satisfaisant cette condition donne 76 cas. Aucun choix
+d'orbite n'est imposé arbitrairement.
+
+4. LE PETIT GRAPHE INDUIT ET SES MATRICES D'INCIDENCE
+
+On retient les 35 sommets
+
+             Y=P union Q union X0 union X2.
+
+p est dans X0. Numérotons les autres sommets de X0 par cinq paires
+(0,1),(2,3),(4,5),(6,7),(8,9), et les sommets de X2 par quatre paires
+(0,1),(2,3),(4,5),(6,7), la première étant x,y.
+
+C est l'incidence binaire 10×8 de X0 privé de p vers X2. Chaque colonne
+de C a somme 4 : x,y ont cinq voisins dans X0, dont p ; les six autres
+sommets en ont quatre et ne voient pas p. Les lignes vont par paires
+échangées par sigma. Leurs sommes sont :
+
+             A : (4,4,3,3,3,3,3,3,3,3),
+             B : (4,4,4,4,3,3,3,3,2,2).
+
+Pour deux sommets distincts s,t de X2, soient R_st le nombre de leurs
+voisins communs dans le support, et E_st le nombre dans X1. Alors
+
+  (C^t C)_st = 2 - [s~t] - R_st - [p voit s et t] - E_st.
+
+Pour x,y, cela vaut 0, car ils sont adjacents, R_xy=0 et p les voit.
+Pour toute autre paire, cela vaut 2-R_st-E_st. La diagonale vaut 4.
+
+Dans le profil B, E_st=0, tous les sommets de X1 ayant a<=1.
+Dans A, E est la contribution d'une seule paire de sommets X1 de a=2 :
+une paire {s,t} et son image par sigma. Cette contribution concerne
+seulement les entrées hors diagonale ; elle ne réduit pas la diagonale
+4 de C^t C. La paire {s,t} peut être invariante sous sigma, auquel cas
+sa contribution hors diagonale est 2. Ce cas est inclus.
+
+Chaque ligne est énumérée parmi les 2^8 masques. Dans chaque orbite,
+on prend le masque <= son image ; cela ne fait que nommer les deux
+sommets de X0. Les orbites de même poids sont ensuite ordonnées. Deux
+orbites identiques de poids 3 ou 4 ne sont pas possibles : elles
+donneraient trois ou quatre voisins communs entre deux sommets de X0.
+Les combinaisons de masques distincts couvrent donc toutes les matrices.
+
+Soit G=A[X0 privé de p]. Ses degrés sont les sommes de lignes de C
+moins 2. Il a six arêtes, toutes dans des orbites de taille 2, car les
+sommets non fixes de X0 ne peuvent pas être adjacents à leur mate.
+Il suffit donc d'énumérer trois orbites d'arêtes parmi les vingt
+possibles entre les cinq paires, puis de retenir les degrés requis.
+Cela couvre tout G, sans imposer une forme particulière ou une
+symétrie supplémentaire. p est isolé dans A[X0].
+
+Dans Y, toutes les adjacences sont maintenant connues. On teste chaque
+paire i,j avec la condition nécessaire
+
+             |N_Y(i) intersection N_Y(j)| <= 2-A_ij.
+
+Les résultats des deux énumérations sont :
+
+                              Profil A       Profil B
+  Appariements initiaux         105            105
+  Appariements admissibles       31             31
+  Choix marqués de x,y            76             76
+  Matrices C                     48             16
+  Graphes G de degrés requis     48             18
+  Couples (C,G) valides dans Y   640             32
+
+Les valeurs 48/16 et 640/32 sont CALCULÉES. Les arguments précédents
+justifient la couverture des boucles finies des deux scripts joints.
+
+5. PROFIL B : TROIS DEMANDES, SEULEMENT DEUX PARTENAIRES
+
+x voit quatre sommets de X1. Chacun a a=1 et donc c=2 : il voit deux
+sommets de X0. Pour z dans X0, le nombre de voisins communs x,z qui
+restent à fournir hors Y est exactement
+
+             F_z=2-[x~z]-|N_Y(x) intersection N_Y(z)|.
+
+Dans chacun des 32 tableaux, F est constitué de huit 1 et de trois 0
+(dont celui de p). Les quatre voisins X1 de x doivent donc apparier
+ces huit demandes, chaque sommet demandé étant utilisé une fois.
+
+Pour tester si {z,z'} peut être une paire de partenaires, ajoutons à Y
+un seul sommet provisoire adjacent à x,z,z'. On ne spécifie aucun de
+ses autres voisins. Si ce graphe partiel dépasse un budget de voisins
+communs, cette paire est impossible. S'il reste valide, on l'autorise.
+Ce test donne un SUR-ENSEMBLE des paires utilisables dans le vrai graphe.
+
+ASSERTION FINIE, CALCULÉE : dans chacun des 32 graphes de partenaires
+autorisés, il existe trois sommets demandés W, sans arête entre eux,
+dont l'ensemble des partenaires possibles N(W) a seulement deux
+sommets. Les trois sommets de W doivent être appariés à trois sommets
+distincts hors W ; ils n'en ont que deux. Contradiction.
+
+Chaque certificat fournit W, N(W), le graphe autorisé et les données
+pour reconstruire Y. Le vérificateur recalcule toutes les paires
+autorisées, puis contrôle l'indépendance de W et |N(W)|<|W|.
+
+Exemple, premier tableau, labels de X0 privé de p :
+
+  Demandes : {1,2,3,4,6,7,8,9}.
+  Arêtes autorisées : (1,9),(2,8),(2,9),(3,8),(3,9),(4,6),
+                     (4,9),(6,7),(6,8),(7,9),(8,9).
+  W={1,2,3}, N(W)={8,9}.
+
+Cette obstruction ferme les 32 tableaux du profil B.
+
+6. PROFIL A : LE VOISINAGE DE x NE PEUT PAS ÊTRE ASSEMBLÉ
+
+Notons T=N(x) intersection (X0 privé de p), de taille 4, et
+Z=N(x) intersection X1, également de taille 4. Soit q le nombre des
+deux sommets exceptionnels de X1, de a=2, qui appartiennent à Z.
+
+Appliquons A²=12I+2J-A à l'indicatrice de X2, au sommet x. La somme des
+a_z sur les voisins de x vaut 12+2×8-a_x=27. Ses quatre voisins du
+support contribuent 8, p contribue 2, y contribue 1, et Z contribue
+4+q. Par conséquent
+
+             somme_{z dans T} a_z=12-q,
+             somme_{z dans T} (a_z-2)=4-q.
+
+Dans A, chaque sommet non fixe de X0 a a>=3. Les quatre termes de la
+dernière somme valent donc au moins 1. Il s'ensuit q=0 et a_z=3 pour
+chaque z de T. Autrement dit, T est composé de feuilles de G, les deux
+centres de G ne voient ni x ni y, et les sommets exceptionnels de X1
+ne voient ni x ni y. Chaque sommet de Z a donc a=1,c=2.
+
+Le voisinage N(x) doit induire un couplage parfait : pour chaque voisin
+w de x, lambda=1 impose exactement un voisin de w dans N(x).
+L'arête p-y en constitue déjà une paire. Les autres sommets sont
+les quatre sommets O du support voisins de x, les quatre feuilles T
+et les quatre sommets Z. Il n'y a aucune arête O-T.
+
+Notons e le nombre d'arêtes sur O et f le nombre d'arêtes sur T.
+Il reste 4-2e sommets de O et 4-2f sommets de T à apparier avec Z.
+Il faut donc
+
+             8-2e-2f <= 4, soit e+f>=2.
+
+ASSERTION FINIE, CALCULÉE : sur les 640 tableaux de A, e=1 toujours.
+Dans 400 tableaux, f=0 : la dernière inégalité les exclut. Dans les
+240 autres, e=f=1. Tous les sommets de Z sont alors utilisés par le
+couplage vers O ou T, et il n'y a aucune arête entre deux sommets de Z.
+
+Un sommet z de Z est extérieur : s'il voyait p, il serait dans N(p),
+où x ne peut être adjacent qu'à y. Son mate n'est donc pas adjacent à
+z. Ses voisins dans Y sont exactement : x, un sommet P_i, un sommet
+Q_j, et deux sommets de X0 privé de p. Il n'a pas d'autre voisin dans
+X2 (a=1), ni dans X0 (c=2), ni dans le support (d=1), ni p.
+Les voisins de son mate dans Y sont les images de ces cinq sommets.
+
+Pour chaque tableau, on énumère toutes ces possibilités. On ajoute la
+paire z,sigma(z), sans arête entre eux, et on retient :
+
+  - les budgets de voisins communs de toutes les paires ;
+  - exactement un voisin commun pour x,z ;
+  - une demande encore positive pour chacune des deux positions X0
+    et des positions P_i,Q_j.
+
+Cela donne entre 17 et 36 orbites candidates par tableau, 6 544 en
+tout. Ce sont des candidats locaux, pas des solutions du graphe.
+
+On relie deux orbites candidates si leurs quatre sommets, ajoutés
+simultanément à Y SANS arête entre ces deux orbites, respectent encore
+tous les budgets de voisins communs. Omettre d'éventuelles arêtes
+entre les nouveaux sommets est une relaxation sûre : supprimer des
+arêtes réduit les nombres de voisins communs et augmente, ou conserve,
+le plafond 2-A_ij. Un ensemble réalisable dans le vrai graphe doit donc
+être une clique dans ce graphe de compatibilité.
+
+ASSERTION FINIE, CALCULÉE : chacun des 240 graphes de compatibilité est
+sans clique de taille quatre. Or x a besoin de quatre sommets de Z,
+appartenant à quatre orbites distinctes, puisque leurs mates voient y
+et ne peuvent voir x (a=1). Contradiction.
+
+Cette obstruction ferme les 240 tableaux restants de A, et donc A tout
+entier. Avec la section 5, elle exclut Wagner dans le sous-cas déclaré.
+
+7. COMMENT VÉRIFIER LA PARTIE CALCULÉE
+
+Deux scripts autonomes, utilisant uniquement la bibliothèque standard
+Python, réénumèrent les tableaux depuis les huit lignes de B :
+
+             ENUMERER_WAGNER_PROFIL_A.py
+             ENUMERER_WAGNER_PROFIL_B.py
+
+Ils fournissent à la fois la couverture finie et les obstructions,
+sans charger de catalogue de solutions, de sortie de solveur ou de
+résultats de la première recherche. Ils écrivent les deux fichiers
+WAGNER_PROFIL_*_CERTIFICATS.json dans leur propre dossier.
+
+VERIFIER_WAGNER_CERTIFICATS.py utilise NumPy en entiers pour recompter
+les voisins communs par multiplication de matrices. Il recalcule les
+candidats et toutes les compatibilités des 240 tableaux A, puis vérifie
+l'absence de clique de taille quatre. Pour les 32 tableaux B, il
+reconstruit Y, recalcule le graphe des partenaires et contrôle chaque
+obstruction trois contre deux. Il vérifie les obstructions, tandis que
+la couverture vient des deux énumérateurs précédents.
+
+Contrôles effectivement terminés :
+
+  - énumération A par combinaisons directes : environ 153 secondes ;
+  - énumération B : les 32 tableaux ont leur certificat trois contre deux ;
+  - autre assemblage récursif du voisinage A : 26 608 nœuds, zéro
+    assemblage des quatre voisins, environ 8 secondes ;
+  - vérification indépendante par matrices entières : les 240 et 32
+    certificats passent, 6 544 candidats recomptés, environ 6 secondes.
+
+Les graphes de compatibilité et les budgets sont calculés en entiers.
+Les produits matriciels du vérificateur restent inférieurs à 100 par
+entrée : son type int16 ne déborde pas. Aucune approximation spectrale
+ou flottante n'entre dans l'obstruction de Wagner. Limites : un seul
+processus, plafond 180 secondes par vérification, mémoire prévue
+inférieure à 128 Mio pour cette classification.
+
+8. COROLLAIRE : LE CAS D'ÉGALITÉ 8/7 EST IMPOSSIBLE
+
+Soient f_i les 49 vecteurs du cadre physique, H leur Gram, et L leur
+réseau. H²=7H et somme f_i f_i^t=7I. Pour v dans L*, les coefficients
+a_i=(v,f_i) sont entiers et
+
+             somme a_i²=7v².
+
+ENTRÉE EXTERNE : la borne min L*>=8/7 est celle du dossier, avec son
+statut et ses sources. La présente note améliore son cas d'égalité.
+
+Si v²=8/7, les équations du Gram excluent |a_i|=2 et donnent huit
+coefficients ±1. Le lemme séparé LEMME_EGALITE_8_SUR_7_C2.txt démontre
+que tous les coefficients des sept h sont nuls. Son relevé est donc
+une fonction f comme en section 1, sur huit orbites extérieures.
+
+Le complément de B est un graphe cubique sans triangle sur huit sommets,
+donc le cube ou Wagner : classification humaine de la note cube, §8.
+Le cube est exclu par cette note ; Wagner est exclu ici. Ainsi aucun
+v dans L* n'a norme 8/7. Comme 7v² est entier et la norme est au moins
+8/7, elle est au moins 9/7 pour tout v non nul.
+
+Cette conclusion ne nécessite PAS la borne calculée n<=8 utilisée
+pour obtenir le témoin spécial de la route de la note 54 : elle est
+une assertion sur n'importe quel vecteur dual de norme 8/7 d'un vrai
+cadre. Pour conclure EX faux par la route témoin entière, en revanche,
+les coupes 1,2,3 et les entrées externes de cette route restent à traiter.
+
+9. CONSÉQUENCE IMMÉDIATE POUR LES PAIRES NORMALES
+
+U est une enveloppe intégrale de dimension 24, y1,y2 sont orthogonaux
+de norme 7. Les vecteurs du cadre d'une solution appartiendraient à
+U et à l'orthogonal des deux normales.
+
+Pour x dans U de norme 3, posons a=(x,y1), b=(x,y2). Si a²+b²=13,
+sa projection v sur l'espace physique aurait
+
+  v=x-(a y1+b y2)/7,
+  v²=3-13/7=8/7.
+
+Pour chaque vecteur f_i d'un tel cadre, (v,f_i)=(x,f_i) est entier,
+par intégralité de U. Ainsi v serait dans L*, contrairement à la
+borne 9/7. La paire normale est donc exclue AVANT tout choix des h.
+
+Ce critère ne demande ni de générer tous les vecteurs de norme 3 ni
+de prouver la complétude d'une coque : un seul témoin exact suffit.
+L'absence de témoin trouvé ne prouve pas la survie de la paire.
+
+CALCULÉ sur le fichier historique profiling/011_sample_pairs.json :
+
+  400 paires examinées ; 363 avec un témoin exact Y=13 ;
+  125 504 055 nœuds historiques sur ces 363 paires,
+  contre 159 598 993 sur l'ensemble du fichier.
+
+Cela représente 90,75 % des paires et environ 78,64 % de ces nœuds
+historiques. Ce fichier est un échantillon ordonné déjà calculé ; ses
+K vont de 10 à 28 et il ne contient aucun K=0. Ces fractions ne sont
+ni une couverture de 011, ni un taux sur les jobs ouverts, ni une
+mesure de vitesse ou d'heures économisées.
+
+PAIRES_011_TEMOINS_Y13.json donne la base ambiante rationnelle, son Gram,
+les coordonnées de x,y1,y2 et les deux produits pour chaque témoin.
+Deux copies des entrées d'origine et leurs empreintes sont fournies.
+
+VERIFIER_PAIRES_011_Y13.py, bibliothèque standard Python seulement,
+contrôle exactement : le même réseau que les générateurs du catalogue
+(changements de base entiers dans les deux sens), det Gram=1,
+les deux normales originales, leurs normes et orthogonalité, x²=3,
+a²+b²=13 et (7v)²=56 avec 7v orthogonal aux deux normales.
+Les 363 témoins passent, en moins d'une seconde dans cette exécution.
+Cette vérification ne dépend d'aucune énumération complète de coque.
+
+10. PORTÉE, ANTÉCÉDENTS ET TRAVAIL RESTANT
+
+La note 54 du labo avait laissé B4 et B5 ouverts, avec des millions
+d'étiquetages localement compatibles. Notre obstruction du cube ferme
+B4. La présente classification et ses contraintes globales ferment B5.
+Ensemble, elles ferment le cas de coupe k=0,n=8 de cette route, et donc
+ses cas k=0,n=5..8 avec l'ancienne borne 8/7.
+
+Le mécanisme supplémentaire ici utilise la configuration globale des
+11 sommets X0, le sommet fixe, l'unique arête X2, et le couplage dans
+N(x). Il n'est pas une réénumération des étiquettes de racines de la
+note 54. Les sources consultées n'avaient pas ces obstructions ; ce
+constat ne prétend pas établir une priorité dans toute la littérature.
+
+Sources et dépendances conservées :
+  - MODEL.md, TASK.md, AUDIT_STATUS.md, DUPLICATION_NOTES.md ;
+  - HANDOVER_2026-10-04.md, les deux CASCADE_STUDY et PROOF_SKELETON_C2.md ;
+  - note 54 et ses scripts k0_n8 du laboratoire ;
+  - Wave 78/81 et la vérification graphique de Wave 81 dans l'archive ;
+  - la note de vérification de Claude VERIF_CUBE_OBSTRUCTION_2026-10-04.md ;
+  - les deux preuves antérieures jointes : cube et h actifs.
+
+RESTE OUVERT : les coupes k=1,2,3 de la route témoin, EX lui-même,
+l'exclusion de chaque réseau encore ouvert, et le gain effectif du
+nouveau critère Y=13 sur les paires des jobs actuels. Le total d'heures
+AWS ne change pas sur la seule base de cet échantillon. Aucun nouveau
+lancement, arrêt de job, changement de dépôt ou de moteur n'a été fait.
+
+Pour revue, commencer par les sections 3-6 et les énumérateurs : ce sont
+les nouvelles obligations finies. Les anciens documents joints gardent
+leur état historique (ils disent Wagner ouvert) ; la présente note
+fournit précisément la fermeture qui leur manquait.

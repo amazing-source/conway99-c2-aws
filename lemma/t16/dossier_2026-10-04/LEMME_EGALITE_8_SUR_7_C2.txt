@@ -1,0 +1,258 @@
+Conway-99, C2 : le cas d'égalité 8/7 ne touche aucun h
+4 octobre 2026 — deuxième avis mathématique
+
+RÉSULTAT ET PORTÉE
+
+PROUVÉ ICI, dans le cadre d'un vrai graphe SRG(99,14,1,2) muni de
+l'involution à un seul sommet fixe et de son cadre physique 7 h + 42 u :
+
+    v dans le dual du réseau du cadre, v² = 8/7
+              implique (v,h_c) = 0 pour chacun des sept c.
+
+La preuve ci-dessous est humaine et autonome pour cette implication.
+Elle s'appuie sur le raccord externe entre le graphe et son cadre,
+notamment le Gram 3I-S et l'identité de cadre serré de constante 7.
+Elle ne constitue pas une vérification formelle Lean.
+
+Dans une enveloppe U avec normales y1,y2, on en déduit :
+
+    x dans U, x²=3, (x,y1)²+(x,y2)²=13
+              implique (x,h_c)=0 pour tous les h d'une solution.
+
+Il s'agit d'une condition pour EX : elle utilise le vrai graphe, donc
+lambda=1 et mu=2. Un cadre relâché ou une matrice signée N seule ne
+peuvent pas être exclus par cette preuve sans leur raccord au graphe.
+T4 reste le lemme de travail du dossier pour reconstruire ce graphe
+depuis une solution (N,D). F0 n'intervient pas dans cette implication.
+
+Aucun des quatorze réseaux ouverts n'est déclaré exclu ici. Cette
+preuve ferme une branche du cas d'égalité, pas le cas d'égalité entier.
+
+1. NOTATIONS ET ENTRÉES EXTERNES
+
+Le sommet fixe est p. Les sept orbites intérieures sont les paires
+adjacentes dans N(p). Les quarante-deux autres orbites sont extérieures
+et leurs deux sommets sont non adjacents.
+
+Les vecteurs du cadre sont f_i : sept h de norme 4 et quarante-deux u
+de norme 3. Leur Gram est H=3I-S, où S est la matrice de l'adjacence
+sur le secteur impair de l'involution. On a H²=7H et
+
+    somme_i f_i f_i^t = 7 I
+
+sur l'espace physique de dimension 22. Les h sont orthogonaux entre
+eux ; les produits hors diagonale sont dans {0,+1,-1}. Chaque u a
+exactement deux produits non nuls avec les h, chacun égal à +1 ou -1.
+
+Sources lues pour ces raccords et conventions :
+- notes/56_PROMPT_ASTRA_ROUTE_C_28_09.md, §1.1 ;
+- external_inputs/CONWAY_ASTRA_27_09_2026_0836/EXTRAIT/
+  attaque_globale_27_0803/AUDIT_NORME1_ET_METRIQUES.md ;
+- MODEL.md et HANDOVER_2026-10-04.md.
+
+La borne min N* >= 8/7 est ancienne. Nous travaillons seulement sur
+son cas d'égalité. La note 54 du laboratoire traite déjà le sous-cas
+sans h actif ; elle le laisse ouvert. Nous ne le réannonçons pas fermé.
+La recherche ciblée dans les notes accessibles n'a pas retrouvé la
+présente fermeture du sous-cas avec h actifs. Ce constat n'établit
+aucune priorité dans la littérature ni dans des notes non accessibles.
+
+2. UN VECTEUR DUAL D'ÉGALITÉ DONNE HUIT COEFFICIENTS UNITAIRES
+
+Posons a_i=(v,f_i). Ces coefficients sont entiers et
+
+    Ha=7a,  Sa=-4a,  somme_i a_i²=7v²=8.
+
+Si |a_i|=2, les autres coefficients ont somme de carrés 4 et donc
+somme de valeurs absolues au plus 4. La ligne Ha=7a demanderait une
+somme hors diagonale de valeur absolue 6 pour un h (diagonale 4),
+ou 8 pour un u (diagonale 3). Les coefficients hors diagonale du Gram
+ont valeur absolue au plus 1. C'est impossible. Une valeur absolue
+au moins 3 est déjà incompatible avec la somme de carrés 8.
+
+Ainsi a appartient à {0,+1,-1}^49 et son support comporte exactement
+huit orbites. Son relevé au graphe vaut a_i sur un représentant,
+-a_i sur son mate, et 0 au sommet fixe. Il vérifie Af=-4f.
+
+On note P les huit sommets de valeur +1 et Q=sigma(P) ceux de valeur
+-1. Choisir ces représentants ne change aucune adjacence du graphe.
+
+3. LE NOMBRE k DE h ACTIFS EST 0 OU 2
+
+Écrivons S=[-I,C;C^t,T]. Chaque colonne de C a deux valeurs non nulles,
+dans {+1,-1}. La ligne intérieure de Sa=-4a donne
+
+    C a_u = -3 a_h.
+
+La somme d'une colonne de C est paire ; la somme des a_h est donc
+paire. Comme les a_h actifs valent +1 ou -1, k est pair.
+
+Chaque h actif demande au moins trois incidences avec les u actifs
+dans cette égalité. Un u actif en fournit au plus deux. Il y a 8-k
+u actifs, donc
+
+    3k <= 2(8-k),  soit 5k <= 16.
+
+Comme k est pair, k=0 ou k=2. Il reste à réfuter k=2.
+
+4. P ET Q SONT INDÉPENDANTS
+
+Soit e le nombre d'arêtes de P, et d_i les degrés internes dans P.
+L'involution donne autant d'arêtes dans Q. L'équation Af=-4f impose
+deg_Q(i)=d_i+4 pour i dans P.
+
+Comptons les voisins communs des paires non ordonnées de P. Pour
+|P|=m, le total est m(m-1)-e, puisque chaque paire adjacente a un
+commun et chaque paire non adjacente en a deux. Les sommets de P et Q
+contribuent
+
+    somme_i [C(d_i,2)+C(d_i+4,2)]
+         = somme_i d_i² + 6e + 6m.
+
+La contribution des autres sommets est donc
+
+    D = m(m-7) - 7e - somme_i d_i² >= 0.
+
+Ici m=8. Si e>=1, somme d_i² >= somme d_i = 2e, donc
+D <= 8-9e < 0. Ainsi e=0. P et Q sont indépendants et chaque sommet
+de P a exactement quatre voisins dans Q.
+
+5. LA MATRICE B À DEUX DIAGONALES NE PEUT PAS EXISTER
+
+Ordonnons Q par les mates des sommets de P et posons B=A[P,Q].
+L'involution rend B symétrique. B est binaire, de somme de ligne 4.
+Chaque intersection de deux lignes distinctes a cardinal au plus 2,
+car elle compte des voisins communs dans Q de deux sommets de P.
+
+Si k=2, exactement deux diagonales de B valent 1 : ce sont les deux
+orbites intérieures actives. Appelons-les 0 et 1. B01=0, car N(p)
+induit un couplage parfait et ces deux sommets appartiennent à deux
+paires distinctes.
+
+De plus, les sommets 0 et 1 de P ont déjà p pour voisin commun, hors
+Q. L'intersection de leurs lignes de B a donc cardinal au plus 1.
+
+Écrivons ces lignes {0} union A et {1} union C, où A et C sont des
+triplets parmi les six indices restants. On a |A intersect C|<=1.
+La sous-matrice sur ces six indices n'a pas de diagonale.
+
+Cas A intersect C vide.
+Chaque a dans A a un voisin 0. L'intersection de sa ligne avec celle
+de 0 impose au plus un voisin dans A ; son intersection avec la
+ligne de 1 impose au plus deux voisins dans C. Pour atteindre son
+degré 4, il doit avoir exactement un voisin dans A et deux dans C.
+Le graphe sur le triplet A serait donc 1-régulier, ce qui est
+impossible sur un ensemble de cardinal impair.
+
+Cas |A intersect C|=1.
+Écrivons A={s,a,b}, C={s,c,d}, et t pour le sixième indice.
+Le sommet t n'est relié ni à 0 ni à 1 et a quatre voisins parmi
+{s,a,b,c,d}. Les intersections avec les lignes 0 et 1 bornent ses
+nombres de voisins dans A et C par 2 chacun. S'il était relié à s,
+leur somme vaudrait 5. Donc ts=0 et t est relié à a,b,c,d.
+
+Le sommet s est relié à 0 et 1. Il lui faut deux autres voisins,
+au plus un parmi a,b et au plus un parmi c,d. Après permutation,
+ce sont a et c. Ainsi sa=sc=1, sb=sd=st=0.
+
+Le sommet a a déjà 0,s,t pour voisins. L'intersection des lignes
+a et 0 interdit ab. Symétriquement cd est interdit. Le sommet b,
+déjà relié à 0,t, doit donc être relié à c et d ; le sommet d,
+déjà relié à 1,t, doit être relié à a et b.
+
+Les lignes de a et b sont alors respectivement
+
+    {0,s,t,d} et {0,t,c,d}.
+
+Elles ont trois indices communs : 0,t,d. Ceci contredit mu=2.
+
+Les deux cas sont impossibles. Donc k ne peut pas valoir 2.
+On a k=0 : tout vecteur dual de norme 8/7 est orthogonal à tous les h.
+
+6. CONSÉQUENCE DANS CHAQUE ENVELOPPE
+
+Soit x dans U, x²=3, et a=(x,y1), b=(x,y2), a²+b²=13.
+Sa projection sur l'espace physique est
+
+    v=x-(a y1+b y2)/7,
+    v²=3-13/7=8/7.
+
+Les h et u appartiennent à U et sont orthogonaux aux normales.
+L'intégralité de U implique (v,h),(v,u) entiers ; v est donc dans
+le dual du réseau du cadre. Le résultat prouvé donne
+
+    (x,h_c)=(v,h_c)=0 pour chaque c.
+
+Tous les h d'une solution sont donc dans
+
+    {y1,y2}^perp intersect span{x dans U3 : Y(x)=13}^perp.
+
+Les projections de ces x sur {y1,y2}^perp doivent avoir rang au plus
+15, puisque les sept h indépendants sont orthogonaux à leur span
+dans un espace de dimension 22. Un rang certifié au moins 16
+exclurait la paire entière. Ce critère n'est pas déclenché par
+l'échantillon ci-dessous.
+
+La même preuve montre |(v,u)|<=1 pour chaque u choisi et exactement
+huit u choisis avec produit non nul. Ces contraintes supplémentaires
+ne doivent pas être assimilées à un témoin explicite du graphe.
+
+7. VÉRIFICATIONS ET MESURE LIMITÉE
+
+CALCULÉ, contrôles arithmétiques indépendants :
+- Une génération récursive des matrices symétriques 8x8 à deux
+  diagonales donne six matrices lorsque la borne sur les deux lignes
+  intérieures est relâchée à 2. Toutes ont intersection 2 sur ces
+  lignes : la présence du sommet fixe est une entrée indispensable.
+- Une deuxième génération, par les 2^15 graphes sur les six autres
+  indices, donne zéro matrice pour intersection 0 et zéro pour
+  intersection 1. Elle soutient la preuve humaine, sans la remplacer.
+- Le complément du cube fournit un contrôle positif du problème
+  abstrait sans diagonale. Ce n'est pas un graphe Conway.
+
+CALCULÉ, première mesure sur exactement les 25 premières paires
+stockées dans profiling/011_sample_pairs.json :
+- 0 à 3 directions courtes par paire ; rang 0 à 3 ;
+- 146 164 occurrences de candidats h après les restrictions usuelles
+  de perpendicularité, ombres et frontière caractéristique ;
+- 108 023 après la nouvelle perpendicularité, soit 38 141 retirées
+  (26,09 % au total ; entre 0 et 43,37 % selon la paire) ;
+- aucune des 25 paires n'est rejetée par le rang ou le simple nombre
+  de candidats couvrant chaque point ;
+- aucun temps de recherche complète ou gain de production mesuré.
+
+Les occurrences ne sont pas toutes des vecteurs distincts, car le
+même h peut apparaître pour plusieurs paires. Les 25 paires ne sont
+pas un échantillon aléatoire ni une couverture de 011. Aucun nombre
+d'heures économisées ne peut être déduit de ces comptes.
+
+Les bases et Gram ont été vérifiés en arithmétique rationnelle et
+entière. Les coquilles locales sont énumérées avec bornes flottantes,
+leurs normes sont vérifiées exactement et leurs cardinalités sont
+comparées aux formules de coque du dossier. Pour un certificat de
+couverture de réseau, reprendre l'énumération certifiée du projet.
+Pour retirer un h donné, une seule direction x exacte suffit :
+sa présence, sa norme 3, Y(x)=13 et (h,x) non nul sont vérifiables
+en entiers, sans exiger de compléter la coque.
+
+Toutes les vérifications nouvelles ont duré moins de cinq secondes
+par processus. Limites déclarées : un processus local, 240 secondes
+maximum par vérification ; budget de 512 Mio pour le test des paires, 64 Mio
+pour le contrôle combinatoire. Aucun job cloud ou dépôt n'a été changé.
+
+8. OBSTACLE RESTANT
+
+Le cas k=0 subsiste : une fonction propre de valeur -4 peut encore
+avoir son support de huit orbites toutes extérieures. La note 54
+signalait déjà deux types possibles de matrice B et de nombreuses
+étiquetages locaux compatibles. La présente preuve ne les réfute pas.
+
+Pour fermer un réseau entier sans recherche des h, il manque un
+argument couvrant toutes ses paires de normales et montrant que les
+sept h ne peuvent vivre dans l'orthogonal imposé, ou que le support
+extérieur de taille huit ne peut pas se prolonger au graphe complet.
+Le test de rang simple ne fournit pas cet argument sur les 25 paires.
+
+Conclusion de statut : nouvelle restriction mathématique démontrée
+dans cette note ; zéro nouvelle exclusion complète de réseau ;
+aucune réduction d'heures de calcul annoncée.

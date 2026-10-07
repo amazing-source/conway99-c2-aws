@@ -1,0 +1,154 @@
+======================================================================
+PROFILE A  X0 non-p orbit a-values: [3, 3, 3, 3, 4]
+sigma-invariant X0-internal graphs with prescribed degrees (labelled): 48
+perfect matchings of the 8 deficient pairs: 105  Aut(B)-classes: 17
+matchings passing P-Q common-neighbour bound (L1): 75
+matchings passing all bounds on P u Q u X2 (X2-X2 adjacency unknown) (L2): 31
+(matching, xy-orbit) pairs passing bounds on P u Q u X2 u {p} (L3): 76  Aut(B)-classes: 9
+normalised X0-X2 incidences (summed over L3 pairs): 48  L3 pairs with >=1 incidence: 32
+(incidence, X0-internal graph) combos passing quick filter: 880
+valid Y configurations (labelled, X0-normalised): 640
+valid Y configurations up to isomorphism: 40
+  [time 5.4s]
+per Aut(B)-class of (matching, xy): [#labelled pairs, #incidences, #valid configs]
+   (((0, 1), (2, 3), (4, 5), (6, 7)), (4, 5)) [16, 32, 368]
+   (((0, 1), (2, 4), (3, 5), (6, 7)), (2, 4)) [16, 16, 272]
+config #0 x-side 0: profiles 180/77440, multisets 0, T-internal ok 0, full ok 0
+config #0 x-side 1: profiles 180/77440, multisets 0, T-internal ok 0, full ok 0
+     multiset [(1, 14, 17, 18, 31), (4, 8, 20, 25, 31), (7, 11, 21, 25, 31), (6, 9, 22, 23, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+     multiset [(6, 9, 17, 18, 31), (4, 8, 20, 25, 31), (7, 11, 21, 25, 31), (1, 14, 22, 23, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+     multiset [(6, 9, 17, 23, 31), (1, 14, 18, 22, 31), (4, 8, 20, 25, 31), (7, 11, 21, 25, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 18, 3, 'non'), (6, 9, 2, 'adj'), (9, 17, 3, 'non'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+config #1 x-side 0: profiles 200/77440, multisets 3, T-internal ok 0, full ok 0
+     multiset [(1, 14, 17, 18, 32), (0, 12, 19, 26, 32), (6, 9, 21, 24, 32), (3, 15, 22, 26, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+     multiset [(6, 9, 17, 18, 32), (0, 12, 19, 26, 32), (1, 14, 21, 24, 32), (3, 15, 22, 26, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+     multiset [(6, 9, 17, 21, 32), (1, 14, 18, 24, 32), (0, 12, 19, 26, 32), (3, 15, 22, 26, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 18, 3, 'non'), (6, 9, 2, 'adj'), (9, 17, 3, 'non'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+config #1 x-side 1: profiles 200/77440, multisets 3, T-internal ok 0, full ok 0
+config #2 x-side 0: profiles 194/77440, multisets 0, T-internal ok 0, full ok 0
+config #2 x-side 1: profiles 194/77440, multisets 0, T-internal ok 0, full ok 0
+config #3 x-side 0: profiles 186/77440, multisets 0, T-internal ok 0, full ok 0
+config #3 x-side 1: profiles 186/77440, multisets 0, T-internal ok 0, full ok 0
+     multiset [(6, 9, 17, 21, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 14, 22, 23, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (6, 21, 3, 'non'), (14, 22, 3, 'non'), (17, 21, 3, 'non'), (17, 25, 2, 'adj'), (18, 22, 3, 'non'), (18, 26, 2, 'adj')]
+     multiset [(1, 14, 17, 23, 31), (4, 8, 18, 26, 31), (6, 9, 20, 22, 31), (7, 11, 21, 25, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+     multiset [(1, 14, 17, 23, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (6, 9, 21, 22, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(6, 9, 17, 23, 31), (4, 8, 18, 26, 31), (1, 14, 20, 22, 31), (7, 11, 21, 25, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+     multiset [(6, 9, 17, 23, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 14, 21, 22, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(6, 14, 17, 23, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 9, 21, 22, 31)], no T-edges: <= violated on [(1, 9, 4, 'non'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+config #4 x-side 0: profiles 203/77440, multisets 6, T-internal ok 0, full ok 0
+     multiset [(0, 12, 17, 25, 32), (1, 14, 18, 22, 32), (3, 15, 19, 26, 32), (6, 9, 21, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (6, 21, 3, 'non'), (14, 22, 3, 'non'), (17, 21, 3, 'non'), (17, 25, 2, 'adj'), (18, 22, 3, 'non'), (18, 26, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (1, 14, 18, 24, 32), (6, 9, 19, 21, 32), (3, 15, 22, 26, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (1, 14, 18, 24, 32), (3, 15, 19, 26, 32), (6, 9, 21, 22, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (6, 9, 18, 24, 32), (1, 14, 19, 21, 32), (3, 15, 22, 26, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj'), (21, 25, 2, 'adj'), (22, 26, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (6, 9, 18, 24, 32), (3, 15, 19, 26, 32), (1, 14, 21, 22, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (6, 14, 18, 24, 32), (3, 15, 19, 26, 32), (1, 9, 21, 22, 32)], no T-edges: <= violated on [(1, 9, 4, 'non'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+config #4 x-side 1: profiles 203/77440, multisets 6, T-internal ok 0, full ok 0
+config #5 x-side 0: profiles 197/77440, multisets 0, T-internal ok 0, full ok 0
+config #5 x-side 1: profiles 197/77440, multisets 0, T-internal ok 0, full ok 0
+config #6 x-side 0: profiles 183/77440, multisets 0, T-internal ok 0, full ok 0
+config #6 x-side 1: profiles 183/77440, multisets 0, T-internal ok 0, full ok 0
+config #7 x-side 0: profiles 200/77440, multisets 0, T-internal ok 0, full ok 0
+config #7 x-side 1: profiles 200/77440, multisets 0, T-internal ok 0, full ok 0
+     multiset [(4, 8, 18, 26, 31), (1, 14, 19, 20, 31), (7, 11, 21, 25, 31), (6, 9, 23, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(4, 8, 18, 26, 31), (6, 9, 19, 20, 31), (7, 11, 21, 25, 31), (1, 14, 23, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(4, 8, 18, 26, 31), (1, 14, 19, 21, 31), (7, 11, 20, 25, 31), (6, 9, 23, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(4, 8, 18, 26, 31), (6, 9, 19, 21, 31), (7, 11, 20, 25, 31), (1, 14, 23, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+config #8 x-side 0: profiles 203/77440, multisets 4, T-internal ok 0, full ok 0
+     multiset [(0, 12, 17, 25, 32), (1, 14, 19, 20, 32), (3, 15, 22, 26, 32), (6, 9, 23, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (6, 9, 19, 20, 32), (3, 15, 22, 26, 32), (1, 14, 23, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (3, 15, 19, 26, 32), (1, 14, 20, 22, 32), (6, 9, 23, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (3, 15, 19, 26, 32), (6, 9, 20, 22, 32), (1, 14, 23, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+config #8 x-side 1: profiles 203/77440, multisets 4, T-internal ok 0, full ok 0
+config #9 x-side 0: profiles 183/77440, multisets 0, T-internal ok 0, full ok 0
+config #9 x-side 1: profiles 183/77440, multisets 0, T-internal ok 0, full ok 0
+config #10 x-side 0: profiles 194/77440, multisets 0, T-internal ok 0, full ok 0
+config #10 x-side 1: profiles 194/77440, multisets 0, T-internal ok 0, full ok 0
+config #11 x-side 0: profiles 197/77440, multisets 0, T-internal ok 0, full ok 0
+config #11 x-side 1: profiles 197/77440, multisets 0, T-internal ok 0, full ok 0
+config #12 x-side 0: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+config #12 x-side 1: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+     multiset [(1, 14, 17, 21, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (6, 9, 22, 23, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (6, 22, 3, 'non'), (14, 21, 3, 'non')]
+     multiset [(6, 9, 17, 21, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 14, 22, 23, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (6, 21, 3, 'non'), (14, 22, 3, 'non')]
+     multiset [(1, 14, 17, 23, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (6, 9, 21, 22, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(6, 9, 17, 23, 31), (4, 8, 18, 26, 31), (1, 14, 20, 22, 31), (7, 11, 21, 25, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (21, 25, 3, 'non'), (22, 26, 3, 'non')]
+     multiset [(6, 9, 17, 23, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 14, 21, 22, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(6, 14, 17, 23, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 9, 21, 22, 31)], no T-edges: <= violated on [(1, 9, 4, 'non')]
+config #13 x-side 0: profiles 208/77440, multisets 6, T-internal ok 0, full ok 0
+     multiset [(0, 12, 17, 25, 32), (1, 14, 18, 22, 32), (3, 15, 19, 26, 32), (6, 9, 21, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (6, 21, 3, 'non'), (14, 22, 3, 'non')]
+     multiset [(0, 12, 17, 25, 32), (6, 9, 18, 22, 32), (3, 15, 19, 26, 32), (1, 14, 21, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (6, 22, 3, 'non'), (14, 21, 3, 'non')]
+     multiset [(0, 12, 17, 25, 32), (1, 14, 18, 24, 32), (6, 9, 19, 21, 32), (3, 15, 22, 26, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (21, 25, 3, 'non'), (22, 26, 3, 'non')]
+     multiset [(0, 12, 17, 25, 32), (1, 14, 18, 24, 32), (3, 15, 19, 26, 32), (6, 9, 21, 22, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (6, 9, 18, 24, 32), (3, 15, 19, 26, 32), (1, 14, 21, 22, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (6, 14, 18, 24, 32), (3, 15, 19, 26, 32), (1, 9, 21, 22, 32)], no T-edges: <= violated on [(1, 9, 4, 'non')]
+config #13 x-side 1: profiles 208/77440, multisets 6, T-internal ok 0, full ok 0
+config #14 x-side 0: profiles 202/77440, multisets 0, T-internal ok 0, full ok 0
+config #14 x-side 1: profiles 202/77440, multisets 0, T-internal ok 0, full ok 0
+config #15 x-side 0: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+config #15 x-side 1: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+     multiset [(1, 14, 17, 21, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (6, 9, 23, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(6, 9, 17, 21, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 14, 23, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(1, 14, 17, 23, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (6, 9, 21, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 23, 3, 'non'), (6, 9, 2, 'adj'), (9, 24, 3, 'non'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(6, 9, 17, 23, 31), (4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 14, 21, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 24, 3, 'non'), (6, 9, 2, 'adj'), (6, 23, 3, 'non'), (9, 23, 3, 'non'), (14, 24, 3, 'non'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+config #16 x-side 0: profiles 208/77440, multisets 4, T-internal ok 0, full ok 0
+     multiset [(0, 12, 17, 25, 32), (1, 14, 18, 22, 32), (3, 15, 19, 26, 32), (6, 9, 23, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (6, 9, 18, 22, 32), (3, 15, 19, 26, 32), (1, 14, 23, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (1, 14, 18, 24, 32), (3, 15, 19, 26, 32), (6, 9, 22, 23, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 24, 3, 'non'), (6, 9, 2, 'adj'), (6, 23, 3, 'non'), (9, 23, 3, 'non'), (14, 24, 3, 'non'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (6, 9, 18, 24, 32), (3, 15, 19, 26, 32), (1, 14, 22, 23, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 23, 3, 'non'), (6, 9, 2, 'adj'), (9, 24, 3, 'non'), (17, 25, 2, 'adj'), (18, 26, 2, 'adj')]
+config #16 x-side 1: profiles 208/77440, multisets 4, T-internal ok 0, full ok 0
+config #17 x-side 0: profiles 202/77440, multisets 0, T-internal ok 0, full ok 0
+config #17 x-side 1: profiles 202/77440, multisets 0, T-internal ok 0, full ok 0
+config #18 x-side 0: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+config #18 x-side 1: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+config #19 x-side 0: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+config #19 x-side 1: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+config #20 x-side 0: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+config #20 x-side 1: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+config #21 x-side 0: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+config #21 x-side 1: profiles 185/77440, multisets 0, T-internal ok 0, full ok 0
+     multiset [(4, 8, 18, 26, 31), (1, 14, 20, 22, 31), (7, 11, 21, 25, 31), (6, 9, 23, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (21, 25, 3, 'non'), (22, 26, 3, 'non')]
+     multiset [(4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 9, 21, 22, 31), (6, 14, 23, 24, 31)], no T-edges: <= violated on [(1, 9, 4, 'non'), (6, 23, 3, 'non'), (14, 24, 3, 'non')]
+     multiset [(4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 14, 21, 22, 31), (6, 9, 23, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (6, 9, 21, 22, 31), (1, 14, 23, 24, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (1, 14, 21, 24, 31), (6, 9, 22, 23, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 24, 3, 'non'), (6, 9, 2, 'adj'), (6, 22, 3, 'non'), (6, 23, 3, 'non'), (9, 23, 3, 'non'), (14, 21, 3, 'non'), (14, 24, 3, 'non'), (21, 24, 3, 'non'), (22, 23, 3, 'non')]
+     multiset [(4, 8, 18, 26, 31), (7, 11, 20, 25, 31), (6, 9, 21, 24, 31), (1, 14, 22, 23, 31)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 23, 3, 'non'), (6, 9, 2, 'adj'), (6, 21, 3, 'non'), (9, 24, 3, 'non'), (14, 22, 3, 'non'), (21, 24, 3, 'non'), (22, 23, 3, 'non')]
+config #22 x-side 0: profiles 208/77440, multisets 6, T-internal ok 0, full ok 0
+     multiset [(0, 12, 17, 25, 32), (6, 9, 19, 21, 32), (3, 15, 22, 26, 32), (1, 14, 23, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj'), (21, 25, 3, 'non'), (22, 26, 3, 'non')]
+     multiset [(0, 12, 17, 25, 32), (3, 15, 19, 26, 32), (1, 9, 21, 22, 32), (6, 14, 23, 24, 32)], no T-edges: <= violated on [(1, 9, 4, 'non'), (6, 23, 3, 'non'), (14, 24, 3, 'non')]
+     multiset [(0, 12, 17, 25, 32), (3, 15, 19, 26, 32), (1, 14, 21, 22, 32), (6, 9, 23, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (3, 15, 19, 26, 32), (6, 9, 21, 22, 32), (1, 14, 23, 24, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (6, 9, 2, 'adj')]
+     multiset [(0, 12, 17, 25, 32), (3, 15, 19, 26, 32), (1, 14, 21, 24, 32), (6, 9, 22, 23, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 24, 3, 'non'), (6, 9, 2, 'adj'), (6, 22, 3, 'non'), (6, 23, 3, 'non'), (9, 23, 3, 'non'), (14, 21, 3, 'non'), (14, 24, 3, 'non'), (21, 24, 3, 'non'), (22, 23, 3, 'non')]
+     multiset [(0, 12, 17, 25, 32), (3, 15, 19, 26, 32), (6, 9, 21, 24, 32), (1, 14, 22, 23, 32)], no T-edges: <= violated on [(1, 14, 2, 'adj'), (1, 23, 3, 'non'), (6, 9, 2, 'adj'), (6, 21, 3, 'non'), (9, 24, 3, 'non'), (14, 22, 3, 'non'), (21, 24, 3, 'non'), (22, 23, 3, 'non')]
+config #22 x-side 1: profiles 208/77440, multisets 6, T-internal ok 0, full ok 0
+config #23 x-side 0: profiles 177/77440, multisets 0, T-internal ok 0, full ok 0
+config #23 x-side 1: profiles 177/77440, multisets 0, T-internal ok 0, full ok 0
+config #24 x-side 0: profiles 177/77440, multisets 0, T-internal ok 0, full ok 0
+config #24 x-side 1: profiles 177/77440, multisets 0, T-internal ok 0, full ok 0
+config #25 x-side 0: profiles 195/77440, multisets 0, T-internal ok 0, full ok 0
+config #25 x-side 1: profiles 195/77440, multisets 0, T-internal ok 0, full ok 0
+config #26 x-side 0: profiles 195/77440, multisets 0, T-internal ok 0, full ok 0
+config #26 x-side 1: profiles 195/77440, multisets 0, T-internal ok 0, full ok 0
+config #27 x-side 0: profiles 195/77440, multisets 0, T-internal ok 0, full ok 0
+config #27 x-side 1: profiles 195/77440, multisets 0, T-internal ok 0, full ok 0
+config #28 x-side 0: profiles 195/77440, multisets 0, T-internal ok 0, full ok 0
+config #28 x-side 1: profiles 195/77440, multisets 0, T-internal ok 0, full ok 0
+config #29 x-side 0: profiles 177/77440, multisets 0, T-internal ok 0, full ok 0
+config #29 x-side 1: profiles 177/77440, multisets 0, T-internal ok 0, full ok 0
+config #30 x-side 0: profiles 177/77440, multisets 0, T-internal ok 0, full ok 0
+config #30 x-side 1: profiles 177/77440, multisets 0, T-internal ok 0, full ok 0
+config #31 x-side 0: profiles 193/77440, multisets 0, T-internal ok 0, full ok 0
+config #31 x-side 1: profiles 193/77440, multisets 0, T-internal ok 0, full ok 0
+config #32 x-side 0: profiles 197/77440, multisets 0, T-internal ok 0, full ok 0
+config #32 x-side 1: profiles 197/77440, multisets 0, T-internal ok 0, full ok 0
+config #33 x-side 0: profiles 183/77440, multisets 0, T-internal ok 0, full ok 0
+config #33 x-side 1: profiles 183/77440, multisets 0, T-internal ok 0, full ok 0
+config #34 x-side 0: profiles 187/77440, multisets 0, T-internal ok 0, full ok 0
+config #34 x-side 1: profiles 187/77440, multisets 0, T-internal ok 0, full ok 0
+config #35 x-side 0: profiles 183/77440, multisets 0, T-internal ok 0, full ok 0
+config #35 x-side 1: profiles 183/77440, multisets 0, T-internal ok 0, full ok 0
+config #36 x-side 0: profiles 187/77440, multisets 0, T-internal ok 0, full ok 0
+config #36 x-side 1: profiles 187/77440, multisets 0, T-internal ok 0, full ok 0
+config #37 x-side 0: profiles 193/77440, multisets 0, T-internal ok 0, full ok 0
+config #37 x-side 1: profiles 193/77440, multisets 0, T-internal ok 0, full ok 0
+config #38 x-side 0: profiles 197/77440, multisets 0, T-internal ok 0, full ok 0
+config #38 x-side 1: profiles 197/77440, multisets 0, T-internal ok 0, full ok 0
+config #39 x-side 0: profiles 187/77440, multisets 0, T-internal ok 0, full ok 0
+config #39 x-side 1: profiles 187/77440, multisets 0, T-internal ok 0, full ok 0
+profile A: 80 runs, total full survivors 0, time 20.2s

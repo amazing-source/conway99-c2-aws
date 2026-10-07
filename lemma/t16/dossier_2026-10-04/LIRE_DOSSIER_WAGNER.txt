@@ -1,0 +1,35 @@
+Lecture conseillée
+
+1. C2_WAGNER_BORNE_9_SUR_7.txt : résultat, preuve, couverture exacte
+   des deux profils et portée pour EX et les paires normales.
+2. ENUMERER_WAGNER_PROFIL_A.py et ENUMERER_WAGNER_PROFIL_B.py :
+   énumérations exhaustives depuis les huit lignes du complément de
+   Wagner, bibliothèque standard Python seulement.
+3. VERIFIER_WAGNER_CERTIFICATS.py : vérification indépendante des
+   obstructions en matrices entières ; nécessite NumPy.
+4. VERIFIER_PAIRES_011_Y13.py : vérification en entiers/fractions des
+   363 témoins et de leur appartenance au réseau 011 ; Python standard.
+
+Lancer chaque script depuis Python, en conservant les fichiers JSON
+dans le même dossier. Aucun chemin local d'origine n'est nécessaire.
+Ne pas utiliser l'option Python -O : elle désactive les assertions des
+vérificateurs. Chaque vérification est limitée à 180 secondes. Une
+interruption ou une assertion échouée ne valide pas la preuve.
+
+Les deux énumérateurs écrivent leurs JSON dans leur propre dossier.
+Les rapports de vérification sont aussi réécrits dans ce dossier.
+Le fichier MANIFESTE_WAGNER_SHA256.json contient les empreintes des
+fichiers livrés à cette date ; un nouveau rapport aura un temps différent.
+
+Les notes cube et h actifs sont jointes comme preuves antérieures.
+Leur section finale, historiquement correcte, dit Wagner ouvert.
+La nouvelle note fournit sa fermeture. La borne n<=8 de la route
+témoin spéciale n'est pas nécessaire au corollaire sur min L*>=9/7 ;
+les coupes k=1,2,3 et l'exclusion de réseaux entiers restent ouvertes.
+
+Les copies des sources U011 et du fichier de 400 paires sont incluses
+pour rendre les témoins Y13 contrôlables sans accès au laboratoire.
+La vérification ne demande pas de réénumérer une coque complète.
+
+Il s'agit d'une preuve assistée par une petite classification exacte,
+pas d'une formalisation Lean. Aucun changement AWS ou moteur n'est livré.

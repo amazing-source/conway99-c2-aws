@@ -1,0 +1,27 @@
+ROW: [[2, 3, 5, 6], [3, 4, 6, 7], [0, 4, 5, 7], [0, 1, 5, 6], [1, 2, 6, 7], [0, 2, 3, 7], [0, 1, 3, 4], [1, 2, 4, 5]]
+|row_i n row_j| by difference: {1: 2, 2: 1, 3: 2, 4: 2, 5: 2, 6: 1, 7: 2}
+deficient pairs: [(0, 2), (0, 6), (1, 3), (1, 7), (2, 4), (3, 5), (4, 6), (5, 7)]
+|Aut(B)| = 16
+======================================================================
+PROFILE B  X0 non-p orbit a-values: [2, 3, 3, 4, 4]
+sigma-invariant X0-internal graphs with prescribed degrees (labelled): 18
+matchings passing P-Q common-neighbour bound (L1): 75
+matchings passing all bounds on P u Q u X2 (X2-X2 adjacency unknown) (L2): 31
+(matching, xy-orbit) pairs passing bounds on P u Q u X2 u {p} (L3): 76  Aut(B)-classes: 9
+normalised X0-X2 incidences (summed over L3 pairs): 16  L3 pairs with >=1 incidence: 16
+(incidence, X0-internal graph) combos passing quick filter: 64
+valid Y configurations (labelled, X0-normalised): 32
+valid Y configurations up to isomorphism: 2
+  [time 20.7s]
+per Aut(B)-class of (matching, xy): [#labelled pairs, #incidences, #valid configs]
+   (((0, 1), (2, 4), (3, 5), (6, 7)), (2, 4)) [16, 16, 32]
+----------------------------------------------------------------------
+STAGE 2 (profile B): adding T = N(x) n X1 and sigma(T)
+config #0: matching ((0, 1), (2, 4), (3, 5), (6, 7)) (as DEF pairs [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]), xy-orbit 1, masks ['00100010', '10101000', '01011000', '10001110', '01100011'], X0-internal ((1, 4, 1), (2, 3, 0), (3, 4, 0))
+   x = z1: dead:exhausted | {'sP': 4, 'sQ': 4, 'n2': 0, 's0': 8, 'r_y': 0, 'r_p': 0, 'rP': [1, 0, 0, 1, 0, 1, 1, 0], 'rQ': [1, 0, 1, 0, 0, 1, 0, 1], 'n_assign': 60480, 'n_tint': 0, 'n_E': 0, 'n_full': 0, 'qperms': 24, 'a2choices': 1, 'reasons': {'A1: some t has >=2 nbrs in N_Y(x)': 60480}}
+   x = sz1: dead:exhausted | {'sP': 4, 'sQ': 4, 'n2': 0, 's0': 8, 'r_y': 0, 'r_p': 0, 'rP': [1, 0, 1, 0, 0, 1, 0, 1], 'rQ': [1, 0, 0, 1, 0, 1, 1, 0], 'n_assign': 60480, 'n_tint': 0, 'n_E': 0, 'n_full': 0, 'qperms': 24, 'a2choices': 1, 'reasons': {'A1: some t has >=2 nbrs in N_Y(x)': 60480}}
+config #1: matching ((0, 1), (2, 4), (3, 5), (6, 7)) (as DEF pairs [((0, 2), (0, 6)), ((1, 3), (2, 4)), ((1, 7), (3, 5)), ((4, 6), (5, 7))]), xy-orbit 1, masks ['00100010', '10101000', '01011000', '10001110', '01100011'], X0-internal ((1, 3, 1), (2, 4, 0), (3, 4, 0))
+   x = z1: dead:exhausted | {'sP': 4, 'sQ': 4, 'n2': 0, 's0': 8, 'r_y': 0, 'r_p': 0, 'rP': [1, 0, 0, 1, 0, 1, 1, 0], 'rQ': [1, 0, 1, 0, 0, 1, 0, 1], 'n_assign': 60480, 'n_tint': 0, 'n_E': 0, 'n_full': 0, 'qperms': 24, 'a2choices': 1, 'reasons': {'A1: some t has >=2 nbrs in N_Y(x)': 60480}}
+   x = sz1: dead:exhausted | {'sP': 4, 'sQ': 4, 'n2': 0, 's0': 8, 'r_y': 0, 'r_p': 0, 'rP': [1, 0, 1, 0, 0, 1, 0, 1], 'rQ': [1, 0, 0, 1, 0, 1, 1, 0], 'n_assign': 60480, 'n_tint': 0, 'n_E': 0, 'n_full': 0, 'qperms': 24, 'a2choices': 1, 'reasons': {'A1: some t has >=2 nbrs in N_Y(x)': 60480}}
+profile B: stage-1 iso classes = 2, stage-2 survivors = 0
+total time 27.2s
