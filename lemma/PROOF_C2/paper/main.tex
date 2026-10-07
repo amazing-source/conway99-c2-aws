@@ -584,8 +584,10 @@ odd Leech lattice, and lists in coordinates of the Niemeier lattice with root sy
 The completeness of the pair enumeration was compared with an independent enumerator (all vectors of norm $7$ by
 Fincke--Pohst, its own Weyl reduction, no diagram automorphisms) on four lattices: $140$, $135$, $141$ and $064$, the last
 one with roots that do not span the space. The two sets of pairs coincide in each case ($288$, $464$, $331$ and
-$1{,}050{,}528$ pairs). For the other lattices completeness rests on the argument above and on the program that produces
-the pairs.
+$1{,}050{,}528$ pairs). For this comparison the producer was run without diagram automorphisms; the reduction by these
+automorphisms, used in the sweep, is not covered by it: it rests on the verification of each automorphism (it preserves the
+Gram matrix and permutes the simple roots) and on the few lines of the program that select one representative per orbit.
+For the other lattices completeness rests on the argument above and on the program that produces the pairs.
 
 \subsection{Exclusion of a pair}\label{ssec:excl}
 Each pair is excluded in one of the following ways.
@@ -681,8 +683,10 @@ programs were verified in exact arithmetic: every vector has its norm, the vecto
 identity $N_4=196560-24N_2-24N_3$. Since a list can only be too short, the three lists are complete.
 
 \subsection*{The enumeration of the pairs} One program, compared with an independent enumerator on four lattices
-(Section~\ref{ssec:enum}); for the others it rests on the program that produces the pairs. After the fact that no human
-expert has read the proof, this is its main reservation.
+(Section~\ref{ssec:enum}); for the others it rests on the program that produces the pairs, and the reduction by diagram
+automorphisms is not covered by the comparison. After the fact that no human expert has read the proof, this is its main
+reservation. The runs of 7 October on $29$ lattices (last paragraph of Section~\ref{ssec:results}) use no diagram
+automorphism.
 
 \subsection*{Certificates} The $7{,}762$ records of pairs excluded through $T_{18}$ and $T_{20}$ in the stream sweep all have
 certificates recomputed from regenerated streams of pairs, and the $17{,}983$ such pairs of the lattices $001$, $002$ were
@@ -697,7 +701,8 @@ written the program.
 \item The audit found five conditions under which a verdict could be wrong although the rules are sound. Each was
 discharged: one by a census of all records (the condition never occurred); one by an exact re-examination of
 $147{,}475{,}940$ pairs of the $25$ lattices concerned (the $8{,}432$ pairs exposed to it were all excluded again by the
-complete version of the search); one by the verification of the lists of short vectors; one by running a lattice again
+complete version of the search; for three representatives $y_1$ of lattice $003$ this re-examination is replaced by
+Corollary~\ref{cor:Y1}); one by the verification of the lists of short vectors; one by running a lattice again
 without the test concerned; and one by Theorem~\ref{thm:T} for the squared norm $16$.
 \item Records of September whose program version had not been archived or recorded concerned $10{,}802$ representatives
 $y_1$ in $55$ lattices of the stream sweep. Of these, $9{,}143$ are excluded independently by Corollary~\ref{cor:Y1}, with
@@ -705,10 +710,12 @@ certificates; the program used for $6{,}282$ of them was recovered and archived;
 neither were run again with the final version (for sixteen lattices the whole lattice was run again): $2{,}419{,}830$ pairs,
 each job on two machines, identical records. The $28$ lattices of the last paragraph of Section~\ref{ssec:results} were run
 again in the same conditions.
-\item The records of the lattices $000$, $004$ and $010$ date from September and were not produced again; those of $004$
-and $010$ were recounted.
+\item The records of the lattices $000$, $004$ and $010$ (27 September to 2 October 2026; those of $004$, $010$ and of $47$
+classes of $000$ with archived versions of the program) were not produced again; those of $004$ and $010$ were recounted.
 \end{enumerate}
-A second, independently written search program does not exist.
+A second, independently written search program does not exist for the sweep. For two lattices ($115$, $132$) and for $86$
+classes of the odd Leech lattice the records of September also hold exclusions by programs of two other parties (a linear
+program with integer certificates; a separate check of the seven vectors $h_c$); these were not re-examined for this paper.
 
 \subsection*{The packing test} Table~\ref{tab:pack} was computed by one program.
 % TODO 3: replace by the result of the second program (requested 07/10).
@@ -722,8 +729,8 @@ An independent recomputation is in progress at the time of writing.
 \item The completeness of the enumeration of the pairs, compared with an independent enumerator on four lattices.
 \item The correctness of the search program: audited and run again, not duplicated.
 \end{enumerate}
-The whole proof, including the hand arguments of this paper, was produced and cross-checked by three AI systems working in
-separate sessions and refereeing one another, under the direction of the author. At the time of writing it has not been read
+The whole proof, including the hand arguments of this paper, was produced and cross-checked by several AI systems working
+in separate sessions and refereeing one another, under the direction of the author. At the time of writing it has not been read
 by an independent expert, and no part of it has been formalised in a proof assistant; a formalisation of
 Sections~\ref{sec:fix}--\ref{sec:env} and of the certificate checkers is planned.
 

@@ -1,0 +1,92 @@
+% Supplement to main.tex: the supporting texts of the repository, reproduced as they are (plain text, no rewriting).
+% Build from this directory: pdflatex supplement.tex (twice).
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  columns=fullflexible,
+  keepspaces=true,
+  breaklines=true,
+  breakatwhitespace=false,
+  breakindent=1.5em,
+  showstringspaces=false,
+  extendedchars=true,
+  literate=
+   {é}{{\'e}}1 {à}{{\`a}}1 {ê}{{\^e}}1 {è}{{\`e}}1 {É}{{\'E}}1 {ô}{{\^o}}1 {ù}{{\`u}}1 {â}{{\^a}}1 {î}{{\^\i}}1
+   {û}{{\^u}}1 {ç}{{\c c}}1 {À}{{\`A}}1 {È}{{\`E}}1 {Ê}{{\^E}}1 {œ}{{\oe}}1
+   {²}{{$^2$}}1 {×}{{$\times$}}1 {·}{{$\cdot$}}1 {±}{{$\pm$}}1 {§}{{\S}}1 {«}{{\guillemotleft}}1 {»}{{\guillemotright}}1
+   {—}{{---}}1 {–}{{--}}1
+   {Σ}{{$\Sigma$}}1 {σ}{{$\sigma$}}1 {μ}{{$\mu$}}1 {≥}{{$\geq$}}1 {≤}{{$\leq$}}1 {≠}{{$\neq$}}1 {∈}{{$\in$}}1
+   {∪}{{$\cup$}}1 {∩}{{$\cap$}}1 {→}{{$\to$}}1 {∘}{{$\circ$}}1 {⊕}{{$\oplus$}}1
+}
+
+\newcommand{\src}[1]{\par\noindent\textit{File:} \texttt{\detokenize{#1}}\par\medskip}
+
+\title{Supplement to ``A strongly regular graph with parameters $(99,14,1,2)$ has no automorphism of order two''}
+\author{}
+\date{Texts of the repository as of 7 October 2026}
+
+\begin{document}
+\maketitle
+
+\noindent This supplement reproduces, without any rewriting, the texts of the repository
+\texttt{conway99-c2-aws} (GitHub, account \texttt{amazing-source}) on which the paper relies for the three lemmas $T_{16}$, $T_{18}$,
+$T_{20}$ (Theorem~7.1 of the paper), for lattice $143$ (Proposition~8.3) and for the rules of the search program
+(Section~8.4). They are working documents: plain text, with the notation of the project (in particular the properties
+(R-i) to (R-vii) are (R1) to (R7) of the paper, A.0 to A.9 are Sections~3 to~6, and ``Theorem R'' is Theorem~6.1). The proof
+of $T_{16}$ is a dossier in French, kept as received; Part~1 begins with its index in English. Long lines of tables are
+wrapped. The programs, outputs and referee reports named in these texts are in the repository.
+
+\tableofcontents
+
+\clearpage
+\section{The lemma \texorpdfstring{$T_{16}$}{T16}}
+\subsection{Index, statement and status}
+\src{lemma/T16_PROOF.md}
+\lstinputlisting{../../T16_PROOF.md}
+\clearpage
+\subsection{The equality case 8/7: values, active orbits, the case k = 2}
+\src{lemma/t16/dossier_2026-10-04/LEMME_EGALITE_8_SUR_7_C2.txt}
+\lstinputlisting{../../t16/dossier_2026-10-04/LEMME_EGALITE_8_SUR_7_C2.txt}
+\clearpage
+\subsection{The two cubic graphs; the cube}
+\src{lemma/t16/dossier_2026-10-04/C2_PROLONGEMENT_SUPPORT16_PREUVE_CUBE.txt}
+\lstinputlisting{../../t16/dossier_2026-10-04/C2_PROLONGEMENT_SUPPORT16_PREUVE_CUBE.txt}
+\clearpage
+\subsection{The Wagner graph}
+\src{lemma/t16/dossier_2026-10-04/C2_WAGNER_BORNE_9_SUR_7.txt}
+\lstinputlisting{../../t16/dossier_2026-10-04/C2_WAGNER_BORNE_9_SUR_7.txt}
+
+\clearpage
+\section{The lemma \texorpdfstring{$T_{18}$}{T18}}
+\src{lemma/T18_PROOF.md}
+\lstinputlisting{../../T18_PROOF.md}
+
+\clearpage
+\section{The lemma \texorpdfstring{$T_{20}$}{T20}}
+\src{lemma/T20_PROOF.md}
+\lstinputlisting{../../T20_PROOF.md}
+
+\clearpage
+\section{Where the computations of T18 and T20 are}
+\src{lemma/ARTIFACTS_T18_T20.md}
+\lstinputlisting{../../ARTIFACTS_T18_T20.md}
+
+\clearpage
+\section{Lattice 143}
+\src{lemma/upstream/LATTICE_143.md}
+\lstinputlisting{../../upstream/LATTICE_143.md}
+
+\clearpage
+\section{The rules of the search program, derived from the properties of a frame}
+\src{lemma/upstream/AUDIT_ENGINE_RULES.md}
+\lstinputlisting{../../upstream/AUDIT_ENGINE_RULES.md}
+
+\end{document}
