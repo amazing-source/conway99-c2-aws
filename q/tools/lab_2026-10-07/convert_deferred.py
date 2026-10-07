@@ -14,8 +14,11 @@ A lattice is excludable when ALL of these hold:
      "T20": {...}} (written by hand when the lemma is proved and independently checked; absent today);
   3. every record with DEFERRED pairs has its certificate: same stream sha256, ok = true, as many certified pairs as deferred ones;
   4. every twin class its records deferred pairs to consists of lattices that are excluded in the tracker or excludable here
-     (fixed point, as scripts/stream_finish.py does)."""
-import sys, os, json, glob, collections
+     (fixed point, as scripts/stream_finish.py does);
+  5. if y1 representatives are covered by a fixed-y1 certificate (field y1_cert of the import): T18 AND T20 are accepted, the file
+     data/finishC/sweep/certs_y1/<file> has the sha256 recorded by the import, and the standalone checker q/check_cert_y1.py passes
+     again here and lists every such representative."""
+import sys, os, json, glob, collections, hashlib, subprocess
 LAB = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.join(LAB, "scripts"))
 
@@ -25,6 +28,14 @@ def args_after(flag):
     i = sys.argv.index(flag) + 1; out = []
     while i < len(sys.argv) and not sys.argv[i].startswith("--"): out.append(sys.argv[i]); i += 1
     return out
+
+
+def y1_ok(lid, yc):
+    f = os.path.join(LAB, "data", "finishC", "sweep", "certs_y1", yc["file"])
+    if not os.path.exists(f) or hashlib.sha256(open(f, "rb").read()).hexdigest() != yc["sha256"]: return False
+    r = subprocess.run([sys.executable, "-I", os.path.join(LAB, "aws_repo", "q", "check_cert_y1.py"), os.path.join(LAB, "external_runs", "structures_3eceb4d", "U", lid + ".json"),
+                        os.path.join(LAB, "data", "finishC", "stream", lid, "plan.json"), f], capture_output=True, text=True)
+    return r.returncode == 0 and r.stdout.strip().splitlines()[-1:] == ["ok"] and set(yc["reps"]) <= {int(k) for k in json.load(open(f))["reps"]}
 
 
 def main():
@@ -53,6 +64,12 @@ def main():
         n18, n20 = o.get("defer_T18", 0), o.get("defer_T20", 0)
         if n18 and "T18" not in lemmas: b.append("T18 not accepted (%d pairs)" % n18)
         if n20 and "T20" not in lemmas: b.append("T20 not accepted (%d pairs)" % n20)
+        yc = o.get("y1_cert")
+        if yc:
+            for t in ("T18", "T20"):
+                if t not in lemmas and not any(x.startswith(t + " not accepted") for x in b):
+                    b.append("%s not accepted (fixed-y1 certificate, %d y1 representatives)" % (t, len(yc["reps"])))
+            if not y1_ok(lid, yc): b.append("fixed-y1 certificate missing, changed or not passing its checker")
         if o["kind"] == "golay":
             c = gcert.get(lid)
             good = (c is not None and c.get("ok") is True and c["pairs_total"] == o["pairs"] and c["T18"]["certified"] == n18 and c["T20"]["certified"] == n20
@@ -101,6 +118,10 @@ def main():
                        "through the bridge, each with an exact certificate (norms 7, orthogonality, witness root)." % (
                            o["pairs"], sorted(accepted), o.get("defer_T18", 0), accepted.get("T18", {}).get("reference"), o.get("defer_T20", 0),
                            accepted.get("T20", {}).get("reference")))
+            if o.get("y1_cert"):
+                v["by"] += (" %d y1 representatives (%s) carry no pair record: U has a root r with (r,y1) = +-2, so E(r) = 10 - (r,y2)^2 for every y2 and "
+                            "T18 or T20 applies (fixed-y1 lemma; certificate %s, sha256 %s, checked by q/check_cert_y1.py)." % (
+                                len(o["y1_cert"]["reps"]), o["y1_cert"]["reps"], o["y1_cert"]["file"], o["y1_cert"]["sha256"][:16]))
         json.dump(T, open(trk, "w"), indent=1); print("tracker written: %s" % sorted(can))
 
 

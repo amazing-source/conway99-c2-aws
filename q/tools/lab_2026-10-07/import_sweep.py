@@ -30,7 +30,12 @@ State of a stream lattice (plan.json gives its R y1 representatives; chunk k/n h
   deferral records; representatives covered twice by the selected records are reported (their pairs are then counted twice).
 State of a Golay lattice (001, 002): pair by pair over [0, pairs_total): best state among the records covering the pair
   (excluded > deferred T18 > deferred T20 > incomplete or other > not covered).
-Twin classes: the classes the selected records deferred pairs to, with their state in the tracker."""
+Twin classes: the classes the selected records deferred pairs to, with their state in the tracker.
+Fixed-y1 certificates (07/10, lemma of Codex, lemma/t20_CODEX/FIXED_Y1_003.md of the compute repo): a y1 representative that NO
+  selected record covers is counted as covered when data/finishC/sweep/certs_y1/cert_y1_<lid>.json (q/cert_y1.py) lists it and the
+  standalone checker q/check_cert_y1.py passes here against the lab's lattice file and plan: U has a root r with (r,y1) = +-2, so
+  E(r) = 10 - (r,y2)^2 for every y2 and T18 or T20 applies. No pair is counted for such a representative and the lattice is then
+  "swept", never "fully computed": the coverage is pending T18 AND T20 (field y1_cert; the conversion step requires both)."""
 import sys, os, json, glob, hashlib, subprocess, collections
 LAB = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.join(LAB, "scripts"))
@@ -106,6 +111,17 @@ def check(d, lid, k, n, ST, GO, PAR, DEF):
     if dl and dl.get("defer_consumer_sha256") and dl["defer_consumer_sha256"] not in DEF: bad.append("unknown defer_consumer %s" % dl["defer_consumer_sha256"])
     if any(cls(v) == "other" for v in d["verdicts"]): bad.append("unknown verdict: %s" % [v for v in d["verdicts"] if cls(v) == "other"][:2])
     return bad
+
+
+def y1_certificate(lid):
+    """the fixed-y1 certificate of a stream lattice, re-checked by the standalone checker; None if there is no file"""
+    f = os.path.join(LAB, "data", "finishC", "sweep", "certs_y1", "cert_y1_%s.json" % lid)
+    if not os.path.exists(f): return None
+    r = subprocess.run([sys.executable, "-I", os.path.join(REPO, "q", "check_cert_y1.py"), os.path.join(LAB, "external_runs", "structures_3eceb4d", "U", lid + ".json"),
+                        os.path.join(LAB, "data", "finishC", "stream", lid, "plan.json"), f], capture_output=True, text=True)
+    ok = r.returncode == 0 and r.stdout.strip().splitlines()[-1:] == ["ok"]
+    return {"file": os.path.basename(f), "sha256": hashlib.sha256(open(f, "rb").read()).hexdigest(), "checked": ok,
+            "reps": sorted(int(k) for k in json.load(open(f))["reps"]) if ok else []}
 
 
 def open_state(d):
@@ -188,6 +204,11 @@ def main():
                     seen.add(key(d)); sel.append(d)
                     for i in mine: cov[i] += 1
                 if want == "done": full = all(cov)
+            yc = y1_certificate(lid); y1used = []
+            if yc is not None and not yc["checked"]: print("  %s: fixed-y1 certificate present but its check FAILS: ignored" % lid)
+            if yc is not None and yc["checked"]:                     # only for representatives that no record covers; no pair is counted
+                y1used = [i for i in yc["reps"] if i < NR and cov[i] == 0]
+                for i in y1used: cov[i] = 1
             for d in sel:
                 for v, m in d["verdicts"].items(): c[cls(v)] += m
                 twins.update(d.get("twin_deferred") or {})
@@ -203,10 +224,12 @@ def main():
             pend = sorted(k for k in twins if CL.get(eval(k), {"?"}) != {"excluded"})
             st = ("NOT swept: %d of %d y1 representatives not covered" % (miss, NR) if miss else
                   "fully computed" if full else "swept; %d + %d pairs pending T18 / T20" % (c["defer_T18"], c["defer_T20"]))
+            if y1used: st += "; %d y1 representatives covered by a fixed-y1 certificate, no pair counted (pending T18 and T20): %s" % (len(y1used), y1used)
             if dbl: st += "; %d representatives covered twice" % dbl
             st += "; twin classes not yet excluded: %d of %d" % (len(pend), len(twins))
             o.update(pairs=npairs, selected=len(sel), y1_reps=NR, not_covered=miss, covered_twice=dbl, kind="stream", twin_classes=len(twins),
-                     twin_pending=pend, twin_all=sorted(twins), full=bool(full and not miss),
+                     twin_pending=pend, twin_all=sorted(twins), full=bool(full and not miss and not y1used),
+                     y1_cert=dict(yc, reps=y1used) if y1used else None,
                      deferral_records=[[d["chunk"][0], d["chunk"][1], d["sha256"], len((d.get("deferred") or {}).get("T18", [])),
                                         len((d.get("deferred") or {}).get("T20", [])), len((d.get("deferred") or {}).get("T20_norm4", []))]
                                        for d in sel if any((d.get("deferred") or {}).get(x) for x in ("T18", "T20", "T20_norm4"))],
