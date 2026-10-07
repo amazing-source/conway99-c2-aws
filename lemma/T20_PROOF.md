@@ -1,14 +1,22 @@
 # T20: no sigma-odd integer (-4)-eigenfunction of squared norm 20 on a srg(99,14,1,2)
 
-> **Updates since this text was written (main session, 07/10, 12:35 UTC); not yet merged into the sections below.**
-> 1. III.1 now has its second program: the independent verifier re-traversed the whole tree (1,628,864 nodes, same counts per
->    level, same kept count at every node, 0 complete), and the single node the first program rejected by the rank bound is
->    also dead without it (`lemma/t20_III1/VERIF.md`). Sections 0.2, 7.3, 7.4, 10.2 and 10.3 still say "one program".
-> 2. Case I, n_3 = 0, graph I.1, profile (3,4,0): the second program is complete (stage 1 identical, stage 2 agrees at every
->    one of the 7,279,961 nodes, 0 complete; the 13 nodes rejected by rank in the first program are closed by the second
->    program's own search, without the rank bound). Branch `lemma-run/t20_I1_340-i-019e86d399c17954f`. The second program is
->    running on the other cases (`lemma/T20_BOARD.md`, lines C2-C4).
-> 3. Section 9.B (n_3 = 2) is still the placeholder: T20 is NOT proved by this text.
+> **Updates since this text was written (main session, 07/10, 13:30 UTC); not yet merged into the sections below.**
+> 1. III.1 now has a second verification: a verifier re-traversed the whole tree (1,628,864 nodes, same counts per level, same
+>    kept count at every node, 0 complete), and the single node the first program rejected by the rank bound is also dead
+>    without it (`lemma/t20_III1/VERIF.md`). Scope of its independence, as that report says: its budget test, its PSD test and
+>    its bookkeeping are its own; it shares the model file `cases.py` and parts of the enumeration skeleton and of the
+>    candidate-generation loops with the first program. It is a second verification implementation with those shared
+>    components, not a second enumeration written from the text. Sections 0.2, 7.3, 7.4, 10.2 and 10.3 still say "one program".
+> 2. Case I, n_3 = 0: the second program (`in_verify.py`, no code shared with the first) is complete on ten of the twelve
+>    cases: stage 1 identical, stage 2 agreeing at every node, 0 complete configurations; where the first program used the
+>    rank bound, the second closes the node by its own search. I.1 (3,4,0): 7,279,961 nodes, branch
+>    `lemma-run/t20_I1_340-i-019e86d399c17954f`; the nine others on the branches `lemma-run/t20_Iv_{B,C,D,E,I,J}-*`. Two cases,
+>    I.1 (4,2,1) and I.2 (4,2,1), are running (`lemma/T20_BOARD.md`, line C2).
+> 3. Case I, n_3 = 2: a first program has closed it by "route B" (the X_3 orbit in the base with N(p): 50 cases, 64,528 bases,
+>    86,968 nodes, 0 complete configurations). Its second program is being written. **Section 9.B below is still the
+>    placeholder, so this text does not yet prove T20.** Statements below that "n_3 = 2 has no program" are out of date.
+> 4. Corrections of the referee report `lemma/t20_CODEX/REFEREE_T20_PROOF.md` merged on 07/10: E1 (sign in the proof of
+>    Corollary 5.2), E2 (split parameter 3 means tasks of level 4), C2 (paths), G3 (item 1 above). Still to merge: G1, G2, C1, C3.
 
 ## Proof text for everything that is established on 2026-10-07. One sub-case (k = 0, n_3 = 2) is NOT closed.
 
@@ -25,7 +33,7 @@ configuration, if there is one, has no active inner orbit (k = 0), has exactly t
 neighbours in S+ (n_3 = 2), and has profile (3,4,0) or (4,2,1). The exclusion of that last sub-case is being computed
 at the time of writing; section 9.B is a placeholder for it and contains only what is proved by hand so far.
 
-(This file holds Markdown content under the extension `.txt`; it is meant to become `lemma/T20_PROOF.md`.)
+(This file is `lemma/T20_PROOF.md`; its working files are in `lemma/t20_PROOF/`.)
 
 ## 0. Front matter
 
@@ -612,7 +620,7 @@ Programs (two, written separately):
 
 So the four totals come from two programs; the nine automorphism orders come from enumerator 1 only. (For this
 text they were recomputed, together with the conditions (S1)-(S5), the codegrees and the units of section 4.10, by
-the transcription script `_check_text_data.py` in the folder of this text; it is a check of the printed data, not a
+the transcription script `lemma/t20_PROOF/_check_text_data.py`; it is a check of the printed data, not a
 third enumeration.) Two details of the runs: for type IIa the verifier was run with the plus edge on the labels
 6, 7 (3,208,774 nodes); its run with the plus edge on the labels 0, 1 was cut by its time limit and gave nothing.
 For type IIb it was run twice (plus edge on the labels 0, 9: 10,596,116 nodes; on 7, 9: 731,934 nodes), with 0
@@ -741,7 +749,8 @@ sum_j (j - 1) a_j = 6 - 3d - q(z), which is (5.3). QED
 **Corollary 5.2.** Every vertex outside S has d <= 4. A vertex z outside S with d(z) = 4 has q(z) = 0 and its six
 neighbours outside S are in X_0.
 
-*Proof.* The left side of (5.2) is >= 0, so 5d <= 20. If d = 4 it is 0 = -q(z) + (a sum of non-negative terms): so
+*Proof.* The left side of (5.2) is >= 0, so 5d <= 20. If d = 4 the equation reads
+0 = q(z) + (the sum of d(w) over the neighbours w of z outside S), a sum of two non-negative terms: so
 q(z) = 0 and every neighbour of z outside S has d = 0; there are 14 - 8 = 6 of them. QED
 
 ### 5.3 The sizes of the classes
@@ -1179,8 +1188,8 @@ hand, and finds them identical for III.0, III.1 and IIa.0 (`check_model.out`).
 *III.0.*
 
 - `eng3.py` and `eng4.py` (the first engine and a faster version of it; `eng4.py` writes the "plan": one line per
-  node with the unit chosen, the number of candidates and the number kept). Each was run in 3 parts split at level
-  3 (7,109 tasks): the numbers of the table and all the other counters of Computation 7.4 are identical for the two
+  node with the unit chosen, the number of candidates and the number kept). Each was run in 3 parts with split parameter 3
+  (the nodes of level 3 are split: the 7,109 tasks are their children, of level 4): the numbers of the table and all the other counters of Computation 7.4 are identical for the two
   (`summary_III0.out`). In these engines the choice of the unit uses a floating-point look-ahead; at the chosen unit
   all candidates are generated; a budget rejection is recounted in 64-bit integers and a PSD rejection is an integer
   vector on a sigma-block evaluated in Python integers (or exact rational elimination).
@@ -1199,8 +1208,8 @@ The working report counts this as "two implementations", with the remark "tests 
 `cases.py` is shared". That is the precise status: two engines whose candidate generation and tests were written
 separately, one model file, and the second engine follows the units chosen by the first.
 
-*III.1.* `eng5.py` (a third version of the first engine, same model `cases.CaseIII`), run in 8 parts split at level
-3: 21,165 tasks at level 3 in every part, the same hash of the ordered task list in the 8 parts, no time-out
+*III.1.* `eng5.py` (a third version of the first engine, same model `cases.CaseIII`), run in 8 parts with split parameter
+3 (the nodes of level 3 are split): 21,165 tasks, of level 4, in every part, the same hash of the ordered task list in the 8 parts, no time-out
 (`lemma/t20_III1/summary_III1.out`, `e5_III1_{0..7}of8.json`). Counters by level, for the record:
 
     nodes            1, 13, 208, 2156, 21165, 132172, 492124, 764789, 211921, 4315, 0
@@ -2518,8 +2527,8 @@ negative form, i.e. a PSD violation. It is not used here either.)
     x^T M2 x = 22 c^T (7I - G_odd) c of section 6.3; Lemma 6.5 in this form, and Lemma 7.3; Lemma 9.8 (c), (d); in
     Lemma 9.11, the proof of c <= 1 and the derivation of the list by hand; the definition of c in Lemma 9.12; the
     definition of an N-configuration and the comparison of the bounds in Lemma 9.18; Lemma 9.23 (c) (the bound
-    a_0(s) <= 4) and (f); Lemma 10.2 in graph language. The transcription script `_check_text_data.py` (in the
-    folder of this text) rebuilds the nine structures from the lists printed in section 4.10 and confirms (S1)-(S5),
+    a_0(s) <= 4) and (f); Lemma 10.2 in graph language. The transcription script
+    `lemma/t20_PROOF/_check_text_data.py` rebuilds the nine structures from the lists printed in section 4.10 and confirms (S1)-(S5),
     the codegrees, the numbers of triangles and of automorphisms, the units, the numbers r_i and the count 180 of
     Lemma 8.5, the labelling by the edges of K4, the arithmetic of (9.6), (9.7), (9.8), (9.11) and the list of
     Lemma 9.11. It is a check of transcription, not part of the proof.
@@ -2589,7 +2598,7 @@ output files show how the work was split.
 | `t20_enum.py` (with `t20_kernel.py`, `t20_common.py`) | `python t20_enum.py I` ; `python t20_enum.py III IIb IIa` (the arguments are the names of the types; not recorded, deduced from the outputs) | `enum_I.out`, `structures_I.json`; `enum_III_IIb_IIa.out`, `structures_III_IIb_IIa.json` (earlier run of III and IIb, same numbers: `enum_III_IIb.out`, `structures_III_IIb.json`) |
 | `t20_verify.py` | `python t20_verify.py III I` ; `python t20_verify.py IIa2` ; `python t20_verify.py IIb IIa` ; `python t20_verify.py IIb2` (deduced likewise) | `verify_III_I.out`; `verify_IIa.out`; `verify_II.out` (IIb complete, then cut by the time limit: "exit 124"); `verify_IIb.out`. `verify.out` holds only the exit line of a discarded first version |
 | data of section 4.10 | `python t20_survivors.py` ; `python t20_deficiency.py` ; `python t20_names.py` | `survivors.out`, `deficiency.out`, `names.out` |
-| transcription check of this text | `python _check_text_data.py` (folder of this text) | `_check_text_data.out` |
+| transcription check of this text | `python lemma/t20_PROOF/_check_text_data.py` | `_check_text_data.out` |
 
 ### A.2 Computation 7.4 (III.0), folder `lemma/t20_R2`
 
@@ -2602,7 +2611,7 @@ output files show how the work was split.
 | certificates | `python check_certs.py III.0 <certificate files>` | `check_certs_III0.out` |
 | model | `python check_model.py` | `check_model.out` |
 
-The time limits of these runs were not recorded; the result files record: 3 parts split at level 3, the group of
+The time limits of these runs were not recorded; the result files record: 3 parts, split parameter 3 (tasks of level 4), the group of
 order 48, pointwise stabilisers, rank test enabled, no time-out.
 
 ### A.3 Computation 7.5 (III.1), folders `lemma/t20_R2` (programs) and `lemma/t20_III1` (outputs)
