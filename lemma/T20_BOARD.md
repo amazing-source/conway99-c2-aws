@@ -33,7 +33,7 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 |---|---|---|---|---|
 | C1 | III.1: independent verifier over the whole tree, plus the one node rejected by rank | LAP (agent) | **closed 11:47**: agrees at every node, 0 complete (`t20_III1/VERIF.md`) | done |
 | C2 | n_3 = 0, eleven cases: jobs `t20_Iv_B..F` on the free account | LAP | running since 11:10 | 15:30 |
-| C3 | n_3 = 0, I.1 (3,4,0): job `t20_I1_340`, 128 cores | LAP | running since 11:19 | 12:15 |
+| C3 | n_3 = 0, I.1 (3,4,0): job `t20_I1_340`, 128 cores | LAP | **closed 11:52**: stage 1 agrees (3,508,550 / 878,137 / 219,589), stage 2 agrees at every node (7,279,961 nodes), 0 complete; the 13 rank nodes closed by the second program's own search, no rank bound. Branch `lemma-run/t20_I1_340-i-019e86d399c17954f` | done |
 | C4 | n_3 = 0, I.1 (4,2,1): one part of C2 stops at base 12632 (old verifier); re-run that part with the fixed verifier | LAP | to do when C2 is back | 16:00 |
 
 ## D. Writing and conversion (start now, in parallel with A)
@@ -58,6 +58,5 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | Account | Machine | Job | Since |
 |---|---|---|---|
 | user | i-00a0ab97a6a8099fd, 128 vCPU, eu-north-1 | 003:181:182 | 07:46 |
-| user | i-019e86d399c17954f, 128 vCPU, eu-west-2 | C3 | 11:19 |
 | free | 5 x 8 vCPU | C2 | 11:10 |
 | free | i-0cefd01aef8eade8a, 8 vCPU, eu-north-1 | A1 measurement (`t20_n3_sample`) | 11:50 |
