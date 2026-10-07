@@ -20,7 +20,8 @@ def main():
          "% inputs of B_TABLE_156.json (sha256, 16 hex): " + "; ".join("%s %s" % kv for kv in sorted(T["inputs"].items())),
          BS + "begin{longtable}{r l l r r r r}",
          BS + "caption{The 156 lattices. Method: S stream sweep; SD stream sweep with pairs through $T_{18}$, $T_{20}$; GD, G Golay pair files; O the odd Leech lattice; "
-         "H, F, H3 pair lists of 27--29/09; P packing; EP criterion (E) and packing; SP, So Sol's note; B budget identity. "
+         "H, F, H3 pair lists of 27--29 September; P, EP, SP packing (Proposition~" + BS + "ref{prop:pack}; EP and SP: also by earlier arguments not used here); "
+         "So decomposable lattice (Proposition~" + BS + "ref{prop:153}); B budget identity (Proposition~" + BS + "ref{prop:143}). "
          "$" + BS + "dagger$: pairs of the whole-lattice re-run with the archived engine (identity symmetry).}" + BS + "label{tab:156}" + BS + BS,
          BS + "toprule", head, BS + "midrule", BS + "endfirsthead", BS + "toprule", head, BS + "midrule", BS + "endhead", BS + "bottomrule", BS + "endfoot"]
     tot = [0, 0, 0, 0]; dag = 0
