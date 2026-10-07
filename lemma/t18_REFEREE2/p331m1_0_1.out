@@ -1,0 +1,6 @@
+  [0s] tau 1/425 {}
+  [0s] tau 121/425 {'tauF_budget25': 106, 'psd_tests': 161, 'nodes2': 55, 'rej_psd_cert_M1': 123, 'rej_budget': 114}
+  [20s] tau 241/425 {'tauF_budget25': 429, 'psd_tests': 1258, 'nodes2': 829, 'rej_psd_cert_M1': 837, 'rej_budget': 3687, 'survivors39': 5, 'rows': 1130, 'covers': 79, 'tables_F3F4': 289}
+  [162s] tau 361/425 {'tauF_budget25': 846, 'psd_tests': 5282, 'nodes2': 2862, 'rej_psd_cert_M1': 3913, 'rej_budget': 16587, 'survivors39': 60, 'rows': 10314, 'covers': 3261, 'tables_F3F4': 4845, 'tables_budget45': 1570, 'tables_psd45': 8, 'type_solutions': 120, 'graphs51_budget': 4}
+B0 profile (3,3,1) part 1/3: {'tauF_budget25': 1217, 'psd_tests': 10408, 'nodes2': 5361, 'rej_psd_cert_M1': 7548, 'rej_budget': 33994, 'survivors39': 293, 'rows': 35500, 'covers': 6169, 'tables_F3F4': 9097, 'tables_budget45': 3804, 'tables_psd45': 19, 'type_solutions': 285, 'graphs51_budget': 26}  (317s)
+matchings carrying 39-vertex survivors: 22 ; pairs (tau,F): 47 ; matchings carrying PSD tables: 6

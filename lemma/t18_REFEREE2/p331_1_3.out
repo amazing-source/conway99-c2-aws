@@ -1,0 +1,10 @@
+  [0s] tau 3/1259 {}
+  [0s] tau 163/1259 {'tauF_budget25': 49, 'psd_tests': 64, 'rej_psd_cert_M1': 53, 'nodes2': 15, 'rej_budget': 24}
+  [0s] tau 323/1259 {'tauF_budget25': 193, 'psd_tests': 371, 'rej_psd_cert_M1': 263, 'nodes2': 178, 'rej_budget': 631}
+  [47s] tau 483/1259 {'tauF_budget25': 391, 'psd_tests': 1585, 'rej_psd_cert_M1': 1196, 'nodes2': 882, 'rej_budget': 4565, 'survivors39': 10, 'rows': 2752, 'rej_psd_cert_M2': 1, 'covers': 391, 'tables_F3F4': 644, 'tables_budget45': 312}
+  [51s] tau 643/1259 {'tauF_budget25': 507, 'psd_tests': 1854, 'rej_psd_cert_M1': 1374, 'nodes2': 1035, 'rej_budget': 5150, 'survivors39': 10, 'rows': 2752, 'rej_psd_cert_M2': 2, 'covers': 391, 'tables_F3F4': 644, 'tables_budget45': 312}
+  [128s] tau 803/1259 {'tauF_budget25': 816, 'psd_tests': 4362, 'rej_psd_cert_M1': 3466, 'nodes2': 1861, 'rej_budget': 9395, 'survivors39': 22, 'rows': 5780, 'rej_psd_cert_M2': 3, 'covers': 2224, 'tables_F3F4': 3366, 'tables_budget45': 1685}
+  [144s] tau 963/1259 {'tauF_budget25': 1055, 'psd_tests': 5470, 'rej_psd_cert_M1': 4195, 'nodes2': 2730, 'rej_budget': 14254, 'survivors39': 23, 'rows': 5948, 'rej_psd_cert_M2': 7, 'covers': 2224, 'tables_F3F4': 3366, 'tables_budget45': 1685}
+  [302s] tau 1123/1259 {'tauF_budget25': 1398, 'psd_tests': 10397, 'rej_psd_cert_M1': 8260, 'nodes2': 4611, 'rej_budget': 26352, 'survivors39': 73, 'rows': 15930, 'rej_psd_cert_M2': 37, 'covers': 6854, 'tables_F3F4': 9825, 'tables_budget45': 4346, 'tables_psd45': 6, 'type_solutions': 90, 'graphs51_budget': 42}
+B1 profile (3,3,1) part 3/4: {'tauF_budget25': 1891, 'psd_tests': 13004, 'rej_psd_cert_M1': 9826, 'nodes2': 6683, 'rej_budget': 37607, 'survivors39': 95, 'rows': 18352, 'rej_psd_cert_M2': 66, 'covers': 6896, 'tables_F3F4': 9867, 'tables_budget45': 4388, 'tables_psd45': 6, 'type_solutions': 90, 'graphs51_budget': 42}  (336s)
+matchings carrying 39-vertex survivors: 14 ; pairs (tau,F): 20 ; matchings carrying PSD tables: 1

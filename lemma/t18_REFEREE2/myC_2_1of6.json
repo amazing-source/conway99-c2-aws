@@ -1,0 +1,1 @@
+{"s": 2, "part": 1, "nparts": 6, "stats": {"triples": 33, "dead_counts": 0, "types_tested": 871, "K_budget_ok": 6956, "K_psd_ok": 237, "cover_nodes": 128, "rej_budget": 33687, "rej_psd_cert": 6873, "rej_psd_charpoly": 0, "float_neg_but_exactly_psd": 0, "full47_tests": 0, "survivors": 0}, "survivors": []}

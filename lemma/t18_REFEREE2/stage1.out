@@ -1,0 +1,39 @@
+=== B0 ===
+codegree values: [1, 2]
+adjacent pairs with codeg 1 / 2: 18 0
+non-adjacent pairs with codeg 1 / 2: 0 18
+triangles: 6  |Aut|: 72
+charpoly: (x - 4)*(x - 1)**4*(x + 2)**4
+deficient pairs (18?): 18  equal to the list printed in the document: True
+admissible rectangles: 99  usable in N(p): 63
+admissible matchings: 25514
+orbits under Aut(B): 425
+Burnside: sum of fixed points / |Aut| = 30600 / 72 = 425.0
+stored reps r2_tau_0.json: 425 entries; all admissible: True; distinct orbits: 425; cover all my orbits: True
+   keys of the json: ['DEF', 'n_tau', 'name', 'reps']
+=== B1 ===
+codegree values: [1, 2]
+adjacent pairs with codeg 1 / 2: 12 6
+non-adjacent pairs with codeg 1 / 2: 6 12
+triangles: 8  |Aut|: 12
+charpoly: (x - 4)*(x - 2)*(x - 1)**2*(x + 1)**2*(x + 2)**3
+deficient pairs (18?): 18  equal to the list printed in the document: True
+admissible rectangles: 99  usable in N(p): 63
+admissible matchings: 13799
+orbits under Aut(B): 1259
+Burnside: sum of fixed points / |Aut| = 15108 / 12 = 1259.0
+stored reps r2_tau_1.json: 1259 entries; all admissible: True; distinct orbits: 1259; cover all my orbits: True
+   keys of the json: ['DEF', 'n_tau', 'name', 'reps']
+=== B2 ===
+codegree values: [1, 2]
+adjacent pairs with codeg 1 / 2: 9 9
+non-adjacent pairs with codeg 1 / 2: 9 9
+triangles: 9  |Aut|: 18
+charpoly: (x - 4)*(x + 2)**2*(x**3 - 3*x - 1)**2
+deficient pairs (18?): 18  equal to the list printed in the document: True
+admissible rectangles: 99  usable in N(p): 63
+admissible matchings: 9229
+orbits under Aut(B): 528
+Burnside: sum of fixed points / |Aut| = 9504 / 18 = 528.0
+stored reps r2_tau_2.json: 528 entries; all admissible: True; distinct orbits: 528; cover all my orbits: True
+   keys of the json: ['DEF', 'n_tau', 'name', 'reps']

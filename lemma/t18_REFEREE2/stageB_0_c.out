@@ -1,0 +1,5 @@
+  [18s] tau 400/425 {'tauF': 641, 'tauF_budget23': 462, 'tauF_psd23': 412, 'nodes': 5312, 'rej_budget': 59204, 'rej_psd_cert': 2385, 'rej_psd_charpoly': 0, 'psd_tests': 5774, 'leaves': 211, 'float_neg_but_exactly_psd': 0}
+B0 stage B, matchings 380..410: {'tauF': 1001, 'tauF_budget23': 730, 'tauF_psd23': 636, 'nodes': 8908, 'rej_budget': 101022, 'rej_psd_cert': 3856, 'rej_psd_charpoly': 0, 'psd_tests': 9638, 'leaves': 648, 'float_neg_but_exactly_psd': 0}  (36s)
+stage-B triples: 648 ; matchings carrying them: 22 ; pairs (tau,F): 189
+by t: [(2, 88), (4, 374), (6, 186)]  by largest a_2 on X_2: [(1, 639), (2, 9)]
+leaves satisfying the degree cap of (C2): 648, (C3): 648, (C4): 648

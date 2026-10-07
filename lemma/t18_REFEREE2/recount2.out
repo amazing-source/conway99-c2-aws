@@ -1,0 +1,6 @@
+B0 |F|=3: budget-valid pairs (tau,F) 3510; with a type solution: (F5) only 3510; + cell room 1958; + no A_p vertex in the cell 1834
+B0 |F|=2: budget-valid pairs (tau,F) 5545; with a type solution: (F5) only 5545; + cell room 4693; + no A_p vertex in the cell 4619
+B1 |F|=3: budget-valid pairs (tau,F) 7224; with a type solution: (F5) only 7224; + cell room 4332; + no A_p vertex in the cell 4096
+B1 |F|=2: budget-valid pairs (tau,F) 12366; with a type solution: (F5) only 12366; + cell room 10429; + no A_p vertex in the cell 10293
+B2 |F|=3: budget-valid pairs (tau,F) 2406; with a type solution: (F5) only 2406; + cell room 1309; + no A_p vertex in the cell 1265
+B2 |F|=2: budget-valid pairs (tau,F) 4347; with a type solution: (F5) only 4347; + cell room 3558; + no A_p vertex in the cell 3504

@@ -1,0 +1,3 @@
+  [49s] {'triples': 20, 'dead_counts': 0, 'types_tested': 525, 'K_budget_ok': 4331, 'K_psd_ok': 163, 'cover_nodes': 167, 'rej_budget': 20381, 'rej_psd_cert': 4378, 'rej_psd_charpoly': 0, 'float_neg_but_exactly_psd': 0, 'full47_tests': 0, 'survivors': 0}
+B2 stage C part 0/6: triples in the input 196; {'triples': 33, 'dead_counts': 0, 'types_tested': 884, 'K_budget_ok': 6671, 'K_psd_ok': 239, 'cover_nodes': 202, 'rej_budget': 33036, 'rej_psd_cert': 6659, 'rej_psd_charpoly': 0, 'float_neg_but_exactly_psd': 0, 'full47_tests': 0, 'survivors': 0}  (82s)
+stage-C survivors: 0

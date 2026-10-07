@@ -1,0 +1,8 @@
+  [5s] tau 320/425 {'tauF': 357, 'tauF_budget23': 247, 'tauF_psd23': 224, 'nodes': 2683, 'rej_budget': 28112, 'rej_psd_cert': 1479, 'rej_psd_charpoly': 0, 'psd_tests': 2930, 'leaves': 77, 'float_neg_but_exactly_psd': 0}
+  [37s] tau 340/425 {'tauF': 861, 'tauF_budget23': 603, 'tauF_psd23': 557, 'nodes': 8539, 'rej_budget': 94057, 'rej_psd_cert': 4532, 'rej_psd_charpoly': 0, 'psd_tests': 9142, 'leaves': 378, 'float_neg_but_exactly_psd': 0}
+  [55s] tau 360/425 {'tauF': 1316, 'tauF_budget23': 915, 'tauF_psd23': 821, 'nodes': 12735, 'rej_budget': 142834, 'rej_psd_cert': 6464, 'rej_psd_charpoly': 0, 'psd_tests': 13650, 'leaves': 645, 'float_neg_but_exactly_psd': 0}
+  [93s] tau 380/425 {'tauF': 1785, 'tauF_budget23': 1221, 'tauF_psd23': 1097, 'nodes': 19467, 'rej_budget': 217594, 'rej_psd_cert': 9958, 'rej_psd_charpoly': 0, 'psd_tests': 20688, 'leaves': 1252, 'float_neg_but_exactly_psd': 0}
+B0 stage B, matchings 300..380: {'tauF': 1785, 'tauF_budget23': 1221, 'tauF_psd23': 1097, 'nodes': 19467, 'rej_budget': 217594, 'rej_psd_cert': 9958, 'rej_psd_charpoly': 0, 'psd_tests': 20688, 'leaves': 1252, 'float_neg_but_exactly_psd': 0}  (94s)
+stage-B triples: 1252 ; matchings carrying them: 57 ; pairs (tau,F): 340
+by t: [(2, 143), (4, 683), (6, 426)]  by largest a_2 on X_2: [(1, 1189), (2, 63)]
+leaves satisfying the degree cap of (C2): 1252, (C3): 1252, (C4): 1252

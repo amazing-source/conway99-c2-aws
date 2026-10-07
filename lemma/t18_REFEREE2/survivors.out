@@ -1,0 +1,69 @@
+tau #813 of r2_tau_1.json equals Appendix B: True ; tau #975: True
+===== #813 F=[2,9] =====
+tau admissible (R1),(R2): True
+printed 'tau K' columns consistent with tau: True
+(C1) rectangles of F usable (disjoint): True
+degrees ok / sigma is an automorphism of the 47-vertex graph: True
+budget violations on 47 vertices: 0
+t = 4 ; a_2 on A_p: [1, 2, 2, 1] ; a_2 on w_c: [3, 3, 2, 3, 2]
+(C2) True (C3) FL=2 even,<=8: True (C4) True (C5) True (C6) True (C7) True (C8) True
+every vertex of S u X_2' has exactly 2 neighbours in N(p) (Cor 2.2): True
+M1[Y47]: negative eigenvalues 0, rank 46 ; M2[Y47]: negative eigenvalues 0, rank 45
+M1 * (4 e_p + 1_N(p)) == 0: True
+u^T M1 u == 18 G_odd entrywise: True
+det G_odd = 47684  rank G_odd = 23
+explicit entries of G_even as in Prop 6.4(b): True  rank G_even = 23
+stage D, with (D3) upper bound: 7286 sets Z pass the z-only tests, 1356 pass the budget on 49 vertices, 678 unordered pairs {Z, sigma Z}; Z = sigma Z occurs: False
+stage D, without upper bound: 7286 sets Z pass the z-only tests, 1356 pass the budget on 49 vertices, 678 unordered pairs {Z, sigma Z}; Z = sigma Z occurs: False
+stage D (all oriented Z without the upper bound, 1356 sets): exactly PSD on 49 vertices: 0 ; exactly PSD on 48 vertices (Y47 u {z}): 0 ; rejected on 49 by {'M1': 1356, 'M2 only': 0}
+===== #813 F=[3,6] =====
+tau admissible (R1),(R2): True
+printed 'tau K' columns consistent with tau: True
+(C1) rectangles of F usable (disjoint): True
+degrees ok / sigma is an automorphism of the 47-vertex graph: True
+budget violations on 47 vertices: 0
+t = 4 ; a_2 on A_p: [1, 2, 2, 1] ; a_2 on w_c: [3, 3, 3, 2, 2]
+(C2) True (C3) FL=2 even,<=8: True (C4) True (C5) True (C6) True (C7) True (C8) True
+every vertex of S u X_2' has exactly 2 neighbours in N(p) (Cor 2.2): True
+M1[Y47]: negative eigenvalues 0, rank 46 ; M2[Y47]: negative eigenvalues 0, rank 45
+M1 * (4 e_p + 1_N(p)) == 0: True
+u^T M1 u == 18 G_odd entrywise: True
+det G_odd = 47684  rank G_odd = 23
+explicit entries of G_even as in Prop 6.4(b): True  rank G_even = 23
+stage D, with (D3) upper bound: 7286 sets Z pass the z-only tests, 1356 pass the budget on 49 vertices, 678 unordered pairs {Z, sigma Z}; Z = sigma Z occurs: False
+stage D, without upper bound: 7286 sets Z pass the z-only tests, 1356 pass the budget on 49 vertices, 678 unordered pairs {Z, sigma Z}; Z = sigma Z occurs: False
+stage D (all oriented Z without the upper bound, 1356 sets): exactly PSD on 49 vertices: 0 ; exactly PSD on 48 vertices (Y47 u {z}): 0 ; rejected on 49 by {'M1': 1356, 'M2 only': 0}
+===== #975 F=[1,2] =====
+tau admissible (R1),(R2): True
+printed 'tau K' columns consistent with tau: True
+(C1) rectangles of F usable (disjoint): True
+degrees ok / sigma is an automorphism of the 47-vertex graph: True
+budget violations on 47 vertices: 0
+t = 2 ; a_2 on A_p: [1, 1, 1, 1] ; a_2 on w_c: [3, 3, 3, 3, 2]
+(C2) True (C3) FL=0 even,<=8: True (C4) True (C5) True (C6) True (C7) True (C8) True
+every vertex of S u X_2' has exactly 2 neighbours in N(p) (Cor 2.2): True
+M1[Y47]: negative eigenvalues 0, rank 46 ; M2[Y47]: negative eigenvalues 0, rank 45
+M1 * (4 e_p + 1_N(p)) == 0: True
+u^T M1 u == 18 G_odd entrywise: True
+det G_odd = 874944  rank G_odd = 23
+explicit entries of G_even as in Prop 6.4(b): True  rank G_even = 23
+stage D, with (D3) upper bound: 9575 sets Z pass the z-only tests, 1692 pass the budget on 49 vertices, 846 unordered pairs {Z, sigma Z}; Z = sigma Z occurs: False
+stage D, without upper bound: 9855 sets Z pass the z-only tests, 1698 pass the budget on 49 vertices, 849 unordered pairs {Z, sigma Z}; Z = sigma Z occurs: False
+stage D (all oriented Z without the upper bound, 1698 sets): exactly PSD on 49 vertices: 0 ; exactly PSD on 48 vertices (Y47 u {z}): 0 ; rejected on 49 by {'M1': 1698, 'M2 only': 0}
+===== #975 F=[3,6] =====
+tau admissible (R1),(R2): True
+printed 'tau K' columns consistent with tau: True
+(C1) rectangles of F usable (disjoint): True
+degrees ok / sigma is an automorphism of the 47-vertex graph: True
+budget violations on 47 vertices: 0
+t = 2 ; a_2 on A_p: [1, 1, 1, 1] ; a_2 on w_c: [3, 2, 3, 3, 3]
+(C2) True (C3) FL=0 even,<=8: True (C4) True (C5) True (C6) True (C7) True (C8) True
+every vertex of S u X_2' has exactly 2 neighbours in N(p) (Cor 2.2): True
+M1[Y47]: negative eigenvalues 0, rank 46 ; M2[Y47]: negative eigenvalues 0, rank 45
+M1 * (4 e_p + 1_N(p)) == 0: True
+u^T M1 u == 18 G_odd entrywise: True
+det G_odd = 874944  rank G_odd = 23
+explicit entries of G_even as in Prop 6.4(b): True  rank G_even = 23
+stage D, with (D3) upper bound: 9575 sets Z pass the z-only tests, 1692 pass the budget on 49 vertices, 846 unordered pairs {Z, sigma Z}; Z = sigma Z occurs: False
+stage D, without upper bound: 9855 sets Z pass the z-only tests, 1698 pass the budget on 49 vertices, 849 unordered pairs {Z, sigma Z}; Z = sigma Z occurs: False
+stage D (all oriented Z without the upper bound, 1698 sets): exactly PSD on 49 vertices: 0 ; exactly PSD on 48 vertices (Y47 u {z}): 0 ; rejected on 49 by {'M1': 1698, 'M2 only': 0}

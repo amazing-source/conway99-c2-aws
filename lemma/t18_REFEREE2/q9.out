@@ -1,0 +1,26 @@
+labelled 4-regular graphs on 9 vertices: 1024380
+labelled with all codegrees <= 2      : 55440
+isomorphism classes: 16
+invariant buckets  : 16
+class: labelled=  30240  |Aut|=  12  9!/|Aut|=  30240  OK  maxcodeg=2 mincodeg=1 triangles=8 connected=True edges=01 02 03 04 12 13 15 24 25 36 37 46 48 57 58 67 68 78
+class: labelled=  20160  |Aut|=  18  9!/|Aut|=  20160  OK  maxcodeg=2 mincodeg=1 triangles=9 connected=True edges=01 02 03 04 12 13 15 24 26 35 37 46 48 57 58 67 68 78
+class: labelled=   5040  |Aut|=  72  9!/|Aut|=   5040  OK  maxcodeg=2 mincodeg=1 triangles=6 connected=True edges=01 02 03 04 12 15 16 27 28 34 35 37 46 48 56 57 68 78
+class: labelled= 181440  |Aut|=   2  9!/|Aut|= 181440  OK  maxcodeg=3 mincodeg=0 triangles=7 connected=True edges=01 02 03 04 12 13 15 24 26 35 37 47 48 56 58 67 68 78
+class: labelled= 181440  |Aut|=   2  9!/|Aut|= 181440  OK  maxcodeg=3 mincodeg=0 triangles=6 connected=True edges=01 02 03 04 12 13 15 24 26 36 37 47 48 56 57 58 68 78
+class: labelled= 181440  |Aut|=   2  9!/|Aut|= 181440  OK  maxcodeg=3 mincodeg=0 triangles=5 connected=True edges=01 02 03 04 12 13 15 26 27 36 38 45 46 47 57 58 68 78
+class: labelled=  90720  |Aut|=   4  9!/|Aut|=  90720  OK  maxcodeg=3 mincodeg=0 triangles=7 connected=True edges=01 02 03 04 12 13 14 25 26 35 37 46 48 57 58 67 68 78
+class: labelled=  45360  |Aut|=   8  9!/|Aut|=  45360  OK  maxcodeg=3 mincodeg=0 triangles=8 connected=True edges=01 02 03 04 12 13 15 23 26 37 45 46 48 57 58 67 68 78
+class: labelled=  45360  |Aut|=   8  9!/|Aut|=  45360  OK  maxcodeg=3 mincodeg=0 triangles=6 connected=True edges=01 02 03 04 12 13 15 26 27 36 38 45 47 48 57 58 67 68
+class: labelled=  45360  |Aut|=   8  9!/|Aut|=  45360  OK  maxcodeg=3 mincodeg=0 triangles=4 connected=True edges=01 02 03 04 12 13 15 26 27 36 38 46 47 48 56 57 58 78
+class: labelled=  30240  |Aut|=  12  9!/|Aut|=  30240  OK  maxcodeg=3 mincodeg=0 triangles=4 connected=True edges=01 02 03 04 12 15 16 27 28 34 35 37 46 48 56 58 67 78
+class: labelled=  22680  |Aut|=  16  9!/|Aut|=  22680  OK  maxcodeg=3 mincodeg=0 triangles=10 connected=True edges=01 02 03 04 12 13 14 23 25 36 47 48 56 57 58 67 68 78
+class: labelled=  20160  |Aut|=  18  9!/|Aut|=  20160  OK  maxcodeg=3 mincodeg=0 triangles=3 connected=True edges=01 02 03 04 12 15 16 27 28 35 36 37 45 47 48 58 67 68
+class: labelled=  90720  |Aut|=   4  9!/|Aut|=  90720  OK  maxcodeg=4 mincodeg=0 triangles=5 connected=True edges=01 02 03 04 12 13 15 24 26 37 38 47 48 56 57 58 67 68
+class: labelled=  22680  |Aut|=  16  9!/|Aut|=  22680  OK  maxcodeg=4 mincodeg=0 triangles=2 connected=True edges=01 02 03 04 12 15 16 27 28 34 35 36 47 48 57 58 67 68
+class: labelled=  11340  |Aut|=  32  9!/|Aut|=  11340  OK  maxcodeg=4 mincodeg=0 triangles=6 connected=True edges=01 02 03 04 12 13 14 25 26 35 36 47 48 57 58 67 68 78
+sum 9!/|Aut| = 1024380
+pairs of representatives found isomorphic (must be 0): 0
+classes with all codegrees <= 2: 3
+B0 is isomorphic to codeg<=2 class number(s) [2]  labelled size [5040]
+B1 is isomorphic to codeg<=2 class number(s) [0]  labelled size [30240]
+B2 is isomorphic to codeg<=2 class number(s) [1]  labelled size [20160]

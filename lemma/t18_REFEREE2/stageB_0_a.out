@@ -1,0 +1,19 @@
+  [0s] tau 20/425 {'tauF': 58, 'tauF_budget23': 35, 'tauF_psd23': 25, 'nodes': 80, 'rej_budget': 584, 'rej_psd_cert': 54, 'rej_psd_charpoly': 0, 'psd_tests': 115, 'leaves': 0, 'float_neg_but_exactly_psd': 0}
+  [0s] tau 40/425 {'tauF': 207, 'tauF_budget23': 135, 'tauF_psd23': 114, 'nodes': 450, 'rej_budget': 3662, 'rej_psd_cert': 262, 'rej_psd_charpoly': 0, 'psd_tests': 585, 'leaves': 0, 'float_neg_but_exactly_psd': 0}
+  [1s] tau 60/425 {'tauF': 423, 'tauF_budget23': 301, 'tauF_psd23': 248, 'nodes': 1112, 'rej_budget': 9239, 'rej_psd_cert': 638, 'rej_psd_charpoly': 0, 'psd_tests': 1413, 'leaves': 0, 'float_neg_but_exactly_psd': 0}
+  [1s] tau 80/425 {'tauF': 662, 'tauF_budget23': 476, 'tauF_psd23': 378, 'nodes': 1852, 'rej_budget': 15727, 'rej_psd_cert': 1062, 'rej_psd_charpoly': 0, 'psd_tests': 2328, 'leaves': 1, 'float_neg_but_exactly_psd': 0}
+  [4s] tau 100/425 {'tauF': 906, 'tauF_budget23': 644, 'tauF_psd23': 522, 'nodes': 2865, 'rej_budget': 24974, 'rej_psd_cert': 1636, 'rej_psd_charpoly': 0, 'psd_tests': 3509, 'leaves': 11, 'float_neg_but_exactly_psd': 0}
+  [8s] tau 120/425 {'tauF': 1128, 'tauF_budget23': 796, 'tauF_psd23': 661, 'nodes': 3719, 'rej_budget': 32776, 'rej_psd_cert': 2119, 'rej_psd_charpoly': 0, 'psd_tests': 4515, 'leaves': 17, 'float_neg_but_exactly_psd': 0}
+  [12s] tau 140/425 {'tauF': 1380, 'tauF_budget23': 977, 'tauF_psd23': 811, 'nodes': 4365, 'rej_budget': 38282, 'rej_psd_cert': 2485, 'rej_psd_charpoly': 0, 'psd_tests': 5342, 'leaves': 17, 'float_neg_but_exactly_psd': 0}
+  [15s] tau 160/425 {'tauF': 1629, 'tauF_budget23': 1158, 'tauF_psd23': 954, 'nodes': 4986, 'rej_budget': 43271, 'rej_psd_cert': 2867, 'rej_psd_charpoly': 0, 'psd_tests': 6144, 'leaves': 17, 'float_neg_but_exactly_psd': 0}
+  [18s] tau 180/425 {'tauF': 1843, 'tauF_budget23': 1310, 'tauF_psd23': 1094, 'nodes': 5698, 'rej_budget': 48716, 'rej_psd_cert': 3294, 'rej_psd_charpoly': 0, 'psd_tests': 7008, 'leaves': 18, 'float_neg_but_exactly_psd': 0}
+  [24s] tau 200/425 {'tauF': 2249, 'tauF_budget23': 1615, 'tauF_psd23': 1368, 'nodes': 6880, 'rej_budget': 59451, 'rej_psd_cert': 3945, 'rej_psd_charpoly': 0, 'psd_tests': 8495, 'leaves': 19, 'float_neg_but_exactly_psd': 0}
+  [32s] tau 220/425 {'tauF': 2657, 'tauF_budget23': 1924, 'tauF_psd23': 1649, 'nodes': 8765, 'rej_budget': 78192, 'rej_psd_cert': 4895, 'rej_psd_charpoly': 0, 'psd_tests': 10689, 'leaves': 23, 'float_neg_but_exactly_psd': 0}
+  [44s] tau 240/425 {'tauF': 3091, 'tauF_budget23': 2252, 'tauF_psd23': 1938, 'nodes': 11183, 'rej_budget': 103497, 'rej_psd_cert': 6166, 'rej_psd_charpoly': 0, 'psd_tests': 13435, 'leaves': 31, 'float_neg_but_exactly_psd': 0}
+  [57s] tau 260/425 {'tauF': 3554, 'tauF_budget23': 2594, 'tauF_psd23': 2246, 'nodes': 14088, 'rej_budget': 132466, 'rej_psd_cert': 7743, 'rej_psd_charpoly': 0, 'psd_tests': 16682, 'leaves': 58, 'float_neg_but_exactly_psd': 0}
+  [75s] tau 280/425 {'tauF': 3992, 'tauF_budget23': 2913, 'tauF_psd23': 2533, 'nodes': 17557, 'rej_budget': 169161, 'rej_psd_cert': 9681, 'rej_psd_charpoly': 0, 'psd_tests': 20470, 'leaves': 120, 'float_neg_but_exactly_psd': 0}
+  [96s] tau 300/425 {'tauF': 4469, 'tauF_budget23': 3245, 'tauF_psd23': 2839, 'nodes': 21011, 'rej_budget': 204159, 'rej_psd_cert': 11602, 'rej_psd_charpoly': 0, 'psd_tests': 24256, 'leaves': 169, 'float_neg_but_exactly_psd': 0}
+B0 stage B, matchings 0..300: {'tauF': 4469, 'tauF_budget23': 3245, 'tauF_psd23': 2839, 'nodes': 21011, 'rej_budget': 204159, 'rej_psd_cert': 11602, 'rej_psd_charpoly': 0, 'psd_tests': 24256, 'leaves': 169, 'float_neg_but_exactly_psd': 0}  (97s)
+stage-B triples: 169 ; matchings carrying them: 40 ; pairs (tau,F): 97
+by t: [(2, 10), (4, 86), (6, 73)]  by largest a_2 on X_2: [(1, 147), (2, 22)]
+leaves satisfying the degree cap of (C2): 169, (C3): 169, (C4): 169

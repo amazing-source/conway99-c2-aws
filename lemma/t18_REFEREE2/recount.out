@@ -1,0 +1,30 @@
+B0: types.json vs 'no budget violation on the 21 vertices S u {p, w, sigma w}':
+   (d, flag) = (0, 0): budgets only 1, types.json 1, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (0, 1): budgets only 1, types.json 1, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (1, 0): budgets only 81, types.json 81, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (1, 1): budgets only 72, types.json 72, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (2, 0): budgets only 198, types.json 198, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (2, 1): budgets only 126, types.json 126, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (3, 0): budgets only 12, types.json 12, equal sets: True, types.json subset of budgets-only: True
+   |F| = 3: pairs (tau, F) with no budget violation on S u {p} u A_p: 3510 (in 366 matchings); admitting a type solution with cell room: 1958
+   |F| = 2: pairs (tau, F) with no budget violation on S u {p} u A_p: 5545 (in 409 matchings); admitting a type solution with cell room: 4693; exactly PSD (M1 and M2) on the 23 vertices: 4904
+B1: types.json vs 'no budget violation on the 21 vertices S u {p, w, sigma w}':
+   (d, flag) = (0, 0): budgets only 1, types.json 1, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (0, 1): budgets only 1, types.json 1, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (1, 0): budgets only 81, types.json 81, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (1, 1): budgets only 72, types.json 72, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (2, 0): budgets only 198, types.json 198, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (2, 1): budgets only 126, types.json 126, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (3, 0): budgets only 12, types.json 0, equal sets: False, types.json subset of budgets-only: True
+   |F| = 3: pairs (tau, F) with no budget violation on S u {p} u A_p: 7224 (in 1016 matchings); admitting a type solution with cell room: 4332
+   |F| = 2: pairs (tau, F) with no budget violation on S u {p} u A_p: 12366 (in 1227 matchings); admitting a type solution with cell room: 10429; exactly PSD (M1 and M2) on the 23 vertices: 11509
+B2: types.json vs 'no budget violation on the 21 vertices S u {p, w, sigma w}':
+   (d, flag) = (0, 0): budgets only 1, types.json 1, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (0, 1): budgets only 1, types.json 1, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (1, 0): budgets only 81, types.json 81, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (1, 1): budgets only 72, types.json 72, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (2, 0): budgets only 198, types.json 198, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (2, 1): budgets only 126, types.json 126, equal sets: True, types.json subset of budgets-only: True
+   (d, flag) = (3, 0): budgets only 18, types.json 18, equal sets: True, types.json subset of budgets-only: True
+   |F| = 3: pairs (tau, F) with no budget violation on S u {p} u A_p: 2406 (in 391 matchings); admitting a type solution with cell room: 1309
+   |F| = 2: pairs (tau, F) with no budget violation on S u {p} u A_p: 4347 (in 516 matchings); admitting a type solution with cell room: 3558; exactly PSD (M1 and M2) on the 23 vertices: 3863

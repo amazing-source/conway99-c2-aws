@@ -1,0 +1,5 @@
+Appendix B: 4 graphs, 2 canonical forms
+my stage C of B1: triples processed 4977; survivors 4; canonical forms 2
+   mine [(813, [2, 9]), (813, [3, 6])]  <->  Appendix B: #813 F=[3,6]
+   mine [(975, [1, 2]), (975, [3, 6])]  <->  Appendix B: #975 F=[3,6]
+same set of canonical forms: True

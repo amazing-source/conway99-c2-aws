@@ -1,0 +1,4 @@
+B0: my stage-B triples: 5595 (distinct 5595)
+   closed under the stabilisers: True ; orbits: 2667 ; stabiliser orders of the matchings carrying triples: [(1, 85), (2, 36), (4, 9), (6, 1), (8, 1), (72, 1)]
+   canonical forms under Aut(B) (mine): 2667
+   verifier V files: 5595 triples, 2667 canonical forms; identical multisets of canonical forms (mine vs V): True
