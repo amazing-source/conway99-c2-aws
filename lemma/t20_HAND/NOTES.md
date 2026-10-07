@@ -193,7 +193,11 @@ u = k v - sum m_O f_O is in L* and
 **So N(k, m) is 0 or >= 10. A pair (k, m) with 1 <= N(k, m) <= 9 is an exact certificate of impossibility.** N(k, m) only involves
 the Gram of the orbits in the support of m: it can be evaluated on any sigma-invariant determined set Y. k and 7 - k give the same
 cosets (7v is in L): k = 1, 2, 3 suffice. Positive semidefiniteness alone gives N(k, m) >= 0. The values 1..9 are what is new
-(k = 1: N = 3; k = 2: N = 5; k = 3: N = 6, the only residues possible). It uses the three earlier lemmas as black boxes.
+(k = 1: N = 3; k = 2: N = 5; k = 3: N = 6, the only residues possible).
+
+**Dependency (remark of Codex, 07/10; checked).** The only forbidden values that can occur, 3, 5 and 6, are all <= 7. So the
+rule needs only the old bound min L* >= 8/7 (AUDIT_NORME1), **not** the 04/10 lemma and **not** T18. A rejection by this rule
+does not make T20 depend on T18.
 
 With m = 1_I on support orbits and +1 on outside orbits w (representatives), and s_I(w) = |{i in I : w ~ x_i}| - |{i in I : w ~ y_i}|:
 
