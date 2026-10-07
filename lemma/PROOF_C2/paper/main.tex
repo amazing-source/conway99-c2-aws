@@ -80,10 +80,11 @@ character theory that $|G|$ divides $2\cdot3^3\cdot7\cdot11$; if $|G|$ is even i
 Lam \cite{B09,BL} showed, by a computer enumeration of orbit matrices, that the only primes that can divide $|G|$ are $2$
 and $3$, and that an automorphism of order $3$ has no fixed point. Crnkovi\'c and Maksimovi\'c \cite{CM} excluded, also by
 computer, groups of automorphisms of order $6$ and $9$. Cesarz and Woldar \cite{CW} proved without a computer that
-$G\cong\Z_7$ if $7$ divides $|G|$, and consequently that $|G|$ divides $6$ if it is even. Together these results left
-$|G|\in\{1,2,3\}$. Two manuscripts of the present project treat odd orders: order $3$ is excluded in \cite{D3} by linear
-algebra over $\Z$ and the Eisenstein integers, and \cite{D7} gives a computer-free proof for order $7$, completing
-\cite{CW}; both come with a formalisation in Lean~4. This paper treats order $2$.
+$G\cong\Z_7$ if $7$ divides $|G|$, and consequently that $|G|$ divides $6$ if it is even; this does not exclude an
+automorphism of order $7$, which remained open without a computer. Together these results left $|G|\in\{1,2,3\}$. Two
+manuscripts of the present project treat odd orders: order $3$ is excluded in \cite{D3} by linear algebra over $\Z$ and the
+Eisenstein integers, and order $7$ is excluded without a computer in \cite{D7}, starting from the orbit structure and the
+counting identities of \cite{CW}; both come with a formalisation in Lean~4. This paper treats order $2$.
 
 \begin{theorem}\label{thm:main}
 A strongly regular graph with parameters $(99,14,1,2)$ has no automorphism of order $2$.
@@ -99,7 +100,7 @@ A strongly regular graph with parameters $(99,14,1,2)$, if it exists, has no non
 \begin{proof}
 A nontrivial finite group has an element of prime order $p$, and $p\in\{2,3,7,11\}$ by \cite{MM}. Order $2$ is excluded by
 Theorem~\ref{thm:main}, order $3$ by \cite{D3}, and orders $7$ and $11$ by the computation of \cite{BL} (order $7$ also
-without a computer, by \cite{CW} and \cite{D7}).
+without a computer, by \cite{D7}).
 \end{proof}
 
 \subsection*{Outline}

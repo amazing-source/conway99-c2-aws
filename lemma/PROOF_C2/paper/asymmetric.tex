@@ -79,8 +79,9 @@ further checkers) reports success on 23 September 2026, at commit \texttt{874903
 Lean file. For this note the statement file and the description were read; the formalisation was not rebuilt. Not refereed. Independently, the case of an automorphism of order $3$ with fixed points
 is excluded by computer in \cite{B09,BL11}.
 \item \emph{No automorphism of order $7$.} Behbahani and Lam \cite{B09,BL11}, by a computer enumeration of orbit matrices;
-published. Without computer: Cesarz and Woldar \cite{CW25} prove that $G\cong\Z_7$ if $7$ divides $|G|$ (published), and
-the manuscript \cite{D7} excludes the remaining cyclic case by hand. \cite{D7} is formalised in Lean~4 with Mathlib
+published. Without a computer the case was open: Cesarz and Woldar \cite{CW25} prove that $G\cong\Z_7$ if $7$ divides $|G|$
+(published), which does not exclude an automorphism of order $7$. The manuscript \cite{D7} excludes it by hand, starting
+from the orbit structure and the counting identities of \cite{CW25}. \cite{D7} is formalised in Lean~4 with Mathlib
 (\texttt{theorem srg99\_no\_orderOf\_seven}, same form as above with $7$; no \texttt{sorry}, the same three axioms,
 \texttt{lake comparator}; verification workflow successful on 2 October 2026 at commit \texttt{8c6ce690}, no Lean file
 changed since; read, not rebuilt, for this note). Not refereed.
@@ -98,7 +99,7 @@ $p\ne2,3,7,11$ & \cite{MM04} & characters, by hand & no & published\\
 $2$ & \cite{C2} & by hand, then computer-assisted & no & manuscript\\
 $3$ & \cite{D3} & by hand & Lean 4 & manuscript\\
 $7$ & \cite{BL11} & computer & no & published\\
-    & \cite{CW25} and \cite{D7} & by hand & Lean 4 (\cite{D7}) & published; manuscript\\
+    & \cite{D7}, using \cite{CW25} & by hand & Lean 4 & manuscript\\
 $11$ & \cite{BL11} & computer & no & published\\
 \bottomrule
 \end{tabular}
