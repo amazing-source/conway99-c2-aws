@@ -1,0 +1,12 @@
+e5_III1 engine eng5 | parts: 8 | time-out in some part: False
+   tasks at depth 3: [21165] (must be equal in all parts); done: 21165
+   sha1 of the ordered task list, per part: ['d4b623806eba02c20e59d66883d65ee567a200a5']
+   visited          [1, 13, 208, 2156, 21165, 132172, 492124, 764789, 211921, 4315, 0, 0, 0]   total 1628864
+   candidates       [13, 212, 2939, 46605, 610429, 5386769, 25315888, 36337095, 8134160, 115296, 0, 0, 0]   total 75949406
+   rejected_budget  [0, 0, 453, 6631, 112662, 1068846, 5747479, 8759108, 1763545, 28423, 0, 0, 0]   total 17487147
+   rejected_psd     [0, 4, 330, 18809, 365595, 3825799, 18803620, 27366066, 6366300, 86872, 0, 0, 0]   total 56833395
+   kept             [13, 208, 2156, 21165, 132172, 492124, 764789, 211921, 4315, 1, 0, 0, 0]   total 1628864
+   rejected_rank    [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]   total 1
+   complete configurations: 0
+   stats summed over the parts: {'single_budget': 4432, 'psd_reject_M1even': 12927020, 'single_psd': 608, 'psd_reject_M1odd': 42630082, 'pair_budget': 30970387, 'no_pattern': 63466799, 'psd_reject_M2even': 1278195, 'psd_
+   seconds per part: [5266, 5289, 5335, 5466, 5208, 5042, 4882, 5140]
