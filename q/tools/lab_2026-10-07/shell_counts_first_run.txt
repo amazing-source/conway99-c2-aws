@@ -1,0 +1,26 @@
+First shell-count table, measures/SHELL_COUNTS_2026-10-07.json: the inline command that wrote it (lab PC, 2026-10-07 13:37 UTC,
+recovered from the session transcript; run several times, it resumes). It made check d (the theta identity, with N3 == 4096) and
+the exact norm of the X4 vectors only: no check of the basis, of the norms of R and X3, or of distinctness.
+Superseded by q/tools/lab_2026-10-07/shell_counts.py and measures/SHELL_COUNTS_EXACT_2026-10-07.json (same N2, N3, N4 for all 156).
+
+cd /c/home/researcher/Desktop/c2_experimental && export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMBA_NUM_THREADS=1 && timeout 290 .venv/Scripts/python.exe - <<'PYEOF'
+import sys, json, time, os
+from fractions import Fraction as F
+import numpy as np
+sys.path.insert(0, "c2_cloud_run_v10/scripts")
+import frame_dfs_next as FD
+t0 = time.time(); rows = []; bad = []; out = "data/finishC/sweep/SHELL_COUNTS_2026-10-07.json"
+done = json.load(open(out)) if os.path.exists(out) else {}
+for i in range(156):
+    lid = "%03d" % i
+    if lid in done: continue
+    if time.time() - t0 > 250: break
+    gens = json.load(open("external_runs/structures_3eceb4d/U/%s.json" % lid))["gens"]
+    try: L = FD.lattice_data(gens, F(1))
+    except AssertionError as e: done[lid] = {"error": str(e)[:80]}; continue
+    G = np.asarray(L["G"], dtype=np.int64)
+    n2, n3, n4 = 2 * len(L["R"]), 2 * len(L["X3"]), 2 * len(L["X4"])
+    exact4 = bool((np.einsum("ij,jk,ik->i", np.asarray(L["X4"], dtype=np.int64), G, np.asarray(L["X4"], dtype=np.int64)) == 4).all()) if n4 else True
+    done[lid] = {"N2": n2, "N3": n3, "N4": n4, "expected_N4": 196560 - 24 * (n2 + n3), "ok": n3 == 4096 and n4 == 196560 - 24 * (n2 + n3) and exact4, "shadow_pairs": int(len(L["S2"])), "rigid": bool(L["rigid"])}
+json.dump(done, open(out, "w"), indent=0)
+PYEOF
