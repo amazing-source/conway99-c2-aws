@@ -61,8 +61,9 @@ Excluded in the tracker: 143. Open: 13.
 - 105: its 6,310 "pair budget" pairs are now excluded without a solver (H4 closed, 14:45);
 - 143 rested on one lattice-level test that nobody had reviewed. It now has a two-line hand proof
   (`lemma/upstream/LATTICE_143.md`: (R-ii), (R-v) and the table of its 4096 vectors of norm 3; at most 28 of the 42 u fit in the
-  a_8 budget, the 14 others exceed the budget of the line orthogonal to the roots, 63/8 > 7), re-run by the laptop session;
-  referee pass asked of Codex. The v10 run of 143 was stopped (15:18), nothing of it is imported;
+  a_8 budget, the 14 others exceed the budget of the line orthogonal to the roots, 63/8 > 7), re-run by the laptop session and
+  **refereed by Codex: accepted** (`lemma/t20_CODEX/REFEREE_143_PROOF.md`; its exact glue check proves the table without any
+  enumerator). The v10 run of 143 was stopped (15:18), nothing of it is imported;
 - 153 had one argument reviewed by its author's side only; it now has a second proof (A.9: U is indecomposable), refereed.
 
 | Method recorded in the tracker | Lattices | Recount on 07/10 |
@@ -77,7 +78,7 @@ Excluded in the tracker: 143. Open: 13.
 | Criterion (E) AND packing (117, 134, 142) | 3 | two methods each |
 | "Sol 0836" AND packing (145, 146, 151, 152, 155) | 5 | two methods each; 152 also by A.9 |
 | "Sol 0836" only (153) | 1 | second proof by A.9 |
-| Component budget (143) | 1 | new hand proof of 07/10 (`LATTICE_143.md`), table by two programs and a hand cross-check; Codex's referee pass pending |
+| Component budget (143) | 1 | hand proof of 07/10 (`LATTICE_143.md`), table by an exact glue description and two programs; refereed by Codex: accepted |
 
 Twin deferrals: 1,622 dependencies between the 104 stream lattices, no cycle (OK-RECOMPUTED).
 
@@ -103,7 +104,7 @@ is; not a certified archive). The user decided on 07/10 not to re-run the lab-lo
 
 1. ~~T20: archival G1~~ done at 15:26 per the laptop session (`lemma/ARTIFACTS_T18_T20.md`: one line per computation of T16 / T18 / T20, program versions, run branches; raw outputs of n_3 = 2 on the branch `lemma-archive/t20_n3_routeB`). Not reviewed by me or by Codex; the page says itself that the machines did not record the commit they cloned (versions inferred from launch times). Left in the text of T20: G2 (wording of the verifier contract).
 2. Rigid-kernel audit H2: 003, representatives 2, 3, 180 (running), with every exposed pair excluded again.
-3. 143: Codex's referee pass on `LATTICE_143.md`.
+3. ~~143~~ done: hand proof refereed by Codex (accepted).
 4. The two last stream certificates (003:162:182, 006:224:228). Done: 7,760 of 7,762.
 5. ~~003:181:182~~ done at 15:00 without computation (Corollary Y1 and its certificates).
 6. Pair enumeration (R3): 140, 135 and 141 equal (per the laptop session); 064, the one whose roots do not span (a_5^4,
