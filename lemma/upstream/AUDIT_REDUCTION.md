@@ -166,7 +166,49 @@ each checked to preserve U. Using a subgroup of Aut(U) is always sound. To state
 `y_pairs_gamma.py` was compared with an independent enumeration, and the result; (2) how the lattices whose roots do not span
 (ids 000 to about 016, Golay routes) are enumerated and why that is complete; (3) the swap rule.
 
-_To be filled._
+**Filled by LAB on 07/10 (sources read: `c1/code/y_pairs.py`, `y_pairs_gamma.py`, `y2_engine.py` of package v10; lab notes 49, 51, 56;
+the lab tracker). Status words: OK-REREAD = reread by me today; SOURCE-ONLY = the source exists, not reread; OPEN = not done.**
+
+**(0) The producer's filters follow from Theorem R, and nothing uses g** (OK-REREAD, the statements only). `y_pairs.py` keeps a pair iff:
+roots: |(alpha,y)| <= 2 and (alpha,y_1)^2 + (alpha,y_2)^2 in {0,1,2,4,5}; new roots: |(beta,y)| <= 3/2, never both 3/2; norm 3:
+|(v,y)| <= 3, never both 3; (y_1,y_2) = 0; and "the exact trap min (y-perp cap U)^* >= 8/7". All are instances of (R-vi) E(v) >= 8
+(E = 14 - Y >= 8 for a root gives Y <= 6, and 3, 6 are not sums of two squares; E = 21 - Y >= 8 for norm 3 gives Y <= 13) and of A.8
+(new roots; y_1, y_2 are among the 51 vectors of (F)). **No file of the engine or of the producer uses the value of g, the index
+[Nmax : N] or the determinant 49** (searched in `frame_dfs_next.py`, `hstage_stream_next.py`, `twin_transfer.py`,
+`golay_pairs_job.py`, `y_pairs.py`, `y_pairs_gamma.py`, `y2_engine.py`, `envelope_trap.py`). The only arithmetic mod 7 is in
+`twin_transfer.py`: the twin envelope is the other gluing of U cap {y_1,y_2}^perp with the plane, x -> x + ((c-a) y_1 + (d-b) y_2)/7
+with (c,d) = R(a,b) mod 7, R = [[2,2],[-2,2]]; it uses only the discriminant group of 7 I_2.
+
+**(1) Comparison with an independent enumeration: NOT DONE for the stream producer (OPEN).**
+- What exists: the lab's own enumerator `scripts/ypairs_c2.py` (second reader of C1's `y_pairs`; reduction by W(R) only, own simple
+  roots, own Fincke-Pohst). It was started on 087 on 27/09 and never completed (its output file is truncated); the double-reading
+  protocol (b) of lab note 49 was then deferred by the "sweep-first" decision of 27/09 and never resumed. The tracker says so for 087,
+  115 and 132 ("pending: independent pair enumeration").
+- What was checked instead: every Gamma matrix is verified at load (Gram preserved, simple roots permuted), after the incident of
+  27/09 (LLL bases differ between machines: note 51 section 6); the union of the chunks is the single-run list; every pair is checked
+  in U exactly by the consumer, and its norms and orthogonality by the engine's pair set-up (and now by the certificates).
+- Golay family: two implementations agree on 001 (structures' pipeline and the lab's `golay_gen.py`: identical admissible y set,
+  identical 14 y_1 classes, identical pair-class counts), per the header of `golay_pairs_job.py`; not re-run today.
+- **Proposal to close this point cheaply:** run `ypairs_c2.py` to the end on two or three small lattices (140: 288 pairs, 141: 319,
+  135: 464) and check that every W(R)-dominant pair it finds is Gamma-equivalent to a listed pair, and that the orbit counts agree.
+  I try the smallest one on the lab PC (a few minutes); if it is longer it goes to a free machine.
+
+**(2) Lattices whose roots do not span.** SOURCE-ONLY for the argument; what the code does:
+- 000 (no root): 141 classes of pairs from C1 (`o24_ypairs.json`), treated class by class (86 by LP certificates, 55 searched).
+- 001, 002, 004, 010 (roots a_1^k, Golay frame): pair lists generated in the A_1^24 Golay frame (`golay_gen.py`), reduced by the
+  frame's group and the swap filter; blocks of pairs.
+- every other lattice, spanning or not, goes through the same producer: y is split into its weight part on each root component
+  (dominant labels of level <= 2, a DP over the glue classes) and a part in span(R)^perp cap U enumerated by a shifted Fincke-Pohst
+  with exact integer checks (`y2_engine.py`: "rootless part by a small shifted enumeration"; the producer's information line gives
+  the rank, e.g. 14 for 003 and 18 for 006). Gamma is then a group of matrices verified to preserve the Gram matrix and the roots:
+  a subgroup of Aut(U), which is sound.
+
+**(3) Swap rule** (`hstage_stream_next.py`, FD_SWAP): the frame conditions are symmetric in (y_1, y_2), and the enumeration lists both
+orders (y_2 runs over all admissible vectors for each y_1 representative). An Aut(U)-invariant I(y) is computed (sum of
+(alpha,y)^2 over the roots, and the sorted pair of the numbers of new roots hit at 3/2 in the two shadow cosets); a pair with
+I(y_1) > I(y_2) is SWAP-COVERED: the swapped pair appears as a pair of the y_1-orbit of y_2 and is treated there; pairs with
+I(y_1) <= I(y_2) are treated. Sound because I is invariant under Aut(U) (the sort handles automorphisms exchanging the two cosets).
+Status: statement and code OK-REREAD on 04/10 with the twin rules; the proof text is Astra's (28/09), SOURCE-ONLY.
 
 ## D. The 156 Gram matrices are the 156 lattices (owner: LAB)
 
@@ -174,7 +216,22 @@ _To be filled._
 invariants separate the 156 (in particular the pairs with the same root system: 023/027, 056/058, 120/121), and whether the mass
 check was done (sum of 1/|Aut| against SPLAG Table 17.1).
 
-_To be filled._
+**Filled by LAB on 07/10** (recomputation of 04/10: `scripts/analysis/audit_L1_lattices.py`, `audit_L1_neighbours.py` in the lab;
+log in `work/AUDIT_156_PLAN_2026-10-04.md` of the research workspace).
+
+- **How built:** each lattice is given by generators, rational vectors of R^24 with the standard inner product
+  (`external_runs/structures_3eceb4d/U/000..155.json`, from the "structures" project). The construction itself is SOURCE-ONLY and is
+  not needed: what matters is checked on the data.
+- **Recomputed for all 156 (OK-RECOMPUTED):** exact integer determinant 1; odd; no vector of norm 1; the root system recomputed from
+  the vectors of norm 2 (components, type from rank and number of roots) equals the label of Borcherds' table, with the same number
+  of roots.
+- **Separation of the 156:** the root system separates all but seven pairs: 016/017, 023/027, 056/058, 077/079, 082/085, 120/121,
+  145/146. For these the two even neighbours (the Niemeier lattices U_0 + each coset of the shadow, recomputed from the data) differ.
+  So the 156 data lattices are pairwise non-isometric, and by Borcherds' count they are all the classes.
+- One erratum found in the table used for the labels (not in the data): lattice 150 has neighbours E_8^3 / D_10 E_7^2, not
+  D_10 E_7^2 / D_16 E_8. No consequence (150 is excluded by packing, computed on the data lattice).
+- **Mass check: NOT done** (the orders of the automorphism groups are not computed in the lab). It is not needed for the argument
+  above; it would be an independent check of the count 156 itself, which is cited.
 
 ## E. Provenance of the exclusions made before v10 (owner: LAB)
 
@@ -182,7 +239,27 @@ _To be filled._
 theta theorems "to be reverified", whole-class LP certificates for 000). One line per method: what it rests on, and whether a
 lattice depends on a method that is not reread. The user decided on 07/10 not to re-run the lab-local lattices now (board D6).
 
-_To be filled._
+**Filled by LAB on 07/10** (lab tracker `finishC_tracker.json`, field "by"; recount of today in `lemma/FINAL_STATEMENT_DRAFT.md`
+section 4 and board line D6). 143 lattices are excluded in the lab tracker; the 13 others are the deferral sweep.
+
+| Method | Lattices | Rests on | Reread / recounted |
+|---|---|---|---|
+| Stream sweep: producer + consumer on all pairs | 91 | section C; the engine rules (section B) | coverage recounted today from the stored records (212,825,691 pairs, complete). Engines of the covering records: v1 (b48cf844) 570 records, v2-v4 (41fbcbff) 1,269, v5-v9 (267d2bb5) 44, v10 (1591aeea) 475; 55 lattices need lab-local records of 28-29/09 (26 without a recorded code version) |
+| h-stage sweep on C1's pair lists, 28-29/09 | 13 (044, 072, 096, 097, 105, 106, 108, 116, 119, 120, 121, 127, 130) | C1's Gamma-reduced pair lists; the lab's frame_dfs of that date | lab-local; not recounted |
+| frame_dfs with Lemma U+ on the Gamma-reduced pairs, 27/09 | 14 (087, 111, 122-126, 131, 135, 137-141) | the same | lab-local; 124, 126 also done by "structures" with an independent h-stage; not recounted |
+| Three h-stage readings on C1's pairs | 2 (115, 132) | C1 h-check, "structures" frame LP with certificates, lab frame_dfs | "pending: independent pair enumeration" in the tracker |
+| 000: 141 classes | 1 | 86 whole-class LP certificates (structures, verified twice per the tracker) + 55 classes searched EMPTY | set arithmetic recounted today; certificates and searches not re-run |
+| Golay pair blocks | 2 (004, 010) | package v4 / v5 engines | recounted today (416,383 and 3,962 pairs) |
+| Packing (C1 `envelope_pack.py`) | 10 (094, 128, 129, 133, 136, 144, 147, 148, 150, 154) | new-root packing bound | "run + argument re-read by C2" (27-28/09); not reread today |
+| Criterion (E) of C1 notes/139, AND packing | 3 (117, 134, 142) | two methods each; (E) for 117 "depends on Sol's theta theorems" | packing reread as above |
+| "Sol 0836" (D_8^3, D >= 12, E_8), AND packing | 5 (145, 146, 151, 152, 155) | two methods each | "re-read C1 notes/139" + packing |
+| **"Sol 0836" D >= 12 only** | **1 (153, d_12^2)** | Sol's argument, reread by C1 (notes/139 s.3) | **rests on this single argument; never reread in the lab** |
+| **Component-budget test only** | **1 (143, a_15 a_8)** | lab test at lattice level ("MILP + exact integer enumeration agree", 28/09) | **single method, single author (the lab), "reviewed_by" empty** |
+
+**Lattices resting on one method that nobody outside its author reread: 153 and 143.** Both are large root systems where the
+packing bound or a pair sweep would be cheap: the simplest repair is to run the v10 producer and engine on them (they are not in
+the v10 job list), or to check whether the packing bound also applies. The 84 lab-local lattices (rows 1-3) are the other weak
+point; the user decided on 07/10 not to re-run them now.
 
 ## F. External theorems the final statement will cite
 
@@ -200,4 +277,4 @@ _To be filled._
 |---|---|---|
 | A, F | LAP | done 07/10; to be refereed once by CDX (statement R and A.4 first) |
 | B | CDX | open |
-| C, D, E | LAB | open |
+| C, D, E | LAB | filled 07/10; open points: C (1) independent enumeration never completed (a small check is being tried), E: lattices 153 and 143 rest on a single unreread method |
