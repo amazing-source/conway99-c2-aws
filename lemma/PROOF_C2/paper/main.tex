@@ -68,9 +68,10 @@ hence inside one of the $156$ lattices of Borcherds' classification. The second 
 of the $156$ lattices contains such a frame. Twenty lattices are excluded by short arguments on the lattice itself. For the
 $136$ others, the pairs of vectors of norm $7$ that could be the two normals of the frame are enumerated up to symmetry and
 excluded one by one: by a short vector whose existence contradicts one of three nonexistence lemmas for integer eigenfunctions
-of small norm, with an exact certificate for each pair, or by an exhaustive search for the frame. We state which steps were
-verified by independent programs and which rest on a single audited program. All programs, records and certificates are
-available in the repository of the paper. Together with the known exclusions of the odd prime orders, the theorem implies that a strongly regular graph with
+of small norm, with an exact certificate for each pair, by transfer to another lattice of the list, or by an exhaustive search for the frame. We state which steps were
+verified by independent programs and which rest on a single audited program. This draft records the state of that computation: one validation, the recertification of a part of the transfers
+(Section~\ref{sec:verif}), remains to be completed. The programs, run summaries and certificates are kept in the
+accompanying repository, private at the time of writing. Together with the known exclusions of the odd prime orders, the theorem implies that a strongly regular graph with
 parameters $(99,14,1,2)$, if it exists, has no nontrivial automorphism; that consequence and its dependencies are the
 subject of a separate note.
 \end{abstract}
@@ -87,14 +88,12 @@ exclude it. A graph with these parameters is now usually called a \emph{Conway $
 recounts how the question arose, half a century ago, and how it came to carry a prize. Among the parameter sets $(v,k,1,2)$,
 Makhnev and Minakova \cite{MM} showed that only five values of $k$ are possible, namely $k=u^2+u+2$ for $u=1,3,4,10,31$. The
 first and the third are realised, by the $3\times3$ rook's graph and by a graph on $243$ vertices built from the ternary
-Golay code; our case is $u=3$, and for it, as for $u=10$ and $u=31$, no graph is known. Wilbrink \cite{W84} made the first
-study of the graph on $99$ vertices. For strongly regular graphs in general we refer to \cite{BvM,GR}.
+Golay code; our case is $u=3$, and for it, as for $u=10$ and $u=31$, no graph is known. An early structural study of the graph on $99$ vertices is due to Wilbrink \cite{W84}. For strongly regular graphs in general we refer to \cite{BvM,GR}.
 
 Most of what is known concerns the automorphism group $G$ of such a graph $\G$. Makhnev and Minakova \cite{MM} proved by
 character theory that $|G|$ divides $2\cdot3^3\cdot7\cdot11$; if $|G|$ is even it divides $42$ \cite{MM,Mak}. Behbahani and
 Lam \cite{B09,BL} showed, by a computer enumeration of orbit matrices, that the only primes that can divide $|G|$ are $2$
-and $3$, and that an automorphism of order $3$ has no fixed point. Crnkovi\'c and Maksimovi\'c \cite{CM} excluded, also by
-computer, groups of automorphisms of order $6$ and $9$. Cesarz and Woldar \cite{CW} proved without a computer that
+and $3$, and that an automorphism of order $3$ has no fixed point. Crnkovi\'c and Maksimovi\'c \cite[Theorems~7.2 and~7.3]{CM} excluded, also by computer, groups of automorphisms of order $6$ and $9$. Cesarz and Woldar \cite[Corollaries~3.13 and~4.15]{CW} proved without a computer that
 $G\cong\Z_7$ if $7$ divides $|G|$, and consequently that $|G|$ divides $6$ if it is even; this does not exclude an
 automorphism of order $7$, which remained open without a computer. Together these results left $|G|\in\{1,2,3\}$. Two
 manuscripts of the present project treat odd orders: order $3$ is excluded in \cite{D3} by linear algebra over $\Z$ and the
@@ -151,7 +150,7 @@ text, and the consistency checks and independent recomputations are listed with 
 \node[box] (d) at (0,-4.35) {the lattice $N$ of the frame:\\ discriminant form over $\F_7$, $\min N^*\ge 8/7$};
 \node[box] (e) at (0,-6.1) {a frame of $51$ vectors in an odd unimodular lattice $U$\\ of rank $24$ without vectors of norm
 $1$: one of $156$ lattices};
-\node[half] (f) at (-2.1,-8.0) {$20$ lattices:\\ arguments on the lattice};
+\node[half] (f) at (-2.1,-8.0) {$20$ lattices: no enumeration of pairs of normals};
 \node[half] (g) at (2.1,-8.0) {$136$ lattices: the pairs of normals $(y_1,y_2)$};
 \node[half] (h) at (2.1,-9.75) {each pair excluded: short vector, search or transfer};
 \node[box] (z) at (0,-11.4) {no frame in any of the $156$ lattices: contradiction};
@@ -167,7 +166,7 @@ $1$: one of $156$ lattices};
 \draw[->] (h.south) -- (h.south |- z.north);
 \draw[->, dashed] (t.south) |- (h.east);
 \end{tikzpicture}
-\caption{The chain of the proof. The left column is proved by hand in Sections~\ref{sec:fix}--\ref{sec:env}; the exclusion
+\caption{The chain of the proof. The upper chain, through Theorem~\ref{thm:R}, is proved by hand in Sections~\ref{sec:fix}--\ref{sec:env}; the exclusion
 of the $156$ lattices (Section~\ref{sec:lattices}) and the lemmas of Theorem~\ref{thm:T} are computer-assisted.}\label{fig:chain}
 \end{figure}
 
@@ -180,8 +179,12 @@ A^2+A-12I=2J .
 \end{equation}
 Since $\lambda=1$, the neighbourhood $N(x)$ induces seven disjoint edges, which we call the \emph{blocks} at $x$; every edge
 lies in exactly one triangle. A \emph{lattice} is a free $\Z$-module of finite rank with a positive definite rational
-symmetric bilinear form $(\ ,\ )$; the \emph{norm} of $v$ is $(v,v)$; $L^*$ denotes the dual lattice. A \emph{root} is a vector
-of norm $2$.
+symmetric bilinear form $(\ ,\ )$; the \emph{norm} of $v$ is $(v,v)$; $L^*$ denotes the dual lattice. A \emph{root} is a vector of norm $2$; thus ``norm'' always means squared length. A lattice $L$ is \emph{integral} if
+$(x,y)\in\Z$ for all $x,y\in L$, that is $L\subseteq L^*$; it is \emph{unimodular} if $L=L^*$, \emph{even} if it is integral
+with all norms even, and \emph{odd} if it is integral and not even. A sublattice $M$ of $L$ is \emph{primitive} if $L/M$ has
+no torsion. For an integral lattice $L$ the finite group $L^*/L$ is its \emph{discriminant group}; it carries the
+\emph{discriminant bilinear form} $(x+L,y+L)\mapsto(x,y)\bmod\Z$. All discriminant forms in this paper are bilinear forms
+modulo $\Z$ on vector spaces over $\F_7$, which we identify with $\F_7$-valued forms after multiplication by $7$.
 
 \section{An involution fixes exactly one vertex}\label{sec:fix}
 
@@ -315,8 +318,9 @@ and since $(3e_c;\,C_c^{t})$ is an eigenvector of $S$ for the eigenvalue $3$ by 
 \section{The lattice of the frame}\label{sec:lattice}
 
 Let $N$ be the lattice generated by the $49$ vectors $u_i$, let $K=\Z^{49}\cap V$ be the lattice of integer
-$(-4)$-eigenvectors of $S$, and $K'$ the lattice of integer $3$-eigenvectors. As $K$ is primitive in $\Z^{49}$, its dual is
-the projection of $\Z^{49}$ on $V$, that is $K^*=H\Z^{49}/7$. Hence
+$(-4)$-eigenvectors of $S$, and $K'$ the lattice of integer $3$-eigenvectors. As $K$ is primitive in $\Z^{49}$, its dual is the projection of $\Z^{49}$ on $V$, that is $K^*=H\Z^{49}/7$: an
+integer-valued linear form on $K$ extends to $\Z^{49}$ because $\Z^{49}/K$ is free, it is the product with an integer
+vector because $\Z^{49}$ is unimodular, and its restriction to $K$ is the product with the projection of that vector. Hence
 \begin{equation}\label{eq:NK}
 N=\sqrt7\,K^*,\qquad N^*=K/\sqrt7 ,
 \end{equation}
@@ -341,7 +345,8 @@ An outer row sum is $r_o=c_o+10-2m_o$, where $c_o\in\{0,2\}$ is the column sum o
 the row of $T$; since $\sum_o c_o/2=21$ and $\sum_o m_o$ is even, the number of outer rows with $r_o\equiv 2\pmod 4$ is odd.
 Hence $588\equiv 7+4+s\pmod 8$, so $s\equiv 1$ and $(c,c)\equiv 6\pmod 8$ in $\Z_2$.
 
-Write the $7$-adic Jordan decomposition of $K$ as $1^{\varepsilon_0(22-g)}\,7^{\varepsilon g}$. The oddity formula
+Write the $7$-adic Jordan decomposition of $K$ as $1^{\varepsilon_0(22-g)}\,7^{\varepsilon g}$, where the signs
+$\varepsilon_0,\varepsilon\in\{\pm1\}$ are the Legendre symbols modulo $7$ of the determinants of the two constituents. The oddity formula
 \cite[Ch.~15]{SPLAG} (the signature plus the sum of the $p$-excesses is congruent to the oddity modulo $8$) reads
 $22+6g+4[\varepsilon=-1]\equiv 6\pmod 8$. Hence $g$ is even and $\varepsilon=(-1)^{g/2}$; as $\det K=7^g$ exactly,
 $\varepsilon_0=\varepsilon$. By \eqref{eq:NK} the discriminant form of $N$ is the form of the unimodular constituent of $K$:
@@ -401,9 +406,9 @@ has $(w,w)\ge 8/7$.
 \begin{proof}
 Let $N_{\max}$ be as in Proposition~\ref{prop:witt} and $\Pl=\Z r_1+\Z r_2$ with $(r_a,r_b)=7\delta_{ab}$. The discriminant
 form of $\Pl$ is the anisotropic plane over $\F_7$, because $-1$ is not a square modulo $7$. Nondegenerate forms over $\F_7$
-are classified by dimension and determinant \cite[Ch.~IV, \S1.7]{Serre}, and an anisotropic plane and its negative both have square determinant; so the
-discriminant forms of $N_{\max}$ and $\Pl$ are anti-isometric. Gluing along the graph of an anti-isometry \cite[\S1]{Nik}, \cite[Ch.~4, \S3]{SPLAG} gives an integral
-lattice $U$ containing $N_{\max}\oplus\Pl$ with index $49$, of rank $24$ and determinant $49\cdot49/49^2=1$, in which
+are classified by dimension and determinant ($7$ being odd; \cite[Ch.~IV, \S1.7]{Serre}), and an anisotropic plane and its negative both have square determinant; so the
+discriminant forms of $N_{\max}$ and $\Pl$ are anti-isometric. Gluing along the graph of an anti-isometry \cite[\S1]{Nik}, \cite[Ch.~4, \S3]{SPLAG} (for the discriminant bilinear forms modulo $\Z$; the lattices here are odd, and no quadratic form modulo $2\Z$ is
+involved) gives an integral lattice $U$ containing $N_{\max}\oplus\Pl$ with index $49$, of rank $24$ and determinant $49\cdot49/49^2=1$, in which
 $N_{\max}$ and $\Pl$ are primitive; $U$ is odd since it contains vectors of norm $3$. Put $y_a=r_a$. Properties (R1)--(R4)
 are those of Section~\ref{sec:frame}, (R5) is \eqref{eq:tight} together with the orthogonal basis $y_1,y_2$ of $V^\perp$, and
 (R8) is Proposition~\ref{prop:87}.
@@ -458,8 +463,8 @@ $y_1,y_2$; but a unimodular lattice of rank $1$ or $2$ contains a vector of norm
 Let $U$ be an odd unimodular lattice of rank $24$ and $U_0$ its sublattice of vectors of even norm. The quotient
 $U_0^*/U_0$ has four classes: $U_0$, $U\setminus U_0$ and two classes $S_1$, $S_2$, whose union is the \emph{shadow}
 $\{z/2: z \text{ characteristic}\}$ of $U$. The vectors of norm $2$ of the shadow are the \emph{new roots} of $U$: they are the
-roots of the even unimodular lattices $U_0\cup S_j$ that are not in $U$. (For the shadow and its properties see
-\cite{CS90}.)
+roots of the even unimodular lattices $U_0\cup S_j$ that are not in $U$. (The shadow and these four classes are described in \cite[\S2]{CS90}; in rank $24$ both $U_0\cup S_1$ and
+$U_0\cup S_2$ are even unimodular lattices, the two \emph{even neighbours} of $U$ \cite{Bor}.)
 \end{definition}
 
 \begin{lemma}\label{lem:newroots}
@@ -537,8 +542,8 @@ $9$, $10$ are, up to $\Z y_1+\Z y_2$, exactly the following \emph{witnesses}:
 \end{itemize}
 In the same way a vector of energy at most $7$ outside $\Z y_1+\Z y_2$ has a representative of norm $2$ or $3$. So (R6) and
 Corollary~\ref{cor:E11} are finite tests on the vectors of norm $2$, $3$, $4$ of $U$: a pair $(y_1,y_2)$ with a witness is
-the pair of normals of no frame, and exhibiting the witness proves it. The numbers of vectors of these norms satisfy
-$N_4=196560-24N_2-24N_3$, and $N_3=4096$ \cite{CS90}; the first identity is used to certify that the lists are complete.
+the pair of normals of no frame, and exhibiting the witness proves it. The numbers of vectors of these norms satisfy $N_4=196560-24N_2-24N_3$, and $N_3=4096$ (the specialisation to rank $24$ of the expansions of the theta series
+of a unimodular lattice and of its shadow, \cite[\S2]{CS90}); the first identity is used to certify that the lists are complete.
 
 \begin{corollary}\label{cor:Y1}
 Let $U$ contain a frame. Then every root $r$ of $U$ has $|(r,y_1)|\le1$ and $|(r,y_2)|\le1$. In particular, if $U$ has a root
@@ -566,7 +571,7 @@ hence all of them by \cite{Bor}.
 % lemma/t20_CODEX/EXACT_LATTICE_IDENTITY.md (on master since bd4e1f021; summary read: all_156_exact_input_checks_passed
 % true, pairwise_nonisometric true, 7 pairs with equal root types, 156 records).
 
-\subsection{Twenty lattices excluded without enumeration}
+\subsection{Twenty lattices excluded without enumerating pairs of normals}
 
 \begin{proposition}[Packing]\label{prop:pack}
 Let $U$ contain a frame, let $j\in\{1,2\}$ and let $R_j$ be the set of new roots in the class $S_j$. For a vector $x$ of
@@ -682,7 +687,9 @@ Reflections in roots are automorphisms of $U$. So $y_1$ may be taken dominant fo
 and then $y_2$ dominant for the stabiliser of $y_1$ in $W(R)$, which is generated by the simple reflections fixing $y_1$ \cite[\S1.12]{Hum}. The
 dominant vectors are obtained from their projections on the root components (dominant weights with labels at most $2$, by
 the condition on roots, combined according to the glue classes) and from their component in the orthogonal complement of the
-roots, enumerated by a Fincke--Pohst procedure \cite{FP} with exact final tests. The pairs are further reduced by a group of diagram
+roots, enumerated by a Fincke--Pohst procedure \cite{FP} with exact final tests. (The final tests certify the vectors that
+are kept; that none is missed rests on the correctness of the procedure, except for the vectors of norm $2$, $3$, $4$,
+whose lists are certified complete by their counts, Section~\ref{sec:verif}.) The pairs are further reduced by a group of diagram
 automorphisms, each verified to preserve $U$; using a subgroup of the automorphism group is always sound. We call this
 procedure the \emph{main enumeration}; it is used for $102$ lattices. The conditions
 for a frame are symmetric in $y_1,y_2$ and the enumeration contains both orders, so a pair is skipped when $I(y_1)>I(y_2)$,
@@ -743,6 +750,17 @@ their ranks, computed in floating point. Form (a) moreover depends on the order 
 this implies for the proof is discussed in Section~\ref{sec:verif}.
 
 \medskip
+\smallskip\noindent\emph{The logical procedure.} For a lattice $U$ of the list the certification therefore reads as
+follows; this is the logical order, not the order in which the campaign was run. (1) List the pairs of normals
+$(y_1,y_2)$ up to the symmetries of Section~\ref{ssec:enum}. (2) For each pair, look for a vector contradicting (R6),
+Lemma~\ref{lem:char} or Theorem~\ref{thm:T}; if there is one, the pair is excluded and the vector is its witness. (3)
+Otherwise, compute the roots of the twin lattice; if it has more roots than $U$, the pair is excluded by induction, and if
+it is $U$ itself with a smaller key, the pair is replaced by its image (the campaign also used the status form (a) above,
+which is the part discussed in Section~\ref{sec:verif}). (4) Otherwise search for the seven vectors $h_c$ and
+then for the $42$ vectors $u_o$; the pair is excluded if the search ends without a frame. (5) A search stopped by a limit
+excludes nothing. The lattice is excluded when all its pairs are.
+
+\medskip
 The correspondence between these rules and the program, rule by rule, with the derivation of each rule from the properties
 of a frame, is the audit \texttt{lemma/upstream/AUDIT\_ENGINE\_RULES.md} of \cite{repo}.
 
@@ -759,7 +777,8 @@ treatment & lattices & pairs\\
 \midrule
 arguments on the lattice (Propositions~\ref{prop:pack}, \ref{prop:153}, \ref{prop:143}) & $20$ & ---\\
 main enumeration; exclusion at once, by search or by transfer & $91$ & $220{,}260{,}576$\\
-the same, and witnesses (W9), (W10) with certificates & $13$ & $373{,}439{,}131$\\
+the same with witnesses (W9), (W10) and certificates: $11$ lattices of the main enumeration and the lattices $001$,
+$002$, whose pairs are listed by a separate program & $13$ & $373{,}439{,}131$\\
 odd Leech lattice: linear certificates and searches & $1$ & $141$ classes\\
 lattices $004$, $010$: lists of pairs & $2$ & $420{,}345$\\
 lists of pairs (September), then lemmas and a complete second run & $29$ & $6{,}713{,}853$\\
@@ -767,7 +786,8 @@ lists of pairs (September), then lemmas and a complete second run & $29$ & $6{,}
  & $156$ & \\
 \bottomrule
 \end{tabular}
-\caption{The treatment of the $156$ lattices.}\label{tab:methods}
+\caption{The treatment of the $156$ lattices. The main enumeration covers $102$ lattices ($91+11$). For the odd Leech
+lattice the unit is a class of pairs, not a pair.}\label{tab:methods}
 \end{table}
 
 \subsubsection*{$91$ lattices of the main enumeration} For these lattices every pair goes through (i), (iii) or (iv); the
@@ -813,6 +833,30 @@ We follow the principle that a computed step is trusted when an independent prog
 certificate that a simple separate program checks. This section states for each part which of the two holds, and where
 neither does.
 
+Table~\ref{tab:verif} summarises the section.
+
+\begin{table}[ht]
+\centering\footnotesize
+\begin{tabular}{p{27mm}p{43mm}p{35mm}p{38mm}}
+\toprule
+object & how it was checked & coverage & what it still relies on\\
+\midrule
+the $156$ lattices & two programs, the second exact & all & the classification \cite{Bor}\\
+vectors of norm $2,3,4$ & exact check of the lists, and counts & all lattices, final version of the program & earlier
+versions not re-examined\\
+pairs of normals & a second enumerator & $4$ lattices & the program, for the others; reduction by diagram automorphisms\\
+witnesses, Corollary~\ref{cor:Y1} & stored and checked by separate programs & every pair or $y_1$ concerned &
+Theorem~\ref{thm:T}\\
+lemmas $T_{16}$, $T_{18}$, $T_{20}$ & second programs, internal reviews & every computed step & partial independence for
+one configuration of $T_{20}$\\
+searches & written derivation of the rules; second runs & one program & that program\\
+transfers & induction on the number of roots & $32{,}265{,}417$ pairs & $4{,}163{,}099$ pairs not recertified\\
+packing (Table~\ref{tab:pack}) & two programs, the second exact & $18$ lattices & ---\\
+\bottomrule
+\end{tabular}
+\caption{What was checked, how, and what each part of the computation still relies on.}\label{tab:verif}
+\end{table}
+
 \subsection*{The mathematical reduction} Sections~\ref{sec:fix}--\ref{sec:env} are proved in full in this paper. They use two
 cited theorems: the oddity formula and the classification of quadratic forms over $\F_7$.
 
@@ -822,7 +866,7 @@ checked by a separate verifier and were recomputed by an independent program. Fo
 least three programs, one of them written from the text alone. For $T_{20}$ every computed step has a second program; for
 one of the nine configurations the second program shares the description of the model and part of the enumeration skeleton
 with the first, and in the large searches the second program traverses the tree of the first again, with the same choice of
-the object to branch on and its own tests. Each of the three texts was refereed separately from its writing.
+the object to branch on and its own tests. Each of the three texts was reviewed in a session separate from the one that wrote it.
 
 \subsection*{The lists of short vectors} For all $156$ lattices the lists of vectors of norm $2$, $3$, $4$ built by the
 final version of the program were verified in exact arithmetic, on one machine: every vector has its norm, the vectors are
@@ -863,10 +907,9 @@ Corollary~\ref{cor:Y1} were verified by two checkers written independently.
 \subsection*{The search} The exclusions by search, about $2.6\cdot10^7$ pairs in all, are the output of one program and
 carry no certificate. What supports them:
 \begin{enumerate}[leftmargin=2em]
-\item Every rule of the program was derived from the properties of a frame in a written audit, by a party that had not
-written the program.
+\item Every rule of the program was derived from the properties of a frame in a written audit, by a separate reviewer, not the writer of the program.
 \item The audit found five conditions under which a verdict could be wrong although the rules are sound. Each was
-discharged: one by a census of all records (the condition never occurred); one by an exact re-examination of
+investigated, with these outcomes: one by a census of all records (the condition never occurred); one by an exact re-examination of
 $147{,}475{,}940$ pairs of the $25$ lattices concerned (the $8{,}432$ pairs exposed to it were all excluded again by the
 complete version of the search; for three representatives $y_1$ of lattice $003$ this re-examination is replaced by
 Corollary~\ref{cor:Y1}); one, the completeness of the lists of short vectors, by the verification described above, within
@@ -893,7 +936,9 @@ component, of rank $24$, and the vectors of Proposition~\ref{prop:pack}(b) ($8$,
 of norm $1$) are linearly independent.
 
 \subsection*{Computing environment} The final version of the programs runs under Python~3.12 with numpy~2.5, numba~0.67
-(compiled inner loops of the search and of the enumerations) and python-flint~0.9 (exact linear algebra). The main
+(compiled inner loops of the search and of the enumerations) and python-flint~0.9 (exact linear algebra), under
+Linux on the rented machines and Windows on the desktop computer. The independent exact programs for the lattices and for
+the packing test use SymPy~1.14 for exact reduction and linear algebra. The main
 enumeration ran on rented machines with x86-64 processors of two makes ($4$ to $128$ cores) and, in September, on one
 desktop computer. The job records of the $102$ lattices of the main enumeration total about $6{,}700$ hours of elapsed
 time, each job using one or two cores, except $8{,}001$ jobs with several worker processes, which total $1{,}058$
@@ -901,13 +946,12 @@ worker-hours. These figures do not include the interrupted jobs, the lattices $0
 of September on lists of pairs, or the verification runs; a total in core-hours is not available.
 
 \subsection*{Possible sources of error} As in \cite{LTS}, the result depends on long computations whose execution cannot
-be followed by a reader, and it is right to say where an error could hide. A \emph{mathematical} error in the rules would
-show in the written derivations of Sections~\ref{sec:env}--\ref{sec:lattices} and in the audit of the program against
-them. A \emph{programming} error is what the second programs, the certificates and the comparisons of this section are
+be followed by a reader, and it is right to say where an error could hide. The written derivations of Sections~\ref{sec:env}--\ref{sec:lattices} and the review of the program against them
+address \emph{mathematical} errors in the rules. A \emph{programming} error is what the second programs, the certificates and the comparisons of this section are
 for; they cover the lemmas, the short vectors, the lattices themselves, the pairs excluded by a witness and, on four
-lattices, the enumeration; they do not cover the searches, which rest on one program. An undetected \emph{hardware} error
-cannot affect a certificate or a witness, which are checked afterwards on another machine, nor the jobs that were run
-twice with identical records; most jobs of the main enumeration were run once.
+lattices, the enumeration; they do not cover the searches, which rest on one program. Against an undetected \emph{hardware} error there are two different safeguards: a certificate or a witness is checked
+afterwards, on another machine, for what it states; and a job run twice with identical summaries is reproducible. Neither
+establishes that the list of pairs was complete, and most jobs of the main enumeration were run once.
 
 \subsection*{Summary of what the theorem rests on}
 \begin{enumerate}[leftmargin=2em]
@@ -916,14 +960,15 @@ twice with identical records; most jobs of the main enumeration were run once.
 \item The three lemmas of Theorem~\ref{thm:T}, computer-assisted, verified as described.
 \item The completeness of the enumeration of the pairs, compared with an independent enumerator on four lattices.
 \item The correctness of the search program: audited and run again, not duplicated.
+\item For the transfers of the first and third form: the arithmetic of the roots of the twin lattice and the order of the
+dependencies between lattices, not yet recertified.
 \end{enumerate}
 The whole proof, including the hand arguments of this paper, was produced with the assistance of AI systems (see the
 Acknowledgements), working in separate sessions and checking one another's work. At the time of writing it has not been read
 by an independent expert, and no part of it has been formalised in a proof assistant; a formalisation of
 Sections~\ref{sec:fix}--\ref{sec:env} and of the certificate checkers is planned.
 
-\subsection*{Reproducibility} The repository \cite{repo} contains the programs, the commands, the records of every run, the
-certificates and their checkers, the referee reports, and a table giving for each computation cited here the program
+\subsection*{Reproducibility} The repository \cite{repo} contains the programs, the commands, the summaries of the runs that are used, the certificates and their checkers, the internal review reports, and a table giving for each computation cited here the program
 version, the location of its output and the line to read.
 
 \section{Concluding remarks}
@@ -933,9 +978,10 @@ Theorem~\ref{thm:main} leaves no possible symmetry: a strongly regular graph wit
 asymmetric (Corollary~\ref{cor:asym} and \cite{Note}). An existence or nonexistence proof can therefore no longer start
 from a prescribed automorphism.
 
-\emph{A proof without computer.} Theorem~\ref{thm:R} is elementary, and so are the exclusions of twenty lattices in
-Section~\ref{sec:lattices}. We do not know a proof of Theorem~\ref{thm:B} without computer. The three lemmas of
-Theorem~\ref{thm:T} say that an integer $\s$-odd eigenfunction for the eigenvalue $-4$ has squared norm at least $22$; by
+\emph{A proof without computer.} Theorem~\ref{thm:R} is proved in the text from the cited theorems on lattices, and the exclusion of twenty lattices
+in Section~\ref{sec:lattices} needs only short computations on each lattice. We do not know a proof of Theorem~\ref{thm:B} without computer. The three lemmas of
+Theorem~\ref{thm:T} say, with Proposition~\ref{prop:87}, that a nonzero integer $\s$-odd eigenfunction for the eigenvalue $-4$ has squared
+norm at least $22$; by
 themselves they exclude seventeen more lattices, and every further step of this kind would shorten the searches.
 
 \emph{Formalisation.} The exclusions of the orders $3$ and $7$ are formalised \cite{D3,D7}. For order $2$ a natural first
