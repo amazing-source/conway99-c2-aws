@@ -6,7 +6,7 @@
 %     naming a model. The correspondence address he wants printed is still to be added. All the Conway repositories of
 %     the account are private since 07/10. The links are printed (his instruction: the papers are not published now, he
 %     opens the repositories when they are); the repositories must be public before the paper is circulated.
-%  2. Lattice 044: its re-run is in progress; Section 8.5 says so.
+%  2. (closed 07/10, 20:31 UTC) Lattice 044: second run finished and accepted by the lab's check; Section 8.5 updated.
 %  3. (closed 07/10) Packing numbers of Table 1: reproduced by a second program (Codex, q/codex_independent_packing.py) and,
 %     for test (a), by a third (lab); Section 9 says so.
 %  4. Bibliography: the statements attributed to [MM], [Mak], [B09], [BL] in the Introduction follow the literature section
@@ -753,7 +753,7 @@ main enumeration; exclusion at once, by search or by transfer & $91$ & $220{,}26
 the same, and witnesses (W9), (W10) with certificates & $13$ & $373{,}439{,}131$\\
 odd Leech lattice: linear certificates and searches & $1$ & $141$ classes\\
 lattices $004$, $010$: lists of pairs & $2$ & $420{,}345$\\
-lists of pairs (September), then lemmas and a complete second run & $29$ & see the text\\
+lists of pairs (September), then lemmas and a complete second run & $29$ & $6{,}713{,}853$\\
 \midrule
  & $156$ & \\
 \bottomrule
@@ -790,16 +790,13 @@ by an exact checker. This leaves $2{,}652$ pairs without witness, in $11$ lattic
 $115$, $116$, $119$, $121$, $122$, $125$, $127$, $132$, $135$, $137$--$141$ are thus excluded by
 Theorem~\ref{thm:T} and explicit witnesses, without any search.
 
-\emph{By the search.} The $28$ lattices were run again in full with the final version of the program, each job on two
-machines. For $27$ of them all pairs ($1{,}168{,}349$) are excluded, with identical records on the two machines;
-$85{,}080$ of these pairs are closed by the transfer rule. The $732$ pairs without a witness of energy at most $10$ of the
-ten lattices other than $044$ are excluded without that rule: $586$ by Lemma~\ref{lem:char}, $108$ by search, and $38$, which
-the run had closed by transfer, by a separate run with the transfer rule switched off. So for these $27$ lattices the
-transfer rule is not needed.
-% TODO 2: update when the records of 044 are accepted.
-For lattice $044$ $(a_3^8)$, which has $1{,}920$ pairs without witness, this second run was not finished at the time of
-writing; its exclusion rests for the moment on the run of September ($14{,}496$ pairs up to diagram automorphisms, all
-excluded). The $29$th lattice, $105$ $(e_6d_5a_5^2a_1^2)$, was run again in the same way: $56{,}544$ pairs, all excluded.
+\emph{By a complete second run.} The $28$ lattices were run again in full with the final version of the program:
+$6{,}657{,}309$ pairs, all excluded. For $27$ lattices ($1{,}168{,}349$ pairs, of which $85{,}080$ are closed by the transfer
+rule) each job was run on two machines, with identical records. For lattice $044$ $(a_3^8)$, the largest ($5{,}488{,}960$
+pairs, of which $345{,}792$ are closed by the transfer rule), each job was run once. The transfer rule is not needed for
+these $28$ lattices: every pair is covered by Corollary~\ref{cor:Y1}, or has a witness of energy at most $10$, or is one of
+the $2{,}652$ pairs without witness; and of these, $1{,}610$ are excluded by Lemma~\ref{lem:char}, $1{,}004$ by search, and
+$38$, which the run had closed by transfer, by a separate run with the transfer rule switched off. The $29$th lattice, $105$ $(e_6d_5a_5^2a_1^2)$, was run again in the same way: $56{,}544$ pairs, all excluded.
 
 \section{Verification, reproducibility, and what the proof rests on}\label{sec:verif}
 
@@ -872,7 +869,7 @@ certificates; the program used for $6{,}282$ of them was recovered and archived;
 neither were run again with the final version (for sixteen lattices the whole lattice was run again): $2{,}419{,}830$ pairs,
 each job on two machines, identical records; $60{,}308$ of these pairs are closed by the transfer rule, so that for them
 the new record still points to other lattices. The $28$ lattices of the last paragraph of Section~\ref{ssec:results} were
-run again in the same conditions.
+run again in the same conditions, lattice $044$ on one machine only.
 \item The records of the lattices $000$, $004$ and $010$ (27 September to 2 October 2026; those of $004$, $010$ and of $47$
 classes of $000$ with archived versions of the program) were not produced again; those of $004$ and $010$ were recounted.
 \end{enumerate}
