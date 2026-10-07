@@ -87,9 +87,17 @@ pair). Dry run of the conversion at 15:10 with the real certificates: **153 if T
 one certificate each, 005 for 006 through a twin class); 156 with the two last certificates. Nothing is written in the tracker:
 `lemmas_accepted.json` does not exist.
 
-Provenance: 84 lattices were computed on the lab PC on 27-29/09, before the cloud packages (26 of the stream ones without a recorded
-code version). The user decided on 07/10 not to re-run them now; the records are on the lab PC (`data/finishC/`, not in any
-repository yet) and partly in the compute repository.
+Provenance of the records of the 143 excluded lattices (recensement of 07/10, `measures/RECONCILE_RECORDS_2026-10-07.json`, script
+`q/tools/lab_2026-10-07/reconcile_records.py`; it locates records, it re-derives nothing):
+- 33 stream lattices (016-027, 029-042, 045-047, 059, 062-064): every y_1 representative is covered by records that
+  are also on a machine branch `run/*` of the compute repository;
+- 58 stream lattices (028, 043, 048-058, 060, 061, 065-071, 073-086, 088-093, 095, 098-104, 107, 109, 110, 112-114, 118, 149):
+  some or all representatives rest on records made on the lab PC only (45 of them entirely); 26 lattices have records without
+  a recorded code version;
+- 32 lattices with other lab-PC records (frame_dfs and h-stage runs of 27-29/09, Golay blocks, lattice 000);
+- 20 lattices excluded by lattice-level arguments: no pair records.
+Since 07/10 a copy of the lab PC's folder `data/finishC` is on the branch `lab-records-2026-10-07` of the compute repository (as it
+is; not a certified archive). The user decided on 07/10 not to re-run the lab-local lattices now.
 
 ## 5. What must still happen before the statement may be claimed
 
