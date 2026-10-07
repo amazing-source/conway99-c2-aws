@@ -1,0 +1,31 @@
+{
+"id": 7,
+"chunk": [
+618,
+627
+],
+"n_pairs": 189300,
+"sha256": "f3f2482e6153679afa67ce97e3a4b57ee0d62cccf4b451985996a00035c5dc61",
+"stream_ok": true,
+"lattice": {
+"rigid": false,
+"norm4_lines": 48552,
+"zero_footprint_norm4_lines": 3,
+"new_root_pairs": 48
+},
+"counts": {
+"setup_impossible": 0,
+"general": 189297,
+"rigid": 3,
+"with_zero_candidate": 0,
+"exposed": 0
+},
+"exposed": [],
+"exposed_not_excluded_again": 0,
+"ok": true,
+"audit_rigid_sha256": "a555ddb3aa62b9c1",
+"engine_sha256": "1591aeeac9c0be5c",
+"seconds": 120.3,
+"t": "2026-10-07 14:52:37",
+"job_seconds": 122.3
+}
