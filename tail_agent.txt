@@ -1,6 +1,3 @@
-2026-10-07 14:18:55 audited 024_7_34 in 214 s: pairs 88615, counts {'setup_impossible': 0, 'general': 88597, 'rigid': 18, 'with_zero_candidate': 80287, 'exposed': 18}
-2026-10-07 14:18:57 audited 024_5_34 in 222 s: pairs 88992, counts {'setup_impossible': 0, 'general': 88978, 'rigid': 14, 'with_zero_candidate': 80798, 'exposed': 14}
-2026-10-07 14:19:27 audited 024_1_34 in 263 s: pairs 109710, counts {'setup_impossible': 0, 'general': 109692, 'rigid': 18, 'with_zero_candidate': 99947, 'exposed': 18}
 2026-10-07 14:19:43 audited 024_9_34 in 220 s: pairs 100663, counts {'setup_impossible': 0, 'general': 100637, 'rigid': 26, 'with_zero_candidate': 90315, 'exposed': 24}
 2026-10-07 14:19:47 audited 024_11_34 in 166 s: pairs 87856, counts {'setup_impossible': 0, 'general': 87842, 'rigid': 14, 'with_zero_candidate': 75700, 'exposed': 14}
 2026-10-07 14:20:38 audited 024_13_34 in 212 s: pairs 96391, counts {'setup_impossible': 0, 'general': 96380, 'rigid': 11, 'with_zero_candidate': 85897, 'exposed': 11}
@@ -58,3 +55,6 @@
 2026-10-07 14:41:18 audited 026_41_56 in 164 s: pairs 111337, counts {'setup_impossible': 0, 'general': 111325, 'rigid': 12, 'with_zero_candidate': 100302, 'exposed': 12}
 2026-10-07 14:41:34 audited 026_49_56 in 122 s: pairs 71841, counts {'setup_impossible': 0, 'general': 71828, 'rigid': 13, 'with_zero_candidate': 65208, 'exposed': 13}
 2026-10-07 14:41:48 audited 026_47_56 in 144 s: pairs 112167, counts {'setup_impossible': 0, 'general': 112164, 'rigid': 3, 'with_zero_candidate': 102684, 'exposed': 3}
+2026-10-07 14:42:53 audited 026_51_56 in 161 s: pairs 109067, counts {'setup_impossible': 0, 'general': 109042, 'rigid': 25, 'with_zero_candidate': 99144, 'exposed': 25}
+2026-10-07 14:42:55 audited 026_55_56 in 123 s: pairs 79851, counts {'setup_impossible': 0, 'general': 79844, 'rigid': 7, 'with_zero_candidate': 69261, 'exposed': 7}
+2026-10-07 14:43:07 audited 026_53_56 in 143 s: pairs 84964, counts {'setup_impossible': 0, 'general': 84957, 'rigid': 7, 'with_zero_candidate': 73034, 'exposed': 7}

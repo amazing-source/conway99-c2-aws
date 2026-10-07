@@ -1,0 +1,166 @@
+{
+ "part": [
+  0,
+  2
+ ],
+ "batch": "1",
+ "jobs_in_share": 137,
+ "done_here": 127,
+ "failed": [
+  "101_1_8",
+  "101_3_8",
+  "101_5_8",
+  "101_7_8",
+  "104_1_8",
+  "104_3_8",
+  "104_5_8",
+  "104_7_8",
+  "105_0_1",
+  "137_0_1"
+ ],
+ "jobs_with_a_pair_not_excluded_again": [],
+ "skipped_already_done": 0,
+ "per_lattice": {
+  "022": {
+   "jobs": 19,
+   "pairs": 1675221,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 1675009,
+   "rigid": 212,
+   "with_zero_candidate": 988521,
+   "exposed": 178
+  },
+  "023": {
+   "jobs": 15,
+   "pairs": 1431219,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 1431049,
+   "rigid": 170,
+   "with_zero_candidate": 836714,
+   "exposed": 144
+  },
+  "024": {
+   "jobs": 17,
+   "pairs": 1659069,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 1658842,
+   "rigid": 227,
+   "with_zero_candidate": 1484890,
+   "exposed": 225
+  },
+  "026": {
+   "jobs": 28,
+   "pairs": 2789033,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 2788743,
+   "rigid": 290,
+   "with_zero_candidate": 2478305,
+   "exposed": 286
+  },
+  "027": {
+   "jobs": 10,
+   "pairs": 975000,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 974938,
+   "rigid": 62,
+   "with_zero_candidate": 557422,
+   "exposed": 62
+  },
+  "037": {
+   "jobs": 7,
+   "pairs": 599385,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 599220,
+   "rigid": 165,
+   "with_zero_candidate": 597509,
+   "exposed": 165
+  },
+  "049": {
+   "jobs": 1,
+   "pairs": 96263,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 96222,
+   "rigid": 41,
+   "with_zero_candidate": 86003,
+   "exposed": 41
+  },
+  "050": {
+   "jobs": 6,
+   "pairs": 571309,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 571138,
+   "rigid": 171,
+   "with_zero_candidate": 522319,
+   "exposed": 167
+  },
+  "052": {
+   "jobs": 2,
+   "pairs": 139953,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 139831,
+   "rigid": 122,
+   "with_zero_candidate": 139953,
+   "exposed": 122
+  },
+  "053": {
+   "jobs": 6,
+   "pairs": 565088,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 564971,
+   "rigid": 117,
+   "with_zero_candidate": 513974,
+   "exposed": 115
+  },
+  "077": {
+   "jobs": 4,
+   "pairs": 33319,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 33266,
+   "rigid": 53,
+   "with_zero_candidate": 33319,
+   "exposed": 53
+  },
+  "079": {
+   "jobs": 4,
+   "pairs": 45617,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 45579,
+   "rigid": 38,
+   "with_zero_candidate": 45617,
+   "exposed": 38
+  },
+  "080": {
+   "jobs": 4,
+   "pairs": 11631,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 11613,
+   "rigid": 18,
+   "with_zero_candidate": 11631,
+   "exposed": 18
+  },
+  "103": {
+   "jobs": 4,
+   "pairs": 8582,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 8559,
+   "rigid": 23,
+   "with_zero_candidate": 8582,
+   "exposed": 23
+  }
+ },
+ "hours": 0.83
+}
