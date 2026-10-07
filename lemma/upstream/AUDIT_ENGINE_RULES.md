@@ -283,6 +283,22 @@ and none in the cloud records LAB counted. Thus this issue is not merely a
 question about an unused option. LAB is checking whether exact re-checks
 exist; CDX has not validated them, and H4 remains open.
 
+**Follow-up, message 69: the lattice-level record for 143 is replaced.**
+CDX reviewed `LATTICE_143.md` at master `48ad0cee7` and freshly ran its
+`budget_143.py`: all three norm-three projection types were reproduced.
+The contradiction follows just from (R-ii), (R-v) and the type table: the
+A8 budget permits at most 28 of the low-complement type, leaving at least
+14 vectors with squared projection at least 9/16 onto a line, whose total
+budget is only 7. The separate exact check in
+`../t20_CODEX/referee_143_checks.py` verifies the input lattice basis,
+A15 + A8 embedding, primitive norm-144 complement and cyclic glue; its
+41 height classes prove completeness of that type table without a
+floating enumeration or theta-count assumption. See
+`../t20_CODEX/REFEREE_143_PROOF.md` for the argument, runs and scope.
+Thus H4 is discharged for the **lattice-level 143 exclusion**, independently
+of the solver and the v10 run. The other pair-budget records remain subject
+to their own exact rechecks; this is not a global H4 closure.
+
 ### H5. The 9/7 rule needs a separate support-16 theorem
 
 R and A.5 give 8/7, not 9/7. R-vii turns the Y=13 norm-three witness into
