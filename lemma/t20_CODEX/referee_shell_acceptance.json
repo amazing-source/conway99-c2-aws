@@ -1,0 +1,4370 @@
+{
+"000": {
+"N2": 0,
+"N3": 4096,
+"N4": 98256,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 24,
+"lattice_file_sha256": "85451ad1d054c6e2",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "3e6b01b23580059c",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 0,
+"absolute_sum_bound": 0
+},
+"N3": {
+"max_abs_coordinate": 14,
+"absolute_sum_bound": 97412
+},
+"N4": {
+"max_abs_coordinate": 21,
+"absolute_sum_bound": 219177
+}
+}
+},
+"001": {
+"N2": 16,
+"N3": 4096,
+"N4": 97872,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 32,
+"lattice_file_sha256": "92aceaac491e8a2a",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "83852ac2457c3110",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 4113
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 29248
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 45700
+}
+}
+},
+"002": {
+"N2": 24,
+"N3": 4096,
+"N4": 97680,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 36,
+"lattice_file_sha256": "c762d58f4f21d304",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2379461b9e386660",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6464
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 19796
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 32724
+}
+}
+},
+"003": {
+"N2": 32,
+"N3": 4096,
+"N4": 97488,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 40,
+"lattice_file_sha256": "22b01ddd2c9db6de",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2de252651d1979f8",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 5696
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12816
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 22784
+}
+}
+},
+"004": {
+"N2": 32,
+"N3": 4096,
+"N4": 97488,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 40,
+"lattice_file_sha256": "78063a721f20b8db",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d35c6b751fb3ecfe",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 2826
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 7850
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 11304
+}
+}
+},
+"005": {
+"N2": 40,
+"N3": 4096,
+"N4": 97296,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 44,
+"lattice_file_sha256": "b856bdbc26949078",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d51df45d5d5ec8c6",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 5824
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13104
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 17836
+}
+}
+},
+"006": {
+"N2": 48,
+"N3": 4096,
+"N4": 97104,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 48,
+"lattice_file_sha256": "9dde6e82c71a88ff",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "6d1844dfc82d6f38",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 7825
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 20032
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 25353
+}
+}
+},
+"007": {
+"N2": 48,
+"N3": 4096,
+"N4": 97104,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 48,
+"lattice_file_sha256": "5481465b7efc598f",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "006b94bebacb335c",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 19306
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 47674
+},
+"N4": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 66586
+}
+}
+},
+"008": {
+"N2": 48,
+"N3": 4096,
+"N4": 97104,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 48,
+"lattice_file_sha256": "9c55fc50fec4593b",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "331d66da92fe5b58",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 31671
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 47311
+},
+"N4": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 66079
+}
+}
+},
+"009": {
+"N2": 48,
+"N3": 4096,
+"N4": 97104,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 48,
+"lattice_file_sha256": "356c0e7d2d88a67c",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "bf6ee851c901e493",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 19600
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 48400
+},
+"N4": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 57600
+}
+}
+},
+"010": {
+"N2": 48,
+"N3": 4096,
+"N4": 97104,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 48,
+"lattice_file_sha256": "94dd93de0dd73997",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "11ef431b15809b37",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9025
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9025
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 17689
+}
+}
+},
+"011": {
+"N2": 56,
+"N3": 4096,
+"N4": 96912,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 52,
+"lattice_file_sha256": "bf67620df03e164c",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "fa4cc6becf414732",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13464
+},
+"N3": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 37400
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 37400
+}
+}
+},
+"012": {
+"N2": 56,
+"N3": 4096,
+"N4": 96912,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 52,
+"lattice_file_sha256": "f32a3ed4816b679d",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "e7b5eadb5c6c96b3",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3204
+},
+"N3": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 5696
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8900
+}
+}
+},
+"013": {
+"N2": 64,
+"N3": 4096,
+"N4": 96720,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 56,
+"lattice_file_sha256": "3b8bd0c4d6f8a6dd",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "8192280d434e14f7",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 14004
+},
+"N3": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 38900
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 38900
+}
+}
+},
+"014": {
+"N2": 64,
+"N3": 4096,
+"N4": 96720,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 56,
+"lattice_file_sha256": "74da4021ff7a7da0",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "0b81fd131d4b0c96",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18326
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 30294
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 37400
+}
+}
+},
+"015": {
+"N2": 64,
+"N3": 4096,
+"N4": 96720,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 56,
+"lattice_file_sha256": "5dbcaafe6a2bdf5c",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d78e16f6d8d95c7d",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15012
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20433
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 33777
+}
+}
+},
+"016": {
+"N2": 64,
+"N3": 4096,
+"N4": 96720,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 56,
+"lattice_file_sha256": "a71201e6a2fdad4c",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "7ff3c322f6fe140c",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 47311
+},
+"N3": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 56304
+},
+"N4": {
+"max_abs_coordinate": 14,
+"absolute_sum_bound": 76636
+}
+}
+},
+"017": {
+"N2": 64,
+"N3": 4096,
+"N4": 96720,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 56,
+"lattice_file_sha256": "d47b39ed1e44f527",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "a5fb8e118669a1ba",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18571
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 30699
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 37900
+}
+}
+},
+"018": {
+"N2": 72,
+"N3": 4096,
+"N4": 96528,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 60,
+"lattice_file_sha256": "c2e697e7ba983f07",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "967abce0d38b7151",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 48300
+},
+"N3": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 69552
+},
+"N4": {
+"max_abs_coordinate": 15,
+"absolute_sum_bound": 108675
+}
+}
+},
+"019": {
+"N2": 72,
+"N3": 4096,
+"N4": 96528,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 60,
+"lattice_file_sha256": "d85b7d46d47b0cfb",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "3bd0a11fbf86308a",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 7312
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 16452
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 29248
+}
+}
+},
+"020": {
+"N2": 72,
+"N3": 4096,
+"N4": 96528,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 60,
+"lattice_file_sha256": "b73fa0f7ef1e6ad1",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "b45d79fb8b3a46fa",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18473
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 24128
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 45617
+}
+}
+},
+"021": {
+"N2": 72,
+"N3": 4096,
+"N4": 96528,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 60,
+"lattice_file_sha256": "ec8c347718023f11",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "73bcd650f1d5681b",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9400
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18424
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18424
+}
+}
+},
+"022": {
+"N2": 80,
+"N3": 4096,
+"N4": 96336,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 64,
+"lattice_file_sha256": "d1cddb73f3adc64a",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "57cec7895efe21a9",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 18,
+"absolute_sum_bound": 105300
+},
+"N3": {
+"max_abs_coordinate": 18,
+"absolute_sum_bound": 105300
+},
+"N4": {
+"max_abs_coordinate": 29,
+"absolute_sum_bound": 273325
+}
+}
+},
+"023": {
+"N2": 80,
+"N3": 4096,
+"N4": 96336,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 64,
+"lattice_file_sha256": "d3ff56c1537ede52",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "4449d6c9721a5e17",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9350
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18326
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 37400
+}
+}
+},
+"024": {
+"N2": 80,
+"N3": 4096,
+"N4": 96336,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 64,
+"lattice_file_sha256": "c124d8855c3e74b3",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "0992c265b7533e00",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3294
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9150
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13176
+}
+}
+},
+"025": {
+"N2": 80,
+"N3": 4096,
+"N4": 96336,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 64,
+"lattice_file_sha256": "9cac30798706f1be",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2a16ac1a8da78118",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 21184
+},
+"N3": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 55939
+},
+"N4": {
+"max_abs_coordinate": 14,
+"absolute_sum_bound": 64876
+}
+}
+},
+"026": {
+"N2": 80,
+"N3": 4096,
+"N4": 96336,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 64,
+"lattice_file_sha256": "6d2361b005fa4e44",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "64e8eb3ea62341c5",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 62352
+},
+"N3": {
+"max_abs_coordinate": 15,
+"absolute_sum_bound": 97425
+},
+"N4": {
+"max_abs_coordinate": 16,
+"absolute_sum_bound": 110848
+}
+}
+},
+"027": {
+"N2": 80,
+"N3": 4096,
+"N4": 96336,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 64,
+"lattice_file_sha256": "ec7c1d30a2312327",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "59ee2c62ca6615ec",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18865
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18865
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 31185
+}
+}
+},
+"028": {
+"N2": 80,
+"N3": 4096,
+"N4": 96336,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 64,
+"lattice_file_sha256": "59789582c2b46f2c",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "ea740d172141c553",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 2,
+"absolute_sum_bound": 1596
+},
+"N3": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6384
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9975
+}
+}
+},
+"029": {
+"N2": 80,
+"N3": 4096,
+"N4": 96336,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 64,
+"lattice_file_sha256": "74e99440538de233",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "80c9219989631040",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 5600
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12600
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 17150
+}
+}
+},
+"030": {
+"N2": 80,
+"N3": 4096,
+"N4": 96336,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 64,
+"lattice_file_sha256": "05ba334b3bb197af",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d47f50d59fbeea6d",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12960
+},
+"N3": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 36000
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 36000
+}
+}
+},
+"031": {
+"N2": 88,
+"N3": 4096,
+"N4": 96144,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 68,
+"lattice_file_sha256": "3f64d3ada346f401",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "5bc7e87607559f9a",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13284
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18081
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 36900
+}
+}
+},
+"032": {
+"N2": 88,
+"N3": 4096,
+"N4": 96144,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 68,
+"lattice_file_sha256": "2edbc45f9038bcb0",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "01aa559daae080a5",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8100
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 15876
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 20736
+}
+}
+},
+"033": {
+"N2": 88,
+"N3": 4096,
+"N4": 96144,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 68,
+"lattice_file_sha256": "7be822da9d773d8a",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "c08e3d0f5c125cae",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9975
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 14364
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 19551
+}
+}
+},
+"034": {
+"N2": 88,
+"N3": 4096,
+"N4": 96144,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 68,
+"lattice_file_sha256": "977ada6bdbd7b614",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "681f671989457d98",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6896
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15516
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15516
+}
+}
+},
+"035": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "7bc2df5c722f4798",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "e9b560282bc02f49",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 45200
+},
+"N3": {
+"max_abs_coordinate": 14,
+"absolute_sum_bound": 88592
+},
+"N4": {
+"max_abs_coordinate": 18,
+"absolute_sum_bound": 146448
+}
+}
+},
+"036": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "8011dd46bc44f86d",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "6517d1220ee4d9b9",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 5648
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12708
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 17297
+}
+}
+},
+"037": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "f1283068cb4fd83a",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d8e308095ed80331",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6688
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20482
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20482
+}
+}
+},
+"038": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "cfde72c3c39c3127",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "11bcba8e797d446e",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12744
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 42834
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 42834
+}
+}
+},
+"039": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "be50da6e6e5b2770",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "300a1d59c29bafe3",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6752
+},
+"N3": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6752
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 10550
+}
+}
+},
+"040": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "cd2343aa4fcfdbc0",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "6deccf30c0802667",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 2,
+"absolute_sum_bound": 1508
+},
+"N3": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6032
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13572
+}
+}
+},
+"041": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "f5f65cc34479f95f",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "db508811479783e7",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 14688
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 19992
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 33048
+}
+}
+},
+"042": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "1b1c59d7062b5de0",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "aecde0bd41bc394d",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12672
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12672
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 35200
+}
+}
+},
+"043": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "367d301ee4b4d580",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "6687d035cd09e425",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6048
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9450
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18522
+}
+}
+},
+"044": {
+"N2": 96,
+"N3": 4096,
+"N4": 95952,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 72,
+"lattice_file_sha256": "65cc5945ff3153c6",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "7a39257c161393a8",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 10725
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 21021
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 21021
+}
+}
+},
+"045": {
+"N2": 104,
+"N3": 4096,
+"N4": 95760,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 76,
+"lattice_file_sha256": "18e0246f75e3036d",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "cee92bae828631f4",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 36045
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 53845
+},
+"N4": {
+"max_abs_coordinate": 15,
+"absolute_sum_bound": 100125
+}
+}
+},
+"046": {
+"N2": 104,
+"N3": 4096,
+"N4": 95760,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 76,
+"lattice_file_sha256": "e9f6a42a70734273",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "18be6ee67a34fd48",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13536
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 18424
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 24064
+}
+}
+},
+"047": {
+"N2": 104,
+"N3": 4096,
+"N4": 95760,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 76,
+"lattice_file_sha256": "90fe560886ff3aef",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "3fb485a2451e3dc7",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 15631
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 25839
+},
+"N4": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 45936
+}
+}
+},
+"048": {
+"N2": 104,
+"N3": 4096,
+"N4": 95760,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 76,
+"lattice_file_sha256": "20421e9dc2f92b84",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "8b8e95d75c1746c4",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 93119
+},
+"N3": {
+"max_abs_coordinate": 14,
+"absolute_sum_bound": 107996
+},
+"N4": {
+"max_abs_coordinate": 19,
+"absolute_sum_bound": 198911
+}
+}
+},
+"049": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "029b288d814ab449",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "eec8955d57518a3e",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 14076
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 14076
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 31671
+}
+}
+},
+"050": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "babb8ebacbfbe9a1",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "51cd777acb979971",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3168
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8800
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 17248
+}
+}
+},
+"051": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "7196681c88aba1a2",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "5f60136d139ce558",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9150
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13176
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 17934
+}
+}
+},
+"052": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "ec7221f05eccb11f",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "433857bf204014f0",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 5856
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 17934
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 17934
+}
+}
+},
+"053": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "81913d19dba86101",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "0fd8b6725ec34ad7",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6176
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9650
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13896
+}
+}
+},
+"054": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "98b7b60874fefc09",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "0bbdc8c085587b0b",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 7200
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 11250
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 16200
+}
+}
+},
+"055": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "43a41bac7362be6f",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "a9e74f9d50ac802f",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 17712
+},
+"N3": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 70848
+},
+"N4": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 83148
+}
+}
+},
+"056": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "0003793d67da3ae1",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "ddf42e5a35fe9e1b",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15264
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15264
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 27136
+}
+}
+},
+"057": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "b3bacdf0173d318f",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "0cbc29a0e52e7822",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 17346
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 22656
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 42834
+}
+}
+},
+"058": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "cb993b91cb336ce4",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "027a736479685d87",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 26705
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 34880
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 54500
+}
+}
+},
+"059": {
+"N2": 112,
+"N3": 4096,
+"N4": 95568,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 80,
+"lattice_file_sha256": "845f8293fa481e1b",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "6b00dbbe0488afc3",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 15337
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 15337
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 31300
+}
+}
+},
+"060": {
+"N2": 120,
+"N3": 4096,
+"N4": 95376,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 84,
+"lattice_file_sha256": "dc249c9de4a90e7b",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "ff66c521ff3a92bc",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 16668
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 22687
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 29632
+}
+}
+},
+"061": {
+"N2": 120,
+"N3": 4096,
+"N4": 95376,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 84,
+"lattice_file_sha256": "16fc7fd636e89203",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "1e4e6aeb71565b3e",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 25536
+},
+"N3": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 57456
+},
+"N4": {
+"max_abs_coordinate": 15,
+"absolute_sum_bound": 89775
+}
+}
+},
+"062": {
+"N2": 120,
+"N3": 4096,
+"N4": 95376,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 84,
+"lattice_file_sha256": "63a5b33ea788f62e",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d7d21f199994131a",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 19992
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 26112
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 33048
+}
+}
+},
+"063": {
+"N2": 120,
+"N3": 4096,
+"N4": 95376,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 84,
+"lattice_file_sha256": "66b483f9c9853045",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "094bd9dadf18e8c3",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6112
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 30942
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 38200
+}
+}
+},
+"064": {
+"N2": 120,
+"N3": 4096,
+"N4": 95376,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 84,
+"lattice_file_sha256": "7edcc96c060711b6",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "843ddbbe721a2eb9",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 16,
+"absolute_sum_bound": 96512
+},
+"N3": {
+"max_abs_coordinate": 16,
+"absolute_sum_bound": 96512
+},
+"N4": {
+"max_abs_coordinate": 20,
+"absolute_sum_bound": 150800
+}
+}
+},
+"065": {
+"N2": 128,
+"N3": 4096,
+"N4": 95184,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 88,
+"lattice_file_sha256": "830fad94b910f854",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "652584eac5f84fce",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 32128
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 32128
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 40662
+}
+}
+},
+"066": {
+"N2": 128,
+"N3": 4096,
+"N4": 95184,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 88,
+"lattice_file_sha256": "0e2c6237dabc358d",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d9b2d8c615a5b4bc",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6208
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9700
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13968
+}
+}
+},
+"067": {
+"N2": 128,
+"N3": 4096,
+"N4": 95184,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 88,
+"lattice_file_sha256": "50cb551a34b53c3a",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "dd82e0f97faf27fb",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15228
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20727
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 42300
+}
+}
+},
+"068": {
+"N2": 128,
+"N3": 4096,
+"N4": 95184,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 88,
+"lattice_file_sha256": "8c8c7eef48873d07",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "10e9ba9247a17971",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 10350
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 10350
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20286
+}
+}
+},
+"069": {
+"N2": 128,
+"N3": 4096,
+"N4": 95184,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 88,
+"lattice_file_sha256": "a9390ea3f233b81d",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "b23192e6eaf81435",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13788
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 24512
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 38300
+}
+}
+},
+"070": {
+"N2": 128,
+"N3": 4096,
+"N4": 95184,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 88,
+"lattice_file_sha256": "ae88b97e98c3dc8b",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "ab3b0f54c1ea0201",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 53000
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 64130
+},
+"N4": {
+"max_abs_coordinate": 16,
+"absolute_sum_bound": 135680
+}
+}
+},
+"071": {
+"N2": 128,
+"N3": 4096,
+"N4": 95184,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 88,
+"lattice_file_sha256": "4fc1fe27a95ddac2",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "ff0a047f622b7c33",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6752
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15192
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20678
+}
+}
+},
+"072": {
+"N2": 128,
+"N3": 4096,
+"N4": 95184,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 88,
+"lattice_file_sha256": "260e96cfce09cb04",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d64e6a149355641f",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 29970
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 44770
+},
+"N4": {
+"max_abs_coordinate": 14,
+"absolute_sum_bound": 72520
+}
+}
+},
+"073": {
+"N2": 136,
+"N3": 4096,
+"N4": 94992,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 92,
+"lattice_file_sha256": "1795a1d9b90d8027",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "e90b262e5dface09",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 39100
+},
+"N3": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 66079
+},
+"N4": {
+"max_abs_coordinate": 17,
+"absolute_sum_bound": 112999
+}
+}
+},
+"074": {
+"N2": 136,
+"N3": 4096,
+"N4": 94992,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 92,
+"lattice_file_sha256": "5dcd2cf737c734a3",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "046246ae38735d1e",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 46332
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 46332
+},
+"N4": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 82368
+}
+}
+},
+"075": {
+"N2": 136,
+"N3": 4096,
+"N4": 94992,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 92,
+"lattice_file_sha256": "079f1ccaf36a12a1",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "32ce214a3c3bb70f",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 11340
+},
+"N3": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 31500
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 38115
+}
+}
+},
+"076": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "4982657bf118db85",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d22f077a04e8f3be",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 21217
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 21217
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 43300
+}
+}
+},
+"077": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "b42bb8dad929aafc",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "78fd7b75fa33a254",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 65808
+},
+"N3": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 77233
+},
+"N4": {
+"max_abs_coordinate": 20,
+"absolute_sum_bound": 182800
+}
+}
+},
+"078": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "ccb486ade3791168",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "41e62a46c0ebf83d",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13464
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 23936
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 37400
+}
+}
+},
+"079": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "e9e8f8191758abf7",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "f7032606112a5fef",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 26304
+},
+"N3": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 41100
+},
+"N4": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 59184
+}
+}
+},
+"080": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "86edf75eb1b7227b",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "27481896483ad4e7",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 47795
+},
+"N3": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 56880
+},
+"N4": {
+"max_abs_coordinate": 17,
+"absolute_sum_bound": 114155
+}
+}
+},
+"081": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "4827960e92fbe5e9",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "1ef799e5f080f69b",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6592
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 14832
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20188
+}
+}
+},
+"082": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "f9d26b1bbf84d37e",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "178a674d1cb84d26",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13392
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 23808
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 23808
+}
+}
+},
+"083": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "d9861f0c58ddfcaa",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "3817819b525ce81f",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15336
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15336
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 34506
+}
+}
+},
+"084": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "6ad2ec96a126737d",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "46437169e5ca7461",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 17784
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 17784
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 40014
+}
+}
+},
+"085": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "4741200acdbc086f",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "507326bf8a88ba9c",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 4960
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 7750
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 11160
+}
+}
+},
+"086": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "40357b870d2504d8",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "b0049013f7418b19",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 40500
+},
+"N3": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 40500
+},
+"N4": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 58320
+}
+}
+},
+"087": {
+"N2": 144,
+"N3": 4096,
+"N4": 94800,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 96,
+"lattice_file_sha256": "e6af8e1b24d279ec",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "7dbf87deaa7d345c",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3501
+},
+"N3": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6224
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9725
+}
+}
+},
+"088": {
+"N2": 152,
+"N3": 4096,
+"N4": 94608,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 100,
+"lattice_file_sha256": "f466e3215bc020f5",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2a7f57fbe81424f9",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8325
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8325
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 16317
+}
+}
+},
+"089": {
+"N2": 152,
+"N3": 4096,
+"N4": 94608,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 100,
+"lattice_file_sha256": "ac7ba29148344522",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "b6750ec3a21f6a5e",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 56265
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 56265
+},
+"N4": {
+"max_abs_coordinate": 15,
+"absolute_sum_bound": 104625
+}
+}
+},
+"090": {
+"N2": 160,
+"N3": 4096,
+"N4": 94416,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 104,
+"lattice_file_sha256": "d1f7462eddc94f0a",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "b9d8e177e1149ab3",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 17316
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 38961
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 58201
+}
+}
+},
+"091": {
+"N2": 160,
+"N3": 4096,
+"N4": 94416,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 104,
+"lattice_file_sha256": "9bd73665dcc21c96",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2577a1bbeb68defd",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 7184
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 28736
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 36369
+}
+}
+},
+"092": {
+"N2": 160,
+"N3": 4096,
+"N4": 94416,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 104,
+"lattice_file_sha256": "5e8702c89ec96bff",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "7a856a47c60c4f18",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3069
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8525
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8525
+}
+}
+},
+"093": {
+"N2": 160,
+"N3": 4096,
+"N4": 94416,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 104,
+"lattice_file_sha256": "2cea07ffa3bee6cf",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "907b49f057941187",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 21266
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 21266
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 43400
+}
+}
+},
+"094": {
+"N2": 160,
+"N3": 4096,
+"N4": 94416,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 104,
+"lattice_file_sha256": "1b72dbe0b8bd2364",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2a12119205d0cb50",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3807
+},
+"N3": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6768
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 10575
+}
+}
+},
+"095": {
+"N2": 160,
+"N3": 4096,
+"N4": 94416,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 104,
+"lattice_file_sha256": "f269b47dee6f7a65",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "91cf0b1c7b78c9a5",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 9648
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 13132
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 13132
+}
+}
+},
+"096": {
+"N2": 160,
+"N3": 4096,
+"N4": 94416,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 104,
+"lattice_file_sha256": "d1a46556e940b36c",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "72593939141ede2d",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6160
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9625
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13860
+}
+}
+},
+"097": {
+"N2": 160,
+"N3": 4096,
+"N4": 94416,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 104,
+"lattice_file_sha256": "1dca68a151064c8f",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "a31cff540e9568a7",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 11725
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 16884
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 30016
+}
+}
+},
+"098": {
+"N2": 168,
+"N3": 4096,
+"N4": 94224,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 108,
+"lattice_file_sha256": "eb14a23c8ec20aa5",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "1b5d728cf9348be4",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 18,
+"absolute_sum_bound": 162000
+},
+"N3": {
+"max_abs_coordinate": 17,
+"absolute_sum_bound": 144500
+},
+"N4": {
+"max_abs_coordinate": 19,
+"absolute_sum_bound": 180500
+}
+}
+},
+"099": {
+"N2": 168,
+"N3": 4096,
+"N4": 94224,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 108,
+"lattice_file_sha256": "2c2ab60bb2017dc0",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "ce088956dc7601df",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8475
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12204
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 21696
+}
+}
+},
+"100": {
+"N2": 168,
+"N3": 4096,
+"N4": 94224,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 108,
+"lattice_file_sha256": "7cb5ed198d058346",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2ec8e0210e8970e6",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 28175
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 36800
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 57500
+}
+}
+},
+"101": {
+"N2": 176,
+"N3": 4096,
+"N4": 94032,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 112,
+"lattice_file_sha256": "2babc9a86753582e",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "5893d646f3c63018",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 2763
+},
+"N3": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 4912
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 11052
+}
+}
+},
+"102": {
+"N2": 176,
+"N3": 4096,
+"N4": 94032,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 112,
+"lattice_file_sha256": "6c7be2eab35e7e2d",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2a9711fc4b4c5ce5",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15588
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15588
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 35073
+}
+}
+},
+"103": {
+"N2": 176,
+"N3": 4096,
+"N4": 94032,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 112,
+"lattice_file_sha256": "cbdda4ac309bb983",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "0ff74b01d8db5479",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 7952
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 12425
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 17892
+}
+}
+},
+"104": {
+"N2": 176,
+"N3": 4096,
+"N4": 94032,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 112,
+"lattice_file_sha256": "a245dabce6bac979",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "4026f193ce749d00",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 80613
+},
+"N3": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 80613
+},
+"N4": {
+"max_abs_coordinate": 21,
+"absolute_sum_bound": 210357
+}
+}
+},
+"105": {
+"N2": 176,
+"N3": 4096,
+"N4": 94032,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 112,
+"lattice_file_sha256": "08fb5ccbb992e0b6",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "64f86ea49e3b61cd",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3825
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 10625
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15300
+}
+}
+},
+"106": {
+"N2": 176,
+"N3": 4096,
+"N4": 94032,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 112,
+"lattice_file_sha256": "9b090fd80fb688df",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "b6afc1d8f444eb1c",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 4400
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 6875
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 13475
+}
+}
+},
+"107": {
+"N2": 176,
+"N3": 4096,
+"N4": 94032,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 112,
+"lattice_file_sha256": "5fc3c3deaa5212e3",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "7fe9836f41de047f",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15192
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15192
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20678
+}
+}
+},
+"108": {
+"N2": 176,
+"N3": 4096,
+"N4": 94032,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 112,
+"lattice_file_sha256": "63543e69b1d43578",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "46365d05135d0367",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3168
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8800
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8800
+}
+}
+},
+"109": {
+"N2": 184,
+"N3": 4096,
+"N4": 93840,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 116,
+"lattice_file_sha256": "913a2a56e0b8dd94",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "0c6e444187fd8bc1",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 30400
+},
+"N3": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 30400
+},
+"N4": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 43776
+}
+}
+},
+"110": {
+"N2": 184,
+"N3": 4096,
+"N4": 93840,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 116,
+"lattice_file_sha256": "f580c70935ed46f5",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d8711f82704fd4df",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20727
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 20727
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 27072
+}
+}
+},
+"111": {
+"N2": 192,
+"N3": 4096,
+"N4": 93648,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 120,
+"lattice_file_sha256": "155fa5f8402e974a",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "b3ee85bbc29215fe",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 7088
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 11075
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15948
+}
+}
+},
+"112": {
+"N2": 192,
+"N3": 4096,
+"N4": 93648,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 120,
+"lattice_file_sha256": "c29792c3c2c05ce3",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2d9eeecf8495b305",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12780
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 22720
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 42955
+}
+}
+},
+"113": {
+"N2": 192,
+"N3": 4096,
+"N4": 93648,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 120,
+"lattice_file_sha256": "1f9221fda7ba159e",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "3a0920d041b9bc45",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 4113
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 11425
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 11425
+}
+}
+},
+"114": {
+"N2": 192,
+"N3": 4096,
+"N4": 93648,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 120,
+"lattice_file_sha256": "a1023d2ab90896ba",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "92595db91f0f93ac",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3267
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9075
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9075
+}
+}
+},
+"115": {
+"N2": 192,
+"N3": 4096,
+"N4": 93648,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 120,
+"lattice_file_sha256": "b2e444ae9a20e5a9",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d4601c69d4dff919",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 7280
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 22295
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 22295
+}
+}
+},
+"116": {
+"N2": 200,
+"N3": 4096,
+"N4": 93456,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 124,
+"lattice_file_sha256": "7864d7499eee1f12",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "bf324082979e9acb",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 10260
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 13965
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 18240
+}
+}
+},
+"117": {
+"N2": 208,
+"N3": 4096,
+"N4": 93264,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 128,
+"lattice_file_sha256": "4f95bae9c16aae8b",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d9da98185864d52b",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3078
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8550
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8550
+}
+}
+},
+"118": {
+"N2": 208,
+"N3": 4096,
+"N4": 93264,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 128,
+"lattice_file_sha256": "8fe2949402169018",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "eab94c48328d21db",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 13104
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 23296
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 44044
+}
+}
+},
+"119": {
+"N2": 208,
+"N3": 4096,
+"N4": 93264,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 128,
+"lattice_file_sha256": "b13281a8d4d4c84e",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "15179bdee1f90879",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 25434
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 25434
+},
+"N4": {
+"max_abs_coordinate": 14,
+"absolute_sum_bound": 61544
+}
+}
+},
+"120": {
+"N2": 208,
+"N3": 4096,
+"N4": 93264,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 128,
+"lattice_file_sha256": "416083c3abfee226",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "fec8807c97945db2",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15480
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 21070
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 34830
+}
+}
+},
+"121": {
+"N2": 208,
+"N3": 4096,
+"N4": 93264,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 128,
+"lattice_file_sha256": "c7bf7a8843f369a2",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "2ce5f2506d8e9e2c",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 6896
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15516
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 21119
+}
+}
+},
+"122": {
+"N2": 208,
+"N3": 4096,
+"N4": 93264,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 128,
+"lattice_file_sha256": "e9be631650af5cf0",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "4f40dccad3807b1e",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15048
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15048
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 33858
+}
+}
+},
+"123": {
+"N2": 216,
+"N3": 4096,
+"N4": 93072,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 132,
+"lattice_file_sha256": "a0edb1106b223e42",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "773206bf463a3116",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9975
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9975
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 14364
+}
+}
+},
+"124": {
+"N2": 224,
+"N3": 4096,
+"N4": 92880,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 136,
+"lattice_file_sha256": "59aecc2dd0156e69",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "7f145e914f73cacd",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 11304
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 15386
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 25434
+}
+}
+},
+"125": {
+"N2": 224,
+"N3": 4096,
+"N4": 92880,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 136,
+"lattice_file_sha256": "a1da3824a308241f",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d63579418260d3e5",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 10575
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 15228
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 27072
+}
+}
+},
+"126": {
+"N2": 224,
+"N3": 4096,
+"N4": 92880,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 136,
+"lattice_file_sha256": "ebad7c3736d9fbe5",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "44b24bf7c456a23e",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 33152
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 33152
+},
+"N4": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 74592
+}
+}
+},
+"127": {
+"N2": 224,
+"N3": 4096,
+"N4": 92880,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 136,
+"lattice_file_sha256": "55aa827624286585",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "068904f15b9accf4",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 20,
+"absolute_sum_bound": 175600
+},
+"N3": {
+"max_abs_coordinate": 20,
+"absolute_sum_bound": 175600
+},
+"N4": {
+"max_abs_coordinate": 34,
+"absolute_sum_bound": 507484
+}
+}
+},
+"128": {
+"N2": 224,
+"N3": 4096,
+"N4": 92880,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 136,
+"lattice_file_sha256": "877e126a7cf73236",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "5d58133fba6c01c7",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 10750
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 27520
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 34830
+}
+}
+},
+"129": {
+"N2": 224,
+"N3": 4096,
+"N4": 92880,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 136,
+"lattice_file_sha256": "78b58432fa003e21",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "6e4ccf6d839d0d37",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 22050
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 28800
+},
+"N4": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 64800
+}
+}
+},
+"130": {
+"N2": 232,
+"N3": 4096,
+"N4": 92688,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 140,
+"lattice_file_sha256": "9d316e7c1a9cd95e",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "4a35fac6cc2b7cfc",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 38000
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 45980
+},
+"N4": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 64220
+}
+}
+},
+"131": {
+"N2": 240,
+"N3": 4096,
+"N4": 92496,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 144,
+"lattice_file_sha256": "4ba2e7849e9e02a2",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "d3a8d013dbb3da59",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 10404
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 14161
+},
+"N4": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 23409
+}
+}
+},
+"132": {
+"N2": 240,
+"N3": 4096,
+"N4": 92496,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 144,
+"lattice_file_sha256": "47c326eb1be1a8fe",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "0ca3d6387a66e87e",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12888
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12888
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 22912
+}
+}
+},
+"133": {
+"N2": 256,
+"N3": 4096,
+"N4": 92112,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 152,
+"lattice_file_sha256": "05180bc907d4fb64",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "186eb886b77b61cf",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 74191
+},
+"N3": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 74191
+},
+"N4": {
+"max_abs_coordinate": 21,
+"absolute_sum_bound": 193599
+}
+}
+},
+"134": {
+"N2": 256,
+"N3": 4096,
+"N4": 92112,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 152,
+"lattice_file_sha256": "97421788084c958f",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "432cf4c8a70d9670",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 23808
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 30132
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 45012
+}
+}
+},
+"135": {
+"N2": 256,
+"N3": 4096,
+"N4": 92112,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 152,
+"lattice_file_sha256": "2141b9f145e621ff",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "97d4892e45a59344",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 23324
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 38556
+},
+"N4": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 68544
+}
+}
+},
+"136": {
+"N2": 264,
+"N3": 4096,
+"N4": 91920,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 156,
+"lattice_file_sha256": "1a74f3178d0479e8",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "29caf45a9dbd73ad",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 9950
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 25472
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 25472
+}
+}
+},
+"137": {
+"N2": 272,
+"N3": 4096,
+"N4": 91728,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 160,
+"lattice_file_sha256": "27a7d98335bac659",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "3c1e033e67656c7a",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 12,
+"absolute_sum_bound": 55584
+},
+"N3": {
+"max_abs_coordinate": 13,
+"absolute_sum_bound": 65234
+},
+"N4": {
+"max_abs_coordinate": 18,
+"absolute_sum_bound": 125064
+}
+}
+},
+"138": {
+"N2": 272,
+"N3": 4096,
+"N4": 91728,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 160,
+"lattice_file_sha256": "a427e5d14dc38859",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "47e4201caef971e1",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 34,
+"absolute_sum_bound": 456620
+},
+"N3": {
+"max_abs_coordinate": 34,
+"absolute_sum_bound": 456620
+},
+"N4": {
+"max_abs_coordinate": 51,
+"absolute_sum_bound": 1027395
+}
+}
+},
+"139": {
+"N2": 272,
+"N3": 4096,
+"N4": 91728,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 160,
+"lattice_file_sha256": "d244c2bf1c77fba4",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "aa2f253a8bf57bab",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 4581
+},
+"N3": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 8144
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 12725
+}
+}
+},
+"140": {
+"N2": 288,
+"N3": 4096,
+"N4": 91344,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 168,
+"lattice_file_sha256": "80d0bb94ee27cc2d",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "ad5326f389d98e2f",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 11916
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 16219
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 21184
+}
+}
+},
+"141": {
+"N2": 288,
+"N3": 4096,
+"N4": 91344,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 168,
+"lattice_file_sha256": "028131a6ac161c6d",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "80ffc1c9d10fcf56",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 23733
+},
+"N3": {
+"max_abs_coordinate": 9,
+"absolute_sum_bound": 23733
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 35453
+}
+}
+},
+"142": {
+"N2": 304,
+"N3": 4096,
+"N4": 90960,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 176,
+"lattice_file_sha256": "d61de1525786fdbf",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "96f8238dc998a5bd",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12888
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 22912
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 35800
+}
+}
+},
+"143": {
+"N2": 312,
+"N3": 4096,
+"N4": 90768,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 180,
+"lattice_file_sha256": "eb9f0d23f59c60d2",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "53f453a6ba6fde01",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 32900
+},
+"N3": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 39809
+},
+"N4": {
+"max_abs_coordinate": 11,
+"absolute_sum_bound": 39809
+}
+}
+},
+"144": {
+"N2": 328,
+"N3": 4096,
+"N4": 90384,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 188,
+"lattice_file_sha256": "9d4e880e1b487507",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "560e63fdcec7b465",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 29449
+},
+"N3": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 29449
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 29449
+}
+}
+},
+"145": {
+"N2": 336,
+"N3": 4096,
+"N4": 90192,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 192,
+"lattice_file_sha256": "7efb38e251833216",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "829943367f53e488",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 2,
+"absolute_sum_bound": 1208
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 7550
+},
+"N4": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 4832
+}
+}
+},
+"146": {
+"N2": 336,
+"N3": 4096,
+"N4": 90192,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 192,
+"lattice_file_sha256": "c1d582f228544360",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "7cf10509ae80579d",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 5216
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 11736
+},
+"N4": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 20864
+}
+}
+},
+"147": {
+"N2": 352,
+"N3": 4096,
+"N4": 89808,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 200,
+"lattice_file_sha256": "0ec344e5c7e78f14",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "1bbaacb6954aa660",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8100
+},
+"N3": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 8100
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 15876
+}
+}
+},
+"148": {
+"N2": 368,
+"N3": 4096,
+"N4": 89424,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 208,
+"lattice_file_sha256": "e484945eda92fa4c",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "5a180793f3775516",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 3573
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 14292
+},
+"N4": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 14292
+}
+}
+},
+"149": {
+"N2": 368,
+"N3": 4096,
+"N4": 89424,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 208,
+"lattice_file_sha256": "978de313a56aa254",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "71231d9ec19ea0cd",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 11800
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 16992
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 23128
+}
+}
+},
+"150": {
+"N2": 368,
+"N3": 4096,
+"N4": 89424,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 208,
+"lattice_file_sha256": "6bc0dee6fd86ad2a",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "e3c7790e18a3d0ad",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 51,
+"absolute_sum_bound": 1079415
+},
+"N3": {
+"max_abs_coordinate": 51,
+"absolute_sum_bound": 1079415
+},
+"N4": {
+"max_abs_coordinate": 84,
+"absolute_sum_bound": 2928240
+}
+}
+},
+"151": {
+"N2": 400,
+"N3": 4096,
+"N4": 88656,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 224,
+"lattice_file_sha256": "ba0fcc65e2534045",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "7aa5a270a3f6f257",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 12816
+},
+"N3": {
+"max_abs_coordinate": 8,
+"absolute_sum_bound": 22784
+},
+"N4": {
+"max_abs_coordinate": 10,
+"absolute_sum_bound": 35600
+}
+}
+},
+"152": {
+"N2": 464,
+"N3": 4096,
+"N4": 87120,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 256,
+"lattice_file_sha256": "226a18e658f899e5",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "7cb846e1d74be285",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 14,
+"absolute_sum_bound": 58408
+},
+"N3": {
+"max_abs_coordinate": 14,
+"absolute_sum_bound": 58408
+},
+"N4": {
+"max_abs_coordinate": 22,
+"absolute_sum_bound": 144232
+}
+}
+},
+"153": {
+"N2": 528,
+"N3": 4096,
+"N4": 85584,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 288,
+"lattice_file_sha256": "04bd7a096f8e8a15",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "fb6f0d2c5acf4e55",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 3,
+"absolute_sum_bound": 2502
+},
+"N3": {
+"max_abs_coordinate": 4,
+"absolute_sum_bound": 4448
+},
+"N4": {
+"max_abs_coordinate": 5,
+"absolute_sum_bound": 6950
+}
+}
+},
+"154": {
+"N2": 552,
+"N3": 4096,
+"N4": 85008,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 300,
+"lattice_file_sha256": "74fda1a4ebffcc22",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "4359512bed50852e",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 21420
+},
+"N3": {
+"max_abs_coordinate": 6,
+"absolute_sum_bound": 21420
+},
+"N4": {
+"max_abs_coordinate": 7,
+"absolute_sum_bound": 29155
+}
+}
+},
+"155": {
+"N2": 592,
+"N3": 4096,
+"N4": 84048,
+"basis_of_U": true,
+"norms_exact": true,
+"distinct_up_to_sign": true,
+"identity": true,
+"ok": true,
+"S2_pairs": 320,
+"lattice_file_sha256": "91dc7a31015762eb",
+"engine_sha256": "1591aeeac9c0be5c",
+"basis_sha": "68591231eb31fb84",
+"integer_norm_bounds": {
+"N2": {
+"max_abs_coordinate": 19,
+"absolute_sum_bound": 192052
+},
+"N3": {
+"max_abs_coordinate": 15,
+"absolute_sum_bound": 119700
+},
+"N4": {
+"max_abs_coordinate": 33,
+"absolute_sum_bound": 579348
+}
+}
+}
+}

@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "lattices": 156,
+  "shells_with_overflow_bounds": 468,
+  "max_norm_contraction_absolute_sum_bound": 2928240,
+  "max_absolute_coordinate": 84,
+  "all_counts_match_both_lab_tables": true,
+  "all_input_hashes_checked": true,
+  "all_package_generators_match_lab_input": true,
+  "all_bases_match_second_lab_table": true,
+  "engine_sha256": "1591aeeac9c0be5c529a2ff492e66d390138cd221cba2ab67aac81748de9b759",
+  "fresh_report_sha256": "a240c51d41407d13b9df0a8a89f85fba0dcdd67b2d2712347ae2317ffa638ab4",
+  "historical_runs_individually_certified": false,
+  "run_elapsed_seconds_reported": 148
+}

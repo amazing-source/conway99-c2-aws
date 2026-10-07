@@ -229,6 +229,23 @@ Snapshot SHA256 pins (file bytes):
   the texts agree after CRLF-to-LF normalization.
 - Archived collector: `a957667ea0e10ed1b46cebb689b0892467647a3a6012046d92f6063f7cf4c856`.
 
+**Follow-up, message 74: the recorded H2 coverage is now complete, 25/25.**
+CDX parsed the replacement coverage report: every lattice is covered and
+every `exposed_not_excluded_again` is zero. For 003, 179 first-normal
+representatives are covered by 177 audit files; the other three,
+`[162,176,181]`, use fixed-normal certificates conditional on T18 and T20.
+All three also belong to the independently checked witnesses in
+`../t20_CODEX/CERT_003_FIXED_Y1.json`. There are no missing representatives.
+The 17,698,621 actually audited pairs include 316 exposed pairs, all
+recorded as re-excluded. Adding the two recorded but theorem-disposed
+chunks (19,635 and 39,056 pairs) gives the recorded sweep total 17,757,312.
+No count is fabricated for representative 181, which has no pair record.
+This closes the outstanding H2 coverage/re-search requirement at the level
+of the archived results and conditional certificates, with the source,
+verdict and provenance scope of this report unchanged. The new coverage
+report's LF-byte SHA256 is
+`2c73718a9455fc8caac31918636f8e1f6788e357c06bde084bd59db8f9d4a271`.
+
 ### H3. Exhaustive numerical catalogues are not certified by exact acceptance
 
 FD:69-131 prunes Fincke-Pohst branches with floating Cholesky/LDL data and
@@ -283,6 +300,22 @@ acceptance premises hold. This referee pass did not recheck the underlying
 the measurement script to attach its exact membership/norm/distinctness
 checks to the archived table. The other numerical rank/type and floating
 predicate qualifications above are not removed by this count argument.
+
+**Follow-up, message 74: fresh exact acceptance for all 156 local inputs.**
+LAB archived the recovered first command (which checked fewer premises)
+and a replacement `q/tools/lab_2026-10-07/shell_counts.py`. CDX read it,
+added an explicit no-overflow bound for its int64 norm contractions, and
+reran it on all 156 inputs into a fresh referee output. In 148 seconds,
+all basis/Gram, norm, distinctness/sign and joint-count checks passed.
+The maximum of the 468 contraction bounds is 2,928,240, below 2^63.
+Counts agree with both lab tables; every input hash and basis hash matches,
+and the package's 156 generator matrices agree with the lab inputs.
+The data, summary, commands and scope are in
+`../t20_CODEX/REFEREE_SHELL_COUNTS.md`. Short-shell completeness is certified
+for these rebuilt local catalogues under the stated lattice hypotheses.
+This is not retroactive acceptance of every historical machine or older
+engine catalogue, nor certification of the shadow-vector lists or the
+other numerical decisions identified in H3.
 
 ### H4. Budget model versus negative solver verdict
 

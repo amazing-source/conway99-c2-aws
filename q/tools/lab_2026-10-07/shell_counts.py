@@ -4,10 +4,12 @@
 
 For each lattice, the lists are the ones the search engine builds for its candidates: frame_dfs_next.lattice_data(gens, 1) of the
 package c2_cloud_run_v10, on external_runs/structures_3eceb4d/U/<lid>.json: R (roots), X3, X4 (norms 3 and 4), one vector per
-pair +-x, in integer coordinates of the engine's basis B. Checked here in exact arithmetic (Python integers / fractions):
+pair +-x, in integer coordinates of the engine's basis B. Checked with Python integers / fractions for the basis and bounds,
+and int64 norms guarded by an explicit bound excluding overflow:
   a. B is a basis of U: every row of B is an integer combination of the 24 generators of the lattice file, with a coefficient
      matrix of determinant +-1; G = B B^T is the engine's Gram matrix, integral, of determinant 1;
   b. every listed vector has integer coordinates (so it is in U) and exactly the norm of its list (c G c^T = 2, 3, 4);
+     before einsum, M^2 sum_ij |G_ij| < 2^63 certifies all products and partial sums, where M bounds every coordinate;
   c. in each list the vectors are distinct and no vector is listed with its opposite; so the list holds exactly 2 len vectors;
   d. N4 = 196560 - 24 N2 - 24 N3 with N_k = 2 len (theta series of an odd unimodular lattice of rank 24 without norm 1).
 Why (a)-(d) prove that the three lists are complete: by (a)-(c) each N_k^enum <= N_k^true; the identity holds for the true counts;
@@ -54,8 +56,19 @@ def main():
         a = (len(gens) == 24 and all(x.denominator == 1 for r in T for x in r) and abs(tdet) == 1 and
              all(Gq[p][q] == int(G[p][q]) for p in range(24) for q in range(24)) and det == 1)
         res = {}; b = True; c = True
+        norm_bounds = {}
+        gram_abs_sum = sum(abs(int(v)) for v in G.flat)
         for name, key, norm in (("N2", "R", 2), ("N3", "X3", 3), ("N4", "X4", 4)):
-            X = np.asarray(L[key], dtype=np.int64).reshape(-1, 24)
+            raw = np.asarray(L[key])
+            assert raw.dtype == np.dtype(np.int64), "integer coordinates required before any cast"
+            X = raw.reshape(-1, 24)
+            # Python-integer bound on the sum of absolute values of ALL
+            # terms x_i G_ij x_j, hence on every int64 contraction partial
+            # sum. Never claim exactness merely because einsum is integral.
+            max_coordinate = max(abs(int(X.min())), abs(int(X.max()))) if X.size else 0
+            norm_bound = max_coordinate * max_coordinate * gram_abs_sum
+            assert norm_bound < 2**63, "possible int64 norm overflow"
+            norm_bounds[name] = dict(max_abs_coordinate=max_coordinate, absolute_sum_bound=norm_bound)
             b &= bool((np.einsum("ij,jk,ik->i", X, G, X) == norm).all()) if len(X) else True
             S = {tuple(int(v) for v in x) for x in X}
             c &= len(S) == len(X) and not any(tuple(-v for v in x) in S for x in S)
@@ -63,7 +76,8 @@ def main():
         d = res["N4"] == 196560 - 24 * res["N2"] - 24 * res["N3"]
         done[lid] = dict(res, basis_of_U=bool(a), norms_exact=bool(b), distinct_up_to_sign=bool(c), identity=bool(d), ok=bool(a and b and c and d),
                          S2_pairs=int(len(L["S2"])), lattice_file_sha256=hashlib.sha256(open(uf, "rb").read()).hexdigest()[:16], engine_sha256=esha,
-                         basis_sha=hashlib.sha256(json.dumps([[str(x) for x in row] for row in L["B"]]).encode()).hexdigest()[:16])
+                         basis_sha=hashlib.sha256(json.dumps([[str(x) for x in row] for row in L["B"]]).encode()).hexdigest()[:16],
+                         integer_norm_bounds=norm_bounds)
         json.dump(done, open(outf, "w"), indent=0)
     ok = sum(1 for v in done.values() if v.get("ok")); n3 = sum(1 for v in done.values() if v.get("N3") == 4096)
     print("lattices done: %d of 156; all four checks ok: %d; N3 = 4096: %d; not ok: %s; %.0f s" % (

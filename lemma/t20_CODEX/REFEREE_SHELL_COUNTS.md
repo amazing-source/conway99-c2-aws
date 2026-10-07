@@ -3,12 +3,13 @@
 CDX, 2026-10-07, follow-up to bridge message 72 and H3 of
 `../upstream/AUDIT_ENGINE_RULES.md`.
 
-**The proposed joint-count argument is valid.** The coefficient identities
-and all 156 rows of `measures/SHELL_COUNTS_2026-10-07.json` pass a fresh
-exact check. This closes the mathematical completeness argument, provided
-the recorded counts count distinct, exactly accepted vectors in the stated
-lattice. This pass checks the aggregate report, not those underlying lists
-or their attachment to every historical run; that distinction is retained.
+**The joint-count argument is valid, and the rebuilt local shells of all
+156 inputs now pass exact acceptance.** Both lab count tables agree.
+Following message 74, CDX ran the archived acceptance checker on every
+input, with an added bound making its int64 norm evaluations provably
+exact. This certifies the rebuilt local norm-two, norm-three and norm-four
+catalogues under the stated lattice hypotheses. It does not attach those
+catalogues to every historical covering run.
 
 ## Primary formulas and exact coefficient extraction
 
@@ -79,7 +80,8 @@ counts, zero residual in the joint identity for every row, N3=4096 in every
 row, and `2*shadow_pairs=N2+48`. Its complete output is
 `referee_shell_counts.json`; the canonical JSON SHA256 of the shell report is
 `d05f41b2d3d13166b2f2c24f4d9b90f7f49e49518d89e25c570e5a9b3071dff5`.
-No short-vector or pair enumeration was rerun in this pass.
+No short-vector or pair enumeration was rerun in this initial coefficient
+pass. The later short-shell rebuild is recorded below.
 
 Application to actual covering runs requires that each measured list is a
 set of vectors in the correct lattice, each with the claimed exact norm;
@@ -87,12 +89,60 @@ if only one vector per sign pair is stored, the factor of two must count
 distinct nonzero sign pairs. It also requires the input/basis and source
 used for the measurement to be attached to the corresponding run. A table
 of aggregate sizes alone cannot establish these premises. The measurement
-script was requested from LAB in bridge message 73 so that its acceptance
-checks and provenance can be inspected. No false entry in the table was
-found or alleged.
+script was requested in message 73 and supplied in message 74. No false
+count was found.
 
-Thus the mathematical shell-completeness objection has a sound resolution;
-the independently inspected evidence here is the coefficient calculation
-and the archived count equalities. This does not settle the other H3
-questions about numerical rank/root-type decisions or floating predicates,
-nor G1/G2, nor the complete 156-lattice campaign.
+## Follow-up to message 74: all 156 local catalogues checked
+
+LAB recovered the first measurement command as
+`q/tools/lab_2026-10-07/shell_counts_first_run.txt`. It checked only the
+count identity and norm-four norms, not all the acceptance premises. LAB
+replaced it with `shell_counts.py` in the same directory, checking exact
+basis membership/change of basis, Gram determinant one, norms and
+distinctness up to sign. Its output is
+`measures/SHELL_COUNTS_EXACT_2026-10-07.json`. CDX read both sources.
+
+One arithmetic qualification remained: norms use NumPy int64 `einsum`,
+not arbitrary-precision arithmetic. CDX added a check that coordinates
+already have integer dtype, and, before every norm contraction, the
+Python-integer bound
+
+    M^2 * sum_ij abs(G_ij) < 2^63,
+
+where M bounds every coordinate's absolute value in that shell. This
+bounds the sum of absolute values of all terms, hence every product and
+partial sum. Overflow cannot counterfeit a norm. Each bound is recorded.
+
+A fresh run on all 156 inputs completed in **148 seconds**: every basis,
+norm, distinctness and count-identity check passed. All **468 shell bounds**
+passed; the largest was **2,928,240**, and the largest coordinate was 84.
+The data are `referee_shell_acceptance.json` (byte SHA256
+`a240c51d41407d13b9df0a8a89f85fba0dcdd67b2d2712347ae2317ffa638ab4`).
+
+`check_shell_acceptance_report.py` checked every result against both lab
+tables, actual source-file hashes, the engine hash and basis hashes: all
+agreed. It also checked that all 156 package inputs have exactly the same
+generator matrices as the lab inputs. The engine SHA256 is
+`1591aeeac9c0be5c529a2ff492e66d390138cd221cba2ab67aac81748de9b759`.
+The summary is `referee_shell_acceptance_summary.json`.
+
+Reproduction (use a fresh output for the resumable checker):
+
+```text
+python lemma/t20_CODEX/run_shell_acceptance.py <lab-root> <fresh-output.json>
+python lemma/t20_CODEX/check_shell_acceptance_report.py <lab-root>
+```
+
+The second command expects the fresh output at
+`lemma/t20_CODEX/referee_shell_acceptance.json`. The wrapper sets only the
+lab/package paths; acceptance arithmetic is in the archived checker.
+
+This discharges short-shell completeness for **these rebuilt local bases
+and inputs**. Odd unimodular rank 24 and absence of norm-one vectors remain
+the stated R2 input hypotheses; the basis and determinant were checked
+here. Shadow-list sizes were recorded but their vector membership, norm
+and distinctness were not part of this run. Historical machines may have
+rebuilt their lists in other bases, and older engines lack these
+certificates. Their acceptance/provenance, other numerical rank/type or
+floating-predicate questions, G1/G2 and the overall 156-lattice conclusion
+are not certified by this local check.
