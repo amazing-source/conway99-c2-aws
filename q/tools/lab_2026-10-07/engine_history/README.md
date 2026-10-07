@@ -1,7 +1,7 @@
 # Engine files of 27-29/09 kept on the lab PC
 
 Found on 2026-10-07 by hashing every `*hstage_stream*.py` on the lab PC: the stream wrapper whose hash `4e310e729b7df3d0` is carried
-by 251 records of 29/09 (39 lattices, 4,409,816 pairs) is `scripts/hstage_stream_v_pre_telemetry.py`, saved at 17:50 on 29/09 just
+by 251 stored records of 29/09, of which the recount selects 234 (39 lattices, 4,409,816 pairs) is `scripts/hstage_stream_v_pre_telemetry.py`, saved at 17:50 on 29/09 just
 before the telemetry change. Earlier in the day it had been reported as "no longer on the PC": only the current
 `scripts/hstage_stream.py` had been hashed. The core of those records, `frame_dfs.py` b48cf844, is the file of package v1.
 

@@ -80,8 +80,10 @@ The records of the pair-level methods are of three kinds (column "engine" of the
   3,046,713 pairs.
 - The 29 lattices H, F, H3, and G, O: lab-PC or early runs, single reading, not recounted on 07/10.
 
-So 55 of the 91 lattices S rest for part of their pairs (7,456,529 pairs, 3.4 % of the pairs of the group; 10,802 y_1
-representatives) on runs whose exact program cannot be reproduced today, and 32 more lattices on runs that were not recounted.
+Balance for the 55 lattices S that are not entirely on package engines (10,802 y_1 representatives, 7,456,529 pairs): the
+program is identified for the lab-version records (6,282 representatives; 234 records selected by the recount, of 251 stored
+with that wrapper); it is not recorded for the 4,520 representatives of the no-version records. And 32 more lattices rest on runs
+that were not recounted.
 
 **Corollary Y1 removes most of it without any re-run (07/10, 18:20 UTC).** For each of the 55 lattices, `q/cert_y1.py --all` on
 its plan: of the 10,802 representatives above, **9,143 have a root r with (r,y_1) = +-2**, so by Corollary Y1 (Part A.2; T18 and
