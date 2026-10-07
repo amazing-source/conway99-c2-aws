@@ -14,7 +14,7 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | A2 | Route B: N(p) and the X_3 orbit in the base (the decomposition that closed n_3 = 0 at 0.3 s per base) | LAP (agent) | started 11:50 | number of bases after stage 1 for the 6 graphs x 2 profiles; measured stage-2 sample; estimated core-hours | 12:45 |
 | A3 | **Decision**: one route, with a measured cost, proposed to the user; the other route stops | LAP | pending A1, A2 | time and price | 12:45 |
 | A4 | Run of the chosen route (first program) | LAP launches | - | 0 complete configurations or the list of survivors | after A3 |
-| A5 | Second program for n_3 = 2, from `t20_HAND/SPEC_N3.md`, no shared code | CDX | implemented and locally checked 11:55; all 24 base counts match, 700 classes / 533 after hand lemmas; five 60 s timeouts and one 300 s timeout recorded in `t20_CODEX/n3_second/MEASUREMENTS.md`; route-A performance work on hold, no exclusion claimed | adapt the exact checker and runner to the chosen route after the 12:45 decision; route-B specification needed if B is chosen; job wrapper already written | 14:00 |
+| A5 | Route-B model/specification review, independent of the first search implementation; route-A checker retained as an unused record | CDX | route B selected per coordination message 46; D3 first pass delivered, route-A optimization stopped; laptop already supplies the second route-B program, so no redundant full third run planned | review the self-contained route-B specification when published, especially stage-1 coverage, all 84 attachments of z to N(p), and quotient by the stabilizer of {U3,V3} | upon specification delivery |
 
 ## B. Already closed (do not redo)
 
