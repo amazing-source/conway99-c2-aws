@@ -1,5 +1,3 @@
-2026-10-07 00:05:38 start 011:507:2950 (est 0.44 h) [deferral mode]
-2026-10-07 00:05:38 start 011:508:2950 (est 0.44 h) [deferral mode]
 2026-10-07 00:05:38 start 011:509:2950 (est 0.44 h) [deferral mode]
 2026-10-07 00:05:38 start 011:510:2950 (est 0.44 h) [deferral mode]
 2026-10-07 00:05:38 start 011:511:2950 (est 0.44 h) [deferral mode]
@@ -58,3 +56,5 @@
 2026-10-07 00:07:53 start 007:943:1234 (est 0.26 h) [deferral mode]
 2026-10-07 00:07:53 start 007:944:1234 (est 0.26 h) [deferral mode]
 2026-10-07 00:08:23 done 009:337:353 in 133 s
+2026-10-07 00:08:25 start 007:945:1234 (est 0.26 h) [deferral mode]
+2026-10-07 00:08:55 done 011:2618:2950 in 267 s
