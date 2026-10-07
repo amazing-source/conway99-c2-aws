@@ -1,0 +1,79 @@
+{
+ "080": {
+  "jobs": 3,
+  "pairs": 132068,
+  "not_excluded_again": 0,
+  "ok": 3,
+  "setup_impossible": 0,
+  "general": 131900,
+  "rigid": 168,
+  "with_zero_candidate": 132068,
+  "exposed": 168
+ },
+ "101": {
+  "jobs": 8,
+  "pairs": 62300,
+  "not_excluded_again": 0,
+  "ok": 8,
+  "setup_impossible": 0,
+  "general": 62116,
+  "rigid": 184,
+  "with_zero_candidate": 62300,
+  "exposed": 184
+ },
+ "103": {
+  "jobs": 8,
+  "pairs": 64596,
+  "not_excluded_again": 0,
+  "ok": 8,
+  "setup_impossible": 0,
+  "general": 64432,
+  "rigid": 164,
+  "with_zero_candidate": 64596,
+  "exposed": 164
+ },
+ "104": {
+  "jobs": 8,
+  "pairs": 70108,
+  "not_excluded_again": 0,
+  "ok": 8,
+  "setup_impossible": 0,
+  "general": 70066,
+  "rigid": 42,
+  "with_zero_candidate": 70108,
+  "exposed": 42
+ },
+ "105": {
+  "jobs": 8,
+  "pairs": 56544,
+  "not_excluded_again": 0,
+  "ok": 8,
+  "setup_impossible": 0,
+  "general": 56480,
+  "rigid": 64,
+  "with_zero_candidate": 56544,
+  "exposed": 64
+ },
+ "137": {
+  "jobs": 1,
+  "pairs": 1208,
+  "not_excluded_again": 0,
+  "ok": 1,
+  "setup_impossible": 0,
+  "general": 1208,
+  "rigid": 0,
+  "with_zero_candidate": 1208,
+  "exposed": 0
+ },
+ "138": {
+  "jobs": 1,
+  "pairs": 1026,
+  "not_excluded_again": 0,
+  "ok": 1,
+  "setup_impossible": 0,
+  "general": 1018,
+  "rigid": 8,
+  "with_zero_candidate": 1026,
+  "exposed": 8
+ }
+}
