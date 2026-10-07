@@ -1,1 +1,6 @@
 2026-10-07 13:29:35 certificate runner start: 1294 records of 7762 (part 2/6), 8 at a time
+2026-10-07 13:30:45 certified 003:63:182 in 68 s
+2026-10-07 13:30:47 certified 003:62:182 in 70 s
+2026-10-07 13:31:11 certified 003:149:182 in 94 s
+2026-10-07 13:31:15 certified 003:150:182 in 98 s
+2026-10-07 13:31:21 certified 005:259:569 in 104 s
