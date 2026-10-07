@@ -1,12 +1,3 @@
-2026-10-07 13:54:19 audited 077_5_8 in 34 s: pairs 9091, counts {'setup_impossible': 0, 'general': 9082, 'rigid': 9, 'with_zero_candidate': 9091, 'exposed': 9}
-2026-10-07 13:54:31 audited 079_3_8 in 34 s: pairs 8481, counts {'setup_impossible': 0, 'general': 8477, 'rigid': 4, 'with_zero_candidate': 8481, 'exposed': 4}
-2026-10-07 13:54:31 audited 079_7_8 in 32 s: pairs 9450, counts {'setup_impossible': 0, 'general': 9444, 'rigid': 6, 'with_zero_candidate': 9450, 'exposed': 6}
-2026-10-07 13:54:37 audited 079_1_8 in 40 s: pairs 15607, counts {'setup_impossible': 0, 'general': 15593, 'rigid': 14, 'with_zero_candidate': 15607, 'exposed': 14}
-2026-10-07 13:54:37 audited 079_5_8 in 40 s: pairs 12079, counts {'setup_impossible': 0, 'general': 12065, 'rigid': 14, 'with_zero_candidate': 12079, 'exposed': 14}
-2026-10-07 13:57:05 audited 052_2_3 in 168 s: pairs 66713, counts {'setup_impossible': 0, 'general': 66661, 'rigid': 52, 'with_zero_candidate': 66713, 'exposed': 52}
-2026-10-07 13:57:15 audited 052_0_3 in 184 s: pairs 73240, counts {'setup_impossible': 0, 'general': 73170, 'rigid': 70, 'with_zero_candidate': 73240, 'exposed': 70}
-2026-10-07 13:57:15 audited 049_1_3 in 178 s: pairs 96263, counts {'setup_impossible': 0, 'general': 96222, 'rigid': 41, 'with_zero_candidate': 86003, 'exposed': 41}
-2026-10-07 13:58:12 audited 050_2_11 in 219 s: pairs 77806, counts {'setup_impossible': 0, 'general': 77789, 'rigid': 17, 'with_zero_candidate': 73786, 'exposed': 17}
 2026-10-07 13:58:22 audited 050_4_11 in 229 s: pairs 107324, counts {'setup_impossible': 0, 'general': 107281, 'rigid': 43, 'with_zero_candidate': 95744, 'exposed': 43}
 2026-10-07 13:58:34 audited 050_0_11 in 253 s: pairs 85463, counts {'setup_impossible': 0, 'general': 85435, 'rigid': 28, 'with_zero_candidate': 78727, 'exposed': 24}
 2026-10-07 13:58:36 audited 050_6_11 in 237 s: pairs 84073, counts {'setup_impossible': 0, 'general': 84049, 'rigid': 24, 'with_zero_candidate': 78657, 'exposed': 24}
@@ -58,3 +49,12 @@
 2026-10-07 14:19:47 audited 024_11_34 in 166 s: pairs 87856, counts {'setup_impossible': 0, 'general': 87842, 'rigid': 14, 'with_zero_candidate': 75700, 'exposed': 14}
 2026-10-07 14:20:38 audited 024_13_34 in 212 s: pairs 96391, counts {'setup_impossible': 0, 'general': 96380, 'rigid': 11, 'with_zero_candidate': 85897, 'exposed': 11}
 2026-10-07 14:21:22 audited 024_15_34 in 188 s: pairs 97071, counts {'setup_impossible': 0, 'general': 97062, 'rigid': 9, 'with_zero_candidate': 80089, 'exposed': 9}
+2026-10-07 14:22:16 audited 024_17_34 in 217 s: pairs 121339, counts {'setup_impossible': 0, 'general': 121321, 'rigid': 18, 'with_zero_candidate': 101597, 'exposed': 18}
+2026-10-07 14:22:52 audited 024_25_34 in 187 s: pairs 58693, counts {'setup_impossible': 0, 'general': 58686, 'rigid': 7, 'with_zero_candidate': 54184, 'exposed': 7}
+2026-10-07 14:22:56 audited 024_21_34 in 237 s: pairs 97499, counts {'setup_impossible': 0, 'general': 97485, 'rigid': 14, 'with_zero_candidate': 88534, 'exposed': 14}
+2026-10-07 14:23:10 audited 024_23_34 in 221 s: pairs 125421, counts {'setup_impossible': 0, 'general': 125402, 'rigid': 19, 'with_zero_candidate': 114618, 'exposed': 19}
+2026-10-07 14:24:02 audited 024_27_34 in 253 s: pairs 107066, counts {'setup_impossible': 0, 'general': 107052, 'rigid': 14, 'with_zero_candidate': 98402, 'exposed': 14}
+2026-10-07 14:24:22 audited 024_19_34 in 325 s: pairs 102792, counts {'setup_impossible': 0, 'general': 102786, 'rigid': 6, 'with_zero_candidate': 92341, 'exposed': 6}
+2026-10-07 14:25:06 audited 024_31_34 in 223 s: pairs 82313, counts {'setup_impossible': 0, 'general': 82306, 'rigid': 7, 'with_zero_candidate': 73907, 'exposed': 7}
+2026-10-07 14:25:20 audited 024_29_34 in 281 s: pairs 112203, counts {'setup_impossible': 0, 'general': 112199, 'rigid': 4, 'with_zero_candidate': 103729, 'exposed': 4}
+2026-10-07 14:25:50 audited 024_33_34 in 212 s: pairs 82960, counts {'setup_impossible': 0, 'general': 82946, 'rigid': 14, 'with_zero_candidate': 74004, 'exposed': 14}
