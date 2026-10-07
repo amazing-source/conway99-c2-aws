@@ -39,6 +39,10 @@ CLASSES = ("excl_at_once", "excl_search", "twin", "swap", "defer_T18", "defer_T2
 
 
 def cls(v):
+    # 07/10 (Codex, engine audit): frame_dfs_next.joint keeps at most 1000 joint star sums per leaf and has no "incomplete" flag, so
+    # the verdict "joint star sums, but (F) fails" could rest on a truncated list. No stored record carries it (census of 07/10);
+    # if one ever does, it is refused here as an unknown verdict, for human review.
+    if "but (F) fails" in v: return "other"
     if v.startswith("DEFERRED (pending T18"): return "defer_T18"
     if v.startswith("DEFERRED (pending T20"): return "defer_T20"
     if "INCOMPLETE" in v: return "incomplete"
