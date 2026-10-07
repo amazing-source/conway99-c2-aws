@@ -5,3 +5,7 @@
 2026-10-07 05:46:21 done 005:473:569 in 1854 s
 2026-10-07 05:46:29 start 003:175:182 on 124 shards, 31 at a time
 2026-10-07 06:05:07 done 003:175:182 in 1118 s
+2026-10-07 06:05:14 skip 005:528:569 (already done)
+2026-10-07 06:05:16 skip 005:414:569 (already done)
+2026-10-07 06:05:17 skip 005:432:569 (already done)
+2026-10-07 06:05:17 FINI: tail runner: 3 done, 0 failed
