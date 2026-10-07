@@ -1,4 +1,4 @@
-# Route (C): the final statement and what it rests on — DRAFT of 2026-10-07, 12:50 UTC
+# Route (C): the final statement and what it rests on — DRAFT of 2026-10-07, state at about 13:00 UTC
 
 Lab session (Claude). Board line D5 of `lemma/T20_BOARD.md` (compute repo). This is a recheck by an AI session, not a human
 referee and not a formal proof.
@@ -30,7 +30,7 @@ of the proof skeleton). T4 and the reconstruction direction are not used for sta
 | R5 | Each pair is excluded by one of: characteristic-vector trap; pair set-up; dual minimum 9/7 (norm-3 x with Y = 13); exact search (stage 1, stage 2); swap coverage; twin transfer / deferral; lemmas T18 / T20 through a witness root | engine `frame_dfs_next.py` (v10 sha 1591aeea) and earlier versions; `q/defer_consumer.py` | Y = 13 rule: OK-REREAD + independent agent (04/10). Search engine: calibrations between versions; code not re-read line by line (audit item L2). Deferral rule: second computation = certificates (R8) |
 | R6 | T18: no sigma-odd integer (-4)-eigenfunction of squared norm 18 | `lemma/T18_PROOF.md` | proved and refereed twice per the laptop session; every computation by at least three programs. Not re-read by me |
 | R7 | T20: the same for squared norm 20 | `lemma/T20_PROOF.md` | see section 3 |
-| R8 | Bridge: a root r of U with (r,y1)^2 + (r,y2)^2 = 5, resp. 4, gives an eigenfunction of squared norm 18, resp. 20; needs y1, y2 in U of norm 7 and orthogonal | `lemma/BRIDGE.md`; certificates `q/cert_stream.py`, `cert_golay.py` | bridge refereed (laptop); same computation as my Y = 13 check. Certificates: Golay 001 / 002 done (17,983 pairs, 0 invalid); stream: running (7,762 records, 7,681,064 pairs) |
+| R8 | Bridge: for every v in U, the projection of v on {y1, y2}^perp is in the dual of the frame lattice and gives a sigma-odd integer (-4)-eigenfunction of squared norm 2 E(v), E(v) = 7 N(v) - (v,y1)^2 - (v,y2)^2; needs y1, y2 in U of norm 7 and orthogonal. Witnesses used: norm 3 with Y = 13 (E = 8, engine filter); root with Y = 5 (E = 9, T18); root with Y = 4 or norm-4 vector with (+-3, +-3) (E = 10, T20). **These rules are complete for E <= 10** (hand remark of 07/10: subtracting multiples of y1, y2 one may take |(v,y1)|, |(v,y2)| <= 3, and N(v) = (E + a^2 + b^2)/7 leaves only these cases) | `lemma/BRIDGE.md`; certificates `q/cert_stream.py` (roots and norm-4 vectors), `cert_golay.py` | bridge refereed (laptop); same computation as my Y = 13 check; norm-4 case re-derived by me on 07/10. Certificates: Golay 001 / 002 done (17,983 pairs, 0 invalid); stream: running (7,762 records, 7,681,064 pairs; first part: 11 certified, 0 failed at 12:39) |
 | R9 | Coverage: every lattice has every pair accounted for | lab tracker and records | section 4 |
 
 ## 3. T20 on 07/10, 12:50 UTC
@@ -41,7 +41,7 @@ of the proof skeleton). T4 and the reconstruction direction are not used for sta
 | k = 4: III.0, III.1; k = 2: IIa.0 | excluded, computed | two each (III.1: second program complete on 07/10) |
 | k = 0, hand reductions: no vertex of N(p) with d = 3; n_3 in {0, 2}; profile (5,0,2) impossible | hand; the two used for n_3 = 2 re-derived by me on 07/10 | - |
 | k = 0, n_3 = 0: six graphs x two profiles | excluded, computed: 615,405 bases, 0 complete | first program complete; second complete on some cases, running on the others (board, lines C2-C4) |
-| k = 0, n_3 = 2 | route B (N(p) and the X_3 orbit in the base): profile (4,2,1) finished, 8,557 bases, 0 complete; profile (3,4,0) finishing; figures as reported by the laptop session at 12:45, not yet in the repository | first program finishing; second running |
+| k = 0, n_3 = 2 | route B (N(p) and the X_3 orbit in the base, 37 vertices; the 25 types of z, two profiles): **first program complete on the 50 cases: 64,528 bases, 86,968 nodes, at most 3 orbits of X_2 placed, 0 complete configuration, rank bound never used** (profile (4,2,1): 8,557 bases; (3,4,0): 55,971); figures of the laptop session at 12:55, board line A4; report and specification not yet in the repository | first program complete; second program agreeing on I.0, running on the 48 other cases |
 | Hand lemmas of Codex (isolation of the inner X_0 pair, a_3 = 1, e(X_0) <= 8) | proved, re-read line by line by me; NOT used by the computations | - |
 | Route A for n_3 = 2 (my decomposition) | not run: measured at about 1,000 core-hours; 183 of 700 base classes closed, 0 complete (a partial cross-check only) | - |
 | Referee pass on the text | first pass done on sections 1-10 (Codex, `lemma/t20_CODEX/REFEREE_T20_PROOF.md`): no fatal gap, two repairable errors, three audit gaps; second pass needed on 9.B and the conclusion | - |
@@ -75,11 +75,12 @@ with the final engine on free machines and compare.
 
 ## 5. What must still happen before statement A may be claimed
 
-1. T20, n_3 = 2: first program finished and its counts in the repository; second program complete and agreeing.
+1. T20, n_3 = 2: the report, the specification and the outputs of route B in the repository; second program complete and agreeing.
 2. T20, n_3 = 0: second program complete on the remaining cases.
 3. One referee pass on `lemma/T20_PROOF.md` (section 9.B written after 1), with no open error.
 4. Certificate run complete: every one of the 7,762 stream records certified; any record not certified is a pair to treat apart.
-5. 003:181:182 finished, or its pairs treated apart.
+5. 003:181:182 finished (re-run since 13:00 UTC with the norm-4 deferral rule Q_DEFER_N4; its pairs without witness have E >= 11 and
+   are searched), its record imported and its deferred pairs certified (a separate manifest: the six-part manifest must not change).
 6. Archival (referee's point G1, `lemma/t20_CODEX/REFEREE_T20_PROOF.md`): for every computation cited by T18 and T20, the per-base outputs
    and plans, the exact source revision, the hashes of the input lists, the commands and the completion checks are in the repository
    (some are still only in session scratch folders).
