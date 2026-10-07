@@ -101,7 +101,7 @@ is; not a certified archive). The user decided on 07/10 not to re-run the lab-lo
 
 ## 5. What must still happen before the statement may be claimed
 
-1. T20: archival G1 (outputs, source revisions, commands of every computation cited).
+1. ~~T20: archival G1~~ done at 15:26 per the laptop session (`lemma/ARTIFACTS_T18_T20.md`: one line per computation of T16 / T18 / T20, program versions, run branches; raw outputs of n_3 = 2 on the branch `lemma-archive/t20_n3_routeB`). Not reviewed by me or by Codex; the page says itself that the machines did not record the commit they cloned (versions inferred from launch times). Left in the text of T20: G2 (wording of the verifier contract).
 2. Rigid-kernel audit H2: 003, representatives 2, 3, 180 (running), with every exposed pair excluded again.
 3. 143: Codex's referee pass on `LATTICE_143.md`.
 4. The two last stream certificates (003:162:182, 006:224:228). Done: 7,760 of 7,762.
