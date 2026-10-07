@@ -1,6 +1,6 @@
 {
  "inputs": {
-  "STREAM_RECOUNT": "419040c1a2e3caed",
+  "STREAM_RECOUNT": "f6e840b91772c825",
   "SWEEP_LAB": "ac6fc3e6a3929dda",
   "CERT_CENSUS": "3836b0d82ecf20a3",
   "AUDIT_COVERAGE": "bb7abd1ac7a969e7",
@@ -838,7 +838,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 223; no version 76 of 299 y1",
+   "eng": "package 223; no version 76 of 299 y1; of the 76 not on a package engine, 65 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1051604 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\043\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -933,7 +933,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 96; lab version 14 of 110 y1",
+   "eng": "package 96; lab version 14 of 110 y1; of the 14 not on a package engine, 13 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 301557 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\048\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -952,7 +952,7 @@
    "cert": "",
    "h2": "129 exposed, all excluded again",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 146; lab version 25; no version 25 of 196 y1",
+   "eng": "package 146; lab version 25; no version 25 of 196 y1; of the 50 not on a package engine, 39 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 296093 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\049\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -971,7 +971,7 @@
    "cert": "",
    "h2": "343 exposed, all excluded again",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 460; no version 66 of 526 y1",
+   "eng": "package 460; no version 66 of 526 y1; of the 66 not on a package engine, 60 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1011185 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\050\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -990,7 +990,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 57; lab version 57; no version 116 of 230 y1",
+   "eng": "package 57; lab version 57; no version 116 of 230 y1; of the 173 not on a package engine, 129 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 318627 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\051\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1009,7 +1009,7 @@
    "cert": "",
    "h2": "196 exposed, all excluded again",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 74; lab version 15; no version 30 of 119 y1",
+   "eng": "package 74; lab version 15; no version 30 of 119 y1; of the 45 not on a package engine, 41 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 210503 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\052\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1028,7 +1028,7 @@
    "cert": "",
    "h2": "246 exposed, all excluded again",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 516; lab version 74 of 590 y1",
+   "eng": "package 516; lab version 74 of 590 y1; of the 74 not on a package engine, 59 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1141132 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\053\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1047,7 +1047,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 626; lab version 90 of 716 y1",
+   "eng": "package 626; lab version 90 of 716 y1; of the 90 not on a package engine, 73 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 1186218 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\054\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1066,7 +1066,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 929; no version 133 of 1062 y1",
+   "eng": "package 929; no version 133 of 1062 y1; of the 133 not on a package engine, 109 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 2118801 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\055\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1085,7 +1085,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 245; lab version 49; no version 98 of 392 y1",
+   "eng": "package 245; lab version 49; no version 98 of 392 y1; of the 147 not on a package engine, 128 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 802087 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\056\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1104,7 +1104,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC (part on machine branches)",
-   "eng": "package 233; lab version 58; no version 176 of 467 y1",
+   "eng": "package 233; lab version 58; no version 176 of 467 y1; of the 234 not on a package engine, 200 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 854034 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\057\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1123,7 +1123,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 48; no version 145 of 193 y1",
+   "eng": "lab version 48; no version 145 of 193 y1; of the 193 not on a package engine, 174 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 368757 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\058\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1256,7 +1256,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 216 of 216 y1",
+   "eng": "lab version 216 of 216 y1; of the 216 not on a package engine, 170 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 170548 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\065\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1275,7 +1275,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 319 of 319 y1",
+   "eng": "lab version 319 of 319 y1; of the 319 not on a package engine, 254 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 304034 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\066\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1294,7 +1294,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 519 of 519 y1",
+   "eng": "lab version 519 of 519 y1; of the 519 not on a package engine, 454 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 559433 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\067\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1313,7 +1313,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 622 of 622 y1",
+   "eng": "lab version 622 of 622 y1; of the 622 not on a package engine, 512 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 620319 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\068\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1332,7 +1332,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 67 of 67 y1",
+   "eng": "lab version 67 of 67 y1; of the 67 not on a package engine, 61 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 64133 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\069\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1351,7 +1351,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 246; no version 84 of 330 y1",
+   "eng": "lab version 246; no version 84 of 330 y1; of the 330 not on a package engine, 276 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 295716 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\070\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1370,7 +1370,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "package 96; lab version 60 of 156 y1",
+   "eng": "package 96; lab version 60 of 156 y1; of the 60 not on a package engine, 57 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 171216 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\071\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1406,7 +1406,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 185 of 185 y1",
+   "eng": "no version 185 of 185 y1; of the 185 not on a package engine, 159 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 161453 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\073\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1425,7 +1425,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 128; no version 385 of 513 y1",
+   "eng": "lab version 128; no version 385 of 513 y1; of the 513 not on a package engine, 399 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 367327 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\074\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1444,7 +1444,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 330 of 330 y1",
+   "eng": "no version 330 of 330 y1; of the 330 not on a package engine, 290 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 248990 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\075\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1463,7 +1463,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 116 of 116 y1",
+   "eng": "lab version 116 of 116 y1; of the 116 not on a package engine, 99 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 52015 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\076\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1482,7 +1482,7 @@
    "cert": "",
    "h2": "716 exposed, all excluded again",
    "rec": "lab PC",
-   "eng": "lab version 122 of 122 y1",
+   "eng": "lab version 122 of 122 y1; of the 122 not on a package engine, 105 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 62031 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\077\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1501,7 +1501,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 224 of 224 y1",
+   "eng": "no version 224 of 224 y1; of the 224 not on a package engine, 176 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 103,280 ordered pairs: char-vector trap (Astra, norm-16 characteristic z, (z,y1)^2+(z,y2)^2<=66; witness per pair) + stage 1 empty + local star sums; swap-covered pairs = orientation (y2,y1) searched in the same complete run. data/finishC/stream/078/chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1520,7 +1520,7 @@
    "cert": "",
    "h2": "312 exposed, all excluded again",
    "rec": "lab PC",
-   "eng": "lab version 150 of 150 y1",
+   "eng": "lab version 150 of 150 y1; of the 150 not on a package engine, 131 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 100895 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\079\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1539,7 +1539,7 @@
    "cert": "",
    "h2": "456 exposed, all excluded again",
    "rec": "lab PC",
-   "eng": "lab version 64 of 64 y1",
+   "eng": "lab version 64 of 64 y1; of the 64 not on a package engine, 62 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 31122 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\080\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1558,7 +1558,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 244 of 244 y1",
+   "eng": "lab version 244 of 244 y1; of the 244 not on a package engine, 226 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 154990 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\081\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1577,7 +1577,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 162 of 162 y1",
+   "eng": "lab version 162 of 162 y1; of the 162 not on a package engine, 144 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 90976 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\082\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1596,7 +1596,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 288 of 288 y1",
+   "eng": "lab version 288 of 288 y1; of the 288 not on a package engine, 257 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 166234 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\083\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1615,7 +1615,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 362 of 362 y1",
+   "eng": "lab version 362 of 362 y1; of the 362 not on a package engine, 302 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 169401 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\084\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1634,7 +1634,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 85 of 85 y1",
+   "eng": "lab version 85 of 85 y1; of the 85 not on a package engine, 76 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 38140 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\085\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1653,7 +1653,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 130 of 130 y1",
+   "eng": "lab version 130 of 130 y1; of the 130 not on a package engine, 115 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 74583 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\086\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1689,7 +1689,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 243 of 243 y1",
+   "eng": "lab version 243 of 243 y1; of the 243 not on a package engine, 202 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 107203 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\088\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1708,7 +1708,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 109 of 109 y1",
+   "eng": "lab version 109 of 109 y1; of the 109 not on a package engine, 93 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 49570 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\089\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1727,7 +1727,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 156 of 156 y1",
+   "eng": "lab version 156 of 156 y1; of the 156 not on a package engine, 142 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 60345 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\090\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1746,7 +1746,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 205 of 205 y1",
+   "eng": "lab version 205 of 205 y1; of the 205 not on a package engine, 177 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 71608 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\091\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1765,7 +1765,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 261 of 261 y1",
+   "eng": "lab version 261 of 261 y1; of the 261 not on a package engine, 208 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 67915 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\092\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1784,7 +1784,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 128 of 128 y1",
+   "eng": "lab version 128 of 128 y1; of the 128 not on a package engine, 110 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 32952 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\093\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1823,7 +1823,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 301; no version 102 of 403 y1",
+   "eng": "lab version 301; no version 102 of 403 y1; of the 403 not on a package engine, 337 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 144220 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\095\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1876,7 +1876,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 240; no version 80 of 320 y1",
+   "eng": "lab version 240; no version 80 of 320 y1; of the 320 not on a package engine, 272 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 82476 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\098\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1895,7 +1895,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 328 of 328 y1",
+   "eng": "no version 328 of 328 y1; of the 328 not on a package engine, 266 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 93802 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\099\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1914,7 +1914,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 378 of 378 y1",
+   "eng": "no version 378 of 378 y1; of the 378 not on a package engine, 294 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 58356 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\100\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1933,7 +1933,7 @@
    "cert": "",
    "h2": "184 exposed, all excluded again",
    "rec": "lab PC",
-   "eng": "no version 210 of 210 y1",
+   "eng": "no version 210 of 210 y1; of the 210 not on a package engine, 190 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 62300 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\101\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1952,7 +1952,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 298 of 298 y1",
+   "eng": "no version 298 of 298 y1; of the 298 not on a package engine, 256 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 49692 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\102\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1971,7 +1971,7 @@
    "cert": "",
    "h2": "164 exposed, all excluded again",
    "rec": "lab PC",
-   "eng": "lab version 79 of 79 y1",
+   "eng": "lab version 79 of 79 y1; of the 79 not on a package engine, 72 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 17228 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums / twin transfer), swap-covered, or twin-deferred to envelopes excluded since; data/finishC/stream\\103\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -1990,7 +1990,7 @@
    "cert": "",
    "h2": "42 exposed, all excluded again",
    "rec": "lab PC",
-   "eng": "no version 288 of 288 y1",
+   "eng": "no version 288 of 288 y1; of the 288 not on a package engine, 252 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 70108 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\104\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -2047,7 +2047,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 276 of 276 y1",
+   "eng": "no version 276 of 276 y1; of the 276 not on a package engine, 236 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 49804 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\107\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -2083,7 +2083,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 110 of 110 y1",
+   "eng": "lab version 110 of 110 y1; of the 110 not on a package engine, 90 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 16386 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\109\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -2102,7 +2102,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 49 of 49 y1",
+   "eng": "lab version 49 of 49 y1; of the 49 not on a package engine, 42 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 6920 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\110\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -2138,7 +2138,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 184 of 184 y1",
+   "eng": "no version 184 of 184 y1; of the 184 not on a package engine, 164 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 20846 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\112\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -2157,7 +2157,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "lab version 71 of 71 y1",
+   "eng": "lab version 71 of 71 y1; of the 71 not on a package engine, 64 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 12184 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\113\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -2176,7 +2176,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 180 of 180 y1",
+   "eng": "no version 180 of 180 y1; of the 180 not on a package engine, 150 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 19806 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\114\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -2254,7 +2254,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 114 of 114 y1",
+   "eng": "no version 114 of 114 y1; of the 114 not on a package engine, 102 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "29/09 C2 stream sweep (a): 8/8 chunks done, 11980 ordered pairs, all EXCLUDED (char trap / stage 1 with EC + boundary points / star sums) or swap-covered; data/finishC/stream\\118\\chunks.jsonl",
    "reviewed_by": [
     "C2"
@@ -2828,7 +2828,7 @@
    "cert": "",
    "h2": "",
    "rec": "lab PC",
-   "eng": "no version 9 of 9 y1",
+   "eng": "no version 9 of 9 y1; of the 9 not on a package engine, 9 have a root of product 2 (Corollary Y1, certificate checked)",
    "by": "C2 27/09 (a) DONE: frame_dfs + C1 Lemma U+ (FD_LEMMA_U=1) on all 44/44 Gamma-reduced pairs of C1 external_runs/c1_pairs/gpairs_149.json (sha256 f549e6b44b0e..., note: complete up to Aut(U) x signs, Gamma from gamma_fullrank.py checked against the table): every pair EXCLUDED at stage 1, 0 leaves, wall 42 s (data/finishC/frame_dfs/149/summary.json). PENDING per protocol: (b) second enumeration (ypairs_c2) + h-stage, (c) independent h-stage on a sample.",
    "reviewed_by": []
   },
@@ -2963,6 +2963,8 @@
   "SD": 11,
   "G": 2,
   "S": 91,
+  "y1_need": 10802,
+  "y1_have": 9143,
   "H": 13,
   "F": 14,
   "P": 10,

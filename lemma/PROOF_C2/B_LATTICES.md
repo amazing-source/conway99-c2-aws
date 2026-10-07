@@ -78,10 +78,20 @@ The records of the pair-level methods are of three kinds (column "engine" of the
   3,046,713 pairs.
 - The 29 lattices H, F, H3, and G, O: lab-PC or early runs, single reading, not recounted on 07/10.
 
-So 55 of the 91 lattices S rest for part of their pairs (7,456,529 pairs, 3.4 % of the pairs of the group) on runs whose exact
-program cannot be reproduced today, and 32 more lattices on runs that were not recounted. The user decided on 07/10 not to re-run
-them for now. A re-run of these lattices with the archived v10 engine would remove this reservation; its cost has not been
-measured.
+So 55 of the 91 lattices S rest for part of their pairs (7,456,529 pairs, 3.4 % of the pairs of the group; 10,802 y_1
+representatives) on runs whose exact program cannot be reproduced today, and 32 more lattices on runs that were not recounted.
+
+**Corollary Y1 removes most of it without any re-run (07/10, 18:20 UTC).** For each of the 55 lattices, `q/cert_y1.py --all` on
+its plan: of the 10,802 representatives above, **9,143 have a root r with (r,y_1) = +-2**, so by Corollary Y1 (Part A.2; T18 and
+T20) no frame has such a y_1, whatever y_2 and whatever the old record says. The 55 certificate files
+(`measures/cert_y1_rerun/`) all pass the standalone exact checker `q/check_cert_y1.py` (12,193 representatives checked in all,
+the certificates listing every representative with such a root, not only the 9,143). For these representatives the exclusion no
+longer rests on the lab-PC records, but it now rests on T18 and T20, like the 13 last lattices.
+
+Left: **1,659 y_1 representatives** (column "engine" of the table, per lattice) whose only records are of a lab version or without
+version, and the 32 lattices not recounted. A re-run of these representatives with the archived v10 engine would remove the
+reservation for the group S; its cost has not been measured. The user decided on 07/10 not to re-run the lab lattices for now;
+the question is put to him again with these numbers.
 
 Where the records are: 33 lattices S entirely on machine branches `run/*` of the compute repository; the others on the lab PC,
 copied as they are to the branch `lab-records-2026-10-07`.

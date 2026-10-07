@@ -52,6 +52,8 @@ def main():
     ASE = load("STREAM_RECOUNT"); SWL = load("SWEEP_LAB")["lattices"]; CC = load("CERT_CENSUS"); AC = load("AUDIT_COVERAGE")
     SH = load("SHELL_COUNTS_EXACT"); RR = load("RECONCILE_RECORDS"); LA = json.load(open(os.path.join(FC, "lemmas_accepted.json")))
     GC = {l: json.load(open(os.path.join(SW, "certs", "cert_golay_%s.json" % l))) for l in ("001", "002")}
+    Y1S = {r[0]: r for r in json.load(open(os.path.join(SW, "RERUN_Y1_SUMMARY_2026-10-07.json")))["rows"]}
+    Y1C = json.load(open(os.path.join(SW, "certs_y1_rerun", "CHECKED.json"))); assert all(Y1C[l]["ok"] for l in Y1S) and len(Y1S) == 55
     grp = {}
     for code, name, L in GROUPS:
         for i in L: assert "%03d" % i not in grp, i; grp["%03d" % i] = code
@@ -70,6 +72,9 @@ def main():
             t = a["by_tier"]; r.update(pairs=a["pairs"], search=a["excl_search"])
             r["eng"] = "package" if t["P"] == a["y1_reps"] else "; ".join(x for x in ("package %d" % t["P"] if t["P"] else "", "lab version %d" % t["L"] if t["L"] else "",
                                                                                      "no version %d" % t["N"] if t["N"] else "") if x) + " of %d y1" % a["y1_reps"]
+            if l in Y1S:
+                assert Y1S[l][1] == t["L"] + t["N"], l
+                r["eng"] += "; of the %d not on a package engine, %d have a root of product 2 (Corollary Y1, certificate checked)" % (Y1S[l][1], Y1S[l][2]); tot["y1_need"] += Y1S[l][1]; tot["y1_have"] += Y1S[l][2]
         elif g == "SD":
             o = SWL[l]; assert o["kind"] == "stream" and not o["not_covered"] and not o["incomplete"], l
             c = CC["per_lattice"].get(l, [0, 0, 0, 0, 0]); recs = len(o["deferral_records"])
@@ -109,6 +114,8 @@ def main():
     for r in rows:
         L.append("| %s | %s | %s | %d | %s | %s | %s | %s | %s | %s | %s | %s | %s |" % (r["id"], r["roots"].replace("|", "/"), r["nb"], r["N2"], r["method"], f(r["pairs"]), f(r["search"]),
                                                                                      f(r["T18"]), f(r["T20"]), r["cert"], r["eng"], r["h2"], r["rec"]))
+    L += ["", "y_1 representatives of the lattices S that are not covered by a record with a package engine: %s; of which excluded by Corollary Y1 with a checked "
+          "certificate (a root r with (r,y_1) = +-2; T18 and T20): %s; left: %s." % (n(tot["y1_need"]), n(tot["y1_have"]), n(tot["y1_need"] - tot["y1_have"]))]
     L += ["", "Totals over the rows that have the number: pairs %s; excluded by search %s; through T18 %s; through T20 %s. Lattices per method: %s." % (
         n(tot["pairs"]), n(tot["search"]), n(tot["T18"]), n(tot["T20"]), ", ".join("%s %d" % (c, tot[c]) for c in ["S"] + [g[0] for g in GROUPS])), "",
           "## Appendix: the tracker's text for each lattice, verbatim", "",

@@ -60,7 +60,7 @@ def main():
         by = collections.Counter(x for x in cov if x is not None); miss = sum(1 for x in cov if x is None)
         pend = [k for k in twins if CL.get(eval(k), {"?"}) != {"excluded"}]
         o = {"y1_reps": NR, "covered": NR - miss, "by_tier": {t: by.get(t, 0) for t in "PLN"}, "selected_records": dict(sel), "pairs": npairs, "pairs_by_tier": {t: pt.get(t, 0) for t in "PLN"}, "covered_twice": twice,
-             "other_faults": faults, "incomplete_resolved_pairs": nres, "twin_classes_pending": len(pend), **{x: c[x] for x in IS.CLASSES}}
+             "reps_L": [i for i, x in enumerate(cov) if x == "L"], "reps_N": [i for i, x in enumerate(cov) if x == "N"], "other_faults": faults, "incomplete_resolved_pairs": nres, "twin_classes_pending": len(pend), **{x: c[x] for x in IS.CLASSES}}
         o["ok"] = bool(miss == 0 and not faults and not c["defer_T18"] and not c["defer_T20"] and not c["other"] and not pend)
         out[lid] = o; tot["lattices"] += 1; tot["ok"] += o["ok"]; tot["pairs"] += npairs
         for x in ("excl_at_once", "excl_search", "twin", "swap"): tot[x] += c[x]
