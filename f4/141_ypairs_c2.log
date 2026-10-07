@@ -2,3 +2,4 @@ NON-rigid envelope: same admissibility filters (they are general); run the h-sta
 U: r 288; norm-7 lines 22892544, admissible (roots, new roots, norm 3) 17278020 (141s)
 simple roots: 23 (rank of R)
 W-orbits of admissible y (both signs): 31 (141s)
+pairs (y1 W-dominant, y2 W_J-dominant up to sign): 331 (449s)
