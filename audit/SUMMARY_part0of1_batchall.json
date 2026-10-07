@@ -1,0 +1,35 @@
+{
+ "part": [
+  0,
+  1
+ ],
+ "batch": "all",
+ "jobs_in_share": 16,
+ "done_here": 16,
+ "failed": [],
+ "jobs_with_a_pair_not_excluded_again": [],
+ "skipped_already_done": 0,
+ "per_lattice": {
+  "077": {
+   "jobs": 8,
+   "pairs": 468425,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 467709,
+   "rigid": 716,
+   "with_zero_candidate": 468425,
+   "exposed": 716
+  },
+  "079": {
+   "jobs": 8,
+   "pairs": 403580,
+   "exposed_not_excluded_again": 0,
+   "setup_impossible": 0,
+   "general": 403268,
+   "rigid": 312,
+   "with_zero_candidate": 403580,
+   "exposed": 312
+  }
+ },
+ "hours": 0.14
+}
