@@ -724,8 +724,8 @@ three forms, tried in this order.
 frame when the pair was treated, the pair is excluded.
 \item \emph{More roots.} Otherwise, if $U'$ has strictly more roots than $U$, the pair is set aside, and it is excluded when
 all the lattices with more roots than $U$ are. This is a descending induction on the number of roots; it does not require
-$U'$ to be identified, and the comparison of the numbers of roots uses integer tests only. The dependencies it creates
-between lattices ($1{,}622$ of them) contain no cycle.
+$U'$ to be identified, only its number of roots, as computed by the program, to exceed that of $U$. The dependencies it
+creates between lattices ($1{,}622$ of them) contain no cycle.
 \item \emph{Same lattice.} Otherwise, if $U'$ has the root system of $U$ and this root system occurs once in the list, then
 $U'\cong U$, and the pair is replaced by its image in $U$ when an invariant key of the pair decreases strictly.
 \end{enumerate}
@@ -827,13 +827,21 @@ re-examined.
 
 \subsection*{The transfer rule} Over the $102$ lattices of the main enumeration ($592{,}864{,}217$ pairs) the three forms
 of Section~\ref{ssec:excl}(iv) close $1{,}300{,}094$ pairs (status), $32{,}265{,}417$ pairs (more roots) and $2{,}863{,}005$
-pairs (same lattice). The second form is justified by induction on the number of roots and needs nothing else. The two
-others, $4{,}163{,}099$ pairs in all, rest on the recognition of the root system of the twin lattice through ranks computed
-in floating point, and the first of them on the order in which the lattices were treated during the campaign, as recorded
-at the time. On the two lattices where it was compared with an integer computation ($112$ and $114$; $40{,}652$ pairs) the
-recognition is the same for every pair. A recertification of these $4{,}163{,}099$ pairs that uses neither a recorded status
-nor floating-point arithmetic (exact roots of the twin; then more roots, or strict descent in the same lattice, or a search
-without the transfer rule) has not been carried out. % TODO: this is the open computational item of the paper (07/10).
+pairs (same lattice). The second form is justified by induction on the number of roots; it uses the number of roots of the
+twin as the program counts it, by integer tests on vectors whose coordinates are formed in floating point; an exact recount
+has not been made. The two others, $4{,}163{,}099$ pairs in all, rest on the recognition of the root system of the twin
+lattice through ranks computed in floating point, and the first of them on the order in which the lattices were treated
+during the campaign, as recorded at the time. The arithmetic of the recognition was compared with an integer computation on
+all the pairs of two lattices ($112$ and $114$; $40{,}652$ pairs): the two agree on every pair; these two lattices have no
+pair closed by transfer, so this does not test the dependencies. Corollary~\ref{cor:Y1} removes a part of the question:
+$42{,}276$ of the $54{,}096$ representatives $y_1$ of the $102$ lattices have a root with product $\pm2$ and are excluded
+whatever the verdicts of their pairs, which leaves at most $2{,}479{,}669$ pairs depending on the first or the third form. A
+recertification of these pairs that uses neither a recorded status nor floating-point arithmetic (exact roots of the twin;
+then more roots, or strict descent in the same lattice, or a search without the transfer rule) has not been carried out.
+% TODO: this is the open computational item of the paper (07/10). Numbers of the Y1 reduction: lab's message of 20:31 UTC,
+% file measures/TWIN_RESIDUE_AFTER_Y1_2026-10-07.json (announced; check that it is on master). Size of the recertification
+% pass measured by the lab on seven representatives: at least about 100 core-hours of pair production, probably several
+% hundred; the job is to be written by the lab with Codex's exact helper q/codex_exact_twin_type.py.
 
 \subsection*{The enumeration of the pairs} One program, compared with an independent enumerator on four lattices
 (Section~\ref{ssec:enum}); for the others it rests on the program that produces the pairs, and the reduction by diagram
