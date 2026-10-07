@@ -52,6 +52,10 @@ The other u_o, at least 42 - 28 = 14 of them, are of the first two kinds and hav
 
 Contradiction. QED
 
+**The same proof as one linear certificate (Codex, 07/10).** For each of the three kinds, 4 |P_W u|^2 + 16 |P_l u|^2 is 9, 67/3
+or 9, hence at least 9. Summing over the 42 u and using (B) on W and on l: 378 <= 4 * 56 + 16 * 7 = 336. Contradiction. (This is
+the form proposed as a first target for a Lean check: a finite sum of rationals; the table of kinds is the separate part.)
+
 ## How the three facts were obtained, and how they were checked
 
 - `budget_143.py <package>`: takes from the v10 package a basis of U and the lists of the vectors of norm 2 and 3
