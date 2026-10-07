@@ -1,0 +1,22 @@
+1. the nine structures
+   I.0: 4-regular, codegrees <= 2, adjacent {0: 8, 1: 12} non-adjacent {2: 24, 0: 1}, triangles 4, |Aut| 16, units 30, independence number 3
+   I.1: 4-regular, codegrees <= 2, adjacent {0: 3, 1: 16, 2: 1} non-adjacent {2: 17, 1: 8}, triangles 6, |Aut| 4, units 30, independence number 3
+   I.2: 4-regular, codegrees <= 2, adjacent {0: 5, 1: 15} non-adjacent {2: 20, 1: 5}, triangles 5, |Aut| 10, units 30, independence number 3
+   I.3: 4-regular, codegrees <= 2, adjacent {0: 4, 1: 14, 2: 2} non-adjacent {2: 18, 1: 6, 0: 1}, triangles 6, |Aut| 4, units 30, independence number 3
+   I.4: 4-regular, codegrees <= 2, adjacent {0: 2, 1: 12, 2: 6} non-adjacent {1: 8, 2: 14, 0: 3}, triangles 8, |Aut| 4, units 30, independence number 3
+   I.5: 4-regular, codegrees <= 2, adjacent {1: 10, 2: 10} non-adjacent {0: 5, 1: 10, 2: 10}, triangles 10, |Aut| 20, units 30, independence number 3
+   IIa.0: (E) and (L) hold on S u {p}; units 20; |Aut| 1
+   III.0: (E) and (L) hold on S u {p}; units 24; |Aut| 3
+   III.1: (E) and (L) hold on S u {p}; units 24; |Aut| 4
+2. IIa.0: the numbers r_i and the 180 type graphs
+   r = {2: 0, 3: 1, 4: 0, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1} ; simple graphs on {2..9} with degrees 2 - r_i: 180
+3. case III: the words are the edges of K4
+   III.0: word-word graph components [[4, 5, 6, 7, 8, 9]]
+   III.1: word-word graph components [[4, 8, 9], [5, 6, 7]]
+4. arithmetic of the hand part
+   multisets of values, C(d,2) + C(d+4,2), (Q0), (Q2), the edge-bound identities and the six cell solutions: OK
+5. the two matrices on the eigenvalues, and the traces of Lemma 6.3
+   A =  14: M1 = 0, M2 = 0
+   A =   3: M1 = 0, M2 = 77
+   A =  -4: M1 = 63, M2 = 0
+ALL CHECKS PASSED
