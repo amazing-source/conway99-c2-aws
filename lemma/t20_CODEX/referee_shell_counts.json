@@ -1,0 +1,69 @@
+{
+  "verified": true,
+  "lattices_checked": 156,
+  "shell_report_canonical_sha256": "d05f41b2d3d13166b2f2c24f4d9b90f7f49e49518d89e25c570e5a9b3071dff5",
+  "theta_basis_coefficients_q0_through_q7": [
+    [
+      1,
+      48,
+      1104,
+      16192,
+      170064,
+      1362336,
+      8662720,
+      44981376
+    ],
+    [
+      0,
+      1,
+      24,
+      252,
+      1472,
+      4830,
+      6048,
+      -16744
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      -24,
+      0,
+      252,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      -24,
+      276,
+      -2048,
+      11178
+    ]
+  ],
+  "affine_coefficients_in_1_N2_N3": {
+    "4": [
+      196560,
+      -24,
+      -24
+    ],
+    "5": [
+      0,
+      0,
+      276
+    ],
+    "7": [
+      0,
+      0,
+      11178
+    ]
+  },
+  "max_absolute_archived_residual": 0,
+  "shadow_a3_relation": "a3=N3-4096; zero shadow constant gives a3=0",
+  "expected_norm7_lines": 22892544,
+  "underlying_shell_lists_rechecked": false,
+  "lattice_enumeration_run": false
+}

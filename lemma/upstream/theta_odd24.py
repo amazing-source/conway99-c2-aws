@@ -9,10 +9,12 @@ Controls: odd Leech lattice (N2 = 0, N3 = 4096) and D12+ + D12+ (N2 = 528, N3 = 
 This script takes N3 as an INPUT: it does not prove its value (remark of the referee of LATTICE_143.md, 07/10).
 The value N3 = 4096 for every such lattice is a theorem of shadow theory (Conway-Sloane, "A new upper bound for the minimum of an
 integral lattice of determinant one", 1990): the theta series of the shadow is
-    sum_r a_r (-1)^r 16^(-r) theta_2^(24-8r) theta_4^(8r),
+    sum_r a_r (-1)^r 16^(-r) theta_2(q)^(24-8r) theta_4(q^2)^(8r),
 whose constant term is -a3 / 4096 (only r = 3 has no factor theta_2); the shadow of an ODD lattice does not contain 0, so
 a3 = 0, i.e. N3 = 16192 - 48 * 252 = 4096 and N4 = 98256 - 24 N2. The same series gives a2 = N2 + 48 vectors of norm 2 in the
 shadow (the "new roots"). The script checks these two consequences as assertions below.
+The formulas, including the q^2 argument of theta_4, also appear in Conway-Sloane,
+"A Note on Optimal Unimodular Lattices" (1998), equations (2)-(3): https://arxiv.org/pdf/math/0207292.
 """
 N = 8
 

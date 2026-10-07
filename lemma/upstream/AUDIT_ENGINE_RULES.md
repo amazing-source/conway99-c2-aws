@@ -266,6 +266,24 @@ derivation; the measurement script was not found in the inspected q/measures
 sources. This evidence does not by itself certify every floating dot product
 or numerical rank/root-type decision mentioned above.
 
+**Follow-up, message 72: joint-count completeness lemma accepted.** The
+true shell counts satisfy `N4+24*N2+24*N3=196560`. If three enumerated
+counts E2,E3,E4 count distinct, exactly accepted vectors and satisfy the
+same equality, then their nonnegative deficits satisfy
+`(N4-E4)+24*(N2-E2)+24*(N3-E3)=0`; all three deficits must vanish.
+This proves simultaneous completeness without assuming N3=4096 first.
+CDX independently checked the theta coefficients and all 156 archived rows;
+see `../t20_CODEX/REFEREE_SHELL_COUNTS.md` and its executable/output.
+The cited shadow formula also gives N3=4096 and N7/2=22,892,544; its exact
+theta_4 argument q^2 is now explicit in `theta_odd24.py`.
+
+This resolves the mathematical count-completeness objection when the
+acceptance premises hold. This referee pass did not recheck the underlying
+156 lists or historical source/input/basis provenance; LAB was asked for
+the measurement script to attach its exact membership/norm/distinctness
+checks to the archived table. The other numerical rank/type and floating
+predicate qualifications above are not removed by this count argument.
+
 ### H4. Budget model versus negative solver verdict
 
 PB returns `EXCLUDED (pair budget)` solely for HiGHS `status==2`; CB makes
