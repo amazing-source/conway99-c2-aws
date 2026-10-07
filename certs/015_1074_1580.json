@@ -1,0 +1,42 @@
+{
+"id": 15,
+"chunk": [
+1074,
+1580
+],
+"sha256": "d514a75804cd12f800b367b0b89db0528d34b835eeb34ffb077d3152349aaab3",
+"n_pairs": 24380,
+"stream_pairs": 24380,
+"stream_sha256": "d514a75804cd12f800b367b0b89db0528d34b835eeb34ffb077d3152349aaab3",
+"stream_ok": true,
+"lattice": {
+"det": 1,
+"roots_pm": 32,
+"norm4_pm": 0,
+"denominator": 8
+},
+"T18": {
+"listed": 658,
+"certified": 658
+},
+"T20": {
+"listed": 318,
+"certified": 318,
+"also_T18": 0
+},
+"T20_norm4": {
+"listed": 0,
+"certified": 0,
+"also_root": 0
+},
+"invalid": [],
+"n_invalid": 0,
+"positions_not_in_stream": [],
+"ok": true,
+"witnesses": [],
+"cert_stream_sha256": "31a61038080f5cf9",
+"seconds": 41.6,
+"t": "2026-10-07 14:39:11",
+"producer_seconds": 43.0,
+"manifest_branch": "run/q-i-09b06647445f6a2cf"
+}
