@@ -132,6 +132,19 @@ pair died before joint enumeration, or that every entered joint call was
 exhausted below the cap, can establish irrelevance for particular records.
 An engine repair alone would not retrospectively validate old records.
 
+**Follow-up, LAB bridge message 52 (2026-10-07 13:33 UTC): not exercised
+according to LAB's census.** LAB reports checking 17,676 stream/Golay
+record files, 356 lab-local result files and 57 O24 class records, with
+zero occurrences of the only affected exclusion verdict, `joint star sums,
+but (F) fails`. The reported joint-stage exclusions are twelve pairs with
+an empty joint list (eight in 001, four in 002); an empty list cannot have
+hit the cap. LAB's importer now classifies any `but (F) fails` verdict as
+`other`, refusing it, in commit `1dde18702`; CDX inspected that guard.
+The census itself is peer evidence, not an independent CDX recount, and
+its durable output/path has been requested. Thus H1 is a real code hole
+reported unexercised in the stored exclusions, with a guard against future
+acceptance; it is not evidence that those exclusions are wrong.
+
 ### H2. Generic kernel assumes a pending point exists
 
 FD:349 initializes `best=-1`; only a positive remaining target changes it.
@@ -146,6 +159,27 @@ by absence of flex points (FD:1548,1604), which is not itself that proof.
 A proof of the additional precondition, or recorded absence of zero-footprint
 h candidates in each relevant run, could discharge this hole. No actual
 graph or missed genuine frame is asserted here.
+
+**Follow-up, message 52: H2 remains open, with reduced scope.** LAB derives
+the shadow-root energy operator from the two even neighbours' root
+operators. For norm-four h, the sum over signed new roots of (beta,h)^2 is
+`8(H1+H2)-4 sum_j h_j ||P_j h||^2 >= 8|H1-H2|`. CDX checked this algebra
+and the equality criterion: zero footprint requires H1=H2=H and h entirely
+in components of U with Coxeter number H. The expression counts nonzero
+pairings only for admissible h (all nonzero heights have absolute value 1);
+the zero criterion holds without that restriction. LAB's table calculation
+therefore rules out zero footprints for 129 lattices. CDX has not independently
+recomputed the table or the Niemeier input data.
+
+LAB's stated potentially affected list has 27 IDs:
+`001,003,006,007,014,022,023,024,026,027,028,037,049,050,052,053,077,079,080,101,103,104,105,117,137,138,152`.
+Removing the two said to be excluded without the engine, 117 and 152,
+leaves **25**, not the 24 stated in that message. The exact audit manifest
+must reconcile the additional omission before the scope is called complete.
+The reported zero exposed pairs among 63,825 sampled searched pairs is
+sampling, not a proof. LAB proposes complete pair-stream exposure checks
+and general-kernel searches for the exposed cases; no such run was performed
+or authorized by CDX through this report.
 
 ### H3. Exhaustive numerical catalogues are not certified by exact acceptance
 
@@ -164,6 +198,12 @@ frame searches. No vector actually missed by floating arithmetic was found
 or claimed. Fast floating dot products likewise need their stated
 small-integer bound or an exact comparison for the used data.
 
+LAB confirms the missing norm-four assertion in message 52 and is looking
+for complete shell-count certification. SHELL section 1.1 gives the claimed
+count `49128-12r` for norm-four lines; its theta derivation was outside this
+audit, and agreement with that count has not been checked here for every
+used lattice.
+
 ### H4. Budget model versus negative solver verdict
 
 PB returns `EXCLUDED (pair budget)` solely for HiGHS `status==2`; CB makes
@@ -175,6 +215,11 @@ enumeration of a weaker necessary condition; its code is present, but this
 pass has not validated a complete run or its type-table provenance for 143.
 That missing evidence must not be replaced by the solver's status string.
 Nothing was run during this audit, including EB (whose import also executes CB).
+
+Message 52 reports 12,620 `EXCLUDED (pair budget)` pairs in lab-local files
+and none in the cloud records LAB counted. Thus this issue is not merely a
+question about an unused option. LAB is checking whether exact re-checks
+exist; CDX has not validated them, and H4 remains open.
 
 ### H5. The 9/7 rule needs a separate support-16 theorem
 
