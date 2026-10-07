@@ -4,7 +4,8 @@
 > 1. Every case of the proof is closed: the last one, case I with n_3 = 2, is section 9.B.6 (Computation 9.29, two
 >    programs, written on 07/10 at 14:00 UTC). Section 9.B.6 and `SPEC_ROUTE_B_N3.txt` had their referee pass on 07/10
 >    (addendum to `lemma/t20_CODEX/REFEREE_T20_PROOF.md`): no blocking error; its two presentation points are merged.
->    The referee did not audit the search code; its reserves G1 (provenance table) and G2 (verifier contract) stand.
+>    The referee did not audit the search code. Its reserve G1 (provenance) is answered by `lemma/ARTIFACTS_T18_T20.md`
+>    (run branches, program versions, archive branch of the raw outputs); G2 (wording of the verifier contract) stands.
 > 2. III.1 has a second verification: a verifier re-traversed the whole tree (1,628,864 nodes, same counts per level, same
 >    kept count at every node, 0 complete), and the single node the first program rejected by the rank bound is also dead
 >    without it (`lemma/t20_III1/VERIF.md`). Scope of its independence, as that report says: its budget test, its PSD test and
