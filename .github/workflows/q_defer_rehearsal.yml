@@ -11,6 +11,9 @@ on:
       defer_nodes:
         description: "Q_DEFER_NODES (10000 = budget variant, 0 = quick variant)"
         default: "10000"
+      defer_n4:
+        description: "Q_DEFER_N4 (1 = norm-4 witnesses of T20 are deferred too)"
+        default: ""
       lookahead:
         description: "Q_LOOKAHEAD (jobs claimed ahead; 0 = none)"
         default: "0"
@@ -27,6 +30,7 @@ jobs:
       Q_TEST: "1"
       Q_DEFER: "1"
       Q_DEFER_NODES: ${{ inputs.defer_nodes }}
+      Q_DEFER_N4: ${{ inputs.defer_n4 }}
       Q_LOOKAHEAD: ${{ inputs.lookahead }}
       Q_SYNC_MIN: ${{ inputs.sync_min }}
       Q_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
