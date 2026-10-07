@@ -15,6 +15,8 @@ independent, S is disjoint from N[p], B is one of I.0 ... I.5 (x_i ~ y_j iff i ~
 | H6 | a new exact rejection rule, the dual-norm test, with first consequences | hand; searches computed |
 | H7 | determined set S u X_3 u X_0 for n_3 = 2: it is NOT contradictory | computed, `n3_base.py` |
 | H8 | what transposes from the 04/10 lemma (norm 16) | remark |
+| H9 | the n_3 = 2 branch as an enumeration (bases, model, engine) | computed, `n3_cases.py`, `eng5z.py` |
+| H10 | Codex's hand lemmas applied to the n_3 = 2 bases; cross-checks | counts computed |
 
 Each hand statement is given with its full proof. The three scripts are tiny (seconds, exact integer / rational rejections).
 They were written from the work page only and share no code with the project's engines.
@@ -309,3 +311,47 @@ The dual-norm test (H6) is not used: an exclusion of n_3 = 2 by this run does no
 
 **Status.** Not run to the end here. First base of I.0 locally: 11,729 nodes in 120 s, nodes per level
 [1, 2, 62, 620, 1884, 4306, 4164, 690, 0, ...], no complete configuration, time limit reached. One program only.
+
+## H10. Codex's hand lemmas applied to the n_3 = 2 bases (07/10; counts computed, lemmas by hand in `lemma/t20_CODEX/`)
+
+**Lemmas (Codex; checked line by line by this session).**
+- `PROFILE_421.md` (isolation): in profile (4,2,1), for n_3 = 0 and n_3 = 2, the inner pair u, u' of X_0 has no neighbour in X_0
+  other than p and each other. So X_0 = triangle {p, u, u'} + R, with no edge between the two parts.
+- beta = 1 (bridge message of 07/10, being written by Codex): in profile (4,2,1), n_3 = 2, a_3(u) = 1. Proof: the 36 vertices
+  N(T) \ T of the triangle T = {p, u, u'} are three disjoint groups of 12 and miss S and X_0; a z in X_3 not adjacent to T would
+  have exactly 6 neighbours among them (2 common neighbours with each vertex of T), but it has only a_1 + a_2 = 5 - alpha
+  neighbours outside S u X_0.
+- `EDGE_BOUND.md` (n_3 = 0 only): e(X_0) <= 8; e(X_0) is even in profile (3,4,0); in profile (4,2,1), e(R) is 0, 2 or 4 and R
+  has four possible shapes.
+
+**Effect on the bases of H9** (a base of profile (4,2,1) violates the isolation lemma iff its inner orbit of X_0' has an edge to
+another orbit of X_0'):
+
+| Graph | classes | violating | closed by the run before the interruption (violating) | left | left after the lemma |
+|---|---|---|---|---|---|
+| I.0 | 44 | 11 | 6 (3) | 38 | 30 |
+| I.1 | 227 | 55 | 60 (20) | 167 | 132 |
+| I.2 | 87 | 21 | 14 (9) | 73 | 61 |
+| I.3 | 121 | 28 | 24 (10) | 97 | 79 |
+| I.4 | 146 | 34 | 40 (16) | 106 | 88 |
+| I.5 | 75 | 18 | 24 (8) | 51 | 41 |
+| total | 700 | 167 | 168 (66) | 532 | 431 |
+
+The 66 violating bases already treated were all closed by the search: the lemma and the first program agree there.
+After the lemma, profile (4,2,1) has 295 - 167 = 128 classes; profile (3,4,0) keeps its 405 classes (no lemma applies).
+
+**Cross-checks between independent programs.**
+- Labelled bases of profile (4,2,1) kept after the isolation lemma: 21 / 110 / 39 / 59 / 72 / 33 with `n3_cases.py`, and the same
+  six numbers with Codex's `rigidity_n3.py` (own construction of the bases, exact rational elimination for both matrices).
+- beta = 0 is case (ii) with the inner orbit equal to the orbit of X_0' that does not meet T(z). In the labelled bases kept by
+  `n3_cases.py` there is none, in all six graphs. Labelled bases by (case, inner orbit), six graphs summed:
+  (i, 0) 224, (i, 1) 224, (i, 2) 224, (i, none) 433, (ii, 1) 144, (ii, 2) 0, (ii, none) 443, (iii, 1) 128, (iii, 2) 128,
+  (iii, none) 191. So the beta = 1 lemma removes no further base; it proves by hand what the base tests found.
+
+**Where the first 168 bases die (first program, one implementation).** Deepest level reached: 0 or 1 for 3 bases, 3 to 5 for 32,
+6 for 55, 7 for 78; never beyond 7 of the 12 orbits. Rejections: pair budgets, then the odd sector of M1 (the Gram of the frame
+vectors), then the even sector of M1; the rank test fired 139 times in all. Median number of nodes per base between 5,000 and
+36,000 according to (case, profile). The deaths are not one-line: a hand closure of n_3 = 2 needs a new global identity.
+
+**Status.** n_3 = 2 is not closed. The run was restarted on 07/10 at 11:14 UTC with the 168 closed bases restored; it treats all
+532 remaining classes (the 101 violating ones serve as a cross-check). One program only; a second, independent one is required.
