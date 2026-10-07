@@ -251,5 +251,19 @@ rep("""                dfs(ch, orbs + [(U0, V, N0)], tg + [tgt], d2 + [used], cn
                     newdoms if len(K2) == len(K) else None)""", """                dfs(ch, orbs + [(U0, V, N0)], tg + [tgt], d2 + [used], cnt2, K2, rem3,
                     newdoms if len(K2) == len(K) else None, newest)""")
 
+
+#  8. plan="mem": a plan line gets a 6th field, the list of the positions (in the order of the kept children of the
+#     node) of the children rejected by the rank bound.  Nothing else changes (same search, same counters).
+rep("""        if plan == "mem":
+            planmem.append([t, U0[0], U0[1], len(cands), len(todo)])
+        for a in todo:""", """        pline = [t, U0[0], U0[1], len(cands), len(todo), []]
+        if plan == "mem":
+            planmem.append(pline)
+        for pos_, a in enumerate(todo):""")
+rep("""                if rv is not None:
+                    rej_rank[t] += 1""", """                if rv is not None:
+                    rej_rank[t] += 1
+                    pline[5].append(pos_)""")
+
 open("eng6.py", "w").write(src)
 print("eng6.py written,", len(src), "bytes")

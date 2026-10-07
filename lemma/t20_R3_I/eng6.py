@@ -733,9 +733,10 @@ def run(prob, part, nparts, tlim, split_depth, tag, progress_every=50, setwise=F
             todo.append(a)
         if planf is not None:
             planf.write("%d %d %d %d %d" % (t, U0[0], U0[1], len(cands), len(todo)) + chr(10))
+        pline = [t, U0[0], U0[1], len(cands), len(todo), []]
         if plan == "mem":
-            planmem.append([t, U0[0], U0[1], len(cands), len(todo)])
-        for a in todo:
+            planmem.append(pline)
+        for pos_, a in enumerate(todo):
             V, N0, tgt, choice, used = cands[a]
             if t == split_depth:
                 state["tasks"] += 1
@@ -750,6 +751,7 @@ def run(prob, part, nparts, tlim, split_depth, tag, progress_every=50, setwise=F
                 rv = rank_violation(ch)
                 if rv is not None:
                     rej_rank[t] += 1
+                    pline[5].append(pos_)
                     stats.add("rank_%s_%d" % rv)
                     dead = True
             if not dead:

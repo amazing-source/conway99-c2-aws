@@ -23,6 +23,13 @@
 #          of that unit are regenerated and tested here; the number kept must equal the plan's.
 # Exact rejections: a common-neighbour count (int64), or an integer vector x with x^T M x < 0 in Python integers
 # (on a sigma-block), or exact rational elimination.  "Kept" is a floating-point decision.
+# Nodes that the first program rejected by the rank bound (it wrote no plan below them): this program explores their
+# subtree by itself, with the same exact tests and its own choice of the unit, to exhaustion ("free" counters:
+# rank_nodes, rank_nodes_closed_by_own_search, free_nodes, free_deepest = largest number of X_2 orbits placed).
+# Only if such an exploration hits its cap or finds a complete configuration is the node rejected by an exact rank
+# computation done here in rationals (both sigma-blocks of M1 against the bound 22): rank_nodes_closed_by_rank_bound.
+# With a plan of the old format (5 fields per line) the same rank computation is used to find WHICH kept children the
+# first program left without plan (holes_located_by_own_rank); it rejects nothing.
 import sys, json, os, itertools, time
 from fractions import Fraction
 import numpy as np
@@ -30,6 +37,8 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 P = 20
 TOL = 1e-7
+FREE_CAP = 20000          # nodes of an exploration without plan (below a node rejected by rank in the first program)
+FREE_SECONDS = 3600.0     # cpu seconds of such an exploration
 
 
 def load_B(name):
@@ -130,6 +139,51 @@ def psd_rejected(A, sig):
                 NCERT[1] += 1
                 return True
     return False
+
+
+def exact_rank(Q):
+    """rank of an integer matrix, by elimination in exact rationals"""
+    M = [[Fraction(int(t)) for t in row] for row in Q]
+    rk = 0
+    rows, cols = len(M), len(M[0])
+    for cidx in range(cols):
+        piv = next((r for r in range(rk, rows) if M[r][cidx] != 0), None)
+        if piv is None:
+            continue
+        M[rk], M[piv] = M[piv], M[rk]
+        for r in range(rk + 1, rows):
+            if M[r][cidx] != 0:
+                f = M[r][cidx] / M[rk][cidx]
+                M[r] = [a - f * b for a, b in zip(M[r], M[rk])]
+        rk += 1
+        if rk == rows:
+            break
+    return rk
+
+
+def rank_bound_violated(A, sig):
+    """Rank bound (T18_PROOF.md, Proposition 6.4; a general fact on the graph and sigma, it does not use the theorem
+    T18): on a sigma-invariant vertex set the matrices D^T M1 D (odd generators e_v - e_sigma v) and E^T M1 E (even
+    generators e_p, e_v + e_sigma v) have rank at most 22.  Exact ranks; tested as soon as there are 23 generators."""
+    n = A.shape[0]
+    reps = [v for v in range(n) if sig[v] > v]
+    fixed = [v for v in range(n) if sig[v] == v]
+    if len(reps) + len(fixed) < 23:
+        return False
+    I = np.eye(n, dtype=np.int64)
+    M1 = 9 * (3 * I - A) + 1
+    if len(reps) >= 23:
+        D = np.zeros((n, len(reps)), dtype=np.int64)
+        for j, v in enumerate(reps):
+            D[v, j] = 1; D[sig[v], j] = -1
+        if exact_rank((D.T @ M1 @ D).tolist()) > 22:
+            return True
+    E = np.zeros((n, len(fixed) + len(reps)), dtype=np.int64)
+    for j, v in enumerate(fixed):
+        E[v, j] = 1
+    for j, v in enumerate(reps):
+        E[v, len(fixed) + j] = 1; E[sig[v], len(fixed) + j] = 1
+    return exact_rank((E.T @ M1 @ E).tolist()) > 22
 
 
 def add_pair(A, t, tp):
@@ -342,10 +396,16 @@ def step_merge(s1file, prefix, nparts, follow_prefix):
             inpart += f["bases_in_part"]
             cert[0] += f["certificates"]["integer_vector"]; cert[1] += f["certificates"]["exact_elimination"]
             for k, v in f["totals"].items():
-                tot[k] = tot.get(k, 0) + v
+                tot[k] = max(tot.get(k, 0), v) if k == "free_deepest" else tot.get(k, 0) + v
         print("   stage 2 re-traversed: bases %d of %d (stage-1 list: %d); parts not finished: %s" % (
             nb, inpart, len(s1["bases"]), missing if missing else "none"))
         print("   totals: %s; certificates: integer vector %d, exact elimination %d" % (tot, cert[0], cert[1]))
+        if tot.get("rank_nodes", 0):
+            print("   nodes rejected by the rank bound in the first program: %d; closed here by the own search (no "
+                  "rank bound): %d, with %d more nodes, deepest node with %d orbits of X_2 placed; closed here by an "
+                  "own exact rank computation: %d" % (
+                      tot["rank_nodes"], tot.get("rank_nodes_closed_by_own_search", 0), tot.get("free_nodes", 0),
+                      tot.get("free_deepest", 0), tot.get("rank_nodes_closed_by_rank_bound", 0)))
         print("   STAGE 2 AGREES AT EVERY NODE, 0 complete, all bases: %s" % (
             not missing and nb == len(s1["bases"]) and tot.get("complete", 1) == 0))
 
@@ -401,7 +461,10 @@ def follow(B, A21, defi, rec, plan, ztype):
             cap[w] = {"A": 3 - h0 - 2 * a3, "W": 7 - h0 - 2 * a3, "Z": min(11 - h0 - 2 * a3, (20 - 3 * a3) // 2)}[kind[w]]
     for v in Z:
         cap[v] = 1 - sum(int(A0[v, w]) for w in Ap)
-    stat = {"nodes": 0, "cands": 0, "budget": 0, "psd": 0, "kept": 0, "complete": 0, "impossible": 0}
+    stat = {"nodes": 0, "cands": 0, "budget": 0, "psd": 0, "kept": 0, "complete": 0, "impossible": 0,
+            "rank_nodes": 0, "rank_nodes_closed_by_own_search": 0, "rank_nodes_closed_by_rank_bound": 0,
+            "holes_located_by_own_rank": 0, "free_nodes": 0, "free_cands": 0, "free_budget": 0, "free_psd": 0,
+            "free_deepest": 0, "free_complete": 0, "free_capped": 0}
     if any(c < 0 for c in cap.values()):
         stat["impossible"] = 1
         assert rec.get("impossible"), "the first program did not flag this base as impossible"
@@ -491,16 +554,11 @@ def follow(B, A21, defi, rec, plan, ztype):
             paircache[key] = r
         return r
 
-    def dfs(A, sig, orbs, caps, degs, cnt, remaining):
+    def gen_cands(U0, orbs, caps, degs, cnt, remaining, st):
+        """all candidates (V, N0, cap, patterns to the earlier orbits) of the unit U0 at a node, in the order of the
+        first program; the ones left out are rejected exactly (caps of the hand part, or a count on the base plus
+        one or two orbits)"""
         t = len(orbs)
-        if t == norb:
-            stat["complete"] += 1
-            return
-        pl = next(plan)
-        assert pl[0] == t, "plan out of step"
-        U0 = (pl[1], pl[2])
-        assert U0 in remaining
-        stat["nodes"] += 1
         rem2 = dict(remaining)
         rem2[U0] -= 1
         if rem2[U0] == 0:
@@ -518,7 +576,7 @@ def follow(B, A21, defi, rec, plan, ztype):
                     continue
                 onew = (U0, V, N0)
                 if not single_budget_ok(onew):
-                    stat["budget"] += 1          # exact: a count on the base plus this orbit
+                    st["budget"] += 1            # exact: a count on the base plus this orbit
                     continue
                 allowed = []
                 ok = True
@@ -531,13 +589,16 @@ def follow(B, A21, defi, rec, plan, ztype):
                         break
                     allowed.append(pats)
                 if not ok:
-                    stat["budget"] += 1          # exact: counts on the base plus two orbits, or the caps
+                    st["budget"] += 1            # exact: counts on the base plus two orbits, or the caps
                     continue
                 for choice in itertools.product(*allowed):
                     used = sum((pat & 1) + (pat >> 1) for pat in choice)
                     if used <= tg:
                         cands.append((V, N0, tg, choice, used))
-        stat["cands"] += len(cands)
+        return cands
+
+    def test_cands(A, sig, U0, cands, st):
+        """every candidate is rejected exactly (budget count on the whole graph, or PSD certificate) or kept"""
         good = []
         n = A.shape[0]
         for (V, N0, tg, choice, used) in cands:
@@ -550,31 +611,107 @@ def follow(B, A21, defi, rec, plan, ztype):
                     row[nb + 2 * i + 1] = 1
             Bm, sg = extend(A, sig, row)
             if budget_violation(Bm):
-                stat["budget"] += 1
+                st["budget"] += 1
             elif psd_rejected(Bm, sg):
-                stat["psd"] += 1
+                st["psd"] += 1
             else:
                 good.append((V, N0, tg, choice, used, Bm, sg))
+        return good
+
+    def child_state(U0, V, N0, tg, choice, used, orbs, caps, degs, cnt, remaining):
+        rem3 = dict(remaining)
+        for X in (U0, V):
+            rem3[X] -= 1
+            if rem3[X] == 0:
+                del rem3[X]
+        c2 = dict(cnt)
+        for w in N0:
+            c2[w] += 1; c2[SIG[w]] += 1
+        d2 = [degs[i] + (pat & 1) + (pat >> 1) for i, pat in enumerate(choice)]
+        return orbs + [(U0, V, N0)], caps + [tg], d2 + [used], c2, rem3
+
+    def free(A, sig, orbs, caps, degs, cnt, remaining, fs):
+        """exploration WITHOUT plan (below a node that the first program rejected by the rank bound): the unit with
+        the fewest candidates is treated (any choice is valid: some vertex of X_2 not yet placed realises it); no rank
+        test here."""
+        t = len(orbs)
+        fs["deepest"] = max(fs["deepest"], t)
+        if t == norb:
+            fs["complete"] += 1
+            return
+        if fs["nodes"] >= FREE_CAP or time.process_time() - fs["t0"] > FREE_SECONDS:
+            fs["capped"] = True
+            return
+        fs["nodes"] += 1
+        best = None
+        for U0 in sorted(remaining):
+            cands = gen_cands(U0, orbs, caps, degs, cnt, remaining, fs)
+            if best is None or len(cands) < len(best[1]):
+                best = (U0, cands)
+            if not cands:
+                break
+        U0, cands = best
+        fs["cands"] += len(cands)
+        good = test_cands(A, sig, U0, cands, fs)
+        fs["kept"] += len(good)
+        for (V, N0, tg, choice, used, Bm, sg) in good:
+            if fs["capped"]:
+                return
+            free(Bm, sg, *child_state(U0, V, N0, tg, choice, used, orbs, caps, degs, cnt, remaining), fs)
+
+    def dfs(A, sig, orbs, caps, degs, cnt, remaining):
+        t = len(orbs)
+        if t == norb:
+            stat["complete"] += 1
+            return
+        pl = next(plan)
+        assert pl[0] == t, "plan out of step"
+        U0 = (pl[1], pl[2])
+        assert U0 in remaining
+        stat["nodes"] += 1
+        cands = gen_cands(U0, orbs, caps, degs, cnt, remaining, stat)
+        stat["cands"] += len(cands)
+        good = test_cands(A, sig, U0, cands, stat)
         assert len(good) == pl[4], "DISAGREEMENT with the plan at depth %d: kept %d, plan %d" % (t, len(good), pl[4])
         stat["kept"] += len(good)
-        for (V, N0, tg, choice, used, Bm, sg) in good:
-            rem3 = dict(remaining)
-            for X in (U0, V):
-                rem3[X] -= 1
-                if rem3[X] == 0:
-                    del rem3[X]
-            c2 = dict(cnt)
-            for w in N0:
-                c2[w] += 1; c2[SIG[w]] += 1
-            d2 = [degs[i] + (pat & 1) + (pat >> 1) for i, pat in enumerate(choice)]
-            dfs(Bm, sg, orbs + [(U0, V, N0)], caps + [tg], d2 + [used], c2, rem3)
+        # children that the first program rejected by the rank bound: it wrote no plan below them.  New plans list
+        # their positions (6th field).  For an old plan (5 fields) the position is found with an own exact rank
+        # computation; this only says where the plan has a hole, it rejects nothing.
+        holes = set(pl[5]) if len(pl) > 5 else None
+        for pos, (V, N0, tg, choice, used, Bm, sg) in enumerate(good):
+            if holes is not None:
+                hole = pos in holes
+            else:
+                hole = rank_bound_violated(Bm, sg)
+                stat["holes_located_by_own_rank"] += int(hole)
+            state = child_state(U0, V, N0, tg, choice, used, orbs, caps, degs, cnt, remaining)
+            if hole:
+                stat["rank_nodes"] += 1
+                fs = {"nodes": 0, "cands": 0, "budget": 0, "psd": 0, "kept": 0, "complete": 0, "deepest": 0,
+                      "capped": False, "t0": time.process_time()}
+                free(Bm, sg, *state, fs)
+                stat["free_nodes"] += fs["nodes"]
+                stat["free_cands"] += fs["cands"]
+                stat["free_budget"] += fs["budget"]
+                stat["free_psd"] += fs["psd"]
+                stat["free_deepest"] = max(stat["free_deepest"], fs["deepest"])
+                stat["free_complete"] += fs["complete"]
+                stat["free_capped"] += int(fs["capped"])
+                if not fs["capped"] and fs["complete"] == 0:
+                    stat["rank_nodes_closed_by_own_search"] += 1      # no rank bound needed for this node
+                else:
+                    # the own search did not close the node: exact rank of both sigma-blocks of M1 against 22
+                    assert rank_bound_violated(Bm, sg), "node rejected by rank in the first program, not closed here"
+                    stat["rank_nodes_closed_by_rank_bound"] += 1
+                continue
+            dfs(Bm, sg, *state)
 
     dfs(A0, list(SIG), [], [], [], {w: 0 for w in NPV + list(Z)}, units)
     left = sum(1 for _ in plan)
     return stat, left
 
 
-def step_follow(s1file, prefix, part, nparts, outfile, first, every, sub=(0, 1)):
+def step_follow(s1file, prefix, part, nparts, outfile, first, every, sub=(0, 1), only=None):
     s1 = json.load(open(s1file))
     name = s1["graph"]
     ztype = tuple(tuple(t) for t in s1["ztype"]) if s1.get("ztype") else None
@@ -590,6 +727,8 @@ def step_follow(s1file, prefix, part, nparts, outfile, first, every, sub=(0, 1))
     if every > 1:
         todo = [i for i in todo if (i // nparts) % every == 0]
     todo = todo[sub[0]::sub[1]]          # sub=j/m: the bases of rank j mod m of this part (to share a part)
+    if only is not None:
+        todo = [i for i in todo if i in only]
     if first:
         todo = todo[:first]
     tot = {}
@@ -605,8 +744,9 @@ def step_follow(s1file, prefix, part, nparts, outfile, first, every, sub=(0, 1))
         assert st["complete"] == r["complete"]
         if not r.get("impossible"):
             assert st["nodes"] == sum(r["visited"]) and st["kept"] == sum(r["kept"]), (i, st, r["visited"], r["kept"])
+            assert st["rank_nodes"] == sum(r["rej_rank"]), (i, st["rank_nodes"], r["rej_rank"])
         for k, v in st.items():
-            tot[k] = tot.get(k, 0) + v
+            tot[k] = max(tot.get(k, 0), v) if k == "free_deepest" else tot.get(k, 0) + v
         nb += 1
         if nb % 50 == 0:
             json.dump({"partial": True, "bases": nb, "totals": tot}, open(outfile, "w"))
@@ -633,6 +773,7 @@ else:
     first = 0
     every = 1
     sub = (0, 1)
+    only = None
     for a in sys.argv[7:]:
         if a.startswith("first="):
             first = int(a[6:])
@@ -640,4 +781,6 @@ else:
             every = int(a[6:])
         if a.startswith("sub="):
             sub = tuple(int(t) for t in a[4:].split("/"))
-    step_follow(sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5]), sys.argv[6], first, every, sub)
+        if a.startswith("only="):
+            only = set(int(t) for t in a[5:].split(","))
+    step_follow(sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5]), sys.argv[6], first, every, sub, only)
