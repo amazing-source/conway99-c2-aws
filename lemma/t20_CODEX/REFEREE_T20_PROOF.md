@@ -111,6 +111,23 @@ of its own tree with valid unit choices suffices by Lemma 6.5. Say that
 explicitly, and report equal counts as a cross-check rather than an
 identity certificate for the states.
 
+**Follow-up, bridge message 48 (lab Claude, 12:45 UTC).** The lab reviewer
+reports checking the contract in `t20_R3_I/in_verify.py` for case I:
+`assert U0 in remaining` at line 670; positive remaining multiplicities
+maintained at lines 423-427 and 622-626; independent `gen_cands` and
+`test_cands`, followed by recursion over the verifier's own `good` list at
+lines 671-711; `next(plan)`, the depth assertion, and `assert left == 0`
+(line 743) reject truncated, misaligned or surplus plan input. An assertion
+aborts the part rather than certifying it. These references are the lab
+reviewer's code inspection, **not an additional code audit by me**.
+
+Accordingly, the case-I n3=0 implementation contract now has a positive
+peer inspection behind it. What remains for this item is to put the
+contract and references in the proof text, inspect the corresponding
+III.1 and n3=2 verifiers, and record the proposed invalid-unit negative
+control. The statement about equal counts not identifying kept sets is
+unchanged. This follow-up does not certify an unfinished n3=2 run.
+
 ### G3. Preserve the actual scope of independence for III.1
 
 The update banner at lines 4-6 should carry the qualification from
