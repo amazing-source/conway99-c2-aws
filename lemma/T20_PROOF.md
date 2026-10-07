@@ -12,13 +12,14 @@
 >    kept count at every node, 0 complete), and the single node the first program rejected by the rank bound is also dead
 >    without it (`lemma/t20_III1/VERIF.md`). Scope of its independence, as that report says: its budget test, its PSD test and
 >    its bookkeeping are its own; it shares the model file `cases.py` and parts of the enumeration skeleton and of the
->    candidate-generation loops with the first program. Sections 0.2, 7.3, 7.4, 10.2 and 10.3 still say "one program".
+>    candidate-generation loops with the first program. The sentences of sections 0.2, 1.3, 7.5, 9.A, 10.3, 10.4, 10.5
+>    and Appendix A that said "one program" are kept, each with a note "[State of 07/10 evening: ...]" beside it.
 > 3. Case I, n_3 = 0: the second program (`in_verify.py`, no code shared with the first) is complete on all twelve cases
 >    (07/10, 14:33 UTC): stage 1 identical, stage 2 agreeing at every node, 0 complete configurations; where the first
 >    program used the rank bound, the second closes the node by its own search. I.1 (3,4,0): 7,279,961 nodes, branch
 >    `lemma-run/t20_I1_340-i-019e86d399c17954f`; I.1 (4,2,1): 1,406,917 nodes, branch
 >    `lemma-run/t20_Iv_G-i-05703a74fbb027423`; the ten others on the branches `lemma-run/t20_Iv_{B,C,D,E,H,I,J}-*`.
->    Sections 0.2, 9.A and 10.2 still give the earlier counts (two of twelve).
+>    The earlier counts ("two of twelve") of sections 0.2, 9.A and 10.4 are kept with the same kind of note.
 > 4. Corrections of the referee report `lemma/t20_CODEX/REFEREE_T20_PROOF.md` merged on 07/10: E1 (sign in the proof of
 >    Corollary 5.2), E2 (split parameter 3 means tasks of level 4), C2 (paths), G3 (item 2 above), G2 (item 1). G1 is
 >    answered by `lemma/ARTIFACTS_T18_T20.md`. Still to merge: C3.
@@ -68,7 +69,11 @@ verified (section 10.4). Four points of section 10.4 deserve to be known before 
 1. **Case k = 0, n_3 = 2** (section 9.B): closed on 07/10 by Computation 9.29 (two programs). The section has not
    yet been refereed.
 2. **Computed lines that have one program only at the time of writing** (state of the sources: `T20_BOARD.md` and
-   `lemma/t20_R3_I/REPORT.md` of 07/10; runs in progress are not anticipated):
+   `lemma/t20_R3_I/REPORT.md` of 07/10; runs in progress are not anticipated).
+   **[State of 07/10 evening: this item is superseded. Every computed line has a second program: III.1 has a second
+   verification, with shared components (`lemma/t20_III1/VERIF.md`); the second program is complete on the twelve
+   cases of n_3 = 0 and on the fifty cases of n_3 = 2 (`lemma/ARTIFACTS_T18_T20.md`). The two entries below are the
+   state at the first writing.]**
    - configuration III.1 (Computation 7.5): one program; the independent verifier is running;
    - case k = 0, n_3 = 0 (Computations 9.19 and 9.20): two programs, both complete, for the two cases I.0 (4,2,1)
      and I.5 (4,2,1) only. For I.0 (3,4,0) the second program has done stage 1 (identical lists) and stage 2 on 372 of
@@ -168,12 +173,12 @@ exists. **It is not proved here.** What is proved is the following chain; the la
                             the vertex p, is one of nine explicit graphs: I.0 ... I.5 (k = 0), IIa.0 (k = 2),
                             III.0, III.1 (k = 4)
       -> section 7 (hand model + Computations 7.4, 7.5): III.0 and III.1 are impossible
-                            (III.1: one program at the time of writing)
+                            (III.1: one program at the first writing; second verification since 07/10)
       -> section 8 (hand lemmas + Computations 8.8, 8.9): IIa.0 is impossible
       -> section 9 (hand):  for I.0 ... I.5 the number n_3 of outside vertices with three neighbours in S+ is 0 or
                             2, and the neighbourhood of p has profile (3,4,0) or (4,2,1)
       -> section 9.A (hand model + Computations 9.19, 9.20): n_3 = 0 is impossible for the six graphs and the two
-                            profiles (two programs for two of the twelve cases, one for the others)
+                            profiles (two programs for the twelve cases since 07/10, 14:33 UTC)
       -> section 9.B (hand model + Computation 9.29): n_3 = 2 is impossible for the six graphs and the two
                             profiles (two programs)
 
@@ -1061,8 +1066,9 @@ choice of an unfilled unit is allowed, so this is sound provided that the second
 1. checks that the unit read from the plan is unfilled (it still has a positive remaining multiplicity);
 2. generates all the candidates of that unit with its own model, and tests them with its own tests;
 3. descends into every candidate that its own tests keep;
-4. ends with an error on a plan that is out of step, too short or too long, an error never being counted as a
-   completed traversal.
+4. is accepted as a completed exclusion only when its traversal of the plan is valid and complete: no line out of
+   step, none missing, none left unread, no time limit reached, and, for a run cut into parts, every part present. A
+   run that ends with an error or fails one of these conditions is not a completed traversal.
 
 Under 1 to 4 the second program performs a complete search of its own in the sense of Lemma 6.5, whatever the first
 program did, and its conclusion "no node of level n" does not depend on the two programs keeping the same
@@ -1081,17 +1087,24 @@ Where 1 to 4 are in the code (read for this text on 07/10; line numbers of the f
 
 The remaining multiplicities are kept in a dictionary from which a unit is deleted when its multiplicity reaches 0,
 so "in remaining" means "positive remaining multiplicity". In `engv.py`, `engv2.py` and `iian_verify.py` the number
-of plan lines left is printed, not asserted: the outputs cited in sections 7 and 8 all show 0. A plan that is too
-short makes `next` fail, and the program ends without a result line. `engv.py` and `engv2.py` also have a time limit:
-a run that reaches it stops descending, leaves plan lines unread, and is not a completed traversal.
+of plan lines left is printed, not asserted, so for these three programs condition 4 is checked on the outputs: the
+ones cited in sections 7 and 8 all show 0 lines left. A plan that is too short makes `next` fail, and the program ends
+without a result line. `engv.py` and `engv2.py` also have a time limit and cut the tasks into parts; for them
+acceptance requires in addition `timeout` false in every part and all the tasks done: the three parts of III.0 print
+"timeout False" (`v_III0_{0,1,2}of3.out`), and for III.1 `VERIF.md` records "No time-out, all 21,165 tasks done, 0 plan
+lines left unread". `in_verify.py` asserts that no line is left and compares its node and kept totals with the first
+program's for every base of its list.
 
 *Negative controls of the contract* (07/10; `iian_verify.py follow` on the type set 39, whose plan has 7 lines; with
 the true plan: "nodes 7 ... kept 6 complete 0 | plan lines left 0"). (a) The unit of the second line replaced by the
 unit of the first line, which is filled at that node: `AssertionError` at l. 240. (b) A unit that does not exist,
 (0, 0), at a line of depth 3: `AssertionError` at l. 240. (c) The last line removed: `StopIteration` at l. 237. In the
 three cases the program ends with an error and prints no result line. The controls of the III.1 verifier (a plan with
-one kept count changed, and one with a line deleted) are in `lemma/t20_III1/VERIF.md`. Conditions 2 and 3 were read
-in the code, not tested by a control.
+one kept count changed, and one with a line deleted) are in `lemma/t20_III1/VERIF.md`. The referee ran four more
+controls (a non-existent unit (99, 99) and a truncated plan, on `engv2.py` for III.1 and on `in_verify.py` for
+n_3 = 2): all are rejected before any candidate is generated (`lemma/t20_CODEX/referee_plan_controls.py` and its
+JSON output). Conditions 2 and 3 were read in the code, by the author of this text and by the referee, not tested by
+a control.
 
 
 ## 7. Case III (k = 4): the configurations III.0 and III.1
@@ -1214,6 +1227,10 @@ smallest N0, so it is not omitted; as in Lemma 6.5 it is a child of N, and it is
 > rank 23. No time-out.
 >
 > **Status at the time of writing: one program.**
+> **[State of 07/10 evening: a second verification re-traversed the whole tree (1,628,864 nodes, no time-out, all 21,165
+> tasks done, 0 plan lines left, same kept count at every node, 0 complete); the node rejected by rank is also dead
+> without the rank bound. It shares the model file and part of the enumeration with the first program
+> (`lemma/t20_III1/VERIF.md`).]**
 
 **Proposition 7.6 (hand statements + Computations 4.12, 7.4, 7.5).** There is no configuration in case III.
 
@@ -2081,6 +2098,10 @@ by Lemma 9.18 (b) and (6.2) the graph on Y_0 is one of the bases of Computation 
 Status: hand part (Lemmas 4.10, 5.1, 5.3-5.5, 9.1-9.3, Corollary 5.2, Proposition 9.4, Lemmas 9.5, 9.6, 9.8-9.10,
 9.18, and Proposition 6.4 for the graph I.1) plus Computations 4.12, 9.19, 9.20. **For ten of the twelve cases the
 two computations rest on one program at the time of writing** (section 9.A.5).
+**[State of 07/10 evening: the second program is complete on the twelve cases (stage 1 identical, stage 2 agreeing at
+every node, 0 complete); for the graph I.1 it closes the fifteen nodes rejected by rank by its own search, so
+Proposition 6.4 is no longer needed for I.1 in the second program. Branches and versions:
+`lemma/ARTIFACTS_T18_T20.md`.]**
 
 #### 9.A.4 Remarks on the two computations
 
@@ -2146,7 +2167,8 @@ State of the second program **at the time of the working report** (`lemma/t20_R3
 | I.1 (4,2,1) | - | one base (number 12632, the one with the two rank nodes) |
 | the eight other cases | - | - |
 
-So **two of the twelve cases have two programs**, and ten have one. According to the working report and to
+So **two of the twelve cases have two programs**, and ten have one. **[State of 07/10 evening: twelve of twelve; the
+table above is the state of the working report.]** According to the working report and to
 `T20_BOARD.md` (lines C2, C3, C4) the second program is running on all twelve cases (cloud jobs `t20_Iv_B` to
 `t20_Iv_F`, and `t20_I1_340`), and one part of I.1 (4,2,1) has to be re-run with the corrected version of the
 verifier; nothing of these runs is used here.
@@ -2616,6 +2638,12 @@ called AUDIT_NORME1 (none of squared norm <= 14) and the statement H16 of the T1
   The second program replaces it by a search below the node; at the time of writing this has been done for the 2
   candidates of profile (4,2,1) only (section 9.A.4).
 
+**[State of 07/10 evening: all sixteen nodes are closed by the second programs without the rank bound. III.1, 1 node:
+`lemma/t20_III1/VERIF.md` (126 candidates below it, all rejected by budgets or exact negative vectors). I.1 (3,4,0),
+13 nodes: `I1_340/verify_I1_340.out` on the branch `lemma-run/t20_I1_340-i-019e86d399c17954f` ("closed here by the
+own search (no rank bound): 13 ... by an own exact rank computation: 0"). I.1 (4,2,1), 2 nodes: `ALL.txt` on the
+branch `lemma-run/t20_Iv_G-i-05703a74fbb027423`. So the rank bound is used by the first programs only.]**
+
 It is not used in Computations 7.4, 8.8, 8.9, 9.19, nor in the ten other cases of Computation 9.20 (no rank
 rejection occurs there). Its proof (section 6.4) uses Lemma 2.1 (a) and Lemma 6.1 only.
 
@@ -2695,6 +2723,9 @@ negative form, i.e. a PSD violation. It is not used here either.)
    engines share the model file `cases.py`. For case I the two programs share the hand model.
 5. **Single programs.** III.1; ten of the twelve cases of n_3 = 0 (section 10.2). In particular everything about
    the graphs I.1, I.2, I.3, I.4 rests on one program, and for I.1 on the rank bound as well.
+   **[State of 07/10 evening: no computed line rests on a single program any more (banner, items 2 and 3). What remains
+   of this item: for III.1 the second verification shares the model file and part of the enumeration skeleton with
+   the first program.]**
 6. **Saved certificates.** Only samples were saved and re-checked: 15,000 for III.0, 6,358 for IIa.0 (5 type sets
    of 87; the others were deleted), ten for I.0 (4,2,1). The plan files, logs and certificates of III.1 and the
    per-base files of the three laptop cases of n_3 = 0 are not in git.
@@ -2715,6 +2746,8 @@ negative form, i.e. a PSD violation. It is not used here either.)
 11. **Not verified at all, and not used:** the lattice dictionary and the bridge of section 1.4, (E14), the lemma of
     04/10, T18 itself, the computed statements about n_3 = 2 (section 9.B.6), the statement of the working reports
     that B is connected with its eigenvalues other than 4 in [-3, 3].
+    **[State of 07/10 evening: "the computed statements about n_3 = 2" no longer belong to this item: section 9.B.6 is
+    now Computation 9.29, done by two programs, refereed, and used by Theorem 10.2.]**
 12. **Parts of this text that only its author has checked.** The following proofs or formulations are not in the
     working reports, or are there in one line, and were written for this text: Corollary 2.3 (c); the equality case
     of Lemma 3.1 as used in Lemma 3.2; Lemma 4.6; Lemma 4.9 as a separate statement; the completeness argument
@@ -2750,7 +2783,8 @@ negative form, i.e. a PSD violation. It is not used here either.)
 
 1. **III.1.** Round 2 says "open, not completed (about 900 tasks done)". `lemma/t20_III1/README.md`,
    `T20_WORK.md` and `T20_BOARD.md`, written later, say: completed by one program, 0 configurations, verifier
-   running. Chosen: the later files (Computation 7.5, one program).
+   running. Chosen: the later files (Computation 7.5, one program). **[State of 07/10 evening: the verifier has finished;
+   see the note in section 7.5.]**
 2. **Upper bounds of stage 2 of case I.** The round 3 report says that the candidates are enumerated "under the caps
    of C4 and C5". The headers of `cases6.py` and `in_verify.py` give 4 - h_0, 8 - h_0 and min(10, 12 - h_0); for a
    vertex of W in profile (3,4,0) this is 8, while C4 (Lemma 9.9) gives 7. Chosen: the bounds of the code, since
@@ -2846,7 +2880,9 @@ proofs).
 | sample of certificates | `sample_certs.py`, `check_sample.py` | `python sample_certs.py <stage1.json> <stage2 prefix> <nparts> <out.jsonl>` ; `python check_sample.py <file.jsonl>` | `sample_certs_I0_421.jsonl` |
 | cells (Lemma 9.11) | script `hand_cells.py` (not in the repository folder) | - | `hand_cells.out` |
 
-Runs of the second program in progress at the time of writing (**not used**): cloud jobs
+**[State of 07/10 evening: these runs are finished and ARE used, except `t20_Iv_A` (status file only) and `t20_Iv_F`
+(reclaimed before any result); the list of branches, commits, versions and lines to read is
+`lemma/ARTIFACTS_T18_T20.md`.]** Runs of the second program in progress at the time of writing (**not used**): cloud jobs
 `lemma/cloud/jobs/t20_Iv_A.sh` to `t20_Iv_F.sh` and `t20_I1_340.sh`; git branches
 `lemma-run/t20_Iv_A-i-0390fd53333c148ad` (status "INSTALLING" only), `lemma-run/t20_Iv_B-i-0a03ce79bff09fa5d`,
 `lemma-run/t20_Iv_C-i-092f5550d84f61e09`, `lemma-run/t20_Iv_D-i-09169834049067883`,

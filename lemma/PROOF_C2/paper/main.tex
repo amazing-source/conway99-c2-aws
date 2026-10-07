@@ -115,7 +115,7 @@ lattice $U$ of rank $24$ without vectors of norm $1$ (Theorem~\ref{thm:R}); ther
 The second half excludes the frame from each of the $156$ lattices. Every vector $v$ of $U$ outside the plane of the two
 vectors of norm $7$ yields an integer-valued $\s$-odd eigenfunction of the adjacency matrix for the eigenvalue $-4$, whose
 squared norm is $2E(v)$ for an explicit quadratic ``energy'' $E$. Three lemmas state that such eigenfunctions do not exist for the squared norms $16$, $18$ and $20$
-(Section~\ref{sec:energy}); with the bound $8/7$ this forbids every vector of energy less than $11$. For a large part of the
+(Section~\ref{sec:energy}); with the bound $8/7$ this forbids every such vector of energy less than $11$. For a large part of the
 candidate pairs $(y_1,y_2)$ of normals this is already a contradiction; the others are excluded by an exhaustive search for
 the frame (Section~\ref{sec:lattices}). Section~\ref{sec:verif} says how the computations were verified and what the proof
 rests on. In the way computations enter the proof we have tried to follow the practice of the nonexistence proof of a
@@ -709,9 +709,11 @@ the object to branch on and its own tests. Each of the three texts was refereed 
 final version of the program were verified in exact arithmetic, on one machine: every vector has its norm, the vectors are
 distinct, and the counts satisfy the identity $N_4=196560-24N_2-24N_3$. Since a list can only be too short, these three
 lists are complete. The numbers of vectors of norm $4$ and of new roots recorded by the machines of 7 October agree with
-them on the $22$ lattices where they were compared. The lists built by the earlier versions of the program, and the
-numerical decisions of the transfer rule (the root system and the rank of the twin lattice, computed in floating point),
-were not re-examined.
+them on the $22$ lattices where they were compared. The lists built by the earlier versions of the program were not
+re-examined. In the transfer rule, the roots of the twin lattice and the comparison of the numbers of roots, on which the
+absence of cycles rests, are obtained by integer tests; but the root system by which the twin is recognised in the list is
+read from the number of roots of each component and from its rank, and that rank is computed in floating point. This
+identification was not re-examined: a wrong one could attribute a transferred pair to the wrong lattice of the list.
 
 \subsection*{The enumeration of the pairs} One program, compared with an independent enumerator on four lattices
 (Section~\ref{ssec:enum}); for the others it rests on the program that produces the pairs, and the reduction by diagram
