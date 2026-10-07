@@ -11,9 +11,9 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | # | Item | Owner | Status (07/10) | Next deliverable | Due |
 |---|---|---|---|---|---|
 | A1 | Route A: lab decomposition (base S u {p} u X_3 u X_0', 700 classes, engine eng5z). 183 classes closed by search, 0 complete; 96 more excluded by hand only (isolation lemma); 421 left. Run stopped at 11:43 | LAB | **measured, answer clear at 12:30** (job `t20_n3_sample` on i-0cefd01aef8eade8a, branch `lemma-run/t20_n3_sample-i-0cefd01aef8eade8a`; method in `t20_HAND/n3_split.py`: one task in 300 below level 2 per base). 160 of 421 bases sampled (all of I.0, 128 of I.1, in file order): 173 million nodes estimated for these 160 alone = 373 core-hours at the node rate of the closed bases (129 per second), 793 at the samples' own rate; mean 1.08 million nodes per base (median 318,000, max 12.6 million); 26 bases over 4 h, 41 between 1 and 4 h; 0 complete configuration met. Extrapolated to the 421 bases: **about 1,000 core-hours per program (up to 2,000)**. Codex's independent program sees the same tree shape (`t20_CODEX/n3_second/MEASUREMENTS.md`). **Route A is not worth running.** The measurement can be stopped (it would end about 13:35) | none unless route B fails; the split-mode runner `n3_split.py run` exists if needed | done |
-| A2 | Route B: N(p) and the X_3 orbit in the base (the decomposition that closed n_3 = 0 at 0.3 s per base) | LAP (agent) | started 11:50 | number of bases after stage 1 for the 6 graphs x 2 profiles; measured stage-2 sample; estimated core-hours | 12:45 |
-| A3 | **Decision**: one route, with a measured cost, proposed to the user; the other route stops | LAP | pending A1, A2 | time and price | 12:45 |
-| A4 | Run of the chosen route (first program) | LAP launches | - | 0 complete configurations or the list of survivors | after A3 |
+| A2 | Route B: N(p) and the X_3 orbit in the base (37 vertices), then the X_2 orbits outside N(p) | LAP (agent) | **first program COMPLETE 12:55**: 50 cases (6 graphs, 25 types of z, 2 profiles), 64,528 bases, 86,968 nodes, at most 3 X_2 orbits placed, 0 complete configurations, rank bound never used; coverage re-counted from the files. Second program: agrees on I.0 (both profiles), running on the other cases (laptop, 30-40 min) | second program on all 50 cases; `SPEC_ROUTE_B_N3` and report in `t20_R3_I/` | 14:00 |
+| A3 | **Decision** | LAP | **route B** (12:45): about 5 laptop CPU-hours for both programs, no cloud machine. Route A measured at about 1,000 core-hours per program: dropped | - | done |
+| A4 | Run of the chosen route (first program) | LAP | **done 12:55, 0 complete configurations** (see A2) | - | done |
 | A5 | Route-B model/specification review, independent of the first search implementation; route-A checker retained as an unused record | CDX | route B selected per coordination message 46; D3 first pass delivered, route-A optimization stopped; laptop already supplies the second route-B program, so no redundant full third run planned | review the self-contained route-B specification when published, especially stage-1 coverage, all 84 attachments of z to N(p), and quotient by the stabilizer of {U3,V3} | upon specification delivery |
 
 ## B. Already closed (do not redo)
@@ -52,7 +52,7 @@ Owners: **LAP** = laptop session (coordination, AWS machines, sub-agents), **LAB
 | Item | Owner | Status |
 |---|---|---|
 | All queue jobs except one: done (`q/tools/laptop_2026-10-06/sweep_report.py`) | LAP | closed |
-| 003:181:182: running since 07:46 on 124 cores (i-00a0ab97a6a8099fd); stop at 13:00 if not back, then treated apart | LAP | running |
+| 003:181:182: the unbounded run was stopped at 13:00 after 5.2 h on 124 cores without a record. Measured on the sweep's own sampled searched pairs of 003: 1,197 of 1,876 have a vector x of norm 4 with (x,y1), (x,y2) = +-3, +-3 (E = 10, so T20 applies by the bridge theorem), among them all the 100 heaviest; 127 of 134 for the classes 170-181. New switch `Q_DEFER_N4=1` (`q/defer_consumer.py`, CI run 37623195055 PASS): such pairs are deferred to T20 with their own verdict and index list `deferred.T20_norm4`. Re-run started 13:00 on i-0fd53514a6dcce992 (128 vCPU, eu-north-1), node limit 10^9 | LAP | running; **LAB: `cert_stream.py` must accept norm-4 witnesses for the positions of `T20_norm4`** |
 
 ## Note of 12:30 (LAP)
 
@@ -68,6 +68,6 @@ specification to CDX.
 
 | Account | Machine | Job | Since |
 |---|---|---|---|
-| user | i-00a0ab97a6a8099fd, 128 vCPU, eu-north-1 | 003:181:182 | 07:46 |
+| user | i-0fd53514a6dcce992, 128 vCPU, eu-north-1 | 003:181:182 with norm-4 witnesses | 13:00 |
 | free | 5 x 8 vCPU | C2 | 11:10 |
 | free | i-0cefd01aef8eade8a, 8 vCPU, eu-north-1 | A1 measurement (`t20_n3_sample`) | 11:50 |
