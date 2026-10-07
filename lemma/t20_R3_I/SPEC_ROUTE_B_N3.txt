@@ -254,6 +254,13 @@ Reference counts, small case I.0, z = 034;179 (|G_z| = 4), independent of the or
     all 27 classes have z adjacent to a vertex of kind Z.
     stage 2 on the 27 bases (first program; the node counts depend on the rule choosing the unit):
       nodes with 0 / 1 / 2 orbits placed: 27 / 12 / 3; no complete configuration.
+    NOTE (07/10, after Codex's review). The attachment counts of this block come from an earlier pass that offered BOTH
+    vertices of the mate edge of kind Z to z ("raw Z": 84 attachments per representative, 1,875 x 84 = 157,500, and 54
+    kept bases, two per class). The final programs offer one vertex of that mate edge only (section 6): 72 attachments
+    per representative, 1,875 x 72 = 135,000 on the same representatives, and 27 kept bases, one per class. The totals
+    below and the files n3_check.out, n3_verify.out are those of the final programs. The column "N-configurations" of
+    n3_check.out for this case, 10,146 (2,594 classes), is a different counter, taken at another point of the
+    pre-filtering; it is not comparable with the 7,334 (1,875 classes) of this block.
 
   profile (3, 4, 0):
     N-configurations (3 + 4 typed mate edges covering every index twice) for which the 37 vertices with z not yet

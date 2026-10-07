@@ -2467,8 +2467,11 @@ on one laptop (about 7 CPU-hours); `python n3_all.py <out> <workers> both 340 42
 vector x with x^T M x < 0 evaluated in integers (second program: 1,950,773 such vectors in stage 1, for 362,754,336
 attachments tested, and 1,978,816 in stage 2; exact rational elimination was needed 0 times). A floating-point
 test is only used to keep a base or a candidate. So the statement "no state of level n" rests on exact
-rejections; the floating-point decisions affect only the sizes of the kept lists, and the two programs keep the
-same ones.
+rejections; the floating-point decisions affect only the sizes of the kept lists. What the comparison of the two
+programs shows is this. Stage 2: the second program makes its own complete traversal, taking at each node the unit
+chosen by the first program (a valid remaining unit), generating and testing all the candidates of that unit with
+its own code; it finds the same number of kept candidates at every node, and no complete configuration. Stage 1:
+the canonical classes of the kept bases are compared separately, and they are the same in the 50 cases.
 
 **Proposition 9.30 (hand statements + Computations 4.12, 9.29).** There is no configuration in case I with
 n_3 = 2.
