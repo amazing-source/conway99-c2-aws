@@ -75,6 +75,8 @@ elif [ "${Q_CERT:-}" = "1" ]; then                                          # 07
   .venv/bin/python "$REPO/q/qcert.py" > "$HOME/qcert.out" 2>&1; RC=$?
 elif [ "${Q_AUDIT:-}" = "1" ]; then                                         # 07/10: rigid-kernel audit runner (q/qaudit.py, lab session; hole H2)
   .venv/bin/python "$REPO/q/qaudit.py" > "$HOME/qaudit.out" 2>&1; RC=$?
+elif [ "${Q_F4:-}" = "1" ]; then                                            # 07/10: independent enumeration of the pairs (q/qf4.py, lab session; F4)
+  .venv/bin/python "$REPO/q/qf4.py" > "$HOME/qf4.out" 2>&1; RC=$?
 else
   .venv/bin/python "$REPO/q/qagent.py" run; RC=$?
 fi
