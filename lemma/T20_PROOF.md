@@ -5,7 +5,9 @@
 >    programs, written on 07/10 at 14:00 UTC). Section 9.B.6 and `SPEC_ROUTE_B_N3.txt` had their referee pass on 07/10
 >    (addendum to `lemma/t20_CODEX/REFEREE_T20_PROOF.md`): no blocking error; its two presentation points are merged.
 >    The referee did not audit the search code. Its reserve G1 (provenance) is answered by `lemma/ARTIFACTS_T18_T20.md`
->    (run branches, program versions, archive branch of the raw outputs); G2 (wording of the verifier contract) stands.
+>    (run branches, program versions, archive branch of the raw outputs); G2 (wording of the verifier contract) is
+>    merged since 07/10 evening: the contract, where it is in the four verifiers, and three negative controls are at
+>    the end of section 6.5; item 3 of section 10.3 no longer says "node by node". Not yet re-read by the referee.
 > 2. III.1 has a second verification: a verifier re-traversed the whole tree (1,628,864 nodes, same counts per level, same
 >    kept count at every node, 0 complete), and the single node the first program rejected by the rank bound is also dead
 >    without it (`lemma/t20_III1/VERIF.md`). Scope of its independence, as that report says: its budget test, its PSD test and
@@ -18,7 +20,8 @@
 >    `lemma-run/t20_Iv_G-i-05703a74fbb027423`; the ten others on the branches `lemma-run/t20_Iv_{B,C,D,E,H,I,J}-*`.
 >    Sections 0.2, 9.A and 10.2 still give the earlier counts (two of twelve).
 > 4. Corrections of the referee report `lemma/t20_CODEX/REFEREE_T20_PROOF.md` merged on 07/10: E1 (sign in the proof of
->    Corollary 5.2), E2 (split parameter 3 means tasks of level 4), C2 (paths), G3 (item 2 above). Still to merge: G1, G2, C3.
+>    Corollary 5.2), E2 (split parameter 3 means tasks of level 4), C2 (paths), G3 (item 2 above), G2 (item 1). G1 is
+>    answered by `lemma/ARTIFACTS_T18_T20.md`. Still to merge: C3.
 
 ## Proof text, state of 2026-10-07. Every case is closed and refereed; every computed step has a second program.
 
@@ -1049,6 +1052,46 @@ Three remarks.
 
 By Lemma 6.5 and (6.2): **if a search whose rejections are exact has no node of level n, then no configuration has
 the root as its graph on Y_0.**
+
+**What a second program that follows a plan must do (the verifier contract; referee's reserve G2).** In Computations
+7.4, 8.9, 9.20 and 9.29, and in the second verification of III.1, the second program does not choose the units: at
+every node it reads, from a plan written by the first program, which unit the first program chose. By Lemma 6.5 any
+choice of an unfilled unit is allowed, so this is sound provided that the second program, in its own current state,
+
+1. checks that the unit read from the plan is unfilled (it still has a positive remaining multiplicity);
+2. generates all the candidates of that unit with its own model, and tests them with its own tests;
+3. descends into every candidate that its own tests keep;
+4. ends with an error on a plan that is out of step, too short or too long, an error never being counted as a
+   completed traversal.
+
+Under 1 to 4 the second program performs a complete search of its own in the sense of Lemma 6.5, whatever the first
+program did, and its conclusion "no node of level n" does not depend on the two programs keeping the same
+candidates. The equality of the numbers of kept candidates at every node, which the second programs also check, is a
+cross-check between the two programs: equal numbers do not show that the two kept lists are equal, and the exclusion
+does not need it.
+
+Where 1 to 4 are in the code (read for this text on 07/10; line numbers of the files of that day):
+
+| program (computation) | 1. unit unfilled | 2. own candidates, own tests | 3. descent on its own kept list | 4. plan errors |
+|---|---|---|---|---|
+| `t20_R2/engv.py` (7.4: III.0) | `assert U0 in remaining`, l. 389 | `gen`, l. 294 and 390; its own `reject` and budget recount | `for ... in good`, l. 428 | `next(planit)` l. 386; depth l. 387; kept count l. 427; lines left, printed, l. 474-476 |
+| `t20_R2/engv2.py` (III.1) | l. 426 | l. 427, same structure | l. 465 | l. 423, 424, 464; lines left, printed, l. 513 |
+| `t20_R2/iian_verify.py` (8.9: IIa.0) | `assert U0 in remaining`, l. 240 | l. 241-294 | recursion l. 307 | `next(plan)` l. 237; depth l. 238; kept count l. 295; lines left l. 310, printed |
+| `t20_R3_I/in_verify.py` (9.20 and 9.29: case I) | `assert U0 in remaining`, l. 971 | `gen_cands` l. 858, `test_cands` l. 901 | `for ... in good`, l. 982-1008 | `next(plan)` l. 968; depth l. 969; kept count l. 976; `assert left == 0`, l. 1044 |
+
+The remaining multiplicities are kept in a dictionary from which a unit is deleted when its multiplicity reaches 0,
+so "in remaining" means "positive remaining multiplicity". In `engv.py`, `engv2.py` and `iian_verify.py` the number
+of plan lines left is printed, not asserted: the outputs cited in sections 7 and 8 all show 0. A plan that is too
+short makes `next` fail, and the program ends without a result line. `engv.py` and `engv2.py` also have a time limit:
+a run that reaches it stops descending, leaves plan lines unread, and is not a completed traversal.
+
+*Negative controls of the contract* (07/10; `iian_verify.py follow` on the type set 39, whose plan has 7 lines; with
+the true plan: "nodes 7 ... kept 6 complete 0 | plan lines left 0"). (a) The unit of the second line replaced by the
+unit of the first line, which is filled at that node: `AssertionError` at l. 240. (b) A unit that does not exist,
+(0, 0), at a line of depth 3: `AssertionError` at l. 240. (c) The last line removed: `StopIteration` at l. 237. In the
+three cases the program ends with an error and prints no result line. The controls of the III.1 verifier (a plan with
+one kept count changed, and one with a line deleted) are in `lemma/t20_III1/VERIF.md`. Conditions 2 and 3 were read
+in the code, not tested by a control.
 
 
 ## 7. Case III (k = 4): the configurations III.0 and III.1
@@ -2638,11 +2681,13 @@ negative form, i.e. a PSD violation. It is not used here either.)
    `eng6.py`, `engv.py`, `t20_kernel.py`, `r2c.py`, the checkers and the summary scripts) only the header, or
    nothing. That each program enumerates exactly the search described in the text is supported by the agreement of
    programs written separately where there are two, not by a proof.
-3. **The second programs follow the first ones.** `engv.py`, `iian_verify.py` and `in_verify.py` read the unit
-   chosen at every node from a plan written by the first program. They regenerate and test all candidates of that
-   unit and compare the number kept. So they verify the kept / rejected decisions node by node; they do not form an
-   independent search. By Lemma 6.5 the choice of the units is irrelevant for exhaustiveness, so this does not
-   weaken the conclusion, but it means that the node counts were never reproduced by a search with another order.
+3. **The second programs follow the first ones.** `engv.py`, `engv2.py`, `iian_verify.py` and `in_verify.py` read the
+   unit chosen at every node from a plan written by the first program. They regenerate and test all candidates of
+   that unit with their own code, descend into the candidates they keep themselves, and compare the number kept with
+   the plan's. Each of them therefore makes a complete traversal of its own with valid units (the verifier contract
+   of section 6.5), which suffices by Lemma 6.5; the equal numbers of kept candidates are a cross-check, not a proof
+   that the two programs keep the same candidates. The second programs do not choose the units by themselves: the
+   node counts were never reproduced by a search with another order.
 4. **Shared inputs.** The structure files `structures_I.json` and `structures_III_IIb_IIa.json` (written by
    `t20_enum.py`) are read by `cases.py`, `r3lib.py`, `iian_verify.py`, `in_verify.py`; `check_model.py` compares
    the base graphs and units built from them with edge lists typed in by hand, for III.0, III.1, IIa.0. The list

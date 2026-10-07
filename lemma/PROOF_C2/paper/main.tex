@@ -432,9 +432,12 @@ of $S^+$ has four more neighbours in $S^-$ than in $S^+$, and the count of commo
 inside $S^+$. The bipartite graph between $S^+$ and $S^-$ is then one of finitely many \emph{support structures}: for the
 squared norm $16$, the complements of the cube and of the Wagner graph; for $20$, nine configurations, sorted by the number
 of support vertices adjacent to $p$. Each structure is excluded, by hand where possible, and otherwise by an exhaustive
-search over the vertices outside the support in which every rejection is exact: a count of common neighbours, or an integer
-vector on which one of the positive semidefinite matrices $9(3I-A)+J$ and $11(4I+A)-2J$ would take a negative value. For
-$T_{20}$ the largest group of searches visits $1.58\cdot10^7$ nodes from $615{,}405$ starting configurations. How these
+search over the vertices outside the support in which every rejection is exact: a count of common neighbours; an integer
+vector on which one of the positive semidefinite matrices $9(3I-A)+J$ and $11(4I+A)-2J$ would take a negative value; or, for
+one family of $T_{18}$ and at sixteen nodes of the first program of $T_{20}$, an exact computation of a rank that would
+exceed $22$ (the $\s$-odd part of $9(3I-A)+J$ has rank at most $22$). For $T_{20}$ the second program closes these sixteen
+nodes by its own search, without the rank bound. The largest group of searches of $T_{20}$ visits $1.58\cdot10^7$ nodes
+from $615{,}405$ starting configurations. How these
 computations were verified is described in Section~\ref{sec:verif}.
 
 \begin{corollary}\label{cor:E11}
@@ -470,13 +473,14 @@ This section describes the proof of Theorem~\ref{thm:B}. Lattices are referred t
 of Appendix~\ref{app:table}, in which they are ordered by increasing number of roots, and by their root system.
 
 \subsection{The lattices}
-The $156$ lattices are given by generators. For each of them the following was recomputed: the determinant is $1$ and the
-lattice is odd (exact computations on the Gram matrix); it has no vector of norm $1$, and its root system is the one of the
-classification (by programs with floating-point steps in the enumeration and in the ranks of the root components).
-% TODO: an exact recomputation of these two points by a second program (Codex) was in progress on 07/10; replace by its result.
-The root system separates all but seven pairs of lattices, and those are separated by their two even neighbours. So the data
-are $156$ pairwise non-isometric lattices of the list, hence all of them by \cite{Bor}. An exact recomputation of the
-absence of norm $1$, of the root systems and of the separation of the seven pairs is in progress at the time of writing.
+The $156$ lattices are given by generators. For each of them the following was computed twice, first by programs with
+floating-point steps (in the enumeration of short vectors and in the ranks of the root components), then by an independent
+program in exact arithmetic: the determinant is $1$, the lattice is odd, it has no vector of norm $1$, and its root system
+is the one of the classification. The root system separates all but seven pairs of lattices, and those are separated by
+their two even neighbours (also recomputed exactly). So the data are $156$ pairwise non-isometric lattices of the list,
+hence all of them by \cite{Bor}.
+% Exact recomputation: Codex, 07/10, q/codex_exact_lattice_identity.py, measures/codex_exact_lattice_identity.json
+% (announced through the lab bridge; check that the two files are on master before circulation).
 
 \subsection{Twenty lattices excluded without enumeration}
 
@@ -649,7 +653,10 @@ of a frame, is the audit \texttt{lemma/upstream/AUDIT\_ENGINE\_RULES.md} of \cit
 \subsection{Results}\label{ssec:results}
 
 \subsubsection*{The $91$ lattices of the stream sweep} For these lattices every pair goes through (i), (iii) or (iv); the
-lemmas $T_{18}$, $T_{20}$ are not used. The records were recounted: every representative $y_1$ is covered exactly once, and
+sweep itself does not use the lemmas $T_{18}$, $T_{20}$. They enter for these lattices in one way only: for the
+representatives $y_1$ whose records come from a program version that was not recorded and that were not run again, the
+exclusion rests on Corollary~\ref{cor:Y1} (Section~\ref{sec:verif}, item 3 of the paragraph on the search). The records
+were recounted: every representative $y_1$ is covered exactly once, and
 there are $220{,}260{,}576$ pairs, of which $97{,}628{,}147$ are excluded at once, $22{,}702{,}398$ by search,
 $6{,}107{,}330$ by transfer, $93{,}822{,}540$ are skipped by the symmetry in $(y_1,y_2)$, and $161$ were first reported
 incomplete and then excluded by a second search with a larger limit.
