@@ -1,0 +1,91 @@
+{
+"id": 7,
+"chunk": [
+34,
+627
+],
+"n_pairs": 94140,
+"sha256": "df121a960da4aafc53787d1e5538ad05da24095c2cb53f4b038f99b88882d5cf",
+"stream_ok": true,
+"lattice": {
+"rigid": false,
+"norm4_lines": 48552,
+"zero_footprint_norm4_lines": 3,
+"new_root_pairs": 48
+},
+"counts": {
+"setup_impossible": 0,
+"general": 94131,
+"rigid": 9,
+"with_zero_candidate": 274,
+"exposed": 1
+},
+"exposed": [
+{
+"position": 1,
+"o": 34,
+"y1": [
+"-1/2",
+"0",
+"0",
+"3/4",
+"0",
+"-1/4",
+"-3/2",
+"3/4",
+"1/4",
+"0",
+"1/4",
+"0",
+"-3/4",
+"1/2",
+"-1/2",
+"1/2",
+"0",
+"-3/4",
+"3/4",
+"1/4",
+"-3/4",
+"0",
+"1/4",
+"-1/4"
+],
+"y2": [
+"0",
+"-3/2",
+"0",
+"-1/4",
+"-3/2",
+"-3/4",
+"-1/2",
+"-1/4",
+"3/4",
+"0",
+"-1/4",
+"0",
+"1/4",
+"0",
+"0",
+"0",
+"0",
+"1/4",
+"-1/4",
+"3/4",
+"1/4",
+"0",
+"-1/4",
+"1/4"
+],
+"verdict_general_kernel": "EXCLUDED (char-vector trap)",
+"nodes": null,
+"zero_footprint_candidates": 3
+}
+],
+"exposed_not_excluded_again": 0,
+"ok": true,
+"audit_rigid_sha256": "a555ddb3aa62b9c1",
+"engine_sha256": "1591aeeac9c0be5c",
+"seconds": 56.2,
+"t": "2026-10-07 14:42:44",
+"job_seconds": 58.4
+}
