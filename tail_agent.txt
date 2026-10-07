@@ -32,3 +32,4 @@
 2026-10-07 14:36:51 audited 050_3_11 in 208 s: pairs 92606, counts {'setup_impossible': 0, 'general': 92575, 'rigid': 31, 'with_zero_candidate': 82668, 'exposed': 31}
 2026-10-07 14:36:57 audited 050_7_11 in 194 s: pairs 77411, counts {'setup_impossible': 0, 'general': 77376, 'rigid': 35, 'with_zero_candidate': 69459, 'exposed': 31}
 2026-10-07 14:37:05 audited 050_5_11 in 220 s: pairs 88471, counts {'setup_impossible': 0, 'general': 88416, 'rigid': 55, 'with_zero_candidate': 83009, 'exposed': 53}
+2026-10-07 14:37:59 audited 050_9_11 in 191 s: pairs 93540, counts {'setup_impossible': 0, 'general': 93509, 'rigid': 31, 'with_zero_candidate': 84800, 'exposed': 29}
