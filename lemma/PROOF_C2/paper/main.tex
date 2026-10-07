@@ -2,13 +2,15 @@
 % lemma/upstream/{LATTICE_143,AUDIT_ENGINE_RULES,AUDIT_REDUCTION}.md. Appendix A is generated (table156.tex, lab session).
 %
 % OPEN POINTS, to be closed before circulation (search for "TODO"):
-%  1. Author line.
+%  1. Author block: written on the model of the author's public manuscript on order 7 (conway-C7/tex/order7.tex); to be
+%     confirmed by him, with the correspondence address he wants printed.
 %  2. Lattice 044: its re-run is in progress; Section 8.5 says so.
-%  3. Packing numbers of Table 1: a second program is being written by the Codex session (requested 07/10); the sentence
-%     in Section 9 is to be updated with its result.
-%  4. Bibliography: the statements attributed to [BL] and [MM] are taken from abstracts and secondary sources, not from the
-%     papers themselves; [CW], [CM], [CS90], [Bor] were checked on the publishers' pages on 07/10. The section number of
-%     the oddity formula in [SPLAG] is to be added.
+%  3. (closed 07/10) Packing numbers of Table 1: reproduced by a second program (Codex, q/codex_independent_packing.py) and,
+%     for test (a), by a third (lab); Section 9 says so.
+%  4. Bibliography: the statements attributed to [MM], [Mak], [B09], [BL] in the Introduction follow the literature section
+%     of the author's manuscript on order 3 (with its theorem numbers) and the abstract of [CW]; the papers themselves were
+%     not opened for this text. [CW], [CM], [CS90], [Bor] were checked on the publishers' pages on 07/10. The section
+%     number of the oddity formula in [SPLAG] is to be added. [D3] is in a private repository: give its public location.
 %  5. T20: reserve G2 of the referee (wording of the verifier's contract) in the supplement.
 %  6. One frozen referee pass on this text. New with respect to the refereed Part A: property (R8) is stated separately
 %     (it is A.5); Lemma 6.2 (the u_o generate N; connectivity) and Lemma 6.6 (twins) are written out; Proposition 8.1.
@@ -41,7 +43,11 @@
 \newcommand{\repo}{\texttt{github.com/amazing-source/conway99-c2-aws}}
 
 \title[No involution on a strongly regular graph $(99,14,1,2)$]{A strongly regular graph with parameters $(99,14,1,2)$\\ has no automorphism of order two}
-\author{[Author]}% TODO 1
+% TODO 1: author block on the model of the order-7 manuscript; to be confirmed.
+\author[Claude and Codex, directed by D.~Djematene]{Claude (Opus~5.5, Anthropic) and Codex (OpenAI)\\[2pt]
+directed by Dilan Djematene}
+\thanks{The proof of Lemma $T_{16}$ reproduced in the supplement was written with ChatGPT (OpenAI). Correspondence:
+Dilan Djematene.}
 \date{Draft of 7 October 2026}
 
 \begin{document}
@@ -55,7 +61,10 @@ of the $156$ lattices contains such a frame. Twenty lattices are excluded by sho
 $136$ others, the pairs of vectors of norm $7$ that could be the two normals of the frame are enumerated up to symmetry and
 excluded one by one: by a short vector whose existence contradicts one of three nonexistence lemmas for integer eigenfunctions
 of small norm, with an exact certificate for each pair, or by an exhaustive search for the frame. We state which steps were
-verified by independent programs and which rest on a single audited program. All programs, records and certificates are public.
+verified by independent programs and which rest on a single audited program. All programs, records and certificates are
+public. Together with the known exclusions of the odd prime orders, the theorem implies that a strongly regular graph with
+parameters $(99,14,1,2)$, if it exists, has no nontrivial automorphism; that consequence and its dependencies are the
+subject of a separate note.
 \end{abstract}
 
 \maketitle
@@ -68,23 +77,32 @@ regular graph with parameters $(99,14,1,2)$ exists is one of Conway's five probl
 have the eigenvalues $14$, $3$ and $-4$ with multiplicities $1$, $54$ and $44$, and the standard feasibility conditions do not
 exclude it.
 
-Most of what is known concerns the automorphism group $G$ of such a graph $\G$. Makhnev and Minakova \cite{MM} proved that
-$|G|$ divides $2\cdot3^3\cdot7\cdot11$, and that $|G|$ divides $42$ if it is even. Behbahani and Lam \cite{BL} showed, by an
-enumeration of orbit matrices, that the only primes that can divide $|G|$ are $2$ and $3$. Crnkovi\'c and Maksimovi\'c
-\cite{CM} excluded groups of automorphisms of order $6$ and $9$. Cesarz and Woldar \cite{CW} gave computer-free proofs that
-$G\cong\Z_7$ if $7$ divides $|G|$, and consequently that $|G|$ divides $6$ if it is even. Together these results leave
-$|G|\in\{1,2,3\}$.
+Most of what is known concerns the automorphism group $G$ of such a graph $\G$. Makhnev and Minakova \cite{MM} proved by
+character theory that $|G|$ divides $2\cdot3^3\cdot7\cdot11$; if $|G|$ is even it divides $42$ \cite{MM,Mak}. Behbahani and
+Lam \cite{B09,BL} showed, by a computer enumeration of orbit matrices, that the only primes that can divide $|G|$ are $2$
+and $3$, and that an automorphism of order $3$ has no fixed point. Crnkovi\'c and Maksimovi\'c \cite{CM} excluded, also by
+computer, groups of automorphisms of order $6$ and $9$. Cesarz and Woldar \cite{CW} proved without a computer that
+$G\cong\Z_7$ if $7$ divides $|G|$, and consequently that $|G|$ divides $6$ if it is even. Together these results left
+$|G|\in\{1,2,3\}$. Two manuscripts of the present project treat odd orders: order $3$ is excluded in \cite{D3} by linear
+algebra over $\Z$ and the Eisenstein integers, and \cite{D7} gives a computer-free proof for order $7$, completing
+\cite{CW}; both come with a formalisation in Lean~4. This paper treats order $2$.
 
 \begin{theorem}\label{thm:main}
 A strongly regular graph with parameters $(99,14,1,2)$ has no automorphism of order $2$.
 \end{theorem}
 
-\begin{corollary}
-By Theorem~\ref{thm:main} and the results of \cite{MM,BL,CM} quoted above, the automorphism group of a strongly regular graph
-with parameters $(99,14,1,2)$ is trivial or of order $3$.
+The proof of Theorem~\ref{thm:main} uses none of the results quoted above. Combined with them it gives the following
+statement, whose dependencies are examined one by one in the separate note \cite{Note}.
+
+\begin{corollary}\label{cor:asym}
+A strongly regular graph with parameters $(99,14,1,2)$, if it exists, has no nontrivial automorphism.
 \end{corollary}
 
-The proof of Theorem~\ref{thm:main} uses none of the results quoted above.
+\begin{proof}
+A nontrivial finite group has an element of prime order $p$, and $p\in\{2,3,7,11\}$ by \cite{MM}. Order $2$ is excluded by
+Theorem~\ref{thm:main}, order $3$ by \cite{D3}, and orders $7$ and $11$ by the computation of \cite{BL} (order $7$ also
+without a computer, by \cite{CW} and \cite{D7}).
+\end{proof}
 
 \subsection*{Outline}
 Let $\s$ be an automorphism of order $2$ of $\G$. A counting argument shows that $\s$ fixes exactly one vertex
@@ -96,9 +114,9 @@ discriminant form, and a double count shows that the dual lattice $N^*$ has mini
 (Section~\ref{sec:lattice}). Gluing an overlattice of $N$ with two orthogonal vectors of norm $7$ gives an odd unimodular
 lattice $U$ of rank $24$ without vectors of norm $1$ (Theorem~\ref{thm:R}); there are $156$ such lattices \cite{Bor}.
 
-The second half excludes the frame from each of the $156$ lattices. Every vector $v$ of $U$ yields an integer-valued $\s$-odd
-eigenfunction of the adjacency matrix for the eigenvalue $-4$, whose squared norm is $2E(v)$ for an explicit quadratic
-``energy'' $E$. Three lemmas state that such eigenfunctions do not exist for the squared norms $16$, $18$ and $20$
+The second half excludes the frame from each of the $156$ lattices. Every vector $v$ of $U$ outside the plane of the two
+vectors of norm $7$ yields an integer-valued $\s$-odd eigenfunction of the adjacency matrix for the eigenvalue $-4$, whose
+squared norm is $2E(v)$ for an explicit quadratic ``energy'' $E$. Three lemmas state that such eigenfunctions do not exist for the squared norms $16$, $18$ and $20$
 (Section~\ref{sec:energy}); with the bound $8/7$ this forbids every vector of energy less than $11$. For a large part of the
 candidate pairs $(y_1,y_2)$ of normals this is already a contradiction; the others are excluded by an exhaustive search for
 the frame (Section~\ref{sec:lattices}). Section~\ref{sec:verif} says how the computations were verified and what the proof
@@ -398,9 +416,9 @@ norm $1$ of $U'$ would have $E\le7$ and lie in $\Pl$.
 \section{Energy and eigenfunctions of small norm}\label{sec:energy}
 
 By (R5) the energy $E(v)$ of $v\in U$ is $7$ times the squared norm of the projection of $v$ on the space of the frame. It is
-a non-negative integer, it is unchanged when a multiple of $y_1$ or $y_2$ is added to $v$, and by (R7) a statement ``there is
-no integer $\s$-odd eigenfunction of squared norm $2E$'' forbids every vector of energy $E$ in every lattice containing a
-frame.
+a non-negative integer, it is unchanged when a multiple of $y_1$ or $y_2$ is added to $v$, and it vanishes exactly on
+$\Z y_1+\Z y_2$. By (R7), for $E\ge1$ a statement ``there is no integer $\s$-odd eigenfunction of squared norm $2E$''
+forbids every vector of energy $E$ in every lattice containing a frame.
 
 \begin{theorem}[Lemmas $T_{16}$, $T_{18}$, $T_{20}$]\label{thm:T}
 Let $\s$ be an automorphism of order $2$ of $\G$. There is no integer-valued function $\varphi$ on the vertices of $\G$ with
@@ -452,10 +470,13 @@ This section describes the proof of Theorem~\ref{thm:B}. Lattices are referred t
 of Appendix~\ref{app:table}, in which they are ordered by increasing number of roots, and by their root system.
 
 \subsection{The lattices}
-The $156$ lattices are given by generators. For each of them the following was recomputed in exact arithmetic: the
-determinant is $1$, the lattice is odd and has no vector of norm $1$, and its root system is the one of the classification.
+The $156$ lattices are given by generators. For each of them the following was recomputed: the determinant is $1$ and the
+lattice is odd (exact computations on the Gram matrix); it has no vector of norm $1$, and its root system is the one of the
+classification (by programs with floating-point steps in the enumeration and in the ranks of the root components).
+% TODO: an exact recomputation of these two points by a second program (Codex) was in progress on 07/10; replace by its result.
 The root system separates all but seven pairs of lattices, and those are separated by their two even neighbours. So the data
-are $156$ pairwise non-isometric lattices of the list, hence all of them by \cite{Bor}.
+are $156$ pairwise non-isometric lattices of the list, hence all of them by \cite{Bor}. An exact recomputation of the
+absence of norm $1$, of the root systems and of the separation of the seven pairs is in progress at the time of writing.
 
 \subsection{Twenty lattices excluded without enumeration}
 
@@ -717,9 +738,11 @@ A second, independently written search program does not exist for the sweep. For
 classes of the odd Leech lattice the records of September also hold exclusions by programs of two other parties (a linear
 program with integer certificates; a separate check of the seven vectors $h_c$); these were not re-examined for this paper.
 
-\subsection*{The packing test} Table~\ref{tab:pack} was computed by one program.
-% TODO 3: replace by the result of the second program (requested 07/10).
-An independent recomputation is in progress at the time of writing.
+\subsection*{The packing test} Table~\ref{tab:pack} was computed by two programs written independently, the second one in
+exact arithmetic from the generators of the lattices; the upper part of the table was computed a third time. For the four
+lattices of the lower part, all $2{,}048$ classes of vectors of norm $3$ are admissible, they form a single connected
+component, of rank $24$, and the vectors of Proposition~\ref{prop:pack}(b) ($8$, $9$, $8$ and $24$ of them up to sign, all
+of norm $1$) are linearly independent.
 
 \subsection*{Summary of what the theorem rests on}
 \begin{enumerate}[leftmargin=2em]
@@ -730,7 +753,7 @@ An independent recomputation is in progress at the time of writing.
 \item The correctness of the search program: audited and run again, not duplicated.
 \end{enumerate}
 The whole proof, including the hand arguments of this paper, was produced and cross-checked by several AI systems working
-in separate sessions and refereeing one another, under the direction of the author. At the time of writing it has not been read
+in separate sessions and refereeing one another, under the direction of D.~Djematene. At the time of writing it has not been read
 by an independent expert, and no part of it has been formalised in a proof assistant; a formalisation of
 Sections~\ref{sec:fix}--\ref{sec:env} and of the certificate checkers is planned.
 
@@ -751,8 +774,9 @@ totals. Rows without numbers are lattices for which no pair is enumerated, or fo
 }
 
 \begin{thebibliography}{99}
+\bibitem{B09} M.~Behbahani, \emph{On strongly regular graphs}, Ph.D. thesis, Concordia University, Montr\'eal, 2009.
 \bibitem{BL} M.~Behbahani and C.~Lam, \emph{Strongly regular graphs with non-trivial automorphisms}, Discrete Math.
-\textbf{311} (2011), 132--144.
+\textbf{311} (2011), no.~2--3, 132--144.
 \bibitem{Bor} R.~E.~Borcherds, \emph{The 24-dimensional odd unimodular lattices}, Chapter~17 of \cite{SPLAG}; see also
 \emph{The Leech lattice and other lattices}, PhD thesis, University of Cambridge, 1984.
 \bibitem{CW} P.~G.~Cesarz and A.~J.~Woldar, \emph{On the automorphism group of a putative Conway 99-graph}, Algebr. Comb.
@@ -765,8 +789,18 @@ mathematischen Wissenschaften 290, Springer, New York, 1999.
 determinant $1$}, Bull. Amer. Math. Soc. (N.S.) \textbf{23} (1990), no.~2, 383--387.
 \bibitem{CM} D.~Crnkovi\'c and M.~Maksimovi\'c, \emph{Construction of strongly regular graphs having an automorphism group of
 composite order}, Contrib. Discrete Math. \textbf{15} (2020), no.~1, 22--41.
+\bibitem{D3} Claude (Opus~5.5), for D.~Djematene, \emph{Le graphe de Conway $\mathrm{srg}(99,14,1,2)$ n'a pas
+d'automorphisme d'ordre $3$: une obstruction par les discriminants}, manuscript with a formalisation in Lean~4, September
+2026; not yet refereed.
+\bibitem{D7} ChatGPT and Claude, directed by D.~Djematene, \emph{A computer-free proof that a Conway $99$-graph has no
+automorphism of order seven}, manuscript with a formalisation in Lean~4, October 2026,
+\texttt{github.com/amazing-source/conway-C7}; not yet refereed.
+\bibitem{Note} \emph{A Conway $99$-graph, if it exists, is asymmetric: statement and dependencies}, note accompanying this
+paper, October 2026.
 \bibitem{LTS} C.~W.~H.~Lam, L.~Thiel and S.~Swiercz, \emph{The non-existence of finite projective planes of order $10$},
 Canad. J. Math. \textbf{41} (1989), no.~6, 1117--1123.
+\bibitem{Mak} A.~A.~Makhnev, \emph{On automorphisms of distance-regular graphs}, J. Math. Sci. \textbf{166} (2010),
+no.~6, 733--742.
 \bibitem{MM} A.~A.~Makhnev and I.~M.~Minakova, \emph{On automorphisms of strongly regular graphs with parameters
 $\lambda=1$, $\mu=2$}, Diskret. Mat. \textbf{16} (2004), no.~1, 95--104; English transl.: Discrete Math. Appl. \textbf{14}
 (2004), no.~2, 201--210.
