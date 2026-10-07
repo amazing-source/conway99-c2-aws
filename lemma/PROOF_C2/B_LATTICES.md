@@ -198,9 +198,13 @@ on the lab PC with the twin rule switched off (FD_TWIN=0), the pairs without wit
 More generally, in the two re-runs of 07/10 the twin rule closed 60,308 + 85,080 pairs: for those pairs the new record rests on
 the exclusion of another lattice, hence on that lattice's own records, old ones included. The pair totals of 135, 140, 141 (928, 576, 637) are those of the producer streams of the F4
 comparison, and those of 137, 138 (1,208, 1,026) those of the lab's identity runs of the rigid-kernel audit.
-**044 (a_3^8): its 8 chunks were still running at 19:00 UTC** (1,168 y_1 in the plan; 1,920 of its pairs have no witness). Its
-line is to be completed when its records are accepted; until then 044 rests on its record of 29/09 (14,496 pairs of C1's list, all
-excluded, lab PC, without code version).
+**044 (a_3^8): finished at 20:29 UTC, accepted.** Its 8 chunks: every one of the 1,168 representatives of the plan covered,
+5,488,960 pairs, all excluded: 3,919,936 by the characteristic-vector rule, 962,368 by the dual-minimum rule (T16), 260,096 with
+stage 1 empty, 768 without local star sums, 181,440 by transfer to a lattice marked excluded, 164,352 deferred to a twin with
+strictly more roots. Unlike the 27 others, each chunk of 044 ran ONCE, on one machine (14.0 h of job time in all). Of its 1,920
+pairs without witness of energy at most 10, the engine's own rules give, pair by pair (lab evaluation, not the run's output, which
+records counts only): 1,024 by the characteristic-vector rule, 896 to the search, none to the transfer rule.
+So the 28 lattices are all re-covered by the final version: 224 records, 6,657,309 pairs.
 
 ## B.5 What Part B does not establish
 
