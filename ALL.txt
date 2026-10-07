@@ -1,0 +1,26 @@
+=== I.1 (4,2,1) start 13:19:09
+I.1 profile (4, 2, 1): |G| = 4; rectangles 161; N-configurations 722524, orbits under G 180920   [merged from 8 parts]
+   bases tested 180920: rejected by budgets 0, by PSD (exact) 124620, kept 56300   stats {'psd_reject_M1': 124620}
+I.1 profile (4, 2, 1): stage-1 file /home/ubuntu/lemma_out/I1_421/s1_I1_421.json, 56300 bases, sha1 73e106a376242ad4c261f993ae97562310cd7b96
+   parts 8; sha1 recorded by the parts: ['73e106a376242ad4c261f993ae97562310cd7b96']; bases finished 56300; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [56300, 275161, 597528, 416434, 60366, 1128]  total 1406917
+   candidates (chosen unit)  : [275161, 2494081, 6718997, 5121021, 759700, 12710]  total 15381670
+     rejected by budgets     : [0, 0, 281206, 486052, 117790, 3042]
+     rejected by PSD (exact) : [0, 1896553, 6021357, 4574603, 640782, 9666]
+     kept                    : [275161, 597528, 416434, 60366, 1128, 2]
+     of which dead by rank   : [0, 0, 0, 0, 0, 2]
+   complete configurations: 0
+   stats: no_pattern=18705378, pair_budget=101443899, psd_reject_M1even=4811663, psd_reject_M1odd=15162799, psd_reject_M2even=11639, psd_reject_M2odd=997201, rank_odd_23=2, single_psd=7840341
+   cpu seconds: 5201 (mean 0.092 per base, max 5.8)
+I.1 profile (4,2,1), second program, stage 1 (8 parts): |Aut(B)| = 4 (first program: 4); rectangle sets tested 1487513; configurations with the right coverage 860624
+   passing the budget count on 35 vertices: 722524 (first program: 722524); sum of the orbit sizes of the representatives: 722524 (must be equal)
+   orbits under Aut(B): 180920 (first program: 180920); rejected by PSD (exact) 124620; kept 56300 (first program: 56300)
+   in the first list only: 0; in this list only: 0
+   STAGE 1 AGREES: True
+   stage 2 re-traversed: bases 56300 of 56300 (stage-1 list: 56300); parts not finished: none
+   totals: {'nodes': 1406917, 'cands': 45606618, 'budget': 1803048958, 'psd': 42383066, 'kept': 1350619, 'complete': 0, 'impossible': 0, 'rank_nodes': 2, 'rank_nodes_closed_by_own_search': 2, 'rank_nodes_closed_by_rank_bound': 0, 'holes_located_by_own_rank': 0, 'free_nodes': 2, 'free_cands': 4, 'free_budget': 11972, 'free_psd': 0, 'free_deepest': 6, 'free_complete': 0, 'free_capped': 0, 'recount_checks': 3316242}; certificates: integer vector 42383066, exact elimination 0
+   nodes rejected by the rank bound in the first program: 2; closed here by the own search (no rank bound): 2, with 2 more nodes, deepest node with 6 orbits of X_2 placed; closed here by an own exact rank computation: 0
+   STAGE 2 AGREES AT EVERY NODE, 0 complete, all bases: True
+=== I.1 (4,2,1) end 14:33:09
