@@ -27,9 +27,11 @@ blob IDs match the files at the recorded commit `3272aee0f`:
 
 This checks the stored acceptance record and its document references; it
 does not independently attest to the quoted user exchange. Its written
-scope and the G2/III.1 reservations are preserved. The acceptance JSON
-files use Windows cp1252; the checker decodes them explicitly and records
-that fact. Their contents were not changed.
+scope and the G2/III.1 reservations are preserved. At this checkpoint the
+acceptance JSON files used Windows cp1252; the checker decoded them
+explicitly and recorded that fact. LAB subsequently rewrote both as ASCII
+JSON (message 83). Their parsed contents and canonical SHA-256 are unchanged:
+`41ce373abcaba774b916ef089c241b0f8c7a8b6161e2e153047728259ba7cd1d`.
 
 ## Archived F4 result for 064
 
@@ -77,3 +79,49 @@ document/manifest and whole-text referee pass. G1's inferred historical
 versions, the exact G2 checker contract, shared components in III.1,
 historical lab runs and the stated limits of local catalogue checks remain
 visible. No human referee pass or Lean formalisation is claimed here.
+
+## Historical provenance addendum (message 83)
+
+The new `measures/STREAM_RECOUNT_2026-10-07.json`, archived on master
+`c1814f6a4`, sharpens the historical-program reservation. Its 91 stream
+lattices report complete first-normal coverage, no overlap and no other
+importer fault **after relaxing the packaged-engine-version requirement**.
+The total is 220,260,576 pairs, replacing the earlier unreproduced total
+212,825,691. We checked the new report's per-lattice arithmetic and totals:
+
+| Recorded engine provenance | Pairs | Lattices affected |
+|---|---:|---:|
+| P: engine hashes match a lab package | 212,804,047 | 36 have entirely P coverage |
+| L: code hash recorded, unmatched to a package | 4,409,816 | 39 have some L coverage |
+| N: no code version recorded | 3,046,713 | 26 have some N coverage |
+
+The union of L and N comprises **55 lattices and 7,456,529 pairs** (ten
+lattices have both). A reported L hash identifies an unavailable historical
+version; it does not restore its source. P identifies a packaged engine;
+that alone does not prove the engine or its enumeration correct.
+
+The four displayed verdict totals (97,628,147 at once, 22,702,398 search,
+6,107,330 twin, 93,822,540 swap) omit **161 originally INCOMPLETE pairs**.
+These are separately recorded as resolved. We compared the exact pairs
+in the original `not_excluded` lists with the local resolution files for
+018, 023, 024, 026, 028, 037, 049, 052 and 080: the sets match and account
+for all 161. The resolution file for 037 repeats one identical pair and
+verdict, giving 31 lines for 30 distinct pairs. All final verdicts are
+`EXCLUDED (stage 1 empty: no 7 h)` or `EXCLUDED (no local star sums)`.
+This validates the record links, not the searches producing those verdicts.
+
+Reproduce this bounded audit with:
+
+```text
+python lemma/t20_CODEX/check_stream_provenance_report.py <lab-root>
+```
+
+Its output `stream_provenance_report_check.json` pins the report and the
+nine source/resolution file pairs by SHA-256. It does not replay the
+recount's record selection or the long enumerations. The 29 older pair-list
+lattices plus 000, 004 and 010 are outside this 91-lattice recount, as are
+the 13 newly converted entries and the 20 lattice-level exclusions.
+In particular, **003 is not in this historical lot**; its fixed-first-normal
+certificate and the previously documented T18/T20 dependencies stand as
+before. The number 156 still denotes recorded exclusions, with these
+provenance gaps explicitly open. The combined proof is not yet frozen.
