@@ -1,0 +1,46 @@
+{
+  "controls": [
+    {
+      "engine": "engv2",
+      "case": "III.1",
+      "control": "invalid_unit",
+      "returncode": 1,
+      "error": "AssertionError: plan out of step (unit)",
+      "no_result_json": true
+    },
+    {
+      "engine": "engv2",
+      "case": "III.1",
+      "control": "truncated",
+      "returncode": 1,
+      "error": "StopIteration",
+      "no_result_json": true
+    },
+    {
+      "engine": "in_verify",
+      "case": "I.0/n3=2/421",
+      "control": "invalid_unit",
+      "error": "AssertionError",
+      "source_line": 971,
+      "source_statement": "assert U0 in remaining"
+    },
+    {
+      "engine": "in_verify",
+      "case": "I.0/n3=2/421",
+      "control": "truncated",
+      "error": "StopIteration",
+      "source_line": 968,
+      "source_statement": "pl = next(plan)"
+    }
+  ],
+  "all_four_rejected_before_candidate_generation": true,
+  "route_B_base_source": "b960cd136b:s1z/s1z_I0_421_t0.json",
+  "route_B_source_sha256": "d238647400e97b68488052083e2a2d6c5ad04b8060b63f34045373706c76378f",
+  "source_sha256": {
+    "lemma/t20_CODEX/referee_plan_controls.py": "a72060cd3702bfbba81178b6f5971106b0891efa9eace0d817481634f8bc7b2e",
+    "lemma/t20_R2/engv2.py": "cdb723671bb250a5a2fb04b84da2000b04dae720bf6a2b4ab7ade8f74b0ef032",
+    "lemma/t20_R2/run_engv2.py": "9cb1e3f976453b0df89644501604d80c027e4eb8fe8723f9142cb8f16f4c0efd",
+    "lemma/t20_R2/cases.py": "540923d37a0db62cef8ff76317a525d297c3b4ef936d842a2a98e14882088442",
+    "lemma/t20_R3_I/in_verify.py": "dc0f78ca9e5046b9f47a5698284f8cb30cd1c8d1c40345c56a9419420abeddae"
+  }
+}
