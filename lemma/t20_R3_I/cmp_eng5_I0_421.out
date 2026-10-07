@@ -1,0 +1,17 @@
+base 0: eng5 visited [1, 1, 0, 0, 0] kept [1, 0, 0, 0, 0] complete 0 cpu 0.66 | eng6 visited [1, 1, 0, 0, 0] kept [1, 0, 0, 0, 0] complete 0 cpu 0.06 | identical True
+base 1: eng5 visited [1, 2, 0, 0, 0] kept [2, 0, 0, 0, 0] complete 0 cpu 0.61 | eng6 visited [1, 2, 0, 0, 0] kept [2, 0, 0, 0, 0] complete 0 cpu 0.11 | identical True
+base 2: eng5 visited [1, 2, 0, 0, 0] kept [2, 0, 0, 0, 0] complete 0 cpu 0.61 | eng6 visited [1, 2, 0, 0, 0] kept [2, 0, 0, 0, 0] complete 0 cpu 0.06 | identical True
+base 3: eng5 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.16 | eng6 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.05 | identical True
+base 100: eng5 visited [1, 6, 0, 0, 0] kept [6, 0, 0, 0, 0] complete 0 cpu 0.94 | eng6 visited [1, 6, 0, 0, 0] kept [6, 0, 0, 0, 0] complete 0 cpu 0.19 | identical True
+base 200: eng5 visited [1, 2, 0, 0, 0] kept [2, 0, 0, 0, 0] complete 0 cpu 1.05 | eng6 visited [1, 2, 0, 0, 0] kept [2, 0, 0, 0, 0] complete 0 cpu 0.16 | identical True
+base 300: eng5 visited [1, 13, 8, 0, 0] kept [13, 8, 0, 0, 0] complete 0 cpu 1.91 | eng6 visited [1, 13, 8, 0, 0] kept [13, 8, 0, 0, 0] complete 0 cpu 0.47 | identical True
+base 500: eng5 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.73 | eng6 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.09 | identical True
+base 700: eng5 visited [1, 7, 2, 0, 0] kept [7, 2, 0, 0, 0] complete 0 cpu 1.03 | eng6 visited [1, 7, 2, 0, 0] kept [7, 2, 0, 0, 0] complete 0 cpu 0.27 | identical True
+base 900: eng5 visited [1, 4, 0, 0, 0] kept [4, 0, 0, 0, 0] complete 0 cpu 1.02 | eng6 visited [1, 4, 0, 0, 0] kept [4, 0, 0, 0, 0] complete 0 cpu 0.11 | identical True
+base 1100: eng5 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.05 | eng6 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.06 | identical True
+base 1500: eng5 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.30 | eng6 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.03 | identical True
+base 1900: eng5 visited [1, 13, 51, 6, 0] kept [13, 51, 6, 0, 0] complete 0 cpu 3.08 | eng6 visited [1, 13, 51, 6, 0] kept [13, 51, 6, 0, 0] complete 0 cpu 1.52 | identical True
+base 2300: eng5 visited [1, 2, 0, 0, 0] kept [2, 0, 0, 0, 0] complete 0 cpu 1.38 | eng6 visited [1, 2, 0, 0, 0] kept [2, 0, 0, 0, 0] complete 0 cpu 0.20 | identical True
+base 2700: eng5 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.17 | eng6 visited [1, 0, 0, 0, 0] kept [0, 0, 0, 0, 0] complete 0 cpu 0.05 | identical True
+base 3000: eng5 visited [1, 3, 0, 0, 0] kept [3, 0, 0, 0, 0] complete 0 cpu 0.89 | eng6 visited [1, 3, 0, 0, 0] kept [3, 0, 0, 0, 0] complete 0 cpu 0.12 | identical True
+identical counters on 16 of 16 bases

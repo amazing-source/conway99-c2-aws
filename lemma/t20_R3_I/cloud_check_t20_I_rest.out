@@ -1,0 +1,28 @@
+I1_340  I.1 profile (3, 4, 0): |G| 4, N-configurations 3508550, orbits 878137, bases 219589 (sha1 9b834b42ae15fbb85423877a985b9513a5a5908c)
+     parts 128 of 128 present, summaries 128; bases finished 219589, missing 0, time-out / error / misplaced 0; sha1 of the parts equal to the recomputed one: True
+     nodes per level [219589, 1360986, 3182403, 2207350, 304035, 5598], total 7279961; rejected by the rank bound 13; complete configurations 0; cpu 31327 s   ->  EXCLUDED (first program)
+I1_421  I.1 profile (4, 2, 1): |G| 4, N-configurations 722524, orbits 180920, bases 56300 (sha1 73e106a376242ad4c261f993ae97562310cd7b96)
+     parts 128 of 128 present, summaries 128; bases finished 56300, missing 0, time-out / error / misplaced 0; sha1 of the parts equal to the recomputed one: True
+     nodes per level [56300, 275161, 597528, 416434, 60366, 1128], total 1406917; rejected by the rank bound 2; complete configurations 0; cpu 5721 s   ->  EXCLUDED (first program)
+I2_340  I.2 profile (3, 4, 0): |G| 10, N-configurations 2301905, orbits 230609, bases 55573 (sha1 9af751464e8f8c9289fd138a6b77646e31fde21b)
+     parts 128 of 128 present, summaries 128; bases finished 55573, missing 0, time-out / error / misplaced 0; sha1 of the parts equal to the recomputed one: True
+     nodes per level [55573, 377489, 940441, 613858, 65549, 777], total 2053687; rejected by the rank bound 0; complete configurations 0; cpu 7941 s   ->  EXCLUDED (first program)
+I2_421  I.2 profile (4, 2, 1): |G| 10, N-configurations 412875, orbits 41441, bases 13925 (sha1 968950595ebf764299944359c517849ac1bb02ef)
+     parts 128 of 128 present, summaries 128; bases finished 13925, missing 0, time-out / error / misplaced 0; sha1 of the parts equal to the recomputed one: True
+     nodes per level [13925, 78932, 188838, 125200, 14706, 172], total 421773; rejected by the rank bound 0; complete configurations 0; cpu 1526 s   ->  EXCLUDED (first program)
+I3_340  I.3 profile (3, 4, 0): |G| 4, N-configurations 2663180, orbits 666032, bases 112368 (sha1 4d191a727459a83750229f67620a37b25bd0db56)
+     parts 128 of 128 present, summaries 128; bases finished 112368, missing 0, time-out / error / misplaced 0; sha1 of the parts equal to the recomputed one: True
+     nodes per level [112368, 507111, 894928, 484271, 56282, 988], total 2055948; rejected by the rank bound 0; complete configurations 0; cpu 10555 s   ->  EXCLUDED (first program)
+I3_421  I.3 profile (4, 2, 1): |G| 4, N-configurations 506294, orbits 126655, bases 32022 (sha1 39460b17ed6e263fbbf274068f9eb855227619a2)
+     parts 128 of 128 present, summaries 128; bases finished 32022, missing 0, time-out / error / misplaced 0; sha1 of the parts equal to the recomputed one: True
+     nodes per level [32022, 115957, 179576, 89609, 10602, 218], total 427984; rejected by the rank bound 0; complete configurations 0; cpu 2107 s   ->  EXCLUDED (first program)
+I4_340  I.4 profile (3, 4, 0): |G| 4, N-configurations 2606408, orbits 653570, bases 76509 (sha1 5683ec8dbf7afc17f4449b07111191db3b096366)
+     parts 128 of 128 present, summaries 128; bases finished 76509, missing 0, time-out / error / misplaced 0; sha1 of the parts equal to the recomputed one: True
+     nodes per level [76509, 340792, 520484, 237910, 24232, 395], total 1200322; rejected by the rank bound 0; complete configurations 0; cpu 6583 s   ->  EXCLUDED (first program)
+I4_421  I.4 profile (4, 2, 1): |G| 4, N-configurations 495024, orbits 124367, bases 21561 (sha1 c2700cc79592ed9aea8f700220f94ec2a049d592)
+     parts 128 of 128 present, summaries 128; bases finished 21561, missing 0, time-out / error / misplaced 0; sha1 of the parts equal to the recomputed one: True
+     nodes per level [21561, 72554, 97281, 41986, 3998, 28], total 237408; rejected by the rank bound 0; complete configurations 0; cpu 1256 s   ->  EXCLUDED (first program)
+I5_340  I.5 profile (3, 4, 0): |G| 20, N-configurations 2335670, orbits 117846, bases 10676 (sha1 d1d61939d6d6d2e6c14ff258e5061f48db12b3d0)
+     parts 128 of 128 present, summaries 128; bases finished 10676, missing 0, time-out / error / misplaced 0; sha1 of the parts equal to the recomputed one: True
+     nodes per level [10676, 63403, 150861, 120573, 20662, 467], total 366642; rejected by the rank bound 0; complete configurations 0; cpu 1439 s   ->  EXCLUDED (first program)
+ALL CASES FOUND ARE COMPLETE AND EMPTY: True

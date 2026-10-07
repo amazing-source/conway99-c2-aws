@@ -1,0 +1,6 @@
+I5_340: laptop stage-1 list 10676 bases sha1 d1d61939d6d6d2e6c14ff258e5061f48db12b3d0 | cloud 10676 bases sha1 d1d61939d6d6d2e6c14ff258e5061f48db12b3d0 | identical: True
+I2_421: laptop stage-1 list 13925 bases sha1 968950595ebf764299944359c517849ac1bb02ef | cloud 13925 bases sha1 968950595ebf764299944359c517849ac1bb02ef | identical: True
+I2_340: laptop stage-1 list 55573 bases sha1 9af751464e8f8c9289fd138a6b77646e31fde21b | cloud 55573 bases sha1 9af751464e8f8c9289fd138a6b77646e31fde21b | identical: True
+I1_421: laptop (first version of stage 1, another order) 56300 bases | cloud 56300 bases | same set: True
+I3_421: laptop (first version of stage 1, another order) 32022 bases | cloud 32022 bases | same set: True
+I4_421: laptop (first version of stage 1, another order) 21561 bases | cloud 21561 bases | same set: True
