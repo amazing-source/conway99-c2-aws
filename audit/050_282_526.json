@@ -1,0 +1,172 @@
+{
+"id": 50,
+"chunk": [
+282,
+526
+],
+"n_pairs": 93,
+"orbits": 1,
+"sha256": "2e84630c5e1617597c7f980b506eb30d8b32a5f749d1fcae94bbb88c8a766702",
+"producer": {
+"end": true,
+"id": 50,
+"chunk": [
+282,
+526
+],
+"pairs": 93,
+"complete": true,
+"sha256": "2e84630c5e1617597c7f980b506eb30d8b32a5f749d1fcae94bbb88c8a766702"
+},
+"producer_info": [
+{
+"rank": 22,
+"components": 8,
+"label_vectors": 7732,
+"dominant_y1": 1766,
+"id": 50,
+"roots": "d_5a_5a_3^2a_3a_1^2a_1",
+"gamma": 4,
+"y1_orbits": 526,
+"gamma_verified": true,
+"gamma_converted": true,
+"seconds": 2.0
+}
+],
+"verdicts": {
+"EXCLUDED (twin transfer)": 15,
+"EXCLUDED (char-vector trap)": 60,
+"EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 13,
+"EXCLUDED (stage 1 empty: no 7 h)": 1,
+"TWIN-CANON (k(U+)<k(U))": 4
+},
+"twin_deferred": {},
+"telemetry": {
+"trap_Yz": {
+"74": 59,
+"98": 1
+},
+"search_nodes_log2": {
+"12": 1
+},
+"search_K": {
+"40": 1
+},
+"search_depth_max": {
+"4": 1
+},
+"E_pair_trap": {
+"(10, 30)": 7,
+"(10, 36)": 2,
+"(10, 42)": 7,
+"(10, 38)": 16,
+"(10, 26)": 4,
+"(10, 46)": 9,
+"(10, 34)": 7,
+"(10, 28)": 2,
+"(10, 40)": 6
+},
+"E_pair_search": {
+"(10, 42)": 1
+}
+},
+"sample_search": [
+{
+"y1": [
+"3/8",
+"-3/8",
+"3/8",
+"9/8",
+"3/8",
+"7/8",
+"-5/8",
+"-5/8",
+"5/8",
+"-1/8",
+"-1/8",
+"3/8",
+"3/8",
+"-1/8",
+"-3/8",
+"-9/8",
+"3/8",
+"-1/8",
+"-1/8",
+"7/8",
+"-1/8",
+"3/8",
+"-1/8",
+"-5/8"
+],
+"y2": [
+"1/4",
+"-1/4",
+"1/4",
+"1/4",
+"1/4",
+"1/4",
+"-1/4",
+"-1/4",
+"-5/4",
+"1/4",
+"-3/4",
+"-3/4",
+"-3/4",
+"1/4",
+"-3/4",
+"-1/4",
+"1/4",
+"3/4",
+"-3/4",
+"1/4",
+"-1/4",
+"-3/4",
+"1/4",
+"3/4"
+],
+"nodes": [
+1,
+90,
+1510,
+3728,
+712,
+0,
+0,
+0
+],
+"K": 40,
+"flex": 120,
+"points": 160,
+"E": [
+10,
+42
+],
+"verdict": "EXCLUDED (stage 1 empty: no 7 h)"
+}
+],
+"not_excluded": [],
+"wall_secs": 2.2,
+"machine": "labpc",
+"frame_dfs": "U+ general mode",
+"code_sha": {
+"frame_dfs_next.py": "1591aeeac9c0be5c",
+"hstage_stream_next.py": "f48520f7ebac4bf8",
+"twin_transfer.py": "77a446c7cb8b3922"
+},
+"node_limit": 4000000000,
+"conway99_c1_commit": "",
+"t": "2026-10-07 18:24:48",
+"chunk_ok": true,
+"chunk_done": true,
+"stream_ok": true,
+"ok": true,
+"counts": {
+"EXCLUDED (twin transfer)": 15,
+"EXCLUDED (char-vector trap)": 60,
+"EXCLUDED (dual min 9/7: norm-3 x with Y=13)": 13,
+"EXCLUDED (stage 1 empty: no 7 h)": 1,
+"TWIN-CANON (k(U+)<k(U))": 4
+},
+"exposed_not_excluded_again": 0,
+"job_seconds": 6.1
+}
