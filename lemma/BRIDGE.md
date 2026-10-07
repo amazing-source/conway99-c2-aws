@@ -1,15 +1,9 @@
 # The bridge "vector of the envelope -> sigma-odd integer (-4)-eigenfunction" (route (C), 2026-10-07)
 
-> **Referee's corrections, not yet merged into the text below** (`lemma/bridge_REFEREE/REPORT.md`, 2026-10-07; verdict: no error
-> that breaks the theorem or its application).
-> 1. H4 (norms 7 and orthogonality of y1, y2) is essential and is NOT checked on the quick deferral path: the conversion of a
->    DEFERRED pair into an exclusion requires a per-pair certificate, to be stated in ambient coordinates (y1, y2, r in U;
->    y.y = 7; y1.y2 = 0; r.r = 2; (r,y1)^2 + (r,y2)^2 = 5).
-> 2. The sentence "the engine would answer INVALID for such a pair" (section 6 point 13, H4 row) is false in general: the engine's
->    immediate tests and the consumer's filters come before `pair_setup`. The norm guarantee of the campaign rests on the producer.
-> 3. H5 is the hypothesis being refuted; the external assumption is the project's upstream model (every 99-graph gives one of the
->    156 envelopes and an enumerated pair hosting its frame), which is outside this text.
-> 4. Lemma 3 needs (G) as well as (U), (F). "The converse is false in general" should read "the converse is not available".
+> **Referee's corrections merged on 07/10** (`lemma/bridge_REFEREE/REPORT.md`; verdict: no error that breaks the theorem or its
+> application): the per-pair certificate required by H4 (section 6, point 13), the false sentence about INVALID removed, the
+> status of H5 (now Theorem R of `lemma/upstream/AUDIT_REDUCTION.md`), hypothesis (G) added to Lemma 3, "the converse is not
+> available". The status of T20 is the one of `lemma/T20_BOARD.md`, not the word "open" of the first version.
 
 
 Folder: `SP\bridge` (SP = session scratchpad). Scripts and outputs are listed in section 7. No SAT / CP / ILP / LP solver was used.
@@ -23,7 +17,8 @@ filter "norm-3 x with Y = 13" is sound, and no other.
   involution fixing one vertex. This uses the Bridge Theorem (proved here by hand, five short lemmas) and T18
   (`REPO\lemma\T18_PROOF.md`, taken as given).
 - Root r with (r,y1)^2 + (r,y2)^2 = 4: the same Bridge Theorem gives an eigenfunction of squared norm 20. The bridge half is
-  proved; the conclusion needs **T20, which is open**. These pairs stay pending.
+  proved; the conclusion needs **T20** (state on 07/10: every configuration closed by a first program, second programs and text
+  being completed: `lemma/T20_BOARD.md`). These pairs stay pending until T20 is proved and checked.
 - The constant is derived, not copied: sum_x phi_v(x)^2 = 2 E(v), E(v) = 7 N(v) - (v,y1)^2 - (v,y2)^2. So Y = 13 at norm 3 gives
   16, Y = 5 at norm 2 gives 18, Y = 4 at norm 2 gives 20.
 - The dictionary of `LEMMA_TARGET_2026-10-06.md` sections 1-2 is correct. It agrees with the project's own dossiers of 04/10
@@ -209,7 +204,7 @@ on the 99 vertices with phi_v(x_i) = a_i(v), phi_v(sigma x_i) = -a_i(v), phi_v(p
 (r,y1)^2 + (r,y2)^2 = 5. Conversely every v in U with E(v) = 9 is r + m y1 + n y2 with r such a root and m, n integers, so the
 roots with Y = 5 detect every vector with E = 9. (Uses T18.)
 
-**Corollary T20 (conditional on T20, which is open).** Under (G), (U), (F), U has no v with E(v) = 10; in particular no root with
+**Corollary T20 (conditional on T20; its state is in `lemma/T20_BOARD.md`).** Under (G), (U), (F), U has no v with E(v) = 10; in particular no root with
 (r,y1)^2 + (r,y2)^2 = 4 and no vector of norm 4 with |(v,y1)| = |(v,y2)| = 3; and every v with E(v) = 10 is one of these two
 kinds up to Z y1 + Z y2.
 
@@ -249,7 +244,7 @@ dimension (44 - 0)/2 = 22 and in V_3 dimension 27 (total 49). QED
 ker(S + 4I). H_ii = 4 on the 7 inner orbits and 3 on the 42 outer ones.
 *Proof.* H has eigenvalues 3 - (-4) = 7 (22 times) and 3 - 3 = 0 (27 times). H_ii = 3 + A(x_i, sigma x_i) and Lemma 0. QED
 
-**Lemma 3 (tight frame).** Under (U), (F), let W = {y1,y2}^perp in U (x) R (dimension 22). Then the f_i span W, and for every
+**Lemma 3 (tight frame).** Under (G), (U), (F), let W = {y1,y2}^perp in U (x) R (dimension 22). Then the f_i span W, and for every
 w in W, with a = ((w, f_i))_i:   sum_i (w,f_i)^2 = 7 (w,w)   and   S a = -4 a.
 *Proof.* The f_i lie in W and their Gram matrix H has rank 22 = dim W, so they span W. Let T(w) = sum_i (w,f_i) f_i on W. For
 all j, k: (T f_j, f_k) = sum_i H_ji H_ik = (H^2)_jk = 7 H_jk = (7 f_j, f_k). The f_k span W, so T f_j = 7 f_j; the f_j span W, so
@@ -339,7 +334,7 @@ short dual vector lifts to v in U with |v|^2 < 26/7"); the producer's root and n
    factor 2, and T18_PROOF and T20_REPORT treat the right values 18 and 20.
 7. **"Comes from a 99-graph" versus "admits a frame in the engine's sense".** Graph => engine frame: the f_i of a graph satisfy
    the identity (F), from which the engine's conditions are derived according to its header (C1 notes 140-145, not on this
-   machine; not needed by the bridge). The converse is false in general: an engine frame is a
+   machine; not needed by the bridge). The converse is not available: an engine frame is a
    signed matrix S' with S'^2 + S' = 12 I and the right shape, and a graph needs in addition the even sector (the matrix D of
    the model, "Q = |N| + 2D" in REPRISE; "T4 reste le lemme de travail du dossier pour reconstruire ce graphe depuis une
    solution (N,D)", EG). T18 uses lambda = 1 and mu = 2 of the real graph. So the bridge proves "no GRAPH frame in this pair",
@@ -364,10 +359,14 @@ short dual vector lifts to v in U with |v|^2 < 26/7"); the producer's root and n
     pairs the engine excludes otherwise (on the 400 pairs of 011, 279 have a root with Y = 5, most of them also a Y = 13
     witness).
 13. **The missing norm check.** See H4. With (y,y) different from 7 or (y1,y2) different from 0 the formula for E is false and the theorem does
-    not apply; the engine would answer INVALID for such a pair, the quick deferral path answers DEFERRED.
+    not apply; the engine's `pair_setup` asserts the norms, but its immediate tests and the consumer's filters come before it, and
+    the quick deferral path answers DEFERRED without it: the norm guarantee of the campaign rests on the producer. So the
+    conversion of a DEFERRED pair into an exclusion requires a per-pair certificate in ambient coordinates (y1, y2, r in U;
+    (y,y) = 7; (y1,y2) = 0; (r,r) = 2; (r,y1)^2 + (r,y2)^2 = 5): `lemma/bridge/certify.py`.
 
 I found no way to break the theorem. The only links that are not proved in this folder are outside it: H5 as a statement about
-all graphs (section 9, point 1), T18 itself, and T20.
+all graphs (section 9, point 1; proved since then: Theorem R of `lemma/upstream/AUDIT_REDUCTION.md`, whose item (R-vii) is this
+Bridge Theorem), T18 itself, and T20. H5 for a given pair is the hypothesis being refuted, not an assumption.
 
 ## 7. Numerical checks
 
