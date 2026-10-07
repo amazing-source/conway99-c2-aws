@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/c2_cloud_run/c1/code/y_pairs_gamma.py", line 187, in <module>
+    main()
+  File "/home/ubuntu/c2_cloud_run/c1/code/y_pairs_gamma.py", line 126, in main
+    eng = Y2Engine(B, Gi, Bf, R, X3, Snew)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/c2_cloud_run/c1/code/y2_engine.py", line 78, in __init__
+    raise RuntimeError('orbit too large %d' % len(orb))
+RuntimeError: orbit too large 42981185

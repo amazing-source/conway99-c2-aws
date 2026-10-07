@@ -1,1 +1,5 @@
 2026-10-07 14:51:18 rigid-kernel audit start: 8 jobs of 8 (part 0/1, batch all), 4 at a time
+2026-10-07 15:09:35 FAIL 143_3_8 (producer 1 audit 0)
+2026-10-07 15:09:39 FAIL 143_0_8 (producer 1 audit 0)
+2026-10-07 15:09:41 FAIL 143_1_8 (producer 1 audit 0)
+2026-10-07 15:09:41 FAIL 143_2_8 (producer 1 audit 0)
