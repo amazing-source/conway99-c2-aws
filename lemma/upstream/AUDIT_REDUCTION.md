@@ -22,6 +22,9 @@ implication has a hole. Until today its four steps were "source only, not reread
    integer (-4)-eigenfunction with sum of squares <= 14.
 5. Not covered by this file, and still to be audited by their owners: the rules of the search engine (B), the completeness of the
    enumeration of the pairs (C), the identity of the 156 Gram matrices (D), the provenance of the older exclusions (E).
+6. **Open after the first pass** (sections C and E, written by the lab): (i) the producer of the pair streams has never been
+   compared with an independent enumeration (only the Golay family has two implementations); (ii) lattice 143 rests on one
+   argument nobody reread. Lattice 153 was in the same situation; it now has a second, hand proof (A.9: U is indecomposable).
 
 ## A. The reduction theorem, with its proof
 
@@ -148,6 +151,24 @@ only that the 156 Gram matrices we use are these 156 lattices: section D.
   at most one frame vector hits beta at 3/2, and |(beta,h_c)| <= 1. (C1 notes 139 (E), 140 section 2, 142.)
 - **Characteristic trap.** For characteristic z of norm 16: E(z) = 112 - Y with Y = (z,y_1)^2 + (z,y_2)^2 = 2 mod 8, and
   E(z) = (42 odd squares) + 4 sum b_c^2 with (z,h_c) = 2 b_c. Mod 8: 6 = 42 + 4 sum b_c^2, so sum b_c^2 is odd, E >= 46, **Y <= 66**.
+
+### A.9 The envelope is indecomposable (hand proof, new; second proof for 153, and for 152)
+
+> **Lemma.** U is not an orthogonal sum L_1 + L_2 of two nonzero lattices.
+
+Proof. Suppose U = L_1 + L_2. Both summands are unimodular without vector of norm 1, so their nonzero vectors have norm >= 2, and
+a vector of norm 3 lies in one summand (3 = 3 + 0 only). So each u_o is in L_1 or in L_2.
+Take two orbits o, o' sharing exactly one block i. Then (C^t C)_oo' = C_io C_io' = +-1, and the identity T^2 + T = 12 I - C^t C of
+A.2 gives sum_o'' T_oo'' T_o''o' + T_oo' = -+1. If u_o is in L_1 and u_o' in L_2, then T_oo' = -(u_o,u_o') = 0 and every term
+T_oo'' T_o''o' = (u_o,u_o'')(u_o'',u_o') is 0, because u_o'' lies in one summand: contradiction. So two orbits sharing exactly one
+block are in the same summand. The graph "share exactly one block" on the 42 orbits ({i,j}, sign) is connected (({i,j},+) and
+({i,j},-) are both adjacent to ({i,k},+)), so all the u_o are in one summand, say L_1. By (R-iv) the h_c are in its real span.
+Hence L_2 is orthogonal to the 49 vectors, so it lies in the plane of y_1, y_2 and has rank 1 or 2. A unimodular lattice of rank
+1 or 2 is Z or Z^2 and has vectors of norm 1: contradiction. QED
+
+Among the 156, the decomposable lattices are exactly **153** (D12+ + D12+, roots d_12^2) and **152** (E8 + the odd lattice of
+rank 16 with roots d_8^2): a unimodular summand without norm 1 has rank 8 (E8), 12 (D12+) or >= 14, and the complement must be
+odd or the sum is even. So 153, which rested on one argument reread by C1 only (section E), is excluded by this lemma as well.
 
 ## B. Rules of the search engine (owner: CDX, with LAB for the file list)
 
