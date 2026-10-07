@@ -1,0 +1,6 @@
+NON-rigid envelope: same admissibility filters (they are general); run the h-stage with FD_LEMMA_U=1
+U: r 288; norm-7 lines 22892544, admissible (roots, new roots, norm 3) 17743872 (128s)
+simple roots: 23 (rank of R)
+W-orbits of admissible y (both signs): 30 (128s)
+y2 stage on 28 processes
+pairs (y1 W-dominant, y2 W_J-dominant up to sign): 288 (152s)
