@@ -1,0 +1,53 @@
+case         z            bases(1st)  classes 1st/2nd  stage 1  | bases followed  nodes 1st/2nd  kept 1st/2nd  complete  stage 2 | certificates (integer vector / exact elimination)
+I0_421_t0    034;179            27        27/27       agrees    |     27       42/42          15/15       0      agrees | stage 1: 2298 / 0; stage 2: 774 / 0
+I1_421_t0    034;178             0         0/0        agrees    |      -  no base: nothing to traverse            agrees | stage 1: 5848 / 0
+I1_421_t1    034;258           554       554/554      agrees    |    554      597/597         43/43       0      agrees | stage 1: 55247 / 0; stage 2: 10106 / 0
+I1_421_t2    034;278           332       332/332      agrees    |    332      374/374         42/42       0      agrees | stage 1: 23634 / 0; stage 2: 5847 / 0
+I1_421_t3    257;268             9         9/9        agrees    |      9        9/9            0/0        0      agrees | stage 1: 3000 / 0; stage 2: 346 / 0
+I1_421_t4    257;368          3416      3416/3416     agrees    |   3416     4288/4288       872/872      0      agrees | stage 1: 149664 / 0; stage 2: 103015 / 0
+I1_421_t5    257;678            61        61/61       agrees    |     61       65/65           4/4        0      agrees | stage 1: 23947 / 0; stage 2: 2222 / 0
+I1_421_t6    258;345           218       218/218      agrees    |    218      262/262         44/44       0      agrees | stage 1: 13900 / 0; stage 2: 6749 / 0
+I1_421_t7    278;349            52        52/52       agrees    |     52       59/59           7/7        0      agrees | stage 1: 5451 / 0; stage 2: 910 / 0
+I1_421_t8    368;457           417       417/417      agrees    |    417      475/475         58/58       0      agrees | stage 1: 42526 / 0; stage 2: 12823 / 0
+I2_421_t0    034;189           236       236/236      agrees    |    236      341/341        105/105      0      agrees | stage 1: 27112 / 0; stage 2: 6311 / 0
+I2_421_t1    034;589          1161      1161/1161     agrees    |   1161     1357/1357       196/196      0      agrees | stage 1: 35725 / 0; stage 2: 30621 / 0
+I2_421_t2    345;389            23        23/23       agrees    |     23       23/23           0/0        0      agrees | stage 1: 8618 / 0; stage 2: 1015 / 0
+I3_421_t0    034;156            98        98/98       agrees    |     98      105/105          7/7        0      agrees | stage 1: 19117 / 0; stage 2: 1793 / 0
+I3_421_t1    034;159           408       408/408      agrees    |    408      512/512        104/104      0      agrees | stage 1: 12236 / 0; stage 2: 7442 / 0
+I3_421_t2    159;168             2         2/2        agrees    |      2        2/2            0/0        0      agrees | stage 1: 2688 / 0; stage 2: 50 / 0
+I3_421_t3    159;368           645       645/645      agrees    |    645      735/735         90/90       0      agrees | stage 1: 34128 / 0; stage 2: 18062 / 0
+I4_421_t0    025;279            41        41/41       agrees    |     41       46/46           5/5        0      agrees | stage 1: 1344 / 0; stage 2: 974 / 0
+I4_421_t1    027;035            33        33/33       agrees    |     33       34/34           1/1        0      agrees | stage 1: 2683 / 0; stage 2: 523 / 0
+I4_421_t2    035;169           174       172/172      agrees    |    174      199/199         25/25       0      agrees | stage 1: 12040 / 0; stage 2: 3427 / 0
+I4_421_t3    035;279           372       372/372      agrees    |    372      410/410         38/38       0      agrees | stage 1: 14860 / 0; stage 2: 6942 / 0
+I4_421_t4    279;348           131       130/130      agrees    |    131      159/159         28/28       0      agrees | stage 1: 3170 / 0; stage 2: 4123 / 0
+I5_421_t0    012;168            39        39/39       agrees    |     39       42/42           3/3        0      agrees | stage 1: 3188 / 0; stage 2: 1206 / 0
+I5_421_t1    012;579           105       103/103      agrees    |    105      110/110          5/5        0      agrees | stage 1: 3396 / 0; stage 2: 1725 / 0
+I5_421_t2    016;359             3         3/3        agrees    |      3        3/3            0/0        0      agrees | stage 1: 1158 / 0; stage 2: 27 / 0
+I0_340_t0    034;179           199       199/199      agrees    |    199      301/301        102/102      0      agrees | stage 1: 6825 / 0; stage 2: 6675 / 0
+I1_340_t0    034;178             0         0/0        agrees    |      -  no base: nothing to traverse            agrees | stage 1: 5378 / 0
+I1_340_t1    034;258          5152      5152/5152     agrees    |   5152     6200/6200      1048/1048     0      agrees | stage 1: 149198 / 0; stage 2: 110913 / 0
+I1_340_t2    034;278          2722      2722/2722     agrees    |   2722     3635/3635       913/913      0      agrees | stage 1: 66009 / 0; stage 2: 65811 / 0
+I1_340_t3    257;268            91        91/91       agrees    |     91       97/97           6/6        0      agrees | stage 1: 8984 / 0; stage 2: 3266 / 0
+I1_340_t4    257;368         18943     18943/18943    agrees    |  18943    27187/27187     8244/8244     0      agrees | stage 1: 416150 / 0; stage 2: 650268 / 0
+I1_340_t5    257;678           440       440/440      agrees    |    440      514/514         74/74       0      agrees | stage 1: 61506 / 0; stage 2: 16933 / 0
+I1_340_t6    258;345          1847      1847/1847     agrees    |   1847     2466/2466       619/619      0      agrees | stage 1: 53314 / 0; stage 2: 56204 / 0
+I1_340_t7    278;349           305       305/305      agrees    |    305      431/431        126/126      0      agrees | stage 1: 7754 / 0; stage 2: 8326 / 0
+I1_340_t8    368;457          1409      1402/1402     agrees    |   1409     1725/1725       316/316      0      agrees | stage 1: 64649 / 0; stage 2: 48205 / 0
+I2_340_t0    034;189          1228      1228/1228     agrees    |   1228     1723/1723       495/495      0      agrees | stage 1: 51679 / 0; stage 2: 39892 / 0
+I2_340_t1    034;589          6833      6833/6833     agrees    |   6833     9231/9231      2398/2398     0      agrees | stage 1: 117528 / 0; stage 2: 225316 / 0
+I2_340_t2    345;389            77        77/77       agrees    |     77       88/88          11/11       0      agrees | stage 1: 21981 / 0; stage 2: 3091 / 0
+I3_340_t0    034;156          1196      1196/1196     agrees    |   1196     1421/1421       225/225      0      agrees | stage 1: 67044 / 0; stage 2: 26151 / 0
+I3_340_t1    034;159          3898      3898/3898     agrees    |   3898     5780/5780      1882/1882     0      agrees | stage 1: 52504 / 0; stage 2: 107900 / 0
+I3_340_t2    159;168            37        37/37       agrees    |     37       40/40           3/3        0      agrees | stage 1: 11241 / 0; stage 2: 1028 / 0
+I3_340_t3    159;368          4612      4612/4612     agrees    |   4612     6512/6512      1900/1900     0      agrees | stage 1: 115396 / 0; stage 2: 171014 / 0
+I4_340_t0    025;279           206       206/206      agrees    |    206      276/276         70/70       0      agrees | stage 1: 9878 / 0; stage 2: 6831 / 0
+I4_340_t1    027;035           224       224/224      agrees    |    224      300/300         76/76       0      agrees | stage 1: 15169 / 0; stage 2: 6742 / 0
+I4_340_t2    035;169          1555      1548/1548     agrees    |   1555     2244/2244       689/689      0      agrees | stage 1: 39228 / 0; stage 2: 50688 / 0
+I4_340_t3    035;279          2744      2742/2742     agrees    |   2744     3456/3456       712/712      0      agrees | stage 1: 53502 / 0; stage 2: 71509 / 0
+I4_340_t4    279;348          1062      1058/1058     agrees    |   1062     1477/1477       415/415      0      agrees | stage 1: 17094 / 0; stage 2: 39195 / 0
+I5_340_t0    012;168           168       168/168      agrees    |    168      250/250         82/82       0      agrees | stage 1: 10757 / 0; stage 2: 7837 / 0
+I5_340_t1    012;579           995       990/990      agrees    |    995     1333/1333       338/338      0      agrees | stage 1: 17457 / 0; stage 2: 27354 / 0
+I5_340_t2    016;359            28        28/28       agrees    |     28       32/32           4/4        0      agrees | stage 1: 3570 / 0; stage 2: 634 / 0
+TOTAL: cases 50, agreeing on both stages 50, not finished 0; bases of the first program 64528 = 64498 classes; bases re-traversed 64528, nodes 86968, complete 0; attachments tested by the second program 362754336 (rejected by PSD 1950773); stage-2 certificates: integer vector 1978816, exact elimination 0
+ALL 50 CASES: SAME CLASSES OF BASES, SAME KEPT COUNT AT EVERY NODE, 0 COMPLETE: True

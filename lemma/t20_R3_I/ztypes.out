@@ -1,0 +1,31 @@
+I.0: |Aut| = 16; ordered types (U3;V3) passing the budgets on 23 vertices: 8 (= 4 classes under sigma); classes under Aut(B) x <sigma>: 1
+    z = (0, 3, 4) ; (1, 7, 9)   orbit 8  rho 2  |U3 n V3| 0
+I.1: |Aut| = 4; ordered types (U3;V3) passing the budgets on 23 vertices: 46 (= 23 classes under sigma); classes under Aut(B) x <sigma>: 9
+    z = (0, 3, 4) ; (1, 7, 8)   orbit 2  rho 3  |U3 n V3| 0
+    z = (0, 3, 4) ; (2, 5, 8)   orbit 8  rho 3  |U3 n V3| 0
+    z = (0, 3, 4) ; (2, 7, 8)   orbit 4  rho 3  |U3 n V3| 0
+    z = (2, 5, 7) ; (2, 6, 8)   orbit 4  rho 3  |U3 n V3| 1
+    z = (2, 5, 7) ; (3, 6, 8)   orbit 8  rho 2  |U3 n V3| 0
+    z = (2, 5, 7) ; (6, 7, 8)   orbit 8  rho 3  |U3 n V3| 1
+    z = (2, 5, 8) ; (3, 4, 5)   orbit 8  rho 3  |U3 n V3| 1
+    z = (2, 7, 8) ; (3, 4, 9)   orbit 2  rho 3  |U3 n V3| 0
+    z = (3, 6, 8) ; (4, 5, 7)   orbit 2  rho 2  |U3 n V3| 0
+I.2: |Aut| = 10; ordered types (U3;V3) passing the budgets on 23 vertices: 30 (= 15 classes under sigma); classes under Aut(B) x <sigma>: 3
+    z = (0, 3, 4) ; (1, 8, 9)   orbit 10  rho 2  |U3 n V3| 0
+    z = (0, 3, 4) ; (5, 8, 9)   orbit 10  rho 2  |U3 n V3| 0
+    z = (3, 4, 5) ; (3, 8, 9)   orbit 10  rho 3  |U3 n V3| 1
+I.3: |Aut| = 4; ordered types (U3;V3) passing the budgets on 23 vertices: 24 (= 12 classes under sigma); classes under Aut(B) x <sigma>: 4
+    z = (0, 3, 4) ; (1, 5, 6)   orbit 8  rho 3  |U3 n V3| 0
+    z = (0, 3, 4) ; (1, 5, 9)   orbit 4  rho 2  |U3 n V3| 0
+    z = (1, 5, 9) ; (1, 6, 8)   orbit 8  rho 3  |U3 n V3| 1
+    z = (1, 5, 9) ; (3, 6, 8)   orbit 4  rho 2  |U3 n V3| 0
+I.4: |Aut| = 4; ordered types (U3;V3) passing the budgets on 23 vertices: 24 (= 12 classes under sigma); classes under Aut(B) x <sigma>: 5
+    z = (0, 2, 5) ; (2, 7, 9)   orbit 8  rho 3  |U3 n V3| 1
+    z = (0, 2, 7) ; (0, 3, 5)   orbit 8  rho 3  |U3 n V3| 1
+    z = (0, 3, 5) ; (1, 6, 9)   orbit 2  rho 2  |U3 n V3| 0
+    z = (0, 3, 5) ; (2, 7, 9)   orbit 4  rho 2  |U3 n V3| 0
+    z = (2, 7, 9) ; (3, 4, 8)   orbit 2  rho 2  |U3 n V3| 0
+I.5: |Aut| = 20; ordered types (U3;V3) passing the budgets on 23 vertices: 50 (= 25 classes under sigma); classes under Aut(B) x <sigma>: 3
+    z = (0, 1, 2) ; (1, 6, 8)   orbit 20  rho 3  |U3 n V3| 1
+    z = (0, 1, 2) ; (5, 7, 9)   orbit 10  rho 2  |U3 n V3| 0
+    z = (0, 1, 6) ; (3, 5, 9)   orbit 20  rho 3  |U3 n V3| 0

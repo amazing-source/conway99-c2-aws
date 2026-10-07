@@ -20,10 +20,14 @@
 # is composed with the renaming z <-> sigma z, which does not change the unordered types of the pairs of N(p)).
 # n_3 = 0: each representative is the base S u N[p] (35 vertices): exact budget count on the whole graph, then
 #          exact PSD rejection (integer vector, eng.Tester.reject) or kept (float).
-# n_3 = 2: the 35 vertices S u N[p] are tested first (same tests); for each representative left, the 84 choices
-#          of N(z) n N(p) = {w1, w2} (two different pairs; then sigma z ~ sigma w1, sigma w2) give the bases
-#          S u N[p] u {z, sigma z} (37 vertices): exact budget count (cases6.budget_rows), then exact PSD rejection
-#          (eng5.Node.psd_fail: integer vector) or kept.  In the output "zn" = the two vertices (0..13 inside N(p)).
+# n_3 = 2: for each representative, the choices
+#          of N(z) n N(p) = {w1, w2} (two different pairs, 84 choices; 72 when there is a Z pair, whose two vertices
+#          are interchangeable, so that only its first vertex is offered; a choice with two vertices of A pairs is
+#          rejected by the hand lemma a_2(z) <= 1, counted apart; then sigma z ~ sigma w1, sigma w2) give the bases
+#          S u N[p] u {z, sigma z} (37 vertices): exact budget count (cases6.budget_rows) for all choices; if some
+#          choice is left, exact PSD test of the 35 vertices S u N[p] (a principal submatrix), then exact PSD
+#          rejection on the 37 vertices (eng5.Node.psd_fail: integer vector) or kept.
+#          In the output "zn" = the two vertices (0..13 inside N(p)).
 #
 # Parallel use: with part=i/n the enumeration is done completely (it is fast) but only the representatives whose
 # rank (order of generation) is i mod n are tested; stage1_merge.py puts the n outputs together, in the order of
@@ -188,7 +192,7 @@ nconf = total[0]
 stats = eng.Counter()
 tester = eng.Tester(stats)
 sig35 = r3lib.sigma_of(35)
-cnt = {"tested": 0, "budget": 0, "psd": 0, "kept": 0, "n35_tested": 0, "n35_budget": 0, "n35_psd": 0}
+cnt = {"tested": 0, "budget": 0, "psd": 0, "kept": 0, "n35_tested": 0, "n35_budget": 0, "n35_psd": 0, "hand_a2z": 0, "n35_with_choice": 0}
 bases = []
 bases_ri = []
 
@@ -217,9 +221,15 @@ def build35(cfg):
 
 if ztype:
     import eng5, cases6
-    zpairs = [(a_, b_) for a_ in range(14) for b_ in range(a_ + 1, 14) if a_ // 2 != b_ // 2]
-    assert len(zpairs) == 84
-    ZR = np.zeros((84, 35), dtype=np.int64)
+    # the pairs of a base are: the h2 + h1 typed pairs (in the order of the representative), then the h0 Z pairs.
+    # The two vertices of a Z pair are interchangeable, so only its first vertex is offered to z.
+    zsecond = set(2 * t + 1 for t in range(7 - h0, 7))
+    zfirst = set(2 * t for t in range(7 - h0, 7))
+    zpairs = [(a_, b_) for a_ in range(14) for b_ in range(a_ + 1, 14)
+              if a_ // 2 != b_ // 2 and a_ not in zsecond and b_ not in zsecond]
+    NZP = len(zpairs)
+    assert h0 <= 1 and NZP == 84 - 12 * h0
+    ZR = np.zeros((NZP, 35), dtype=np.int64)
     for q, (a_, b_) in enumerate(zpairs):
         for i in U3:
             ZR[q, i] = 1
@@ -235,32 +245,48 @@ for ri, c in zip(repidx, reps):
     if r3lib.budget_viol(A):
         cnt["n35_budget"] += 1
         continue
-    if tester.reject(A, sig35) is not None:
-        cnt["n35_psd"] += 1
-        continue
     if not ztype:
+        if tester.reject(A, sig35) is not None:
+            cnt["n35_psd"] += 1
+            continue
         bases.append({"pairs": pairs})
         bases_ri.append(ri)
         continue
-    # n_3 = 2: the orbit {z, sigma z} is added to the 35 vertices with N(z) n N(p) = {w1, w2} (84 choices)
+    # n_3 = 2: the orbit {z, sigma z} is added to the 35 vertices with N(z) n N(p) = {w1, w2}.
+    # 1. exact counts for all choices at once;  2. hand filter a_2(z) <= 1;  3. only if some choice is left:
+    # exact PSD test of the 35 vertices, then of the 37 vertices for each choice left.
     CA = A @ A + A
     W1 = (CA >= 2).astype(np.int64); np.fill_diagonal(W1, 0)
     W2 = (CA >= 1).astype(np.int64); np.fill_diagonal(W2, 0)
     bad = cases6.budget_rows(A, W1, W2, sigarr35, ZR)
-    cnt["tested"] += 84
+    cnt["tested"] += NZP
     cnt["budget"] += int(bad.sum())
-    node = None
-    for q in range(84):
+    isA_pair = [types[a][0][0] == "A" for a in c] + [False] * h0
+    left = []
+    for q in range(NZP):
         if bad[q]:
             continue
-        if node is None:
-            node = eng5.Node(A, sig35)
-            node.prepare()
+        if isA_pair[zpairs[q][0] // 2] and isA_pair[zpairs[q][1] // 2]:
+            cnt["hand_a2z"] += 1            # declared hand filter H1(a): a_2(z) <= 1
+            continue
+        left.append(q)
+    if not left:
+        continue
+    cnt["n35_with_choice"] += 1
+    if tester.reject(A, sig35) is not None:
+        cnt["n35_psd"] += 1
+        cnt["psd"] += len(left)             # rejected through the 35 vertices (a principal submatrix)
+        continue
+    node = eng5.Node(A, sig35)
+    node.prepare()
+    for q in left:
         if node.psd_fail(ZR[q], 0, stats) is not None:
             cnt["psd"] += 1
             continue
         cnt["kept"] += 1
-        bases.append({"pairs": pairs, "zn": list(zpairs[q])})
+        beta = sum(1 for a_ in zpairs[q] if a_ in zfirst)
+        cnt["beta%d" % beta] = cnt.get("beta%d" % beta, 0) + 1
+        bases.append({"pairs": pairs, "zn": list(zpairs[q]), "beta": beta})
         bases_ri.append(ri)
 if not ztype:
     cnt["tested"], cnt["budget"], cnt["psd"], cnt["kept"] = cnt["n35_tested"], cnt["n35_budget"], cnt["n35_psd"], len(bases)
@@ -268,14 +294,21 @@ out = {"graph": name, "profile": [h2, h1, h0], "ztype": ztype, "group_order": le
        "nconfigs_labelled": nconf, "nconfig_orbits": nrep[0], "enum_nodes": nodes[0],
        "part": PART, "nparts": NPARTS, "bases_rank": bases_ri,
        "tested": cnt["tested"], "rejected_budget": cnt["budget"], "rejected_psd_exact": cnt["psd"],
-       "kept": cnt["kept"], "n35": [cnt["n35_tested"], cnt["n35_budget"], cnt["n35_psd"]], "stats": stats.c, "seconds": time.time() - t0, "bases": bases}
+       "kept": cnt["kept"], "n35": [cnt["n35_tested"], cnt["n35_budget"], cnt["n35_psd"]],
+       "n35_with_choice": cnt["n35_with_choice"],
+       "rejected_hand_a2z": cnt["hand_a2z"], "kept_by_beta": {k: v for k, v in cnt.items() if k.startswith("beta")},
+       "stats": stats.c, "seconds": time.time() - t0, "bases": bases}
 json.dump(out, open(outfile, "w"))
 print("%s profile (%d,%d,%d)%s: |G| = %d; rectangles %d; N-configurations %d (enumeration nodes %d), orbits under G %d" % (
     name, h2, h1, h0, (" z = %s ; %s" % ztype) if ztype else "", len(G), nrect, nconf, nodes[0], nrep[0]))
 if NPARTS > 1:
     print("   PART %d of %d: only the representatives of rank = %d mod %d are tested here" % (PART, NPARTS, PART, NPARTS))
 if ztype:
-    print("   on the 35 vertices S u N[p]: tested %d, rejected by budgets %d, by PSD (exact) %d" % (
-        cnt["n35_tested"], cnt["n35_budget"], cnt["n35_psd"]))
+    print("   representatives %d; with at least one choice of N(z) n N(p) passing the counts and the hand filter: %d, "
+          "of which rejected by PSD (exact) on the 35 vertices S u N[p]: %d" % (
+              cnt["n35_tested"], cnt["n35_with_choice"], cnt["n35_psd"]))
+    print("   attachments of z: rejected by the hand filter a_2(z) <= 1 (after the budget counts): %d; kept bases by "
+          "beta = number of neighbours of z in the Z pair: %s" % (
+              cnt["hand_a2z"], {k: v for k, v in sorted(cnt.items()) if k.startswith("beta")}))
 print("   bases tested %d: rejected by budgets %d, by PSD (exact) %d, kept %d   stats %s   [enum %.0f s, orbits %.0f s, tests %.0f s]" % (
     cnt["tested"], cnt["budget"], cnt["psd"], cnt["kept"], stats.c, t1 - t0, t2 - t1, time.time() - t2))

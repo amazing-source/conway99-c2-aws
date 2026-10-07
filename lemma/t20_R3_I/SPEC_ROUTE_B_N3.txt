@@ -1,0 +1,295 @@
+T20, case I, branch n_3 = 2, ROUTE B (N(p) and the X_3 orbit in the base): specification of the enumeration
+==============================================================================================================
+
+Laptop session (Claude), 2026-10-07. This page is self-contained: a program written from it alone is a second,
+independent program for the branch n_3 = 2. Every statement of the model is proved here in one or two lines, or is a
+fact of the project model quoted in section 1. Nothing here is a result; the claim to be tested is in section 9.
+
+Difference with lemma/t20_HAND/SPEC_N3.md (route A): there the base is S u {p} u X_3 u X_0' (29 vertices) and all
+twelve orbits of X_2 are enumerated. Here the base is S u N[p] u X_3 (37 vertices): the fourteen neighbours of p are in
+the base, the set X_0' is NOT in the vertex set, and only the orbits of X_2 outside N(p) (8 or 9 of them) are
+enumerated. The point is one fact that route A cannot use: z, like every word, has exactly two neighbours in N(p).
+
+
+1. Setting
+----------
+
+G is a strongly regular graph with parameters (99, 14, 1, 2), adjacency matrix A: A^2 = 12 I - A + 2 J.
+sigma is an automorphism of order 2 with exactly one fixed vertex p.
+
+Facts (M), from the project model:
+- For v != p: v ~ sigma v if and only if v is in N(p). N(p) is seven disjoint "mate edges" {w, sigma w}; inside N(p)
+  a vertex is adjacent to its mate only (N(p) induces a perfect matching).
+- A vertex outside N[p] is a "word": it is not adjacent to its mate and it has exactly two neighbours in N(p), in two
+  different mate edges.
+- lambda = 1: two adjacent vertices have exactly one common neighbour. mu = 2: two non-adjacent vertices have exactly two.
+- Consequence: a vertex other than p is never adjacent to both ends of a mate edge (they already share p).
+
+Case I of T20: S+ = {x_0, ..., x_9}, S- = {y_i = sigma x_i}, both independent, S = S+ u S- disjoint from N[p], and
+x_i ~ y_j if and only if i ~ j in a 4-regular graph B on {0, ..., 9}. B is one of six graphs I.0 ... I.5 (section 8).
+
+For q outside S, d(q) = |N(q) n S+| = |N(q) n S-|. X_d = {q outside S : d(q) = d}; a_j(q) = |N(q) n X_j|. p is in X_0.
+
+    a_1 + 2 a_2 + 3 a_3 = 20 - 5d,        a_0 = a_2 + 2 a_3 + 3d - 6.                                   (G0)
+
+(Proof: evaluate A^2 1_{S+} at q.) X_d is empty for d >= 4. Branch treated here: |X_3| = 2; then |X_0| = 7,
+|X_1| = 46, |X_2| = 24.
+
+Proved earlier, used here:
+(P1) No vertex of N(p) is in X_3 (round 2, I.1). So X_3 = {z, z' = sigma z} with z a word: z !~ p, z !~ z'.
+(P2) Every x_i has exactly two neighbours in N(p) (it is a word), never two mates.
+(P3) Profile: h_j = number of mate edges of N(p) inside X_j. h_3 = 0 by (P1), and by (P2) h_1 + 2 h_2 = 10, so
+     (h_2, h_1, h_0) is (3, 4, 0), (4, 2, 1) or (5, 0, 2); (5, 0, 2) is impossible (round 2, I.3, proved for n_3 = 2 too).
+(P4) a_3(z) = 0 and a_2(z) <= 1 (lab notes H1 (a): a_0(z) = a_2(z) + 3 by (G0); the neighbours of z in X_0 avoid p, those
+     of z and of z' have at most 2 common elements, and X_0 minus p has 6 vertices: 2 a_0(z) - 2 <= 6).
+(P5) No vertex of X_2 is adjacent to both z and z' (N(z) n N(z') is one sigma-orbit; inside X_2 it would give a_2(z) >= 2).
+
+
+2. The base (37 vertices)
+-------------------------
+
+Y = S u {p} u N(p) u {z, z'}.
+
+Data of a base:
+(a) the type (U3 ; V3) of z: z ~ x_i for i in U3, z ~ y_j for j in V3, |U3| = |V3| = 3. Then z' ~ y_i (i in U3) and
+    z' ~ x_j (j in V3). The possible types, up to Aut(B) and the exchange z <-> z', are listed in section 8 (25 classes;
+    they are exactly the types for which the 23 vertices S u {p, z, z'} pass the budget test).
+(b) the "N-configuration": the seven mate edges of N(p) with their neighbours in S. A mate edge {w, sigma w} is
+      of kind A, type {U, V}: w ~ x_U and y_V, sigma w ~ x_V and y_U, with U, V two disjoint 2-subsets of indices;
+      of kind W, type {i, k}, i != k: w ~ x_i and y_k, sigma w ~ x_k and y_i;
+      of kind Z: no neighbour in S.
+    There are h_2 edges of kind A, h_1 of kind W, h_0 of kind Z, (h_2, h_1, h_0) = (3, 4, 0) or (4, 2, 1), and every
+    index 0..9 lies in exactly two of the sets U u V (kind A) and {i, k} (kind W).
+    Proof: a vertex w of N(p) has d(w) in {0, 1, 2} by (P1). If w ~ x_i and w ~ y_i then sigma w ~ y_i and x_i, and x_i
+    would be adjacent to both ends of a mate edge: so U n V is empty and i != k. The covering statement is (P2).
+(c) the attachment: the two neighbours w1, w2 of z in N(p); they lie in two different mate edges. Then z' ~ sigma w1,
+    sigma w2. (z is a word.)
+
+Why the induced graph on Y is determined by (a), (b), (c): every pair of classes.
+
+    S+ with S+, S- with S-      none                                   case I
+    S+ with S-                  x_i ~ y_j iff i ~_B j                  definition of B
+    p with S                    none                                   S is disjoint from N[p]
+    p with N(p)                 all 14                                 definition
+    N(p) with N(p)              the seven mate edges only              (M)
+    N(p) with S                 the types                              data (b)
+    z, z' with S                the type (U3 ; V3)                     data (a)
+    z, z' with p; z with z'     none                                   (P1): z is a word
+    z with N(p)                 exactly w1, w2; z' : sigma w1, sigma w2    data (c); a word has exactly 2 neighbours in N(p)
+
+Stage 1 = the list of all bases. For each type (a): ALL N-configurations (b) and ALL 84 attachments (c) (2 vertices among
+14, not in the same mate edge) must be considered, up to the symmetries of section 6, and each base is either rejected
+by an exact test of section 5 or kept. One extra rejection is allowed, by (P4): an attachment in which w1 and w2 are both
+vertices of mate edges of kind A (then a_2(z) >= 2). In the first program this filter removes nothing: such attachments
+already fail the budget test.
+
+
+3. The orbits of X_2 outside N(p)
+---------------------------------
+
+X_2 has 24 vertices. The 2 h_2 vertices of the mate edges of kind A are in X_2 and are in the base. The others form
+X_2' : 24 - 2 h_2 words, i.e. 9 sigma-orbits for profile (3, 4, 0) and 8 for profile (4, 2, 1).
+For s in X_2: U_s = {i : s ~ x_i}, V_s = {j : s ~ y_j}, |U_s| = |V_s| = 2, U_{sigma s} = V_s.
+
+Units. x_i and x_j (i != j) are not adjacent, so they have exactly two common neighbours. Those in S are the y_l with l a
+common B-neighbour of i and j. z is one if i, j are both in U3; z' is one if both are in V3. All the others are in X_2
+(a common neighbour outside S has d >= 2, and X_3 = {z, z'}). So the number of s in X_2 with U_s = {i, j} is exactly
+
+    need(i, j) = 2 - codeg_B(i, j) - [i, j in U3] - [i, j in V3],
+
+and the sum of need over all pairs is 24. A mate edge of kind A and type {U, V} uses one unit U (the vertex w) and one
+unit V (the vertex sigma w). What is left, need'(i, j) = need(i, j) - (number of vertices of N(p) adjacent to x_i and
+x_j), sums to 24 - 2 h_2 and is realised exactly by the vertices of X_2'.
+
+Data of an orbit {s, sigma s} of X_2' (everything else follows by sigma):
+- U_s and V_s, with need'(U_s) > 0, need'(V_s) > 0 and V_s != U_s (if V_s = U_s = {i, j}, the four vertices x_i, x_j,
+  y_i, y_j are common neighbours of s and sigma s);
+- N(s) n N(p): exactly two vertices, in two different mate edges (s is a word);
+- [s ~ z], [s ~ z']: not both, by (P5);
+- s !~ p, s !~ sigma s (word);
+- for every other orbit {t, sigma t} of X_2' : the two bits [s ~ t], [s ~ sigma t].
+
+Upper bounds ("caps"; they are used as upper bounds only, on partial and on complete configurations).
+Write a_3(v) = [v ~ z] + [v ~ z'] and h_0 for the number of mate edges of kind Z.
+
+(C1) s in X_2' :  (number of neighbours of s in mate edges of kind A) + (number of neighbours of s in X_2') <= 4 - 2 a_3(s).
+     Proof: the left side is a_2(s). By (G0), a_2(s) = a_0(s) - 2 a_3(s). The set T = N(s) n X_0 avoids p (s is a
+     word), T n sigma T lies in N(s) n N(sigma s), which has 2 elements, and T u sigma T lies in X_0 minus p (6 vertices):
+     2 |T| - 2 <= 6, so a_0(s) <= 4.
+(C2) z has at most 1 - (number of its neighbours in mate edges of kind A) neighbours in X_2', and so has z'. ((P4).)
+(C3) w in N(p). Let Q = X_0 minus N[p]: 6 - 2 h_0 words in 3 - h_0 orbits, and s(w) = |N(w) n Q|. w is adjacent to at
+     most one end of each orbit of Q (if w ~ q and w ~ sigma q then sigma w ~ sigma q and q: q would be adjacent to both
+     ends of a mate edge), so s(w) <= 3 - h_0. a_3(w) <= 1 (w adjacent to z and z' would make z adjacent to w and
+     sigma w). The number of neighbours of w in X_2' is, by (G0) at w:
+        kind A:  a_0(w) = 1 + s(w) (p and Q), a_2(w) = a_0(w) - 2 a_3(w), one of them is the mate:
+                 exactly s(w) - 2 a_3(w)            <=  3 - h_0 - 2 a_3(w);
+        kind W:  a_0(w) = 1 + s(w), a_2(w) = a_0(w) + 3 - 2 a_3(w), all of them in X_2':
+                 exactly 4 + s(w) - 2 a_3(w)        <=  7 - h_0 - 2 a_3(w);
+        kind Z:  a_0(w) = 2 + s(w) (p, the mate, Q), a_2(w) = a_0(w) + 6 - 2 a_3(w), all in X_2', and
+                 a_1(w) = 20 - 2 a_2(w) - 3 a_3(w) >= 0:
+                 exactly 8 + s(w) - 2 a_3(w)        <=  min(11 - h_0 - 2 a_3(w), floor((20 - 3 a_3(w)) / 2)).
+     If a cap is negative for the base itself, the base is rejected (this never happens in the first program).
+
+Complete configuration on a base: 9 (resp. 8) orbits with their data such that every unit {i, j} is realised exactly
+need'(i, j) times, the caps hold, and the induced graph on the 37 + 18 (resp. 37 + 16) vertices passes the budget and
+semidefiniteness tests of section 5.
+
+
+4. Why a search over units is exhaustive
+----------------------------------------
+
+Suppose G exists with n_3 = 2. Its base is one of the bases of section 2, and it is not rejected by any necessary test:
+after a relabelling of section 6 it is one of the kept bases of stage 1. Take any state made of that base and k orbits
+of X_2' of G with their true data, not all of them. Some unit has fewer realisations among the placed vertices than
+need'; pick one, {i, j}, by any rule. In G an unplaced vertex s of X_2' has U_s = {i, j}. Its true data is one of the
+finitely many candidates (V_s, the two neighbours in N(p), [s ~ z], [s ~ z'], the two bits to each placed orbit). The
+state with the orbit of s added is again made of true orbits, so it passes every necessary test and every cap. By
+induction the search reaches a complete configuration. So:
+
+    if for every kept base the exhaustive search finds no complete configuration, the branch n_3 = 2 of case I is
+    impossible.
+
+The rule choosing the unit is free. A candidate, or a base, may be rejected only by an exact computation (section 5)
+or by a cap of section 3.
+
+
+5. Tests (all are necessary conditions)
+---------------------------------------
+
+- Budget. In any vertex set, for any graph all of whose edges are edges of G (the induced graph, or the induced graph
+  with some adjacencies not yet decided and left out), two adjacent vertices have at most 1 common neighbour and two
+  non-adjacent vertices at most 2.
+- Semidefiniteness. M1 = 9 (3I - A) + J and M2 = 11 (4I + A) - 2J are positive semidefinite on all 99 vertices (they are
+  63 and 77 times the projectors on the eigenspaces -4 and 3). So their principal submatrices on a vertex set whose
+  induced graph is completely known are positive semidefinite. A rejection must be exact: an integer vector x with
+  x^T M x < 0 computed in integers, or exact rational elimination. A floating-point test may only keep.
+- Optional (the first program has it, and it did not fire in this branch so far): the rank bound. On a sigma-invariant
+  vertex set, the matrices D^T M1 D (D = the vectors e_v - e_{sigma v}) and E^T M1 E (E = e_p and the vectors
+  e_v + e_{sigma v}) have rank at most 22 (sigma has eigenvalues +1 and -1 with multiplicity 22 each on the eigenspace -4).
+
+
+6. Symmetry (optional)
+----------------------
+
+The following relabellings preserve the model, so one base per class is enough:
+- an automorphism g of B applied to the indices of S+ and S- together (it maps the type (U3 ; V3) to (g U3 ; g V3) and
+  every type of mate edge to its image);
+- the exchange of the names z and z' (the type (U3 ; V3) becomes (V3 ; U3); the attachment {w1, w2} becomes
+  {sigma w1, sigma w2});
+- the order of the seven mate edges, and which vertex of a mate edge is called w (naming only). In particular the two
+  vertices of a mate edge of kind Z are interchangeable: attaching z to one or to the other gives the same base.
+The first program takes the types (U3 ; V3) up to Aut(B) x (z <-> z') (section 8), then, for a fixed type, the
+N-configurations up to the group G_z of the automorphisms of B that preserve the pair {U3, V3} (those exchanging U3 and
+V3 are composed with the exchange z <-> z', which does not change an N-configuration), and for each representative
+N-configuration all the attachments (only one vertex of a mate edge of kind Z is offered). The classes of bases are
+compared between programs as "canonical keys": the smallest image, under G_z with the exchange, of the list of the
+seven typed mate edges, each with a mark 0 / 1 / 2 (no vertex adjacent to z / the vertex adjacent to x_U resp. x_i is
+adjacent to z / the other one is), the mark of a mate edge of kind Z being 0 or 1.
+
+
+7. Hand lemmas that a program may assume, if it says so
+-------------------------------------------------------
+
+Proved in lemma/t20_CODEX/PROFILE_421.md and TRIANGLE_REDUCTION.md. The first program does NOT use them.
+- Profile (4, 2, 1): z is adjacent to exactly one vertex of the mate edge of kind Z ("beta = 1").
+  Observed by the first program: every kept base of profile (4, 2, 1) has this property (8,557 bases of 8,557).
+- Profile (4, 2, 1): the two vertices of kind Z have no neighbour in Q (s(w) = 0 in (C3), so the cap becomes 8 - 2 a_3(w)).
+
+
+8. Data
+-------
+
+Edges of B (two digits = one edge):
+
+    I.0: 01 02 03 04 17 18 19 25 26 29 34 36 38 45 47 58 59 67 68 79
+    I.1: 01 02 03 04 17 18 19 25 26 29 34 36 38 45 47 57 59 68 69 78
+    I.2: 01 02 03 04 17 18 19 25 26 29 34 36 38 45 47 57 59 67 68 89
+    I.3: 01 02 03 04 17 18 19 25 26 29 34 36 38 45 47 56 59 68 78 79
+    I.4: 01 02 03 04 17 18 19 24 26 29 34 35 38 46 56 57 58 69 78 79
+    I.5: 01 02 03 04 14 18 19 23 26 27 34 37 49 56 57 58 59 67 68 89
+
+Types (U3 ; V3) of z, one per class under Aut(B) x (z <-> z'), in the order used by the first program (t0, t1, ...):
+
+    I.0 (1 class):   034;179
+    I.1 (9 classes): 034;178  034;258  034;278  257;268  257;368  257;678  258;345  278;349  368;457
+    I.2 (3 classes): 034;189  034;589  345;389
+    I.3 (4 classes): 034;156  034;159  159;168  159;368
+    I.4 (5 classes): 025;279  027;035  035;169  035;279  279;348
+    I.5 (3 classes): 012;168  012;579  016;359
+
+(Same list as lab notes H2. A program should recompute it: all ordered pairs of 3-subsets U3 != V3 such that the graph
+on S u {p, z, z'} passes the budget test; 8, 46, 30, 24, 24, 50 ordered types for I.0 ... I.5.)
+
+COVERAGE. The enumeration must treat ALL 25 classes of types, each for BOTH profiles (3, 4, 0) and (4, 2, 1): 50 cases.
+This includes the eight classes with eps = |U3 n V3| = 1 (the case where N(z) n N(z') = {x_i, y_i}):
+I.1 257;268, 257;678, 258;345; I.2 345;389; I.3 159;168; I.4 025;279, 027;035; I.5 012;168.
+Nothing in sections 2 to 5 treats eps = 1 apart: with U3 n V3 = {i}, the three pairs inside U3 and the three pairs inside
+V3 are six different pairs, so the formula for need(i, j) applies as it stands, and z, z' have their two common
+neighbours x_i, y_i inside the base (the budget test then forbids any other common neighbour of z and z').
+The four sub-cases of the lab notes H1 (i-S, i-X1, ii, iii, i.e. where the common neighbours of z and z' lie and whether
+a_2(z) is 0 or 1) are NOT separated in this route: they concern X_0', which is not in the vertex set. They are all
+covered, because the only facts used about z are (P1), (P4), (P5), valid in every sub-case.
+
+
+9. What the second program must report, and reference counts
+------------------------------------------------------------
+
+For each graph, type and profile: the number of N-configurations considered, the number of bases tested and kept (and
+the number of classes, if symmetry is used); for each kept base: nodes per level, number of complete configurations,
+and whether the search ran to the end. The claim to confirm or refute:
+
+    For every kept base of the six graphs, the 25 types and the two profiles, the search ends with no complete
+    configuration.
+
+Reference counts, small case I.0, z = 034;179 (|G_z| = 4), independent of the order of the tests:
+
+  profile (4, 2, 1):
+    N-configurations (sets of 4 + 2 typed mate edges covering every index twice, plus one edge of kind Z) for which the
+    37 vertices with z NOT yet attached pass the budget test:              7,334   (1,875 classes under G_z)
+    attachments on the 1,875 representatives (84 each):                    157,500
+      rejected by the budget test on the 37 vertices:                      155,148
+      rejected by the filter "not two vertices of kind A":                 0
+      rejected by semidefiniteness:                                        2,298
+      kept:                                                                54  =  27 classes (canonical keys)
+    all 27 classes have z adjacent to a vertex of kind Z.
+    stage 2 on the 27 bases (first program; the node counts depend on the rule choosing the unit):
+      nodes with 0 / 1 / 2 orbits placed: 27 / 12 / 3; no complete configuration.
+
+  profile (3, 4, 0):
+    N-configurations (3 + 4 typed mate edges covering every index twice) for which the 37 vertices with z not yet
+    attached pass the budget test:                                         108,748   (27,430 classes under G_z)
+    attachments on the 27,430 representatives (84 each):                   2,304,120
+      rejected by the budget test on the 37 vertices:                      2,297,096
+      rejected by the filter "not two vertices of kind A":                 0
+      rejected by semidefiniteness:                                        6,825
+      kept:                                                                199  =  199 classes
+    stage 2 on the 199 bases (first program): nodes with 0 / 1 / 2 / 3 orbits placed: 199 / 84 / 17 / 1; no complete
+    configuration.
+
+(The semidefiniteness counts are those of a program that keeps on a floating-point eigenvalue and rejects only with an
+exact certificate; a base on which a matrix is singular could in principle be decided differently by another program.
+The numbers of kept classes, 27 and 199, were obtained identically by two programs.)
+
+Totals of the first program over the 50 cases (lemma/t20_R3_I/n3_check.out gives every case):
+
+  profile (4, 2, 1):  bases kept 8,557   (I.0 27, I.1 5,059, I.2 1,420, I.3 1,153, I.4 751, I.5 147)
+                      stage-2 nodes 10,249 = 8,557 + 1,494 + 190 + 8 (0, 1, 2, 3 orbits placed); 0 complete
+  profile (3, 4, 0):  bases kept 55,971  (I.0 199, I.1 30,909, I.2 8,138, I.3 9,743, I.4 5,791, I.5 1,191)
+                      stage-2 nodes 76,719 = 55,971 + 17,994 + 2,646 + 108; 0 complete
+  The type I.1, 034;178 has no kept base in either profile.
+  Bases kept per case, in the order of the types of section 8:
+    (4, 2, 1):  I.0: 27 | I.1: 0, 554, 332, 9, 3416, 61, 218, 52, 417 | I.2: 236, 1161, 23 | I.3: 98, 408, 2, 645
+                | I.4: 41, 33, 174, 372, 131 | I.5: 39, 105, 3
+    (3, 4, 0):  I.0: 199 | I.1: 0, 5152, 2722, 91, 18943, 440, 1847, 305, 1409 | I.2: 1228, 6833, 77
+                | I.3: 1196, 3898, 37, 4612 | I.4: 206, 224, 1555, 2744, 1062 | I.5: 168, 995, 28
+  These are numbers of bases of the first program: one per class of N-configuration under G_z and per attachment (one
+  vertex of a mate edge of kind Z only). Two of them may still be equivalent when the N-configuration has a non-trivial
+  stabiliser in G_z; the numbers of classes (canonical keys of section 6) are then smaller. Numbers of classes, found
+  identically by the two programs of the laptop session (lemma/t20_R3_I/n3_verify.out): equal to the numbers of bases
+  except
+    (4, 2, 1):  I.4 035;169: 172,  I.4 279;348: 130,  I.5 012;579: 103                      (8,552 classes in all)
+    (3, 4, 0):  I.1 368;457: 1,402,  I.4 035;169: 1,548,  I.4 035;279: 2,742,  I.4 279;348: 1,058,
+                I.5 012;579: 990                                                            (55,946 classes in all)
+  Second program of the laptop session (in_verify.py: own enumeration of the N-configurations and of the attachments,
+  own tests, re-traversal of every search tree with the unit chosen by the first program): same classes in the 50
+  cases, same number of kept candidates at each of the 86,968 nodes, no complete configuration.
