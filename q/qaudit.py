@@ -12,6 +12,8 @@ A job with "consumer": "sweep" in the manifest is piped into the package's own c
 sweep record, copied to results/<lid>_<k>_<n>.jsonl): used to pass a lattice that is not in the package's job list through the engine.
 A job = the package's own producer for chunk k/n of the lattice (with --from-plan when the manifest gives a plan; gamma and plan
 paths starting with "repo:" are files of this repository, the others are files of the package), piped into q/audit_rigid.py.
+A job with "producer_max_out" runs its producer through q/producer_big.py with that cap (the package's producer stops the y2 of one y1
+at 10^6 candidates and then says complete = false: such a job FAILS here, it is never counted as audited).
 One output file per job, audit/<lid>_<k>_<n>.json, pushed to run/<NAME> as the work goes; a job whose file is already there is
 skipped (a restarted machine resumes). At the end audit/SUMMARY_*.json: per lattice, pairs, pairs with a zero-footprint candidate,
 general, exposed, exposed pairs not excluded again, jobs failed. Exit 0 = finished or interrupted."""
@@ -51,7 +53,9 @@ def main():
     def start(m):
         tag = "%s_%d_%d" % (m["lid"], m["k"], m["n"])
         U = os.path.join(a.pkg, "external_runs", "structures_3eceb4d", "U", "%s.json" % m["lid"])
-        cmd = [sys.executable, os.path.join(a.pkg, "c1", "code", "y_pairs_gamma.py"), U, path(m["gamma"]), os.path.join(work, tag + "_producer_stats.json")]
+        # a job with "producer_max_out" runs the producer through q/producer_big.py (raised cap on the y2 candidates of one y1), as the sweep did
+        head = [os.path.join(HERE, "producer_big.py"), a.pkg, str(m["producer_max_out"])] if m.get("producer_max_out") else [os.path.join(a.pkg, "c1", "code", "y_pairs_gamma.py")]
+        cmd = [sys.executable] + head + [U, path(m["gamma"]), os.path.join(work, tag + "_producer_stats.json")]
         if m.get("plan"): cmd += ["--from-plan", path(m["plan"])]
         if m["n"] > 1: cmd += ["--chunk", "%d/%d" % (m["k"], m["n"])]
         cmd += ["--stream", "-", "--max-seconds", "86400"]
