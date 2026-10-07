@@ -16,12 +16,16 @@ implication has a hole. Until today its four steps were "source only, not reread
    and C1 note 132 (g != 16: 96 classes, LP infeasibility with Farkas certificates, marked "to be reread"). Section A.4 shows that
    the envelope exists **for every g**: the oddity formula alone gives the Witt class of the discriminant form. Theorem R does not
    mention g; section B must confirm that no rule of the engine uses it.
-3. **Makhnev-Minakova (2004) is not needed for C2 as stated** (one fixed vertex is the hypothesis). It is needed only for the
-   corollary "no involution at all" (every involution has exactly one fixed vertex). It is a published theorem, not reproved here.
+3. **Makhnev-Minakova (2004) is not needed at all.** Section A.0 proves by hand, in one page, that an automorphism of order 2
+   fixes exactly one vertex (a count at each fixed vertex, f = 1 + 2s^2 + 2r, and the integrality of one trace). So the final
+   statement is "no automorphism of order 2", with no citation from graph theory.
 4. The bound min N* >= 8/7 is correct (A.5, redone line by line). It is the same kind of statement as T18 / T20: no sigma-odd
    integer (-4)-eigenfunction with sum of squares <= 14.
 5. Not covered by this file, and still to be audited by their owners: the rules of the search engine (B), the completeness of the
    enumeration of the pairs (C), the identity of the 156 Gram matrices (D), the provenance of the older exclusions (E).
+6. **Open after the first pass** (sections C and E, written by the lab): (i) the producer of the pair streams has never been
+   compared with an independent enumeration (only the Golay family has two implementations); (ii) lattice 143 rests on one
+   argument nobody reread. Lattice 153 was in the same situation; it now has a second, hand proof (A.9: U is indecomposable).
 
 ## A. The reduction theorem, with its proof
 
@@ -39,6 +43,40 @@ Fix(sigma) = {x}.
 > (R-vii) for every v of U, the 49 integers (v,h_c), (v,u_o) are the values of a sigma-odd integer function phi on the vertices
 > with A phi = -4 phi and sum phi^2 = 2 E(v).
 > By Borcherds' classification U is one of 156 lattices.
+
+### A.0 An automorphism of order 2 fixes exactly one vertex (hand proof, new; the citation of Makhnev-Minakova is no longer needed)
+
+Let sigma be an automorphism of order 2, F its set of fixed vertices, f = |F|. 99 is odd, so f >= 1.
+- For p in F, sigma permutes the seven blocks of N(p). A block with one fixed end is fixed pointwise (the other end is the unique
+  common neighbour of p and the first). Let s_p = number of blocks fixed pointwise, t_p = number of blocks whose two ends are
+  exchanged, 2 r_p = number of blocks sent to another block: **s_p + t_p + 2 r_p = 7**.
+- A vertex z at distance 2 from p is determined by its two neighbours a, b in N(p); they lie in different blocks, and the 84 such
+  pairs all occur. z is fixed iff {a,b} is invariant: a and b both fixed (2 s_p (s_p - 1) pairs), or b = sigma(a) in another block
+  (2 r_p pairs). With p and its 2 s_p fixed neighbours: **f = 1 + 2 s_p^2 + 2 r_p for every p in F**.   (1)
+- a_1 := #{v : v ~ sigma v}. For such a v, the unique common neighbour of v and sigma v is a fixed p, and {v, sigma v} is an
+  exchanged block of p: a_1 = 2 sum_p t_p. A vertex v in a moved block of p is not adjacent to sigma v; their common neighbours are
+  p and one other vertex q, which is fixed; every fixed neighbour of v is a common neighbour of v and sigma v. So v has exactly two
+  fixed neighbours, and there are n_2 = 2 sum_p r_p such vertices. All these vertices are non-fixed and distinct:
+  **a_1 + n_2 <= 99 - f**.   (2)
+- sum_p s_p = 3 x (number of triangles fixed pointwise): **sum_p s_p = 0 mod 3**.   (3)
+- The trace of sigma on the (-4)-eigenspace is an integer, and it equals tr(P E_{-4}) = **(3f - a_1 + 11) / 7**.   (4)
+
+By (1), with s + t + 2r = 7, the possible triples (s, r, t) of a fixed vertex are, for each f:
+f = 1: (0,0,7). f = 3: (0,1,5), (1,0,6). f = 5: (0,2,3), (1,1,4). f = 7: (0,3,1), (1,2,2). f = 9: (1,3,0), (2,0,5). f = 11: (2,1,3).
+f = 13: (2,2,1). f = 19: (3,0,4). f = 21: (3,1,2). f = 23: (3,2,0). f = 33: (4,0,3). f = 35: (4,1,1). f = 51: (5,0,2). f = 53: (5,1,0).
+f = 73: (6,0,1). f = 99: the identity. No other value of f is possible.
+- f >= 19: a_1 + n_2 = 2 f (t + r) is 152, 126, 92, 198, 140, 204, 106, 146 for f = 19, 21, 23, 33, 35, 51, 53, 73: each exceeds
+  99 - f, against (2).
+- f = 11, 13: sum s_p = 22, 26, against (3).
+- f = 3, 5, 7: let k be the number of fixed vertices with s = 1; by (3) k is a multiple of 3. Then a_1 = 30 + 2k (f = 3 and 5),
+  14 + 2k (f = 7), and 3f - a_1 + 11 is -10, -16 (f = 3); -4, -10 (f = 5); 18, 12, 6 (f = 7): never a multiple of 7, against (4).
+- f = 9: let k be the number of fixed vertices with s = 2; sum s_p = 9 + k, so k is 0, 3, 6 or 9; a_1 = 10k and
+  3f - a_1 + 11 = 38, 8, -22, -52: never a multiple of 7, against (4).
+Hence **f = 1**. (Control of formula (1) on H(2,3) = srg(9,4,1,2), two blocks: x -> -x has (s,r,t) = (0,0,2), f = 1; the swap of
+coordinates has (0,1,0), f = 3; (x,y) -> (x,-y) has (1,0,1), f = 3. All three are right.)
+
+So Theorem R applies to every automorphism of order 2, and its conclusion reads: **no srg(99,14,1,2) has an automorphism of
+order 2**, once the 156 envelopes are excluded.
 
 ### A.1 The involution flips the seven blocks (hand proof; uses only Fix = {x})
 
@@ -148,6 +186,24 @@ only that the 156 Gram matrices we use are these 156 lattices: section D.
   at most one frame vector hits beta at 3/2, and |(beta,h_c)| <= 1. (C1 notes 139 (E), 140 section 2, 142.)
 - **Characteristic trap.** For characteristic z of norm 16: E(z) = 112 - Y with Y = (z,y_1)^2 + (z,y_2)^2 = 2 mod 8, and
   E(z) = (42 odd squares) + 4 sum b_c^2 with (z,h_c) = 2 b_c. Mod 8: 6 = 42 + 4 sum b_c^2, so sum b_c^2 is odd, E >= 46, **Y <= 66**.
+
+### A.9 The envelope is indecomposable (hand proof, new; second proof for 153, and for 152)
+
+> **Lemma.** U is not an orthogonal sum L_1 + L_2 of two nonzero lattices.
+
+Proof. Suppose U = L_1 + L_2. Both summands are unimodular without vector of norm 1, so their nonzero vectors have norm >= 2, and
+a vector of norm 3 lies in one summand (3 = 3 + 0 only). So each u_o is in L_1 or in L_2.
+Take two orbits o, o' sharing exactly one block i. Then (C^t C)_oo' = C_io C_io' = +-1, and the identity T^2 + T = 12 I - C^t C of
+A.2 gives sum_o'' T_oo'' T_o''o' + T_oo' = -+1. If u_o is in L_1 and u_o' in L_2, then T_oo' = -(u_o,u_o') = 0 and every term
+T_oo'' T_o''o' = (u_o,u_o'')(u_o'',u_o') is 0, because u_o'' lies in one summand: contradiction. So two orbits sharing exactly one
+block are in the same summand. The graph "share exactly one block" on the 42 orbits ({i,j}, sign) is connected (({i,j},+) and
+({i,j},-) are both adjacent to ({i,k},+)), so all the u_o are in one summand, say L_1. By (R-iv) the h_c are in its real span.
+Hence L_2 is orthogonal to the 49 vectors, so it lies in the plane of y_1, y_2 and has rank 1 or 2. A unimodular lattice of rank
+1 or 2 is Z or Z^2 and has vectors of norm 1: contradiction. QED
+
+Among the 156, the decomposable lattices are exactly **153** (D12+ + D12+, roots d_12^2) and **152** (E8 + the odd lattice of
+rank 16 with roots d_8^2): a unimodular summand without norm 1 has rank 8 (E8), 12 (D12+) or >= 14, and the complement must be
+odd or the sum is even. So 153, which rested on one argument reread by C1 only (section E), is excluded by this lemma as well.
 
 ## B. Rules of the search engine (owner: CDX, with LAB for the file list)
 
@@ -268,7 +324,7 @@ point; the user decided on 07/10 not to re-run them now.
 | Oddity formula (Conway-Sloane, SPLAG ch. 15) | A.4 | yes |
 | Classification of quadratic forms over F_7; gluing of lattices | A.4, A.6 | yes (textbook) |
 | Borcherds: 156 odd unimodular lattices of rank 24 with minimum >= 2 | A.7 | yes |
-| Makhnev-Minakova 2004, Theorem 1 (an involution fixes exactly one vertex) | "no involution at all" | no, only for the corollary |
+| Makhnev-Minakova 2004, Theorem 1 (an involution fixes exactly one vertex) | nothing | **no: reproved by hand in A.0** |
 | g in {18, 20} (C1 notes 129, 132; "structures" S27 sections 5-8; Astra dossier 6) | nothing | **no: removed by A.4** |
 
 ## G. Who does what
