@@ -1,0 +1,4 @@
+I.4 profile (3,4,0) z = (2, 7, 9) ; (3, 4, 8): |G| = 4; rectangles 83; N-configurations 401864 (enumeration nodes 2263350), orbits under G 101172
+   representatives 101172; with at least one choice of N(z) n N(p) passing the counts and the hand filter: 13984, of which rejected by PSD (exact) on the 35 vertices S u N[p]: 10470
+   attachments of z: rejected by the hand filter a_2(z) <= 1 (after the budget counts): 0; kept bases by beta = number of neighbours of z in the Z pair: {'beta0': 1062}
+   bases tested 8498448: rejected by budgets 8480292, by PSD (exact) 17094, kept 1062   stats {'psd_reject_M1': 10440, 'psd_reject_M1odd': 2396, 'psd_reject_M1even': 826, 'psd_reject_M2odd': 442, 'psd_reject_M2': 30}   [enum 59 s, orbits 0 s, tests 99 s]

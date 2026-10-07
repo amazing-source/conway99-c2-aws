@@ -1,0 +1,5 @@
+I.1 profile (4,2,1) z = (0, 3, 4) ; (1, 7, 8), second program, stage 1 (1 parts): |G_z| with the exchange = 4 (first program, without it: 4)
+   rectangle sets tested 202820; right coverage 54142; passing the count on 37 vertices (z not attached) 37488; representatives 9395 (orbit sizes 37488, must equal the previous number)
+   attachments of z tested 789180: rejected by the count 783332, by the hand filter a_2(z) <= 1: 0, by PSD (exact) 5848, kept 0
+   kept bases as classes (canonical keys): this program 0, first program 0 (from 0 bases); in the first list only: 0; in this list only: 0
+   STAGE 1 AGREES: True

@@ -1,0 +1,8 @@
+I.3 profile (4,2,1) z = (0, 3, 4) ; (1, 5, 9), second program, stage 1 (1 parts): |G_z| with the exchange = 2 (first program, without it: 2)
+   rectangle sets tested 92172; right coverage 23917; passing the count on 37 vertices (z not attached) 16247; representatives 8142 (orbit sizes 16247, must equal the previous number)
+   attachments of z tested 683928: rejected by the count 670876, by the hand filter a_2(z) <= 1: 0, by PSD (exact) 12236, kept 816
+   kept bases as classes (canonical keys): this program 408, first program 408 (from 408 bases); in the first list only: 0; in this list only: 0
+   STAGE 1 AGREES: True
+   stage 2 re-traversed: bases 408 (stage-1 list: 408); parts not finished: none
+   totals: {'nodes': 512, 'cands': 7558, 'budget': 1741483, 'psd': 7442, 'kept': 104, 'complete': 0, 'impossible': 0, 'rank_nodes': 0, 'rank_nodes_closed_by_own_search': 0, 'rank_nodes_closed_by_rank_bound': 0, 'holes_located_by_own_rank': 0, 'free_nodes': 0, 'free_cands': 0, 'free_budget': 0, 'free_psd': 0, 'free_deepest': 0, 'free_complete': 0, 'free_capped': 0, 'recount_checks': 8491}; certificates: integer vector 7442, exact elimination 0
+   STAGE 2 AGREES AT EVERY NODE, 0 complete, all bases: True

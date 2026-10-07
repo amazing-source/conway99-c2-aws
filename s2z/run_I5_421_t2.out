@@ -1,0 +1,2 @@
+{"stage1": "s1z\\s1z_I5_421_t2.json", "graph": "I.5", "profile": [4, 2, 1], "ztype": [[0, 1, 6], [3, 5, 9]], "bases_sha1": "38d6c6c72b75d289f9bd6bd5f903d76507596598", "nbases": 3, "part": 0, "nparts": 1, "mine": 3, "finished": 3, "first": null, "complete": 0, "impossible": 0, "visited": [3], "candidates": [0], "rejected_budget": [0], "rejected_psd": [0], "kept": [0], "rejected_rank": [0], "max_depth": 0, "cpu": 0.0, "wall": 0.0, "engine": "eng6", "width": 3, "stats": {"psd_reject_M1odd": 24, "single_psd": 27, "psd_reject_M1even": 3}}
+unfinished: 0

@@ -1,0 +1,2 @@
+{"i": 0, "timeout": false, "complete": 0, "visited": [1], "kept": [0], "cand": [0], "rej_b": [0], "rej_p": [0], "rej_rank": [0], "stats": {"psd_reject_M1odd": 19, "single_psd": 21, "psd_reject_M1even": 2}, "plan": [[0, 0, 1, 0, 0, []]], "cpu": 0.0}
+{"i": 1, "timeout": false, "complete": 0, "visited": [1], "kept": [0], "cand": [0], "rej_b": [0], "rej_p": [0], "rej_rank": [0], "stats": {"psd_reject_M1even": 17, "single_psd": 29, "psd_reject_M1odd": 12}, "plan": [[0, 0, 1, 0, 0, []]], "cpu": 0.016}

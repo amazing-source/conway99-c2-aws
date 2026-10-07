@@ -1,0 +1,13 @@
+I.1 profile (3, 4, 0) z = [[0, 3, 4], [2, 5, 8]]: stage-1 file .\s1z\s1z_I1_340_t1.json, 5152 bases, sha1 2d136a2d096e20a1e0b92aa9d6b50f66ccf38c53
+   parts 1; sha1 recorded by the parts: ['2d136a2d096e20a1e0b92aa9d6b50f66ccf38c53']; bases finished 5152; missing 0; problems: none
+   COMPLETE (tiles the list, no time-out, no error, same list): True
+   bases impossible by a cap: 0
+   nodes visited per level   : [5152, 869, 170, 9]  total 6200
+   candidates (chosen unit)  : [869, 1405, 436, 15]  total 2725
+     rejected by budgets     : [0, 0, 7]
+     rejected by PSD (exact) : [0, 1235, 420, 15]
+     kept                    : [869, 170, 9]
+     of which dead by rank   : [0]
+   complete configurations: 0
+   stats: no_pattern=1350, pair_budget=17716, psd_reject_M1even=17000, psd_reject_M1odd=89910, psd_reject_M2odd=6077, single_psd=111317
+   cpu seconds: 102 (mean 0.020 per base, max 0.2)
