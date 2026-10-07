@@ -34,7 +34,8 @@
 A Conway $99$-graph is a strongly regular graph with parameters $(99,14,1,2)$; whether one exists is open. Assembling
 published results with three recent manuscripts, which exclude automorphisms of order $2$, $3$ and $7$, one obtains that
 such a graph has no nontrivial automorphism. This note states that consequence and lists, prime by prime, the result it
-uses, the nature of its proof (by hand, by computer, formalised or not) and its status. It contains no new mathematics.
+uses, the nature of its proof (by hand, by computer, formalised or not) and its status. It contains no new mathematics. The statement is conditional on these ingredients as they stand; in particular the
+manuscript on order $2$ has one validation of its computations still to be completed.
 \end{abstract}
 
 \maketitle
@@ -60,31 +61,18 @@ If $G\neq1$, it has an element of prime order $p$ (Cauchy). By (A), $p\in\{2,3,7
 no computer.
 \item \emph{No automorphism of order $2$.} The paper \cite{C2}. The first half (an involution gives a frame of $51$
 vectors in one of the $156$ odd unimodular lattices of rank $24$ without vectors of norm $1$) is proved by hand. The
-second half (no such frame in any of the $156$ lattices) is computer-assisted: three lemmas on integer eigenfunctions,
-each with independent programs; certificates for the pairs excluded through them; an exhaustive search by one audited
-program for the others. Not refereed; not formalised.
+second half (no such frame in any of the $156$ lattices) is computer-assisted, and verified as described in Section~9 of \cite{C2}; in the present draft of \cite{C2} one
+validation, the recertification of a part of the transfers between lattices, remains to be completed. Not refereed; not
+formalised.
 \item \emph{No automorphism of order $3$.} The manuscript \cite{D3}: linear algebra over $\Z$ and the Eisenstein integers,
 without computer. An automorphism of order $3$ has $0$ or $3$ fixed points (a count that reproves a result of \cite{MM04});
-in both cases two lattices of eigenvectors must have determinants congruent modulo $3$, and they are not. Formalised in
-Lean~4 with Mathlib: the statement file \texttt{Challenge.lean} imports only Mathlib and contains
-\begin{quote}\footnotesize
-\texttt{theorem srg99\_no\_orderOf\_three \{V : Type*\} [Fintype V] (G : SimpleGraph V)}\\
-\texttt{\ \ \ \ [DecidableRel G.Adj] (hG : G.IsSRGWith 99 14 1 2) ($\sigma$ : G $\simeq$g G) :}\\
-\texttt{\ \ \ \ orderOf $\sigma$ $\neq$ 3}
-\end{quote}
-(namespace \texttt{Conway99}; Lean \texttt{v4.35.0-rc2}). According to the repository, the proofs use no \texttt{sorry} and
-only the axioms \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}, and \texttt{lake comparator} checks that
-the proved statements are those of the statement file; its verification workflow (clean rebuild, comparator, and five
-further checkers) reports success on 23 September 2026, at commit \texttt{874903ff}, and the three later commits change no
-Lean file. For this note the statement file and the description were read; the formalisation was not rebuilt. Not refereed. Independently, the case of an automorphism of order $3$ with fixed points
+in both cases two lattices of eigenvectors must have determinants congruent modulo $3$, and they are not. Formalised
+in Lean~4 with Mathlib (Appendix~\ref{app:lean}); the formalisation was read, not rebuilt, for this note.  Not refereed. Independently, the case of an automorphism of order $3$ with fixed points
 is excluded by computer in \cite{B09,BL11}.
 \item \emph{No automorphism of order $7$.} Behbahani and Lam \cite{B09,BL11}, by a computer enumeration of orbit matrices;
 published. Without a computer the case was open: Cesarz and Woldar \cite{CW25} prove that $G\cong\Z_7$ if $7$ divides $|G|$
-(published), which does not exclude an automorphism of order $7$. The manuscript \cite{D7} excludes it by hand, starting
-from the orbit structure and the counting identities of \cite{CW25}. \cite{D7} is formalised in Lean~4 with Mathlib
-(\texttt{theorem srg99\_no\_orderOf\_seven}, same form as above with $7$; no \texttt{sorry}, the same three axioms,
-\texttt{lake comparator}; verification workflow successful on 2 October 2026 at commit \texttt{8c6ce690}, no Lean file
-changed since; read, not rebuilt, for this note). Not refereed.
+(published), which does not exclude an automorphism of order $7$. The manuscript \cite{D7} excludes it by hand, starting from the orbit structure and the counting identities of \cite{CW25}; it is formalised in Lean~4 with Mathlib
+(Appendix~\ref{app:lean}; read, not rebuilt, for this note).  Not refereed.
 \item \emph{No automorphism of order $11$.} Behbahani and Lam \cite{B09,BL11}, by computer; published. A report of the
 MIT PRIMES programme \cite{LM14} gives an elementary argument, which was not verified for this note.
 \end{enumerate}
@@ -129,6 +117,27 @@ statement ``the automorphism group is trivial'' would need \textup{(B)} at least
 Every search for a Conway $99$-graph that prescribes a nontrivial automorphism is bound to fail: a proof of existence or of
 nonexistence has to deal with a graph without symmetry.
 \end{remark}
+
+\appendix
+\section{The formal statements}\label{app:lean}
+
+\emph{Order $3$.} Formalised in
+Lean~4 with Mathlib: the statement file \texttt{Challenge.lean} imports only Mathlib and contains
+\begin{quote}\footnotesize
+\texttt{theorem srg99\_no\_orderOf\_three \{V : Type*\} [Fintype V] (G : SimpleGraph V)}\\
+\texttt{\ \ \ \ [DecidableRel G.Adj] (hG : G.IsSRGWith 99 14 1 2) ($\sigma$ : G $\simeq$g G) :}\\
+\texttt{\ \ \ \ orderOf $\sigma$ $\neq$ 3}
+\end{quote}
+(namespace \texttt{Conway99}; Lean \texttt{v4.35.0-rc2}). According to the repository, the proofs use no \texttt{sorry} and
+only the axioms \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}, and \texttt{lake comparator} checks that
+the proved statements are those of the statement file; its verification workflow (clean rebuild, comparator, and five
+further checkers) reports success on 23 September 2026, at commit \texttt{874903ff}, and the three later commits change no
+Lean file. For this note the statement file and the description were read; the formalisation was not rebuilt.
+
+\emph{Order $7$.} \cite{D7} is formalised in Lean~4 with Mathlib
+(\texttt{theorem srg99\_no\_orderOf\_seven}, same form as above with $7$; no \texttt{sorry}, the same three axioms,
+\texttt{lake comparator}; verification workflow successful on 2 October 2026 at commit \texttt{8c6ce690}, no Lean file
+changed since; read, not rebuilt, for this note).
 
 \section*{Acknowledgements}
 This work was carried out with the assistance of AI systems (large language models), which were used to develop the
