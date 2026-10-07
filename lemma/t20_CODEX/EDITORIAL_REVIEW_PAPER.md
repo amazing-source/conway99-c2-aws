@@ -199,3 +199,26 @@ claim that the original MM text was not reread applies only to the first
 Main source SHA256 at 599670f41:
 `d38bbd27550a0ef8d527616d380edf882d5f3a4b897f1490156d63481e830254`.
 Asymmetric source retains the SHA256 stated above.
+
+### Caption clarification, message 116
+
+The three-page author copy of Borcherds's chapter explains the meaning of
+component grouping but **does not include Table 17.1 itself**. I have not
+compared the 156 displayed strings against that printed table. The source
+filename `borcherds_odd24.json` does not certify a faithful transcription
+of its notation or grouping. Our exact identification checks certify the
+abstract ADE types, not the original author's component-orbit grouping.
+Accordingly, do not write “as in his table” or “the grouping is his” on the
+basis of this review. The grouping may agree; that comparison remains undone.
+
+A supported replacement is:
+
+> The 156 isometry classes are those of Borcherds's classification [Bor].
+> Root-system labels are reproduced from the input data, retaining their
+> grouping of equal components. The identifiers 000--155 are used in this
+> work. The displayed grouping has not been checked against Borcherds's
+> printed table.
+
+Alternatively, display canonical ADE types without grouping, label the
+column accordingly, and retain the original input strings in the data
+archive. No orbit interpretation of the current grouping is certified here.
