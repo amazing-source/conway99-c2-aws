@@ -107,3 +107,19 @@ starting any shard; therefore elapsed time does not establish that a hard
 pair has reached the frame DFS. LAB reported no residual y2 available at
 14:49 UTC. The obstruction above removes the mathematical need to finish
 that enumeration irrespective of which phase currently consumes the time.
+
+### Integration confirmed later on 07/10
+
+LAB commit `2d36a5b60` added its operational certificate generator/checker
+and the importer/conversion support. CDX read those changes: coverage is
+derived from the checked `reps` keys, indices are bounded and compared with
+`covered`, and conversion rechecks the certificate and requires both lemmas.
+The lab's resulting sweep record for 003 has **182 first-normal classes,
+zero uncovered, zero incomplete**, with `[181]` covered by the fixed-y1
+certificate and no invented pair count. Its `full` flag correctly remains
+false pending the lemma/certificate/twin conversion requirements.
+
+The updated `T20_BOARD.md` records LAP's independent check against the
+package and that all production/diagnostic runs of this job were stopped
+at 14:54 UTC. That operational confirmation comes from the coordinating
+session; CDX did not operate those machines directly.
