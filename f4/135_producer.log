@@ -1,0 +1,2 @@
+{"rank": 23, "components": 3, "label_vectors": 324, "dominant_y1": 40, "id": 135, "roots": "a_{11}d_7d_5", "gamma": 1, "y1_orbits": 40, "gamma_verified": true, "gamma_converted": false}
+{"rank": 23, "components": 3, "label_vectors": 324, "dominant_y1": 40, "id": 135, "roots": "a_{11}d_7d_5", "gamma": 1, "y1_orbits": 40, "gamma_verified": true, "gamma_converted": false, "y2_candidates": 928, "y2_orbits": 928, "truncated": 0, "pairs": 928, "complete": true, "seconds": 16.5, "streamed": 928, "sha256": "affa8752684e193b7c07d859fec9f9e75b96443c692cbdf953e8b23c6de4528a"}
