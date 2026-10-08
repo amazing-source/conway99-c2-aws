@@ -76,3 +76,67 @@ def run(keys, rhos, u, C0, C1, use_real=1, limit=1, maxnodes=2000000000, tag="x"
     res = subprocess.run([exe, path], capture_output=True, text=True).stdout.strip().split("\n")
     os.remove(path)
     return res[-1] if res else "NO OUTPUT"
+
+
+def run_rank(keys, rhos, u, limit=1, maxnodes=2000000000, tag="x", exe="./fastr.exe"):
+    """rank mode (fastr.exe): no scalar enumerated, both classes of forms at once; D = components - 1 <= 2"""
+    adj, lay, comp, K, quota, Gm, Hr = ball_matrices(keys, rhos)
+    if Gm is None: return "TORSION"
+    path = f"fastr_{tag}.txt"
+    with open(path, "w") as f:
+        f.write(f"{u} {len(keys) - 1} {len(keys)} {limit} {maxnodes}\n" + " ".join(map(str, quota)) + "\n")
+        f.write(" ".join(map(str, lay)) + "\n" + " ".join(map(str, comp)) + "\n")
+        for v in range(36): f.write(" ".join(map(str, sorted(adj[v]))) + "\n")
+        for M in (K, Gm):
+            for row in M: f.write(" ".join(map(str, row)) + "\n")
+    res = subprocess.run([exe, path], capture_output=True, text=True).stdout.strip().split("\n")
+    os.remove(path)
+    return res[-1] if res else "NO OUTPUT"
+
+
+def compute_beta(phi, Tvecs):
+    """a functional beta with beta . phi = 1 and beta . tau = 0 for the true relations tau (same elimination as gen66.py)"""
+    rows = [phi] + Tvecs; rhs = [1] + [0] * len(Tvecs)
+    A = [r[:] + [b] for r, b in zip(rows, rhs)]; piv = []; rr = 0
+    for c in range(36):
+        p = next((i for i in range(rr, len(A)) if A[i][c] % 7), None)
+        if p is None: continue
+        A[rr], A[p] = A[p], A[rr]; iv = pow(A[rr][c], -1, 7); A[rr] = [(x * iv) % 7 for x in A[rr]]
+        for i in range(len(A)):
+            if i != rr and A[i][c] % 7:
+                f = A[i][c]; A[i] = [(x - f * y) % 7 for x, y in zip(A[i], A[rr])]
+        piv.append(c); rr += 1
+    assert rr == len(rows)
+    beta = [0] * 36
+    for i, c in enumerate(piv): beta[c] = A[i][36]
+    return beta
+
+
+def run_torsion(keys, rhos, u, extra_T, phi, C0, limit=1, maxnodes=2000000000, tag="x", exe="./fastg.exe"):
+    """scalar mode with torsion (fastg.exe).  extra_T: balanced torsion vectors (true relations besides the component
+    differences); phi: the unbalanced torsion vector or None; C0: 0 = no residue, else the class of the residue form."""
+    from gen66 import Solver
+    adj, lay, comp = make_ball(keys, rhos); K = kmatrix(adj, lay)
+    quota = [3 * len(k[0]) // 6 for k in keys]; nc = len(keys)
+    Z = [[(quota[k + 1] if comp[v] == k else (-quota[k] if comp[v] == k + 1 else 0)) % 7 for v in range(36)] for k in range(nc - 1)]
+    M0 = [[(3 - (3 if i == j else 0) + (1 if j in adj[i] else 0)) % 7 for j in range(36)] for i in range(36)]
+    sol = Solver(M0)
+    Q = [[0] * 36 for _ in range(36)]
+    for i, c in enumerate(sol.piv): Q[c] = sol.E[i][:]
+    beta = compute_beta(phi, Z + extra_T) if phi is not None else [0] * 36
+    cross = [z for z in adj[u] if lay[z] != lay[u]]; mate = next(z for z in adj[u] if lay[z] == lay[u])
+    blayer = sum(beta[z] * (2 * (1 if lay[z] == lay[u] else 0) + 2) for z in range(36))
+    alsum = (-(4 * beta[u] + blayer + beta[mate] + sum(beta[z] for z in cross))) % 7
+    path = f"fastg_{tag}.txt"
+    with open(path, "w") as f:
+        f.write(f"{u} {C0} {nc} {len(extra_T)} {1 if phi is not None else 0} {alsum} {limit} {maxnodes}\n" + " ".join(map(str, quota)) + "\n")
+        f.write(" ".join(map(str, lay)) + "\n" + " ".join(map(str, comp)) + "\n")
+        for v in range(36): f.write(" ".join(map(str, sorted(adj[v]))) + "\n")
+        for M in (K, M0, Q):
+            for row in M: f.write(" ".join(map(str, row)) + "\n")
+        for tv in extra_T: f.write(" ".join(map(str, tv)) + "\n")
+        f.write(" ".join(map(str, phi if phi is not None else [0] * 36)) + "\n" + " ".join(map(str, beta)) + "\n")
+    r = subprocess.run([exe, path], capture_output=True, text=True)
+    os.remove(path)
+    out = r.stdout.strip().split("\n")
+    return (out[-1] if out and out[-1] else "NO OUTPUT") + ((" ERR " + r.stderr.strip()) if r.stderr.strip() else "")
