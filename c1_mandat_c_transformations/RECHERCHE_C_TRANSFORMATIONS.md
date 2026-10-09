@@ -397,7 +397,7 @@ et 3 ; [L₂ : L] = 3¹² = nombre de x ∈ L/6L dont toutes les sommes de droit
 est de dimension 12 (valeur de la note 99 du dépôt c1) et entièrement dans L/3L ; ker(Nᵀ mod 2) = 0. Les étapes
 (i) à (iii) de la preuve et l'analogue de (iv) sont donc vérifiés sur un exemple qui existe.
 
-## 12. Rang 43 : les 49 classes de L₁/√7M une par une, relations exactes (9 octobre, 15:11–15:50 UTC)
+## 12. Rang 43 : les 49 classes de L₁/√7M une par une, relations exactes (9 octobre, 15:11–15:34 UTC)
 
 **Fait nouveau utilisé.** Au rang 43, M est pair, de rang 44, de déterminant 49, à plan discriminant anisotrope ;
 N₄ = O_K ⊕ O_K (O_K = entiers de Q(√−7), Gram [[2,1],[1,4]]) a la forme discriminante opposée, donc M ⊕ N₄ se recolle
