@@ -707,3 +707,32 @@ y(ℓ) = −4/3 exactement quand ℓ porte une arête de N dont le troisième so
 (1,6,0)}, et Σ_ℓ y(ℓ) = 0, Σ_ℓ y(ℓ)² = 208/3 : les effectifs des quatre valeurs sont **(9 − δ, 59 + 3δ, 163 − 3δ, δ)**.
 Donc δ ≤ 9, Σ_ℓ y(ℓ)³ = 478/9 − 6δ et Σ_ℓ y(ℓ)⁴ = 748/9 − 4δ. La somme des δ sur la couche est le nombre de couples
 (z, ℓ) avec z de classe 4, de norme 292/9 et z(ℓ) = −8/3 (translation par 7E1_ℓ).
+
+### 14.5 Forme de Jacobi des droites classe par classe dans S₀ (`z9quartic.py`, `z9_validate34.py`, `s0_jac9.py`, `s0_jac9b.py`)
+
+**Structure.** Pour y ∈ L₉ de classe c et une droite ℓ, s = y(ℓ) ∈ c/3 + Z. La translation y ↦ y + 7E1_ℓ (vecteur de classe 3,
+de norme 28, de somme 4 sur ℓ) et la symétrie y ↦ −y donnent, pour n(c, N, s) = #{(y, ℓ) : y de classe c, |y|² = 2N, y(ℓ) = s} :
+
+    n(c, N, s) = n(c + 3, N + 7(s + 2), s + 4) = n(−c, N, −s).
+
+Une couche (c, N) n'a donc que quelques valeurs s ∈ (−2, 2] qui ne se lisent pas sur des couches plus basses : 0, ±1, ±2 en
+classe 0 (trois inconnues), −2, −1, 0, 1 en classe 3 (s = 2 y est l'inconnue de la classe 0 : y ↦ 7E1_ℓ − y échange vecteurs
+fractionnaires et entiers), quatre valeurs dans les classes 1, 2, 4. Les moments Σ1 = 231n, Σs = 0, Σs² = 6Nn, Σs³ = somme
+cubique, Σs⁴ = somme quartique + (72/161)N²n donnent alors, **pour chaque couche des classes 1, 2, 3, 4, une équation linéaire
+exacte : la somme quartique des droites est déterminée par l'effectif et la somme cubique des droites.** Ces équations ne
+découlent pas de la modularité de chaque série prise à part (23 séries de Taylor par classe pour 19 composantes).
+
+**Validation préalable.** Les systèmes cubique (`z9cubic.py`) et quartique (`z9quartic.py`, nouveau : poids 30 + m, facteur
+7^((15−r−m)/2)) à neuf classes sont contrôlés de bout en bout sur K₈ ⊕ B¹⁸ avec des harmoniques zonaux de pôle fixe : 98 et 124
+valeurs de classe calculées directement, systèmes compatibles.
+
+**Résultat dans S₀ (troncature 32, 62 couches).** Paramètres : 7 effectifs, 14 sommes cubiques, 19 sommes quartiques.
+Les 51 équations de Jacobi sont de rang 17 et **compatibles** ; il reste 23 paramètres. La positivité des 237 nombres de couples,
+avec les objets connus (sommets : 7 droites de somme 4/3, 84 de somme −2/3, 140 de somme 1/3), est faisable. Le nombre de
+configurations P3/N25 garde l'intervalle 10 à 300, et la somme des δ sur cette couche n'est pas contrainte : elle parcourt tout
+[0, 9n]. La borne δ ≥ 3 de Codex ne contredit donc pas ce système. **Aucune fermeture de S₀ par cette voie.**
+
+Distribution exacte des vecteurs d'arête 7E(e_u + e_v) sur les droites (pour mémoire) : somme 8/3 sur la droite de l'arête,
+2/3 sur 92 droites, −1/3 sur 120, −4/3 sur 18.
+
+(§14.5 noté à 18:07 UTC.)
