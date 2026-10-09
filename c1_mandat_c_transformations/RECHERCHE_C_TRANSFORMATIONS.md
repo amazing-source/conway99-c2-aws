@@ -334,7 +334,7 @@ dichotomie ; valeurs identiques aux troncatures 40, 60 et 84. Chaque valeur est 
 Ces nombres recoupent les notes 177 (identité 2a₈ + 16a₉ + a₁₃ = 2632 + …) et 192 (b₂ ≥ 968 par les cocliques) de
 Codex ; l'apport est l'outil (une question = quelques secondes, réponse exacte) et la ligne « supports minimaux ».
 
-## 11. Programme thêta à neuf classes (recollement en 3 séparé) : construit, validé, sans gain (9 octobre, 14:23–15:10 UTC)
+## 11. Programme thêta à neuf classes (recollement en 3 séparé) : construit, validé, sans gain (9 octobre, 14:23–15:03 UTC)
 
 **Fait nouveau utilisé.** La partie 3 du recollement du réseau propre est Z/9 (engendrée par 7Ee_v), et chaque classe
 a sa propre série thêta. Côté M : O = √7E(Z⁹⁹), classe k = Σψ mod 9, Θ_k = nombre de vecteurs de classe k par norme
