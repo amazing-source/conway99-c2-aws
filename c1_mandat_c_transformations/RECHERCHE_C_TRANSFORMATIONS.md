@@ -487,7 +487,7 @@ vecteurs non triangulaires (traces : 17108 des deux côtés). Les positivités d
 160 laissent aux valeurs propres de T l'intervalle [−48,9 ; 111,1] : **l'isotropie n'est pas forcée**, et les
 congruences modulo 49 des deux membres concordent. Le degré 2 ne ferme donc pas cette branche.
 
-## 13. Rang 43, scénario S₀ dans le programme à neuf classes : sept paramètres entiers, effectifs forcés (9 octobre, fin 16:14 UTC)
+## 13. Rang 43, scénario S₀ dans le programme à neuf classes : sept paramètres entiers, effectifs forcés (9 octobre, fin 16:10 UTC)
 
 S₀ = rang 43, aucune racine, aucun vecteur de L₁ de norme 16 à 24 (Codex a montré le même jour, à partir du
 coefficient −52R du §12, que l'absence des normes 16 à 24 force l'absence de racines : la branche se réduit à S₀).
@@ -535,7 +535,7 @@ ce qui exclut (n₂, n₁, n₋₂) = (1, k, 4−k) pour k ≤ 2 et (0, k, 7−k
 Il reste quatre profils : (2 ; 1³ ; −2 ; (−1)²⁵), (2 ; 1⁴ ; (−1)²⁸), (1⁶ ; −2 ; (−1)²⁶), (1⁷ ; (−1)²⁹).
 S₀ exige au moins 4979 configurations de ces quatre types ; je n'ai pas de majoration de leur nombre.
 
-**Origine des vecteurs fantômes de classe 2 dans S₀ (à la main, 16:17 UTC).** Soit x ∈ O de classe 2, de norme 40/9,
+**Origine des vecteurs fantômes de classe 2 dans S₀ (à la main, 16:12 UTC).** Soit x ∈ O de classe 2, de norme 40/9,
 qui n'est pas une arête, et y = √7x.
 (a) Profils avec une coordonnée 2 en a : x − u_a est de classe 1 et de norme 28/9, de produit −8/9 avec u_a ; si
 c'était un sommet u_w, x serait l'arête {a, w}. C'est donc un **sommet fantôme**. Il y a au plus 22 fantômes dans S₀,
