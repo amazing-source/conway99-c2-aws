@@ -229,3 +229,38 @@ contient l'équivalent d'une boule de droite : environ 1,9·10^11 types au total
 Le test d'une étoile vaut de l'ordre de 10^6 nœuds (pic à la profondeur 4 : 620^4·7^{−6}), soit 10 à 100 ms au mieux
 par boule. Total : de l'ordre de 5 à 50 années-cœur pour la seule classe sans prisme connexe, sans compter les
 droites à torsion ni les prismes. Aucune réduction du nombre de boules n'est connue.
+
+## 9. Séries thêta pondérées par un quartique harmonique (9 octobre, 12:30–13:35 UTC)
+
+Idée : étendre l'outil des notes 167–168 (séries thêta de L1 et M, poids 22, niveau 7) en pondérant chaque vecteur
+par un polynôme harmonique de degré 4 invariant par renommage. Je n'ai pas trouvé cet outil dans le dépôt (les notes
+96 et 110 utilisent le degré 2 de Venkov après complétion unimodulaire).
+
+**Énoncé.** Sur l'espace propre −4 (dimension 44), les polynômes
+
+    P_V(y) = Σ_v y_v⁴ − (2/69)|y|⁴,        P_T(y) = Σ_T y(T)⁴ − (18/161)|y|⁴
+
+sont harmoniques (Δ Σ_v y_v⁴ = (16/3)|y|², Δ Σ_T y(T)⁴ = (144/7)|y|², et Φ − κ|y|⁴/184 est harmonique dès que
+ΔΦ = κ|y|²). Donc G_L = Σ_{y∈L1} P(y) q^{|y|²/2} et G_M = Σ_{x∈M} P(x) q^{|x|²/2} sont des formes paraboliques de
+poids 26 sur Γ₀(7) (dimension 15), et
+
+    G_L |₂₆ W₇ = −7^{(23−r)/2} G_M      (même facteur que pour θ ; vérifié exactement sur H7 ⊕ H7, `toy_harm.py`).
+
+**Coefficients exacts côté L1.** Tous les vecteurs de norme ≤ 20 sont binaires et coupent chaque droite au plus une
+fois (notes 165, 171, 176), avec Σ_T y(T)² = 3|y|². Donc pour la norme 2n : coefficient nul si n ≤ 6, et
+(2n − 8n²/69)·a_n pour P_V, (6n − 72n²/161)·a_n pour P_T, si 7 ≤ n ≤ 10.
+
+**Coefficients exacts côté M.** Racines : 82/483 et 66/161 par racine. Vecteurs de droites (462) : −124/1127 chacun
+pour P_V ; somme (149688 + 48P − 462·2016/23)/49 pour P_T, P le nombre de prismes. Différences de deux sommets non
+adjacents (8316) : 3102/1127 et −534/1127 ; adjacents (1386) : 30712/3381 et −888/1127.
+
+**Premier test (`harm4.py`, flottant, bornes de Cauchy–Schwarz pour tous les autres vecteurs).** La base de degré 0
+est reproduite : rang 35 infaisable avec les contraintes actives de la note 180, rang 37 faisable. Avec les deux
+quartiques, 11 égalités exactes par série et 4 paramètres libres restants : **faisable aux rangs 37, 39, 41** à la
+troncature 14–16. Aux troncatures plus hautes et au rang 43 le solveur flottant n'est pas fiable (écarts d'échelle) ;
+aucune conclusion n'en est tirée. Tel quel, l'outil n'exclut rien : les bornes sur les vecteurs non catalogués de M
+(normes 6, 8, 10) sont trop lâches. Il faudrait les sommes quartiques exactes des familles comptées dans b₃, b₄, b₅
+(notes 172–204) et un solveur exact.
+
+Fichiers : `mf7.py` (espaces M_k(Γ₀(7)) par monômes en h², E₄, E₆ et involution de Fricke, contrôlée sur la base
+F_j de la note 167), `toy_harm.py`, `harm4.py`.
