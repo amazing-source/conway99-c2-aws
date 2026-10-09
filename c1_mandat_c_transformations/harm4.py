@@ -175,3 +175,19 @@ if len(sys.argv) > 4 and sys.argv[4] == "dump":
     for (c0, cf), (f, lab) in zip(G, GE):
         if lab in ("b1>=0", "b2>=0", "a7>=0", "b1<=44", "a7<=990", "V: m2 lower", "V: m2 upper", "V: g11 lower", "V: g11 upper", "T: m2 lower", "T: m2 upper"):
             print(f"{lab:16s} const {float(c0): .4e} | " + " ".join(f"{chosen[k][0]}:{float(cf[k]): .3e}" for k in range(nf) if cf[k] != 0))
+
+if "exact" in sys.argv:
+    import exact_lp, time
+    t0 = time.time()
+    status, sol, it = exact_lp.solve(G)
+    print(f"EXACT rational LP: {status} after {it} pivots, {time.time()-t0:.1f}s")
+    if status == "infeasible":
+        act = [(GE[i][1], sol[i]) for i in range(len(G)) if sol[i] != 0]
+        print("exact Farkas certificate, verified (sum lam*coef = 0, sum lam*const = -1); constraints used:")
+        for lab, l in act: print(f"   {lab:22s} multiplier {float(l):.6g}")
+    else:
+        def val(f):
+            c0, cf = to_nat(*subst(f)); return c0 + sum(cf[k] * sol[k] for k in range(nf))
+        print("exact feasible point (checked on every inequality):")
+        print("   " + ", ".join(f"{chosen[k][0]}={float(sol[k]):.6g}" for k in range(nf)))
+        print("   b1..b5 = " + ", ".join(f"{float(val(Bm[n])):.8g}" for n in range(1, 6)) + " ; a7..a13 = " + ", ".join(f"{float(val(A[n])):.8g}" for n in range(7, 14)))

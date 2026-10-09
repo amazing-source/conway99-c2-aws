@@ -254,7 +254,7 @@ fois (notes 165, 171, 176), avec Σ_T y(T)² = 3|y|². Donc pour la norme 2n : c
 pour P_V ; somme (149688 + 48P − 462·2016/23)/49 pour P_T, P le nombre de prismes. Différences de deux sommets non
 adjacents (8316) : 3102/1127 et −534/1127 ; adjacents (1386) : 30712/3381 et −888/1127.
 
-**Premier test (`harm4.py`, flottant, bornes de Cauchy–Schwarz pour tous les autres vecteurs).** La base de degré 0
+**Premier test (`harm4.py`, bornes de Cauchy–Schwarz pour tous les autres vecteurs ; solveur flottant puis exact).** La base de degré 0
 est reproduite : rang 35 infaisable avec les contraintes actives de la note 180, rang 37 faisable. Avec les deux
 quartiques, 11 égalités exactes par série et 4 paramètres libres restants : **faisable aux rangs 37, 39, 41** à la
 troncature 14–16. Aux troncatures plus hautes et au rang 43 le solveur flottant n'est pas fiable (écarts d'échelle) ;
@@ -264,3 +264,10 @@ aucune conclusion n'en est tirée. Tel quel, l'outil n'exclut rien : les bornes 
 
 Fichiers : `mf7.py` (espaces M_k(Γ₀(7)) par monômes en h², E₄, E₆ et involution de Fricke, contrôlée sur la base
 F_j de la note 167), `toy_harm.py`, `harm4.py`.
+
+**Reprise en arithmétique exacte (12:50–13:00 UTC, `exact_lp.py`).** La résolution finale est remplacée par un
+simplexe en fractions sur le système de Farkas ; il rend un point exact vérifié sur chaque inégalité, ou un
+certificat exact vérifié. Contrôle : rang 35 infaisable, certificat sur a₇ ≤ 990, 7a₇+8a₈ ≤ 55440, b₁ ≤ 44, b₃, b₄
+et a₉, a₁₀, a₁₁ ≥ 0. Avec les deux quartiques, troncatures 40 et 84 : **faisable aux rangs 37, 39, 41 et 43**
+(points exacts). Les réponses « infaisable, marge −1 » du solveur flottant aux troncatures ≥ 18 étaient des
+artefacts d'arrondi (coefficients jusqu'à 7²¹ dans une même ligne).
