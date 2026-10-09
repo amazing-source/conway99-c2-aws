@@ -58,7 +58,7 @@ def torsion_vectors(adj, comp, which):
     ns = nullspace7(H)
     ind = []
     for v in ns:
-        m = (sum(v) * pow(18 % 7, -1, 7)) % 7
+        m = (sum(v) * pow(len(idx) % 7, -1, 7)) % 7        # mean over the component (its size is prime to 7)
         w = [(x - m) % 7 for x in v]
         if not any(w): continue
         full = [0] * 36
