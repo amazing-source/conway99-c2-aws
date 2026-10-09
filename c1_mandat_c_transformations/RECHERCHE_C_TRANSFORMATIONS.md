@@ -570,3 +570,34 @@ une telle configuration : une droite contenue dans N donne un vecteur de O de cl
 290 dans S₀) ; quatre sommets de N portant 4 arêtes donnent un vecteur fractionnaire de norme 4 ; sept sommets de N
 portent au plus 8 arêtes. Avec des sommets fantômes (1 à 22), les vecteurs entiers non binaires ne sont pas
 bornés par le lemme 14 ; ce sous-cas reste à traiter.
+
+**Couches forcées dans S₀ (`r43full.py branch 0 layers`, simplexe exact ; noté à 16:34 UTC).** Intervalle exact du
+nombre de vecteurs de L₉ par classe et par norme (classes 1, 2, 4 : une seule des deux classes opposées ; classe 3 :
+un signe) :
+
+| classe | norme | intervalle | objet |
+|---|---|---|---|
+| 1 | 178/9 | 0 à 36 | |
+| 1 | 196/9 | 99 à 121 | sommets et fantômes |
+| 1 | 214/9 | **242 à 398** | profils (1⁷ ; (−1)¹⁸) ou (1⁶ ; −2 ; (−1)¹⁵) |
+| 1 | 232/9 | 834 à 1559 | |
+| 2 | 154/9 | 0 à 3 | cocliques de taille 22 |
+| 2 | 172/9, 190/9 | 0 à 48 chacune | |
+| 2 | 208/9 | **10 à 300** | profil unique (1³ ; (−1)²⁵), les trois positifs deux à deux non adjacents |
+| 2 | 226/9 | 276 à 952 | |
+| 2 | 244/9 | 2605 à 3404 | |
+| 2 | 280/9 | 5672 à 6396 | arêtes et vecteurs du §13 |
+| 3 | 26 | 160 à 740 | paire Z, ensemble S de 35 sommets |
+| 3 | 28 | 231 à 327 | droites et profils A′, B, C |
+| 4 | 220/9, 238/9 | 0 à 145, 0 à 290 | |
+| 4 | 256/9 | **5271 à 6624** | |
+
+Le plus petit objet forcé est celui de la classe 2 en norme 208/9 : y = 2/9 + 1_P − 1_N avec |P| = 3, |N| = 25
+(les minima des classes ±1 et ±3 donnent m ∈ {−1, 0, 1} ; une arête dans P donnerait un vecteur entier de norme 20).
+Chaque p ∈ P a 8 voisins dans N ; chaque x ∈ N a autant de voisins dans P que dans N ; N porte 12 arêtes, ne contient
+aucune droite, et quatre de ses sommets portent au plus 3 arêtes ; chaque autre sommet a 4 voisins de plus dans N
+que dans P. S₀ en exige au moins 10. Je n'ai pas de contradiction pour cette configuration.
+
+Réponse de Codex (relayée par LAB, non vérifiée par moi) : le sous-cas avec sommets fantômes est couvert, S₀ exige
+au moins 2289 + 15g configurations (1⁷ ; (−1)²⁹) à support positif indépendant, g étant le nombre de fantômes ;
+une borne uniforme 2288 sur ces configurations fermerait tout S₀.

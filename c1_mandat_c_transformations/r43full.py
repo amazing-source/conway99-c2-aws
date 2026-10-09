@@ -111,3 +111,15 @@ if mode == "branch" and "ghost" in sys.argv:
             if feas2([(Fr(mid) - c0, {t: -v for t, v in cf.items()}, "le")])[0] == "feasible": hi_ = mid
             else: lo_ = mid
         print(f"   with at most {g} ghost vertices: min of T2[20/9] - 693 - 5 T0[2] = {hi_}")
+if mode == "branch" and "layers" in sys.argv:
+    # ranges of all low layers of the classes 1, 2, 4 (both sides) and 3 in S0: which are FORCED non-empty?
+    t0 = time.time()
+    todo = []
+    for side, cls, lo9, hi9 in (("X", 1, 89, 152), ("X", 2, 77, 140), ("X", 4, 110, 164), ("X", 3, 117, 153), ("T", 1, 14, 50), ("T", 2, 11, 47), ("T", 4, 17, 53), ("T", 3, 18, 36), ("T", 0, 18, 36)):
+        res = (Z.RHO if side == "T" else Z.SIG)[cls]
+        for num9 in range(lo9, hi9 + 1):
+            if (num9 - res) % 9 == 0: todo.append((side, cls, num9))
+    for side, cls, num9 in todo:
+        nrm = (2 * num9 * 7 if side == "T" else 2 * num9)        # norm in L-normalisation times 9
+        mn, mx = rng(E(side, cls, num9), hi=10 ** 12)
+        print(f"   {side}{cls}[{num9}/9]  (L-norm {nrm}/9 = {nrm/9:.2f}): {mn} .. {mx}   [{time.time()-t0:.0f}s]", flush=True)
