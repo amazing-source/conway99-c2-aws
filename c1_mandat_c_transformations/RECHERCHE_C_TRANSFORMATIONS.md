@@ -381,3 +381,18 @@ poids 25, quatre composantes, sans positivité mais avec des valeurs exactes par
 −4/3 pour le profil A, −22/3 pour B, +14/3 pour C ; coclique de taille 22 : −770/81). Décompte : environ 60
 dimensions, 43 zéros démontrés, donc environ 17 paramètres libres ; aucune contradiction à en attendre sans majorer
 les vecteurs fantômes.
+
+**Variante impaire exécutée (`z9cubic.py`, pôles e₁ − e₂ et e₁ − (1/9)1, degrés zonaux 3, 5, 7, 9).** L'espace des
+formes vectorielles impaires de poids 25 a 64 dimensions (88 moins 24 inconnues de bord) ; avec les 45 zéros
+démontrés il reste **19 paramètres libres**, qui sont exactement les moments cubiques des couches de O de classes
+1 à 4 d'exposant 11/9 à 56/9 (normes 22/9 à 112/9). Tous les moments du côté L (norme 22 fractionnaire, cocliques
+de taille 22, ensembles réguliers de 44 sommets) en sont des combinaisons linéaires ; il n'y a aucune relation
+entre les premiers moments. Sans classification complète des vecteurs de O de norme ≤ 12 dans ces classes, cette
+variante ne donne rien. Fermée.
+
+**Contrôle machine de la proposition 13 sur le graphe de Berlekamp–van Lint–Seidel (`check_prop13.py`, entiers
+exacts).** srg(243,22,1,2), valeurs propres 22, 4, −5, NNᵀ = 11I + A, constante 6 sur l'espace propre de −5 :
+L = Z²⁴³ ∩ ker(A + 5I) est de rang 110 et de déterminant 3¹⁶⁹ ; les facteurs invariants de NᵀB (B base de L) sont 1
+et 3 ; [L₂ : L] = 3¹² = nombre de x ∈ L/6L dont toutes les sommes de droites sont nulles modulo 6 ; ker(Nᵀ mod 3)
+est de dimension 12 (valeur de la note 99 du dépôt c1) et entièrement dans L/3L ; ker(Nᵀ mod 2) = 0. Les étapes
+(i) à (iii) de la preuve et l'analogue de (iv) sont donc vérifiés sur un exemple qui existe.
