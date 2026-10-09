@@ -127,3 +127,62 @@ partners and tracks the rank with a pivot block, so both classes of binary forms
 Balls: the 275 multisets of three ordered types up to a simultaneous permutation of the layers; vertex u = 0 of the first
 component. Result: 275 of 275 without a star (`sweep_222r2.log`: 257 runs; `sweep_222r.log`: the 18 others, from a first
 unreduced run; about 1.6e9 nodes, largest run 1.8e7). Driver `sweep222r2.py`, enumeration `enumc.c` / `multi.py`.
+
+## Addendum 2 (09/10, written 02:55 UTC, completed as the runs end): lines without prism at rank 37
+
+**Target statement B.** Let the 7-rank of A - 3I be 37 and let T be a line no edge of which lies in a prism
+(equivalently: G(T) has no triangle and no 4-cycle of type I). Then G(T) is connected.
+Status: computer-assisted, NOT audited (only the girth-5 part of the main note was audited, Codex note 224).
+It is a local statement about one line; it excludes no rank.
+
+**Fact A (by hand, any rank, no hypothesis on torsion).** If G(T) has components C_i with m_i lines per layer, then
+z = m_j 1_{C_i} - m_i 1_{C_j} is an integer eigenvector of A for the eigenvalue 3, and every far vertex has exactly m_i
+shadow points in C_i. Proof: (A - 3I) z vanishes on N(T) (C_i, C_j are unions of components of the cubic graph G(T) and
+z vanishes on T) and on T (a vertex of T sees 2 m_i points of C_i and 2 m_j of C_j), so (A - 3I) z = e is supported on
+the far set with e_f = z(n_f); and |e|^2 = z^T N N^T z = z^T K z with K = 12 I - G - G^2 + 2J - D (D = "same layer"),
+G z = 3 z, J z = 0, D z = 0, hence |e|^2 = (12 - 3 - 9) |z|^2 = 0. (The lab and Codex have the general form: a zero-sum
+eigenvector of an induced subgraph for the eigenvalue 3 is a global eigenvector; lab NOTE 17.77, Codex note 229.)
+So the component relations are true relations at every rank; the dimension count alone only gave half of them.
+
+**Why four profiles only.** A component with one line per layer always has a 4-cycle of type I (its two points of a
+layer are mates, and the matching to the next layer closes the cycle), so without prism the numbers of lines per layer
+of the components are (6), (3,3), (2,4) or (2,2,2).
+
+**Cases** (each run = exhaustive star search at one near point, "dead" = no star; drivers and logs in this folder):
+
+| profile | case (torsion ranks of the components) | runs | result | log |
+|---|---|---|---|---|
+| (2,2,2) | all 18 ordered types, 275 multisets up to the order of the layers (no torsion exists) | 275 | all dead | sweep_222r.log, sweep_222r2.log |
+| (3,3) | (0,0): 2887 pairs, both classes of the residue | 2887 | all dead | sweep_33r_part0of1.log |
+| (3,3) | (0,1): 1910 pairs | 1910 | all dead | sweep_33t_01.log |
+| (3,3) | (1,1): 345 pairs x 6 balanced vectors x 2 classes | 4140 | all dead | sweep_33t_11.log |
+| (3,3) | (1,2): 15 pairs x 48 balanced vectors | 720 | all dead | sweep_X12.log |
+| (3,3) | (2,2): one pair, 2016 isomorphisms x 2 classes | 4032 | all dead | sweep_X22.log |
+| (3,3) | (2,3): one pair, 114 912 injective maps, one per orbit of the automorphisms of the ball | 9726 | see below | sweep_X23.log |
+| (3,3) | (3,3): one pair (girth 5), 33 784 128 isomorphisms | - | dead (main note, theta33) | theta33_*.out |
+| (3,3) | (0,2), (0,3), (1,3) | 0 | impossible: the dimension count forces a balanced torsion vector carried by one component, excluded by lemma I | balanced_all.py |
+| (2,4) | large component torsion-free | lab | see below | lab |
+| (2,4) | large component of torsion rank 1 | lab | see below | lab |
+| (2,4) | large component of torsion rank 2, 3, 4 | laptop | see below | sweep_48tp_T*.log |
+
+**Three reductions found during the night (exact, each with its own check).**
+1. *One ball per isomorphism class for (2,4)* (`actc.c`, `reps48.py`, `reps48.txt`). Re-reading the layers of the whole
+   ball in another order sends (small type s, large type b) to (g.s, g.b); for a fixed s only the large types up to the
+   stabiliser of s matter: 97 896 balls instead of 245 877 (torsion balls: 16 516 instead of 40 761). Checks: every
+   image is found in the list, the six maps satisfy the group law, the C table is identical to the Python table of the
+   (3,3) sweeps for m = 3, the torsion rank is constant on orbits; the lab rebuilt the files (same hashes) and checked
+   400 + 400 random pairs with an independent graph-isomorphism test (all as predicted).
+2. *Pair lemma for balanced torsion* (`pairt.c`, `pair48.py`; combinatorial, no rank condition). If B is a space of
+   balanced torsion vectors, two near points a, b with K_ab = c > 0 lie together in exactly c shadows, so at least c
+   admissible B-balanced 6-sets must contain both. For dim B = 1 this almost never excludes anything; for dim B = 2 it
+   removes 95 to 99.6 % of the subspaces, and every subspace of dimension >= 3 on all the balls met. Two independent
+   implementations (Python through the candidate lists, C by direct enumeration) give identical lists.
+3. *Orbits under the automorphisms of the ball* (`orbits23.py`, `suborb.py`). An automorphism (it preserves each
+   component; the layers may be permuted) sends a configuration with B balanced to one with g(B) balanced, so one
+   subspace (or one balanced map) per orbit is searched. Checks: the action formula is verified on random maps by
+   moving the vectors themselves; the pair test is asserted constant on every orbit in every run.
+   `sweep48tp.py` = `sweep48t.py` with 2 and 3 in front; on two balls its verdict and its count of sub-cases agree with
+   the unfiltered driver.
+
+**Real conditions alone do not decide** (`realstar.c`, exploration): with only 0 <= 7 Pi <= 7 (valid at every rank) a star
+is found at once on the two (2,2,2) balls tried. The exclusions above are properties of rank 37.
