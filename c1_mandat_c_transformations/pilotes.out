@@ -1,0 +1,52 @@
+nonzero entries of D: 2880  +1: 1440  -1: 1440
+row supports: {0: 63, 16: 180}
+unchanged rows: 63 changed: 180
+triangle: [0, 1, 2]
+A commutes with A': False
+D^2 commutes with A: True  with A': True
+spectrum of D: [(-6.708204, 32), (-0.0, 179), (6.708204, 32)]
+rank of D: 64
+sin^2 values: [(0.0, 179), (0.555556, 64)]
+values of D^2 on far x far: {16: 180, -8: 360, 0: 21060, -2: 1440, 1: 2880, 2: 4320, -4: 2160}
+D^3 == 9 D ? False
+D^3 == 27 D ? False
+D^3 == 36 D ? False
+D^3 == 45 D ? True
+D^3 == 81 D ? False
+projected connection set: 20
+quadratic forms vanishing on the 20 points: 2
+singular nonzero vectors: 20  = projected set: True
+far-far edges of BvLS by (Q(x),Q(y),B(x,s)) -> D:
+   (1, 1, 0, -1) 720
+   (1, 2, 1, 0) 540
+   (2, 1, 2, 0) 540
+   (2, 2, 0, -1) 720
+added edges by (Q(x),Q(y),Q(d),B(x,d)):
+   (1, 1, 0, 0, '') 720
+   (2, 2, 0, 0, '') 720
+added edge: (Q(x), old shift gamma(dbar), new shift - old shift, x0):
+far grids containing removed edges: 80  not (grid in A, grid in A', 9+9 edges exchanged): 0
+number of new directions per grid: {1: 80}
+removed edges covered: 720 of 720
+changed pairs outside the grids: 0  max multiplicity of a changed pair: 1
+grids per far vertex: {4: 180}
+lines parallel to T kept in both graphs: True
+class constants c_k of 7*Pi30 + H: [ 2.5   -0.25  -0.125  0.     0.125  0.25 ]  times 8: [20. -2. -1.  0.  1.  2.]
+rank of P_Y: 70
+idempotent ranks: [6, 35, 21, 14, 7, 1]
+inside Y: [np.False_, np.True_, np.True_, np.True_, np.False_, np.False_]
+norms: 7*Pi30_xx = 2.5  7*Pi40_xx = 3.333333333333333  -> ranks 30.0 40.0
+untwisted (0,0)    feasible: True   smallest slack -2.08722e-14 at (m,q,dim)=(0, 1, 6)
+(84,0)             feasible: True   smallest slack -1.70836e-14 at (m,q,dim)=(0, 1, 6)
+(84,84)            feasible: True   smallest slack -1.38778e-14 at (m,q,dim)=(0, 1, 6)
+(42,0)             feasible: True   smallest slack -1.89779e-14 at (m,q,dim)=(0, 1, 6)
+(42,42)            feasible: True   smallest slack -1.7375e-14 at (m,q,dim)=(0, 1, 6)
+integer points (W,s) with 0<=s<=W<=84: 3655  feasible: 3655
+W range: 0 84  s range: 0 84
+  W = 0  s in (0, 0)
+  W = 14  s in (0, 14)
+  W = 28  s in (0, 28)
+  W = 42  s in (0, 42)
+  W = 56  s in (0, 56)
+  W = 70  s in (0, 70)
+  W = 84  s in (0, 84)
