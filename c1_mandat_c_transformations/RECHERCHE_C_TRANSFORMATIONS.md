@@ -861,3 +861,19 @@ coordonnée en v vaut (c ∓ 1)/9 + (m_v ∓ 3) ; il faut que ce soit un vecteur
   de S, 132 + 3t qui le coupent en un point, 88 − 3t en deux points ; donc t ≤ 11.
 
 (§15.4 noté à 18:40 UTC.)
+
+### 15.5 Relèvement d'un vecteur court dans U, et structure cyclique des classes des vecteurs P3/N25 (noté à 18:58 UTC)
+
+**Relèvement d'un vecteur court (`jl1_short.py`, rang 43, M sans racine).** Pour un vecteur de L₁ de norme 16 à 26, le relèvement
+v ∈ U de norme 4 a avec les 4 racines de N₄ des produits de type (0 nul, 2 fois +1), (2 nuls, 1 fois +1) ou (4 nuls) :
+norme 16 : les deux premiers ; 18 : les deux derniers ; 20 : les trois ; 22 : le deuxième ; 24 : les deux derniers ; 26 : le
+troisième. Avec A₂ = a₂(U) et t = c(2,2), tous les c(n, r) sont affines en (A₂, t), par exemple pour le type (4 nuls) :
+c(2,0) = −2 + 2A₂/3 + 6t, c(2,±1) = A₂/6 − 4t. La positivité jusqu'à n = 14 est **faisable pour les trois types**, avec de
+larges intervalles (A₂ de quelques centaines à ~10⁶, t jusqu'à ~11000). Seule contrainte nette : **a₂(U) ≡ 0 (mod 6)** dès que
+U contient un vecteur de norme 4 (toujours : les droites). Cet outil n'exclut donc aucun type de vecteur court au rang 43.
+
+**Structure cyclique.** Les 8 classes de F₇² de type 20 forment une orbite du groupe cyclique d'ordre 8 des éléments de norme 1
+de F₄₉. Pour deux vecteurs P3/N25 de classes d et ζᵏd : m·m′ ≡ f(k) (mod 7) avec f(0) = 0, f(±1) = 3, f(±2) = 1, f(±3) = 6,
+f(4) = 2 (à l'échange près de 3 et 6, fixé une fois pour toutes). Toute famille de vecteurs P3/N25 admet donc un étiquetage
+i ↦ k_i ∈ Z/8 tel que m_i·m_j ≡ f(k_i − k_j) : c'est une condition sur les triplets (par exemple m₁·m₂ ≡ 0 et m₁·m₃ ≡ 3
+imposent m₂·m₃ ≡ 3 ; m₁·m₂ ≡ m₂·m₃ ≡ 3 imposent m₁·m₃ ≡ 0 ou 1).
