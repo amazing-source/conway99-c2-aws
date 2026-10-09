@@ -534,3 +534,16 @@ norme 14, exclu dans S₀ ;
 ce qui exclut (n₂, n₁, n₋₂) = (1, k, 4−k) pour k ≤ 2 et (0, k, 7−k) pour k ≤ 5.
 Il reste quatre profils : (2 ; 1³ ; −2 ; (−1)²⁵), (2 ; 1⁴ ; (−1)²⁸), (1⁶ ; −2 ; (−1)²⁶), (1⁷ ; (−1)²⁹).
 S₀ exige au moins 4979 configurations de ces quatre types ; je n'ai pas de majoration de leur nombre.
+
+**Origine des vecteurs fantômes de classe 2 dans S₀ (à la main, 16:17 UTC).** Soit x ∈ O de classe 2, de norme 40/9,
+qui n'est pas une arête, et y = √7x.
+(a) Profils avec une coordonnée 2 en a : x − u_a est de classe 1 et de norme 28/9, de produit −8/9 avec u_a ; si
+c'était un sommet u_w, x serait l'arête {a, w}. C'est donc un **sommet fantôme**. Il y a au plus 22 fantômes dans S₀,
+chacun a au plus 17 sommets à produit −8/9 (profils de norme 196/9 en classe 1), donc au plus 374 vecteurs de ce
+type, plus au plus 231 sommes de deux fantômes.
+(b) Profils sans coordonnée 2, de support positif P : si P contient une arête {p, p′}, alors x − u_p − u_p′ est un
+vecteur de norme 4 de M de type entier. Réciproquement, pour w de norme 4 de type entier, √7w = 1_X − 1_Y binaire, et
+une arête {a, b} ⊂ Y, le vecteur w + u_a + u_b est de classe 2 et de norme 40/9, de profil (1⁶ ; −2 ; (−1)²⁶) si le
+troisième point de la droite ab est hors de X ∪ Y, et (1⁷ ; (−1)²⁹) s'il est dans X ; on a e(X) = e(Y).
+Donc S₀ exige : Σ sur les (au plus 538) vecteurs entiers de norme 4 du nombre d'arêtes dans leur support négatif,
+plus le nombre de fantômes à support positif indépendant, au moins 4979 − 605 = 4374.
