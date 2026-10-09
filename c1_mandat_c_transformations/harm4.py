@@ -68,6 +68,18 @@ ge(add(Bm[4], const(-2729034)), "b4>=2729034")
 ge(add(Bm[5], const(-18001368)), "b5>=18001368")
 for k in range(1, NMAX // 7 + 1): ge(add(A[7 * k], sc(Bm[k], -1)), f"a{7*k}>=b{k}")
 ge(Pv, "P>=0"); ge(add(const(852), sc(Pv, -1)), "P<=852")
+# optional extra hypotheses from the command line:  hyp:P=0  hyp:a7=0  hyp:b1=0  hyp:b2<=1100  hyp:a8=0 ...
+import re as _re
+def _form(name):
+    if name == "P": return Pv
+    k = int(name[1:]); return A[k] if name[0] == "a" else Bm[k]
+for arg in sys.argv:
+    m_ = _re.fullmatch(r"hyp:([abP]\d*)(<=|>=|=)(\d+)", arg)
+    if not m_: continue
+    f_, op_, v_ = _form(m_.group(1)), m_.group(2), int(m_.group(3))
+    if op_ in ("<=", "="): ge(add(const(v_), sc(f_, -1)), arg + " (upper)")
+    if op_ in (">=", "="): ge(add(f_, const(-v_)), arg + " (lower)")
+
 
 NATQ = {}
 def quartic(off, tag, lamL, rootM, known, loM, hiM, loL, hiL):

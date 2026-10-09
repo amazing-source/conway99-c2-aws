@@ -280,3 +280,56 @@ exactes du catalogue ne peuvent donc pas rendre le rang 37 infaisable dans ce pr
 paramètres libres par série, et les vecteurs non catalogués, nombreux au rang 37, portent un jeu proportionnel à
 leur nombre. Fichiers de LAB : conway99-c1, branche lab/theta-lp-2026-10-08, `code/lab_theta_lp_2026-10-08/lap_harm/`.
 **Cette piste est fermée sous cette forme.**
+
+## 10. Indice du réseau des droites dans M ; nombres forcés rang par rang (9 octobre, 13:28–14:15 UTC)
+
+### 10.1 Proposition 13 (saturation globale du réseau triangulaire)
+
+Notations : N matrice d'incidence points × droites (99 × 231), NNᵀ = 7I + A ; Λ_L = √7·E(N Z²³¹) ⊂ M le réseau
+engendré par les 231 vecteurs de droites w_T ; U = {c : V → F₃ de somme nulle sur chaque droite} (chaque droite
+monochrome ou arc-en-ciel), e₃ = dim U = 99 − rang_{F₃}(N) ≥ 1 (les constantes).
+
+**Proposition 13.** [M : Λ_L] = 3^(e₃−1), M/Λ_L ≅ F₃^(e₃−1), dét Λ_L = 7^(45−r)·9^(e₃−1).
+En particulier Λ_L est saturé dans M en 2, 5 et 7 ; si U ne contient que les constantes, M est engendré par ses
+462 vecteurs de droites.
+
+*Preuve.* (i) Dans V = V₋₄, le dual de E(N Z²³¹) est L₂ = {y ∈ V : y(T) ∈ Z pour toute droite T}, puisque
+y·E1_T = y(T) ; le dual de E(Z⁹⁹) est L, celui de E(Z⁹⁹₀) (somme ≡ 0 mod 3) est L₁, et L₁ ⊂ L₂.
+(ii) Si y ∈ L₂, alors z = Nᵀy ∈ Z²³¹ et Nz = NNᵀy = (7I + A)y = 3y, donc y ∈ ⅓L.
+(iii) x ↦ x mod 3 identifie donc L₂/L à {c ∈ L/3L : Nᵀc ≡ 0 mod 3}.
+(iv) ker(Nᵀ mod 3) ⊂ ker((7I + A) mod 3) = ker((A + I) mod 3), et ce noyau est exactement L/3L : modulo 3 on a
+A(A + I) ≡ 2J ; le sous-espace caractéristique W de la valeur propre −1 est de dimension 45 (multiplicités 1 + 44),
+orthogonal à celui de 0, donc non dégénéré ; il contient 1, qui est isotrope (99 ≡ 0), donc il existe x ∈ W avec
+1·x ≠ 0, et (A + I)x = 2A⁻¹Jx = (1·x)·1 ≠ 0 ; sur W, A + I est de rang exactement 1, son noyau a dimension 44 et
+contient L/3L, de dimension 44. Donc L₂/L ≅ U, [L₂ : L₁] = 3^(e₃−1), et par dualité [M : Λ_L] = [L₂ : L₁]. ∎
+
+**Corollaires.**
+(a) Un vecteur de M dont un multiple premier à 3 est dans Λ_L est dans Λ_L. Exemple : pour un support H à 12
+sommets, 4-régulier, à 8 triangles (dossier « Convergences »), 2h_H = Σ_{T⊂H} w_T, donc **h_H est une combinaison
+entière de vecteurs de droites**. Forme équivalente : aucun vecteur propre entier x ∈ L∖2L (resp. L∖5L) n'a toutes
+ses sommes de droites paires (resp. multiples de 5).
+(b) Côté valeur propre 3 (Nᵀ y multiplie les normes par 10) : [E₃Z⁹⁹ : E₃N Z²³¹] = 2^(e₂)·5^(e₅), e_p = 99 − rang_{F_p}(N).
+Avec dét(NNᵀ) = 3⁴⁵·7·2⁵⁴·5⁵⁴ : e₃ ≤ 22, e₂ ≤ 27, e₅ ≤ 27, et rang_{F₇}(N) = 99.
+(c) Une fonction c ∈ U non constante a m ≥ 33 droites monochromes (9m = ζ*(7I + A)ζ ≥ 3·99 pour ζ = ω^c), avec
+égalité si et seulement si ζ est vecteur propre pour −4 ; alors les trois classes de couleur ont 33 sommets, chacune
+est réunion de 11 droites disjointes, toutes les autres droites sont arc-en-ciel, et ⅓ − 1_{V_i} sont trois vecteurs
+fractionnaires de norme 22 de L₁.
+
+Ce que cela vaut : e₃ est un invariant entre 1 et 22 que les paramètres ne fixent pas (notes 70, 96 et 99 du dépôt
+c1 laissaient ouverts les premiers 2, 3, 5, 7 pour l'indice ; seul 3 intervient). Aucun rang n'est exclu par là.
+
+### 10.2 Nombres forcés par le programme thêta, en arithmétique exacte (`thetalp.py`, `probe_menu.py`, `probe_patterns.py`)
+
+Programme de degré 0 des notes 167–168 avec les contraintes de la note 180 (a₇ ≤ 990, 7a₇ + 8a₈ ≤ 55440, b₁ ≤ 44,
+b₂ ≥ 462 + 41b₁, b₃, b₄, b₅, a₇ₖ ≥ bₖ ; au rang 43 l'égalité a₇ = b₁), simplexe rationnel en mémoire, minimum par
+dichotomie ; valeurs identiques aux troncatures 40, 60 et 84. Chaque valeur est une minoration valide.
+
+| rang | vecteurs courts de L₁ forcés | couches pouvant être seules non vides | côté M |
+|---|---|---|---|
+| 37 | ≥ 380 de norme ≤ 20 | 14 (≥ 380), 16 (≥ 1283), 18 (≥ 4932), 20 (≥ 34523) | b₂ = 462 possible |
+| 39 | ≥ 2367 de norme ≤ 24 | 16, 18, 20, 22, 24 (pas 14 seule) | b₂ = 462 possible |
+| 41 | ≥ 234 de norme ≤ 24 | 14 (≥ 234), 16, 18, 20, 22, 24 | b₂ = 462 possible, b₄ ≥ 474 941 774 |
+| 43 | ≥ 165 de norme ≤ 26 | **18 (≥ 165) ou 26 (≥ 2632) seulement** | b₂ ≥ 913, b₃ ≥ 7 073 772 |
+
+Ces nombres recoupent les notes 177 (identité 2a₈ + 16a₉ + a₁₃ = 2632 + …) et 192 (b₂ ≥ 968 par les cocliques) de
+Codex ; l'apport est l'outil (une question = quelques secondes, réponse exacte) et la ligne « supports minimaux ».
