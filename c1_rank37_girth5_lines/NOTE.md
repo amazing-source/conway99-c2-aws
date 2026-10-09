@@ -115,3 +115,15 @@ So no balanced map exists, and case (3,3) is impossible without using the pair c
     python balanced66.py ; python check_model.py ; python test_plant.py ; python small_comp.py
     python gen33.py 0 ; ./theta33b.exe par33_0.txt 0 40353607 good_u0.txt     # case (3,3), u = 0
     python gen33u.py 1 6 ; ./theta33c.exe u33_1.txt good_u0.txt good_after_1.txt ; ./theta33c.exe u33_6.txt good_after_1.txt good_after_6.txt
+
+## Addendum 1 (09/10, 00:53 UTC): three components with two lines per layer ("(4,4,4)")
+
+Statement, same status as above (computer-assisted, not audited): **at rank 37 no line has a graph made of three
+triangle-free components with two lines per layer.** All 18 ordered-layer types of such components are used (with or
+without 4-cycles of type I); none has 7-torsion, so the radical of the Gram is exactly the two component relations and
+every far vertex carries a vector of a non-degenerate plane N0. Test (`fastr.c`, "rank mode"): the 10 x 10 matrix of a star,
+Y_ii = -g(i,i), Y_ij = 3 + A_ij - g(i,j), must have rank <= 2 and zero row sums; the search chooses the ten shadows and the
+partners and tracks the rank with a pivot block, so both classes of binary forms are covered by one run.
+Balls: the 275 multisets of three ordered types up to a simultaneous permutation of the layers; vertex u = 0 of the first
+component. Result: 275 of 275 without a star (`sweep_222r2.log`: 257 runs; `sweep_222r.log`: the 18 others, from a first
+unreduced run; about 1.6e9 nodes, largest run 1.8e7). Driver `sweep222r2.py`, enumeration `enumc.c` / `multi.py`.
