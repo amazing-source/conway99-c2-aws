@@ -96,3 +96,18 @@ if mode == "branch" and "cert" in sys.argv:
     show("integral norm 4 of M  T0[2]", E("T", 0, 18))
     show("L class 2, norm 172/9  X2[86/9]", E("X", 2, 86))
     show("L class 1, norm 196/9  X1[98/9]", E("X", 1, 98))
+if mode == "branch" and "ghost" in sys.argv:
+    # minimum number of class-2 vectors of norm 40/9 not explained by: 693 edges, (vertex + ghost vertex) and (ghost + ghost)
+    # [at most 28 per ghost vertex], (integral norm-4 vector + an edge in its negative support) [at most 5 per vector]
+    e = comb([(1, E("T", 2, 20)), (-5, E("T", 0, 18)), (-28, E("T", 1, 14))], -693 + 28 * 99)
+    print("   min of  T2[20/9] - 693 - 5 T0[2] - 28 (T1[14/9] - 99)  over the polytope:", rng(e, hi=10 ** 7)[0])
+    for g in (0, 5, 22):
+        extra = [comb([(-1, E("T", 1, 14))], 99 + g) + ("ghosts<=%d" % g,)]
+        def feas2(ex=()): return feas(list(extra) + list(ex))
+        c0, cf = comb([(1, E("T", 2, 20)), (-5, E("T", 0, 18))], -693)
+        lo_, hi_ = -10 ** 6, 10 ** 7
+        while hi_ - lo_ > 1:
+            mid = (lo_ + hi_) // 2
+            if feas2([(Fr(mid) - c0, {t: -v for t, v in cf.items()}, "le")])[0] == "feasible": hi_ = mid
+            else: lo_ = mid
+        print(f"   with at most {g} ghost vertices: min of T2[20/9] - 693 - 5 T0[2] = {hi_}")
