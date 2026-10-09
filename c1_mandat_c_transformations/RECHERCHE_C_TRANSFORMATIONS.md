@@ -111,9 +111,21 @@ Le lemme 4 donne a ≥ 3 et b ≥ 3, donc K₃,₃ ⊂ Γ : impossible (μ = 2).
 connexe et 7 ∤ τ, tout automorphisme de (boule, ombres) est un automorphisme de Γ. Avec les exclusions du programme,
 (boule, ombres) est donc sans symétrie. *Preuve :* l'image de A par la symétrie est une complétion de même rang. ∎
 
-Cas restants pour la proposition C : droites non génériques (τ ≡ 0 ou G(T) déconnecté), et paires de rangs
-(37,41), (37,43), (39,39) et au-delà. Pour (37,41), D ≡ −Y′ est le Gram de vecteurs isotropes d'un espace de
-dimension 4 à produits dans {0, ±1} ; de telles configurations existent, l'argument s'arrête là.
+**Complément de Codex (message LAB du 9 octobre, 10:41 UTC ; note 232 annoncée, pas encore poussée).** Les cas
+(37,41) et (37,43) sont fermés aussi : au rang 37, à droite générique, la complétion est unique parmi tous les
+rangs. J'ai relu l'argument, il est correct. *Lemme (Codex).* Si D² ≡ 0 modulo 7 et si les profils des sommets
+modifiés sur les sommets non modifiés sont deux à deux distincts, alors D = 0. *Preuve.* Hors diagonale,
+(D²)_uv ≤ (A²)_uv + (A′²)_uv ≤ 4, donc un multiple de 7 y est ≤ 0 ; D1 = 0 donne D²1 = 0 : D² est un laplacien à
+poids positifs. Pour chaque ligne b de l'incidence non modifiés × modifiés, bD = 0, donc
+0 = b D² bᵀ = Σ w_uv (b_u − b_v)² ; un poids non nul forcerait deux profils égaux. Donc D² = 0 et D = 0. ∎
+Au rang 37, Y = 0 donne D² ≡ 0 sans hypothèse sur A′ (dans les notations du lemme 6, D² ≡ −(YY′ + Y′Y)).
+Remarque de ma part : l'hypothèse des profils distincts est automatique dès que chaque sommet modifié a au moins
+3 voisins non modifiés (deux sommets ont au plus 2 voisins communs) ; le lemme vaut donc pour toute paire de
+candidats de ce type, pas seulement à boule fixée. Le corollaire 8 ne dépend plus du rang de l'autre complétion.
+
+Cas restants pour la proposition C : droites non génériques (τ ≡ 0 ou G(T) déconnecté), et paires de rangs toutes
+deux ≥ 39. Dans ces cas D² ≡ −(YY′ + Y′Y) n'a pas de signe imposé et l'argument du laplacien ne s'applique pas tel
+quel ; il s'applique encore si les espaces colonnes de Y et Y′ sont orthogonaux.
 
 ## 4. La bascule du 243 décodée (calcul exact, `flip243*.py`, sortie `pilotes.out`)
 
