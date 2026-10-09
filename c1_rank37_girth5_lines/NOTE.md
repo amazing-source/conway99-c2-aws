@@ -158,7 +158,7 @@ of the components are (6), (3,3), (2,4) or (2,2,2).
 | (3,3) | (1,1): 345 pairs x 6 balanced vectors x 2 classes | 4140 | all dead | sweep_33t_11.log |
 | (3,3) | (1,2): 15 pairs x 48 balanced vectors | 720 | all dead | sweep_X12.log |
 | (3,3) | (2,2): one pair, 2016 isomorphisms x 2 classes | 4032 | all dead | sweep_X22.log |
-| (3,3) | (2,3): one pair, 114 912 injective maps, one per orbit of the automorphisms of the ball | 9726 | see below | sweep_X23.log |
+| (3,3) | (2,3): one pair, 114 912 injective maps, one per orbit of the automorphisms of the ball (orbit sizes add up to 114 912) | 9726 | all dead | sweep_X23.log |
 | (3,3) | (3,3): one pair (girth 5), 33 784 128 isomorphisms | - | dead (main note, theta33) | theta33_*.out |
 | (3,3) | (0,2), (0,3), (1,3) | 0 | impossible: the dimension count forces a balanced torsion vector carried by one component, excluded by lemma I | balanced_all.py |
 | (2,4) | large component torsion-free | lab | see below | lab |
@@ -186,3 +186,21 @@ of the components are (6), (3,3), (2,4) or (2,2,2).
 
 **Real conditions alone do not decide** (`realstar.c`, exploration): with only 0 <= 7 Pi <= 7 (valid at every rank) a star
 is found at once on the two (2,2,2) balls tried. The exclusions above are properties of rank 37.
+
+**Profile (3,3) is complete at 03:52 UTC**: every case of the table is dead (about 5.4e9 nodes in all for the cases run
+tonight). What is still running for statement B is the profile (2,4) (lab: torsion-free and rank 1; laptop: ranks 2, 3, 4).
+
+**A sample of connected balls** (`conn_sample.py`, `conn_tors.py`; exploration, no theorem). 150 random connected balls
+without triangle and without type-I 4-cycle (six lines per layer, seed 1): 120 with 7 not dividing tau, all without a
+star at vertex 0 (model with no free vector: g(f,f) = 0, g(f,f') = 3 + A_ff'; median 867 000 nodes, about 20 s each);
+30 with torsion rank 1, all without a star in the balanced-torsion model (both classes, 12 000 to 20 000 nodes each).
+So one near point already kills every connected ball of the sample; the connected case is out of reach only because
+of the number of balls (about 1e10 ordered types), which is why a structural reduction is needed there.
+(By Codex's L23 of 25/09, half of the generic ones are excluded beforehand by the quadratic character of tau.)
+
+**Incident and repair (03:19 UTC).** Three of my own runs had been cancelled by killing the pool workers before the
+parent; the pool respawned workers which survived and kept working for up to two hours under the same temporary file
+names as the restarted runs. A solver reading a file while it is rewritten sees zeros and prints "solutions 0". Only the
+torsion runs of rank 3 and 4 of (2,4) could be affected (their logs carry totals per ball): they were discarded and
+rerun from zero. All the other logs carry one line per run; none has `cands 0` or an abnormally small search, and their
+file names were never shared with a cancelled run. Temporary files now carry the process id.
