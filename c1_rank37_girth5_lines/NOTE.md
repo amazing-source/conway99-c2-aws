@@ -187,7 +187,7 @@ of the components are (6), (3,3), (2,4) or (2,2,2).
 **Real conditions alone do not decide** (`realstar.c`, exploration): with only 0 <= 7 Pi <= 7 (valid at every rank) a star
 is found at once on the two (2,2,2) balls tried. The exclusions above are properties of rank 37.
 
-**Profile (3,3) is complete at 03:52 UTC**: every case of the table is dead (about 5.4e9 nodes in all for the cases run
+**Profile (3,3) is complete at 03:52 UTC**: every case of the table is dead (6.57e9 nodes in all, counted from the six logs, for the cases run
 tonight). What is still running for statement B is the profile (2,4) (lab: torsion-free and rank 1; laptop: ranks 2, 3, 4).
 
 **A sample of connected balls** (`conn_sample.py`, `conn_tors.py`; exploration, no theorem). 150 random connected balls
