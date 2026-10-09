@@ -41,6 +41,10 @@ if __name__ == "__main__":
     last = int(sys.argv[5]) if len(sys.argv) > 5 else len(REPS) * len(lines)
     jobs = [(i, REPS[i // len(lines)], i % len(lines), lines[i % len(lines)]) for i in range(len(REPS) * len(lines))
             if i % nparts == part and first <= i < last]
+    if os.path.exists("reps48.txt"):       # one ball per isomorphism class (reps48.py)
+        keep = {tuple(map(int, l.split()[:2])) for l in open("reps48.txt") if l.strip()}
+        jobs = [j for j in jobs if (j[1], j[2]) in keep]
+        print(f"restricted to the representatives of reps48.txt ({len(keep)} balls in all)", flush=True)
     log = f"sweep_48_part{part}of{nparts}.log"; done = set()
     if os.path.exists(log):
         for l in open(log): done.add(l.split("|")[0].strip())

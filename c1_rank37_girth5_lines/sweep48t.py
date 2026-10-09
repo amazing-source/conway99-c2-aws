@@ -109,6 +109,10 @@ if __name__ == "__main__":
     tors = json.load(open("tors_m4.json"))                     # [(index of the large type, torsion rank)]
     if len(sys.argv) > 4: tors = [x for x in tors if x[1] == int(sys.argv[4])]
     jobs = [(s, b, lines[b]) for s in REPS for (b, t) in tors]
+    if os.path.exists("reps48.txt"):       # one ball per isomorphism class (reps48.py)
+        keep = {tuple(map(int, l.split()[:2])) for l in open("reps48.txt") if l.strip()}
+        jobs = [j for j in jobs if (j[0], j[1]) in keep]
+        print(f"restricted to the representatives of reps48.txt ({len(keep)} balls in all)", flush=True)
     jobs = [j for i, j in enumerate(jobs) if i % nparts == part]
     log = f"sweep_48t_part{part}of{nparts}.log"; done = set()
     if os.path.exists(log):

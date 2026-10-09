@@ -3,7 +3,8 @@ By lemma I and the dimension count the balanced torsion is the graph of an injec
   case 12: (rank 1, rank 2): balanced vector phi + psi, psi any non-zero vector of the rank-2 space (48); radical of
            dimension 2 (the rank-2 space), no residue;
   case 22: (rank 2, rank 2): graph of an isomorphism M (2016); radical of dimension 2; residue of rank 1 (c0 = 1, 3);
-  case 23: (rank 2, rank 3): graph of an injective map M, 2 x 3 of rank 2 (114 240); radical of dimension 3; no residue.
+  case 23: (rank 2, rank 3): graph of an injective map M, 2 x 3 of rank 2 (114 912 maps, one run per orbit of the
+           automorphisms of the ball: 9 726 runs); radical of dimension 3; no residue.
 usage: sweepX.py case workers"""
 import sys, json, time, os, itertools
 from multiprocessing import Pool
@@ -41,11 +42,11 @@ def job(j):
         psis = [[(x + y) % 7 for x, y in zip(E1[k], comb(E2, M[k]))] for k in range(2)]
         res = fastlib.run_torsion3([KEY[a], KEY[b]], ID, 0, psis, E1, c0, tag=f"x22_{''.join(map(str, M[0] + M[1]))}_{c0}")
         return f"22 {a} {b} M={''.join(map(str, M[0] + M[1]))} c0={c0} | {res} | {time.time()-t0:.1f}s"
-    _, a, b, M = j
+    _, a, b, M, size = j
     adj, lay, comp = make_ball([KEY[a], KEY[b]], ID); E1 = torsion_vectors(adj, comp, 0); E2 = torsion_vectors(adj, comp, 1)
     psis = [[(x + y) % 7 for x, y in zip(E1[k], comb(E2, M[k]))] for k in range(2)]
     res = fastlib.run_torsion3([KEY[a], KEY[b]], ID, 0, psis, E2, 0, tag=f"x23_{''.join(map(str, M[0] + M[1]))}")
-    return f"23 {a} {b} M={''.join(map(str, M[0] + M[1]))} | {res} | {time.time()-t0:.1f}s"
+    return f"23 {a} {b} M={''.join(map(str, M[0] + M[1]))} | {res} | orbit {size} | {time.time()-t0:.1f}s"
 
 
 if __name__ == "__main__":
@@ -59,8 +60,12 @@ if __name__ == "__main__":
             if (M[0][0] * M[1][1] - M[0][1] * M[1][0]) % 7:
                 for c0 in (1, 3): jobs.append(("22", TWO[0], TWO[0], M, c0))
     elif case == "23":
-        for M in itertools.product(itertools.product(range(7), repeat=3), repeat=2):
-            if rank2(M, 2, 3): jobs.append(("23", TWO[0], THREE[0], M))
+        # one map per orbit of the automorphisms of the ball (orbits23.py); the orbit sizes add up to the 114 912 maps
+        from orbits23 import orbit_reps
+        maps = [M for M in itertools.product(itertools.product(range(7), repeat=3), repeat=2) if rank2(M, 2, 3)]
+        order, reps = orbit_reps([KEY[TWO[0]], KEY[THREE[0]]], maps)
+        print(f"case 23: {len(maps)} maps, automorphism group of order {order}, {len(reps)} orbits", flush=True)
+        jobs = [("23", TWO[0], THREE[0], M, size) for M, size in reps]
     log = f"sweep_X{case}.log"; done = set()
     if os.path.exists(log):
         for l in open(log): done.add(l.split("|")[0].strip())
