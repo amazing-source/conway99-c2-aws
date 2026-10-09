@@ -877,3 +877,33 @@ de F₄₉. Pour deux vecteurs P3/N25 de classes d et ζᵏd : m·m′ ≡ f(k) 
 f(4) = 2 (à l'échange près de 3 et 6, fixé une fois pour toutes). Toute famille de vecteurs P3/N25 admet donc un étiquetage
 i ↦ k_i ∈ Z/8 tel que m_i·m_j ≡ f(k_i − k_j) : c'est une condition sur les triplets (par exemple m₁·m₂ ≡ 0 et m₁·m₃ ≡ 3
 imposent m₂·m₃ ≡ 3 ; m₁·m₂ ≡ m₂·m₃ ≡ 3 imposent m₁·m₃ ≡ 0 ou 1).
+
+## 16. Recherche combinatoire sur les supports P3/N25 (ordre direct de l'utilisateur, 9 octobre, noté à 20:05 UTC)
+
+**Ordre.** Après ma réponse « l'arithmétique exacte ne tranche pas le rang 43 ; il faut deux recherches finies », l'utilisateur
+a écrit : « Pars sur cette recherche combinatoire ». Portable seulement, rien sur AWS. Scripts : `p3n25_search/`.
+Registre de Codex : conway99-c1, branche `codex/p3-n25-register` (commit 80fc407), 4581 supports ouverts.
+
+**Étage 1 (énoncé exact).** Pour un support S = P ∪ N, chaque sommet extérieur z donne un bloc B_z = N(z) ∩ S avec
+|B_z ∩ N| − |B_z ∩ P| = 4, induisant un couplage partiel dans S, et tel que tout s hors de B_z ait au plus 2 voisins dans B_z.
+Il faut 71 blocs tels que : chaque paire {s, s′} de S soit dans exactement r(s, s′) blocs (r = 1 ou 2 selon l'adjacence, moins
+les voisins communs dans S), chaque s dans exactement 14 − deg_S(s) blocs, et deux blocs se coupent en au plus 2 points
+(lignes de triplets de Codex : Σ_{B ⊇ T} x_B ≤ 1). C'est nécessaire pour tout srg(99,14,1,2) contenant le support.
+
+**Mesures sur le portable (18 cœurs).**
+- Solveur exact générique (CP-SAT) sur UN support, trois modèles : sommets extérieurs nommés (5 à 7 min, 6 à 8 cœurs),
+  puis blocs (15 min, 11 cœurs, 23 826 blocs admissibles) : **aucune décision** dans tous les cas (ni solution, ni preuve).
+- Relaxation linéaire de l'étage 1 (point intérieur, ~30 s par support, un cœur) : sur les 252 premiers supports traités,
+  59 sont **infaisables, chacun avec un certificat de Farkas exact** (multiplicateurs rationnels revérifiés colonne par colonne ;
+  aucun n'utilise les lignes de triplets). Par δ : 15/25 (δ = 3), 16/44, 16/61, 9/60, 3/40, 0/19, 0/3 (δ = 9).
+- Coupes de conflit entre paires de blocs (Cauchy–Schwarz sur les deux matrices de Gram 3I − A + J/9 et 4I + A − 2J/11) :
+  aucune coupe violée par la solution fractionnaire ; pas de gain au niveau linéaire.
+
+**Lancé à 19:47 et 19:59 UTC** : criblage linéaire avec certificat exact sur les 4581 supports, 12 processus, fin estimée vers
+23:20 UTC. Ce que ce passage achète : il retire du registre les supports à relaxation infaisable (ordre de 20 %), avec
+certificats. Il n'exclut aucun rang : les supports restants demandent l'étage entier, que le solveur générique ne tranche pas.
+
+**Seconds moments classe par classe dans S₀ (`s0_deg2.py`).** Système de degré 2 à neuf classes validé sur K₈ ⊕ B¹⁸ ; dans S₀ :
+13 tenseurs libres (ceux des couches de O : Θ₂[11/9], Θ₁[14/9], Θ₄[17/9], Θ₀[2], Θ₃[2], Θ₂[20/9], Θ₁[23/9], Θ₄[26/9], Θ₃[3],
+Θ₂[29/9], Θ₁[32/9], Θ₄[35/9], Θ₂[38/9]) ; les seconds moments des couches basses de L₉ (P3/N25, norme 26, etc.) en sont des
+combinaisons fixes, les mêmes en chaque sommet.
