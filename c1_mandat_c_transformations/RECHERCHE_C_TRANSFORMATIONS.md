@@ -135,7 +135,8 @@ couplages d'étoiles, ce que le 243 ne fait jamais. Le 243 ne fournit donc pas d
 
 **Remarque 9 (re-réglures à 99, hors boule fixée).** Soit une famille de grilles d'un candidat, chacune réunion de
 trois droites d'un ensemble 𝒮 de droites disjointes, re-réglées comme ci-dessus, telle que tout sommet x touché soit
-dans g grilles de la famille, toutes par sa droite de 𝒮, et n'ait pas d'autre voisin touché. Alors g ≥ 3.
+dans g grilles de la famille, toutes par sa droite de 𝒮 et ne partageant deux à deux que cette droite, et n'ait pas
+d'autre voisin touché. Alors g ≥ 3.
 *Preuve.* Soit r un voisin retiré de x. Un voisin non touché z de r n'est pas voisin de x, et l'équation en (x, z)
 demande que z soit voisin d'un des 2(g − 1) nouveaux voisins d de x pris dans les autres grilles. Les grilles étant
 des codes parfaits (G1), r et d ne sont pas adjacents et ont 2 voisins communs. Donc 12 − 2g ≤ 4(g − 1). ∎
