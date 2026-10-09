@@ -191,3 +191,41 @@ l'état.
 
 `flip243.py`, `flip243b.py`, `flip243c.py` (structure de la bascule du 243, numpy, quelques secondes) ;
 `local_frames.py` (pilote du §5) ; `pilotes.out` (sorties).
+
+## 8. Suite du 9 octobre après 10:48 UTC : symétrie forcée ou données inexistantes au rang 37
+
+Question posée par l'utilisateur : au rang 37, à droite générique (G(T) connexe, 7 ∤ τ), les données (boule, 60
+ombres) sont-elles obligées d'avoir une symétrie, ou de ne pas exister ? Chacune des deux réponses « oui » exclurait
+les droites génériques au rang 37 (une symétrie se prolonge au graphe par le théorème 7 et le complément de Codex,
+ce que les exclusions du programme interdisent). **Aucune des deux n'est démontrée ici.** Ce qui suit est acquis.
+
+**Lemme 10 (scindage entier).** Soit T une droite, G(T) connexe, Z_Λ = ker_Z(N_F) ⊂ Z^60 (rang 26), N_far et K_far
+ses sous-réseaux propres pour −4 et 3. Alors 7 Z_Λ ⊂ N_far ⊕ K_far ⊂ Z_Λ, et le quotient Z_Λ/(N_far ⊕ K_far) se
+plonge dans N_far^#/N_far. Au rang 37 avec 7 ∤ τ, **Z_Λ = N_far ⊥ K_far** : tout vecteur entier sur les lointains,
+de somme nulle sur chaque étoile, est somme d'un vecteur propre entier de valeur −4 et d'un de valeur 3.
+*Preuve.* A_F préserve Z_Λ et y vérifie (A_F − 3)(A_F + 4) = 0, d'où 7z = (A_F + 4)z + (3 − A_F)z. Au rang 37,
+Π est 7-entier (complément de Schur nul), donc N_far^# = Π Z^60 a un indice premier à 7 sur N_far. ∎
+
+**Corollaire 11.** Au rang 37 générique, tout z ∈ Z_Λ de norme < 14 est un vecteur propre de valeur 3 (car
+min N_far ≥ 14, note 165). Un vecteur propre de valeur 3 a un support d'au moins 8 sommets (borne de répartition
+des poids : 1 + 14·3/14 + 84/21). Donc Z_Λ n'a aucun vecteur de norme 6 : il n'existe pas trois ombres dont la
+réunion avec multiplicités égale celle de trois autres.
+
+**Lemme 12 (discriminants, tout rang, G(T) connexe).** det N_far ≡ τ(G(T)) et det K_far ≡ 35·det(G(T) + 4I)
+modulo les carrés rationnels. *Preuve.* det N_far ≡ det(N_0 ∩ E(Q^boule)) ≡ det 63(9L + J) ≡ τ. Le réseau des
+étoiles a pour Gram K = 7L − L² + 2J − D, de pseudo-déterminant (15/7)·τ·det(G + 4I), et pour relations les
+différences de couches (déterminant 432) ; son saturé a le déterminant de Z_Λ, égal à 7^{−2g} det N_far det K_far. ∎
+(Le premier point recoupe la note 217.)
+
+**Cadre du sommet.** Les 99 sommets sont les mots de poids ≤ 2 de F_3^7 (0, les 14 points ±e_i, les 84 racines de
+D_7). Au rang 37, les 84 résidus vivent dans un espace W de dimension 22 sur F_7 ; chaque étoile X_u (12 racines
+contenant u) a pour Gram 5J − 2(τ_u + P_m), où τ_u ∪ P_m est une réunion de cycles pairs. Son radical a dimension
+2·#{cycles de longueur multiple de 4} ; il est nul seulement pour le type (3,3) parmi les quatre types sans prisme
+(6), (4,2), (3,3), (2,2,2), qui donnent 2, 4, 0, 6. La matrice des résidus vérifie 𝔐² ≡ 0 : son espace colonne
+est un code auto-orthogonal [84, 22] contenu dans ker(H − 3) ∩ ker C.
+
+**Coût d'une exclusion exhaustive (estimation, non mesurée).** Toute base engendrant l'espace de dimension 36
+contient l'équivalent d'une boule de droite : environ 1,9·10^11 types au total, 1,4·10^10 sans prisme et connexes.
+Le test d'une étoile vaut de l'ordre de 10^6 nœuds (pic à la profondeur 4 : 620^4·7^{−6}), soit 10 à 100 ms au mieux
+par boule. Total : de l'ordre de 5 à 50 années-cœur pour la seule classe sans prisme connexe, sans compter les
+droites à torsion ni les prismes. Aucune réduction du nombre de boules n'est connue.
