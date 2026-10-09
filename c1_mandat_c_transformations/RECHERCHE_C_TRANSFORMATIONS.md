@@ -954,3 +954,112 @@ sur 21 sommets, trois positifs), sans témoin trouvé. Aucun témoin sur un surv
 extérieur de bloc B : dZ′(s) = dZ(s) − [s ∈ B], r′(s,t) = r(s,t) − [s,t ∈ B], dZ′(z) = 14 − |B|, r′(z,s) = κ_B(s), et 70 sommets
 dehors. Sur le support 4 (survivant), 5 blocs sur 60 tirés au hasard sont éliminés ainsi, dont 4 avec w_z ≠ 0, c'est-à-dire
 par une information que l'étage 1 ne voit pas (`parabola_ext.py`). Non exploité à ce stade.
+
+## 18. Les survivants : niveau 2, lemme C (sommet d'un triangle), moteur d'étoile, coquille (9 octobre, noté à 23:08 UTC)
+
+Ordre de l'utilisateur : étudier en détail les supports qui survivent, avec un solveur et des certificats, pour voir comment
+ils meurent et pourquoi. Point de départ : 4581 supports ouverts, 941 tués par les lemmes A et B (§17), 3640 restants.
+Le crible linéaire complet a été arrêté à 1766 supports sur 4581 (326 tués, 326 certificats exacts de Farkas).
+
+### 18.1 Niveau 2 : les lemmes A et B appliqués à S ∪ {z} (`level2.py`, `level2_cert.py`, `level2_check.py`)
+
+Pour un sommet extérieur z de bloc B : d_z = 14 − |B|, κ_B(s) = (1 si s ∈ B, 2 sinon) − |N(s) ∩ B| (voisins communs de z et s
+hors de S). Pour tout (w, a) entiers et tout poids entier h de z :
+
+    Φ_{S∪z}((w,h), a) = Φ_S(w, a) − (w·b − a)(w·b − a − 1) + d_z h² + h (2 w·κ_B − (2a+1) d_z)  ≥ 0 .
+
+Un bloc est impossible si cette quantité est < 0 pour un (w, a) d'un réservoir de couples presque serrés (Φ_S ≤ 14) et le
+meilleur h entier ; s'y ajoutent les deux formes du lemme B sur S ∪ {z}. (Codex a écrit le même filtre de son côté, note 250.)
+
+Mesures sur 63 supports qui passent le crible linéaire (9 par valeur de δ) :
+- blocs retirés : 45 %, 34 %, 25 %, 14 %, 15 %, 5 %, 8 % pour δ = 3, …, 9 ;
+- **8 supports meurent** (δ = 3 : 2, δ = 4 : 3, δ = 5 : 2, δ = 7 : 1) : 5 parce qu'une paire {s, t} avec r(s,t) ≥ 1 n'a plus aucun bloc,
+  3 parce que le crible linéaire sur les blocs restants devient infaisable ;
+- les 5 certificats « paire sans bloc » sont vérifiés par un programme indépendant (`level2_check.py` : il n'utilise que la liste
+  d'arêtes, énumère lui-même tous les blocs par la paire — 610, 555, 1738, 675, 670 blocs — et évalue chaque témoin sur la matrice
+  29 × 29) : 5 valides ;
+- un réservoir trois fois plus riche retire 1 % de blocs de plus et ne tue aucun support de plus (24 supports) ;
+- crible linéaire « levé » (un bloc fixé, les 70 autres sommets portent un bit d'adjacence à z, `lift.py`) : sur 18 blocs du
+  support 4, 18 restent faisables ;
+- solveur en entiers générique (HiGHS) sur l'étape 1 du support 4 : quatre essais de 25 minutes, ni solution ni preuve.
+
+Lecture des 5 morts : la paire sans bloc est toujours une arête {p, x}, p positif, x voisin de p dans N **dont le triangle
+sort du support** ; le sommet extérieur z du triangle {p, x, z} n'a aucun voisinage possible. D'où le lemme suivant.
+
+### 18.2 Lemme C (sommet d'un triangle par un positif) — preuve à la main
+
+Notations pour un positif p : N_p = N ∩ Γ(p) (8 sommets), Z_p = Γ(p) ∖ N_p (6 sommets, tous hors de S). Γ(p) est un
+couplage parfait ; t_p = nombre d'arêtes dans N_p ; u_p = 8 − 2t_p sommets de N_p sont couplés à un sommet de Z_p (leur
+« sommet de triangle »), et il reste t_p − 1 arêtes dans Z_p. r(p,q) = 2 − c_pq = nombre de voisins communs de p et q hors de S.
+
+**Bijection.** v ↦ Γ(v) ∩ Γ(p) est une bijection entre les 84 non-voisins de p et les 84 paires non adjacentes de Γ(p)
+(μ = 2 donne deux éléments, λ = 1 les rend non adjacents, μ = 2 donne l'injectivité, et C(14,2) − 7 = 84).
+
+Soit k_p le nombre de sommets de S, non voisins de p, **sans voisin dans N_p** (leur paire est dans Z_p), et
+n₀(p) = (16 − t_p) − k_p ≥ 0 le nombre de sommets extérieurs dont la paire est dans Z_p (il y a 16 − t_p paires non adjacentes
+dans Z_p). Avec c_p = c_pq + c_pq′ et i_p = Σ_{y ∈ S∖Q_p} C(e(y, N_p), 2) : n₀(p) = 5 + 2c_p − 3t_p − i_p = Φ_S(1_{Q_p}, 1)/2
+(vérifié sur les 13 743 positifs du registre ; n₀ ≥ 0 est l'inégalité de la note 246 de Codex).
+
+**Lemme C.**   u_p − r(p,q) − r(p,q′)  ≤  2 n₀(p),   c'est-à-dire   2 k_p ≤ 24 + r(p,q) + r(p,q′)   (ou encore 2 i_p ≤ 6 + 3c_p − 4t_p).
+
+*Preuve.* Soit x ∈ N_p non couplé dans N_p et z son sommet de triangle. Si z est adjacent à un autre positif q, z est l'un
+des r(p,q) voisins communs extérieurs de p et q : au plus r(p,q) + r(p,q′) sommets de triangle sont dans ce cas. Soit z un
+sommet de triangle adjacent à p seul parmi les positifs. Comme z est un zéro du vecteur, |Γ(z) ∩ N| − |Γ(z) ∩ P| = 4, donc
+|Γ(z) ∩ S| = 6. Les voisins de z sont p, x et 12 non-voisins de p, de paires {z, b} avec b ∈ Γ(p) ∖ {z, x} : 7 avec b ∈ N_p
+et **5 avec b ∈ Z_p**. De ces 5, au plus 4 sont dans S (les 6 voisins de z dans S comptent p et x). Donc z a au moins un voisin
+extérieur de paire dans Z_p. Chacun de ces n₀(p) sommets a exactement 2 voisins dans Z_p. En comptant les arêtes :
+u_p − r(p,q) − r(p,q′) ≤ 2 n₀(p). ∎
+
+**Mesure (`lemmaC.py`, `lemmaC2.py`).** 567 supports sur 4581 violent le lemme C, dont **297 que les lemmes A et B ne tuaient
+pas** (δ = 3 : 27, 4 : 72, 5 : 90, 6 : 67, 7 : 40, 8 : 1). Il explique 7 des 8 morts du niveau 2 de l'échantillon. Le test
+est une ligne de calcul sur le support. La forme raffinée (le sommet de triangle de x ne peut voir q que si x ≁ q) ne tue
+aucun support de plus.
+
+### 18.3 Moteur d'étoile : les six voisins extérieurs d'un positif (`star.py`, `star_batch.py`, `star_check.py`)
+
+Le graphe induit sur S ∪ Z_p (34 sommets) est **connu** dès que les six voisinages B_z sont choisis (les adjacences dans Z_p sont
+imposées par le couplage de Γ(p)). Modèle exact (CP-SAT, 150 booléens) : tailles, lignes Σ_z a[z][s] = r(p, s), règles de bloc,
+deux emplacements partagent au plus un sommet hors p (aucun s'ils sont couplés), λ/μ dans S ∪ Z_p. Boucle : résoudre ; chercher sur
+les 34 sommets un témoin (w, a) du lemme A ; ajouter Φ(w, a) ≥ 0 comme contrainte ; recommencer.
+
+- Sur l'échantillon de 63 : exactement les 8 morts du niveau 2, en 0,9 s par support en moyenne (au lieu de 30 s).
+- **Sur les 3640 supports qui passent A et B : 366 ont un positif sans étoile** — 294 par le lemme C, **72 autres** (51 sans aucune
+  coupe, 21 avec 1 à 29 coupes du lemme A). Les 3 supports où le solveur n'a pas conclu sont tués par le lemme C.
+- Le support 4656, seul tué par le crible linéaire sans témoin des lemmes A, B, est tué ici (positif A, 3 coupes).
+- Vérification sans solveur (`star_check.py`, énumération exhaustive de toutes les étoiles, sans réduction de symétrie) :
+  support 4688, positif A : 307 200 étoiles complètes, toutes réfutées par l'unique coupe ; support 664 : 414 720 étoiles, toutes
+  réfutées par 2 coupes. Les 70 autres vérifications tournent (environ 6 minutes chacune) ; tant qu'elles ne sont pas finies, ces
+  72 morts sont des verdicts de solveur.
+
+**Pourquoi les 51 sans coupe meurent** (lecture du support 3344, positif A, par un ensemble minimal de sommets, `star_core.py`) :
+t_p = 2, l'autre positif q a ses deux voisins communs avec p hors de S (q ↔ une paire {z_a, z_b} de Z_p), et l'ensemble minimal est
+exactement q et ses 8 voisins N_q. Ces 8 sommets demandent 10 places dans les six blocs ; un bloc contenant q en reçoit au
+plus 1 (λ = 1), un bloc sans q au plus 2 (μ = 2), et au plus 1 s'il est couplé à un bloc contenant q : il faut donc 1 + 1 + 4·2, les
+deux blocs de q sont des sommets de triangle, et chaque autre bloc reçoit exactement 2 sommets de N_q. Les degrés du graphe des
+paires de Z_p sont alors forcés à (5, 5, 3, 3, 4, 4) ; les deux emplacements couplés (degré 4, non reliés entre eux) doivent voir les
+quatre autres, ce qui donne degré 4 à un emplacement qui doit avoir degré 3. C'est un comptage de degrés, comme le lemme C, un cran
+plus loin.
+
+### 18.4 Coquille : tous les voisins extérieurs des trois positifs (`shell.py`, `shell_loop.py`, `shell_small.py`)
+
+Modèle exact sur S ∪ (voisins extérieurs des positifs) : 46 sommets quand deux positifs n'ont aucun voisin commun extérieur.
+Tous les voisins d'un positif y sont, donc les comptages de voisins communs avec un positif sont des **égalités**. Inconnues : les
+voisinages et les adjacences entre les 18 sommets.
+
+- Support 4 (δ = 3) et support 17 (δ = 6), deux survivants de tout ce qui précède : le solveur trouve une coquille en 10 à 160 s,
+  et **chaque coquille trouvée est réfutée par le lemme A** (a = 0, Φ = −2 après réduction, 4 à 25 sommets pondérés). La boucle de
+  coupes n'a pas fermé : environ 300 coupes en 50 minutes sur chacun des deux supports, et le solveur trouve encore une coquille.
+- Les témoins ne sont pas locaux : le dépassement (2 sur un budget de 32 à 70) est réparti sur une vingtaine de sommets.
+
+### 18.5 Bilan
+
+| étape | tués | restants |
+|---|---|---|
+| registre ouvert de Codex | | 4581 |
+| lemmes A et B (§17) | 941 | 3640 |
+| lemme C (preuve à la main) | 297 | 3343 |
+| moteur d'étoile, hors lemme C (verdict de solveur, vérification exhaustive en cours) | 72 | 3271 |
+
+Restants par δ : 93, 257, 586, 855, 819, 520, 141 pour δ = 3, …, 9. Toutes les morts se lisent autour d'un seul positif. Les 3271
+restants passent tous les tests autour d'un positif ; au niveau de la coquille, chaque configuration produite par le solveur viole
+le lemme A, sans preuve finie pour l'instant. Aucun rang n'est exclu.

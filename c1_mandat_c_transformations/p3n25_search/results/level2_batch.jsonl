@@ -1,0 +1,63 @@
+{"id": 2503, "delta": 3, "blocks": 22164, "C1": 311, "C2": 2462, "P": 10186, "left": 10073, "lp": "infeasible (uncovered pair)", "t": 24}
+{"id": 561, "delta": 3, "blocks": 22373, "C1": 0, "C2": 1526, "P": 12001, "left": 9714, "lp": "feasible", "t": 33}
+{"id": 469, "delta": 3, "blocks": 23744, "C1": 0, "C2": 1477, "P": 12689, "left": 10418, "lp": "feasible", "t": 35}
+{"id": 530, "delta": 3, "blocks": 23996, "C1": 0, "C2": 1449, "P": 10724, "left": 12446, "lp": "feasible", "t": 36}
+{"id": 491, "delta": 3, "blocks": 23950, "C1": 0, "C2": 1449, "P": 9377, "left": 13572, "lp": "feasible", "t": 37}
+{"id": 991, "delta": 3, "blocks": 23784, "C1": 0, "C2": 1610, "P": 9201, "left": 13526, "lp": "feasible", "t": 38}
+{"id": 24, "delta": 3, "blocks": 24990, "C1": 0, "C2": 1232, "P": 6731, "left": 17300, "lp": "feasible", "t": 42}
+{"id": 100, "delta": 3, "blocks": 24428, "C1": 0, "C2": 1078, "P": 2718, "left": 20709, "lp": "feasible", "t": 48}
+{"id": 653, "delta": 3, "blocks": 23126, "C1": 201, "C2": 1932, "P": 11474, "left": 10545, "lp": "infeasible", "t": 32}
+{"id": 2608, "delta": 4, "blocks": 24890, "C1": 201, "C2": 1870, "P": 9926, "left": 13844, "lp": "infeasible (uncovered pair)", "t": 27}
+{"id": 948, "delta": 4, "blocks": 26294, "C1": 0, "C2": 1330, "P": 7953, "left": 17333, "lp": "feasible", "t": 46}
+{"id": 994, "delta": 4, "blocks": 26580, "C1": 0, "C2": 1330, "P": 8049, "left": 17523, "lp": "feasible", "t": 44}
+{"id": 4688, "delta": 4, "blocks": 25754, "C1": 379, "C2": 2261, "P": 16354, "left": 8685, "lp": "infeasible (uncovered pair)", "t": 27}
+{"id": 1047, "delta": 4, "blocks": 26603, "C1": 0, "C2": 1330, "P": 7332, "left": 18354, "lp": "feasible", "t": 47}
+{"id": 4713, "delta": 4, "blocks": 26630, "C1": 385, "C2": 2395, "P": 5129, "left": 19677, "lp": "feasible", "t": 51}
+{"id": 197, "delta": 4, "blocks": 28139, "C1": 0, "C2": 1204, "P": 6081, "left": 20966, "lp": "feasible", "t": 52}
+{"id": 463, "delta": 4, "blocks": 27286, "C1": 0, "C2": 1085, "P": 2486, "left": 23736, "lp": "feasible", "t": 51}
+{"id": 2588, "delta": 4, "blocks": 24981, "C1": 201, "C2": 1820, "P": 6969, "left": 16507, "lp": "infeasible (uncovered pair)", "t": 27}
+{"id": 1054, "delta": 5, "blocks": 25683, "C1": 0, "C2": 1169, "P": 8441, "left": 16486, "lp": "feasible", "t": 43}
+{"id": 1082, "delta": 5, "blocks": 27454, "C1": 0, "C2": 1148, "P": 7747, "left": 18902, "lp": "feasible", "t": 47}
+{"id": 4070, "delta": 5, "blocks": 28207, "C1": 509, "C2": 2589, "P": 7408, "left": 18761, "lp": "infeasible", "t": 34}
+{"id": 493, "delta": 5, "blocks": 25025, "C1": 0, "C2": 875, "P": 2701, "left": 21701, "lp": "feasible", "t": 47}
+{"id": 5356, "delta": 5, "blocks": 28627, "C1": 529, "C2": 2756, "P": 6992, "left": 19451, "lp": "infeasible (uncovered pair)", "t": 30}
+{"id": 4706, "delta": 5, "blocks": 27910, "C1": 427, "C2": 2270, "P": 3902, "left": 22214, "lp": "feasible", "t": 56}
+{"id": 2922, "delta": 5, "blocks": 31536, "C1": 411, "C2": 2285, "P": 5402, "left": 24180, "lp": "feasible", "t": 62}
+{"id": 201, "delta": 5, "blocks": 29847, "C1": 0, "C2": 840, "P": 1279, "left": 27749, "lp": "feasible", "t": 61}
+{"id": 3629, "delta": 6, "blocks": 29409, "C1": 477, "C2": 1958, "P": 16538, "left": 12241, "lp": "feasible", "t": 42}
+{"id": 1042, "delta": 5, "blocks": 29798, "C1": 0, "C2": 1134, "P": 7935, "left": 20876, "lp": "feasible", "t": 53}
+{"id": 602, "delta": 6, "blocks": 27551, "C1": 0, "C2": 735, "P": 3382, "left": 23525, "lp": "feasible", "t": 53}
+{"id": 185, "delta": 6, "blocks": 30948, "C1": 0, "C2": 714, "P": 3048, "left": 27298, "lp": "feasible", "t": 62}
+{"id": 53, "delta": 6, "blocks": 29868, "C1": 0, "C2": 539, "P": 140, "left": 29189, "lp": "feasible", "t": 65}
+{"id": 1900, "delta": 6, "blocks": 27618, "C1": 82, "C2": 890, "P": 3348, "left": 23525, "lp": "feasible", "t": 53}
+{"id": 521, "delta": 6, "blocks": 29606, "C1": 0, "C2": 749, "P": 1210, "left": 27689, "lp": "feasible", "t": 61}
+{"id": 48, "delta": 6, "blocks": 30744, "C1": 0, "C2": 504, "P": 244, "left": 30017, "lp": "feasible", "t": 67}
+{"id": 545, "delta": 6, "blocks": 28252, "C1": 0, "C2": 644, "P": 2744, "left": 25032, "lp": "feasible", "t": 59}
+{"id": 1385, "delta": 7, "blocks": 35511, "C1": 595, "C2": 2589, "P": 7725, "left": 25749, "lp": "infeasible", "t": 43}
+{"id": 1823, "delta": 6, "blocks": 33136, "C1": 254, "C2": 1539, "P": 339, "left": 31419, "lp": "feasible", "t": 74}
+{"id": 5348, "delta": 7, "blocks": 35479, "C1": 651, "C2": 2129, "P": 3747, "left": 29928, "lp": "feasible", "t": 76}
+{"id": 3558, "delta": 7, "blocks": 33460, "C1": 381, "C2": 1594, "P": 4874, "left": 27268, "lp": "feasible", "t": 72}
+{"id": 5409, "delta": 7, "blocks": 35559, "C1": 746, "C2": 2455, "P": 5545, "left": 28108, "lp": "feasible", "t": 75}
+{"id": 3624, "delta": 7, "blocks": 30402, "C1": 273, "C2": 1169, "P": 2541, "left": 26908, "lp": "feasible", "t": 65}
+{"id": 674, "delta": 7, "blocks": 33132, "C1": 184, "C2": 1046, "P": 1965, "left": 30268, "lp": "feasible", "t": 75}
+{"id": 4051, "delta": 7, "blocks": 32443, "C1": 295, "C2": 1973, "P": 3080, "left": 27716, "lp": "feasible", "t": 68}
+{"id": 161, "delta": 7, "blocks": 31553, "C1": 0, "C2": 574, "P": 1095, "left": 29884, "lp": "feasible", "t": 66}
+{"id": 5422, "delta": 7, "blocks": 35314, "C1": 621, "C2": 2074, "P": 2965, "left": 30678, "lp": "feasible", "t": 76}
+{"id": 3649, "delta": 8, "blocks": 35025, "C1": 493, "C2": 1617, "P": 1533, "left": 32121, "lp": "feasible", "t": 75}
+{"id": 1952, "delta": 8, "blocks": 29865, "C1": 190, "C2": 773, "P": 10, "left": 29088, "lp": "feasible", "t": 65}
+{"id": 2947, "delta": 8, "blocks": 34344, "C1": 452, "C2": 1762, "P": 166, "left": 32491, "lp": "feasible", "t": 80}
+{"id": 1362, "delta": 8, "blocks": 34275, "C1": 250, "C2": 941, "P": 618, "left": 32842, "lp": "feasible", "t": 76}
+{"id": 4797, "delta": 8, "blocks": 37456, "C1": 657, "C2": 2226, "P": 611, "left": 34849, "lp": "feasible", "t": 83}
+{"id": 1516, "delta": 8, "blocks": 35321, "C1": 347, "C2": 1157, "P": 80, "left": 34099, "lp": "feasible", "t": 80}
+{"id": 597, "delta": 8, "blocks": 31830, "C1": 0, "C2": 434, "P": 628, "left": 30810, "lp": "feasible", "t": 69}
+{"id": 2992, "delta": 8, "blocks": 36953, "C1": 377, "C2": 1559, "P": 3, "left": 35391, "lp": "feasible", "t": 87}
+{"id": 49, "delta": 8, "blocks": 31975, "C1": 0, "C2": 364, "P": 262, "left": 31370, "lp": "feasible", "t": 70}
+{"id": 148, "delta": 9, "blocks": 32911, "C1": 0, "C2": 238, "P": 138, "left": 32535, "lp": "feasible", "t": 70}
+{"id": 67, "delta": 9, "blocks": 29523, "C1": 0, "C2": 238, "P": 2278, "left": 27063, "lp": "feasible", "t": 62}
+{"id": 891, "delta": 9, "blocks": 33587, "C1": 0, "C2": 378, "P": 889, "left": 32383, "lp": "feasible", "t": 70}
+{"id": 19, "delta": 9, "blocks": 32492, "C1": 0, "C2": 168, "P": 19, "left": 32305, "lp": "feasible", "t": 64}
+{"id": 4775, "delta": 9, "blocks": 37656, "C1": 622, "C2": 2037, "P": 1090, "left": 35101, "lp": "feasible", "t": 75}
+{"id": 4132, "delta": 9, "blocks": 38161, "C1": 433, "C2": 1735, "P": 661, "left": 35765, "lp": "feasible", "t": 83}
+{"id": 3496, "delta": 9, "blocks": 33791, "C1": 526, "C2": 1861, "P": 10262, "left": 22354, "lp": "feasible", "t": 54}
+{"id": 3520, "delta": 9, "blocks": 33920, "C1": 303, "C2": 865, "P": 2228, "left": 30946, "lp": "feasible", "t": 65}
+{"id": 6177, "delta": 9, "blocks": 43295, "C1": 1115, "C2": 2730, "P": 10, "left": 40555, "lp": "feasible", "t": 83}
