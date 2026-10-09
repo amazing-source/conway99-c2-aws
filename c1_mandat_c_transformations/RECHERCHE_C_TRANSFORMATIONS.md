@@ -601,3 +601,109 @@ que dans P. S₀ en exige au moins 10. Je n'ai pas de contradiction pour cette c
 Réponse de Codex (relayée par LAB, non vérifiée par moi) : le sous-cas avec sommets fantômes est couvert, S₀ exige
 au moins 2289 + 15g configurations (1⁷ ; (−1)²⁹) à support positif indépendant, g étant le nombre de fantômes ;
 une borne uniforme 2288 sur ces configurations fermerait tout S₀.
+
+## 14. S₀ : identité exacte du nombre de configurations P3/N25, pistes arithmétiques fermées, forme de Jacobi des droites (9 octobre, noté à 17:43 UTC)
+
+**Rétractation de Codex (relayée par LAB à 17:0x UTC, non vérifiée par moi).** L'annonce « S₀ exclu » est retirée : sa
+classification des supports P3/N25 supposait que les triangles des arêtes P–N et N–N restent dans le support. Énoncé
+final de sa note 245 : N est une forêt à 12 arêtes, chemins d'au plus 7 sommets, au plus une étoile K₁,₃, et au moins
+trois arêtes de N dont le triangle sort du support (δ ≥ 3) ; 5345 supports restent ouverts. **S₀ reste ouvert.**
+
+### 14.1 La minoration « au moins 10 » est une identité exacte (`s0_cert.py`, certificat `s0_cert_N32_b9.json`)
+
+Dans S₀, avec les sept paramètres (Θ₄[26/9], Θ₁[23/9], Θ₂[20/9], Θ₃[18/9], Θ₄[17/9], Θ₁[14/9], Θ₂[11/9]), le certificat
+de Farkas exact de « Ξ₂[104/9] ≤ 9 est impossible » n'utilise que six lignes, avec les multiplicateurs 1, 1, 2, 4, 1, 7,
+et leur somme est identiquement −1. Autrement dit :
+
+    Ξ₂[104/9] = 10 + Θ₄[17/9] + Ξ₄[110/9] + 2·Ξ₂[95/9] + 4·Ξ₁[89/9] + (Θ₃[18/9] − 231) + 7·(Θ₁[14/9] − 99).
+
+En mots : dans S₀, le nombre de vecteurs y = 2/9 + 1_P − 1_N (|P| = 3, |N| = 25) vaut **exactement** 10, plus le nombre
+de vecteurs de O de classe 4 et de norme 34/9, plus le nombre d'ensembles réguliers de 44 sommets, plus deux fois le
+nombre de vecteurs de L₉ de classe 2 et de norme 190/9, plus quatre fois celui de classe 1 et de norme 178/9, plus le
+nombre de droites fantômes, plus sept fois le nombre de sommets fantômes. Les lignes du certificat (constante et
+coefficients sur les sept paramètres) sont dans le fichier JSON ; elles sont identiques aux troncatures 32 et 38.
+Entrées utilisées : équations modulaires du programme à neuf classes, zéros démontrés des cinq classes, égalités de
+classe du rang 43, zéros de S₀ (normes 14 à 24 en classe 0, 22 et 24 en classe 3), « 231 droites », « 99 sommets ».
+
+**Unicité du profil (preuve écrite).** Soit y ∈ L₉ de classe 2 et de norme 208/9, y = 2/9 + m, m entier. Alors Σm = −22
+et Σm² = 28. Pour un sommet v : y − 7Ee_v est de classe 1 et de norme 404/9 − 14(2/9 + m_v), qui doit être ≥ 178/9
+(minimum de la classe 1, tout rang) : m_v ≤ 1. y + 7Ee_v est de classe 3 et de norme 404/9 + 14(2/9 + m_v), qui doit
+être ≥ 22 (minimum de la classe 3, tout rang) : m_v ≥ −1. Donc m ∈ {−1, 0, 1}, et Σ(m² + m) = 6 donne exactement trois
++1 et vingt-cinq −1 : **le profil (1³ ; (−1)²⁵) vaut à tout rang**. Seule l'indépendance de P utilise S₀ : pour p, p′
+dans P, y − 7E(e_p + e_p′) est entier de norme 34 − 14·[p ~ p′], et la norme 20 est exclue dans S₀.
+
+**Validation de bout en bout du programme à neuf classes (`z9_validate.py`).** Sur un réseau qui existe,
+M₀ = K₈ ⊕ B¹⁸ (K₈ = diag(3,1,…,1)E₈, pair, déterminant 9, forme discriminante opposée à celle de A₈ ; B = [[2,1],[1,4]]),
+de rang 44 et de « rang formel » 27, les 124 valeurs de classe calculées directement (deux côtés, cinq classes)
+satisfont toutes les équations modulaires de `Model(27, 12)` : système compatible. Les équations, les exposants, le
+facteur 7^((19−r)/2) et le signe sont donc corrects.
+
+### 14.2 Rang 43 général : aucune couche n'est forcée seule (`r43gen_layers.py`)
+
+Sans hypothèse de branche (15 paramètres), le minimum exact de chacune des couches Ξ₂[104/9], Ξ₂[113/9], Ξ₂[122/9],
+Ξ₁[107/9], Ξ₁[116/9], Ξ₄[128/9], Ξ₃[117/9], Ξ₂[86/9], Ξ₂[95/9], Ξ₁[89/9], Ξ₄[110/9], Ξ₃[99/9], Ξ₃[108/9] est 0. L'objet
+garanti (P3/N25) n'existe donc que dans S₀ ; au rang 43 entier, ce programme ne garantit aucun type unique.
+
+### 14.3 Pistes arithmétiques fermées dans S₀ (calculs exacts)
+
+- **Cubique des sommets P₃ = Σ y_v³** (`s0_cubic.py`, `s0_cubic2.py`) : 14 sommes libres dans S₀ ; sur une couche à
+  coordonnées dans c/9 + {−1, 0, 1} la somme cubique est un multiple connu de l'effectif (P₃ = 11c³/81 + cν/3 + Σm³ et
+  Σm³ = Σm), mais il n'y a que 7 telles couches (classe 2 de 154/9 à 244/9, classe 1 en 178/9) et elles sont
+  indépendantes dans les 14 : aucune relation nouvelle sur les sept paramètres.
+- **Divisibilités hypothétiques** (`s0_hyp.py`) : si toutes les couches fractionnaires étaient divisibles par 3, ou
+  toutes celles des classes 1, 2, 4, S₀ serait incompatible ; la divisibilité par 8 est compatible.
+- **Système joint des 441 classes** Z/9 × F₇² (`joint_even.py`, `joint_odd.py`, `joint_all.py` ; recollement de M₀ avec
+  A₈ ⊕ N₄ en un réseau unimodulaire de rang 56) : 42 effectifs libres et 59 sommes vectorielles libres dans S₀.
+- **Intégralité exacte des sommes vectorielles, couplée aux effectifs** (`s0_sumint.py`, `s0_sumint2.py`). La
+  coordonnée en un sommet de la somme d'une couche de classe k à n vecteurs est dans kn/9 + Z, et les sommes des
+  couches déterminées sont des combinaisons rationnelles fixes de 10 sommes libres (celles des couches de O :
+  Θ₂[11/9], Θ₁[14/9], Θ₄[17/9], Θ₃[18/9], Θ₂[20/9], Θ₁[23/9], Θ₄[26/9], Θ₂[29/9], Θ₁[32/9], Θ₂[38/9]). Inconnues entières :
+  7 paramètres d'effectif et 10 parties entières ; 176 conditions. Résultat : **compatible**, y compris dans chaque
+  sous-branche où une couche libre est vide ou réduite aux sommets ou aux droites (somme nulle) : sans coclique, sans
+  sommet fantôme, sans droite fantôme, sans vecteur de classe 4 de norme 34/9, et les quatre à la fois.
+
+### 14.4 Forme de Jacobi de la configuration des droites (indice 2) (`jac_lines*.py`, `jac_rank.py`)
+
+**Fait nouveau.** Les 231 vecteurs de droite h_ℓ = √7E1_ℓ sont des vecteurs de norme 4 du réseau pair M. Donc
+
+    φ(τ, z) = Σ_ℓ Σ_{x ∈ M} q^{|x|²/2} ζ^{⟨x, h_ℓ⟩}
+
+est une forme de Jacobi de poids 22 et d'indice 2 sur Γ₀(7). Son coefficient c(n, r) = #{(x, ℓ) : |x|² = 2n,
+⟨x, h_ℓ⟩ = r} (r = somme des trois coordonnées de √7x sur ℓ) ne dépend que de (8n − r², r mod 4) ; de même, côté dual,
+c_L(N, s) = #{(y, ℓ) : y ∈ L₁, |y|² = 2N, y(ℓ) = s} ne dépend que de (8N − 7s², s mod 4) (translation par 7E1_ℓ). Les
+trois coefficients de Taylor sont 231·θ (poids 22), 0 (poids 24, car Σ_ℓ h_ℓh_ℓᵀ = 21E) et la série quartique P_T du §9
+(poids 26). Chaque couche apporte trois classes nouvelles (r ou s ∈ {0, ±1, 2}) et trois équations : **tous les
+c(n, r) et c_L(N, s) sont déterminés par θ et par la série quartique, et sont des nombres de couples, donc des entiers
+positifs.** Par rapport au §9 : les sommes sur les droites sont entières, donc la somme quartique d'une couche est liée
+à sa distribution sur {0, ±1, ±2, …} et non seulement bornée par Cauchy–Schwarz.
+
+**Dans S₀** la série quartique a exactement deux paramètres (les zéros G_L[0..12] = 0, G_M[0] = G_M[1] = 0 laissent la
+dimension 2 ; l'égalité de classe c_L(7n, s) = c(n, s) est alors satisfaite identiquement, ce qui contrôle la
+récurrence et le facteur de Fricke). En prenant pour paramètres les entiers
+
+    p = #{(x, ℓ) : x ∈ M de norme 4, ⟨x, h_ℓ⟩ = 2},      q = #{(y, ℓ) : y ∈ L₁ de norme 26, y(ℓ) = 2},
+
+tous les coefficients sont des combinaisons **entières** de 1, p, q. Premières couches :
+
+    norme 4 de M :   c(2,0) = 153930 + 6p,   c(2,±1) = 38304 − 4p,   c(2,±2) = p
+    norme 26 de L₁ : c_L(13,0) = 402696 + 6q,  c_L(13,±1) = 102648 − 4q,  c_L(13,±2) = q
+    norme 6 de M :   c(3,0) = 1305840648 − 184p + 294q,  c(3,±1) = 545782104 + 116p − 196q,  c(3,±2) = 31185504 − 20p + 49q
+    norme 30 de L₁ : c_L(15,0) = 10835664 + 24p − 12q,  c_L(15,±1) = 3160080 − 16p + 8q,  c_L(15,±2) = 50400 + 4p − 2q
+    norme 32 de L₁ : c_L(16,±2) = 266784 + 12p − 16q
+
+La positivité des 213 coefficients (troncature 42) laisse le polygone 0 ≤ p ≤ 9576, 0 ≤ q ≤ 16674 + 3p/4. Les parités
+(c(n, 2) et c(n, 0) sont pairs : involutions x ↦ h_ℓ − x et x ↦ −x sans point fixe) sont compatibles. Sans droite
+fantôme, p = 2·(nombre de prismes) et les couples (vecteur entier de norme 4, droite de somme ±1) sont exactement
+2·22596. **La forme de Jacobi ne ferme pas S₀.**
+
+**À rang quelconque** (`jac_rank.py`, simplexe exact, troncature 40 ; variables : 7 coordonnées de θ, 9 de la série
+quartique, le nombre de prismes ; contraintes : tous les c ≥ 0, c_L(N, 2) = 0 pour 7 ≤ N ≤ 10, c_L(7n, s) ≥ c(n, s),
+bornes de degré 0) : rang 35 infaisable (contrôle), **rangs 37, 39, 41, 43 faisables**. Au rang 37 les nombres forcés
+sont inchangés (380 / 1283 / 4932 / 34 523 pour les normes 14 / 16 / 18 / 20 seules).
+
+**Distribution d'un vecteur P3/N25 sur les droites.** Pour y = 2/9 + 1_P − 1_N, y(ℓ) ∈ {5/3, 2/3, −1/3, −4/3}, et
+y(ℓ) = −4/3 exactement quand ℓ porte une arête de N dont le troisième sommet est hors du support (le δ de Codex). Avec
+7 droites par sommet de P de types (p, n, n′), (p, n, o), (p, o, o′) en nombres (a, b, c) ∈ {(4,0,3), (3,2,2), (2,4,1),
+(1,6,0)}, et Σ_ℓ y(ℓ) = 0, Σ_ℓ y(ℓ)² = 208/3 : les effectifs des quatre valeurs sont **(9 − δ, 59 + 3δ, 163 − 3δ, δ)**.
+Donc δ ≤ 9, Σ_ℓ y(ℓ)³ = 478/9 − 6δ et Σ_ℓ y(ℓ)⁴ = 748/9 − 4δ. La somme des δ sur la couche est le nombre de couples
+(z, ℓ) avec z de classe 4, de norme 292/9 et z(ℓ) = −8/3 (translation par 7E1_ℓ).
