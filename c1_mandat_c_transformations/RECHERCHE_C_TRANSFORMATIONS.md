@@ -133,6 +133,15 @@ Portée pour 99 : ce mécanisme ne modifie que des arêtes de droites entièreme
 arêtes lointaines ; les autres sont dans les étoiles des sommets proches. Une bascule à 99 devrait changer des
 couplages d'étoiles, ce que le 243 ne fait jamais. Le 243 ne fournit donc pas de modèle.
 
+**Remarque 9 (re-réglures à 99, hors boule fixée).** Soit une famille de grilles d'un candidat, chacune réunion de
+trois droites d'un ensemble 𝒮 de droites disjointes, re-réglées comme ci-dessus, telle que tout sommet x touché soit
+dans g grilles de la famille, toutes par sa droite de 𝒮, et n'ait pas d'autre voisin touché. Alors g ≥ 3.
+*Preuve.* Soit r un voisin retiré de x. Un voisin non touché z de r n'est pas voisin de x, et l'équation en (x, z)
+demande que z soit voisin d'un des 2(g − 1) nouveaux voisins d de x pris dans les autres grilles. Les grilles étant
+des codes parfaits (G1), r et d ne sont pas adjacents et ont 2 voisins communs. Donc 12 − 2g ≤ 4(g − 1). ∎
+Un tel mouvement demande donc que chaque sommet touché soit dans au moins 3 grilles partageant une droite : il
+n'existe pas dans un candidat pauvre en grilles, en particulier pas sous P = 0.
+
 ## 5. Pilote local sensible au rang (`local_frames.py`) — négatif
 
 Question : les conditions à deux points sensibles au rang sur les deux repères serrés des 84 seconds voisins d'un
