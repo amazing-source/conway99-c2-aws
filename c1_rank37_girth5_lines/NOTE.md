@@ -221,3 +221,24 @@ in less than a second each (214 to 454 balanced candidates). All the COMB-ALIVE 
 a prism (K_{3,3} is impossible at every rank: the apex of a transversal edge would have two shadow points in it), so the
 ball is unique. With six components the space N0 has dimension 5; 960 candidates through a near point, and a star with
 rank(Y) <= 5 and zero row sums exists (found after 135 906 nodes). So the rank test of one star says nothing there.
+
+## State when the computations were stopped (09/10, 05:11 UTC, on the user's order relayed by the lab)
+
+Statement B is NOT complete. What is done and what is missing, profile by profile:
+
+| profile | status at the stop |
+|---|---|
+| (2,2,2) | done: 275 of 275 dead |
+| (3,3) | done: every case of the table of addendum 2 dead |
+| (2,4), large component torsion-free | done by the lab: 81 380 representative balls, all dead (lab commit d51ebbd, conway99-c1) |
+| (2,4), torsion rank 4 | done: 19 of 19 dead (`sweep_48tp_T4.log`) |
+| (2,4), torsion rank 3 | done: 71 of 71 dead (`sweep_48tp_T3.log`, clean rerun) |
+| (2,4), torsion rank 2 | 817 of 964 run: 794 dead, 23 with the residue-rank-3 sub-case left to the rank test (6 of them done, dead: `sweep_48c_first6.log`; 17 not run); 147 balls not run (`sweep_48tp_T2_partial.log`) |
+| (2,4), torsion rank 1 | lab: 2792 of 15 462 run, all dead; 12 670 balls not run |
+
+So 12 670 + 147 balls and 17 short rank tests are missing; no ball has survived anywhere. Everything is resumable from the
+logs (the drivers skip the balls already logged). Nothing is to be restarted without the user's word.
+
+Not finished either, all exploration: the (2,2,2) profile with triangles (`sweep222all.py`, 3 runs of 641 done, dead);
+the two-star rank test (`fastr2.c`, built by `make_fastr2.py`, compiled, NEVER validated and never run to the end) meant
+for the line in six grids; the count of the stars of rank <= 5 on that line.

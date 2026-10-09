@@ -1,0 +1,6 @@
+48c 0 1629 | t=2 sub-cases of residue rank >= 3: 1 dead 1 DEAD | beta=2 rho=3 rows=[[1, 0], [0, 1]]: no star at u=0 (cands 398 nodes 17309 solutions 0 timeout 0) after [0] | 0.3s
+48c 0 23498 | t=2 sub-cases of residue rank >= 3: 1 dead 1 DEAD | beta=2 rho=3 rows=[[1, 0], [0, 1]]: no star at u=0 (cands 452 nodes 57914 solutions 0 timeout 0) after [0] | 0.6s
+48c 0 11238 | t=2 sub-cases of residue rank >= 3: 1 dead 1 DEAD | beta=2 rho=3 rows=[[1, 0], [0, 1]]: no star at u=0 (cands 448 nodes 83211 solutions 0 timeout 0) after [0] | 0.9s
+48c 0 24171 | t=2 sub-cases of residue rank >= 3: 1 dead 1 DEAD | beta=2 rho=3 rows=[[1, 0], [0, 1]]: no star at u=0 (cands 214 nodes 2861 solutions 0 timeout 0) after [0] | 0.1s
+48c 0 24164 | t=2 sub-cases of residue rank >= 3: 1 dead 1 DEAD | beta=2 rho=3 rows=[[1, 0], [0, 1]]: no star at u=0 (cands 424 nodes 36100 solutions 0 timeout 0) after [0] | 0.5s
+48c 1 1629 | t=2 sub-cases of residue rank >= 3: 1 dead 1 DEAD | beta=2 rho=3 rows=[[1, 0], [0, 1]]: no star at u=0 (cands 454 nodes 27663 solutions 0 timeout 0) after [0] | 0.4s
