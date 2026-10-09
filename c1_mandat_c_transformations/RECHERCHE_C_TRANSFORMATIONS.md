@@ -907,3 +907,50 @@ certificats. Il n'exclut aucun rang : les supports restants demandent l'étage e
 13 tenseurs libres (ceux des couches de O : Θ₂[11/9], Θ₁[14/9], Θ₄[17/9], Θ₀[2], Θ₃[2], Θ₂[20/9], Θ₁[23/9], Θ₄[26/9], Θ₃[3],
 Θ₂[29/9], Θ₁[32/9], Θ₄[35/9], Θ₂[38/9]) ; les seconds moments des couches basses de L₉ (P3/N25, norme 26, etc.) en sont des
 combinaisons fixes, les mêmes en chaque sommet.
+
+## 17. Pourquoi des supports meurent : deux lemmes élémentaires (9 octobre, noté à 21:20 UTC)
+
+Demande de l'utilisateur : étudier un par un les supports tués et les survivants du criblage et en tirer un énoncé.
+Méthode : certificat de Farkas à norme ℓ¹ minimale, puis plus petit ensemble T de sommets du support sur lequel la
+relaxation est déjà infaisable (`micro2.py`, `micro5.py`, `micro6.py`). Les obstructions sont **locales** (7 à 16 sommets
+autour d'un ou deux positifs) et se ramènent à deux faits de comptage sur les sommets extérieurs.
+
+**Notations.** S un ensemble de sommets d'un srg(99,14,1,2), Z son complémentaire, A_S la matrice d'adjacence induite,
+dZ(s) = 14 − deg_S(s), et pour s ≠ t dans S : r(s,t) = (1 si s ~ t, 2 sinon) − (voisins communs de s, t dans S), le nombre de
+voisins communs hors de S.
+
+**Lemme A (parabole entière).** Pour tout vecteur entier w sur S et tout entier a :
+
+    Φ(w, a) = Σ_s (w_s² − (2a+1)w_s)·dZ(s) + 2 Σ_{s<t} w_s w_t r(s,t) + |Z|·a(a+1)
+            = wᵀ(12I + 2J − A_S − A_S²)w − (2a+1)(14·Σw − 1ᵀA_S w) + (99 − |S|)·a(a+1)   ≥ 0.
+
+*Preuve.* Pour z ∈ Z soit t_z la somme des w_s sur les voisins s de z dans S : c'est un entier. Σ_z t_z = Σ_s w_s dZ(s) et
+Σ_z t_z² = Σ_s w_s² dZ(s) + 2Σ_{s<t} w_s w_t r(s,t). Donc Φ(w,a) = Σ_z (t_z − a)(t_z − a − 1), et un entier fois le suivant est
+positif. ∎ (La version réelle est l'entrelacement ; l'intégralité des t_z ajoute le terme linéaire.)
+Cas w = 1_Q, a = 1 (tiroirs) : Σ_{s∈Q} dZ(s) − Σ_{paires de Q} r ≤ |Z| : Q a besoin d'au moins R₁ − R₂ voisins extérieurs distincts.
+Cas Q = {p} ∪ (voisins de p dans N) : c'est l'inégalité de Codex (note 246), 3t_p + X_p + W_p ≤ 5 + 2(c_pa + c_pb).
+Cas w = 1 sur p et sur quatre points de N formant deux droites {p,x₁,x₂}, {p,x₃,x₄} adjacents à p seul, w = −1 sur les deux
+autres positifs a, b, et a = 0 : **c_pa + c_pb − c_ab ≥ 2** (preuve directe : chaque voisin extérieur de a voit au plus un point
+par droite ; il en faut 4 − c_pa qui en voient deux, 4 − c_pb pour b, et il n'y a que 4 + (2 − c_ab) candidats).
+
+**Lemme B (plafond).** Soient u, v ∈ S et X un ensemble de voisins de v dans S, u ∉ X. Un sommet extérieur z adjacent à u a
+exactement 2 voisins communs avec v s'il n'est pas adjacent à v, 1 sinon. Donc
+    u ≁ v :  Σ_{x∈X} r(u,x) ≤ 2(dZ(u) − r(u,v)) + min(r(u,v), #{x ∈ X : r(v,x) = 1}) ;      u ~ v :  Σ_{x∈X} r(u,x) ≤ dZ(u) − r(u,v).
+Pour deux positifs p, q d'un support P3/N25 (t_p ≤ 3) cela s'écrit : **E_pq + I_pq ≥ 6 − 2c_pq**, où E_pq est le nombre d'arêtes
+de N joignant un voisin de p non adjacent à q à un voisin de q, et I_pq le nombre de voisins communs x de p, q dont l'arête xq
+est sur une droite intérieure au support. Deux positifs qui ont peu de voisins communs dans N doivent être reliés par
+beaucoup d'arêtes de N entre leurs voisinages.
+
+**Mesures (portable, sans solveur ; `lemmas_all.py`, `check_witnesses.py`).** Sur les 4581 supports ouverts du registre de
+Codex : un témoin (w, a) avec Φ < 0 pour 687 supports (poids dans {−2,…,2}), une violation du lemme B pour 413 (toujours avec
+u, v positifs), **941 supports éliminés par l'un des deux**, 3640 survivent aux deux. Par δ : 82/209, 155/496, 229/914,
+206/1155, 180/1054, 73/596, 16/157. Les 1100 témoins sont revérifiés par la formule close en arithmétique entière
+(`p3n25_search/lemma_witnesses.jsonl`).
+Comparaison avec le criblage linéaire (1575 supports traités à ce moment, 301 tués) : 300 des 301 ont un témoin de l'un des
+deux lemmes (5 après une recherche plus longue, poids ±2 sur deux positifs) ; il reste le support 4656 (obstruction minimale
+sur 21 sommets, trois positifs), sans témoin trouvé. Aucun témoin sur un survivant du criblage (1208 vérifiés), comme il se doit.
+
+**Niveau suivant, testé sur un cas.** Le lemme A vaut pour tout ensemble de sommets, donc pour S ∪ {z} où z est un sommet
+extérieur de bloc B : dZ′(s) = dZ(s) − [s ∈ B], r′(s,t) = r(s,t) − [s,t ∈ B], dZ′(z) = 14 − |B|, r′(z,s) = κ_B(s), et 70 sommets
+dehors. Sur le support 4 (survivant), 5 blocs sur 60 tirés au hasard sont éliminés ainsi, dont 4 avec w_z ≠ 0, c'est-à-dire
+par une information que l'étage 1 ne voit pas (`parabola_ext.py`). Non exploité à ce stade.
