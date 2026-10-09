@@ -846,11 +846,17 @@ coordonnée en v vaut (c ∓ 1)/9 + (m_v ∓ 3) ; il faut que ce soit un vecteur
 - **Droites fantômes** (classe 3, norme 28, hors les 231 droites), trois profils : (2 ; (−1)³⁵), exactement 22 par
   coclique ; (−2 ; 1² ; (−1)³³), en bijection avec les vecteurs de classe 4 et de norme 238/9 de profil (1 ; (−1)⁴⁵)
   (z = y − 7Ee_a) ; (1³ ; (−1)³⁶) avec trois positifs qui ne forment pas une droite. Donc g_ℓ = 22κ + u_A + g_ℓ^{A′}.
-- **Histogrammes des coordonnées.** Pour chaque couche, les nombres de coordonnées de valeur c/9 + j avec |j| ≥ 2 se lisent
-  sur des couches plus basses (translation par 7Ee_v), et ceux de j ∈ {−1, 0, 1} se déduisent de l'effectif, de Σm = −11c et
-  de Σm² = ν + 11c²/9. **L'histogramme complet des coordonnées de chaque couche est donc déterminé par les effectifs** ;
-  les sommes Σ_y Σ_v y_v^k de tout degré aussi. Exemple : dans la couche de classe 1 et de norme 214/9, le nombre de
-  coordonnées −2 est exactement le nombre de vecteurs de classe 2 et de norme 172/9.
+- **Histogrammes des coordonnées (forme de Jacobi des sommets, `s0_vjac.py`, `s0_vjac2.py`).** Avec Y = 9y_v, la translation
+  par 7Ee_v et le signe donnent N(c, e, Y) = N(c + 1, e + (98 + 7Y)/9, Y + 28) = N(−c, e, −Y) : 15 classes de couples, de valeurs
+  réduites Y ∈ {0, ±9} (classe 0), {−8, 1, 10}, {−7, 2, 11}, {−6, 3, 12} (classes 1, 2, 3) et {−14, −5, 4, 13} (classe 4).
+  Pour les classes 0 à 3 l'histogramme d'une couche se déduit de son effectif, de Σm et de Σm², et de couches plus basses ;
+  en classe 4 il reste un nombre libre par couche (le nombre de coordonnées −2, pair). Chaque couche des classes 1, 2, 3
+  donne donc une équation exacte « somme cubique Σ_v y_v³ = fonction des effectifs ». Dans S₀ : 40 équations, rang 12,
+  **compatibles** ; des 21 paramètres (7 effectifs, 14 sommes cubiques) il en reste 9, aucune relation entre les seuls
+  effectifs ; la positivité des 185 comptages est faisable et **ne change aucun intervalle** des sept nombres d'objets bas
+  (κ ≤ 3, g_v ≤ 22, u ≤ 290, g_ℓ ≤ 96, c₁ ≤ 36, w ≤ 48, s₄₄ ≤ 145, 10 ≤ n ≤ 300 avant congruence). Exemple de lecture : dans la
+  couche de classe 1 et de norme 214/9, le nombre de coordonnées −2 est exactement le nombre de vecteurs de classe 2 et de
+  norme 172/9.
 - **Ensemble régulier S de 44 sommets et droites** : si t droites sont contenues dans S, il y a 11 − t droites disjointes
   de S, 132 + 3t qui le coupent en un point, 88 − 3t en deux points ; donc t ≤ 11.
 
