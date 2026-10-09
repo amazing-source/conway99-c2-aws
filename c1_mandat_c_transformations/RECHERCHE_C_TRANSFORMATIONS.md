@@ -396,3 +396,63 @@ L = Z²⁴³ ∩ ker(A + 5I) est de rang 110 et de déterminant 3¹⁶⁹ ; les 
 et 3 ; [L₂ : L] = 3¹² = nombre de x ∈ L/6L dont toutes les sommes de droites sont nulles modulo 6 ; ker(Nᵀ mod 3)
 est de dimension 12 (valeur de la note 99 du dépôt c1) et entièrement dans L/3L ; ker(Nᵀ mod 2) = 0. Les étapes
 (i) à (iii) de la preuve et l'analogue de (iv) sont donc vérifiés sur un exemple qui existe.
+
+## 12. Rang 43 : les 49 classes de L₁/√7M une par une, relations exactes (9 octobre, 15:11–15:50 UTC)
+
+**Fait nouveau utilisé.** Au rang 43, M est pair, de rang 44, de déterminant 49, à plan discriminant anisotrope ;
+N₄ = O_K ⊕ O_K (O_K = entiers de Q(√−7), Gram [[2,1],[1,4]]) a la forme discriminante opposée, donc M ⊕ N₄ se recolle
+en un réseau unimodulaire pair de rang 48, et pour tout polynôme harmonique h sur la partie N₄ (degré m)
+
+    Σ_d Θ_d(τ) ϑ_{d,h}(τ) ∈ M_{24+m}(SL₂(Z)),
+
+où d parcourt les 49 classes et Θ_d est la série de la classe de L₁/√7M recollée à d (exposant = norme dans L₁ / 14).
+Les moyennes radiales redonnent le programme L₁ ; le reste est l'information classe par classe, que ni la note 177
+de Codex ni le programme de LAB n'utilisent (ils raisonnent par couche, puis par pigeonnier).
+
+**Calcul** (`w49.py`, exact, harmoniques zonaux de degré 0 à 12 avec dix pôles, 61 fonctionnelles, troncature 7).
+L'espace des solutions a 44 dimensions, égal à la dimension donnée par la formule des formes vectorielles pour la
+partie paire de la représentation de Weil du plan ; avec les 24 zéros (aucun vecteur de norme < 14 hors de √7M) et
+Θ₀[0] = 1 il reste **19 paramètres libres** : b₁, les quatre classes de chacune des normes 16, 18, 20, 22, et deux
+des quatre classes de norme 24. **Les quatre classes de norme 26 et deux classes de norme 24 sont déterminées.**
+
+Notation : la classe est repérée par (c₁, c₂) ∈ F₇² modulo signe, avec norme ≡ −4(c₁² + c₂²) mod 14 ; n[c₁,c₂](ν) est
+le nombre de vecteurs de L₁ de norme ν dans cette classe (autant dans la classe opposée). L'étiquetage réel n'est
+défini qu'à une isométrie du plan près ; l'ensemble des relations est stable par ces isométries.
+
+    n[0,1](24) − n[1,0](24) = (n[1,2] + n[1,5] − n[2,1] − n[2,6])(22) + (n[3,0] − n[0,3])(20)
+                              + (n[3,2] + n[3,5] − n[2,3] − n[2,4])(18) + (n[1,3] + n[1,4] − n[3,1] − n[3,6])(16)
+    n[2,2](24) − n[2,5](24) = (n[1,5] + n[2,6] − n[1,2] − n[2,1])(22) + (n[1,6] − n[1,1])(20)
+                              + (n[2,4] + n[3,5] − n[2,3] − n[3,2])(18) + (n[1,4] + n[3,6] − n[1,3] − n[3,1])(16)
+    n[0,2](26) = 329 + 7b₁ + 3n[1,0](24) − 2n[2,5](24) + (2n[1,2] + n[2,1] − n[2,6])(22)
+                 + (−8n[0,3] + 7n[1,1] + 5n[1,6] + 3n[3,0])(20) + (−7n[2,3] − 9n[2,4] + n[3,2] − n[3,5])(18)
+                 + (−6n[1,3] − 8n[1,4] + 7n[3,1] + 5n[3,6])(16)
+    n[2,0](26) = 329 + 7b₁ + 3n[1,0](24) − 2n[2,5](24) + (4n[1,2] + 2n[1,5] − n[2,1] − 3n[2,6])(22)
+                 + (7n[1,1] + 5n[1,6] − 5n[3,0])(20) + (−2n[2,3] − 4n[2,4] − 4n[3,2] − 6n[3,5])(18)
+                 + (10n[1,3] + 8n[1,4] − 9n[3,1] − 11n[3,6])(16)
+    n[3,3](26) = 329 + 7b₁ − 2n[1,0](24) + 3n[2,5](24) + (−n[1,2] + n[2,1] + 2n[2,6])(22)
+                 + (7n[0,3] − 8n[1,1] + 3n[1,6] + 5n[3,0])(20) + (−7n[2,3] + n[2,4] − 9n[3,2] − n[3,5])(18)
+                 + (5n[1,3] − 8n[1,4] + 7n[3,1] − 6n[3,6])(16)
+    n[3,4](26) = 329 + 7b₁ − 2n[1,0](24) + 3n[2,5](24) + (−3n[1,2] + 2n[1,5] − n[2,1] + 4n[2,6])(22)
+                 + (7n[0,3] − 5n[1,6] + 5n[3,0])(20) + (−2n[2,3] − 4n[2,4] − 4n[3,2] − 6n[3,5])(18)
+                 + (−11n[1,3] + 8n[1,4] − 9n[3,1] + 10n[3,6])(16)
+
+Contrôle : la somme des quatre dernières, doublée, est l'identité (1) de la note 177
+(a₁₃ = 2632 + 56a₇ + 7a₁₀ + 2a₁₁ + a₁₂ − 2a₈ − 16a₉), et b₂ = 1000 − 8b₁ + 25a₈ + 11a₉ + 8a₁₀ + 3a₁₁ + a₁₂.
+
+**Conséquences.**
+(a) Si une seule des normes 16, 18, 20, 22, 24 est présente, ses quatre classes se groupent en deux paires de
+classes de même effectif : (u, v, v, u).
+(b) Normes 18 et 26 seules (avec x₁, x₂ les deux effectifs de classe de la norme 18) : chaque classe de norme 26
+contient exactement 329 + 7b₁ − 8(x₁ + x₂) vecteurs ; donc x₁ + x₂ ≤ (329 + 7b₁)/8, et sans racine la norme 26 est
+toujours présente (329 est impair).
+(c) Scénario S₀ (aucune racine, aucun vecteur de norme 16 à 24) : toute la série thêta est déterminée, b₂ = 1000,
+b₃ = 10 648 712, a₁₃ = 2632, et les vecteurs de chaque norme sont également répartis entre les 8 classes de leur
+cercle : 329 par classe en norme 26, 9338 en norme 30, 35 287 en norme 32, etc. Test d'intégralité (`s0_rank43.py`) :
+a_n est un entier positif divisible par 8 pour tout n ≤ 84 non multiple de 7. S₀ n'est donc pas exclu par
+l'arithmétique des classes ; il faudrait la géométrie des 538 vecteurs de norme 4 non triangulaires de M et des
+329 vecteurs de norme 26 par classe.
+(d) Les quatre inégalités n[·](26) ≥ 0 sont des bornes par classe que les sommes radiales ne donnent pas.
+
+**Borne supérieure tentée, sans effet.** Dans le programme à neuf classes (§11), le maximum du nombre de cocliques
+de taille 22 au rang 37 est 93 696 (`z9max.py`) : aucune majoration utile des vecteurs de Fano par cette voie
+(un vecteur de Fano est un couple ordonné de cocliques de taille 22 se coupant en 15 points, note 192).
