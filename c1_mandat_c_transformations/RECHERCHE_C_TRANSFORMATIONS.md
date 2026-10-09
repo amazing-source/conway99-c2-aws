@@ -465,3 +465,24 @@ qui sont les sommes des 20 classes de normes 16 à 24. Donc : **au rang 43, la s
 chaque classe de norme 26, et de toute couche plus haute de toute classe, est une combinaison linéaire fixe des
 sommes vectorielles des classes de normes 16 à 24 ; s'il n'y a aucun vecteur de norme 16 à 24, la somme des
 vecteurs de chaque norme dans chaque classe non nulle est le vecteur nul.**
+
+**Seconds moments par classe au rang 43 (`w49evenk.py`, `s0_tensor.py`, exact ; fin 15:47 UTC).** Pour un tenseur
+symétrique sans trace S sur l'espace propre, P(y) = yᵀSy, notons [d, ν] = Σ P(y) sur les vecteurs de norme ν de la
+classe d (même valeur pour −d), T_ν = somme sur toute la couche de norme ν de L₁, A₄ et A₆ les sommes de P(√7x) sur
+les couches de norme 4 et 6 de M, R la même somme sur les racines. Espace de poids 24 : avec les zéros il reste 24
+tenseurs libres (R, les 20 classes de normes 16 à 24, trois des quatre classes de norme 26). Relations :
+
+    [(0,2),26] + [(2,0),26] − [(3,3),26] − [(3,4),26] = −[(0,1),24] − [(1,0),24] + [(2,2),24] + [(2,5),24]
+                                                        + [(0,3),20] + [(3,0),20] − [(1,1),20] − [(1,6),20]
+    A₄ = −½T₂₆ − (3/2)T₂₄ − 2T₂₂ − (7/2)T₂₀ − 3T₁₈ − 6T₁₆ − 52R            (forme radiale)
+    A₆ = 68([(3,3),26] + [(3,4),26]) − 2([(0,1),24] + [(1,0),24]) + 66([(2,2),24] + [(2,5),24]) − 396·(les quatre de norme 22)
+         − 1870([(0,3),20] + [(3,0),20]) − 1938([(1,1),20] + [(1,6),20]) − 7062·(norme 18) − 20592·(norme 16) − 26852R
+
+Dans la branche sans norme 16 à 24 : [(0,2)] + [(2,0)] = [(3,3)] + [(3,4)] en norme 26, A₄ = −½T₂₆ − 52R, et
+A₆ = 17T₂₆ − 26852R. Sans racine (S₀) il reste **un seul tenseur libre** T (celui de la couche de norme 4 de M,
+c'est-à-dire des 538 vecteurs non triangulaires, les droites formant un 2-design) : couche de norme 26 de L₁ :
+−14T ; couches de M de normes 4, 6, 8, 10, 12 : T, −34T, 464T, −2412T, −15108T. En tenseurs complets, pour chaque
+couple de classes orthogonales C, C′ de norme 26 :  Σ_{z ∈ C ∪ C′} zzᵀ = 560E − (7/2)F_ex, où F_ex = Σ xxᵀ sur les 538
+vecteurs non triangulaires (traces : 17108 des deux côtés). Les positivités de toutes les couches jusqu'à la norme
+160 laissent aux valeurs propres de T l'intervalle [−48,9 ; 111,1] : **l'isotropie n'est pas forcée**, et les
+congruences modulo 49 des deux membres concordent. Le degré 2 ne ferme donc pas cette branche.
