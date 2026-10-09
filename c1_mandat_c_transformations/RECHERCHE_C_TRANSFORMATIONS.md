@@ -271,3 +271,19 @@ certificat exact vérifié. Contrôle : rang 35 infaisable, certificat sur a₇ 
 et a₉, a₁₀, a₁₁ ≥ 0. Avec les deux quartiques, troncatures 40 et 84 : **faisable aux rangs 37, 39, 41 et 43**
 (points exacts). Les réponses « infaisable, marge −1 » du solveur flottant aux troncatures ≥ 18 étaient des
 artefacts d'arrondi (coefficients jusqu'à 7²¹ dans une même ligne).
+
+**Reprise en arithmétique exacte (jusqu'à 12:59 UTC, `exact_lp.py`).** La résolution finale est remplacée par un
+simplexe en fractions sur le système de Farkas ; il rend un point exact vérifié sur chaque inégalité, ou un
+certificat exact vérifié. Contrôle : rang 35 infaisable, certificat sur a₇ ≤ 990, 7a₇+8a₈ ≤ 55440, b₁ ≤ 44, b₃, b₄
+et a₉, a₁₀, a₁₁ ≥ 0. Avec les deux quartiques, troncatures 40 et 84 : **faisable aux rangs 37, 39, 41 et 43**
+(points exacts). Les réponses « infaisable, marge −1 » du solveur flottant aux troncatures ≥ 18 étaient des
+artefacts d'arrondi (coefficients jusqu'à 7²¹ dans une même ligne).
+
+**Réponse de LAB à la question posée (message du 9 octobre, daté 13:25 UTC par LAB).** Non : avec son simplexe
+exact et les bornes uniformes de Codex sur les vecteurs catalogués de normes 6, 8, 10 (45 964, 3 371 634,
+34 087 368), LAB a placé chaque somme quartique inconnue à l'une ou l'autre extrémité de son intervalle : les 64
+coins sont faisables au rang 37 (troncatures 14 et 20), et l'ensemble des valeurs faisables est convexe. Les sommes
+exactes du catalogue ne peuvent donc pas rendre le rang 37 infaisable dans ce programme linéaire. Raison : quatre
+paramètres libres par série, et les vecteurs non catalogués, nombreux au rang 37, portent un jeu proportionnel à
+leur nombre. Fichiers de LAB : conway99-c1, branche lab/theta-lp-2026-10-08, `code/lab_theta_lp_2026-10-08/lap_harm/`.
+**Cette piste est fermée sous cette forme.**
