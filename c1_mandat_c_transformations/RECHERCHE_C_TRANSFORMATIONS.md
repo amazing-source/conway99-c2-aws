@@ -333,3 +333,51 @@ dichotomie ; valeurs identiques aux troncatures 40, 60 et 84. Chaque valeur est 
 
 Ces nombres recoupent les notes 177 (identité 2a₈ + 16a₉ + a₁₃ = 2632 + …) et 192 (b₂ ≥ 968 par les cocliques) de
 Codex ; l'apport est l'outil (une question = quelques secondes, réponse exacte) et la ligne « supports minimaux ».
+
+## 11. Programme thêta à neuf classes (recollement en 3 séparé) : construit, validé, sans gain (9 octobre, 14:23–15:10 UTC)
+
+**Fait nouveau utilisé.** La partie 3 du recollement du réseau propre est Z/9 (engendrée par 7Ee_v), et chaque classe
+a sa propre série thêta. Côté M : O = √7E(Z⁹⁹), classe k = Σψ mod 9, Θ_k = nombre de vecteurs de classe k par norme
+(θ_M = Θ₀ + 2Θ₃). Côté L : L₉ = vecteurs propres dont toutes les coordonnées sont ≡ c/9 mod 1, classe c, Ξ_c
+(θ_{L₁} = Ξ₀ + 2Ξ₃). Les programmes antérieurs (notes 167–168 ; `theta_pi.py` de LAB, recollement avec A₈) mélangent
+ces classes ; LAB avait noté le 8 octobre que l'information de classe était la seule non utilisée.
+
+**Construction.** Avec A₈ (même forme discriminante au signe près), Lam = {(x, a) : classe(x) = classe(a)} est pair, de
+rang 52, de niveau 7, et Π = √7·Lam^# = {(y, √7a′) : classe(y) = classe(a′)}. Pour tout harmonique zonal Z_m sur la
+partie A₈ (degré m pair, pôle e₁ − e₂ ou e₁ − (1/9)1) :
+
+    g_m = Σ_k w_k Θ_k(τ) ϑ_{k,m}(τ) ∈ M_{26+m}(Γ₀(7)),    ĝ_m = 7^{m/2} Σ_c w_c Ξ_c(τ) ϑ_{c,m}(7τ) = −7^{(19−r)/2} g_m|W₇,
+
+avec w₀ = 1, w_k = 2, et ϑ_{k,m} la série de la classe k de A₈^# pondérée par Z_m. Le cas m = 0 seul est le
+programme de LAB ; les degrés 0, 4, 6 (deux pôles), 8 (deux pôles) séparent les cinq classes paires (la matrice 6 × 5
+des ϑ est de rang 5 en τ = ρ, i et en un point générique ; le degré 2 est identiquement nul, S₉ étant irréductible).
+
+**Contrôles** (`a8.py`, `z9theta.py`, `z9_test.py`, arithmétique exacte, python-flint) :
+classe 0 + 2·classe 3 de A₈^# = E₄ au degré 0, = 0 aux degrés 4, 6, 10 (S₈ = S₁₀ = S₁₄ = 0), = 144Δ au degré 8 ;
+sous-cas « classes 1, 2, 4 vides et classe 3 = classe 0 » : exactement 15 paramètres = dim M₂₂(Γ₀(7)) ;
+système complet : 71 paramètres (95 moins 24 inconnues de bord de troncature), égal à la dimension donnée par la
+formule des formes vectorielles pour la représentation de Weil paire de Z/9 induite à SL₂(Z) ; stable de N = 24 à 48.
+
+**Entrées démontrées** (aucune hypothèse sur le graphe). Côté L : classe 0 : normes 2 à 12 vides ; classe 3 : normes
+< 22 ; classe 1 : normes < 178/9 (avec y = 1/9 + m, Σm = −11, Am = −2 − 4m : tout sommet négatif a besoin d'une masse
+positive voisine ≥ 2, ce qui exclut Σm² ≤ 19 cas par cas) ; classe 2 : normes < 154/9, l'égalité étant exactement une
+coclique de Hoffman de taille 22 ; classe 4 : normes < 220/9, l'égalité étant un ensemble de 44 sommets 4-régulier à
+degré extérieur 8. Côté M : 99 sommets en classe 1 (norme 28/9), 693 arêtes en classe 2 (norme 40/9), 231 droites en
+classe 3, racines seulement en classe 0, 8316 différences en classe 0 (norme 6), et les bornes connues sur a_n, b_n.
+Inégalités croisées Ξ_k[7e] ≥ Θ_k[e]. Il reste 18 paramètres libres (7 dans le programme L₁).
+
+**Résultat** (`z9lp.py`, `z9q.py`, `z9cond.py`, simplexe rationnel exact, N = 32, inégalités jusqu'à l'exposant 23).
+Rang 35 : infaisable avec a₇ ≤ 990, faisable sans, comme dans le programme L₁. Rangs 37, 39, 41, 43 : **faisables**.
+Nombres forcés identiques à ceux du programme L₁ aux rangs calculés (380 au rang 37, 2367 au rang 39 ; b₂ = 462 et
+aucune norme 22 fractionnaire forcée). En ajoutant ensemble huit absences (pas de coclique de taille 22, pas
+d'ensemble régulier de 44 sommets, pas de vecteur de classe 1 de norme 178/9, pas de norme 22 fractionnaire, pas de
+sommet fantôme, pas de vecteur de M de classe 2 de norme 22/9 ni de classe 4 de norme 34/9, pas de racine) : les
+quatre rangs restent faisables. La séparation des classes en 3 n'apporte donc rien au degré 0 ; les 13 paramètres de
+la partie nouvelle absorbent toutes les contraintes. Cette piste est fermée au degré 0.
+
+**Variante impaire, non exécutée.** P₃(x) = Σ_v x_v³ est harmonique sur V₋₄ (son laplacien est 6·(28/63)·Σ_v x_v = 0)
+et impair, donc ses séries thêta sur les classes ±1, ±2, ±3, ±4 ne sont pas nulles : forme vectorielle parabolique de
+poids 25, quatre composantes, sans positivité mais avec des valeurs exactes par profil (norme 28 fractionnaire :
+−4/3 pour le profil A, −22/3 pour B, +14/3 pour C ; coclique de taille 22 : −770/81). Décompte : environ 60
+dimensions, 43 zéros démontrés, donc environ 17 paramètres libres ; aucune contradiction à en attendre sans majorer
+les vecteurs fantômes.
