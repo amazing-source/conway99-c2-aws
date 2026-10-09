@@ -1,6 +1,6 @@
-/* fastrD.c = fastr.c generalised: pivot block of any size D <= 4, and candidate shadows restricted to those balanced
+/* fastrD.c = fastr.c generalised: pivot block of any size D <= 5, and candidate shadows restricted to those balanced
    for NT extra vectors (balanced torsion taken as true relations; Gm must then be (M0 + sum z z^T)^(-1) over the
-   component relations AND these vectors).  Used for the sub-cases whose residue has rank 3 or 4.
+   component relations AND these vectors).  Used for the sub-cases whose residue has rank 3, 4 or 5.
    Input: u D ncomp NT limit maxnodes / quota / lay / comp / adj / K / Gm / NT vectors of length 36.
    Original header of fastr.c:
    Rank-mode exhaustive star search at rank 37 for a disconnected, triangle-free, torsion-free ball.
@@ -24,7 +24,7 @@ static int (*mem)[6]; static signed char *apex, *hs, *gd; static signed char (*h
 static int dem[36];
 static int *al[12]; static unsigned short *op[12]; static signed char (*gv[12])[10]; static int nal[12];
 static int chosen[10], partner[10], Y[10][10];
-static int rho[12], piv[12][4], Binv[12][4][4];
+static int rho[12], piv[12][5], Binv[12][5][5];
 static long long nodes = 0; static int nsol = 0, timeout = 0;
 static const int inv7[7] = {0, 1, 4, 5, 2, 3, 6};
 static inline int md(int x) { x %= 7; return x < 0 ? x + 7 : x; }
@@ -32,7 +32,7 @@ static inline int md(int x) { x %= 7; return x < 0 ? x + 7 : x; }
 /* rank increase (0, 1, 2) of the chosen set of size d (structure at index d) bordered by the row y[0..d-1], diagonal yjj;
    *istar receives a chosen index with non-zero residual when the increase is 2 */
 static inline int border(int d, const int *y, int yjj, int *istar) {
-    int r = rho[d], c[4] = {0, 0, 0, 0}, k, i;
+    int r = rho[d], c[5] = {0, 0, 0, 0, 0}, k, i;
     for (k = 0; k < r; k++) { int s = 0; for (i = 0; i < r; i++) s += Binv[d][k][i] * y[piv[d][i]]; c[k] = md(s); }
     for (i = 0; i < d; i++) { int s = y[i]; for (k = 0; k < r; k++) s -= Y[i][piv[d][k]] * c[k]; if (md(s)) { *istar = i; return 2; } }
     int s = yjj; for (k = 0; k < r; k++) s -= y[piv[d][k]] * c[k];
@@ -78,7 +78,7 @@ static void dfs(int d) {
             rho[d + 1] = rho[d] + inc; memcpy(piv[d + 1], piv[d], sizeof piv[d]); memcpy(Binv[d + 1], Binv[d], sizeof Binv[d]);
             if (inc) {
                 /* new principal block: old pivots, plus d (inc = 1) or istar and d (inc = 2); it is invertible */
-                int r0 = rho[d], r1 = rho[d + 1], M[4][8], aa, bb, ee;
+                int r0 = rho[d], r1 = rho[d + 1], M[5][10], aa, bb, ee;
                 if (inc == 2) piv[d + 1][r0] = istar;
                 piv[d + 1][r1 - 1] = d;
                 for (aa = 0; aa < r1; aa++) for (bb = 0; bb < r1; bb++) { M[aa][bb] = Y[piv[d + 1][aa]][piv[d + 1][bb]]; M[aa][r1 + bb] = (aa == bb); }
@@ -160,7 +160,7 @@ int main(int argc, char **argv) {
     FILE *f = fopen(argv[1], "r"); int i, j, k;
     if (!f) return 2;
     if (fscanf(f, "%d %d %d %d %d %lld", &U, &D, &NCOMP, &NT, &LIMIT, &MAXNODES) != 6) return 3;
-    if (D > 4 || NT > 4) { fprintf(stderr, "D <= 4 and NT <= 4 only\n"); return 4; }
+    if (D > 5 || NT > 4) { fprintf(stderr, "D <= 5 and NT <= 4 only\n"); return 4; }
     for (k = 0; k < NCOMP; k++) fscanf(f, "%d", &quota[k]);
     for (k = 0; k < 36; k++) fscanf(f, "%d", &lay[k]);
     for (k = 0; k < 36; k++) fscanf(f, "%d", &comp[k]);

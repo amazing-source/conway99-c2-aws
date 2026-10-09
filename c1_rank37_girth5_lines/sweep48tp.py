@@ -37,8 +37,10 @@ def pair_filter(adj, lay, comp, K, quota, E, rows_list, d, tag):
 
 
 def job(a):
-    s, b, line = a
+    s, b, line = a[:3]
     t0 = time.time()
+    if len(a) > 3 and a[3] and os.path.exists(a[3]):          # a second process works on the same list from the other end
+        if any(l.startswith(f"48t {s} {b} |") for l in open(a[3])): return None
     try:
         keys = [SMALL[s], big_key(line)]
         adj, lay, comp = make_ball(keys, ID); K = kmatrix(adj, lay); quota = [2, 4]
@@ -104,13 +106,19 @@ if __name__ == "__main__":
         print(f"restricted to the representatives of reps48.txt ({len(keep)} balls in all)", flush=True)
     jobs = [j for i, j in enumerate(jobs) if i % nparts == part]
     log = f"sweep_48tp_T{T}_part{part}of{nparts}.log"; done = set()
-    if os.path.exists(log):
-        for l in open(log): done.add(l.split("|")[0].strip())
-    todo = [j for j in jobs if f"48t {j[0]} {j[1]}" not in done]
+    rev = len(sys.argv) > 5 and sys.argv[5] == "rev"           # same list from the end, own log, skips what the other did
+    other = log.replace(".log", "_rev.log") if not rev else log
+    if rev: log = log.replace(".log", "_rev.log")
+    for lg in (log, other):
+        if os.path.exists(lg):
+            for l in open(lg): done.add(l.split("|")[0].strip())
+    todo = [j + (other,) for j in jobs if f"48t {j[0]} {j[1]}" not in done]
+    if rev: todo.reverse()
     print(f"torsion balls in this part: {len(jobs)}; to do: {len(todo)}", flush=True)
     out = open(log, "a"); bad = 0; n = 0
     with Pool(workers) as pool:
         for line in pool.imap_unordered(job, todo, chunksize=1):
+            if line is None: continue
             out.write(line + "\n"); out.flush(); n += 1
             if " DEAD " not in line: bad += 1; print("NOT DEAD:", line[:300], flush=True)
     print(f"(4,8) torsion with pair lemma, T={T}, part {part}/{nparts}: balls {len(todo)}, not dead {bad}", flush=True)

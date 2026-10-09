@@ -204,3 +204,20 @@ names as the restarted runs. A solver reading a file while it is rewritten sees 
 torsion runs of rank 3 and 4 of (2,4) could be affected (their logs carry totals per ball): they were discarded and
 rerun from zero. All the other logs carry one line per run; none has `cands 0` or an abnormally small search, and their
 file names were never shared with a cancelled run. Temporary files now carry the process id.
+
+**(2,4), torsion rank 4: done at 04:43 UTC (clean rerun).** 19 representative balls, 6101 sub-cases each (2850 planes x 2
+classes, 400 subspaces of dimension 3, the whole space): the pair lemma removes 5845 to 6081 of them, the orbits most
+of the rest, the search the remainder; 19 of 19 DEAD (`sweep_48tp_T4.log`).
+
+**Sub-cases with a residue of rank 3 (found at 04:03 UTC).** For torsion rank 2 the sub-case "the whole torsion plane is
+balanced" has a residue of rank 3; the driver only gave it a combinatorial test, which leaves some balls COMB-ALIVE
+(12 of the first 500). They are not survivors: in that sub-case the radical is made of true relations only, so the
+model is the torsion-free one with a non-degenerate space of dimension 3, and a star needs rank(Y) <= 3 and Y 1 = 0.
+`fastrD.c` (= `fastr.c` with a pivot block of size up to 5 and the balance filter; it reproduces `fastr.exe` exactly on
+two (2,2,2) balls: 2 167 057 and 9 138 252 nodes) and `comb48.py` apply it: the first 6 such balls are dead at vertex 0
+in less than a second each (214 to 454 balanced candidates). All the COMB-ALIVE lines go through it when the run ends.
+
+**The line in six grids is NOT decided by one star** (`sixgrid.py`, exploration). A component with one line per layer is
+a prism (K_{3,3} is impossible at every rank: the apex of a transversal edge would have two shadow points in it), so the
+ball is unique. With six components the space N0 has dimension 5; 960 candidates through a near point, and a star with
+rank(Y) <= 5 and zero row sums exists (found after 135 906 nodes). So the rank test of one star says nothing there.
