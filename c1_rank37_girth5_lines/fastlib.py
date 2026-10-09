@@ -206,7 +206,7 @@ def run_both(keys, rhos, u, limit=1, maxnodes=2000000000, tag="x", exe=None):
     body += ("0 " * 36 + "\n") * 36
     out = []
     for c0 in (1, 3):
-        path = f"fast_{tag}_{c0}.txt"
+        path = f"fast_{tag}_{c0}_{os.getpid()}.txt"
         with open(path, "w") as f: f.write(f"{u} {c0} 0 {nc} 0 {limit} {maxnodes}\n" + body)
         res = subprocess.run([exe, path], capture_output=True, text=True).stdout.strip().split("\n")
         os.remove(path)
