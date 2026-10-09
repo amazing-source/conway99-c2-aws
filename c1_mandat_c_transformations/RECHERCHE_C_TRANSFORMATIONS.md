@@ -547,3 +547,26 @@ une arête {a, b} ⊂ Y, le vecteur w + u_a + u_b est de classe 2 et de norme 40
 troisième point de la droite ab est hors de X ∪ Y, et (1⁷ ; (−1)²⁹) s'il est dans X ; on a e(X) = e(Y).
 Donc S₀ exige : Σ sur les (au plus 538) vecteurs entiers de norme 4 du nombre d'arêtes dans leur support négatif,
 plus le nombre de fantômes à support positif indépendant, au moins 4979 − 605 = 4374.
+
+**Lemme 14 (tout rang ; noté à 16:18 UTC).** Soit y = 1_X − 1_Y un vecteur propre entier binaire de norme 28
+(|X| = |Y| = 14). Alors e(X) = e(Y) ≤ 5.
+*Preuve.* L'équation propre donne d_Y(a) = d_X(a) + 4 sur X, d_X(b) = d_Y(b) + 4 sur Y, d_X(u) = d_Y(u) =: t_u dehors
+(71 sommets). Arêtes X–Y : 56 + 2e(X) = 56 + 2e(Y), donc e(X) = e(Y) = ε. Arêtes de X vers le dehors :
+Σ t_u = 140 − 4ε. Voisins communs des paires de X : 182 − ε = Σ_v C(d_X(v), 2) = σ_X + (84 + 8ε + σ_Y) + Σ_u C(t_u, 2),
+où σ compte les chemins de longueur 2 dans le support. Donc Σ_u C(t_u, 2) = 98 − 9ε − σ_X − σ_Y, et comme
+C(t, 2) ≥ t − 1, on a 98 − 9ε ≥ (140 − 4ε) − 71, soit 5ε ≤ 29. ∎
+
+**Conséquence pour S₀** (`r43full.py branch 0 ghost`). Un vecteur de classe 2, de norme 40/9, dont le support
+positif contient une arête, provient d'un vecteur entier de norme 4 de M et d'une arête de son support négatif
+(§13) : au plus 5 par vecteur entier binaire. Le minimum de Θ₂[20/9] − 693 − 5·Θ₀[2] sur le polytope de S₀ vaut 2289
+(2285 en retranchant encore 28 par sommet fantôme). Donc, **dans S₀ sans sommet fantôme, il faut au moins 2289
+vecteurs de classe 2 et de norme 40/9 à support positif indépendant**. Ceux de profil (1⁶ ; −2 ; (−1)²⁶) : si c est
+le sommet de valeur −2, x + u_c est un vecteur fractionnaire de norme 4 de M qui vaut 4/3 en c et n'est pas une
+droite ; il y en a au plus 96 d'un signe, avec au plus trois sommets à 4/3 chacun, donc au plus 288 tels vecteurs.
+Il reste **au moins 2001 vecteurs de profil (1⁷ ; (−1)²⁹) dont les sept sommets positifs sont deux à deux non
+adjacents** : P de 7 sommets indépendants, N de 29 sommets portant 28 arêtes, chaque p ∈ P ayant 8 voisins dans N,
+chaque x ∈ N autant de voisins dans P que dans N, chaque autre sommet 4 voisins de plus dans N que dans P. Pour
+une telle configuration : une droite contenue dans N donne un vecteur de O de classe 4 et de norme 34/9 (au plus
+290 dans S₀) ; quatre sommets de N portant 4 arêtes donnent un vecteur fractionnaire de norme 4 ; sept sommets de N
+portent au plus 8 arêtes. Avec des sommets fantômes (1 à 22), les vecteurs entiers non binaires ne sont pas
+bornés par le lemme 14 ; ce sous-cas reste à traiter.
