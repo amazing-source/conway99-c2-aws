@@ -829,3 +829,29 @@ y, y′ de supports (P, N), (P′, N′) et m·m′ = |P∩P′| + |N∩N′| �
 m·m′ ≡ 0 (même classe), 2 (classes opposées), 1 (classes orthogonales), 3 ou 6 (autres) modulo 7 ; jamais 4 ni 5.
 Dans S₀ : −6 ≤ m·m′ ≤ 15, donc m·m′ ∈ {−6, −5, −4, −1, 0, 1, 2, 3, 6, 7, 8, 9, 10, 13, 14, 15}, et comme n ≥ 11 > 8, deux
 vecteurs P3/N25 au moins sont dans la même classe : m·m′ ∈ {0, 7, 14} et y − y′ ∈ √7M₀.
+
+### 15.4 Profils et liens supplémentaires entre objets bas de S₀ (à la main)
+
+Principe : si y est de classe c avec y_v = c/9 + m_v, alors y ∓ 7Ee_v est de classe c ∓ 1, de norme connue, et sa
+coordonnée en v vaut (c ∓ 1)/9 + (m_v ∓ 3) ; il faut que ce soit un vecteur d'une couche existante **avec un profil permis**.
+
+- **Vecteurs fractionnaires de norme 26 : profil unique (1² ; (−1)³⁵).** Une coordonnée −2 donnerait par + 7Ee_v un vecteur de
+  classe 4 et de norme 220/9 avec une coordonnée 4/9 + 1, alors que cette couche n'a que le profil ((−1)⁴⁴). (Corrige le
+  tableau du §13, qui listait aussi des profils avec −2.)
+- **Sommets fantômes : profil unique (1⁶ ; (−1)¹⁷)**, même en présence de cocliques (même argument avec la classe 2 en
+  norme 154/9). Comptage des voisins communs : e(P) ≤ 1 et e(Q) = e(P) + 1.
+- **Vecteurs de classe 1 et de norme 178/9** (|P| = 5, |Q| = 16) : le comptage des voisins communs des paires de P donne
+  5e(P) + σ_P ≤ 8 avec e(P) ≥ 1, donc **e(P) = 1 exactement**, e(Q) = 0, et chaque sommet de Q a exactement deux voisins
+  dans P. Avec l'involution y₁ ↦ 7E(e_a + e_b) − y₁ sur l'arête unique {a, b} de P : **c₁ est pair.**
+- **Droites fantômes** (classe 3, norme 28, hors les 231 droites), trois profils : (2 ; (−1)³⁵), exactement 22 par
+  coclique ; (−2 ; 1² ; (−1)³³), en bijection avec les vecteurs de classe 4 et de norme 238/9 de profil (1 ; (−1)⁴⁵)
+  (z = y − 7Ee_a) ; (1³ ; (−1)³⁶) avec trois positifs qui ne forment pas une droite. Donc g_ℓ = 22κ + u_A + g_ℓ^{A′}.
+- **Histogrammes des coordonnées.** Pour chaque couche, les nombres de coordonnées de valeur c/9 + j avec |j| ≥ 2 se lisent
+  sur des couches plus basses (translation par 7Ee_v), et ceux de j ∈ {−1, 0, 1} se déduisent de l'effectif, de Σm = −11c et
+  de Σm² = ν + 11c²/9. **L'histogramme complet des coordonnées de chaque couche est donc déterminé par les effectifs** ;
+  les sommes Σ_y Σ_v y_v^k de tout degré aussi. Exemple : dans la couche de classe 1 et de norme 214/9, le nombre de
+  coordonnées −2 est exactement le nombre de vecteurs de classe 2 et de norme 172/9.
+- **Ensemble régulier S de 44 sommets et droites** : si t droites sont contenues dans S, il y a 11 − t droites disjointes
+  de S, 132 + 3t qui le coupent en un point, 88 − 3t en deux points ; donc t ≤ 11.
+
+(§15.4 noté à 18:40 UTC.)
