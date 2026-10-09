@@ -736,3 +736,96 @@ Distribution exacte des vecteurs d'arête 7E(e_u + e_v) sur les droites (pour m�
 2/3 sur 92 droites, −1/3 sur 120, −4/3 sur 18.
 
 (§14.5 noté à 18:07 UTC.)
+
+## 15. Rang 43 : identité de budget, S₀ en coordonnées naturelles, formes de Jacobi de niveau 1 (9 octobre, noté à 18:35 UTC)
+
+### 15.1 Identité de budget pour tout le rang 43 (`r43_identity.py`, exact, troncatures 32 et 38 identiques)
+
+Sans hypothèse de branche, le programme à neuf classes avec les égalités de classe du rang 43 a 15 paramètres. Ils se
+remplacent par 15 **nombres d'objets**, qui forment une base :
+
+- couches courtes : a₇ (norme 14), a₈, a₉, a₁₀, a₁₁, a₁₂ (vecteurs entiers de normes 16 à 24), f₁₁, f₁₂ (vecteurs
+  fractionnaires de normes 22 et 24, un signe) ;
+- objets bas : κ (cocliques de taille 22), g_v (sommets fantômes : vecteurs de O de classe 1 et de norme 28/9 autres que
+  les 99 sommets), u (vecteurs de O de classe 4 et de norme 34/9), g_ℓ (droites fantômes), c₁ (vecteurs de L₉ de classe 1 et
+  de norme 178/9), w (classe 2, norme 190/9), s₄₄ (ensembles réguliers de 44 sommets).
+
+Dans cette base le nombre n de vecteurs de L₉ de classe 2 et de norme 208/9 (profil (1³ ; (−1)²⁵) à tout rang, §14.1) vaut
+
+    n = 10 − 17a₇ − 10a₈ − 4a₉ − 4a₁₀ − 2a₁₁ − a₁₂ − f₁₁ + 7g_v + u + g_ℓ + 4c₁ + 2w + s₄₄ .
+
+**Conséquence (tout graphe de rang 43).**   17a₇ + 10a₈ + 4a₉ + 4a₁₀ + 2a₁₁ + a₁₂ + f₁₁ ≤ 10 + 7g_v + u + g_ℓ + 4c₁ + 2w + s₄₄.
+Les a_n sont pairs : sans objet bas des six types du membre de droite, il n'y a ni vecteur de norme 14 ni de norme 16,
+au plus une paire ±y de norme 18 ou 20, et le recensement pondéré « P3/N25 + vecteurs courts » vaut exactement 10.
+
+Autres identités de la même base (contrôle : entier + 2·fractionnaire en norme 26 redonne l'identité (1) de la note 177,
+et la norme 4 de M redonne b₂ = 1000 − 8b₁ + 25a₈ + 11a₉ + 8a₁₀ + 3a₁₁ + a₁₂) :
+
+    Ξ₀[117/9] (norme 26, entiers)        = 1152 − 44a₇ − 42a₈ − 24a₉ − 13a₁₀ − 6a₁₁ − 3a₁₂ − 4f₁₁ + 32κ + 28g_v + 4u + 4g_ℓ + 14c₁ + 2s₄₄
+    Ξ₃[117/9] (norme 26, fractionnaires) = 740 + 50a₇ + 20a₈ + 4a₉ + 10a₁₀ + 4a₁₁ + 2a₁₂ + 4f₁₁ + f₁₂ − 16κ − 14g_v − 2u − 2g_ℓ − 7c₁ − s₄₄
+    Θ₀[18/9] (norme 4 de M, entiers)     = 538 − 8a₇ + 25a₈ + 11a₉ + 8a₁₀ + 3a₁₁ + a₁₂ + 6f₁₁ + 2f₁₂ − 2g_ℓ
+    6·Ξ₂[86/9] (classe 2, norme 172/9)   = 290 + 41a₇ + 26a₈ + 10a₉ + 10a₁₀ + 4a₁₁ + 2a₁₂ + 5f₁₁ + f₁₂ − 8κ − 13g_v − u − 3g_ℓ − 8c₁ − 6w − 2s₄₄
+
+### 15.2 S₀ en coordonnées naturelles : S₀ n'est jamais « sans fantôme » (`s0_natural.py`)
+
+Dans S₀ les sept paramètres sont (κ, g_v, u, g_ℓ, c₁, w, s₄₄), et tous les effectifs sont à coefficients de dénominateur
+1, 2, 3 ou 6 (le réseau d'intégralité est d'indice 6 dans Z⁷ ; l'indice 100 842 du §13 venait du choix de base) :
+
+    Ξ₂[86/9]  = (290 − 8κ − 13g_v − u − 3g_ℓ − 8c₁ − 6w − 2s₄₄)/6          (classe 2, norme 172/9, profil (1 ; (−1)²³))
+    Ξ₂[104/9] = 10 + 7g_v + u + g_ℓ + 4c₁ + 2w + s₄₄                         (P3/N25)
+    Ξ₁[107/9] = (1016 + 4κ + 8g_v − u − 2c₁ + 3w + s₄₄)/3
+    Ξ₂[113/9] = (826 − 16κ + 55g_v + 7u + 9g_ℓ + 32c₁ + 21w + 8s₄₄)/3
+    Ξ₁[116/9] = 1559 − 8κ − (11g_v + 5u + 5g_ℓ)/2 − 16c₁ − w
+    Ξ₀[117/9] = 1152 + 32κ + 28g_v + 4u + 4g_ℓ + 14c₁ + 2s₄₄ ;   Ξ₃[117/9] = 740 − 16κ − 14g_v − 2u − 2g_ℓ − 7c₁ − s₄₄
+    Ξ₂[122/9] = 3404 − 72κ − 18g_v − 6g_ℓ − 12c₁ − 16w − 3s₄₄ ;   Ξ₁[125/9] = 6336 + 24κ + 16g_v + 11c₁ − 2w − s₄₄
+    Ξ₀[126/9] = 538 − 2g_ℓ ;   Ξ₃[126/9] = 231 + g_ℓ
+
+**Congruences exactes dans S₀ :**   g_v + u + g_ℓ ≡ 0 (mod 2)   et   2κ + g_v + u + 2c₁ + 2s₄₄ ≡ 2 (mod 3).
+
+Donc κ = g_v = u = c₁ = s₄₄ = 0 est impossible : **dans S₀ il existe toujours une coclique de taille 22, ou un sommet
+fantôme, ou un vecteur de O de classe 4 et de norme 34/9, ou un vecteur de L₉ de classe 1 et de norme 178/9, ou un ensemble
+régulier de 44 sommets.** De plus n ≡ s₄₄ (mod 2) et n ≥ 11 (le point « tout nul », qui donnerait n = 10, viole la
+congruence). Exemples de points admissibles : (0,0,0,0,0,0,1) (un seul ensemble régulier de 44 sommets, n = 11) ;
+u = 2 seul (n = 12).
+
+**Liens géométriques entre objets bas** (à la main ; les translations par 7Ee_v, 7E(e_a + e_b), 7E1_ℓ) :
+- coclique ⟹ 22 droites fantômes de chaque signe (déjà utilisé) : g_ℓ ≥ 22κ ;
+- sommet fantôme z = 1/9 + 1_P − 1_Q (|P| = 6, |Q| = 17) : l'équation propre donne e(Q) = e(P) + 1 ≥ 1, et pour une arête
+  {q, q′} ⊂ Q le vecteur z + 7E(e_q + e_q′) est fractionnaire de norme 28 et n'est pas une droite : **g_v ≥ 1 ⟹ g_ℓ ≥ 1** ;
+  de plus z − 7Ee_v (v ∈ P) est un vecteur entier de norme 28 de √7M avec une coordonnée −2 ;
+- vecteur de classe 1 et de norme 178/9, y₁ = 1/9 + 1_P − 1_Q (|P| = 5, |Q| = 16) : e(P) = e(Q) + 1 ≥ 1, P ne contient pas
+  de droite, et pour chaque arête e ⊂ P le vecteur 7E1_e − y₁ est un autre vecteur de la même couche contenant e dans son
+  support positif (involution sans point fixe à e fixée) : **c₁ ≠ 1**, et le nombre de tels vecteurs dont le support
+  positif contient une arête donnée est pair ; y₁ − 7Ee_v (v ∈ P) est entier de norme 26 ;
+- vecteur de classe 4 et de norme 238/9 : profil (1 ; (−1)⁴⁵), et alors y − 7Ee_a est une droite fantôme (coordonnée −5/3) ;
+  ou profil (−2 ; (−1)⁴²), et alors y ↦ −y − 7Ee_b est une involution sans point fixe (ils vont par paires).
+
+### 15.3 Formes de Jacobi de niveau 1 au rang 43 (`jl1.py`, `jl1_line.py`, `jl1_vertex.py`, `jl1_p3n25.py`)
+
+**Fait utilisé.** Au rang 43, U = M + N₄ (rang 48) et W = M₀ + A₈ + N₄ (rang 56) sont unimodulaires pairs. Pour un vecteur
+v de U ou de W, Σ_u q^{|u|²/2}ζ^{⟨u,v⟩} est une forme de Jacobi de **niveau 1**, de poids 24 ou 28 et d'indice |v|²/2, dans un
+espace de dimension 6 (U, norme 4), 7 (W, norme 4) ou 9 (W, norme 6). L'outil (`jl1.py`, développement de Taylor
+d'Eichler–Zagier) redonne la distribution des baisers du réseau de Leech (93150, 47104, 4600).
+
+Tout vecteur court se relève en vecteur de norme 4 : les vecteurs de L₁ de normes 16, 18, 20, 22, 24 (partenaire de N₄ de
+norme 12/7, 10/7, 8/7, 6/7, 4/7), ceux de norme 26 dans quatre des huit classes (partenaire 2/7), les sommets dans W
+((w_v, e_i − 1/9), 9 relèvements), et un vecteur P3/N25 se relève en vecteur de norme 6 de W (208/63 + 14/9 + 8/7).
+
+**Dans S₀** (racines de U : les 4 de N₄ ; a₂(U) = 1000 + 12 + 4·329 = 2328) :
+- **par droite ℓ** (v = (h_ℓ, 0) ∈ U) : un seul paramètre t_ℓ = #{u de norme 4 : ⟨u, v⟩ = 2}, et
+  c(2,0) = 1550 + 6t_ℓ, c(2,±1) = 388 − 4t_ℓ, c(3,0) = 29416744 + 1232t_ℓ, c(3,±1) = 11335100 − 828t_ℓ, c(3,±2) = 499584 + 216t_ℓ, … ;
+  positivité : 0 ≤ t_ℓ ≤ 97. Identité par droite : (vecteurs entiers de norme 4 de M de somme 1 sur ℓ) + ζ¹_ℓ + 4ζ²_ℓ = 320,
+  où ζˢ_ℓ compte les vecteurs de norme 26 des quatre bonnes classes de somme s sur ℓ. La somme sur ℓ redonne 231·320,
+  en accord avec le §14.4 quel que soit q.
+- **par sommet** (dans W, cas sans fantôme) : deux paramètres (a₂(W), χ_v), puis tout est déterminé, par exemple
+  c(3,±2) = 123232 + 14a₂(W) − 92c(2,1) + 88c(2,2).
+- **par vecteur P3/N25** (dans W) : produits avec les 76 racines : (15, 46, 15) ou (16, 44, 16) selon le type de la classe ;
+  avec w₂ = a₂(W) et x_r = c(2, r) : c(3,±3) = 4118 + 2w₂ − 10x₁ + 8x₂ − 66x₃ (type A), 3536 + … (type B), et de même
+  c(3,0), c(3,±1), c(3,±2). Les droites y contribuent par δ (7(9 − δ) vecteurs de produit 3).
+Ces identités sont exactes et nouvelles ; chacune fait intervenir des populations inconnues, et **aucune n'est violée**.
+
+**Produits de deux vecteurs P3/N25 (rang 43).** Les classes de F₇² de type 20 forment un cercle de 8 points ; pour
+y, y′ de supports (P, N), (P′, N′) et m·m′ = |P∩P′| + |N∩N′| − |P∩N′| − |N∩P′| :
+m·m′ ≡ 0 (même classe), 2 (classes opposées), 1 (classes orthogonales), 3 ou 6 (autres) modulo 7 ; jamais 4 ni 5.
+Dans S₀ : −6 ≤ m·m′ ≤ 15, donc m·m′ ∈ {−6, −5, −4, −1, 0, 1, 2, 3, 6, 7, 8, 9, 10, 13, 14, 15}, et comme n ≥ 11 > 8, deux
+vecteurs P3/N25 au moins sont dans la même classe : m·m′ ∈ {0, 7, 14} et y − y′ ∈ √7M₀.
