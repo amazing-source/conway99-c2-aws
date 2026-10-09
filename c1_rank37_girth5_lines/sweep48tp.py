@@ -19,7 +19,7 @@ PAIR = os.path.abspath("pairt.exe")
 
 def pair_filter(adj, lay, comp, K, quota, E, rows_list, d, tag):
     """indices of the subspaces (given by d rows of coefficients on E) that pass the pair test, and the number of admissible sets"""
-    path = f"pt_{tag}.txt"
+    path = f"pt_{tag}_{os.getpid()}.txt"
     with open(path, "w") as f:
         f.write(f"{len(E)} {len(rows_list)} {d} {len(quota)}\n" + " ".join(map(str, quota)) + "\n")
         f.write(" ".join(map(str, lay)) + "\n" + " ".join(map(str, comp)) + "\n")

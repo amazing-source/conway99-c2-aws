@@ -65,7 +65,7 @@ def ball_matrices(keys, rhos):
 def run(keys, rhos, u, C0, C1, use_real=1, limit=1, maxnodes=2000000000, tag="x", exe="./fast.exe"):
     adj, lay, comp, K, quota, Gm, Hr = ball_matrices(keys, rhos)
     if Gm is None: return "TORSION"
-    path = f"fast_{tag}.txt"
+    path = f"fast_{tag}_{os.getpid()}.txt"
     with open(path, "w") as f:
         f.write(f"{u} {C0} {C1} {len(keys)} {use_real} {limit} {maxnodes}\n" + " ".join(map(str, quota)) + "\n")
         f.write(" ".join(map(str, lay)) + "\n" + " ".join(map(str, comp)) + "\n")
@@ -82,7 +82,7 @@ def run_rank(keys, rhos, u, limit=1, maxnodes=2000000000, tag="x", exe="./fastr.
     """rank mode (fastr.exe): no scalar enumerated, both classes of forms at once; D = components - 1 <= 2"""
     adj, lay, comp, K, quota, Gm, Hr = ball_matrices(keys, rhos)
     if Gm is None: return "TORSION"
-    path = f"fastr_{tag}.txt"
+    path = f"fastr_{tag}_{os.getpid()}.txt"
     with open(path, "w") as f:
         f.write(f"{u} {len(keys) - 1} {len(keys)} {limit} {maxnodes}\n" + " ".join(map(str, quota)) + "\n")
         f.write(" ".join(map(str, lay)) + "\n" + " ".join(map(str, comp)) + "\n")
@@ -127,7 +127,7 @@ def run_torsion(keys, rhos, u, extra_T, phi, C0, limit=1, maxnodes=2000000000, t
     cross = [z for z in adj[u] if lay[z] != lay[u]]; mate = next(z for z in adj[u] if lay[z] == lay[u])
     blayer = sum(beta[z] * (2 * (1 if lay[z] == lay[u] else 0) + 2) for z in range(36))
     alsum = (-(4 * beta[u] + blayer + beta[mate] + sum(beta[z] for z in cross))) % 7
-    path = f"fastg_{tag}.txt"
+    path = f"fastg_{tag}_{os.getpid()}.txt"
     with open(path, "w") as f:
         f.write(f"{u} {C0} {nc} {len(extra_T)} {1 if phi is not None else 0} {alsum} {limit} {maxnodes}\n" + " ".join(map(str, quota)) + "\n")
         f.write(" ".join(map(str, lay)) + "\n" + " ".join(map(str, comp)) + "\n")
@@ -176,7 +176,7 @@ def run_torsion3(keys, rhos, u, extra_T, phis, C0, limit=1, maxnodes=2000000000,
         blayer = sum(beta[z] * (2 * (1 if lay[z] == lay[u] else 0) + 2) for z in range(36))
         als.append((-(4 * beta[u] + blayer + beta[mate] + sum(beta[z] for z in cross))) % 7)
     als += [0] * (3 - len(als))
-    path = f"fastg3_{tag}.txt"
+    path = f"fastg3_{tag}_{os.getpid()}.txt"
     with open(path, "w") as f:
         f.write(f"{u} {C0} {nc} {len(extra_T)} {len(phis)} {als[0]} {als[1]} {als[2]} {limit} {maxnodes}\n" + " ".join(map(str, quota)) + "\n")
         f.write(" ".join(map(str, lay)) + "\n" + " ".join(map(str, comp)) + "\n")

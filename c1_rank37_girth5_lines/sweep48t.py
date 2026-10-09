@@ -53,7 +53,7 @@ def run_case(adj, lay, comp, K, quota, sol, Q, M0, Z, u, extra_T, phis, C0, C1, 
         bl = sum(beta[z] * (2 * (1 if lay[z] == lay[u] else 0) + 2) for z in range(36))
         als.append((-(4 * beta[u] + bl + beta[mate] + sum(beta[z] for z in cross))) % 7)
     als += [0] * (3 - len(als))
-    path = f"fg4_{tag}.txt"
+    path = f"fg4_{tag}_{os.getpid()}.txt"      # the process id keeps two runs from sharing a file
     with open(path, "w") as f:
         f.write(f"{u} {C0} {C1} {comb} 2 {len(extra_T)} {len(phis)} {als[0]} {als[1]} {als[2]} 1 2000000000\n" + " ".join(map(str, quota)) + "\n")
         f.write(" ".join(map(str, lay)) + "\n" + " ".join(map(str, comp)) + "\n")
