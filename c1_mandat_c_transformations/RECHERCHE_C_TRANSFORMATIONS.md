@@ -123,8 +123,16 @@ Remarque de ma part : l'hypothèse des profils distincts est automatique dès qu
 3 voisins non modifiés (deux sommets ont au plus 2 voisins communs) ; le lemme vaut donc pour toute paire de
 candidats de ce type, pas seulement à boule fixée. Le corollaire 8 ne dépend plus du rang de l'autre complétion.
 
-Cas restants pour la proposition C : droites non génériques (τ ≡ 0 ou G(T) déconnecté), et paires de rangs toutes
-deux ≥ 39. Dans ces cas D² ≡ −(YY′ + Y′Y) n'a pas de signe imposé et l'argument du laplacien ne s'applique pas tel
+**Second complément de Codex (message LAB de 10:46 UTC ; note 233, commit local `5054889`, non poussée).** Annoncé :
+aucune différence D de rang ≤ 4 sur F₇ entre deux complétions des mêmes boule et ombres ; par le lemme 6 cela ferme
+(39,39) quand le bloc proche est inversible. Preuve assistée par un petit calcul exact selon Codex (729 Grams
+principaux, une seule géométrie signée survivante de Gram K ⊗ K, quatre supports de 14 à 18 sommets éliminés par
+résolution exacte). **Je ne l'ai pas relue : la note n'est pas accessible depuis ce poste.** Conséquence annoncée :
+au rang 39 générique, toute symétrie de (boule, ombres) se prolonge au graphe, comme au rang 37.
+
+Cas restants pour la proposition C : droites non génériques (τ ≡ 0 ou G(T) déconnecté), et paires de rangs avec
+r + r′ ≥ 80, soit rang de D sur F₇ jusqu'à 6 pour (39,41), 8 pour (39,43) et (41,41), 10 pour (41,43), 12 pour
+(43,43). Dans ces cas D² ≡ −(YY′ + Y′Y) n'a pas de signe imposé et l'argument du laplacien ne s'applique pas tel
 quel ; il s'applique encore si les espaces colonnes de Y et Y′ sont orthogonaux.
 
 ## 4. La bascule du 243 décodée (calcul exact, `flip243*.py`, sortie `pilotes.out`)
