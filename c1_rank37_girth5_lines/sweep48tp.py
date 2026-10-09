@@ -2,8 +2,9 @@
 a subspace B of balanced torsion vectors must leave, for every pair of near points with K_ab = c > 0, at least c
 admissible B-balanced 6-sets containing the pair (pairt.exe; purely combinatorial).  The subspaces that fail are dead
 without any search; the others go to fastg4.exe exactly as in sweep48t.py.  One line per ball:
-   48t s b | t=.. sub-cases N pair-dead P dead D comb-alive .. alive .. VERDICT | time
-(N = all sub-cases, P = those removed by the pair lemma, D = P + those found dead by the search).
+   48t s b | t=.. sub-cases N pair-dead P orbit-dup O dead D comb-alive .. alive .. VERDICT | group, time
+(N = all sub-cases, P = those removed by the pair lemma, O = those not searched because an automorphism of the ball
+sends them to a searched one (suborb.py), D = all those established dead; DEAD means D = N).
 usage: python sweep48tp.py workers [part nparts] [T]"""
 import sys, os, time, json, subprocess
 from multiprocessing import Pool
@@ -11,6 +12,7 @@ from gen66 import Solver, torsion_vectors
 from multi import make_ball, kmatrix
 from sweep48 import SMALL, REPS, big_key
 from sweep48t import subspaces, run_case, ID
+from suborb import torsion_action, orbit_filter
 
 PAIR = os.path.abspath("pairt.exe")
 
@@ -46,31 +48,43 @@ def job(a):
         for i, c in enumerate(sol.piv): Q[c] = sol.E[i][:]
         E = torsion_vectors(adj, comp, 1); t = len(E)
         assert not torsion_vectors(adj, comp, 0)
+        mats = torsion_action(adj, lay, comp, E)                 # automorphisms of the ball acting on E
         comb = lambda coef: [sum(c * e[v] for c, e in zip(coef, E)) % 7 for v in range(36)]
-        n = dead = pdead = calive = alive = 0; notes = []; nsh = -1
+        n = dead = pdead = odup = calive = alive = 0; notes = []; nsh = -1
         for beta in range(0, t + 1):
             if 1 + t > 2 * (1 + beta): continue
             rho = 2 * beta - t + 1
-            subs = subspaces(t, beta)
+            subs = subspaces(t, beta); rows_list = [rows for _, rows in subs]
             if beta >= 1:
-                passing, nsh = pair_filter(adj, lay, comp, K, quota, E, [rows for _, rows in subs], beta, f"{s}_{b}_{beta}")
+                passing, nsh = pair_filter(adj, lay, comp, K, quota, E, rows_list, beta, f"{s}_{b}_{beta}")
+                rep = orbit_filter(mats, rows_list)
+                # the pair test is invariant under the automorphisms: a free check of both
+                assert all((i in passing) == (rep[i] in passing) for i in range(len(subs))), "pair test not constant on an orbit"
             else:
-                passing = set(range(len(subs)))
+                passing = set(range(len(subs))); rep = {i: i for i in range(len(subs))}
             forms = [(0, 0)] if rho == 0 else [(1, 0), (3, 0)] if rho == 1 else [(1, 1), (1, 3)] if rho == 2 else [(0, 0)]
-            for si, (piv, rows) in enumerate(subs):
+            verdict_of = {}                                      # (representative, form) -> True if dead
+            for si, (piv, rows) in enumerate(subs):              # representatives come first in their orbit (smallest index)
                 if si not in passing:
                     n += len(forms); dead += len(forms); pdead += len(forms); continue
+                if rep[si] != si:
+                    for fm in forms:
+                        n += 1; odup += 1
+                        if verdict_of[(rep[si], fm)]: dead += 1
+                    continue
                 extra = [comb(r) for r in rows]
                 phis = [comb([int(i == c) for i in range(t)]) for c in range(t) if c not in piv]
                 for (C0, C1) in forms:
                     n += 1
                     res = run_case(adj, lay, comp, K, quota, sol, Q, M0, Z, 0, extra, phis, C0, C1, 1 if rho >= 3 else 0, f"{s}_{b}_{n}")
-                    if "solutions 0 timeout 0" in res and "ERR" not in res: dead += 1
+                    ok = "solutions 0 timeout 0" in res and "ERR" not in res
+                    verdict_of[(si, (C0, C1))] = ok
+                    if ok: dead += 1
                     elif rho >= 3: calive += 1; notes.append(f"beta={beta} piv={piv} rows={rows} comb")
                     else: alive += 1; notes.append(f"beta={beta} rows={rows} form=({C0},{C1}): {res}")
         verdict = "DEAD" if dead == n else ("COMB-ALIVE" if alive == 0 else "ALIVE")
-        return (f"48t {s} {b} | t={t} sub-cases {n} pair-dead {pdead} dead {dead} comb-alive {calive} alive {alive} {verdict} "
-                f"{' ; '.join(notes[:3])} | admissible sets {nsh} | {time.time()-t0:.1f}s")
+        return (f"48t {s} {b} | t={t} sub-cases {n} pair-dead {pdead} orbit-dup {odup} dead {dead} comb-alive {calive} alive {alive} {verdict} "
+                f"{' ; '.join(notes[:3])} | group {len(mats)} admissible sets {nsh} | {time.time()-t0:.1f}s")
     except Exception as ex:
         return f"48t {s} {b} | ERROR {type(ex).__name__}: {ex} | {time.time()-t0:.1f}s"
 
@@ -96,7 +110,7 @@ if __name__ == "__main__":
     print(f"torsion balls in this part: {len(jobs)}; to do: {len(todo)}", flush=True)
     out = open(log, "a"); bad = 0; n = 0
     with Pool(workers) as pool:
-        for line in pool.imap_unordered(job, todo, chunksize=1 if T == "4" else 2):
+        for line in pool.imap_unordered(job, todo, chunksize=1):
             out.write(line + "\n"); out.flush(); n += 1
             if " DEAD " not in line: bad += 1; print("NOT DEAD:", line[:300], flush=True)
     print(f"(4,8) torsion with pair lemma, T={T}, part {part}/{nparts}: balls {len(todo)}, not dead {bad}", flush=True)
