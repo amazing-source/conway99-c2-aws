@@ -486,3 +486,51 @@ couple de classes orthogonales C, C′ de norme 26 :  Σ_{z ∈ C ∪ C′} zz�
 vecteurs non triangulaires (traces : 17108 des deux côtés). Les positivités de toutes les couches jusqu'à la norme
 160 laissent aux valeurs propres de T l'intervalle [−48,9 ; 111,1] : **l'isotropie n'est pas forcée**, et les
 congruences modulo 49 des deux membres concordent. Le degré 2 ne ferme donc pas cette branche.
+
+## 13. Rang 43, scénario S₀ dans le programme à neuf classes : sept paramètres entiers, effectifs forcés (9 octobre, fin 16:14 UTC)
+
+S₀ = rang 43, aucune racine, aucun vecteur de L₁ de norme 16 à 24 (Codex a montré le même jour, à partir du
+coefficient −52R du §12, que l'absence des normes 16 à 24 force l'absence de racines : la branche se réduit à S₀).
+
+**Égalité de classe complète au rang 43.** L₉/√7·O est le plan anisotrope, donc pour chacune des cinq classes k (pas
+seulement 0 et 3) un vecteur de L₉ de classe k dont l'exposant est 7e, avec e exposant permis de la classe k de O,
+est dans √7·O : Ξ_k[7e] = Θ_k[e]. (`r43full.py` ; au rang 43 général : 15 paramètres libres, faisable, b₂ ≥ 913.)
+
+**S₀ dans le programme à neuf classes (`s0_sheet.py`, `r43full.py branch 0 cert`, simplexe rationnel exact).** Il
+reste 7 paramètres : les effectifs des classes de O
+Θ₂[11/9], Θ₁[14/9], Θ₄[17/9], Θ₃[2], Θ₂[20/9], Θ₁[23/9], Θ₄[26/9]. Intervalles exacts, avec les entrées démontrées et
+« 22 vecteurs de profil C de chaque signe par coclique de taille 22 » :
+
+| quantité | intervalle |
+|---|---|
+| vecteurs de norme 4 de M | 1000 |
+| dont de type entier | 346 à 538 |
+| dont fractionnaires d'un signe (231 droites + profils A′, B, C) | 231 à 327 |
+| vecteurs de norme 26 de L₁ | 2632 |
+| dont fractionnaires d'un signe (paire Z, ensemble S de 35 sommets) | 160 à 740 |
+| cocliques de taille 22 | 0 à 3 |
+| ensembles réguliers de 44 sommets | 0 à 145 |
+| vecteurs de L₉ de classe 1 et de norme 178/9 | 0 à 36 |
+| vecteurs de O de classe 1 et de norme 28/9 (99 sommets + fantômes) | 99 à 121 |
+| vecteurs de O de classe 2 et de norme 22/9 | 0 à 3 |
+| **vecteurs de O de classe 2 et de norme 40/9 (693 arêtes + autres)** | **5672 à 6396** |
+| vecteurs de O de classe 4 et de norme 34/9 | 0 à 290 |
+
+Certificat de la minoration 5672 : positivité des effectifs de L₉ en classe 4 (normes 220/9 et 238/9), classe 2
+(norme 190/9), classe 1 (norme 178/9), avec « 231 droites », « 99 sommets » et le lien des profils C.
+
+**Intégralité (`s0_int.py`).** Les effectifs sont affines en les 7 paramètres avec dénominateurs 49, 98, 147 ; les
+congruences sont compatibles (réseau d'indice 100 842 = 2·3·7⁵) et il existe un point entier dans le polytope, par
+exemple (Θ₄[26/9], Θ₁[23/9], Θ₂[20/9], Θ₃[2], Θ₄[17/9], Θ₁[14/9], Θ₂[11/9]) = (1 618 734, 120 904, 5676, 231, 0, 99, 0),
+vérifié exactement (tous les effectifs entiers positifs jusqu'à l'exposant 23). S₀ n'est donc pas exclu par
+l'arithmétique des neuf classes.
+
+**Ce que S₀ force géométriquement.** Au moins 4979 vecteurs de O de classe 2 et de norme 40/9 qui ne sont pas des
+arêtes. Côté L₉ : y = 2/9 + m, m entier, Σm = −22, Σm² = 36, Am = −4 − 4m. Réduction des profils dans S₀ :
+(i) m_v ∈ {−2, …, 2} (minima des classes ±1 et ±3 appliqués à y ∓ 7Ee_v) ; donc 3n₂ + n₁ + n₋₂ = 7 ;
+(ii) deux coordonnées 2 : si elles sont adjacentes, y est le vecteur d'arête ; sinon y − 7E(e_a + e_b) est entier de
+norme 14, exclu dans S₀ ;
+(iii) un sommet de valeur −2 a une masse positive voisine ≥ 4, et deux sommets ont au plus deux voisins communs,
+ce qui exclut (n₂, n₁, n₋₂) = (1, k, 4−k) pour k ≤ 2 et (0, k, 7−k) pour k ≤ 5.
+Il reste quatre profils : (2 ; 1³ ; −2 ; (−1)²⁵), (2 ; 1⁴ ; (−1)²⁸), (1⁶ ; −2 ; (−1)²⁶), (1⁷ ; (−1)²⁹).
+S₀ exige au moins 4979 configurations de ces quatre types ; je n'ai pas de majoration de leur nombre.
