@@ -230,7 +230,7 @@ Le test d'une étoile vaut de l'ordre de 10^6 nœuds (pic à la profondeur 4 : 6
 par boule. Total : de l'ordre de 5 à 50 années-cœur pour la seule classe sans prisme connexe, sans compter les
 droites à torsion ni les prismes. Aucune réduction du nombre de boules n'est connue.
 
-## 9. Séries thêta pondérées par un quartique harmonique (9 octobre, 12:30–13:35 UTC)
+## 9. Séries thêta pondérées par un quartique harmonique (9 octobre, 12:30–12:45 UTC)
 
 Idée : étendre l'outil des notes 167–168 (séries thêta de L1 et M, poids 22, niveau 7) en pondérant chaque vecteur
 par un polynôme harmonique de degré 4 invariant par renommage. Je n'ai pas trouvé cet outil dans le dépôt (les notes
