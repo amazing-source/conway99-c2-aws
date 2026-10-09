@@ -456,3 +456,12 @@ l'arithmétique des classes ; il faudrait la géométrie des 538 vecteurs de nor
 **Borne supérieure tentée, sans effet.** Dans le programme à neuf classes (§11), le maximum du nombre de cocliques
 de taille 22 au rang 37 est 93 696 (`z9max.py`) : aucune majoration utile des vecteurs de Fano par cette voie
 (un vecteur de Fano est un couple ordonné de cocliques de taille 22 se coupant en 15 points, note 192).
+
+**Sommes vectorielles par classe au rang 43 (`w49odd.py`, exact).** Pour une forme linéaire ℓ sur l'espace propre
+(par exemple une coordonnée y_v), F_d = Σ_{y ∈ classe d} ℓ(y) q^{|y|²/14} est impaire en d et forme une forme
+vectorielle de poids 23 ; accouplée aux harmoniques zonaux impairs de N₄ (degrés 1 à 11, dix pôles) elle donne des
+formes de niveau 1. L'espace a 44 dimensions ; avec les 24 zéros sous la norme 14 il reste exactement 20 paramètres,
+qui sont les sommes des 20 classes de normes 16 à 24. Donc : **au rang 43, la somme vectorielle des vecteurs de
+chaque classe de norme 26, et de toute couche plus haute de toute classe, est une combinaison linéaire fixe des
+sommes vectorielles des classes de normes 16 à 24 ; s'il n'y a aucun vecteur de norme 16 à 24, la somme des
+vecteurs de chaque norme dans chaque classe non nulle est le vecteur nul.**
