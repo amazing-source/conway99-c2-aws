@@ -1058,7 +1058,7 @@ voisinages et les adjacences entre les 18 sommets.
 | registre ouvert de Codex | | 4581 |
 | lemmes A et B (§17) | 941 | 3640 |
 | lemme C (preuve à la main) | 297 | 3343 |
-| moteur d'étoile, hors lemme C (verdict de solveur, vérification exhaustive en cours) | 72 | 3271 |
+| moteur d'étoile, hors lemme C (72 verdicts sur 72 confirmés par énumération exhaustive sans solveur, §18.8) | 72 | 3271 |
 
 Restants par δ : 93, 257, 586, 855, 819, 520, 141 pour δ = 3, …, 9. Toutes les morts se lisent autour d'un seul positif. Les 3271
 restants passent tous les tests autour d'un positif ; au niveau de la coquille, chaque configuration produite par le solveur viole
@@ -1117,3 +1117,13 @@ relecture. Aucun objet bas fractionnaire n'est forcé au rang 37 (`r_low.py`).
 - La session du labo a écrit le dual dans son propre programme : 13a₁₀ + 91a₉ + 350a₈ + 1183a₇ = 7462 + a₁₂ + 2429b₁ + 476(b₂ − 462)
   + 21(b₃ − 24 948). Sur mon polytope à neuf classes (a₇ = b₁ = 0) : min b₂ = 462, min b₃ = 24 948, min de 476(b₂ − 462) + 21(b₃ − 24 948) = 0,
   min de 350a₈ + 91a₉ + 13a₁₀ = 7462. Les neuf classes n'ajoutent donc rien à cette facette.
+
+### 18.8 Vérification exhaustive des 72 verdicts « positif sans étoile » (10 octobre, noté à 02:35 UTC)
+
+`star_check.py` (version 2, sans solveur, à partir de la seule liste d'arêtes) sur les 72 supports tués par le moteur d'étoile hors
+lemme C : **72 confirmés, 0 contredit**. 1 583 132 519 nœuds en tout (au plus 167 069 036 pour un support), 12 processus, 2 h 55.
+Pour 51 supports il n'existe aucune étoile complète ; pour les 21 autres, 47 085 600 étoiles complètes (à renommage près des
+emplacements couplés) ont été énumérées et chacune viole l'une des coupes du lemme A enregistrées (1 à 29 coupes par support).
+Journal : `p3n25_search/results/star_check_72.log`. Programme et règles écrits par moi seul, non relus par un tiers.
+
+Les 941 + 297 + 72 = 1310 supports tués ont donc chacun un témoin vérifiable sans solveur ; il reste 3271 supports ouverts.
