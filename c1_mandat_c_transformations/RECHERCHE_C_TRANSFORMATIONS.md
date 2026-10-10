@@ -1063,3 +1063,29 @@ voisinages et les adjacences entre les 18 sommets.
 Restants par δ : 93, 257, 586, 855, 819, 520, 141 pour δ = 3, …, 9. Toutes les morts se lisent autour d'un seul positif. Les 3271
 restants passent tous les tests autour d'un positif ; au niveau de la coquille, chaque configuration produite par le solveur viole
 le lemme A, sans preuve finie pour l'instant. Aucun rang n'est exclu.
+
+### 18.6 Compléments (10 octobre, noté à 00:02 UTC)
+
+**Boucles de coquille arrêtées.** Support 4 : 346 coupes en 66 minutes ; support 17 : 372 coupes en 64 minutes ; le solveur trouvait
+encore une coquille à chaque tour (toutes réfutées par le lemme A). Arrêtées : pas de fermeture en vue par cette voie.
+
+**Étoile double (`doublestar.py`).** Voisins extérieurs de deux positifs p, q avec leurs adjacences mutuelles (40 sommets, égalités
+exactes avec p et q). Support 4 : pour chacune des trois paires de positifs, on obtient en quelques secondes à trois minutes une étoile
+double **sans témoin** du lemme A.
+
+**Extension au troisième positif (`shell_ext.py`).** Une étoile double sans témoin est un graphe connu G sur 40 sommets ; l'étoile du
+troisième positif c au-dessus de G est le moteur d'étoile de §18.3 avec G pour base (tous les voisins de c sont alors dans G ∪ Z_c, donc
+Σ_z a[z][s] = r_G(c, s) pour tout s de G). Support 4, deux essais : l'étoile double AB ne s'étend pas à C (aucune étoile après 56
+coupes, 15 s) ; l'étoile double AC ne s'étend pas à B (aucune étoile après 119 coupes, 125 s). Verdicts de solveur, non revérifiés.
+Lecture : autour de deux positifs le lemme A se satisfait ; c'est la troisième étoile qui ne trouve pas sa place. Ce n'est pas une
+preuve pour le support : il faudrait parcourir toutes les étoiles doubles.
+
+**Vérificateur exhaustif accéléré (`star_check.py`, version 2).** Autres positifs placés d'abord, borne sur le nombre de paires
+d'emplacements libres, et symétrie : deux emplacements couplés identiques et encore vides sont échangeables, donc un seul est suivi ;
+une étoile complète est testée sous tous les renommages de ses emplacements couplés (c'est le même graphe). Support 3354 (positif C) :
+7,6 millions de nœuds, aucune étoile. La première version reste dans `star_check_v1.py`.
+
+**Rang 37, question de la session du labo (`r_low.py`).** Programme à neuf classes au rang 37 (sans égalité de classe), PL exact,
+troncature 32 : 18 paramètres libres, faisable ; le minimum de (cocliques de taille 22 + sommets fantômes + vecteurs de classe 1 et de
+norme 178/9 + ensembles réguliers de 44 sommets + vecteurs de O de classe 4 et de norme 34/9) vaut **0**, et de même sans vecteur
+entier de norme 14 (17 paramètres), puis sans norme 14 ni 16 (16 paramètres). Aucun objet bas fractionnaire n'est forcé au rang 37.

@@ -1,0 +1,33 @@
+rank 37, truncation 32, general: 18 free parameters; exact LP feasible  [78s]
+   minimum of the SUM of the five low objects: 0  [192s]
+   minimum of 22-cocliques: 0
+   minimum of ghost vertices: 0
+   minimum of class 1 norm 178/9: 0
+   minimum of regular 44-sets: 0
+   minimum of class 4 norm 34/9 of O: 0
+   minimum of P3/N25 layer X2[104/9]: 0
+   minimum of class 2 norm 172/9 X2[86/9]: 0
+   minimum of class 2 norm 190/9 X2[95/9]: 0
+   minimum of ghost lines T3[18/9]-231: 0
+rank 37, truncation 32, no integral norm 14: 17 free parameters; exact LP feasible  [1030s]
+   minimum of the SUM of the five low objects: 0  [1073s]
+   minimum of 22-cocliques: 0
+   minimum of ghost vertices: 0
+   minimum of class 1 norm 178/9: 0
+   minimum of regular 44-sets: 0
+   minimum of class 4 norm 34/9 of O: 0
+   minimum of P3/N25 layer X2[104/9]: 0
+   minimum of class 2 norm 172/9 X2[86/9]: 0
+   minimum of class 2 norm 190/9 X2[95/9]: 0
+   minimum of ghost lines T3[18/9]-231: 0
+rank 37, truncation 32, no integral norm 14, 16: 16 free parameters; exact LP feasible  [1442s]
+   minimum of the SUM of the five low objects: 0  [1480s]
+   minimum of 22-cocliques: 0
+   minimum of ghost vertices: 0
+   minimum of class 1 norm 178/9: 0
+   minimum of regular 44-sets: 0
+   minimum of class 4 norm 34/9 of O: 0
+   minimum of P3/N25 layer X2[104/9]: 0
+   minimum of class 2 norm 172/9 X2[86/9]: 0
+   minimum of class 2 norm 190/9 X2[95/9]: 0
+   minimum of ghost lines T3[18/9]-231: 0

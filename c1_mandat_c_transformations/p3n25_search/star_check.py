@@ -7,8 +7,9 @@ A star = six sets B_0..B_5 (p in each) such that, for each slot z:
    (1) |B_z inter N| - |B_z inter P| = 4;                (2) two vertices of B_z have r >= 1;
    (3) a vertex of B_z has at most 1 neighbour in B_z;    (4) a vertex s outside B_z has at most 2 common neighbours with z inside
    S u Z_p, i.e. |N(s) inter B_z| + [s in B_partner(z)] <= 2;      (5) two slots share at most one vertex besides p, none if paired.
-The enumeration is a depth-first search over the vertices (the vertex with the fewest possible slot sets first), with no symmetry
-reduction: every star is visited.  Each complete star gives a 34 x 34 adjacency matrix; it must violate one of the listed
+The enumeration is a depth-first search over the vertices (other positives first, then the vertex with the fewest possible slot sets).
+Symmetry: two identical untouched slots of a couple, or two untouched couples, are interchangeable, so only one choice is followed;
+a complete star is then tested under every renaming of its paired slots (the graph is the same).  Each complete star gives a 34 x 34 adjacency matrix; it must violate one of the listed
 integer-parabola cuts:  w^T(12 I + 2 J - A - A^2) w - (2a+1)(14 sum w - 1^T A w) + 65 a(a+1) < 0.
 usage: star_check.py register.jsonl results.jsonl"""
 import sys, json, itertools, time
@@ -16,7 +17,7 @@ import numpy as np
 
 def pc(x): return bin(x).count("1")
 
-def check(edges, p, cuts, limit=20_000_000):
+def check(edges, p, cuts, limit=400_000_000):
     A = [[0] * 28 for _ in range(28)]
     for x, y in edges: A[x][y] = A[y][x] = 1
     adj = [sum(1 << t for t in range(28) if A[s][t]) for s in range(28)]
@@ -78,16 +79,39 @@ def check(edges, p, cuts, limit=20_000_000):
         for z, z2 in itertools.combinations(range(6), 2):
             if pc(B[z] & B[z2]) > (1 if partner.get(z) == z2 else 2): return False
         return True
-    def refuted(B):
-        Ap = np.zeros((34, 34), dtype=np.int64); Ap[:28, :28] = AN
-        for z in range(6):
-            for s in range(28):
-                if (B[z] >> s) & 1: Ap[28 + z, s] = Ap[s, 28 + z] = 1
-            if z in partner: Ap[28 + z, 28 + partner[z]] = 1
-        M = 12 * np.eye(34, dtype=np.int64) + 2 - Ap - Ap @ Ap; lin = 14 - Ap.sum(axis=0)
-        for w, a in cutsW:
-            if int(w @ M @ w) - (2 * a + 1) * int(lin @ w) + 65 * a * (a + 1) < 0: return True
+    def refuted(B0_):
+        for m in RELAB:                                           # the same graph with its slots renamed
+            B = [B0_[m[z]] for z in range(6)]
+            Ap = np.zeros((34, 34), dtype=np.int64); Ap[:28, :28] = AN
+            for z in range(6):
+                for s in range(28):
+                    if (B[z] >> s) & 1: Ap[28 + z, s] = Ap[s, 28 + z] = 1
+                if z in partner: Ap[28 + z, 28 + partner[z]] = 1
+            M = 12 * np.eye(34, dtype=np.int64) + 2 - Ap - Ap @ Ap; lin = 14 - Ap.sum(axis=0)
+            for w, a in cutsW:
+                if int(w @ M @ w) - (2 * a + 1) * int(lin @ w) + 65 * a * (a + 1) < 0: return True
         return False
+    couples = [(i, i + 1) for i in range(u, 6, 2)]
+    def sym_ok(zs, B):
+        # inside a couple with two identical slots, the second slot is not used alone; of two consecutive untouched couples, the
+        # second is not used unless the first is.  (Swapping such slots, or such couples, maps stars to stars.)
+        for a, b in couples:
+            if B[a] == B[b] and b in zs and a not in zs: return False
+        for (a, b), (c, d) in zip(couples, couples[1:]):
+            if B[a] == B[b] == B[c] == B[d] == pbit and (c in zs or d in zs) and not (a in zs or b in zs): return False
+        return True
+    def relabelings():
+        import itertools as it
+        out = []
+        for perm in it.permutations(range(len(couples))):
+            for flips in it.product((0, 1), repeat=len(couples)):
+                m = list(range(6))
+                for j, (a, b) in enumerate(couples):
+                    c, d = couples[perm[j]]
+                    m[a], m[b] = (d, c) if flips[j] else (c, d)
+                out.append(m)
+        return out
+    RELAB = relabelings()
     def rec(todo, B, final):
         stat["nodes"] += 1
         if stat["nodes"] > limit: raise RuntimeError("limit")
@@ -105,10 +129,18 @@ def check(edges, p, cuts, limit=20_000_000):
                 for z in {z for zs in o for z in zs}: avail[z] += 1
             if best is None or len(o) < len(best[1]): best = (s, o)
         if free_pos[0] == 0:
+            need = [5 + pc(B[z] & PM & ~pbit) - pc(B[z] & NM) for z in range(6)]
             for z in range(6):                                   # the slot still needs  5 + positives - present  vertices of N
-                if 5 + pc(B[z] & PM & ~pbit) - pc(B[z] & NM) > avail[z]: return
+                if need[z] > avail[z]: return
+            # vertices that go into two slots need distinct free pairs of slots
+            free_pairs = sum(1 for z, z2 in itertools.combinations(range(6), 2) if partner.get(z) != z2 and (B[z] & B[z2]) == pbit and need[z] > 0 and need[z2] > 0)
+            if sum(1 for t in todo if rho[t] == 2) > free_pairs: return
+        else:
+            for t in todo:                                       # the other positives are placed first
+                if t < 3: best = (t, options(t, B, final)); break
         s, opts = best; rest = [t for t in todo if t != s]
         for zs in opts:
+            if not sym_ok(zs, B): continue
             B2 = list(B)
             for z in zs: B2[z] |= 1 << s
             rec(rest, B2, final | (1 << s))
