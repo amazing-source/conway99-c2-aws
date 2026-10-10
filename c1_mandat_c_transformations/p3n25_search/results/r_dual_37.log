@@ -1,0 +1,6 @@
+rank 37, truncation 32, a7 = b1 = 0, containment rows: 16 free parameters; feasible: True  [24s]
+   minimum of 476 (b2 - 462) + 21 (b3 - 24948): 0  [56s]
+   minimum of b2: 462;  minimum of b3: 24948  [106s]
+   minimum of 350 a8 + 91 a9 + 13 a10: 7462  [140s]
+   minimum of 350 a8 + 91 a9 + 13 a10 - a12: 7462  [172s]
+done

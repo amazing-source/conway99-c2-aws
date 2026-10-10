@@ -1110,3 +1110,10 @@ somme 3), qui manquait à mon programme et que la session du labo m'a signalée.
 
 Donc au rang 37 sans norme 14 : au moins 11 paires ±v de norme au plus 20. Minima d'un programme linéaire, sans certificat écrit ni
 relecture. Aucun objet bas fractionnaire n'est forcé au rang 37 (`r_low.py`).
+
+**Rang 37, compléments pour la session du labo (noté à 01:41 UTC).** Même PL exact (`r_short.py 37 32 paths trade` et `… dual`).
+- Avec a₈ = 0 et a₉ ≤ K, le minimum de a₁₀ vaut 574 − 7K jusqu'à K = 82, puis 0 (points mesurés : K = 0, 2, 10, 20, 40, 60, 80, 100, …) :
+  sans norme 16 le programme impose **7a₉ + a₁₀ ≥ 574** ; minimum de a₉ quand a₈ = a₁₀ = 0 : 82.
+- La session du labo a écrit le dual dans son propre programme : 13a₁₀ + 91a₉ + 350a₈ + 1183a₇ = 7462 + a₁₂ + 2429b₁ + 476(b₂ − 462)
+  + 21(b₃ − 24 948). Sur mon polytope à neuf classes (a₇ = b₁ = 0) : min b₂ = 462, min b₃ = 24 948, min de 476(b₂ − 462) + 21(b₃ − 24 948) = 0,
+  min de 350a₈ + 91a₉ + 13a₁₀ = 7462. Les neuf classes n'ajoutent donc rien à cette facette.

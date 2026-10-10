@@ -40,6 +40,21 @@ def mn(e, hi=10 ** 7, extra=()):
     return hi_
 a = {n: E("X", 0, 9 * n) for n in (8, 9, 10, 11, 12)}
 zero = lambda e: (-e[0], {t: -v for t, v in e[1].items()}, "= 0")
+if "dual" in sys.argv:                                    # the right side of the facet 13 a10 + 91 a9 + 350 a8 = 7462 + a12 + 476 (b2 - 462) + 21 (b3 - 24948)
+    b2 = comb([(1, E("T", 0, 18)), (2, E("T", 3, 18))]); b3 = comb([(1, E("T", 0, 27)), (2, E("T", 3, 27))])
+    rhs = comb([(476, b2), (21, b3)], -476 * 462 - 21 * 24948)
+    print(f"   minimum of 476 (b2 - 462) + 21 (b3 - 24948): {mn(rhs, hi=10 ** 9)}  [{time.time()-t0:.0f}s]", flush=True)
+    print(f"   minimum of b2: {mn(b2)};  minimum of b3: {mn(b3)}  [{time.time()-t0:.0f}s]", flush=True)
+    lhs = comb([(350, a[8]), (91, a[9]), (13, a[10])])
+    print(f"   minimum of 350 a8 + 91 a9 + 13 a10: {mn(lhs, hi=10 ** 9)}  [{time.time()-t0:.0f}s]", flush=True)
+    print(f"   minimum of 350 a8 + 91 a9 + 13 a10 - a12: {mn(comb([(1, lhs), (-1, a[12])]), hi=10 ** 9)}  [{time.time()-t0:.0f}s]", flush=True)
+    print("done", flush=True); sys.exit()
+if "trade" in sys.argv:                                   # how much norm 20 must carry when norm 16 is absent and norm 18 is capped
+    cap = lambda e, K: (Fr(K) - e[0], {t: -v for t, v in e[1].items()}, f"<= {K}")
+    print(f"   minimum of a9 when a8 = a10 = 0: {mn(a[9], extra=[zero(a[8]), zero(a[10])])}  [{time.time()-t0:.0f}s]", flush=True)
+    for K in (0, 2, 10, 20, 40, 60, 80, 100, 150, 200, 300, 500, 1000, 5000, 36960):
+        print(f"   a8 = 0, a9 <= {K}: minimum of a10 = {mn(a[10], extra=[zero(a[8]), cap(a[9], K)])}  [{time.time()-t0:.0f}s]", flush=True)
+    print("done", flush=True); sys.exit()
 print(f"   minimum of a8 + a9 + a10 (integral norms 16, 18, 20, both signs): {mn(comb([(1, a[8]), (1, a[9]), (1, a[10])]))}  [{time.time()-t0:.0f}s]", flush=True)
 for n in (8, 9, 10): print(f"   minimum of a{n} (norm {2*n}): {mn(a[n])}  [{time.time()-t0:.0f}s]", flush=True)
 print(f"   minimum of a9 + a10 when a8 = 0: {mn(comb([(1, a[9]), (1, a[10])]), extra=[zero(a[8])])}  [{time.time()-t0:.0f}s]", flush=True)
