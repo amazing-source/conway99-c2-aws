@@ -1089,3 +1089,24 @@ une étoile complète est testée sous tous les renommages de ses emplacements c
 troncature 32 : 18 paramètres libres, faisable ; le minimum de (cocliques de taille 22 + sommets fantômes + vecteurs de classe 1 et de
 norme 178/9 + ensembles réguliers de 44 sommets + vecteurs de O de classe 4 et de norme 34/9) vaut **0**, et de même sans vecteur
 entier de norme 14 (17 paramètres), puis sans norme 14 ni 16 (16 paramètres). Aucun objet bas fractionnaire n'est forcé au rang 37.
+
+### 18.7 Suite (10 octobre, noté à 00:58 UTC)
+
+**Extension au troisième positif : pas général.** Supports 3 et 17, même essai qu'au §18.6 : après 250 à 320 coupes la boucle n'a pas
+conclu (résolutions de plus en plus longues) ; essais arrêtés. Le résultat net « l'étoile double ne s'étend pas » ne vaut donc que
+pour le support 4 (deux essais sur deux).
+
+**Regard en avant sur un sommet extérieur forcé (`apex_star.py`).** Pour l'arête de N dont le triangle sort du support et qui a le
+moins de blocs candidats (support 4 : 165 blocs), on fixe le bloc du sommet de triangle et on relance le moteur d'étoile de chaque
+positif au-dessus de S ∪ {z}. Support 4 : les 165 blocs passent tous. Cette voie ne tue rien sur ce support.
+
+**Rang 37, nombres forcés (`r_short.py`, pour la session du labo).** Programme à neuf classes, PL exact, troncature 32, avec a₇ = b₁ = 0,
+les lignes de contenance √7M ⊂ L₁ (normes 4 et 6 de M) et la ligne des 8316 chemins induits e_u + e_v + e_w (norme 6 de M, classe de
+somme 3), qui manquait à mon programme et que la session du labo m'a signalée. Sans cette ligne tous les minima valent 0. Avec elle
+(a_n = nombre de vecteurs entiers de L₁ de norme 2n, deux signes) :
+
+    min (a₈ + a₉ + a₁₀) = 22 ;   min a₈ = min a₉ = min a₁₀ = 0 ;   min (a₈ | a₉ = a₁₀ = 0) = 22 ;
+    min (a₉ + a₁₀ | a₈ = 0) = 82 ;   min (a₁₀ | a₈ = a₉ = 0) = 574 .
+
+Donc au rang 37 sans norme 14 : au moins 11 paires ±v de norme au plus 20. Minima d'un programme linéaire, sans certificat écrit ni
+relecture. Aucun objet bas fractionnaire n'est forcé au rang 37 (`r_low.py`).

@@ -1,0 +1,9 @@
+rank 37, truncation 32, a7 = b1 = 0, containment rows: 16 free parameters; feasible: True  [42s]
+   minimum of a8 + a9 + a10 (integral norms 16, 18, 20, both signs): 22  [85s]
+   minimum of a8 (norm 16): 0  [125s]
+   minimum of a9 (norm 18): 0  [165s]
+   minimum of a10 (norm 20): 0  [205s]
+   minimum of a9 + a10 when a8 = 0: 82  [251s]
+   minimum of a10 when a8 = a9 = 0: 574  [295s]
+   minimum of a8 when a9 = a10 = 0: 22  [341s]
+done
